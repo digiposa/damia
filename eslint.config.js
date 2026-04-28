@@ -37,6 +37,8 @@ export default [
       eqeqeq: ['error', 'always'],
       'prefer-const': 'error',
       'no-var': 'error',
+      // Disable base no-redeclare; TS allows interface + value with same name (declaration merging).
+      'no-redeclare': 'off',
     },
   },
   prettier,

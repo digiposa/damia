@@ -37,14 +37,14 @@
 
 **Tâches :**
 
-- [ ] `core/math/iso.ts` : helpers `gridToWorld` / `worldToGrid`
-- [ ] `rendering/Renderer.ts` : init Pixi v8 (preferWebGPU, fallback WebGL2)
-- [ ] `rendering/Camera.ts` : wrapper `pixi-viewport`, drag + zoom molette clampé
-- [ ] `rendering/Layers.ts` : 4 containers (`ground`, `entities`, `fx`, `ui`)
-- [ ] `rendering/TileMap.ts` : grille 32×32 de tiles iso placeholder (carrés colorés bruns/verts en damier pour debug)
-- [ ] `scenes/BootScene.ts` → bascule sur `ForestScene` (vide)
-- [ ] `scenes/SceneManager.ts` minimal
-- [ ] Debug overlay : FPS counter (PIXI/stats.js)
+- [x] `core/math/iso.ts` + `Vec2.ts` (avec tests vitest)
+- [x] `rendering/Renderer.ts` : init Pixi v8 (preferWebGPU, fallback WebGL2)
+- [x] `rendering/Camera.ts` : wrapper `pixi-viewport`, drag (middle/left) + zoom molette clampé 0.5x→2x
+- [x] `rendering/Layers.ts` : 4 containers (`ground`, `entities`, `fx`, `ui`)
+- [x] `rendering/TileMap.ts` : grille 32×32 de tiles iso placeholder (damier vert sombre)
+- [x] `scenes/BootScene.ts` → bascule sur `ForestScene`
+- [x] `scenes/SceneManager.ts` (interface Scene + manager)
+- [x] Debug overlay : FPS counter avec moyenne glissante + label renderer
 
 **Done quand :**
 
@@ -283,8 +283,8 @@
 | Jalon | Statut     | Notes                                                   |
 | ----- | ---------- | ------------------------------------------------------- |
 | M0    | ✅ done    | Setup OK : dev/build/lint/typecheck passent, husky armé |
-| M1    | ⏳ pending | Prêt à démarrer                                         |
-| M2    | —          |                                                         |
+| M1    | ✅ done    | Scène iso 32×32 + caméra drag/zoom + FPS overlay        |
+| M2    | ⏳ pending | Prêt à démarrer                                         |
 | M3    | —          |                                                         |
 | M4    | —          |                                                         |
 | M5    | —          |                                                         |

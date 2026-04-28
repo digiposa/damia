@@ -124,14 +124,18 @@
 
 **Tâches :**
 
-- [ ] Components : `Health`, `Stats` (atk, def, atkSpeed, range)
-- [ ] `data/balance.ts` : valeurs Dart + 4 mobs
-- [ ] Click gauche sur entité avec `Health` → cible ennemi, Dart pathfind à portée puis attaque auto
-- [ ] `CombatSystem` : tick d'attaque (cooldown), calcul dégâts (`dmg = max(1, atk - def + variance)`)
-- [ ] Floating damage numbers (object pool)
-- [ ] Touche `S` ou clic droit maintenu : Défense (réduit dégâts -50%, immobilise, anim placeholder = sprite plus petit)
-- [ ] `Health` à 0 → entité disparaît + drop XP
-- [ ] Dart à 0 HP → écran Game Over → reload save (ou respawn entrée zone si pas de save)
+- [x] Components : `Health`, `Stats`, `Faction`, `CombatIntent`, `AttackCooldown`, `Defending`, `FloatingText` (+ `Sprite.scale` optionnel)
+- [x] `data/balance.ts` : `PLAYER_BASE` + `MOBS` (4 mobs définis), `COMBAT` constants, fonction pure `computeDamage` testée (4 tests)
+- [x] Click gauche sur entité ennemie → CombatIntent ; sinon → MoveCommand. CombatSystem chase puis attaque
+- [x] `CombatSystem` : refresh path rate-limité (100ms), in-range stop + attack on cooldown, dégâts via `computeDamage`, defending halve
+- [x] `CooldownSystem` : décrément `AttackCooldown.remainingMs`
+- [x] `MobAggroSystem` (M4 minimal) : enemy sans intent picks closest player in `aggroRange`
+- [x] `DefenseSystem` : sync `Sprite.scale` (0.85 ↔ 1) selon Defending, freeze movement
+- [x] Floating damage numbers via entité éphémère (FloatingText component) + `FloatingTextSystem` rendu dans layers.fx
+- [x] Touche `S` (down/up) → ajoute/retire `Defending` ; clics ignorés pendant la défense
+- [x] `Health` à 0 → DeathSystem destroy entity + spawn `+N XP` floating text (mob), trigger Player Death listener (player)
+- [x] `GameOverScene` : écran rouge sombre "You died" / "Press R to restart" → reload `ForestScene` propre
+- [x] Test mob : 1 Berserk Mouse à (16, 10) sur le chemin principal
 
 **Done quand :**
 
@@ -292,8 +296,8 @@
 | M1    | ✅ done    | Scène iso 32×32 + caméra drag/zoom + FPS overlay        |
 | M2    | ✅ done    | ECS + Dart + clic-to-move + pathfinding + camera follow |
 | M3    | ✅ done    | Forêt + collisions + exits (DemoEnd/Path overgrown)     |
-| M4    | ⏳ pending | Prêt à démarrer                                         |
-| M5    | —          |                                                         |
+| M4    | ✅ done    | Combat MVP : HP/ATK/DEF, attaque, défense, Game Over    |
+| M5    | ⏳ pending | Prêt à démarrer                                         |
 | M6    | —          |                                                         |
 | M7    | —          |                                                         |
 | M8    | —          |                                                         |

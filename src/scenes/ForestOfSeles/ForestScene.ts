@@ -5,22 +5,33 @@ import { TileMap } from '@rendering/TileMap';
 import { createCamera } from '@rendering/Camera';
 import { Layers } from '@rendering/Layers';
 import { RenderSystem } from '@rendering/systems/RenderSystem';
+import { FloatingTextSystem } from '@rendering/systems/FloatingTextSystem';
 import { World } from '@core/ecs';
 import type { Entity, System } from '@core/ecs';
-import { gridToWorld } from '@core/math/iso';
+import { gridToWorld, worldToGrid } from '@core/math/iso';
 import type { Components } from '@gameplay/components';
 import { spawnPlayer } from '@gameplay/entities/player';
 import { spawnProp } from '@gameplay/entities/props';
 import { spawnExit } from '@gameplay/entities/props/exit';
+import { spawnBerserkMouse } from '@gameplay/entities/mobs';
 import { InputController } from '@gameplay/controls/InputController';
 import { PathfindingSystem } from '@gameplay/systems/PathfindingSystem';
 import { MovementSystem } from '@gameplay/systems/MovementSystem';
 import { ExitSystem } from '@gameplay/systems/ExitSystem';
+import { CooldownSystem } from '@gameplay/systems/CooldownSystem';
+import { CombatSystem } from '@gameplay/systems/CombatSystem';
+import { MobAggroSystem } from '@gameplay/systems/MobAggroSystem';
+import { DefenseSystem } from '@gameplay/systems/DefenseSystem';
+import { DeathSystem } from '@gameplay/systems/DeathSystem';
 import { ForestMap, buildCollisionGrid } from './MapLoader';
 import { propBlocks } from '@data/props';
+import type { MobKind } from '@data/balance';
 import { Toast } from '@ui/Toast';
 import { t } from '@services/I18nService';
 import { DemoEndScene } from '@scenes/DemoEndScene';
+import { GameOverScene } from '@scenes/GameOverScene';
+
+const TEST_MOB_CELL = { gx: 16, gy: 10 } as const;
 
 export class ForestScene implements Scene {
   readonly name = 'forest';
@@ -34,11 +45,11 @@ export class ForestScene implements Scene {
   private toast: Toast | null = null;
   private playerId: Entity | null = null;
   private cameraFollow = false;
+  private mobKinds = new Map<Entity, MobKind>();
 
   enter(ctx: GameContext): void {
     const map = ForestMap;
 
-    // Visual world.
     this.tilemap = new TileMap({
       width: map.size.w,
       height: map.size.h,
@@ -57,7 +68,6 @@ export class ForestScene implements Scene {
     this.layers.mountUi(ctx.app.stage);
     this.layers.ground.addChild(this.tilemap.container);
 
-    // ECS world + entities from map.
     this.world = new World<Components>();
     this.playerId = spawnPlayer(this.world, map.spawn);
     for (const prop of map.props) {
@@ -67,22 +77,39 @@ export class ForestScene implements Scene {
       spawnExit(this.world, exit);
     }
 
-    // Pathfinding grid honors blocking props.
+    // M4 test mob — one Berserk Mouse on the main path, blocking Dart's way south.
+    const mouseId = spawnBerserkMouse(this.world, TEST_MOB_CELL.gx, TEST_MOB_CELL.gy);
+    this.mobKinds.set(mouseId, 'berserkMouse');
+
     const collisionGrid = buildCollisionGrid(map, propBlocks);
     const pathfinding = new PathfindingSystem(collisionGrid);
     const movement = new MovementSystem();
-    const render = new RenderSystem(this.layers);
+    const cooldown = new CooldownSystem();
+    const aggro = new MobAggroSystem();
+    const combat = new CombatSystem();
+    const defense = new DefenseSystem();
     const exits = new ExitSystem();
-    this.systems = [pathfinding, movement, exits, render];
+    const death = new DeathSystem((id) => this.mobKinds.get(id) ?? null);
+    const render = new RenderSystem(this.layers);
+    const floating = new FloatingTextSystem(this.layers.fx);
+    // Update order: input(input handlers) → AI → cooldowns → combat (sets paths) → pathfinding → movement → exits → defense → death → render → floating
+    this.systems = [
+      cooldown,
+      aggro,
+      combat,
+      pathfinding,
+      movement,
+      exits,
+      defense,
+      death,
+      render,
+      floating,
+    ];
 
-    // Toast for blocked-exit messages.
     this.toast = new Toast(ctx.app, this.layers.ui);
 
     exits.onTrigger(({ exit }) => {
       if (exit.kind === 'transition' && exit.targetScene === 'demo-end') {
-        // Defer scene switch: ForestScene.exit() destroys our world/systems
-        // synchronously, so doing it inline mid-update would NPE the remaining
-        // systems in the same loop iteration.
         queueMicrotask(() => {
           void ctx.scenes.switchTo(new DemoEndScene(), ctx);
         });
@@ -91,25 +118,54 @@ export class ForestScene implements Scene {
       }
     });
 
-    // Center camera on the player spawn.
+    death.onPlayerDeath(() => {
+      queueMicrotask(() => {
+        void ctx.scenes.switchTo(new GameOverScene(), ctx);
+      });
+    });
+
     const playerWorld = gridToWorld(map.spawn.gx, map.spawn.gy);
     this.viewport.moveCenter(playerWorld.x, playerWorld.y);
 
-    // Input.
     this.input = new InputController({
       app: ctx.app,
       viewport: this.viewport,
       gridWidth: map.size.w,
       gridHeight: map.size.h,
     });
-    this.input.onMove((cmd) => {
+
+    this.input.onClick((cmd) => {
       if (!this.world || this.playerId === null) return;
+      // Defending freezes input.
+      if (this.world.hasComponent(this.playerId, 'Defending')) return;
+
+      // Left click: try to engage an enemy at the clicked cell, else move.
+      if (cmd.button === 'left') {
+        const target = this.findEnemyAtCell(cmd.gx, cmd.gy);
+        if (target !== null) {
+          this.world.addComponent(this.playerId, 'CombatIntent', { targetId: target });
+          return;
+        }
+      }
+      // Move (left on empty cell, or right click anywhere).
+      this.world.removeComponent(this.playerId, 'CombatIntent');
       const pf = this.world.getComponent(this.playerId, 'Pathfinder');
-      if (!pf) return;
-      pf.targetGrid = { gx: cmd.gx, gy: cmd.gy };
-      pf.waypoints = null;
-      pf.computing = false;
+      if (pf) {
+        pf.targetGrid = { gx: cmd.gx, gy: cmd.gy };
+        pf.waypoints = null;
+        pf.computing = false;
+      }
     });
+
+    this.input.onDefendChange((active) => {
+      if (!this.world || this.playerId === null) return;
+      if (active) {
+        this.world.addComponent(this.playerId, 'Defending', {});
+      } else {
+        this.world.removeComponent(this.playerId, 'Defending');
+      }
+    });
+
     this.input.onCameraFollowToggle((on) => {
       this.cameraFollow = on;
     });
@@ -124,6 +180,7 @@ export class ForestScene implements Scene {
     this.systems = [];
     this.world = null;
     this.playerId = null;
+    this.mobKinds.clear();
 
     if (this.viewport) {
       ctx.app.stage.removeChild(this.viewport);
@@ -140,7 +197,7 @@ export class ForestScene implements Scene {
   update(dt: number): void {
     if (!this.world) return;
     for (const sys of this.systems) {
-      if (!this.world) break; // a previous system may have triggered exit()
+      if (!this.world) break;
       sys.update(dt, this.world);
     }
 
@@ -148,5 +205,19 @@ export class ForestScene implements Scene {
       const pos = this.world.getComponent(this.playerId, 'Position');
       if (pos) this.viewport.moveCenter(pos.x, pos.y);
     }
+  }
+
+  private findEnemyAtCell(gx: number, gy: number): Entity | null {
+    if (!this.world) return null;
+    for (const id of this.world.query(['Health', 'Position', 'Faction'])) {
+      if (id === this.playerId) continue;
+      const fac = this.world.getComponent(id, 'Faction');
+      if (!fac || fac.side === 'player') continue;
+      const pos = this.world.getComponent(id, 'Position');
+      if (!pos) continue;
+      const grid = worldToGrid(pos.x, pos.y);
+      if (Math.round(grid.x) === gx && Math.round(grid.y) === gy) return id;
+    }
+    return null;
   }
 }

@@ -1,10 +1,17 @@
+import type { AttackCooldown } from './AttackCooldown';
 import type { Collider } from './Collider';
+import type { CombatIntent } from './CombatIntent';
+import type { Defending } from './Defending';
 import type { Exit } from './Exit';
+import type { Faction } from './Faction';
+import type { FloatingText } from './FloatingText';
+import type { Health } from './Health';
 import type { Pathfinder } from './Pathfinder';
 import type { Player } from './Player';
 import type { Position } from './Position';
 import type { Speed } from './Speed';
 import type { Sprite } from './Sprite';
+import type { Stats } from './Stats';
 import type { Velocity } from './Velocity';
 
 /** Project-wide component registry. Add new components here when introducing them. */
@@ -17,10 +24,34 @@ export interface Components {
   Speed: Speed;
   Collider: Collider;
   Exit: Exit;
+  Health: Health;
+  Stats: Stats;
+  Faction: Faction;
+  CombatIntent: CombatIntent;
+  AttackCooldown: AttackCooldown;
+  Defending: Defending;
+  FloatingText: FloatingText;
 }
 
 export type ComponentName = keyof Components;
 
-export type { Collider, Exit, Pathfinder, Player, Position, Speed, Sprite, Velocity };
+export type {
+  AttackCooldown,
+  Collider,
+  CombatIntent,
+  Defending,
+  Exit,
+  Faction,
+  FloatingText,
+  Health,
+  Pathfinder,
+  Player,
+  Position,
+  Speed,
+  Sprite,
+  Stats,
+  Velocity,
+};
 export type { GridCell, WorldPoint } from './Pathfinder';
 export type { SpriteLayer, SpriteShape } from './Sprite';
+export type { FactionSide } from './Faction';

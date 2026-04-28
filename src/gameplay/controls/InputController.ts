@@ -2,7 +2,10 @@ import type { Application, FederatedPointerEvent } from 'pixi.js';
 import type { Viewport } from 'pixi-viewport';
 import { worldToGrid } from '@core/math/iso';
 
-export interface MoveCommand {
+export type ClickButton = 'left' | 'right';
+
+export interface ClickCommand {
+  button: ClickButton;
   gx: number;
   gy: number;
 }
@@ -18,15 +21,18 @@ export interface InputControllerOptions {
 
 /**
  * Translates raw browser input into game intentions.
- * - Left/right click on a grid cell → MoveCommand
+ * - Left/right click on a grid cell → ClickCommand
  * - Key `C` → toggle camera follow
+ * - Key `S` (down/up) → defend on/off
  *
- * In M4 this expands to: left click on entity → AttackCommand, key `S` → defend hold.
+ * Resolution from a click cell to "attack target vs move" lives in the scene.
  */
 export class InputController {
-  private moveListeners = new Set<Listener<MoveCommand>>();
+  private clickListeners = new Set<Listener<ClickCommand>>();
   private cameraFollowListeners = new Set<Listener<boolean>>();
+  private defendListeners = new Set<Listener<boolean>>();
   private cameraFollowState = false;
+  private defendState = false;
   private readonly cleanupFns: Array<() => void> = [];
 
   constructor(opts: InputControllerOptions) {
@@ -35,21 +41,23 @@ export class InputController {
     viewport.cursor = 'pointer';
 
     const onPointerUp = (e: FederatedPointerEvent): void => {
-      // Left button (0) or right button (2). Middle (1) is reserved for camera drag.
-      if (e.button !== 0 && e.button !== 2) return;
+      let button: ClickButton;
+      if (e.button === 0) button = 'left';
+      else if (e.button === 2) button = 'right';
+      else return;
+
       const local = viewport.toWorld(e.global);
       const grid = worldToGrid(local.x, local.y);
       const gx = Math.round(grid.x);
       const gy = Math.round(grid.y);
       if (gx < 0 || gy < 0 || gx >= gridWidth || gy >= gridHeight) return;
-      const cmd: MoveCommand = { gx, gy };
-      this.moveListeners.forEach((l) => l(cmd));
+      const cmd: ClickCommand = { button, gx, gy };
+      this.clickListeners.forEach((l) => l(cmd));
     };
 
     viewport.on('pointerup', onPointerUp);
     this.cleanupFns.push(() => viewport.off('pointerup', onPointerUp));
 
-    // Disable browser context menu on right click within the canvas.
     const onContextMenu = (e: MouseEvent): void => e.preventDefault();
     app.canvas.addEventListener('contextmenu', onContextMenu);
     this.cleanupFns.push(() => app.canvas.removeEventListener('contextmenu', onContextMenu));
@@ -58,15 +66,26 @@ export class InputController {
       if (e.key === 'c' || e.key === 'C') {
         this.cameraFollowState = !this.cameraFollowState;
         this.cameraFollowListeners.forEach((l) => l(this.cameraFollowState));
+      } else if ((e.key === 's' || e.key === 'S') && !this.defendState) {
+        this.defendState = true;
+        this.defendListeners.forEach((l) => l(true));
+      }
+    };
+    const onKeyUp = (e: KeyboardEvent): void => {
+      if ((e.key === 's' || e.key === 'S') && this.defendState) {
+        this.defendState = false;
+        this.defendListeners.forEach((l) => l(false));
       }
     };
     window.addEventListener('keydown', onKeyDown);
+    window.addEventListener('keyup', onKeyUp);
     this.cleanupFns.push(() => window.removeEventListener('keydown', onKeyDown));
+    this.cleanupFns.push(() => window.removeEventListener('keyup', onKeyUp));
   }
 
-  onMove(listener: Listener<MoveCommand>): () => void {
-    this.moveListeners.add(listener);
-    return () => this.moveListeners.delete(listener);
+  onClick(listener: Listener<ClickCommand>): () => void {
+    this.clickListeners.add(listener);
+    return () => this.clickListeners.delete(listener);
   }
 
   onCameraFollowToggle(listener: Listener<boolean>): () => void {
@@ -74,14 +93,16 @@ export class InputController {
     return () => this.cameraFollowListeners.delete(listener);
   }
 
-  get cameraFollow(): boolean {
-    return this.cameraFollowState;
+  onDefendChange(listener: Listener<boolean>): () => void {
+    this.defendListeners.add(listener);
+    return () => this.defendListeners.delete(listener);
   }
 
   destroy(): void {
     this.cleanupFns.forEach((fn) => fn());
     this.cleanupFns.length = 0;
-    this.moveListeners.clear();
+    this.clickListeners.clear();
     this.cameraFollowListeners.clear();
+    this.defendListeners.clear();
   }
 }

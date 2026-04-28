@@ -7,6 +7,8 @@ const TRANSLATIONS: Record<string, string> = {
   'exits.westPathOvergrown': 'Path overgrown.',
   'exits.demoEndTitle': 'Demo End',
   'exits.demoEndSubtitle': 'Hellena Prison ahead',
+  'gameOver.title': 'You died',
+  'gameOver.subtitle': 'Press R to restart',
 };
 
 export function t(key: string, params?: Record<string, string | number>): string {

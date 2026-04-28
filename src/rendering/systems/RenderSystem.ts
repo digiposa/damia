@@ -29,6 +29,8 @@ export class RenderSystem implements System<Components> {
         this.nodes.set(id, node);
       }
       node.position.set(pos.x, pos.y);
+      const s = sprite.scale ?? 1;
+      node.scale.set(s);
       // Iso depth-sort: render lines further away (smaller gx+gy) first.
       const grid = worldToGrid(pos.x, pos.y);
       node.zIndex = Math.round(grid.x + grid.y);

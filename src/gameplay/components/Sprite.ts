@@ -11,4 +11,6 @@ export interface Sprite {
   width: number;
   height: number;
   layer: SpriteLayer;
+  /** Visual scale multiplier. Default 1; mutated by DefenseSystem to shrink the player while defending. */
+  scale?: number;
 }

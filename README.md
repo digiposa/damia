@@ -22,8 +22,9 @@ npm run test       # vitest
 ## Documentation projet
 
 - [docs/PROMPT_V2.md](docs/PROMPT_V2.md) — vision, décisions verrouillées
-- [docs/PROJECT_BLUEPRINT.md](docs/PROJECT_BLUEPRINT.md) — architecture, conventions
-- [docs/ROADMAP_MVP.md](docs/ROADMAP_MVP.md) — jalons M0→M8
+- [docs/PROJECT_BLUEPRINT.md](docs/PROJECT_BLUEPRINT.md) — architecture cible, conventions, libs
+- [docs/ROADMAP_MVP.md](docs/ROADMAP_MVP.md) — jalons M0→M8 avec statut
+- [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) — **état fonctionnel + organisation du code (mis à jour à chaque jalon)**
 
 ## Structure
 

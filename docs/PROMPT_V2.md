@@ -135,8 +135,9 @@ Tout passe par **AssetManager** central → mapping logique → fichier. Swap pl
 
 ## 13. Documents projet
 
-- [PROJECT_BLUEPRINT.md](PROJECT_BLUEPRINT.md) — architecture détaillée, structure dossiers, conventions
-- [ROADMAP_MVP.md](ROADMAP_MVP.md) — jalons M0→M8 avec critères de "done"
+- [PROJECT_BLUEPRINT.md](PROJECT_BLUEPRINT.md) — architecture détaillée, structure dossiers, conventions (figé, change peu)
+- [ROADMAP_MVP.md](ROADMAP_MVP.md) — jalons M0→M8 avec critères de "done" + statut de progression
+- [ARCHITECTURE.md](ARCHITECTURE.md) — **état fonctionnel + organisation du code à un instant T, mis à jour à chaque jalon**
 - (à venir) `BACKLOG.md` — tout ce qui est hors MVP
 
 ---

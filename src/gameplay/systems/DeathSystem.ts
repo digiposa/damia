@@ -4,6 +4,7 @@ import { spawnFloatingText } from '@gameplay/entities/floatingText';
 import { spawnItem } from '@gameplay/entities/items';
 import { MOBS, type MobKind } from '@data/balance';
 import { rollLoot } from '@data/items';
+import { xpToNext } from '@data/progression';
 import { playSfx } from '@services/AudioManager';
 
 export type PlayerDeathListener = () => void;
@@ -53,6 +54,7 @@ export class DeathSystem implements System<Components> {
             color: 0xffe27a,
             durationMs: 1100,
           });
+          this.awardXp(world, xp, pos.x, pos.y);
         }
         const loot = rollLoot(Math.random(), Math.random());
         if (loot) {
@@ -88,5 +90,35 @@ export class DeathSystem implements System<Components> {
   destroy(): void {
     this.listener = null;
     this.playerDeathFired = false;
+  }
+
+  /**
+   * Add XP to the player's Progression and consume as many level-ups as the
+   * total covers. Level-up: full HP heal (TLoD convention) + floating text.
+   * No-op if there's no player or no Progression.
+   */
+  private awardXp(world: World<Components>, xp: number, mobX: number, mobY: number): void {
+    const players = world.query(['Player', 'Progression']);
+    const playerId = players[0];
+    if (playerId === undefined) return;
+    const prog = world.getComponent(playerId, 'Progression');
+    if (!prog) return;
+    prog.xp += xp;
+    while (prog.xp >= prog.xpToNext) {
+      prog.xp -= prog.xpToNext;
+      prog.level += 1;
+      prog.xpToNext = xpToNext(prog.level);
+      // Full heal on level up — match TLoD's level-up behavior.
+      const hp = world.getComponent(playerId, 'Health');
+      if (hp) hp.current = hp.max;
+      spawnFloatingText(world, {
+        x: mobX,
+        y: mobY - 30,
+        text: `LV ${prog.level}!`,
+        color: 0xffd166,
+        durationMs: 1400,
+      });
+      playSfx('items.pickup');
+    }
   }
 }

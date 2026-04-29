@@ -16,11 +16,13 @@ import type { Item } from './Item';
 import type { Pathfinder } from './Pathfinder';
 import type { Player } from './Player';
 import type { Position } from './Position';
+import type { Progression } from './Progression';
 import type { RandomEncounter } from './RandomEncounter';
 import type { SkillCooldown } from './SkillCooldown';
 import type { Speed } from './Speed';
 import type { Spell } from './Spell';
 import type { Sprite } from './Sprite';
+import type { Vfx } from './Vfx';
 import type { Stats } from './Stats';
 import type { Velocity } from './Velocity';
 
@@ -51,6 +53,8 @@ export interface Components {
   SkillCooldown: SkillCooldown;
   RandomEncounter: RandomEncounter;
   Spell: Spell;
+  Vfx: Vfx;
+  Progression: Progression;
 }
 
 export type ComponentName = keyof Components;
@@ -74,6 +78,7 @@ export type {
   Pathfinder,
   Player,
   Position,
+  Progression,
   RandomEncounter,
   SkillCooldown,
   Spell,
@@ -81,6 +86,7 @@ export type {
   Sprite,
   Stats,
   Velocity,
+  Vfx,
 };
 export type { AIBehavior } from './AI';
 export type { GridCell, WorldPoint } from './Pathfinder';

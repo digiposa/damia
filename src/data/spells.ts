@@ -11,6 +11,7 @@
  *    ground). On click, AoE around the click point. Range capped per spell.
  */
 import type { AssetAlias } from '@services/AssetManager';
+import type { VfxKind } from '@gameplay/components/Vfx';
 
 export type SpellKind = 'burnOut' | 'gushingMagma';
 
@@ -31,6 +32,11 @@ interface SpellBase {
   cooldownMs: number;
   /** Optional pose alias rendered while casting (Sprite.spellTextureAlias). */
   posePreviewAlias?: AssetAlias;
+  /** Visual effect kind spawned at the hit location (or AoE center) on impact. */
+  vfx: VfxKind;
+  /** Hit-effect end-radius hint, in world px. Defaults to a sane per-target value
+   *  in SpellSystem when not provided here. */
+  vfxRadiusPx?: number;
 }
 
 export interface SpellSingleTarget extends SpellBase {
@@ -59,6 +65,8 @@ export const SPELLS: Record<SpellKind, SpellDefinition> = {
     cooldownMs: 0,
     target: 'lockedTarget',
     rangePx: 320,
+    vfx: 'fireImpact',
+    vfxRadiusPx: 60,
   },
   gushingMagma: {
     name: 'Gushing Magma',
@@ -70,5 +78,7 @@ export const SPELLS: Record<SpellKind, SpellDefinition> = {
     target: 'groundAoE',
     castRangePx: 480,
     aoeRadiusPx: 160,
+    vfx: 'flameBurst',
+    vfxRadiusPx: 140,
   },
 };

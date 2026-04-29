@@ -11,7 +11,14 @@ interface InteractableDef {
 
 const INTERACTABLES: Record<InteractableKind, InteractableDef> = {
   merchant: {
-    sprite: { shape: 'capsule', color: 0xb88a4a, width: 30, height: 50 },
+    sprite: {
+      shape: 'capsule',
+      color: 0xb88a4a,
+      width: 60,
+      height: 80,
+      fitMode: 'height',
+      textureAlias: 'sprite.npc.merchant',
+    },
     defaultMessageKey: 'interactables.merchantComingSoon',
   },
 };

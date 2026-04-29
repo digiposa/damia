@@ -2,6 +2,7 @@ import { gridToWorld } from '@core/math/iso';
 import type { Components } from '@gameplay/components';
 import type { Entity, World } from '@core/ecs';
 import { PLAYER_BASE } from '@data/balance';
+import { xpToNext } from '@data/progression';
 
 export interface SpawnPlayerOptions {
   gx: number;
@@ -52,6 +53,7 @@ export function spawnPlayer(world: World<Components>, opts: SpawnPlayerOptions):
   world.addComponent(id, 'AttackCooldown', { remainingMs: 0 });
   world.addComponent(id, 'SkillCooldown', { remainingMs: {} });
   world.addComponent(id, 'Inventory', { items: {}, gold: 0 });
+  world.addComponent(id, 'Progression', { level: 1, xp: 0, xpToNext: xpToNext(1) });
 
   return id;
 }

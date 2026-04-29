@@ -1,4 +1,5 @@
 import type { SpellKind } from '@data/spells';
+import type { VfxKind } from './Vfx';
 
 /**
  * Active spell-cast in flight. Mutually exclusive with Addition / regular swing
@@ -32,4 +33,8 @@ export interface Spell {
   /** Unit vector from caster to target/click — used by RenderSystem for facing. */
   dirX: number;
   dirY: number;
+  /** Visual effect spawned at impact (per-target for lockedTarget, at center for AoE). */
+  vfxKind: VfxKind;
+  /** End-radius hint for the impact VFX. */
+  vfxRadiusPx: number;
 }

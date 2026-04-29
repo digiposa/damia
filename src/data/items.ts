@@ -1,4 +1,5 @@
 import type { Sprite, SpriteShape } from '@gameplay/components';
+import type { AssetAlias } from '@services/AssetManager';
 
 export type ItemKind = 'healingPotion' | 'burnOut' | 'gold';
 
@@ -16,6 +17,10 @@ export interface ItemDefinition {
   /** i18n key for the display name. */
   nameKey: string;
   sprite: { shape: SpriteShape; color: number; width: number; height: number };
+  /** Optional textured icon used for both the world-drop and the Hotbar badge.
+   *  When set, RenderSystem renders a Pixi.Sprite from this texture; the
+   *  shape/color above is the fallback if the asset failed to load. */
+  iconAlias?: AssetAlias;
   /** Loot weight relative to others (used by rollLoot). */
   weight: number;
   /** What happens when the player consumes this item from the inventory. */
@@ -27,7 +32,8 @@ export interface ItemDefinition {
 export const ITEMS: Record<ItemKind, ItemDefinition> = {
   healingPotion: {
     nameKey: 'items.healingPotion',
-    sprite: { shape: 'circle', color: 0xd03030, width: 18, height: 18 },
+    sprite: { shape: 'circle', color: 0xd03030, width: 22, height: 22 },
+    iconAlias: 'sprite.item.healingPotion',
     weight: 50,
     use: { kind: 'heal', percentMaxHp: 0.5 },
     bindable: true,
@@ -36,7 +42,8 @@ export const ITEMS: Record<ItemKind, ItemDefinition> = {
   // current target. Cast cost = 1 BurnOut item.
   burnOut: {
     nameKey: 'items.burnOut',
-    sprite: { shape: 'circle', color: 0xe07020, width: 18, height: 18 },
+    sprite: { shape: 'circle', color: 0xe07020, width: 22, height: 22 },
+    iconAlias: 'sprite.item.burnOut',
     weight: 30,
     use: { kind: 'spell', spell: 'burnOut' },
     bindable: true,
@@ -50,8 +57,8 @@ export const ITEMS: Record<ItemKind, ItemDefinition> = {
   },
 };
 
-/** Probability that a kill drops anything at all. */
-export const DROP_CHANCE = 0.3;
+/** Probability that a kill drops anything at all. TODO: revert to 0.3 before ship. */
+export const DROP_CHANCE = 0.9;
 
 /**
  * Pure roll: returns an ItemKind or `null`. Two `roll` parameters in [0, 1)
@@ -73,5 +80,10 @@ export function rollLoot(rollDrop: number, rollKind: number): ItemKind | null {
 }
 
 export function itemSpriteComponent(kind: ItemKind, layer: Sprite['layer']): Sprite {
-  return { ...ITEMS[kind].sprite, layer };
+  const def = ITEMS[kind];
+  return {
+    ...def.sprite,
+    layer,
+    ...(def.iconAlias ? { textureAlias: def.iconAlias } : {}),
+  };
 }

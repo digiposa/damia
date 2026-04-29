@@ -9,6 +9,7 @@ import { Layers } from '@rendering/Layers';
 import { RenderSystem } from '@rendering/systems/RenderSystem';
 import { FloatingTextSystem } from '@rendering/systems/FloatingTextSystem';
 import { EntityHudSystem } from '@rendering/systems/EntityHudSystem';
+import { VfxSystem } from '@rendering/systems/VfxSystem';
 import { World } from '@core/ecs';
 import type { Entity, System } from '@core/ecs';
 import { gridToWorld, worldToGrid } from '@core/math/iso';
@@ -40,6 +41,7 @@ import { ADDITIONS, type AdditionKind, type MobKind } from '@data/balance';
 import { ITEMS, type ItemKind } from '@data/items';
 import { SPELLS, type SpellKind } from '@data/spells';
 import { spawnFloatingText } from '@gameplay/entities/floatingText';
+import { spawnVfx } from '@gameplay/entities/vfx';
 import { AssetManager } from '@services/AssetManager';
 import { Toast } from '@ui/Toast';
 import { Hud } from '@ui/Hud';
@@ -147,15 +149,31 @@ export class ForestScene implements Scene {
       ...(startHp !== undefined ? { hp: startHp } : {}),
     });
 
-    // Restore inventory + hotbar bindings from the save (no-op for new games).
+    // Restore inventory + hotbar + progression from the save (no-op for new games).
     if (this.saveData) {
       const inv = this.world.getComponent(this.playerId, 'Inventory');
       if (inv) {
         inv.items = { ...this.saveData.inventory.items };
         inv.gold = this.saveData.inventory.gold;
       }
+      const prog = this.world.getComponent(this.playerId, 'Progression');
+      if (prog) {
+        prog.level = this.saveData.progression.level;
+        prog.xp = this.saveData.progression.xp;
+        prog.xpToNext = this.saveData.progression.xpToNext;
+      }
       // Slice into a mutable array — saveData.hotbar is readonly.
       this.hotbarSlots = this.saveData.hotbar.slice();
+    } else {
+      // DEV: prefill some items + bind to hotbar slots so spell/heal flows can
+      // be tested without farming. TODO: remove before ship.
+      const inv = this.world.getComponent(this.playerId, 'Inventory');
+      if (inv) {
+        inv.items.healingPotion = 5;
+        inv.items.burnOut = 3;
+      }
+      this.hotbarSlots[1] = { kind: 'item', item: 'healingPotion' };
+      this.hotbarSlots[2] = { kind: 'item', item: 'burnOut' };
     }
 
     for (const prop of map.props) spawnProp(this.world, prop);
@@ -186,6 +204,7 @@ export class ForestScene implements Scene {
     const render = new RenderSystem(this.layers);
     const floating = new FloatingTextSystem(this.layers.fx);
     const entityHud = new EntityHudSystem(this.layers.fx);
+    const vfx = new VfxSystem(this.layers.fx);
     // Random encounters: walking accumulates px → spawn mobs in a ring around
     // the player at full meter. Player-relative (not camera-relative) so it
     // works regardless of camera-follow state.
@@ -222,6 +241,7 @@ export class ForestScene implements Scene {
       // EntityHudSystem must run AFTER render so it reads the same Position
       // values that just placed the sprites for this frame.
       entityHud,
+      vfx,
       floating,
     ];
 
@@ -332,6 +352,17 @@ export class ForestScene implements Scene {
         const target = this.findEnemyAtCell(cmd.gx, cmd.gy);
         if (target !== null) {
           this.world.addComponent(this.playerId, 'CombatIntent', { targetId: target });
+          // Click feedback: red ring pulse on the targeted enemy.
+          const tp = this.world.getComponent(target, 'Position');
+          if (tp) {
+            spawnVfx(this.world, {
+              kind: 'clickAttack',
+              x: tp.x,
+              y: tp.y,
+              radius: 32,
+              durationMs: 350,
+            });
+          }
           return;
         }
       }
@@ -342,6 +373,15 @@ export class ForestScene implements Scene {
         pf.waypoints = null;
         pf.computing = false;
       }
+      // Click feedback: iso diamond outline on the destination tile.
+      const tilePos = gridToWorld(cmd.gx, cmd.gy);
+      spawnVfx(this.world, {
+        kind: 'clickMove',
+        x: tilePos.x,
+        y: tilePos.y,
+        radius: 0,
+        durationMs: 350,
+      });
     });
 
     this.input.onDefendChange((active) => {
@@ -430,6 +470,8 @@ export class ForestScene implements Scene {
         this.hud.setSp(0, PLAYER_SP_MAX);
         const inv = this.world.getComponent(this.playerId, 'Inventory');
         this.hud.setGold(inv?.gold ?? 0);
+        const prog = this.world.getComponent(this.playerId, 'Progression');
+        if (prog) this.hud.setLevel(prog.level);
       }
 
       if (this.encounterIndicator && this.encounterSystem) {
@@ -477,6 +519,7 @@ export class ForestScene implements Scene {
     if (!hp || !pos) return;
     const grid = worldToGrid(pos.x, pos.y);
     const inv = this.world.getComponent(this.playerId, 'Inventory');
+    const prog = this.world.getComponent(this.playerId, 'Progression');
     SaveManager.save({
       zone: 'forest',
       player: {
@@ -490,6 +533,11 @@ export class ForestScene implements Scene {
         gold: inv?.gold ?? 0,
       },
       hotbar: this.hotbarSlots.slice(),
+      progression: {
+        level: prog?.level ?? 1,
+        xp: prog?.xp ?? 0,
+        xpToNext: prog?.xpToNext ?? 100,
+      },
     });
   }
 
@@ -681,6 +729,8 @@ export class ForestScene implements Scene {
         targetId,
         dirX: dx / len,
         dirY: dy / len,
+        vfxKind: spell.vfx,
+        vfxRadiusPx: spell.vfxRadiusPx ?? 60,
       });
       const inv = this.world.getComponent(this.playerId, 'Inventory');
       if (inv) this.decrementItem(inv, itemKind);
@@ -788,6 +838,8 @@ export class ForestScene implements Scene {
       aoeRadiusPx: gt.aoeRadiusPx,
       dirX: dx / len,
       dirY: dy / len,
+      vfxKind: spellDef.vfx,
+      vfxRadiusPx: spellDef.vfxRadiusPx ?? gt.aoeRadiusPx,
     });
     this.decrementItem(inv, gt.itemKind);
     const pf = this.world.getComponent(this.playerId, 'Pathfinder');

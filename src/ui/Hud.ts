@@ -25,6 +25,7 @@ export class Hud {
   private readonly spBar: Graphics;
   private readonly spText: Text;
   private readonly goldText: Text;
+  private readonly levelText: Text;
   private app: Application;
 
   constructor(app: Application) {
@@ -111,9 +112,24 @@ export class Hud {
     });
     this.goldText.position.set(barsX, spY + BAR_HEIGHT + 4);
 
+    // Level pip — top-left of the portrait, small badge so it doesn't compete
+    // with the portrait art.
+    this.levelText = new Text({
+      text: 'LV 1',
+      style: {
+        fontFamily: 'system-ui, sans-serif',
+        fontSize: 12,
+        fill: 0xfaf6e8,
+        fontWeight: 'bold',
+        stroke: { color: 0x000000, width: 3 },
+      },
+    });
+    this.levelText.position.set(4, 4);
+
     this.container.addChild(
       portraitBg,
       portraitVisual,
+      this.levelText,
       hpBg,
       this.hpBar,
       this.hpText,
@@ -148,6 +164,10 @@ export class Hud {
 
   setGold(amount: number): void {
     this.goldText.text = `${amount} G`;
+  }
+
+  setLevel(level: number): void {
+    this.levelText.text = `LV ${level}`;
   }
 
   destroy(): void {

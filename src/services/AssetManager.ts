@@ -26,6 +26,16 @@ const MANIFEST = {
   // Dart portrait used in the HUD (top-left of the screen, in the portrait slot).
   'ui.portrait.dart': { kind: 'texture', url: '/assets/ui/dart-portrait.png' },
 
+  // Item icons (used both in the world-drop sprite and the Hotbar slot badge).
+  'sprite.item.healingPotion': { kind: 'texture', url: '/assets/items/healing-potion.png' },
+  'sprite.item.burnOut': { kind: 'texture', url: '/assets/items/burn-out.png' },
+
+  // Spell impact VFX textures — drawn by VfxSystem (sprite-based kinds).
+  'vfx.fireImpact': { kind: 'texture', url: '/assets/vfx/burn-out.png' },
+
+  // NPC sprites.
+  'sprite.npc.merchant': { kind: 'texture', url: '/assets/sprites/npc/merchant.png' },
+
   // M8 mob textures extracted from `02 Forest.png` showcase via rembg.
   'sprite.mob.berserkMouse': { kind: 'texture', url: '/assets/sprites/mobs/berserkMouse.png' },
   'sprite.mob.berserkMouse.attack': {

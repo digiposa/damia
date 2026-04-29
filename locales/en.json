@@ -26,8 +26,15 @@
   },
   "items": {
     "healingPotion": "Healing Potion",
+    "healingPotion.desc": "Restores 50% of max HP",
     "burnOut": "Burn Out",
-    "gold": "Gold"
+    "burnOut.desc": "Casts Burn Out (fire spell, single target)",
+    "gold": "Gold",
+    "gold.desc": "Currency"
+  },
+  "additions": {
+    "doubleSlash": "Double Slash",
+    "doubleSlash.desc": "2-hit combo, 6 s cooldown"
   },
   "pickups": {
     "picked": "Picked up: {{item}}"

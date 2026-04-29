@@ -26,8 +26,15 @@
   },
   "items": {
     "healingPotion": "Potion de soin",
-    "burnOut": "Brûle-tout",
-    "gold": "Or"
+    "healingPotion.desc": "Restaure 50 % des PV max",
+    "burnOut": "Épuisement",
+    "burnOut.desc": "Lance Burn Out (sort de feu, cible unique)",
+    "gold": "Or",
+    "gold.desc": "Monnaie"
+  },
+  "additions": {
+    "doubleSlash": "Double Slash",
+    "doubleSlash.desc": "Combo 2 frappes, recharge 6 s"
   },
   "pickups": {
     "picked": "Ramassé : {{item}}"

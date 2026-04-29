@@ -12,7 +12,20 @@ export const COMBAT = {
 export const PLAYER_BASE = {
   health: 100,
   speed: 0.18,
-  stats: { atk: 12, def: 3, magicAtk: 10, atkSpeed: 1.5, range: 80, aggroRange: 0 } as Stats,
+  stats: {
+    atk: 12,
+    def: 3,
+    magicAtk: 10,
+    magicDef: 3,
+    speed: 50,
+    attackHit: 100,
+    magicHit: 100,
+    attackAvoid: 0,
+    magicAvoid: 0,
+    atkSpeed: 1.5,
+    range: 80,
+    aggroRange: 0,
+  } as Stats,
 } as const;
 
 export type MobKind = 'berserkMouse' | 'goblin' | 'assassinCock' | 'trent';
@@ -30,7 +43,20 @@ export const MOBS: Record<MobKind, MobDefinition> = {
   berserkMouse: {
     health: 20,
     speed: 0.12,
-    stats: { atk: 5, def: 1, magicAtk: 0, atkSpeed: 1, range: 80, aggroRange: 256 },
+    stats: {
+      atk: 5,
+      def: 1,
+      magicAtk: 0,
+      magicDef: 1,
+      speed: 60,
+      attackHit: 100,
+      magicHit: 100,
+      attackAvoid: 5,
+      magicAvoid: 0,
+      atkSpeed: 1,
+      range: 80,
+      aggroRange: 256,
+    },
     sprite: {
       shape: 'circle',
       color: 0xc77ba0,
@@ -46,7 +72,20 @@ export const MOBS: Record<MobKind, MobDefinition> = {
   goblin: {
     health: 40,
     speed: 0.1,
-    stats: { atk: 8, def: 4, magicAtk: 0, atkSpeed: 1, range: 80, aggroRange: 200 },
+    stats: {
+      atk: 8,
+      def: 4,
+      magicAtk: 0,
+      magicDef: 2,
+      speed: 45,
+      attackHit: 100,
+      magicHit: 100,
+      attackAvoid: 0,
+      magicAvoid: 0,
+      atkSpeed: 1,
+      range: 80,
+      aggroRange: 200,
+    },
     sprite: {
       shape: 'capsule',
       color: 0x4a8f3a,
@@ -62,7 +101,20 @@ export const MOBS: Record<MobKind, MobDefinition> = {
   assassinCock: {
     health: 30,
     speed: 0.16,
-    stats: { atk: 7, def: 2, magicAtk: 2, atkSpeed: 1.4, range: 96, aggroRange: 320 },
+    stats: {
+      atk: 7,
+      def: 2,
+      magicAtk: 2,
+      magicDef: 2,
+      speed: 70,
+      attackHit: 100,
+      magicHit: 100,
+      attackAvoid: 10,
+      magicAvoid: 0,
+      atkSpeed: 1.4,
+      range: 96,
+      aggroRange: 320,
+    },
     sprite: {
       shape: 'diamond',
       color: 0x6a3a8f,
@@ -78,7 +130,20 @@ export const MOBS: Record<MobKind, MobDefinition> = {
   trent: {
     health: 50,
     speed: 0.06,
-    stats: { atk: 12, def: 6, magicAtk: 4, atkSpeed: 0.5, range: 80, aggroRange: 192 },
+    stats: {
+      atk: 12,
+      def: 6,
+      magicAtk: 4,
+      magicDef: 5,
+      speed: 25,
+      attackHit: 100,
+      magicHit: 100,
+      attackAvoid: 0,
+      magicAvoid: 5,
+      atkSpeed: 0.5,
+      range: 80,
+      aggroRange: 192,
+    },
     sprite: {
       shape: 'tree',
       color: 0x8a2a2a,

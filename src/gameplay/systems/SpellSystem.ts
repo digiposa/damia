@@ -2,6 +2,7 @@ import type { System, World } from '@core/ecs';
 import type { Components, Position } from '@gameplay/components';
 import { computeDamage } from '@data/balance';
 import { spawnFloatingText } from '@gameplay/entities/floatingText';
+import { spawnVfx } from '@gameplay/entities/vfx';
 import { playSfx } from '@services/AudioManager';
 
 /**
@@ -47,7 +48,11 @@ export class SpellSystem implements System<Components> {
     const baseAtk = Math.max(1, Math.round(magicAtk * spell.magicAtkMul));
     if (spell.target === 'lockedTarget') {
       if (spell.targetId === undefined) return;
+      const tp = world.getComponent(spell.targetId, 'Position');
       this.hit(world, spell.targetId, baseAtk);
+      // Spawn the impact VFX at the target's position (after hit so it overlays
+      // the floating-text that hit() may have just spawned).
+      if (tp) spawnVfx(world, { kind: spell.vfxKind, x: tp.x, y: tp.y, radius: spell.vfxRadiusPx });
       return;
     }
     if (
@@ -69,6 +74,14 @@ export class SpellSystem implements System<Components> {
       if (dx * dx + dy * dy > r2) continue;
       this.hit(world, id, baseAtk);
     }
+    // Single big burst at the AoE center — covers the whole damage radius.
+    spawnVfx(world, {
+      kind: spell.vfxKind,
+      x: spell.targetX,
+      y: spell.targetY,
+      radius: spell.vfxRadiusPx,
+      durationMs: 800,
+    });
   }
 
   private hit(world: World<Components>, targetId: number, atk: number): void {

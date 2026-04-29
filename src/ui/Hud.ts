@@ -24,6 +24,7 @@ export class Hud {
   private readonly hpText: Text;
   private readonly spBar: Graphics;
   private readonly spText: Text;
+  private readonly goldText: Text;
   private app: Application;
 
   constructor(app: Application) {
@@ -96,6 +97,20 @@ export class Hud {
     });
     this.spText.position.set(barsX + 6, spY + 1);
 
+    // Gold counter — sits below the SP bar so it doesn't shove the bars around
+    // when it gains digits.
+    this.goldText = new Text({
+      text: '',
+      style: {
+        fontFamily: 'system-ui, sans-serif',
+        fontSize: 13,
+        fill: 0xeec040,
+        fontWeight: 'bold',
+        stroke: { color: 0x000000, width: 2 },
+      },
+    });
+    this.goldText.position.set(barsX, spY + BAR_HEIGHT + 4);
+
     this.container.addChild(
       portraitBg,
       portraitVisual,
@@ -105,6 +120,7 @@ export class Hud {
       spBg,
       this.spBar,
       this.spText,
+      this.goldText,
     );
 
     this.reposition();
@@ -128,6 +144,10 @@ export class Hud {
       .roundRect(PORTRAIT_SIZE + 10, spY, BAR_WIDTH * ratio, BAR_HEIGHT, 3)
       .fill(SP_FG);
     this.spText.text = `SP ${Math.round(current)} / ${max}`;
+  }
+
+  setGold(amount: number): void {
+    this.goldText.text = `${amount} G`;
   }
 
   destroy(): void {

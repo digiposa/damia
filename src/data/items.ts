@@ -2,12 +2,26 @@ import type { Sprite, SpriteShape } from '@gameplay/components';
 
 export type ItemKind = 'healingPotion' | 'burnOut' | 'gold';
 
+/**
+ * Effect bound to an item when consumed from the inventory. `null` for items
+ * with no usable effect (e.g. `gold` is currency only). `'spell'` items defer
+ * to the spell pipeline (cast on consume; see `data/spells.ts`).
+ */
+export type ItemUseEffect =
+  | { kind: 'heal'; percentMaxHp: number }
+  | { kind: 'spell'; spell: 'burnOut' }
+  | null;
+
 export interface ItemDefinition {
   /** i18n key for the display name. */
   nameKey: string;
   sprite: { shape: SpriteShape; color: number; width: number; height: number };
   /** Loot weight relative to others (used by rollLoot). */
   weight: number;
+  /** What happens when the player consumes this item from the inventory. */
+  use: ItemUseEffect;
+  /** True if this item should occupy a Hotbar slot when picked up. Currency items don't. */
+  bindable: boolean;
 }
 
 export const ITEMS: Record<ItemKind, ItemDefinition> = {
@@ -15,16 +29,24 @@ export const ITEMS: Record<ItemKind, ItemDefinition> = {
     nameKey: 'items.healingPotion',
     sprite: { shape: 'circle', color: 0xd03030, width: 18, height: 18 },
     weight: 50,
+    use: { kind: 'heal', percentMaxHp: 0.5 },
+    bindable: true,
   },
+  // BurnOut is a magical attack item in TLoD: consume → cast Burn Out spell on
+  // current target. Cast cost = 1 BurnOut item.
   burnOut: {
     nameKey: 'items.burnOut',
     sprite: { shape: 'circle', color: 0xe07020, width: 18, height: 18 },
     weight: 30,
+    use: { kind: 'spell', spell: 'burnOut' },
+    bindable: true,
   },
   gold: {
     nameKey: 'items.gold',
     sprite: { shape: 'circle', color: 0xeec040, width: 16, height: 16 },
     weight: 20,
+    use: null,
+    bindable: false,
   },
 };
 

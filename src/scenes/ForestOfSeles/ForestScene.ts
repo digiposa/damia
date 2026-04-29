@@ -1,3 +1,5 @@
+import type { FederatedPointerEvent } from 'pixi.js';
+import { Graphics } from 'pixi.js';
 import type { Viewport } from 'pixi-viewport';
 import type { GameContext } from '@/Game';
 import type { Scene } from '../Scene';
@@ -6,6 +8,7 @@ import { createCamera } from '@rendering/Camera';
 import { Layers } from '@rendering/Layers';
 import { RenderSystem } from '@rendering/systems/RenderSystem';
 import { FloatingTextSystem } from '@rendering/systems/FloatingTextSystem';
+import { EntityHudSystem } from '@rendering/systems/EntityHudSystem';
 import { World } from '@core/ecs';
 import type { Entity, System } from '@core/ecs';
 import { gridToWorld, worldToGrid } from '@core/math/iso';
@@ -22,32 +25,41 @@ import { ExitSystem } from '@gameplay/systems/ExitSystem';
 import { CooldownSystem } from '@gameplay/systems/CooldownSystem';
 import { CombatSystem } from '@gameplay/systems/CombatSystem';
 import { AttackSwingSystem } from '@gameplay/systems/AttackSwingSystem';
+import { AdditionSystem } from '@gameplay/systems/AdditionSystem';
+import { SpellSystem } from '@gameplay/systems/SpellSystem';
 import { AISystem } from '@gameplay/systems/AISystem';
 import { DefenseSystem } from '@gameplay/systems/DefenseSystem';
 import { DeathSystem } from '@gameplay/systems/DeathSystem';
 import { DyingSystem } from '@gameplay/systems/DyingSystem';
+import { EncounterSystem } from '@gameplay/systems/EncounterSystem';
 import { ItemPickupSystem } from '@gameplay/systems/ItemPickupSystem';
 import { InteractableSystem } from '@gameplay/systems/InteractableSystem';
 import { ForestMap, buildCollisionGrid } from './MapLoader';
 import { propBlocks } from '@data/props';
-import type { MobKind } from '@data/balance';
-import { ITEMS } from '@data/items';
+import { ADDITIONS, type AdditionKind, type MobKind } from '@data/balance';
+import { ITEMS, type ItemKind } from '@data/items';
+import { SPELLS, type SpellKind } from '@data/spells';
+import { spawnFloatingText } from '@gameplay/entities/floatingText';
 import { AssetManager } from '@services/AssetManager';
 import { Toast } from '@ui/Toast';
 import { Hud } from '@ui/Hud';
-import { Hotbar } from '@ui/Hotbar';
+import { Hotbar, type HotbarSlot } from '@ui/Hotbar';
 import { MiniMap } from '@ui/MiniMap';
 import { ZoneTitle } from '@ui/ZoneTitle';
 import { ActionLog } from '@ui/ActionLog';
 import { SettingsPanel } from '@ui/SettingsPanel';
+import { EncounterIndicator } from '@ui/EncounterIndicator';
 import { t } from '@services/I18nService';
-import { playSfx } from '@services/AudioManager';
+import { playMusic, playSfx, stopMusic } from '@services/AudioManager';
 import { SaveManager, type SaveDataV1 } from '@services/SaveManager';
 import { DemoEndScene } from '@scenes/DemoEndScene';
 import { GameOverScene } from '@scenes/GameOverScene';
 import { TitleScene } from '@scenes/TitleScene';
 
 const PLAYER_SP_MAX = 100;
+/** Click-to-target tolerance: enemies whose center is within this world-px
+ *  radius of the click count as the picked target. ~ 3/4 of a tile width. */
+const ENEMY_PICK_RADIUS_PX = 96;
 
 export class ForestScene implements Scene {
   readonly name = 'forest';
@@ -65,6 +77,32 @@ export class ForestScene implements Scene {
   private zoneTitle: ZoneTitle | null = null;
   private actionLog: ActionLog | null = null;
   private settings: SettingsPanel | null = null;
+  private encounterIndicator: EncounterIndicator | null = null;
+  private encounterSystem: EncounterSystem | null = null;
+  /** Per-scene hotbar bindings. Slot 0 = Double Slash by default; items
+   *  auto-bind into the first empty slot when picked up. */
+  private hotbarSlots: HotbarSlot[] = [
+    { kind: 'addition', addition: 'doubleSlash' },
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+  ];
+
+  /** Active ground-targeting state. While set, the click handler commits/cancels
+   *  the spell instead of moving Dart, and the cursor circle in fxLayer follows
+   *  the mouse (clamped to the spell's castRangePx). */
+  private groundTargeting: {
+    spell: SpellKind;
+    itemKind: ItemKind;
+    aoeRadiusPx: number;
+    castRangePx: number;
+    cursor: Graphics;
+    cleanups: Array<() => void>;
+  } | null = null;
   private playerId: Entity | null = null;
   private cameraFollow = false;
   private mobKinds = new Map<Entity, MobKind>();
@@ -109,6 +147,17 @@ export class ForestScene implements Scene {
       ...(startHp !== undefined ? { hp: startHp } : {}),
     });
 
+    // Restore inventory + hotbar bindings from the save (no-op for new games).
+    if (this.saveData) {
+      const inv = this.world.getComponent(this.playerId, 'Inventory');
+      if (inv) {
+        inv.items = { ...this.saveData.inventory.items };
+        inv.gold = this.saveData.inventory.gold;
+      }
+      // Slice into a mutable array — saveData.hotbar is readonly.
+      this.hotbarSlots = this.saveData.hotbar.slice();
+    }
+
     for (const prop of map.props) spawnProp(this.world, prop);
     for (const exit of map.exits) spawnExit(this.world, exit);
     for (const mob of map.mobs) {
@@ -131,9 +180,23 @@ export class ForestScene implements Scene {
     const interactables = new InteractableSystem();
     const death = new DeathSystem((id) => this.mobKinds.get(id) ?? null);
     const dying = new DyingSystem();
+    const addition = new AdditionSystem();
+    const spell = new SpellSystem();
     const pickup = new ItemPickupSystem();
     const render = new RenderSystem(this.layers);
     const floating = new FloatingTextSystem(this.layers.fx);
+    const entityHud = new EntityHudSystem(this.layers.fx);
+    // Random encounters: walking accumulates px → spawn mobs in a ring around
+    // the player at full meter. Player-relative (not camera-relative) so it
+    // works regardless of camera-follow state.
+    this.encounterSystem = new EncounterSystem(
+      'forest',
+      { width: map.size.w, height: map.size.h },
+      (gx, gy) => collisionGrid[gy]?.[gx] === 0,
+      (entity, kind) => {
+        this.mobKinds.set(entity, kind);
+      },
+    );
     this.systems = [
       cooldown,
       ai,
@@ -145,6 +208,9 @@ export class ForestScene implements Scene {
       defense,
       death,
       dying,
+      addition,
+      spell,
+      this.encounterSystem,
       pickup,
       // `swing` must run AFTER combat (which spawns the AttackSwing) and BEFORE
       // render, but its `dt` advance must not happen on the same frame the swing
@@ -153,6 +219,9 @@ export class ForestScene implements Scene {
       // it at t=0 → frame N+1 the swing system advances by dt and render redraws.
       swing,
       render,
+      // EntityHudSystem must run AFTER render so it reads the same Position
+      // values that just placed the sprites for this frame.
+      entityHud,
       floating,
     ];
 
@@ -167,6 +236,8 @@ export class ForestScene implements Scene {
     this.zoneTitle = new ZoneTitle(ctx.app);
     this.actionLog = new ActionLog(ctx.app);
     this.settings = new SettingsPanel(ctx.app);
+    this.encounterIndicator = new EncounterIndicator();
+    this.layers.fx.addChild(this.encounterIndicator.node);
     this.layers.ui.addChild(
       this.hud.container,
       this.hotbar.container,
@@ -177,6 +248,10 @@ export class ForestScene implements Scene {
     );
 
     this.zoneTitle.show(t('zones.forestOfSeles.name'), t('zones.forestOfSeles.objective'));
+
+    // Ambient music. AudioContext was already unlocked at TitleScene click;
+    // playMusic is idempotent so re-entering the same scene won't restart it.
+    playMusic('music.forestAmbient');
 
     this.settings.onAction((action) => {
       this.settings?.hide();
@@ -212,8 +287,19 @@ export class ForestScene implements Scene {
       });
     });
 
-    pickup.onPickup(({ kind }) => {
+    pickup.onPickup(({ kind, result, gold }) => {
+      if (result === 'full') {
+        // Item was left on the ground; don't play the pickup sfx so the player
+        // notices something is off.
+        this.toast?.show(t('inventory.full'));
+        return;
+      }
       playSfx('items.pickup');
+      if (result === 'gold' && gold !== undefined) {
+        this.actionLog?.push(t('log.goldPicked', { gold }));
+        return;
+      }
+      this.autoBindItemToHotbar(kind);
       this.actionLog?.push(t('log.itemPicked', { item: t(ITEMS[kind].nameKey) }));
     });
 
@@ -230,7 +316,17 @@ export class ForestScene implements Scene {
     this.input.onClick((cmd) => {
       if (!this.world || this.playerId === null) return;
       if (this.settings?.isOpen) return;
+      // Ground-targeting mode: left-click commits the spell, right-click cancels.
+      // Always swallow the click here so it doesn't also trigger move/attack.
+      if (this.groundTargeting) {
+        this.exitGroundTargeting(cmd.button === 'left');
+        return;
+      }
       if (this.world.hasComponent(this.playerId, 'Defending')) return;
+      // Lock the player out of movement / attack-restart while an Addition or
+      // Spell animation plays.
+      if (this.world.hasComponent(this.playerId, 'Addition')) return;
+      if (this.world.hasComponent(this.playerId, 'Spell')) return;
 
       if (cmd.button === 'left') {
         const target = this.findEnemyAtCell(cmd.gx, cmd.gy);
@@ -250,9 +346,14 @@ export class ForestScene implements Scene {
 
     this.input.onDefendChange((active) => {
       if (!this.world || this.playerId === null) return;
+      // Don't let defend interrupt an addition or spell animation.
+      if (active && this.world.hasComponent(this.playerId, 'Addition')) return;
+      if (active && this.world.hasComponent(this.playerId, 'Spell')) return;
       if (active) this.world.addComponent(this.playerId, 'Defending', {});
       else this.world.removeComponent(this.playerId, 'Defending');
     });
+
+    this.input.onSlot((slotIdx) => this.activateHotbarSlot(slotIdx));
 
     this.input.onCameraFollowToggle((on) => {
       this.cameraFollow = on;
@@ -267,6 +368,8 @@ export class ForestScene implements Scene {
   }
 
   exit(ctx: GameContext): void {
+    stopMusic();
+    if (this.groundTargeting) this.exitGroundTargeting(false);
     for (const c of this.cleanups) c();
     this.cleanups.length = 0;
     this.toast?.destroy();
@@ -283,6 +386,9 @@ export class ForestScene implements Scene {
     this.actionLog = null;
     this.settings?.destroy();
     this.settings = null;
+    this.encounterIndicator?.destroy();
+    this.encounterIndicator = null;
+    this.encounterSystem = null;
     this.input?.destroy();
     this.input = null;
     for (const sys of this.systems) sys.destroy?.();
@@ -320,7 +426,41 @@ export class ForestScene implements Scene {
     if (this.playerId !== null) {
       const hp = this.world.getComponent(this.playerId, 'Health');
       if (hp && this.hud) this.hud.setHealth(hp.current, hp.max);
-      if (this.hud) this.hud.setSp(0, PLAYER_SP_MAX);
+      if (this.hud) {
+        this.hud.setSp(0, PLAYER_SP_MAX);
+        const inv = this.world.getComponent(this.playerId, 'Inventory');
+        this.hud.setGold(inv?.gold ?? 0);
+      }
+
+      if (this.encounterIndicator && this.encounterSystem) {
+        this.encounterIndicator.setFill(this.encounterSystem.fraction(), dt);
+        const playerPos = this.world.getComponent(this.playerId, 'Position');
+        if (playerPos) {
+          // Float ~96 px above the player's tile-bottom point — same convention
+          // as the HP bar offset, just a bit higher to clear the head.
+          this.encounterIndicator.setPosition(playerPos.x, playerPos.y - 96);
+        }
+      }
+
+      // Hotbar repaint: gather addition cooldowns + item counts each frame and
+      // hand them to the dumb renderer alongside the slot bindings.
+      if (this.hotbar) {
+        const cd = this.world.getComponent(this.playerId, 'SkillCooldown');
+        const additionCooldowns: Partial<Record<AdditionKind, number>> = {};
+        if (cd) {
+          for (const k of Object.keys(cd.remainingMs) as AdditionKind[]) {
+            const remaining = cd.remainingMs[k] ?? 0;
+            const total = ADDITIONS[k].cooldownMs;
+            if (remaining > 0 && total > 0) additionCooldowns[k] = Math.min(1, remaining / total);
+          }
+        }
+        const inv = this.world.getComponent(this.playerId, 'Inventory');
+        this.hotbar.setState({
+          slots: this.hotbarSlots,
+          additionCooldowns,
+          itemCounts: inv?.items ?? {},
+        });
+      }
     }
     if (this.minimap) this.minimap.update(this.world);
 
@@ -336,6 +476,7 @@ export class ForestScene implements Scene {
     const pos = this.world.getComponent(this.playerId, 'Position');
     if (!hp || !pos) return;
     const grid = worldToGrid(pos.x, pos.y);
+    const inv = this.world.getComponent(this.playerId, 'Inventory');
     SaveManager.save({
       zone: 'forest',
       player: {
@@ -344,11 +485,365 @@ export class ForestScene implements Scene {
         gx: Math.round(grid.x),
         gy: Math.round(grid.y),
       },
+      inventory: {
+        items: inv ? { ...inv.items } : {},
+        gold: inv?.gold ?? 0,
+      },
+      hotbar: this.hotbarSlots.slice(),
     });
   }
 
+  /**
+   * Player pressed a number key 0..7. Resolve the hotbar slot binding and
+   * dispatch to the right handler. Empty slot → silent no-op.
+   */
+  private activateHotbarSlot(slotIdx: number): void {
+    const slot = this.hotbarSlots[slotIdx] ?? null;
+    if (!slot) return;
+    if (slot.kind === 'addition') this.tryTriggerAddition(slot.addition);
+    else if (slot.kind === 'item') this.tryConsumeItem(slot.item);
+  }
+
+  /** Bind a freshly-picked item into the first empty hotbar slot, if any. */
+  private autoBindItemToHotbar(kind: ItemKind): void {
+    if (!ITEMS[kind].bindable) return;
+    // Already bound to a slot? Nothing to do.
+    for (const slot of this.hotbarSlots) {
+      if (slot && slot.kind === 'item' && slot.item === kind) return;
+    }
+    for (let i = 0; i < this.hotbarSlots.length; i++) {
+      if (this.hotbarSlots[i] === null) {
+        this.hotbarSlots[i] = { kind: 'item', item: kind };
+        return;
+      }
+    }
+    // No empty slot — silent; player can rebind later via inventory UI.
+  }
+
+  /**
+   * Player presses an Addition hotkey: validate cooldown + target, then add an
+   * `Addition` component (AdditionSystem ticks the animation and applies hits)
+   * and seed the per-skill cooldown so the hotbar can paint the radial.
+   *
+   * Target picking: prefer the entity currently held in CombatIntent, otherwise
+   * pick the nearest enemy within ADDITIONS[kind].rangeOverridePx ?? stats.range.
+   */
+  private tryTriggerAddition(kind: AdditionKind): void {
+    if (!this.world || this.playerId === null) return;
+    if (this.playerDied) return;
+    if (this.settings?.isOpen) return;
+    if (this.world.hasComponent(this.playerId, 'Addition')) return;
+    if (this.world.hasComponent(this.playerId, 'Dying')) return;
+    if (this.world.hasComponent(this.playerId, 'Defending')) return;
+
+    const cd = this.world.getComponent(this.playerId, 'SkillCooldown');
+    if (cd && (cd.remainingMs[kind] ?? 0) > 0) {
+      this.toast?.show(t('addition.cooldown'));
+      return;
+    }
+
+    const stats = this.world.getComponent(this.playerId, 'Stats');
+    const pos = this.world.getComponent(this.playerId, 'Position');
+    if (!stats || !pos) return;
+    const def = ADDITIONS[kind];
+    const range = def.rangeOverridePx ?? stats.range;
+
+    const targetId = this.pickAdditionTarget(pos.x, pos.y, range);
+    if (targetId === null) {
+      this.toast?.show(t('addition.noTarget'));
+      return;
+    }
+
+    const targetPos = this.world.getComponent(targetId, 'Position');
+    if (!targetPos) return;
+    const dx = targetPos.x - pos.x;
+    const dy = targetPos.y - pos.y;
+    const len = Math.hypot(dx, dy) || 1;
+
+    this.world.addComponent(this.playerId, 'Addition', {
+      kind,
+      targetId,
+      elapsedMs: 0,
+      totalMs: def.totalMs,
+      hitsApplied: 0,
+      dirX: dx / len,
+      dirY: dy / len,
+    });
+
+    if (cd) cd.remainingMs[kind] = def.cooldownMs;
+
+    // Stop the player so the addition lock-in reads cleanly.
+    const pf = this.world.getComponent(this.playerId, 'Pathfinder');
+    if (pf) {
+      pf.waypoints = null;
+      pf.targetGrid = null;
+    }
+
+    playSfx('combat.swing');
+  }
+
+  /**
+   * Player pressed a Hotbar slot bound to an inventory item: validate inventory
+   * count + active state, then branch on the item's `use` effect:
+   *  - heal       → restore N% of maxHP, decrement count, sfx, floating text.
+   *  - spell single→ start a Spell on the locked target (or nearest in range).
+   *  - spell AoE  → enter ground-targeting mode; commit via clickToCastAoE.
+   * Returns void (effect happens via component mutation).
+   */
+  private tryConsumeItem(kind: ItemKind): void {
+    if (!this.world || this.playerId === null) return;
+    if (this.playerDied) return;
+    if (this.settings?.isOpen) return;
+    if (this.world.hasComponent(this.playerId, 'Addition')) return;
+    if (this.world.hasComponent(this.playerId, 'Spell')) return;
+    if (this.world.hasComponent(this.playerId, 'Dying')) return;
+    if (this.world.hasComponent(this.playerId, 'Defending')) return;
+
+    const inv = this.world.getComponent(this.playerId, 'Inventory');
+    if (!inv) return;
+    const count = inv.items[kind] ?? 0;
+    if (count <= 0) {
+      this.toast?.show(t('inventory.empty'));
+      return;
+    }
+
+    const def = ITEMS[kind];
+    const use = def.use;
+    if (!use) return;
+
+    if (use.kind === 'heal') {
+      const hp = this.world.getComponent(this.playerId, 'Health');
+      const pos = this.world.getComponent(this.playerId, 'Position');
+      if (!hp || !pos) return;
+      const healAmount = Math.max(1, Math.round(hp.max * use.percentMaxHp));
+      const healed = Math.min(hp.max, hp.current + healAmount) - hp.current;
+      if (healed <= 0) {
+        // Already at full HP — refuse to consume to avoid silent waste.
+        this.toast?.show(t('inventory.empty'));
+        return;
+      }
+      hp.current += healed;
+      this.decrementItem(inv, kind);
+      spawnFloatingText(this.world, {
+        x: pos.x,
+        y: pos.y,
+        text: `+${healed}`,
+        color: 0x9bff9b,
+      });
+      playSfx('items.pickup');
+      return;
+    }
+
+    if (use.kind === 'spell') {
+      this.startSpellFromItem(kind, use.spell);
+      return;
+    }
+  }
+
+  private decrementItem(inv: Components['Inventory'], kind: ItemKind): void {
+    const left = (inv.items[kind] ?? 0) - 1;
+    if (left <= 0) delete inv.items[kind];
+    else inv.items[kind] = left;
+  }
+
+  /**
+   * Item-driven spell trigger. Single-target spells fire immediately; ground-AoE
+   * spells enter targeting mode (cursor circle) and commit on click via
+   * commitGroundSpell. The item is decremented at successful start, not at
+   * targeting-mode entry, so cancelling the AoE preview doesn't waste an item.
+   */
+  private startSpellFromItem(itemKind: ItemKind, spellKind: SpellKind): void {
+    if (!this.world || this.playerId === null) return;
+    const spell = SPELLS[spellKind];
+    const stats = this.world.getComponent(this.playerId, 'Stats');
+    const pos = this.world.getComponent(this.playerId, 'Position');
+    if (!stats || !pos) return;
+
+    if (spell.target === 'lockedTarget') {
+      const targetId = this.pickAdditionTarget(pos.x, pos.y, spell.rangePx);
+      if (targetId === null) {
+        this.toast?.show(t('inventory.noTarget'));
+        return;
+      }
+      const tp = this.world.getComponent(targetId, 'Position');
+      if (!tp) return;
+      const dx = tp.x - pos.x;
+      const dy = tp.y - pos.y;
+      const len = Math.hypot(dx, dy) || 1;
+      this.world.addComponent(this.playerId, 'Spell', {
+        kind: spellKind,
+        elapsedMs: 0,
+        totalMs: spell.totalMs,
+        hitTimingMs: spell.hitTimingMs,
+        hitApplied: false,
+        magicAtkMul: spell.magicAtkMul,
+        target: 'lockedTarget',
+        targetId,
+        dirX: dx / len,
+        dirY: dy / len,
+      });
+      const inv = this.world.getComponent(this.playerId, 'Inventory');
+      if (inv) this.decrementItem(inv, itemKind);
+      const pf = this.world.getComponent(this.playerId, 'Pathfinder');
+      if (pf) {
+        pf.waypoints = null;
+        pf.targetGrid = null;
+      }
+      playSfx('combat.swing');
+      return;
+    }
+
+    // groundAoE — open targeting mode; spell + item commit happens on click.
+    this.enterGroundTargeting(itemKind, spellKind);
+  }
+
+  /** Enter ground-targeting mode for an AoE spell. Adds an AoE preview cursor
+   *  to the FX layer, attaches mousemove/Esc listeners. The click handler in
+   *  the main input route picks up commit/cancel via groundTargeting state. */
+  private enterGroundTargeting(itemKind: ItemKind, spellKind: SpellKind): void {
+    if (!this.world || !this.viewport || !this.layers || this.playerId === null) return;
+    if (this.groundTargeting) this.exitGroundTargeting(false);
+    const spellDef = SPELLS[spellKind];
+    if (spellDef.target !== 'groundAoE') return;
+    const playerPos = this.world.getComponent(this.playerId, 'Position');
+    if (!playerPos) return;
+
+    const cursor = new Graphics()
+      .circle(0, 0, spellDef.aoeRadiusPx)
+      .fill({ color: 0xff4040, alpha: 0.18 })
+      .stroke({ color: 0xff6060, width: 2, alpha: 0.85 });
+    cursor.position.set(playerPos.x, playerPos.y);
+    this.layers.fx.addChild(cursor);
+
+    const viewport = this.viewport;
+    const onMove = (e: FederatedPointerEvent): void => {
+      if (!this.groundTargeting || !this.world || this.playerId === null) return;
+      const playerNow = this.world.getComponent(this.playerId, 'Position');
+      if (!playerNow) return;
+      const local = viewport.toWorld(e.global);
+      // Clamp the cursor inside castRangePx around the player.
+      const dx = local.x - playerNow.x;
+      const dy = local.y - playerNow.y;
+      const dist = Math.hypot(dx, dy);
+      const range = this.groundTargeting.castRangePx;
+      if (dist > range) {
+        const k = range / dist;
+        cursor.position.set(playerNow.x + dx * k, playerNow.y + dy * k);
+      } else {
+        cursor.position.set(local.x, local.y);
+      }
+    };
+    viewport.on('pointermove', onMove);
+
+    const onKey = (e: KeyboardEvent): void => {
+      if (e.key === 'Escape' && this.groundTargeting) this.exitGroundTargeting(false);
+    };
+    window.addEventListener('keydown', onKey);
+
+    this.groundTargeting = {
+      spell: spellKind,
+      itemKind,
+      aoeRadiusPx: spellDef.aoeRadiusPx,
+      castRangePx: spellDef.castRangePx,
+      cursor,
+      cleanups: [
+        () => viewport.off('pointermove', onMove),
+        () => window.removeEventListener('keydown', onKey),
+      ],
+    };
+  }
+
+  /** Exit targeting mode. If `commit`, build the Spell at the cursor's last
+   *  position, decrement the item, and freeze the player. */
+  private exitGroundTargeting(commit: boolean): void {
+    const gt = this.groundTargeting;
+    if (!gt) return;
+    this.groundTargeting = null;
+    gt.cleanups.forEach((fn) => fn());
+    const cursorX = gt.cursor.x;
+    const cursorY = gt.cursor.y;
+    gt.cursor.destroy();
+
+    if (!commit || !this.world || this.playerId === null) return;
+    const playerPos = this.world.getComponent(this.playerId, 'Position');
+    const inv = this.world.getComponent(this.playerId, 'Inventory');
+    if (!playerPos || !inv) return;
+    if ((inv.items[gt.itemKind] ?? 0) <= 0) return; // sanity: was decremented elsewhere
+    const spellDef = SPELLS[gt.spell];
+    if (spellDef.target !== 'groundAoE') return;
+
+    const dx = cursorX - playerPos.x;
+    const dy = cursorY - playerPos.y;
+    const len = Math.hypot(dx, dy) || 1;
+    this.world.addComponent(this.playerId, 'Spell', {
+      kind: gt.spell,
+      elapsedMs: 0,
+      totalMs: spellDef.totalMs,
+      hitTimingMs: spellDef.hitTimingMs,
+      hitApplied: false,
+      magicAtkMul: spellDef.magicAtkMul,
+      target: 'groundAoE',
+      targetX: cursorX,
+      targetY: cursorY,
+      aoeRadiusPx: gt.aoeRadiusPx,
+      dirX: dx / len,
+      dirY: dy / len,
+    });
+    this.decrementItem(inv, gt.itemKind);
+    const pf = this.world.getComponent(this.playerId, 'Pathfinder');
+    if (pf) {
+      pf.waypoints = null;
+      pf.targetGrid = null;
+    }
+    playSfx('combat.swing');
+  }
+
+  private pickAdditionTarget(px: number, py: number, range: number): Entity | null {
+    if (!this.world || this.playerId === null) return null;
+    const intent = this.world.getComponent(this.playerId, 'CombatIntent');
+    if (intent !== undefined) {
+      const tp = this.world.getComponent(intent.targetId, 'Position');
+      const th = this.world.getComponent(intent.targetId, 'Health');
+      if (
+        tp &&
+        th &&
+        th.current > 0 &&
+        !this.world.hasComponent(intent.targetId, 'Dying') &&
+        Math.hypot(tp.x - px, tp.y - py) <= range
+      ) {
+        return intent.targetId;
+      }
+    }
+
+    let bestId: Entity | null = null;
+    let bestDist = Infinity;
+    for (const id of this.world.query(['Health', 'Position', 'Faction'])) {
+      if (id === this.playerId) continue;
+      if (this.world.hasComponent(id, 'Dying')) continue;
+      const fac = this.world.getComponent(id, 'Faction');
+      if (!fac || fac.side === 'player') continue;
+      const tp = this.world.getComponent(id, 'Position');
+      if (!tp) continue;
+      const d = Math.hypot(tp.x - px, tp.y - py);
+      if (d <= range && d < bestDist) {
+        bestDist = d;
+        bestId = id;
+      }
+    }
+    return bestId;
+  }
+
+  /**
+   * Pick the nearest enemy whose center is within `ENEMY_PICK_RADIUS_PX` of the
+   * clicked cell's world position. Generous radius (~ ¾ tile) so the player
+   * doesn't have to land on the exact mob cell — clicking just behind a tree
+   * still hits the right target. Falls back to no pick if nothing is in range.
+   */
   private findEnemyAtCell(gx: number, gy: number): Entity | null {
     if (!this.world) return null;
+    const click = gridToWorld(gx, gy);
+    let bestId: Entity | null = null;
+    let bestDist = ENEMY_PICK_RADIUS_PX;
     for (const id of this.world.query(['Health', 'Position', 'Faction'])) {
       if (id === this.playerId) continue;
       // Corpses (Dying) stay in the scene for the death-animation duration but
@@ -359,9 +854,12 @@ export class ForestScene implements Scene {
       if (!fac || fac.side === 'player') continue;
       const pos = this.world.getComponent(id, 'Position');
       if (!pos) continue;
-      const grid = worldToGrid(pos.x, pos.y);
-      if (Math.round(grid.x) === gx && Math.round(grid.y) === gy) return id;
+      const d = Math.hypot(pos.x - click.x, pos.y - click.y);
+      if (d < bestDist) {
+        bestDist = d;
+        bestId = id;
+      }
     }
-    return null;
+    return bestId;
   }
 }

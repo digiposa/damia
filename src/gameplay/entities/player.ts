@@ -34,8 +34,13 @@ export function spawnPlayer(world: World<Components>, opts: SpawnPlayerOptions):
     width: 54,
     height: 81,
     layer: 'entities',
+    fitMode: 'height',
     textureAlias: 'sprite.player.dart',
     attackTextureAlias: 'sprite.player.dart.attack',
+    defendTextureAlias: 'sprite.player.dart.defend',
+    // Double Slash: 1st hit = regular attack pose, 2nd hit = dedicated sprite.
+    // RenderSystem swaps frames by progress fraction (0-50% = frame 0, 50-100% = frame 1).
+    additionTextureAliases: ['sprite.player.dart.attack', 'sprite.player.dart.doubleSlash.2'],
   });
   world.addComponent(id, 'Health', {
     current: startHp,
@@ -45,6 +50,8 @@ export function spawnPlayer(world: World<Components>, opts: SpawnPlayerOptions):
   world.addComponent(id, 'Stats', { ...PLAYER_BASE.stats });
   world.addComponent(id, 'Faction', { side: 'player' });
   world.addComponent(id, 'AttackCooldown', { remainingMs: 0 });
+  world.addComponent(id, 'SkillCooldown', { remainingMs: {} });
+  world.addComponent(id, 'Inventory', { items: {}, gold: 0 });
 
   return id;
 }

@@ -1,8 +1,10 @@
 export interface Stats {
-  /** Base attack damage. */
+  /** Base physical attack damage (regular swings + Additions). */
   atk: number;
   /** Flat damage reduction. */
   def: number;
+  /** Magical attack power (drives spell-item damage; doesn't affect physical hits). */
+  magicAtk: number;
   /** Attacks per second. */
   atkSpeed: number;
   /** Melee reach in world pixels. */

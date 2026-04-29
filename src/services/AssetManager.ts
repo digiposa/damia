@@ -16,6 +16,13 @@ const MANIFEST = {
   'sprite.player.dart': { kind: 'texture', url: '/assets/sprites/player/dart.png' },
   // Attack pose used during AttackSwing — central hero shot from `htn4pr...png`.
   'sprite.player.dart.attack': { kind: 'texture', url: '/assets/sprites/player/dart-attack.png' },
+  // Defend pose held while the Defending component is present.
+  'sprite.player.dart.defend': { kind: 'texture', url: '/assets/sprites/player/dart-defend.png' },
+  // Double Slash 2nd-hit pose. The 1st hit reuses sprite.player.dart.attack.
+  'sprite.player.dart.doubleSlash.2': {
+    kind: 'texture',
+    url: '/assets/sprites/player/dart-doubleSlash-2.png',
+  },
   // Dart portrait used in the HUD (top-left of the screen, in the portrait slot).
   'ui.portrait.dart': { kind: 'texture', url: '/assets/ui/dart-portrait.png' },
 
@@ -37,7 +44,13 @@ const MANIFEST = {
     kind: 'texture',
     url: '/assets/sprites/mobs/assassinCock-attack.png',
   },
+  'sprite.mob.assassinCock.death': {
+    kind: 'texture',
+    url: '/assets/sprites/mobs/assassinCock-death.png',
+  },
   'sprite.mob.trent': { kind: 'texture', url: '/assets/sprites/mobs/trent.png' },
+  'sprite.mob.trent.attack': { kind: 'texture', url: '/assets/sprites/mobs/trent-attack.png' },
+  'sprite.mob.trent.death': { kind: 'texture', url: '/assets/sprites/mobs/trent-death.png' },
 
   // M8 forest tiles.
   // Ground = first Gemini grass variant (sampled into iso-diamond Graphics fills,

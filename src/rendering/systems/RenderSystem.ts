@@ -41,16 +41,30 @@ export class RenderSystem implements System<Components> {
       }
 
       const swing = world.getComponent(id, 'AttackSwing');
+      const addition = world.getComponent(id, 'Addition');
+      const spell = world.getComponent(id, 'Spell');
+      const defending = world.hasComponent(id, 'Defending');
       const pf = world.getComponent(id, 'Pathfinder');
-      const walking = !swing && !!pf?.waypoints && pf.waypoints.length > 0;
+      const walking =
+        !swing && !addition && !spell && !defending && !!pf?.waypoints && pf.waypoints.length > 0;
 
-      // Texture swap priority: Dying > AttackSwing > idle.
+      // Texture swap priority: Dying > Spell > Addition > Defending > AttackSwing > idle.
       // Walking keeps the idle sprite — only the bob below conveys motion.
       if (node instanceof PixiSprite) {
         const dying = world.hasComponent(id, 'Dying');
         let desiredAlias: AssetAlias | undefined = sprite.textureAlias;
         if (dying && sprite.deathTextureAlias) {
           desiredAlias = sprite.deathTextureAlias;
+        } else if (spell && sprite.spellTextureAlias) {
+          desiredAlias = sprite.spellTextureAlias;
+        } else if (addition && sprite.additionTextureAliases?.length) {
+          // Split duration evenly across the frame array. With 2 frames this
+          // means: frame 0 for the first half, frame 1 for the second.
+          const frames = sprite.additionTextureAliases;
+          const t = Math.min(0.999, addition.elapsedMs / addition.totalMs);
+          desiredAlias = frames[Math.floor(t * frames.length)];
+        } else if (defending && sprite.defendTextureAlias) {
+          desiredAlias = sprite.defendTextureAlias;
         } else if (swing && sprite.attackTextureAlias) {
           desiredAlias = sprite.attackTextureAlias;
         }
@@ -67,11 +81,27 @@ export class RenderSystem implements System<Components> {
       // bottom point — same visual convention as tree/log/roots Graphics shapes.
       const yOffset = node instanceof PixiSprite ? TILE_HALF_H : 0;
 
-      // Attack lunge: forward+return offset while AttackSwing is active.
+      // Lunge offset: forward+return motion during a transient action.
       // Doesn't touch Position so combat / pathfinding stay correct.
+      // Spell uses a small "anticipation backstep" early then a forward push
+      // around the hit timing — reads as a windup-and-release.
       let swingX = 0;
       let swingY = 0;
-      if (swing) {
+      if (spell) {
+        const t = Math.min(1, spell.elapsedMs / spell.totalMs);
+        // Curve in [-0.4, 1]: small backstep before t=0.5, big forward push after.
+        const curve = t < 0.5 ? -0.4 * (t / 0.5) : (t - 0.5) / 0.5;
+        const reach = 18;
+        swingX = spell.dirX * curve * reach;
+        swingY = spell.dirY * curve * reach;
+      } else if (addition) {
+        const t = Math.min(1, addition.elapsedMs / addition.totalMs);
+        // Two-bump curve so the lunge "pulses" once per hit (Double Slash = 2 hits).
+        const curve = Math.abs(Math.sin(t * Math.PI * 2));
+        const reach = 28;
+        swingX = addition.dirX * curve * reach;
+        swingY = addition.dirY * curve * reach;
+      } else if (swing) {
         const t = Math.min(1, swing.elapsedMs / swing.totalMs);
         const curve = t < 0.4 ? t / 0.4 : 1 - (t - 0.4) / 0.6;
         const reach = 22; // px toward target
@@ -92,15 +122,20 @@ export class RenderSystem implements System<Components> {
 
       node.position.set(pos.x + swingX, pos.y + yOffset + swingY + bobY);
 
-      // Compute scale every frame: fit-to-(sprite.width × sprite.height) for
-      // textured nodes (otherwise they render at native texture size), then
-      // multiply by sprite.scale for the DefenseSystem shrink modifier.
-      const defenseMod = sprite.scale ?? 1;
-      const fitScale =
-        node instanceof PixiSprite && node.texture
-          ? Math.min(sprite.width / node.texture.width, sprite.height / node.texture.height)
-          : 1;
-      node.scale.set(fitScale * defenseMod);
+      // Compute scale every frame: fit textured nodes to the sprite's intended size
+      // (otherwise they'd render at native texture resolution), then multiply by
+      // sprite.scale (currently always 1 — kept for future hit-flash/knockback fx).
+      // `fitMode: 'height'` matches by texture height only so wider poses (e.g. attack
+      // sword extension) keep a consistent on-screen character height.
+      const scaleMod = sprite.scale ?? 1;
+      let fitScale = 1;
+      if (node instanceof PixiSprite && node.texture) {
+        fitScale =
+          sprite.fitMode === 'height'
+            ? sprite.height / node.texture.height
+            : Math.min(sprite.width / node.texture.width, sprite.height / node.texture.height);
+      }
+      node.scale.set(fitScale * scaleMod);
       // Iso depth-sort: render lines further away (smaller gx+gy) first.
       const grid = worldToGrid(pos.x, pos.y);
       node.zIndex = Math.round(grid.x + grid.y);

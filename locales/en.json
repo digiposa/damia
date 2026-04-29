@@ -46,6 +46,17 @@
   },
   "log": {
     "xpGained": "+{{xp}} XP",
-    "itemPicked": "Picked up: {{item}}"
+    "itemPicked": "Picked up: {{item}}",
+    "goldPicked": "Gold: {{gold}}"
+  },
+  "inventory": {
+    "full": "Inventory full",
+    "empty": "Inventory empty",
+    "noTarget": "No target",
+    "noMana": "No items left"
+  },
+  "addition": {
+    "cooldown": "Not ready",
+    "noTarget": "No target in range"
   }
 }

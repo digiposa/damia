@@ -1,17 +1,28 @@
 /**
- * M7 audio backend. Synthesizes SFX via Web Audio (zero external files) so the
- * pipeline is functional even without the OST. Music is routed through howler
- * once a real file is dropped into `assets/audio/music/` and added to the manifest.
+ * Audio backend. SFX are still synthesized via Web Audio (zero file dependency,
+ * see `playSfx`); music is streamed via howler from the MUSIC_MANIFEST.
  *
  * Volumes are persisted to localStorage so settings survive reloads.
+ *
+ * Swap-out path: replace any MUSIC_MANIFEST entry with a different file URL —
+ * call sites only know the alias. SFX can later get the same treatment by
+ * extending `playSfx` to look up a SFX_MANIFEST.
  */
+import { Howl } from 'howler';
 
 export type SfxAlias = 'combat.swing' | 'combat.hit' | 'combat.death' | 'items.pickup' | 'ui.click';
 
 export type MusicAlias = 'music.forestAmbient';
 
-// Music manifest will live here once real OST files exist in `assets/audio/music/`;
-// `playMusic` is currently a no-op so the API contract is in place for callers.
+interface MusicEntry {
+  url: string;
+  /** Per-track playback volume relative to the music gain (1.0 = unchanged). */
+  trackVolume?: number;
+}
+
+const MUSIC_MANIFEST: Record<MusicAlias, MusicEntry> = {
+  'music.forestAmbient': { url: '/audio/music/forest.ogg', trackVolume: 0.9 },
+};
 
 const STORAGE_KEY = 'damia.audio';
 
@@ -30,6 +41,9 @@ let musicGain: GainNode | null = null;
 let volumes: VolumeState = { ...DEFAULT_VOLUMES };
 let initialized = false;
 let pendingResume = false;
+/** Cached Howl instances per alias so re-entering the same scene reuses the loaded buffer. */
+const musicHowls = new Map<MusicAlias, Howl>();
+let currentMusic: { alias: MusicAlias; howl: Howl } | null = null;
 
 function readVolumes(): VolumeState {
   try {
@@ -77,10 +91,22 @@ function ensureCtx(): void {
 }
 
 function applyGains(): void {
-  if (!masterGain || !sfxGain || !musicGain) return;
-  masterGain.gain.value = volumes.master;
-  sfxGain.gain.value = volumes.sfx;
-  musicGain.gain.value = volumes.music;
+  if (masterGain && sfxGain && musicGain) {
+    masterGain.gain.value = volumes.master;
+    sfxGain.gain.value = volumes.sfx;
+    musicGain.gain.value = volumes.music;
+  }
+  // Howler has its own audio graph (HTMLAudioElement-backed by default),
+  // independent from our Web Audio context. Mirror our gains onto it so the
+  // settings sliders affect both pipelines.
+  syncMusicHowlVolume();
+}
+
+function syncMusicHowlVolume(): void {
+  if (!currentMusic) return;
+  const entry = MUSIC_MANIFEST[currentMusic.alias];
+  const trackVol = entry.trackVolume ?? 1;
+  currentMusic.howl.volume(volumes.master * volumes.music * trackVol);
 }
 
 /**
@@ -191,15 +217,44 @@ function noiseBurst(startTime: number, durationMs: number, vol: number): void {
 }
 
 /**
- * Music API ready. M7 ships without an actual OST file; drop one into
- * `assets/audio/music/forest.mp3` and update MUSIC_MANIFEST['music.forestAmbient']
- * to start the ambient track on `playMusic`.
+ * Start a looping music track. If another track is already playing it's faded
+ * out and replaced. Re-calling with the same alias is a no-op (avoids restart
+ * when the scene re-enters via continue/quick-load).
  */
-export function playMusic(_alias: MusicAlias): void {
+export function playMusic(alias: MusicAlias): void {
   ensureCtx();
-  // No-op until a real file is wired in via howler.
+  if (currentMusic?.alias === alias && currentMusic.howl.playing()) return;
+
+  if (currentMusic && currentMusic.alias !== alias) {
+    fadeOutAndStop(currentMusic.howl);
+    currentMusic = null;
+  }
+
+  let howl = musicHowls.get(alias);
+  if (!howl) {
+    howl = new Howl({
+      src: [MUSIC_MANIFEST[alias].url],
+      loop: true,
+      html5: true, // stream large files without decoding the whole buffer
+      preload: true,
+      volume: 0,
+    });
+    musicHowls.set(alias, howl);
+  }
+
+  currentMusic = { alias, howl };
+  syncMusicHowlVolume();
+  if (!howl.playing()) howl.play();
 }
 
 export function stopMusic(): void {
-  // No-op for now; will fade howler instance once music files exist.
+  if (!currentMusic) return;
+  fadeOutAndStop(currentMusic.howl);
+  currentMusic = null;
+}
+
+function fadeOutAndStop(howl: Howl): void {
+  const from = howl.volume();
+  howl.fade(from, 0, 400);
+  setTimeout(() => howl.stop(), 450);
 }

@@ -31,9 +31,34 @@ export class InputController {
   private clickListeners = new Set<Listener<ClickCommand>>();
   private cameraFollowListeners = new Set<Listener<boolean>>();
   private defendListeners = new Set<Listener<boolean>>();
+  private slotListeners = new Set<Listener<number>>();
   private cameraFollowState = false;
   private defendState = false;
   private readonly cleanupFns: Array<() => void> = [];
+
+  /**
+   * Physical-key → hotbar slot index (0-based). We match `KeyboardEvent.code`
+   * (layout-independent) so AZERTY users don't need Shift to trigger slot 1,
+   * and so the numpad works the same as the top row.
+   */
+  private static readonly SLOT_CODES: Record<string, number> = {
+    Digit1: 0,
+    Numpad1: 0,
+    Digit2: 1,
+    Numpad2: 1,
+    Digit3: 2,
+    Numpad3: 2,
+    Digit4: 3,
+    Numpad4: 3,
+    Digit5: 4,
+    Numpad5: 4,
+    Digit6: 5,
+    Numpad6: 5,
+    Digit7: 6,
+    Numpad7: 6,
+    Digit8: 7,
+    Numpad8: 7,
+  };
 
   constructor(opts: InputControllerOptions) {
     const { app, viewport, gridWidth, gridHeight } = opts;
@@ -69,6 +94,9 @@ export class InputController {
       } else if ((e.key === 's' || e.key === 'S') && !this.defendState) {
         this.defendState = true;
         this.defendListeners.forEach((l) => l(true));
+      } else if (!e.repeat) {
+        const slot = InputController.SLOT_CODES[e.code];
+        if (slot !== undefined) this.slotListeners.forEach((l) => l(slot));
       }
     };
     const onKeyUp = (e: KeyboardEvent): void => {
@@ -98,11 +126,17 @@ export class InputController {
     return () => this.defendListeners.delete(listener);
   }
 
+  onSlot(listener: Listener<number>): () => void {
+    this.slotListeners.add(listener);
+    return () => this.slotListeners.delete(listener);
+  }
+
   destroy(): void {
     this.cleanupFns.forEach((fn) => fn());
     this.cleanupFns.length = 0;
     this.clickListeners.clear();
     this.cameraFollowListeners.clear();
     this.defendListeners.clear();
+    this.slotListeners.clear();
   }
 }

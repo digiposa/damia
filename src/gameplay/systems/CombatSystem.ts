@@ -21,6 +21,10 @@ export class CombatSystem implements System<Components> {
     this.elapsedMs += dt;
 
     for (const id of world.query(['CombatIntent', 'Stats', 'Position', 'AttackCooldown'])) {
+      // Don't fire regular swings while a skill / spell animation is playing —
+      // the Addition / Spell pipelines own the attacker for their duration.
+      if (world.hasComponent(id, 'Addition')) continue;
+      if (world.hasComponent(id, 'Spell')) continue;
       const intent = world.getComponent(id, 'CombatIntent');
       const stats = world.getComponent(id, 'Stats');
       const pos = world.getComponent(id, 'Position');

@@ -1,3 +1,4 @@
+import type { Addition } from './Addition';
 import type { AI } from './AI';
 import type { AttackCooldown } from './AttackCooldown';
 import type { AttackSwing } from './AttackSwing';
@@ -10,11 +11,15 @@ import type { Faction } from './Faction';
 import type { FloatingText } from './FloatingText';
 import type { Health } from './Health';
 import type { Interactable } from './Interactable';
+import type { Inventory } from './Inventory';
 import type { Item } from './Item';
 import type { Pathfinder } from './Pathfinder';
 import type { Player } from './Player';
 import type { Position } from './Position';
+import type { RandomEncounter } from './RandomEncounter';
+import type { SkillCooldown } from './SkillCooldown';
 import type { Speed } from './Speed';
+import type { Spell } from './Spell';
 import type { Sprite } from './Sprite';
 import type { Stats } from './Stats';
 import type { Velocity } from './Velocity';
@@ -39,13 +44,19 @@ export interface Components {
   FloatingText: FloatingText;
   AI: AI;
   Item: Item;
+  Inventory: Inventory;
   Interactable: Interactable;
   AttackSwing: AttackSwing;
+  Addition: Addition;
+  SkillCooldown: SkillCooldown;
+  RandomEncounter: RandomEncounter;
+  Spell: Spell;
 }
 
 export type ComponentName = keyof Components;
 
 export type {
+  Addition,
   AI,
   AttackCooldown,
   AttackSwing,
@@ -58,10 +69,14 @@ export type {
   FloatingText,
   Health,
   Interactable,
+  Inventory,
   Item,
   Pathfinder,
   Player,
   Position,
+  RandomEncounter,
+  SkillCooldown,
+  Spell,
   Speed,
   Sprite,
   Stats,

@@ -21,15 +21,18 @@ import { MovementSystem } from '@gameplay/systems/MovementSystem';
 import { ExitSystem } from '@gameplay/systems/ExitSystem';
 import { CooldownSystem } from '@gameplay/systems/CooldownSystem';
 import { CombatSystem } from '@gameplay/systems/CombatSystem';
+import { AttackSwingSystem } from '@gameplay/systems/AttackSwingSystem';
 import { AISystem } from '@gameplay/systems/AISystem';
 import { DefenseSystem } from '@gameplay/systems/DefenseSystem';
 import { DeathSystem } from '@gameplay/systems/DeathSystem';
+import { DyingSystem } from '@gameplay/systems/DyingSystem';
 import { ItemPickupSystem } from '@gameplay/systems/ItemPickupSystem';
 import { InteractableSystem } from '@gameplay/systems/InteractableSystem';
 import { ForestMap, buildCollisionGrid } from './MapLoader';
 import { propBlocks } from '@data/props';
 import type { MobKind } from '@data/balance';
 import { ITEMS } from '@data/items';
+import { AssetManager } from '@services/AssetManager';
 import { Toast } from '@ui/Toast';
 import { Hud } from '@ui/Hud';
 import { Hotbar } from '@ui/Hotbar';
@@ -77,6 +80,10 @@ export class ForestScene implements Scene {
       width: map.size.w,
       height: map.size.h,
       pathZones: map.pathZones,
+      groundTexture: AssetManager.getTexture('tile.forest.ground'),
+      // M8: only Leonardo dirt tile has clean transparent bg right now;
+      // Gemini path crops still carry visible white edges. Single variant for the test.
+      pathTextures: [AssetManager.getTexture('tile.forest.path.1')],
     });
     const bounds = this.tilemap.worldBounds();
 
@@ -118,10 +125,12 @@ export class ForestScene implements Scene {
     const cooldown = new CooldownSystem();
     const ai = new AISystem({ width: map.size.w, height: map.size.h });
     const combat = new CombatSystem();
+    const swing = new AttackSwingSystem();
     const defense = new DefenseSystem();
     const exits = new ExitSystem();
     const interactables = new InteractableSystem();
     const death = new DeathSystem((id) => this.mobKinds.get(id) ?? null);
+    const dying = new DyingSystem();
     const pickup = new ItemPickupSystem();
     const render = new RenderSystem(this.layers);
     const floating = new FloatingTextSystem(this.layers.fx);
@@ -135,7 +144,14 @@ export class ForestScene implements Scene {
       interactables,
       defense,
       death,
+      dying,
       pickup,
+      // `swing` must run AFTER combat (which spawns the AttackSwing) and BEFORE
+      // render, but its `dt` advance must not happen on the same frame the swing
+      // is created — otherwise the player sees totalMs - dt of motion. Placing it
+      // here means: frame N spawns swing at elapsedMs=0 → frame N's render draws
+      // it at t=0 → frame N+1 the swing system advances by dt and render redraws.
+      swing,
       render,
       floating,
     ];
@@ -290,7 +306,9 @@ export class ForestScene implements Scene {
   update(dt: number): void {
     if (!this.world) return;
     if (this.settings?.isOpen) {
-      // Pause world updates but still tick render so UI stays interactive.
+      // Hard pause: skip every system so simulation + animation timers freeze.
+      // Pixi keeps rendering the existing scene graph, and the SettingsPanel
+      // overlay handles its own input — no ticking needed here.
       return;
     }
     for (const sys of this.systems) {
@@ -333,6 +351,10 @@ export class ForestScene implements Scene {
     if (!this.world) return null;
     for (const id of this.world.query(['Health', 'Position', 'Faction'])) {
       if (id === this.playerId) continue;
+      // Corpses (Dying) stay in the scene for the death-animation duration but
+      // must not be re-targeted, otherwise a fast click on a freshly-killed mob
+      // re-issues CombatIntent and the player walks over to swing into nothing.
+      if (this.world.hasComponent(id, 'Dying')) continue;
       const fac = this.world.getComponent(id, 'Faction');
       if (!fac || fac.side === 'player') continue;
       const pos = this.world.getComponent(id, 'Position');

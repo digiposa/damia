@@ -38,6 +38,9 @@ export class DeathSystem implements System<Components> {
         continue;
       }
 
+      // Skip entities already converted to a Dying state (DyingSystem owns them).
+      if (world.hasComponent(id, 'Dying')) continue;
+
       const pos = world.getComponent(id, 'Position');
       const mobKind = this.mobKindResolver?.(id) ?? null;
       if (pos && mobKind) {
@@ -57,6 +60,27 @@ export class DeathSystem implements System<Components> {
         }
       }
       playSfx('combat.death');
+
+      // If the mob has a death sprite, defer destruction so the death-pose
+      // texture lingers — DyingSystem cleans it up after the timer. Freeze the
+      // entity by stripping anything that would still drive it (AI / pathing /
+      // swing / pending intents) and zeroing velocity.
+      const sprite = world.getComponent(id, 'Sprite');
+      if (sprite?.deathTextureAlias) {
+        if (world.hasComponent(id, 'AI')) world.removeComponent(id, 'AI');
+        if (world.hasComponent(id, 'Pathfinder')) world.removeComponent(id, 'Pathfinder');
+        if (world.hasComponent(id, 'CombatIntent')) world.removeComponent(id, 'CombatIntent');
+        if (world.hasComponent(id, 'AttackSwing')) world.removeComponent(id, 'AttackSwing');
+        if (world.hasComponent(id, 'Defending')) world.removeComponent(id, 'Defending');
+        const vel = world.getComponent(id, 'Velocity');
+        if (vel) {
+          vel.vx = 0;
+          vel.vy = 0;
+        }
+        world.addComponent(id, 'Dying', { elapsedMs: 0, totalMs: 700 });
+        continue;
+      }
+
       world.destroyEntity(id);
     }
   }

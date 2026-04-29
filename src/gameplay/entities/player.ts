@@ -1,4 +1,3 @@
-import { AssetManager } from '@services/AssetManager';
 import { gridToWorld } from '@core/math/iso';
 import type { Components } from '@gameplay/components';
 import type { Entity, World } from '@core/ecs';
@@ -26,11 +25,18 @@ export function spawnPlayer(world: World<Components>, opts: SpawnPlayerOptions):
     waypoints: null,
     computing: false,
   });
-  world.addComponent(
-    id,
-    'Sprite',
-    AssetManager.toSpriteComponent('sprite.player.dart', 'entities'),
-  );
+  // Dart sprite uses the M8 textureAlias pipeline (rendered as Pixi.Sprite from
+  // the loaded texture, base-anchored on the tile bottom point). Shape/color
+  // here are the fallback if the texture failed to load.
+  world.addComponent(id, 'Sprite', {
+    shape: 'capsule',
+    color: 0xc8201f,
+    width: 54,
+    height: 81,
+    layer: 'entities',
+    textureAlias: 'sprite.player.dart',
+    attackTextureAlias: 'sprite.player.dart.attack',
+  });
   world.addComponent(id, 'Health', {
     current: startHp,
     max,

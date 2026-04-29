@@ -31,8 +31,14 @@ export class CombatSystem implements System<Components> {
       const targetPos = world.getComponent(intent.targetId, 'Position');
       const targetStats = world.getComponent(intent.targetId, 'Stats');
 
-      // Target gone or already dead.
-      if (!targetHealth || !targetPos || !targetStats || targetHealth.current <= 0) {
+      // Target gone, dead, or playing a death animation.
+      if (
+        !targetHealth ||
+        !targetPos ||
+        !targetStats ||
+        targetHealth.current <= 0 ||
+        world.hasComponent(intent.targetId, 'Dying')
+      ) {
         world.removeComponent(id, 'CombatIntent');
         this.lastTargetRecheckMs.delete(id);
         continue;
@@ -81,6 +87,16 @@ export class CombatSystem implements System<Components> {
         y: targetPos.y,
         text: String(dmg),
         color: defending ? 0x9bb6ff : 0xff6b6b,
+      });
+
+      // Visual lunge: store unit-vector toward target so RenderSystem can
+      // offset the attacker's sprite forward then back over `totalMs`.
+      const len = Math.hypot(dx, dy) || 1;
+      world.addComponent(id, 'AttackSwing', {
+        elapsedMs: 0,
+        totalMs: 220,
+        dirX: dx / len,
+        dirY: dy / len,
       });
 
       playSfx('combat.swing');

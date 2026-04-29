@@ -1,0 +1,19 @@
+DAMIA — third-party asset attribution
+=====================================
+
+Forest tile + prop assets (ground, path tiles, trees, rocks, stumps, logs,
+branches, vines)
+  Source : sprite sheets generated with Google Gemini (text-to-image), drafted
+           by the project owner during M8.
+  Use    : project-internal placeholders. Re-generation reproducible via the
+           source sheets archived in
+           `shareAI/assetsTLOD/maps/02_forest/tiles/`.
+  Pipeline: sprite sheets diced via `scripts/extract-gemini.py` (PIL +
+           white-background matting, alpha softening). Source sheets are NOT
+           shipped in `public/`; only the diced PNGs are.
+
+Mob sprite cuts (Berserk Mouse, Goblin, Assassin Cock, Trent)
+  Source : pre-rendered creature renders extracted from
+           "The Legend of Dragoon" reference compendium (PS1, Sony Computer
+           Entertainment / Sony Computer Entertainment Japan, 1999).
+  Use    : Non-commercial fan project. All rights to the original creators.

@@ -1,6 +1,7 @@
 import type { Application } from 'pixi.js';
-import { Container, Graphics, Text } from 'pixi.js';
+import { Container, Graphics, Sprite as PixiSprite, Text } from 'pixi.js';
 import { t } from '@services/I18nService';
+import { AssetManager } from '@services/AssetManager';
 
 const PORTRAIT_SIZE = 72;
 const BAR_WIDTH = 200;
@@ -29,22 +30,40 @@ export class Hud {
     this.app = app;
     this.container = new Container({ label: 'hud' });
 
-    // Portrait placeholder.
+    // Portrait frame + Dart picture (M8). The square frame stays as a backing
+    // so the portrait reads even on busy backgrounds; we sit a fitted Pixi.Sprite
+    // on top. Falls back to the localised text label when the asset is missing.
     const portraitBg = new Graphics()
       .roundRect(0, 0, PORTRAIT_SIZE, PORTRAIT_SIZE, 6)
       .fill(0x202020)
       .stroke({ width: 2, color: 0xa08050, alpha: 0.9 });
-    const portraitText = new Text({
-      text: t('hud.dart'),
-      style: {
-        fontFamily: 'system-ui, sans-serif',
-        fontSize: 14,
-        fill: 0xfaf6e8,
-        fontWeight: 'bold',
-      },
-    });
-    portraitText.anchor.set(0.5);
-    portraitText.position.set(PORTRAIT_SIZE / 2, PORTRAIT_SIZE / 2);
+    const portraitTex = AssetManager.getTexture('ui.portrait.dart');
+    const portraitVisual: PixiSprite | Text = portraitTex
+      ? (() => {
+          const s = new PixiSprite(portraitTex);
+          const ratio = Math.min(
+            PORTRAIT_SIZE / portraitTex.width,
+            PORTRAIT_SIZE / portraitTex.height,
+          );
+          s.width = portraitTex.width * ratio;
+          s.height = portraitTex.height * ratio;
+          s.position.set((PORTRAIT_SIZE - s.width) / 2, (PORTRAIT_SIZE - s.height) / 2);
+          return s;
+        })()
+      : (() => {
+          const text = new Text({
+            text: t('hud.dart'),
+            style: {
+              fontFamily: 'system-ui, sans-serif',
+              fontSize: 14,
+              fill: 0xfaf6e8,
+              fontWeight: 'bold',
+            },
+          });
+          text.anchor.set(0.5);
+          text.position.set(PORTRAIT_SIZE / 2, PORTRAIT_SIZE / 2);
+          return text;
+        })();
 
     const barsX = PORTRAIT_SIZE + 10;
 
@@ -79,7 +98,7 @@ export class Hud {
 
     this.container.addChild(
       portraitBg,
-      portraitText,
+      portraitVisual,
       hpBg,
       this.hpBar,
       this.hpText,

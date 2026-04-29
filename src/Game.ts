@@ -5,6 +5,7 @@ import { SceneManager } from '@scenes/SceneManager';
 import { BootScene } from '@scenes/BootScene';
 import { initI18n } from '@services/I18nService';
 import { initAudioManager } from '@services/AudioManager';
+import { AssetManager } from '@services/AssetManager';
 
 export interface GameContext {
   app: Application;
@@ -25,6 +26,10 @@ export class Game {
 
     this.app = await createRenderer({ background: BACKGROUND_COLOR });
     mountInto.appendChild(this.app.canvas);
+
+    // Preload texture-kind assets (mob sprites, ground tiles) before any scene
+    // queries them via AssetManager.getTexture().
+    await AssetManager.preload();
 
     this.scenes = new SceneManager();
     const ctx: GameContext = { app: this.app, scenes: this.scenes };

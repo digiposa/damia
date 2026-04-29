@@ -1,7 +1,7 @@
 import type { Entity, World } from '@core/ecs';
 import { gridToWorld } from '@core/math/iso';
 import type { Components } from '@gameplay/components';
-import { PROPS, type PropKind } from '@data/props';
+import { PROPS, pickPropVariant, type PropKind } from '@data/props';
 
 export interface SpawnPropOptions {
   kind: PropKind;
@@ -15,7 +15,12 @@ export function spawnProp(world: World<Components>, opts: SpawnPropOptions): Ent
   const id = world.createEntity();
 
   world.addComponent(id, 'Position', { x, y });
-  world.addComponent(id, 'Sprite', { ...def.sprite, layer: 'entities' });
+  const textureAlias = pickPropVariant(opts.kind, opts.gx, opts.gy);
+  world.addComponent(id, 'Sprite', {
+    ...def.sprite,
+    layer: 'entities',
+    ...(textureAlias ? { textureAlias } : {}),
+  });
   if (def.blocks) {
     world.addComponent(id, 'Collider', { gx: opts.gx, gy: opts.gy, blocks: true });
   }

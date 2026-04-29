@@ -1,20 +1,31 @@
-import type { Container } from 'pixi.js';
-import { Graphics } from 'pixi.js';
+import type { Container, Texture } from 'pixi.js';
+import { Graphics, Sprite as PixiSprite } from 'pixi.js';
 import type { System, World, Entity } from '@core/ecs';
 import { TILE_HALF_H, worldToGrid } from '@core/math/iso';
 import type { Components, Sprite as SpriteComp } from '@gameplay/components';
 import type { Layers } from '@rendering/Layers';
+import { AssetManager, type AssetAlias } from '@services/AssetManager';
+
+type RenderNode = Graphics | PixiSprite;
 
 /**
  * Bridges ECS components → Pixi nodes. The only system that knows about Pixi
  * AND about gameplay components — by design, since rendering is its job.
+ *
+ * Two render paths:
+ *  - `Sprite.textureAlias` set → loaded Texture rendered as Pixi.Sprite (M8 mob assets)
+ *  - else → procedural Pixi.Graphics from `shape` + `color` (Dart capsule, props)
  */
 export class RenderSystem implements System<Components> {
-  private readonly nodes = new Map<Entity, Graphics>();
+  private readonly nodes = new Map<Entity, RenderNode>();
+  /** Accumulated frame time in ms — drives time-based visual effects (walk bob)
+   *  in lockstep with the simulation clock so pause / lag spikes don't drift. */
+  private elapsedMs = 0;
 
   constructor(private readonly layers: Layers) {}
 
-  update(_dt: number, world: World<Components>): void {
+  update(dt: number, world: World<Components>): void {
+    this.elapsedMs += dt;
     const matched = new Set<Entity>(world.query(['Position', 'Sprite']));
 
     for (const id of matched) {
@@ -28,9 +39,68 @@ export class RenderSystem implements System<Components> {
         this.layerContainer(sprite.layer).addChild(node);
         this.nodes.set(id, node);
       }
-      node.position.set(pos.x, pos.y);
-      const s = sprite.scale ?? 1;
-      node.scale.set(s);
+
+      const swing = world.getComponent(id, 'AttackSwing');
+      const pf = world.getComponent(id, 'Pathfinder');
+      const walking = !swing && !!pf?.waypoints && pf.waypoints.length > 0;
+
+      // Texture swap priority: Dying > AttackSwing > idle.
+      // Walking keeps the idle sprite — only the bob below conveys motion.
+      if (node instanceof PixiSprite) {
+        const dying = world.hasComponent(id, 'Dying');
+        let desiredAlias: AssetAlias | undefined = sprite.textureAlias;
+        if (dying && sprite.deathTextureAlias) {
+          desiredAlias = sprite.deathTextureAlias;
+        } else if (swing && sprite.attackTextureAlias) {
+          desiredAlias = sprite.attackTextureAlias;
+        }
+        if (desiredAlias) {
+          const desiredTex = AssetManager.getTexture(desiredAlias);
+          if (desiredTex && node.texture !== desiredTex) {
+            node.texture = desiredTex;
+          }
+        }
+      }
+
+      // Pixi.Sprite uses base anchor (0.5, 1); Graphics shapes draw baseY internally.
+      // Shift textured sprites down by TILE_HALF_H so their feet land on the tile's
+      // bottom point — same visual convention as tree/log/roots Graphics shapes.
+      const yOffset = node instanceof PixiSprite ? TILE_HALF_H : 0;
+
+      // Attack lunge: forward+return offset while AttackSwing is active.
+      // Doesn't touch Position so combat / pathfinding stay correct.
+      let swingX = 0;
+      let swingY = 0;
+      if (swing) {
+        const t = Math.min(1, swing.elapsedMs / swing.totalMs);
+        const curve = t < 0.4 ? t / 0.4 : 1 - (t - 0.4) / 0.6;
+        const reach = 22; // px toward target
+        swingX = swing.dirX * curve * reach;
+        swingY = swing.dirY * curve * reach;
+      }
+
+      // Walk bob: rectified sine — sprite "hops" once per step while pathing.
+      // Applies generically to any entity with active waypoints (player + mobs).
+      // Per-entity phase offset (id * 0.7 rad) desyncs hops so a swarm doesn't bob in lockstep.
+      // Driven by `this.elapsedMs` (accumulated dt), not performance.now(), so a paused
+      // scene freezes the bob alongside everything else.
+      let bobY = 0;
+      if (walking) {
+        const phase = (this.elapsedMs / 360) * Math.PI + id * 0.7;
+        bobY = -Math.abs(Math.sin(phase)) * 5;
+      }
+
+      node.position.set(pos.x + swingX, pos.y + yOffset + swingY + bobY);
+
+      // Compute scale every frame: fit-to-(sprite.width × sprite.height) for
+      // textured nodes (otherwise they render at native texture size), then
+      // multiply by sprite.scale for the DefenseSystem shrink modifier.
+      const defenseMod = sprite.scale ?? 1;
+      const fitScale =
+        node instanceof PixiSprite && node.texture
+          ? Math.min(sprite.width / node.texture.width, sprite.height / node.texture.height)
+          : 1;
+      node.scale.set(fitScale * defenseMod);
       // Iso depth-sort: render lines further away (smaller gx+gy) first.
       const grid = worldToGrid(pos.x, pos.y);
       node.zIndex = Math.round(grid.x + grid.y);
@@ -61,7 +131,30 @@ export class RenderSystem implements System<Components> {
     }
   }
 
-  private createNode(sprite: SpriteComp): Graphics {
+  private createNode(sprite: SpriteComp): RenderNode {
+    if (sprite.textureAlias) {
+      const tex = AssetManager.getTexture(sprite.textureAlias);
+      if (tex) return this.createTexturedSprite(sprite, tex);
+      console.warn(
+        `[RenderSystem] missing texture for alias "${sprite.textureAlias}", falling back to shape`,
+      );
+    }
+    return this.createGraphicsShape(sprite);
+  }
+
+  /** Build a Pixi.Sprite from a loaded Texture. Size is set every frame in
+   *  update() (so DefenseSystem's scale modifier doesn't fight a baked-in size). */
+  private createTexturedSprite(_sprite: SpriteComp, tex: Texture): PixiSprite {
+    const node = new PixiSprite(tex);
+    // Base-anchored (feet at tile bottom point — same convention as tree/log/roots).
+    // anchor.y = 1 means the sprite's bottom edge sits at its position; we offset
+    // node.y by +TILE_HALF_H elsewhere via Position handling? No, we let RenderSystem
+    // place at tile center; subtract half a tile so feet land on tile bottom.
+    node.anchor.set(0.5, 1);
+    return node;
+  }
+
+  private createGraphicsShape(sprite: SpriteComp): Graphics {
     const g = new Graphics();
     const { shape, color, width, height } = sprite;
     const stroke = { width: 2, color: 0x101010, alpha: 0.7 } as const;

@@ -1,8 +1,10 @@
 import type { AI } from './AI';
 import type { AttackCooldown } from './AttackCooldown';
+import type { AttackSwing } from './AttackSwing';
 import type { Collider } from './Collider';
 import type { CombatIntent } from './CombatIntent';
 import type { Defending } from './Defending';
+import type { Dying } from './Dying';
 import type { Exit } from './Exit';
 import type { Faction } from './Faction';
 import type { FloatingText } from './FloatingText';
@@ -33,10 +35,12 @@ export interface Components {
   CombatIntent: CombatIntent;
   AttackCooldown: AttackCooldown;
   Defending: Defending;
+  Dying: Dying;
   FloatingText: FloatingText;
   AI: AI;
   Item: Item;
   Interactable: Interactable;
+  AttackSwing: AttackSwing;
 }
 
 export type ComponentName = keyof Components;
@@ -44,9 +48,11 @@ export type ComponentName = keyof Components;
 export type {
   AI,
   AttackCooldown,
+  AttackSwing,
   Collider,
   CombatIntent,
   Defending,
+  Dying,
   Exit,
   Faction,
   FloatingText,

@@ -35,6 +35,12 @@ export class InputController {
   private cameraFollowState = false;
   private defendState = false;
   private readonly cleanupFns: Array<() => void> = [];
+  /** Stored so `emitClick` can clamp synthesised commands (joystick) to the
+   *  playable grid — the mouse path already rejects out-of-bounds clicks
+   *  inside `onPointerUp`, but the joystick can extrapolate well past the
+   *  map edge when held against a corner, which crashed the pathfinder. */
+  private readonly gridWidth: number;
+  private readonly gridHeight: number;
 
   /**
    * Physical-key → hotbar slot index (0-based). We match `KeyboardEvent.code`
@@ -62,6 +68,8 @@ export class InputController {
 
   constructor(opts: InputControllerOptions) {
     const { app, viewport, gridWidth, gridHeight } = opts;
+    this.gridWidth = gridWidth;
+    this.gridHeight = gridHeight;
     viewport.eventMode = 'static';
     viewport.cursor = 'pointer';
 
@@ -138,7 +146,17 @@ export class InputController {
    * don't know or care which input source emitted them.
    */
   emitClick(cmd: ClickCommand): void {
-    this.clickListeners.forEach((l) => l(cmd));
+    // Clamp to the playable grid before dispatching. The joystick projects
+    // a target ~5 tiles ahead of the player; pushed against a map edge it
+    // produces negative or oversized indices that explode the pathfinder
+    // (and freeze the renderer while audio keeps running). Clamping makes
+    // edge-pointed joystick walk the player to the border instead.
+    const clamped: ClickCommand = {
+      button: cmd.button,
+      gx: Math.max(0, Math.min(this.gridWidth - 1, cmd.gx)),
+      gy: Math.max(0, Math.min(this.gridHeight - 1, cmd.gy)),
+    };
+    this.clickListeners.forEach((l) => l(clamped));
   }
 
   /** External dispatch for the defend toggle. Mirrors the `S` key behaviour

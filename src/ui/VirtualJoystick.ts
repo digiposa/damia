@@ -64,35 +64,33 @@ export class VirtualJoystick {
     const onPointerDown = (e: FederatedPointerEvent): void => {
       if (this.activePointerId !== null) return;
       this.activePointerId = e.pointerId;
-      this.updateThumbFromGlobal(e.global.x, e.global.y);
+      this.updateThumbFromPointer(e);
     };
-    this.base.on('pointerdown', onPointerDown);
-    this.cleanupFns.push(() => this.base.off('pointerdown', onPointerDown));
+    const onPointerMove = (e: FederatedPointerEvent): void => {
+      if (this.activePointerId !== e.pointerId) return;
+      this.updateThumbFromPointer(e);
+    };
+    const onPointerUp = (e: FederatedPointerEvent): void => {
+      if (this.activePointerId !== e.pointerId) return;
+      this.activePointerId = null;
+      this.thumb.position.set(0, 0);
+      this.dirX = 0;
+      this.dirY = 0;
+    };
 
-    // Track move + end at the DOM/window level rather than via Pixi stage
-    // events. Pixi doesn't forward `pointercancel`, and mobile browsers fire
-    // exactly that when they decide a sustained touch is a system gesture
-    // (scroll/pull-to-refresh) — leaving `activePointerId` stuck and the
-    // joystick frozen on first use. Window listeners also keep tracking
-    // when the finger drags off-canvas, which Pixi's stage pointermove
-    // doesn't always cover reliably on mobile.
-    const canvas = app.canvas;
-    const onDomMove = (e: PointerEvent): void => {
-      if (this.activePointerId !== e.pointerId) return;
-      const rect = canvas.getBoundingClientRect();
-      this.updateThumbFromGlobal(e.clientX - rect.left, e.clientY - rect.top);
-    };
-    const onDomEnd = (e: PointerEvent): void => {
-      if (this.activePointerId !== e.pointerId) return;
-      this.release();
-    };
-    window.addEventListener('pointermove', onDomMove, { passive: true });
-    window.addEventListener('pointerup', onDomEnd);
-    window.addEventListener('pointercancel', onDomEnd);
+    // Pointermove + pointerup need to be on the WHOLE stage so the joystick
+    // tracks even when the finger drags outside the base ring (the user
+    // would otherwise lose control mid-stroke).
+    this.base.on('pointerdown', onPointerDown);
+    app.stage.eventMode = 'static';
+    app.stage.on('pointermove', onPointerMove);
+    app.stage.on('pointerup', onPointerUp);
+    app.stage.on('pointerupoutside', onPointerUp);
     this.cleanupFns.push(
-      () => window.removeEventListener('pointermove', onDomMove),
-      () => window.removeEventListener('pointerup', onDomEnd),
-      () => window.removeEventListener('pointercancel', onDomEnd),
+      () => this.base.off('pointerdown', onPointerDown),
+      () => app.stage.off('pointermove', onPointerMove),
+      () => app.stage.off('pointerup', onPointerUp),
+      () => app.stage.off('pointerupoutside', onPointerUp),
     );
 
     this.reposition();
@@ -119,13 +117,10 @@ export class VirtualJoystick {
     this.container.destroy({ children: true });
   }
 
-  /** Map a canvas-space pointer position (CSS-pixel coords relative to the
-   *  canvas top-left) to a thumb offset clamped to the base radius, then
-   *  update the visible thumb + dirX/dirY. Accepts plain numbers so the
-   *  same path serves both the Pixi pointerdown event (e.global) and the
-   *  DOM move/up listeners (clientX/Y minus canvas bbox). */
-  private updateThumbFromGlobal(globalX: number, globalY: number): void {
-    const local = this.container.toLocal({ x: globalX, y: globalY });
+  /** Map the pointer's screen position to a thumb offset clamped to the
+   *  base radius, then update the visible thumb + dirX/dirY. */
+  private updateThumbFromPointer(e: FederatedPointerEvent): void {
+    const local = this.container.toLocal(e.global);
     const dx = local.x - this.centreX;
     const dy = local.y - this.centreY;
     const dist = Math.hypot(dx, dy);
@@ -136,13 +131,6 @@ export class VirtualJoystick {
     this.thumb.position.set(tx, ty);
     this.dirX = tx / BASE_RADIUS_PX;
     this.dirY = ty / BASE_RADIUS_PX;
-  }
-
-  private release(): void {
-    this.activePointerId = null;
-    this.thumb.position.set(0, 0);
-    this.dirX = 0;
-    this.dirY = 0;
   }
 
   private reposition(): void {

@@ -20,23 +20,14 @@
         background: #000;
         font-family: system-ui, -apple-system, sans-serif;
         color: #fff;
-        /* Lock all browser-level touch gestures on the page so the canvas
-           keeps every pointer event. Without this, mobile Chrome/Safari
-           classify a sustained drag as a scroll/pull-to-refresh after a few
-           pixels and emit pointercancel — which froze the virtual joystick
-           on first use. */
-        touch-action: none;
-        overscroll-behavior: none;
-        -webkit-user-select: none;
-        user-select: none;
-        -webkit-tap-highlight-color: transparent;
       }
-      #app,
-      canvas {
+      #app {
         width: 100vw;
         height: 100vh;
         display: block;
-        touch-action: none;
+      }
+      canvas {
+        display: block;
       }
     </style>
   </head>

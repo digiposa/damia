@@ -15,7 +15,7 @@ export class DebugOverlay {
     this.rendererLabel = rendererLabel;
 
     this.background = new Graphics()
-      .roundRect(0, 0, 180, 50, 4)
+      .roundRect(0, 0, 180, 64, 4)
       .fill({ color: 0x000000, alpha: 0.5 });
     this.container.addChild(this.background);
 
@@ -41,6 +41,6 @@ export class DebugOverlay {
     this.samples.push(currentFps);
     if (this.samples.length > SAMPLE_WINDOW) this.samples.shift();
     const avg = this.samples.reduce((a, b) => a + b, 0) / this.samples.length;
-    this.text.text = `FPS: ${currentFps.toFixed(0)} (avg ${avg.toFixed(0)})\nRenderer: ${this.rendererLabel}`;
+    this.text.text = `FPS: ${currentFps.toFixed(0)} (avg ${avg.toFixed(0)})\nRenderer: ${this.rendererLabel}\nBuild: ${__BUILD_COMMIT__}`;
   }
 }

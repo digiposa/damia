@@ -6,7 +6,10 @@ import type { Components } from '@gameplay/components';
 import type { TileMapPathZone } from '@rendering/TileMap';
 import type { FogOfWar } from '@services/FogOfWar';
 
-const MAP_FIT_PX = 200;
+/** Bounding-box budget for the rendered iso diamond. Sized for portrait
+ *  mobile: a 200 px diamond drowned the EXP / Zoom readouts on a 360 px
+ *  wide screen. */
+const MAP_FIT_PX = 110;
 const PADDING = 12;
 
 interface MiniMapOptions {

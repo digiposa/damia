@@ -26,6 +26,7 @@ import { MovementSystem } from '@gameplay/systems/MovementSystem';
 import { ExitSystem } from '@gameplay/systems/ExitSystem';
 import { CooldownSystem } from '@gameplay/systems/CooldownSystem';
 import { CombatSystem } from '@gameplay/systems/CombatSystem';
+import { AutoAttackSystem } from '@gameplay/systems/AutoAttackSystem';
 import { AttackSwingSystem } from '@gameplay/systems/AttackSwingSystem';
 import { AdditionSystem } from '@gameplay/systems/AdditionSystem';
 import { SpellSystem } from '@gameplay/systems/SpellSystem';
@@ -277,6 +278,7 @@ export class ForestScene implements Scene {
     const cooldown = new CooldownSystem();
     const ai = new AISystem({ width: map.size.w, height: map.size.h });
     const combat = new CombatSystem();
+    const autoAttack = new AutoAttackSystem();
     const swing = new AttackSwingSystem();
     const defense = new DefenseSystem();
     const exits = new ExitSystem();
@@ -304,6 +306,10 @@ export class ForestScene implements Scene {
     this.systems = [
       cooldown,
       ai,
+      // AutoAttack runs BEFORE CombatSystem so the CombatIntent it sets
+      // gets processed in the same tick — no one-frame lag before the
+      // first swing on a freshly-aggro'd mob.
+      autoAttack,
       combat,
       pathfinding,
       movement,

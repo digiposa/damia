@@ -7,8 +7,10 @@ import { Tooltip } from './Tooltip';
 
 const SLOT_SIZE = 36;
 const SLOT_GAP = 4;
-/** Vertical gap above the Hotbar (which sits at the bottom with its own padding). */
-const PADDING_BOTTOM = 88;
+/** Distance from the top of the screen. Sits just below the top HUD strip
+ *  (HUD takes y ≈ 0..92) so the bottom of the screen stays free for the
+ *  joystick / action buttons / hotbar trio. */
+const PADDING_TOP = 100;
 
 export interface AdditionsBarState {
   /** Additions the player has access to right now (filter from progression). */
@@ -130,9 +132,6 @@ export class AdditionsBar {
     const totalWidth =
       this.currentUnlocked.length * SLOT_SIZE +
       Math.max(0, this.currentUnlocked.length - 1) * SLOT_GAP;
-    this.container.position.set(
-      (this.app.screen.width - totalWidth) / 2,
-      this.app.screen.height - SLOT_SIZE - PADDING_BOTTOM,
-    );
+    this.container.position.set((this.app.screen.width - totalWidth) / 2, PADDING_TOP);
   }
 }

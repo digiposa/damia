@@ -22,7 +22,8 @@
   },
   "gameOver": {
     "title": "You died",
-    "subtitle": "Press R to restart"
+    "subtitle": "Tap the screen or press R to restart",
+    "restart": "Restart"
   },
   "items": {
     "healingPotion": "Healing Potion",

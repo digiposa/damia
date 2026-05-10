@@ -22,7 +22,8 @@
   },
   "gameOver": {
     "title": "Vous êtes mort",
-    "subtitle": "Appuyez sur R pour recommencer"
+    "subtitle": "Touchez l'écran ou appuyez sur R pour recommencer",
+    "restart": "Recommencer"
   },
   "items": {
     "healingPotion": "Potion de soin",

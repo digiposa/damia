@@ -2,6 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- Force the browser to revalidate index.html on every visit. The bundled
+         JS/CSS keep their long cache headers because Vite hashes their
+         filenames (e.g. `index-bbsdaeO5.js`), so a stale-but-valid bundle is
+         impossible — only the entry HTML can drift. Without these tags,
+         Chrome/Safari were serving a week-old `index.html` that referenced
+         a long-gone JS hash, making each new deploy invisible until the
+         user manually cleared the cache. -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
     <!-- Relative path so the icon resolves correctly under both `/` (dev)
          and `/damia/` (prod GitHub Pages) — `<link>` href starting with `/`
          is NOT rewritten by Vite's base, but a relative path works in both. -->

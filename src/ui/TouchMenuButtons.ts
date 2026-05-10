@@ -76,19 +76,21 @@ export class TouchMenuButtons {
     return container;
   }
 
-  /** Horizontal row at the top-left, padded from the corner. The HUD's
-   *  portrait + stats live there too — these icons sit just to the right of
-   *  the portrait box so they don't overlap the level / HP readout. The
-   *  width / height args are kept in the signature so future responsive
-   *  tweaks (e.g. snap to the right edge on tablet) drop in without churn. */
-  private layoutStack(_screenWidth: number, _screenHeight: number): void {
-    // The HUD portrait box is roughly 200 px wide; offset the menu icons to
-    // the right of it so they don't sit on top.
-    const HUD_PORTRAIT_WIDTH = 220;
-    let cursorX = HUD_PORTRAIT_WIDTH + PADDING_PX + BTN_RADIUS;
-    for (const child of this.container.children) {
+  /** Right-aligned row at the very top edge. With the HUD now anchored
+   *  top-LEFT (mobile portrait redesign), the menu icons get the opposite
+   *  corner so the two clusters don't fight for the same horizontal band.
+   *  Right-to-left layout means the rightmost button hugs the screen edge
+   *  and additional buttons grow inward. */
+  private layoutStack(screenWidth: number, _screenHeight: number): void {
+    let cursorX = screenWidth - PADDING_PX - BTN_RADIUS;
+    // Iterate in reverse so children added in spec order (Inventory first,
+    // Settings second) end up displayed left→right with Settings on the
+    // outside edge — matches the desktop convention.
+    for (let i = this.container.children.length - 1; i >= 0; i--) {
+      const child = this.container.children[i];
+      if (!child) continue;
       child.position.set(cursorX, PADDING_PX + BTN_RADIUS);
-      cursorX += BTN_RADIUS * 2 + HORIZONTAL_GAP;
+      cursorX -= BTN_RADIUS * 2 + HORIZONTAL_GAP;
     }
   }
 }

@@ -80,8 +80,10 @@ export class ZoneTitle {
   }
 
   private reposition(): void {
+    // Sit just below the top HUD strip (portrait + bars take ~90 px).
+    // Centred horizontally so the title visually anchors the world below.
     const cx = this.app.screen.width / 2;
-    this.container.position.set(cx, 40);
+    this.container.position.set(cx, 110);
     this.title.position.set(0, 0);
     this.subtitle.position.set(0, 50);
   }

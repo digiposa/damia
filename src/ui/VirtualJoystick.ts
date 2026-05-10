@@ -3,12 +3,13 @@ import type { Application, FederatedPointerEvent } from 'pixi.js';
 
 const BASE_RADIUS_PX = 60;
 const THUMB_RADIUS_PX = 28;
-/** Edge-padding from the bottom-left corner of the screen. Sized to lift
- *  the joystick clear of the HUD portrait + hotbar that sit at the bottom
- *  edge — they have their own `eventMode='static'` (slot tooltips, panel
- *  toggles), so any overlap silently steals the lower half of the
- *  joystick's hit area. */
-const PADDING_PX = 140;
+/** Vertical padding from the bottom edge. Sized to clear the new hotbar
+ *  strip (slot 38 + 8 padding ≈ 46 px) plus a small breathing gap so the
+ *  joystick doesn't visually kiss the slots. */
+const PADDING_BOTTOM_PX = 60;
+/** Horizontal padding from the left edge — pushed close to the screen
+ *  edge so the joystick feels natural for left-thumb on portrait mobile. */
+const PADDING_LEFT_PX = 8;
 /** Below this fraction of BASE_RADIUS the joystick is considered idle (thumb
  *  re-centred, no direction emitted). Avoids jittery output around the
  *  centre. */
@@ -145,11 +146,11 @@ export class VirtualJoystick {
   }
 
   private reposition(): void {
-    // Bottom-left corner with PADDING — container origin = joystick centre,
-    // so add BASE_RADIUS to clear the screen edge.
+    // Bottom-left corner — container origin = joystick centre, so add the
+    // base radius to clear the relevant screen edge.
     this.container.position.set(
-      PADDING_PX + BASE_RADIUS_PX,
-      this.app.screen.height - PADDING_PX - BASE_RADIUS_PX,
+      PADDING_LEFT_PX + BASE_RADIUS_PX,
+      this.app.screen.height - PADDING_BOTTOM_PX - BASE_RADIUS_PX,
     );
   }
 }

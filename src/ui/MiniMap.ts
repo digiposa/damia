@@ -198,6 +198,10 @@ export class MiniMap {
   }
 
   private reposition(): void {
-    this.container.position.set(this.app.screen.width - this.bboxW - PADDING, PADDING);
+    // Slide down to clear the touch menu buttons (Inventory + Settings) that
+    // now sit in the top-right corner on mobile portrait. ~56 px covers the
+    // 22 px-radius buttons plus their top padding.
+    const TOP_OFFSET = 56;
+    this.container.position.set(this.app.screen.width - this.bboxW - PADDING, PADDING + TOP_OFFSET);
   }
 }

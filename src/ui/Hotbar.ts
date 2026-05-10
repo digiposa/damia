@@ -1,4 +1,4 @@
-import type { Application } from 'pixi.js';
+import type { Application, FederatedPointerEvent } from 'pixi.js';
 import { Container, Graphics, Text } from 'pixi.js';
 import { ADDITIONS, type AdditionKind } from '@data/balance';
 import { ITEMS, type ItemKind } from '@data/items';
@@ -7,9 +7,14 @@ import { paintAdditionSlot, paintItemSlot } from './slot';
 import { Tooltip } from './Tooltip';
 
 export const HOTBAR_SLOT_COUNT = 8;
-const SLOT_SIZE = 48;
-const SLOT_GAP = 6;
-const PADDING_BOTTOM = 16;
+/** Slot square size. Compact enough that 8 slots + gaps fit a 360 px-wide
+ *  portrait screen with margin (8*38 + 7*4 = 332 px). */
+const SLOT_SIZE = 38;
+const SLOT_GAP = 4;
+/** Sit flush against the bottom edge — joystick + action buttons get
+ *  lifted above the hotbar (their own padding bumped to ~60 px) so they
+ *  don't compete for the same row. */
+const PADDING_BOTTOM = 8;
 
 export type HotbarSlot =
   | { kind: 'addition'; addition: AdditionKind }
@@ -42,6 +47,10 @@ export class Hotbar {
   private readonly tooltip: Tooltip;
   /** Latest state passed to setState — read by hover handlers to format the tooltip. */
   private lastState: HotbarState | null = null;
+  /** Tap callback — set by the scene so taps on a slot fire the same path
+   *  as hitting the matching number key (1..8). Null by default so desktop
+   *  / scenes that don't wire it stay click-inert. */
+  private slotTapHandler: ((slotIdx: number) => void) | null = null;
 
   constructor(app: Application) {
     this.app = app;
@@ -53,11 +62,15 @@ export class Hotbar {
         .roundRect(x, 0, SLOT_SIZE, SLOT_SIZE, 5)
         .fill({ color: 0x101010, alpha: 0.7 })
         .stroke({ width: 1, color: 0x806040, alpha: 0.8 });
-      // Make the slot frame interactive for hover tooltips.
+      // Make the slot frame interactive for hover tooltips + taps.
       slot.eventMode = 'static';
-      slot.cursor = 'help';
+      slot.cursor = 'pointer';
       slot.on('pointerover', () => this.showTooltipFor(i));
       slot.on('pointerout', () => this.hideTooltip());
+      slot.on('pointertap', (e: FederatedPointerEvent) => {
+        e.stopPropagation();
+        this.slotTapHandler?.(i);
+      });
       const label = new Text({
         text: String(i + 1),
         style: { fontFamily: 'system-ui, sans-serif', fontSize: 11, fill: 0xa08050 },
@@ -130,6 +143,13 @@ export class Hotbar {
         });
       }
     }
+  }
+
+  /** Wire the tap handler. Pass `null` to detach. The scene typically
+   *  hands in its `activateHotbarSlot` directly so taps and the keyboard
+   *  1..8 path share one resolver. */
+  setOnSlotTap(handler: ((slotIdx: number) => void) | null): void {
+    this.slotTapHandler = handler;
   }
 
   destroy(): void {

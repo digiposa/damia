@@ -1,7 +1,11 @@
 import { Container, Graphics, Text } from 'pixi.js';
 import type { Application, FederatedPointerEvent } from 'pixi.js';
 
-const PADDING_PX = 24;
+/** Right-edge padding (kept tight so the buttons hug the screen edge). */
+const PADDING_RIGHT_PX = 12;
+/** Bottom padding — lifts the action stack clear of the new hotbar strip
+ *  (slot 38 px + 8 px padding ≈ 46 px) with a small breathing gap. */
+const PADDING_BOTTOM_PX = 60;
 const BTN_LARGE = 38;
 const BTN_MEDIUM = 30;
 /** Vertical gap between stacked buttons. */
@@ -128,13 +132,13 @@ export class TouchActionButtons {
   private layoutStack(): void {
     const w = this.app.screen.width;
     const h = this.app.screen.height;
-    let cursorY = h - PADDING_PX;
+    let cursorY = h - PADDING_BOTTOM_PX;
     for (let i = 0; i < this.buttons.length; i++) {
       const entry = this.buttons[i];
       const child = this.container.children[i];
       if (!entry || !child) continue;
       cursorY -= entry.spec.radius;
-      child.position.set(w - PADDING_PX - entry.spec.radius, cursorY);
+      child.position.set(w - PADDING_RIGHT_PX - entry.spec.radius, cursorY);
       cursorY -= entry.spec.radius + STACK_GAP;
     }
   }

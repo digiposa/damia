@@ -33,10 +33,8 @@ export class Hud {
   private readonly levelText: Text;
   private readonly xpText: Text;
   private readonly zoomText: Text;
-  private app: Application;
 
   constructor(app: Application) {
-    this.app = app;
     this.container = new Container({ label: 'hud' });
 
     // Portrait frame + Dart picture (M8). The square frame stays as a backing
@@ -248,6 +246,11 @@ export class Hud {
   }
 
   private reposition(): void {
-    this.container.position.set(PADDING, this.app.screen.height - PORTRAIT_SIZE - PADDING);
+    // Top-left on mobile portrait: bottom-anchoring buried the HUD under
+    // the joystick + hotbar + EXP bar. The HUD is internally laid out
+    // around (0, 0) so its origin is also the top-left of the portrait
+    // frame — pin it directly to the top-left corner. Resize-resilient
+    // because the position doesn't depend on screen dimensions.
+    this.container.position.set(PADDING, PADDING);
   }
 }

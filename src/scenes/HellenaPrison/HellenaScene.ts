@@ -311,6 +311,7 @@ export class HellenaScene implements Scene {
     this.toast = new Toast(ctx.app, this.layers.ui);
     this.hud = new Hud(ctx.app);
     this.hotbar = new Hotbar(ctx.app);
+    this.hotbar.setOnSlotTap((slotIdx) => this.activateHotbarSlot(slotIdx));
     this.minimap = new MiniMap(ctx.app, {
       fog: this.fog,
       pathZones: map.pathZones,

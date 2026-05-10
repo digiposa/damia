@@ -1,10 +1,10 @@
 name: Deploy to GitHub Pages
 
-# Build + deploy on every push to main, plus a manual trigger from the
-# Actions tab for re-deploys without a code change.
+# Build + deploy on every push to main or the experimental branch, plus a
+# manual trigger from the Actions tab for re-deploys without a code change.
 on:
   push:
-    branches: [main]
+    branches: [main, claude/experimental-modifications-XTIu8]
   workflow_dispatch:
 
 # GitHub Pages requires these scopes for the official deploy actions:

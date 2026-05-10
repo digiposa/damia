@@ -3,8 +3,12 @@ import type { Application, FederatedPointerEvent } from 'pixi.js';
 
 const BASE_RADIUS_PX = 60;
 const THUMB_RADIUS_PX = 28;
-/** Edge-padding from the bottom-left corner of the screen. */
-const PADDING_PX = 24;
+/** Edge-padding from the bottom-left corner of the screen. Sized to lift
+ *  the joystick clear of the HUD portrait + hotbar that sit at the bottom
+ *  edge — they have their own `eventMode='static'` (slot tooltips, panel
+ *  toggles), so any overlap silently steals the lower half of the
+ *  joystick's hit area. */
+const PADDING_PX = 140;
 /** Below this fraction of BASE_RADIUS the joystick is considered idle (thumb
  *  re-centred, no direction emitted). Avoids jittery output around the
  *  centre. */

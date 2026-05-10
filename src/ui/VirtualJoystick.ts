@@ -64,6 +64,13 @@ export class VirtualJoystick {
     // simplifies the drag flow (one pointer source).
     this.base.eventMode = 'static';
     this.base.cursor = 'pointer';
+    // Explicitly silence the thumb. Pixi's default `eventMode` was leaving
+    // the thumb in the hit-test path on mobile, so taps that landed on
+    // the thumb (= dead-centre of the joystick at rest) hit the thumb,
+    // which has no listener, instead of falling through to the base. The
+    // visible symptom was "the joystick only activates when I touch the
+    // outer ring, not the centre".
+    this.thumb.eventMode = 'none';
 
     const onPointerDown = (e: FederatedPointerEvent): void => {
       if (this.activePointerId !== null) return;

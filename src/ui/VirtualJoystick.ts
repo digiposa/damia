@@ -62,12 +62,7 @@ export class VirtualJoystick {
     this.base.cursor = 'pointer';
 
     const onPointerDown = (e: FederatedPointerEvent): void => {
-      // Always take over on a fresh pointerdown — never reject because of a
-      // prior `activePointerId` left dangling. If the previous touch was
-      // cancelled in some path that didn't fire pointercancel, the guard
-      // would otherwise wedge the joystick permanently. Multi-touch
-      // conflicts are still avoided because move/up only react to the
-      // currently-tracked id.
+      if (this.activePointerId !== null) return;
       this.activePointerId = e.pointerId;
       this.updateThumbFromGlobal(e.global.x, e.global.y);
     };

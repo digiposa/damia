@@ -30,6 +30,13 @@
         background: #000;
         font-family: system-ui, -apple-system, sans-serif;
         color: #fff;
+        /* Prevent the mobile browser from claiming sustained drags as
+           system gestures (scroll, pull-to-refresh, two-finger zoom).
+           Without this, Android Chrome fires `pointercancel` after a few
+           pixels of movement, which kills both the virtual joystick and
+           tap-to-move (the viewport never sees `pointerup`). */
+        touch-action: none;
+        overscroll-behavior: none;
       }
       #app {
         width: 100vw;
@@ -38,6 +45,7 @@
       }
       canvas {
         display: block;
+        touch-action: none;
       }
     </style>
   </head>

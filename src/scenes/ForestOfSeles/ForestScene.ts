@@ -39,7 +39,7 @@ import { ItemPickupSystem } from '@gameplay/systems/ItemPickupSystem';
 import { InteractableSystem } from '@gameplay/systems/InteractableSystem';
 import { ForestMap, buildCollisionGrid, buildSightBlockingGrid } from './MapLoader';
 import { propBlocks, propBlocksSight } from '@data/props';
-import { ADDITIONS, type AdditionKind, type MobKind } from '@data/balance';
+import { ADDITIONS, DEFEND, type AdditionKind, type MobKind } from '@data/balance';
 import { DART_ADDITION_UNLOCKS_BY_LEVEL, applyDartRow } from '@data/dart';
 import { xpThresholdForLevel } from '@data/progression';
 import { ITEMS, type ItemKind } from '@data/items';
@@ -106,6 +106,11 @@ export class ForestScene implements Scene {
   /** Wall-clock timestamp of the last joystick-driven move emit. Throttled
    *  so we don't pound the pathfinder every frame while the joystick is held. */
   private joystickEmitMs = 0;
+  /** Wall-clock deadline before joystick polls may resume after the user
+   *  manually engaged a mob. Without this, a held joystick tick (150 ms)
+   *  would clear the fresh CombatIntent and the engagement would silently
+   *  fail. */
+  private manualCombatLockUntilMs = 0;
   private inventoryPanel: InventoryPanel | null = null;
   /** Latest pointer position in world coords — set by pointermove on the viewport,
    *  read each frame to detect enemy-hover for the cursor overlay. */
@@ -406,8 +411,11 @@ export class ForestScene implements Scene {
       this.touchActionButtons = new TouchActionButtons(ctx.app, {
         onAttack: () => this.touchAttackNearest(),
         onAddition: () => this.input?.emitClick({ button: 'right', gx: 0, gy: 0 }),
-        onDefendToggle: () => this.input?.emitDefend(!this.input.isDefending()),
+        // Tap-to-trigger; emitDefend rejects silently when on cooldown or
+        // already defending, so a no-op tap is safe.
+        onDefend: () => this.input?.emitDefend(true),
         isDefending: () => this.input?.isDefending() ?? false,
+        defendCooldownFrac: () => this.input?.defendCooldownFrac() ?? 0,
       });
       this.layers.ui.addChild(this.touchActionButtons.container);
 
@@ -514,6 +522,11 @@ export class ForestScene implements Scene {
         const target = this.findEnemyAtCell(cmd.gx, cmd.gy);
         if (target !== null) {
           this.world.addComponent(this.playerId, 'CombatIntent', { targetId: target });
+          // Lock the joystick poll briefly so a held joystick doesn't
+          // immediately overwrite this fresh CombatIntent on its next
+          // 150 ms tick (which used to silently undo tap-on-mob during
+          // active movement).
+          this.manualCombatLockUntilMs = performance.now() + 600;
           // Click feedback: red ring pulse on the targeted enemy.
           const tp = this.world.getComponent(target, 'Position');
           if (tp) {
@@ -548,11 +561,31 @@ export class ForestScene implements Scene {
 
     this.input.onDefendChange((active) => {
       if (!this.world || this.playerId === null) return;
-      // Don't let defend interrupt an addition or spell animation.
-      if (active && this.world.hasComponent(this.playerId, 'Addition')) return;
-      if (active && this.world.hasComponent(this.playerId, 'Spell')) return;
-      if (active) this.world.addComponent(this.playerId, 'Defending', {});
-      else this.world.removeComponent(this.playerId, 'Defending');
+      if (active) {
+        // Don't let defend interrupt an addition or spell animation —
+        // bounce the InputController state back so the cooldown isn't
+        // armed for nothing.
+        if (
+          this.world.hasComponent(this.playerId, 'Addition') ||
+          this.world.hasComponent(this.playerId, 'Spell')
+        ) {
+          this.input?.emitDefend(false);
+          return;
+        }
+        this.world.addComponent(this.playerId, 'Defending', {
+          elapsedMs: 0,
+          totalMs: DEFEND.durationMs,
+        });
+        // Heal 10 % of max HP at the moment of the block — the reward
+        // for committing to the lock-in.
+        const hp = this.world.getComponent(this.playerId, 'Health');
+        if (hp) {
+          const heal = Math.round(hp.max * DEFEND.healFrac);
+          hp.current = Math.min(hp.max, hp.current + heal);
+        }
+      } else {
+        this.world.removeComponent(this.playerId, 'Defending');
+      }
     });
 
     this.input.onSlot((slotIdx) => this.activateHotbarSlot(slotIdx));
@@ -680,6 +713,20 @@ export class ForestScene implements Scene {
       sys.update(dt, this.world);
     }
     if (!this.world) return;
+
+    // Tick input cooldowns + sync defend state. DefenseSystem auto-removes
+    // the `Defending` component once its forced duration elapses, but
+    // InputController doesn't see the world directly — poll once per
+    // frame and bounce the defend flag back to false so the touch button
+    // visual + cooldown gate stay accurate.
+    this.input?.tickCooldowns(dt);
+    if (
+      this.input?.isDefending() &&
+      this.playerId !== null &&
+      !this.world.hasComponent(this.playerId, 'Defending')
+    ) {
+      this.input.emitDefend(false);
+    }
 
     if (this.playerId !== null) {
       const hp = this.world.getComponent(this.playerId, 'Health');
@@ -1265,6 +1312,9 @@ export class ForestScene implements Scene {
     if (!dir) return;
     const now = performance.now();
     if (now - this.joystickEmitMs < 150) return;
+    // Yield to a fresh manual mob target so the engagement isn't undone
+    // by the next joystick tick.
+    if (now < this.manualCombatLockUntilMs) return;
     this.joystickEmitMs = now;
     const pos = this.world.getComponent(this.playerId, 'Position');
     if (!pos) return;

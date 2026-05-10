@@ -40,7 +40,7 @@ import {
   type MapData,
 } from '../ForestOfSeles/MapLoader';
 import { propBlocks, propBlocksSight } from '@data/props';
-import { ADDITIONS, type AdditionKind, type MobKind } from '@data/balance';
+import { ADDITIONS, DEFEND, type AdditionKind, type MobKind } from '@data/balance';
 import { DART_ADDITION_UNLOCKS_BY_LEVEL, applyDartRow } from '@data/dart';
 import { ITEMS, type ItemKind } from '@data/items';
 import { SPELLS, type SpellKind } from '@data/spells';
@@ -130,6 +130,9 @@ export class HellenaScene implements Scene {
   private touchMenuButtons: TouchMenuButtons | null = null;
   /** Last joystick-driven move emit (ms). Throttles re-targeting. */
   private joystickEmitMs = 0;
+  /** See ForestScene for the rationale — yields the joystick poll to a
+   *  fresh tap-on-mob CombatIntent for 600 ms. */
+  private manualCombatLockUntilMs = 0;
   private inventoryPanel: InventoryPanel | null = null;
   /** Latest pointer position in world coords — set by pointermove on the viewport,
    *  read each frame to detect enemy-hover for the cursor overlay. */
@@ -374,8 +377,9 @@ export class HellenaScene implements Scene {
       this.touchActionButtons = new TouchActionButtons(ctx.app, {
         onAttack: () => this.touchAttackNearest(),
         onAddition: () => this.input?.emitClick({ button: 'right', gx: 0, gy: 0 }),
-        onDefendToggle: () => this.input?.emitDefend(!this.input.isDefending()),
+        onDefend: () => this.input?.emitDefend(true),
         isDefending: () => this.input?.isDefending() ?? false,
+        defendCooldownFrac: () => this.input?.defendCooldownFrac() ?? 0,
       });
       this.layers.ui.addChild(this.touchActionButtons.container);
 
@@ -478,6 +482,7 @@ export class HellenaScene implements Scene {
         const target = this.findEnemyAtCell(cmd.gx, cmd.gy);
         if (target !== null) {
           this.world.addComponent(this.playerId, 'CombatIntent', { targetId: target });
+          this.manualCombatLockUntilMs = performance.now() + 600;
           // Click feedback: red ring pulse on the targeted enemy.
           const tp = this.world.getComponent(target, 'Position');
           if (tp) {
@@ -512,11 +517,26 @@ export class HellenaScene implements Scene {
 
     this.input.onDefendChange((active) => {
       if (!this.world || this.playerId === null) return;
-      // Don't let defend interrupt an addition or spell animation.
-      if (active && this.world.hasComponent(this.playerId, 'Addition')) return;
-      if (active && this.world.hasComponent(this.playerId, 'Spell')) return;
-      if (active) this.world.addComponent(this.playerId, 'Defending', {});
-      else this.world.removeComponent(this.playerId, 'Defending');
+      if (active) {
+        if (
+          this.world.hasComponent(this.playerId, 'Addition') ||
+          this.world.hasComponent(this.playerId, 'Spell')
+        ) {
+          this.input?.emitDefend(false);
+          return;
+        }
+        this.world.addComponent(this.playerId, 'Defending', {
+          elapsedMs: 0,
+          totalMs: DEFEND.durationMs,
+        });
+        const hp = this.world.getComponent(this.playerId, 'Health');
+        if (hp) {
+          const heal = Math.round(hp.max * DEFEND.healFrac);
+          hp.current = Math.min(hp.max, hp.current + heal);
+        }
+      } else {
+        this.world.removeComponent(this.playerId, 'Defending');
+      }
     });
 
     this.input.onSlot((slotIdx) => this.activateHotbarSlot(slotIdx));
@@ -640,6 +660,17 @@ export class HellenaScene implements Scene {
       sys.update(dt, this.world);
     }
     if (!this.world) return;
+
+    // Tick input cooldowns + sync defend state (see ForestScene.update for
+    // the rationale).
+    this.input?.tickCooldowns(dt);
+    if (
+      this.input?.isDefending() &&
+      this.playerId !== null &&
+      !this.world.hasComponent(this.playerId, 'Defending')
+    ) {
+      this.input.emitDefend(false);
+    }
 
     if (this.playerId !== null) {
       const hp = this.world.getComponent(this.playerId, 'Health');
@@ -1200,6 +1231,7 @@ export class HellenaScene implements Scene {
     if (!dir) return;
     const now = performance.now();
     if (now - this.joystickEmitMs < 150) return;
+    if (now < this.manualCombatLockUntilMs) return;
     this.joystickEmitMs = now;
     const pos = this.world.getComponent(this.playerId, 'Position');
     if (!pos) return;

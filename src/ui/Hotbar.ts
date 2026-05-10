@@ -6,7 +6,11 @@ import { t } from '@services/I18nService';
 import { paintAdditionSlot, paintItemSlot } from './slot';
 import { Tooltip } from './Tooltip';
 
-export const HOTBAR_SLOT_COUNT = 8;
+/** Visible hotbar slot count. Held at 6 for the mobile-portrait layout —
+ *  fewer slots = larger taps = less crowding next to the joystick / action
+ *  buttons. Save data still serialises this length, so a future bump back
+ *  to 8 only needs the constant change + slot 6/7 keys re-bound. */
+export const HOTBAR_SLOT_COUNT = 6;
 /** Slot square size. Compact enough that 8 slots + gaps fit a 360 px-wide
  *  portrait screen with margin (8*38 + 7*4 = 332 px). */
 const SLOT_SIZE = 38;
@@ -67,7 +71,11 @@ export class Hotbar {
       slot.cursor = 'pointer';
       slot.on('pointerover', () => this.showTooltipFor(i));
       slot.on('pointerout', () => this.hideTooltip());
-      slot.on('pointertap', (e: FederatedPointerEvent) => {
+      // Fire on pointerdown so the slot survives a `pointercancel` between
+      // down and up (mobile browsers sometimes drop pointertap when they
+      // decide a touch was a gesture). Same fire-and-forget pattern as
+      // TouchActionButtons.
+      slot.on('pointerdown', (e: FederatedPointerEvent) => {
         e.stopPropagation();
         this.slotTapHandler?.(i);
       });

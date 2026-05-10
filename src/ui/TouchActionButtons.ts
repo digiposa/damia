@@ -11,37 +11,34 @@ const BTN_MEDIUM = 30;
 /** Vertical gap between stacked buttons. */
 const STACK_GAP = 12;
 
-/** Minimal button spec: visual size, glyph, and the tap callback. */
 interface ButtonSpec {
   label: string;
   radius: number;
-  /** Tap handler. The scene wires this to its own emit-click / emit-defend
-   *  hooks on the InputController so the touch path joins the same event
-   *  pipeline as keyboard / mouse. */
+  /** Fired on pointerdown — fire-and-forget. We deliberately don't wait
+   *  for pointerup because mobile browsers occasionally swallow it as a
+   *  cancel, and for action buttons faster feedback feels better. */
   onTap: () => void;
-  /** Optional state-driven tint. When set, called on every render to decide
-   *  whether the button is "active" (drawn with the active fill). Used by
-   *  the defend toggle so the button visually reflects the on/off state. */
+  /** Optional state-driven tint. Polled every frame so the visual reflects
+   *  the controller's truth without internal state to drift. */
   isActive?: () => boolean;
+  /** Optional [0, 1] cooldown fraction (1 = just triggered, 0 = ready).
+   *  Polled every frame to paint a sweeping radial dim over the button
+   *  while the action is on cooldown. */
+  cooldownFrac?: () => number;
 }
 
 /**
- * On-screen action buttons for touch devices. Renders a vertical stack at
- * bottom-right: Attack (largest), Addition, Defend (toggle). Each button is
- * a Pixi container with a circular fill + label; the scene supplies the
- * `onTap` handlers so this class stays UI-only.
+ * On-screen action buttons for touch devices. Vertical stack at bottom-
+ * right: Attack (largest), Addition, Defend.
  *
- * Defend supports an `isActive` poll so the visual toggles between the idle
- * and pressed fills based on the controller's current defend state — single
- * source of truth, no internal state to drift.
+ * Defend uses both `isActive` (red while the 3 s block is in progress)
+ * and `cooldownFrac` (gray dim radial during the 10 s cooldown after).
  */
 export class TouchActionButtons {
   readonly container: Container;
   private app: Application;
-  private buttons: Array<{ spec: ButtonSpec; bg: Graphics }> = [];
+  private buttons: Array<{ spec: ButtonSpec; bg: Graphics; cd: Graphics }> = [];
   private cleanupFns: Array<() => void> = [];
-  /** Tick handle so we can poll `isActive` callbacks each frame and re-tint
-   *  buttons that opt in (e.g. the defend toggle). */
   private tickerCb: (() => void) | null = null;
 
   constructor(
@@ -49,8 +46,9 @@ export class TouchActionButtons {
     handlers: {
       onAttack: () => void;
       onAddition: () => void;
-      onDefendToggle: () => void;
+      onDefend: () => void;
       isDefending: () => boolean;
+      defendCooldownFrac: () => number;
     },
   ) {
     this.app = app;
@@ -62,15 +60,16 @@ export class TouchActionButtons {
       {
         label: 'D',
         radius: BTN_MEDIUM,
-        onTap: handlers.onDefendToggle,
+        onTap: handlers.onDefend,
         isActive: handlers.isDefending,
+        cooldownFrac: handlers.defendCooldownFrac,
       },
     ];
 
     for (const spec of specs) {
-      const btn = this.makeButton(spec);
-      this.buttons.push({ spec, bg: btn.bg });
-      this.container.addChild(btn.container);
+      const built = this.makeButton(spec);
+      this.buttons.push({ spec, bg: built.bg, cd: built.cd });
+      this.container.addChild(built.container);
     }
 
     this.layoutStack();
@@ -78,10 +77,7 @@ export class TouchActionButtons {
     app.renderer.on('resize', onResize);
     this.cleanupFns.push(() => app.renderer.off('resize', onResize));
 
-    // Per-frame poll for `isActive` flags — cheap, ≤3 buttons. Pixi's ticker
-    // already runs at 60fps so we just piggy-back instead of wiring a custom
-    // animation frame.
-    this.tickerCb = (): void => this.refreshTints();
+    this.tickerCb = (): void => this.refreshOverlays();
     app.ticker.add(this.tickerCb);
   }
 
@@ -93,9 +89,7 @@ export class TouchActionButtons {
     this.container.destroy({ children: true });
   }
 
-  /** Build a single circular button. Returns the container + its bg Graphics
-   *  so the caller can re-tint it later (active state). */
-  private makeButton(spec: ButtonSpec): { container: Container; bg: Graphics } {
+  private makeButton(spec: ButtonSpec): { container: Container; bg: Graphics; cd: Graphics } {
     const container = new Container({ label: `touch-btn-${spec.label}` });
     const bg = new Graphics()
       .circle(0, 0, spec.radius)
@@ -112,23 +106,25 @@ export class TouchActionButtons {
       },
     });
     text.anchor.set(0.5);
-    container.addChild(bg, text);
+    // Cooldown overlay — drawn ON TOP of the bg + label so the radial dim
+    // visually sweeps across both. Re-painted in refreshOverlays().
+    const cd = new Graphics();
+    container.addChild(bg, text, cd);
 
     container.eventMode = 'static';
     container.cursor = 'pointer';
-    const onTap = (e: FederatedPointerEvent): void => {
+    // Fire on pointerdown (fast feedback + survives a stray pointercancel
+    // between down and up that would kill `pointertap`).
+    const onDown = (e: FederatedPointerEvent): void => {
       e.stopPropagation();
       spec.onTap();
     };
-    container.on('pointertap', onTap);
-    this.cleanupFns.push(() => container.off('pointertap', onTap));
+    container.on('pointerdown', onDown);
+    this.cleanupFns.push(() => container.off('pointerdown', onDown));
 
-    return { container, bg };
+    return { container, bg, cd };
   }
 
-  /** Vertically stack the buttons against the bottom-right corner with the
-   *  largest at the bottom (thumb-friendly). The button containers were
-   *  pushed in spec order, so `container.children[i]` matches `buttons[i]`. */
   private layoutStack(): void {
     const w = this.app.screen.width;
     const h = this.app.screen.height;
@@ -143,16 +139,30 @@ export class TouchActionButtons {
     }
   }
 
-  /** Re-paint each button's fill based on its `isActive` poll. Safe to call
-   *  every frame — Pixi only re-uploads the geometry when `clear()` is hit. */
-  private refreshTints(): void {
-    for (const { spec, bg } of this.buttons) {
+  /** Per-frame refresh of `isActive` tint + `cooldownFrac` radial dim. */
+  private refreshOverlays(): void {
+    for (const { spec, bg, cd } of this.buttons) {
       const active = spec.isActive?.() ?? false;
       const colour = active ? 0xa08050 : 0x1c2840;
       bg.clear()
         .circle(0, 0, spec.radius)
         .fill({ color: colour, alpha: active ? 0.95 : 0.85 })
         .stroke({ width: 2, color: 0xa08050, alpha: 0.9 });
+
+      cd.clear();
+      const frac = spec.cooldownFrac?.() ?? 0;
+      if (frac > 0.001) {
+        // Radial sweep: clockwise pie slice covering `frac × 360°` of the
+        // disc. arc() goes from -90° (top) clockwise. Drawn in the same
+        // dim grey we use for unrevealed fog so the visual is immediately
+        // legible as "blocked".
+        const start = -Math.PI / 2;
+        const end = start + frac * Math.PI * 2;
+        cd.moveTo(0, 0)
+          .arc(0, 0, spec.radius, start, end)
+          .lineTo(0, 0)
+          .fill({ color: 0x000000, alpha: 0.55 });
+      }
     }
   }
 }

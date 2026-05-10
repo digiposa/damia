@@ -9,6 +9,18 @@ export const COMBAT = {
   minDamage: 1,
 } as const;
 
+/** Defend stance tuning. Activating defend locks the player in place for
+ *  `DEFEND_DURATION_MS`, heals `DEFEND_HEAL_FRAC` of max HP at the moment
+ *  of the block, and starts a `DEFEND_COOLDOWN_MS` cooldown (the lock-in
+ *  duration counts toward the cooldown). The cooldown lives on
+ *  `InputController` so it survives independently of any one entity's
+ *  state — keep the values in sync there. */
+export const DEFEND = {
+  durationMs: 3_000,
+  cooldownMs: 10_000,
+  healFrac: 0.1,
+} as const;
+
 export const PLAYER_BASE = {
   health: 100,
   speed: 0.18,

@@ -1,6 +1,7 @@
 import type { Application, FederatedPointerEvent } from 'pixi.js';
 import type { Viewport } from 'pixi-viewport';
 import { worldToGrid } from '@core/math/iso';
+import { DEFEND } from '@data/balance';
 
 export type ClickButton = 'left' | 'right';
 
@@ -23,7 +24,7 @@ export interface InputControllerOptions {
  * Translates raw browser input into game intentions.
  * - Left/right click on a grid cell → ClickCommand
  * - Key `C` → toggle camera follow
- * - Key `S` (down/up) → defend on/off
+ * - Key `S` → trigger 3 s defend (on a 10 s cooldown)
  *
  * Resolution from a click cell to "attack target vs move" lives in the scene.
  */
@@ -34,6 +35,10 @@ export class InputController {
   private slotListeners = new Set<Listener<number>>();
   private cameraFollowState = false;
   private defendState = false;
+  /** Time remaining (ms) before the player can press defend again. Counts
+   *  down from `DEFEND.cooldownMs` whenever a defend is started, ticked
+   *  by the scene calling `tickCooldowns(dt)` each frame. */
+  private defendCdRemainingMs = 0;
   private readonly cleanupFns: Array<() => void> = [];
   /** Stored so `emitClick` can clamp synthesised commands (joystick) to the
    *  playable grid — the mouse path already rejects out-of-bounds clicks
@@ -99,24 +104,17 @@ export class InputController {
       if (e.key === 'c' || e.key === 'C') {
         this.cameraFollowState = !this.cameraFollowState;
         this.cameraFollowListeners.forEach((l) => l(this.cameraFollowState));
-      } else if ((e.key === 's' || e.key === 'S') && !this.defendState) {
-        this.defendState = true;
-        this.defendListeners.forEach((l) => l(true));
+      } else if ((e.key === 's' || e.key === 'S') && !e.repeat) {
+        // One-shot defend trigger. The scene + DefenseSystem own the
+        // 3 s commit; we just gate on the cooldown here.
+        this.emitDefend(true);
       } else if (!e.repeat) {
         const slot = InputController.SLOT_CODES[e.code];
         if (slot !== undefined) this.slotListeners.forEach((l) => l(slot));
       }
     };
-    const onKeyUp = (e: KeyboardEvent): void => {
-      if ((e.key === 's' || e.key === 'S') && this.defendState) {
-        this.defendState = false;
-        this.defendListeners.forEach((l) => l(false));
-      }
-    };
     window.addEventListener('keydown', onKeyDown);
-    window.addEventListener('keyup', onKeyUp);
     this.cleanupFns.push(() => window.removeEventListener('keydown', onKeyDown));
-    this.cleanupFns.push(() => window.removeEventListener('keyup', onKeyUp));
   }
 
   onClick(listener: Listener<ClickCommand>): () => void {
@@ -159,13 +157,40 @@ export class InputController {
     this.clickListeners.forEach((l) => l(clamped));
   }
 
-  /** External dispatch for the defend toggle. Mirrors the `S` key behaviour
-   *  (keydown → on, keyup → off) but lets the touch UI drive it as a tap-to-
-   *  toggle (caller flips the state on each tap). */
+  /** External dispatch for the defend toggle.
+   *  - `active=true` starts a defend stance, but rejects silently if
+   *    we're still on cooldown or already defending. Successful starts
+   *    arm the cooldown.
+   *  - `active=false` clears the state without affecting the cooldown
+   *    (the scene calls this after DefenseSystem auto-expires the
+   *    `Defending` component). */
   emitDefend(active: boolean): void {
-    if (this.defendState === active) return;
-    this.defendState = active;
-    this.defendListeners.forEach((l) => l(active));
+    if (active) {
+      if (this.defendState) return;
+      if (this.defendCdRemainingMs > 0) return;
+      this.defendState = true;
+      this.defendCdRemainingMs = DEFEND.cooldownMs;
+      this.defendListeners.forEach((l) => l(true));
+    } else {
+      if (!this.defendState) return;
+      this.defendState = false;
+      this.defendListeners.forEach((l) => l(false));
+    }
+  }
+
+  /** Decrement time-based cooldowns. Called from the scene's `update` so
+   *  the cooldown advances at the same rate as the rest of the
+   *  simulation (same `deltaMS` source). */
+  tickCooldowns(deltaMs: number): void {
+    if (this.defendCdRemainingMs > 0) {
+      this.defendCdRemainingMs = Math.max(0, this.defendCdRemainingMs - deltaMs);
+    }
+  }
+
+  /** Cooldown progress as a fraction in [0, 1]. 1 = just triggered, 0 =
+   *  ready. Used by the defend button to paint a radial wipe overlay. */
+  defendCooldownFrac(): number {
+    return this.defendCdRemainingMs / DEFEND.cooldownMs;
   }
 
   /** External dispatch for hotbar slot activation (0..7). Mirrors the

@@ -3,6 +3,7 @@ import { Container, Graphics, Sprite as PixiSprite, Text } from 'pixi.js';
 import { t } from '@services/I18nService';
 import { AssetManager } from '@services/AssetManager';
 import { SafeArea } from '@services/SafeArea';
+import { isTouchDevice } from '@services/Device';
 
 const PORTRAIT_SIZE = 72;
 const BAR_WIDTH = 200;
@@ -160,6 +161,10 @@ export class Hud {
       },
     });
     this.zoomText.position.set(barsX + 200, mpY + BAR_HEIGHT + 4);
+    // Hide on touch — the player has no zoom control there (pan/wheel are
+    // disabled, no pinch yet) and the label was overlapping with the
+    // vertical menu-button column on narrow phones.
+    this.zoomText.visible = !isTouchDevice();
 
     // Level pip — top-left of the portrait, small badge so it doesn't compete
     // with the portrait art.

@@ -15,14 +15,19 @@ export const HOTBAR_SLOT_COUNT = 6;
  *  target — below that, fingers miss the small visual far too easily.
  *  6 slots * 48 + 5 * 6 = 318 px fits cleanly inside a 360 px portrait. */
 const SLOT_SIZE = 48;
-const SLOT_GAP = 6;
-/** Pixels of generous hit-area beyond the visible slot rect, on every
- *  side. With 4 px padding the effective tap zone is 56×56 with no
- *  visual change — drift toward the gap between slots still registers. */
-const HIT_AREA_PADDING = 4;
-/** Lift the strip a notch off the bottom edge so it clears any
- *  system gesture bar on Android. */
-const PADDING_BOTTOM = 12;
+const SLOT_GAP = 8;
+/** Pixels of hit-area extension beyond the visible slot rect, on every
+ *  side. Sized so it stays STRICTLY below half the slot gap (gap 8 ÷ 2
+ *  = 4), preventing two adjacent slot hit-areas from overlapping. An
+ *  overlap would let a tap on the boundary register on whichever slot
+ *  was added last (= the one on the right) regardless of where the
+ *  finger landed — looking like the tap "didn't work" when the user
+ *  intended the slot to its left and it happened to be empty. */
+const HIT_AREA_PADDING = 3;
+/** Lift the strip clear of the Android system gesture bar (~16-24 px
+ *  reserved at the bottom edge on most modern phones). 12 px wasn't
+ *  always enough. */
+const PADDING_BOTTOM = 24;
 
 export type HotbarSlot =
   | { kind: 'addition'; addition: AdditionKind }
@@ -119,16 +124,23 @@ export class Hotbar {
         style: { fontFamily: 'system-ui, sans-serif', fontSize: 11, fill: 0xa08050 },
       });
       label.position.set(x + 4, 3);
+      label.eventMode = 'none';
       const content = new Container();
       content.position.set(x, 0);
+      content.eventMode = 'none';
       const lock = new Graphics();
       lock.position.set(x, 0);
       lock.visible = false;
+      lock.eventMode = 'none';
       const flash = new Graphics();
       flash.position.set(x, 0);
       flash.visible = false;
+      flash.eventMode = 'none';
       // Order: frame → content → lock dim → flash (flash on top of
-      // everything so the tap pulse is always visible).
+      // everything so the tap pulse is always visible). All four are
+      // `eventMode: 'none'` so only the underlying slot frame can ever
+      // be the hit target — defensive against a stray Pixi default
+      // making a sibling intercept the pointerdown.
       this.container.addChild(slot, label, content, lock, flash);
       this.slotContents.push(content);
       this.slotLocks.push(lock);

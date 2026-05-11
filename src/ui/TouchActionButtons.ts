@@ -5,8 +5,8 @@ import { ADDITIONS, type AdditionKind } from '@data/balance';
 /** Right-edge padding (kept tight so the buttons hug the screen edge). */
 const PADDING_RIGHT_PX = 12;
 /** Bottom padding — lifts the action stack clear of the hotbar strip
- *  (slot 48 px + 12 px padding = 60 px) with a small breathing gap. */
-const PADDING_BOTTOM_PX = 76;
+ *  (slot 48 px + 24 px padding = 72 px) with a small breathing gap. */
+const PADDING_BOTTOM_PX = 88;
 const BTN_LARGE = 38;
 const BTN_MEDIUM = 30;
 /** Vertical gap between stacked buttons. */

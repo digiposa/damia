@@ -4,7 +4,11 @@ import { SafeArea } from '@services/SafeArea';
 
 const PADDING_PX = 12;
 const BTN_RADIUS = 22;
-const HORIZONTAL_GAP = 10;
+const VERTICAL_GAP = 10;
+/** Total vertical footprint of the 3-button stack, exposed so the MiniMap
+ *  can slide its top edge below the column without recomputing the math.
+ *  Update if the button count or radius changes. */
+export const TOUCH_MENU_STACK_HEIGHT = 3 * (BTN_RADIUS * 2) + 2 * VERTICAL_GAP;
 
 interface MenuButtonSpec {
   /** Initial label. May be overridden every frame via `getLabel()`. */
@@ -103,23 +107,24 @@ export class TouchMenuButtons {
     return { container, label };
   }
 
-  /** Right-aligned row at the very top edge. The HUD owns top-LEFT, so
-   *  the menu icons hug the opposite corner. Right-to-left layout: the
-   *  rightmost button anchors to the screen edge, additional buttons
-   *  grow inward. */
+  /** Right-edge vertical column starting at the very top. Horizontal-row
+   *  layout collided with the HUD bars (200 px wide bars + 72 px portrait
+   *  = 282 px from the left edge) on phones narrower than ~440 px CSS.
+   *  Vertical stacking only consumes 44 px of horizontal space — coexists
+   *  with the HUD on every phone ≥ 360 px wide. */
   private layoutStack(screenWidth: number, _screenHeight: number): void {
-    // OS safe-area insets push the row clear of the iPhone Dynamic Island
-    // / notch (top) and any landscape-orientation cutout (right).
-    let cursorX = screenWidth - PADDING_PX - BTN_RADIUS - SafeArea.right;
-    const cursorY = PADDING_PX + BTN_RADIUS + SafeArea.top;
+    // OS safe-area insets push the column inward from the notch/cutout
+    // (right) and down from the Dynamic Island (top).
+    const x = screenWidth - PADDING_PX - BTN_RADIUS - SafeArea.right;
+    let cursorY = PADDING_PX + BTN_RADIUS + SafeArea.top;
     // Iterate in reverse so children added in spec order (Inventory,
-    // Mute, Settings) end up displayed left→right with Settings on the
-    // outside edge — keeps the desktop convention.
+    // Mute, Settings) end up displayed top→bottom with Settings on the
+    // outside edge — keeps the desktop convention but rotated 90°.
     for (let i = this.container.children.length - 1; i >= 0; i--) {
       const child = this.container.children[i];
       if (!child) continue;
-      child.position.set(cursorX, cursorY);
-      cursorX -= BTN_RADIUS * 2 + HORIZONTAL_GAP;
+      child.position.set(x, cursorY);
+      cursorY += BTN_RADIUS * 2 + VERTICAL_GAP;
     }
   }
 

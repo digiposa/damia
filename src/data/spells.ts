@@ -67,15 +67,18 @@ export const SPELLS: Record<SpellKind, SpellDefinition> = {
   },
   gushingMagma: {
     name: 'Gushing Magma',
-    totalMs: 800,
-    hitTimingMs: 500,
+    totalMs: 900,
+    hitTimingMs: 550,
     magicAtkMul: 1.4,
     element: 'fire',
     cooldownMs: 0,
     target: 'groundAoE',
     castRangePx: 480,
     aoeRadiusPx: 160,
-    vfx: 'flameBurst',
-    vfxRadiusPx: 140,
+    // 4-pillar pattern — see VfxSystem.animateMagmaPillars. The radius
+    // is each pillar's flame height; the overall footprint is fixed by
+    // MAGMA_PILLAR_OFFSETS in VfxSystem.
+    vfx: 'magmaPillars',
+    vfxRadiusPx: 120,
   },
 };

@@ -1,12 +1,20 @@
-import type { Container } from 'pixi.js';
-import { Graphics, Sprite as PixiSprite } from 'pixi.js';
+import { Container, Graphics, Sprite as PixiSprite } from 'pixi.js';
 import type { Entity, System, World } from '@core/ecs';
 import { TILE_HALF_H, TILE_HALF_W } from '@core/math/iso';
 import type { Components } from '@gameplay/components';
 import type { Vfx, VfxKind } from '@gameplay/components/Vfx';
 import { AssetManager } from '@services/AssetManager';
 
-type VfxNode = Graphics | PixiSprite;
+type VfxNode = Graphics | PixiSprite | Container;
+
+/** Offsets (in world px) of the 4 Magma pillars relative to the AoE
+ *  centre — a tight square pattern lifted from the PS1 TLoD cast. */
+const MAGMA_PILLAR_OFFSETS: ReadonlyArray<readonly [number, number]> = [
+  [-44, -22],
+  [44, -22],
+  [-44, 22],
+  [44, 22],
+];
 
 /**
  * Renders + animates one-shot Vfx entities. Each Vfx has a `kind` that picks
@@ -76,6 +84,24 @@ function createNode(vfx: Vfx): VfxNode {
       // Texture missing → fall back to procedural so the spell still has SOME effect.
       return new Graphics();
     }
+    case 'magmaPillars': {
+      // Composite node: a Container with 4 children, one per pillar.
+      // Each child is a fireImpact-style sprite (when the texture is
+      // available) or a procedural flame burst fallback. Animated per
+      // child in drawVfx.
+      const root = new Container({ label: 'vfx-magma-pillars' });
+      const tex = AssetManager.getTexture('vfx.fireImpact');
+      for (let i = 0; i < MAGMA_PILLAR_OFFSETS.length; i++) {
+        if (tex) {
+          const s = new PixiSprite(tex);
+          s.anchor.set(0.5, 1);
+          root.addChild(s);
+        } else {
+          root.addChild(new Graphics());
+        }
+      }
+      return root;
+    }
     case 'flameBurst':
     case 'clickMove':
     case 'clickAttack':
@@ -115,6 +141,16 @@ function drawVfx(node: VfxNode, vfx: Vfx, t: number, x: number, y: number): void
         drawClickAttack(node, vfx.radius, t);
       }
       node.position.set(x, y);
+      break;
+    case 'magmaPillars':
+      // Pin the composite container to the AoE centre, then animate each
+      // pillar around it. Per-pillar offsets are added inside the
+      // animator so the children's anchors line up with their impact
+      // points (small purple shockwave at base + tall flame above).
+      node.position.set(x, y);
+      if (node instanceof Container && !(node instanceof PixiSprite)) {
+        animateMagmaPillars(node, vfx.radius, t);
+      }
       break;
   }
 }
@@ -190,6 +226,38 @@ function animateFireImpactSprite(
   sprite.rotation = Math.sin(t * 18) * 0.05;
 
   sprite.position.set(x, y + rise);
+}
+
+/**
+ * Gushing Magma — 4 fire pillars rising from a square pattern around the
+ * AoE centre. Each child is either a Burn-Out sprite (when the texture
+ * is available) animated like `fireImpact`, or a procedural flame burst
+ * fallback. Children are staggered so the pillars don't all peak at the
+ * same instant, matching the cascading "VROOM VROOM VROOM VROOM" feel of
+ * the PS1 cast.
+ */
+function animateMagmaPillars(node: Container, radius: number, t: number): void {
+  const childCount = Math.min(node.children.length, MAGMA_PILLAR_OFFSETS.length);
+  // Smaller flame than Burn Out (60% of the cast radius) so 4 of them
+  // don't fill the screen — the AoE damage radius is what makes the
+  // spell hit, the visuals just have to sell the impact.
+  const pillarRadius = Math.max(40, radius * 0.6);
+  for (let i = 0; i < childCount; i++) {
+    const child = node.children[i];
+    const offset = MAGMA_PILLAR_OFFSETS[i];
+    if (!child || !offset) continue;
+    // Stagger each pillar by ~10% of the lifetime so they pop in
+    // sequence rather than all at once.
+    const localT = Math.min(1, Math.max(0, (t - i * 0.1) / 0.9));
+    const [ox, oy] = offset;
+    if (child instanceof PixiSprite) {
+      animateFireImpactSprite(child, pillarRadius, localT, ox, oy);
+    } else if (child instanceof Graphics) {
+      child.clear();
+      if (localT > 0) drawFlameBurst(child, pillarRadius, localT);
+      child.position.set(ox, oy);
+    }
+  }
 }
 
 /**

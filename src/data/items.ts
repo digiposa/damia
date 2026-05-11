@@ -2,7 +2,7 @@ import type { Sprite, SpriteShape } from '@gameplay/components';
 import type { AssetAlias } from '@services/AssetManager';
 import type { SpellKind } from './spells';
 
-export type ItemKind = 'healingPotion' | 'burnOut' | 'gold';
+export type ItemKind = 'healingPotion' | 'burnOut' | 'gushingMagma' | 'gold';
 
 /**
  * Effect bound to an item when consumed from the inventory. `null` for items
@@ -47,6 +47,17 @@ export const ITEMS: Record<ItemKind, ItemDefinition> = {
     iconAlias: 'sprite.item.burnOut',
     weight: 30,
     use: { kind: 'spell', spell: 'burnOut' },
+    bindable: true,
+  },
+  // Gushing Magma: AoE fire item. Reuses the Burn Out icon for now while a
+  // dedicated sprite is being authored — visually the in-game cast renders
+  // the 4-pillar TLoD signature via the `magmaPillars` VFX kind regardless.
+  gushingMagma: {
+    nameKey: 'items.gushingMagma',
+    sprite: { shape: 'circle', color: 0xc04018, width: 22, height: 22 },
+    iconAlias: 'sprite.item.burnOut',
+    weight: 20,
+    use: { kind: 'spell', spell: 'gushingMagma' },
     bindable: true,
   },
   gold: {

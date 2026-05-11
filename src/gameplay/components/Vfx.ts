@@ -6,7 +6,7 @@
  * `kind` is the open-ended discriminant — add a new value here AND a matching
  * draw routine in VfxSystem when wiring a new elemental spell.
  */
-export type VfxKind = 'flameBurst' | 'fireImpact' | 'clickMove' | 'clickAttack';
+export type VfxKind = 'flameBurst' | 'fireImpact' | 'magmaPillars' | 'clickMove' | 'clickAttack';
 
 export interface Vfx {
   kind: VfxKind;

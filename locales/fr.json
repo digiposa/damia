@@ -30,6 +30,8 @@
     "healingPotion.desc": "Restaure 50 % des PV max",
     "burnOut": "Épuisement",
     "burnOut.desc": "Lance Burn Out (sort de feu, cible unique)",
+    "gushingMagma": "Magma",
+    "gushingMagma.desc": "Lance Gushing Magma (sort de feu, zone)",
     "gold": "Or",
     "gold.desc": "Monnaie"
   },

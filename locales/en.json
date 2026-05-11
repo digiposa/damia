@@ -30,6 +30,8 @@
     "healingPotion.desc": "Restores 50% of max HP",
     "burnOut": "Burn Out",
     "burnOut.desc": "Casts Burn Out (fire spell, single target)",
+    "gushingMagma": "Gushing Magma",
+    "gushingMagma.desc": "Casts Gushing Magma (fire spell, area)",
     "gold": "Gold",
     "gold.desc": "Currency"
   },

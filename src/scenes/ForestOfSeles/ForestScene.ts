@@ -1171,7 +1171,12 @@ export class ForestScene implements Scene {
     if (!stats || !pos) return;
 
     if (spell.target === 'lockedTarget') {
-      const targetId = this.pickAdditionTarget(pos.x, pos.y, spell.rangePx);
+      // Spell items always seek a target: current CombatIntent first, then
+      // nearest visible enemy. Ignoring the spell's `rangePx` here is
+      // deliberate — wasting an item on "no target" while a mob is on
+      // screen feels broken. The cast animation handles whatever the
+      // distance ends up being.
+      const targetId = this.pickSpellTarget(pos.x, pos.y);
       if (targetId === null) {
         this.toast?.show(t('inventory.noTarget'));
         return;
@@ -1206,14 +1211,13 @@ export class ForestScene implements Scene {
       return;
     }
 
-    // groundAoE — try to fire immediately on the player's current combat
-    // target (or nearest enemy in cast range). On thumb-driven mobile,
-    // forcing a second tap on the ground to commit the cast was clunky;
-    // when there IS a clear target we just blast its tile. Falls back to
-    // the manual ground-targeting cursor when no enemy is in range so
-    // the player can still place AoEs precisely.
+    // groundAoE — fire on the player's current combat target (or nearest
+    // visible enemy), distance-agnostic. Same rationale as lockedTarget
+    // above: a magic item should never silently no-op when there's a
+    // mob on the field. Fallback to manual ground-targeting only when
+    // there's truly no enemy at all.
     const aoeSpell = spell;
-    const lockOn = this.pickAdditionTarget(pos.x, pos.y, aoeSpell.castRangePx);
+    const lockOn = this.pickSpellTarget(pos.x, pos.y);
     if (lockOn !== null) {
       const tp = this.world.getComponent(lockOn, 'Position');
       if (tp) {
@@ -1351,6 +1355,48 @@ export class ForestScene implements Scene {
       pf.targetGrid = null;
     }
     playSfx('combat.swing');
+  }
+
+  /**
+   * Range-agnostic target picker used by spell-item casts (Burn Out,
+   * Gushing Magma, …). Picks the player's current CombatIntent target
+   * if alive + visible, otherwise the nearest visible enemy — no
+   * distance gate. Wasting an item by casting at thin air is worse UX
+   * than firing on a faraway mob, so we always pick a target as long
+   * as there's any to pick.
+   */
+  private pickSpellTarget(px: number, py: number): Entity | null {
+    if (!this.world || this.playerId === null) return null;
+    const intent = this.world.getComponent(this.playerId, 'CombatIntent');
+    if (intent !== undefined) {
+      const th = this.world.getComponent(intent.targetId, 'Health');
+      if (
+        th &&
+        th.current > 0 &&
+        !this.world.hasComponent(intent.targetId, 'Dying') &&
+        !this.world.hasComponent(intent.targetId, 'Hidden')
+      ) {
+        return intent.targetId;
+      }
+    }
+    let bestId: Entity | null = null;
+    let bestDist = Infinity;
+    for (const id of this.world.query(['Health', 'Position', 'Faction'])) {
+      if (id === this.playerId) continue;
+      if (this.world.hasComponent(id, 'Dying')) continue;
+      if (this.world.hasComponent(id, 'Hidden')) continue;
+      const fac = this.world.getComponent(id, 'Faction');
+      if (!fac || fac.side === 'player') continue;
+      const tp = this.world.getComponent(id, 'Position');
+      const th = this.world.getComponent(id, 'Health');
+      if (!tp || !th || th.current <= 0) continue;
+      const d = Math.hypot(tp.x - px, tp.y - py);
+      if (d < bestDist) {
+        bestDist = d;
+        bestId = id;
+      }
+    }
+    return bestId;
   }
 
   private pickAdditionTarget(px: number, py: number, range: number): Entity | null {

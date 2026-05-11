@@ -1075,7 +1075,9 @@ export class HellenaScene implements Scene {
     if (!stats || !pos) return;
 
     if (spell.target === 'lockedTarget') {
-      const targetId = this.pickAdditionTarget(pos.x, pos.y, spell.rangePx);
+      // Range-agnostic spell-item targeting — see ForestScene for the
+      // full rationale.
+      const targetId = this.pickSpellTarget(pos.x, pos.y);
       if (targetId === null) {
         this.toast?.show(t('inventory.noTarget'));
         return;
@@ -1113,7 +1115,7 @@ export class HellenaScene implements Scene {
     // groundAoE — auto-blast the current target on tap (mobile-friendly).
     // See ForestScene.startSpellFromItem for the rationale.
     const aoeSpell = spell;
-    const lockOn = this.pickAdditionTarget(pos.x, pos.y, aoeSpell.castRangePx);
+    const lockOn = this.pickSpellTarget(pos.x, pos.y);
     if (lockOn !== null) {
       const tp = this.world.getComponent(lockOn, 'Position');
       if (tp) {
@@ -1251,6 +1253,42 @@ export class HellenaScene implements Scene {
       pf.targetGrid = null;
     }
     playSfx('combat.swing');
+  }
+
+  /** See ForestScene.pickSpellTarget. Range-agnostic; favours the
+   *  player's CombatIntent, falls back to nearest visible enemy. */
+  private pickSpellTarget(px: number, py: number): Entity | null {
+    if (!this.world || this.playerId === null) return null;
+    const intent = this.world.getComponent(this.playerId, 'CombatIntent');
+    if (intent !== undefined) {
+      const th = this.world.getComponent(intent.targetId, 'Health');
+      if (
+        th &&
+        th.current > 0 &&
+        !this.world.hasComponent(intent.targetId, 'Dying') &&
+        !this.world.hasComponent(intent.targetId, 'Hidden')
+      ) {
+        return intent.targetId;
+      }
+    }
+    let bestId: Entity | null = null;
+    let bestDist = Infinity;
+    for (const id of this.world.query(['Health', 'Position', 'Faction'])) {
+      if (id === this.playerId) continue;
+      if (this.world.hasComponent(id, 'Dying')) continue;
+      if (this.world.hasComponent(id, 'Hidden')) continue;
+      const fac = this.world.getComponent(id, 'Faction');
+      if (!fac || fac.side === 'player') continue;
+      const tp = this.world.getComponent(id, 'Position');
+      const th = this.world.getComponent(id, 'Health');
+      if (!tp || !th || th.current <= 0) continue;
+      const d = Math.hypot(tp.x - px, tp.y - py);
+      if (d < bestDist) {
+        bestDist = d;
+        bestId = id;
+      }
+    }
+    return bestId;
   }
 
   private pickAdditionTarget(px: number, py: number, range: number): Entity | null {

@@ -11,6 +11,16 @@ const HP_BAR_OFFSET_ABOVE_HEAD = 96;
 const TARGET_RING_RADIUS_X = 36;
 const TARGET_RING_RADIUS_Y = 16;
 const TARGET_RING_COLOR = 0xffd166;
+/** Defend timer bar — drawn UNDER the player while `Defending` is active.
+ *  Same mauve as the heal float so the player reads it as "you're tanking
+ *  for HP". Depletes from full → empty over the lock-in duration. */
+const DEFEND_BAR_WIDTH = 44;
+const DEFEND_BAR_HEIGHT = 5;
+/** Offset from the player position center down to the bar. The iso tile
+ *  is rendered roughly centred on the position, so this puts the bar
+ *  just below the player's feet. */
+const DEFEND_BAR_OFFSET_BELOW = 28;
+const DEFEND_BAR_COLOR = 0x9bb6ff;
 
 /**
  * In-world entity overlays (FX layer):
@@ -26,11 +36,17 @@ const TARGET_RING_COLOR = 0xffd166;
 export class EntityHudSystem implements System<Components> {
   private readonly hpBars = new Map<Entity, Graphics>();
   private readonly targetRing: Graphics;
+  /** Single shared bar — only the player ever has the `Defending`
+   *  component, so we don't bother with a per-entity map. */
+  private readonly defendBar: Graphics;
 
   constructor(private readonly parent: Container) {
     this.targetRing = new Graphics();
     this.targetRing.visible = false;
     this.parent.addChild(this.targetRing);
+    this.defendBar = new Graphics();
+    this.defendBar.visible = false;
+    this.parent.addChild(this.defendBar);
   }
 
   update(_dt: number, world: World<Components>): void {
@@ -104,12 +120,34 @@ export class EntityHudSystem implements System<Components> {
     } else {
       this.targetRing.visible = false;
     }
+
+    // --- Defend timer bar ------------------------------------------------
+    let defendVisible = false;
+    if (playerId !== undefined) {
+      const def = world.getComponent(playerId, 'Defending');
+      const pos = world.getComponent(playerId, 'Position');
+      if (def && pos && def.totalMs > 0) {
+        const remaining = Math.max(0, 1 - def.elapsedMs / def.totalMs);
+        this.defendBar.clear();
+        const x = pos.x - DEFEND_BAR_WIDTH / 2;
+        const y = pos.y + DEFEND_BAR_OFFSET_BELOW;
+        this.defendBar
+          .rect(x - 1, y - 1, DEFEND_BAR_WIDTH + 2, DEFEND_BAR_HEIGHT + 2)
+          .fill({ color: 0x000000, alpha: 0.7 })
+          .rect(x, y, DEFEND_BAR_WIDTH * remaining, DEFEND_BAR_HEIGHT)
+          .fill(DEFEND_BAR_COLOR);
+        this.defendBar.visible = true;
+        defendVisible = true;
+      }
+    }
+    if (!defendVisible) this.defendBar.visible = false;
   }
 
   destroy(): void {
     for (const node of this.hpBars.values()) node.destroy();
     this.hpBars.clear();
     this.targetRing.destroy();
+    this.defendBar.destroy();
   }
 }
 

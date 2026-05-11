@@ -1,5 +1,6 @@
 import { Container, Graphics, Text } from 'pixi.js';
 import type { Application, FederatedPointerEvent } from 'pixi.js';
+import { SafeArea } from '@services/SafeArea';
 
 const PADDING_PX = 12;
 const BTN_RADIUS = 22;
@@ -107,14 +108,17 @@ export class TouchMenuButtons {
    *  rightmost button anchors to the screen edge, additional buttons
    *  grow inward. */
   private layoutStack(screenWidth: number, _screenHeight: number): void {
-    let cursorX = screenWidth - PADDING_PX - BTN_RADIUS;
+    // OS safe-area insets push the row clear of the iPhone Dynamic Island
+    // / notch (top) and any landscape-orientation cutout (right).
+    let cursorX = screenWidth - PADDING_PX - BTN_RADIUS - SafeArea.right;
+    const cursorY = PADDING_PX + BTN_RADIUS + SafeArea.top;
     // Iterate in reverse so children added in spec order (Inventory,
     // Mute, Settings) end up displayed left→right with Settings on the
     // outside edge — keeps the desktop convention.
     for (let i = this.container.children.length - 1; i >= 0; i--) {
       const child = this.container.children[i];
       if (!child) continue;
-      child.position.set(cursorX, PADDING_PX + BTN_RADIUS);
+      child.position.set(cursorX, cursorY);
       cursorX -= BTN_RADIUS * 2 + HORIZONTAL_GAP;
     }
   }

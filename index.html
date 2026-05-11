@@ -16,10 +16,24 @@
          and `/damia/` (prod GitHub Pages) — `<link>` href starting with `/`
          is NOT rewritten by Vite's base, but a relative path works in both. -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- `viewport-fit=cover` is required for `env(safe-area-inset-*)` to
+         return non-zero values on iOS (notch / Dynamic Island / home
+         indicator). Without it Safari clamps everything to 0 and our
+         touch UI sits under the notch. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="description" content="Damia — TLoD action-RPG isometric web game" />
     <title>Damia</title>
     <style>
+      /* Surface the OS safe-area insets as CSS variables so the Pixi UI
+         layer can read them via getComputedStyle. iPhone notch / Dynamic
+         Island / home indicator need this; Android phones with a gesture
+         bar too. Desktop returns 0 across the board. */
+      :root {
+        --safe-area-top: env(safe-area-inset-top, 0px);
+        --safe-area-right: env(safe-area-inset-right, 0px);
+        --safe-area-bottom: env(safe-area-inset-bottom, 0px);
+        --safe-area-left: env(safe-area-inset-left, 0px);
+      }
       html,
       body {
         margin: 0;

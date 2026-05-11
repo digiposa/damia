@@ -1,5 +1,6 @@
 import type { Application } from 'pixi.js';
 import { Container, Text } from 'pixi.js';
+import { SafeArea } from '@services/SafeArea';
 
 const MAX_LINES = 3;
 const LINE_HEIGHT = 22;
@@ -80,8 +81,8 @@ export class ActionLog {
 
   private reposition(): void {
     this.container.position.set(
-      this.app.screen.width - PADDING,
-      this.app.screen.height - PADDING - 70,
+      this.app.screen.width - PADDING - SafeArea.right,
+      this.app.screen.height - PADDING - 70 - SafeArea.bottom,
     );
   }
 }

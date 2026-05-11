@@ -1,5 +1,6 @@
 import type { Application } from 'pixi.js';
 import { Container, Graphics, Text } from 'pixi.js';
+import { SafeArea } from '@services/SafeArea';
 
 const FADE_IN_MS = 150;
 const VISIBLE_MS = 2200;
@@ -80,7 +81,7 @@ export class Toast {
 
   private repositionAll(): void {
     const cx = this.app.screen.width / 2;
-    const baseY = this.app.screen.height - 90;
+    const baseY = this.app.screen.height - 90 - SafeArea.bottom;
     const spacing = 60;
     for (let i = 0; i < this.active.length; i++) {
       const item = this.active[i];

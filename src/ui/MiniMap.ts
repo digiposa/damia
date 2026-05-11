@@ -5,6 +5,7 @@ import { TILE_HALF_H, TILE_HALF_W, gridToWorld, worldToGrid } from '@core/math/i
 import type { Components } from '@gameplay/components';
 import type { TileMapPathZone } from '@rendering/TileMap';
 import type { FogOfWar } from '@services/FogOfWar';
+import { SafeArea } from '@services/SafeArea';
 
 /** Bounding-box budget for the rendered iso diamond. Sized for portrait
  *  mobile: a 200 px diamond drowned the EXP / Zoom readouts on a 360 px
@@ -203,8 +204,12 @@ export class MiniMap {
   private reposition(): void {
     // Slide down to clear the touch menu buttons (Inventory + Settings) that
     // now sit in the top-right corner on mobile portrait. ~56 px covers the
-    // 22 px-radius buttons plus their top padding.
+    // 22 px-radius buttons plus their top padding. Add the OS safe-area
+    // insets so the diamond doesn't sit under the iPhone Dynamic Island.
     const TOP_OFFSET = 56;
-    this.container.position.set(this.app.screen.width - this.bboxW - PADDING, PADDING + TOP_OFFSET);
+    this.container.position.set(
+      this.app.screen.width - this.bboxW - PADDING - SafeArea.right,
+      PADDING + TOP_OFFSET + SafeArea.top,
+    );
   }
 }

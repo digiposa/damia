@@ -1,5 +1,6 @@
 import { Container, Graphics, Circle } from 'pixi.js';
 import type { Application, FederatedPointerEvent } from 'pixi.js';
+import { SafeArea } from '@services/SafeArea';
 
 const BASE_RADIUS_PX = 60;
 const THUMB_RADIUS_PX = 28;
@@ -173,10 +174,12 @@ export class VirtualJoystick {
 
   private reposition(): void {
     // Bottom-left corner — container origin = joystick centre, so add the
-    // base radius to clear the relevant screen edge.
+    // base radius to clear the relevant screen edge. Safe-area insets
+    // push the thumb above the iPhone home indicator + Android gesture
+    // bar (which would otherwise hijack the touch).
     this.container.position.set(
-      PADDING_LEFT_PX + BASE_RADIUS_PX,
-      this.app.screen.height - PADDING_BOTTOM_PX - BASE_RADIUS_PX,
+      PADDING_LEFT_PX + BASE_RADIUS_PX + SafeArea.left,
+      this.app.screen.height - PADDING_BOTTOM_PX - BASE_RADIUS_PX - SafeArea.bottom,
     );
   }
 }

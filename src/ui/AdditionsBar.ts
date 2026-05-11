@@ -2,6 +2,7 @@ import type { Application } from 'pixi.js';
 import { Container, Graphics } from 'pixi.js';
 import { ADDITIONS, type AdditionKind } from '@data/balance';
 import { t } from '@services/I18nService';
+import { SafeArea } from '@services/SafeArea';
 import { paintAdditionSlot, paintSlotFrame } from './slot';
 import { Tooltip } from './Tooltip';
 
@@ -132,6 +133,9 @@ export class AdditionsBar {
     const totalWidth =
       this.currentUnlocked.length * SLOT_SIZE +
       Math.max(0, this.currentUnlocked.length - 1) * SLOT_GAP;
-    this.container.position.set((this.app.screen.width - totalWidth) / 2, PADDING_TOP);
+    this.container.position.set(
+      (this.app.screen.width - totalWidth) / 2,
+      PADDING_TOP + SafeArea.top,
+    );
   }
 }

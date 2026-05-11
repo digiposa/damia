@@ -3,6 +3,7 @@ import { Container, Graphics, Rectangle, Text } from 'pixi.js';
 import { ADDITIONS, type AdditionKind } from '@data/balance';
 import { ITEMS, type ItemKind } from '@data/items';
 import { t } from '@services/I18nService';
+import { SafeArea } from '@services/SafeArea';
 import { paintAdditionSlot, paintItemSlot } from './slot';
 import { Tooltip } from './Tooltip';
 
@@ -269,7 +270,7 @@ export class Hotbar {
     const totalWidth = HOTBAR_SLOT_COUNT * SLOT_SIZE + (HOTBAR_SLOT_COUNT - 1) * SLOT_GAP;
     this.container.position.set(
       (this.app.screen.width - totalWidth) / 2,
-      this.app.screen.height - SLOT_SIZE - PADDING_BOTTOM,
+      this.app.screen.height - SLOT_SIZE - PADDING_BOTTOM - SafeArea.bottom,
     );
   }
 }

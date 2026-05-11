@@ -2,6 +2,7 @@ import type { Application } from 'pixi.js';
 import { Container, Graphics, Sprite as PixiSprite, Text } from 'pixi.js';
 import { t } from '@services/I18nService';
 import { AssetManager } from '@services/AssetManager';
+import { SafeArea } from '@services/SafeArea';
 
 const PORTRAIT_SIZE = 72;
 const BAR_WIDTH = 200;
@@ -249,8 +250,9 @@ export class Hud {
     // Top-left on mobile portrait: bottom-anchoring buried the HUD under
     // the joystick + hotbar + EXP bar. The HUD is internally laid out
     // around (0, 0) so its origin is also the top-left of the portrait
-    // frame — pin it directly to the top-left corner. Resize-resilient
-    // because the position doesn't depend on screen dimensions.
-    this.container.position.set(PADDING, PADDING);
+    // frame — pin it directly to the top-left corner. Safe-area insets
+    // push the anchor clear of the notch / Dynamic Island on iPhone and
+    // status bars / cutouts on Android.
+    this.container.position.set(PADDING + SafeArea.left, PADDING + SafeArea.top);
   }
 }

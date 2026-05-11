@@ -1,6 +1,7 @@
 import { Container, Graphics, Text } from 'pixi.js';
 import type { Application, FederatedPointerEvent } from 'pixi.js';
 import { ADDITIONS, type AdditionKind } from '@data/balance';
+import { SafeArea } from '@services/SafeArea';
 
 /** Right-edge padding (kept tight so the buttons hug the screen edge). */
 const PADDING_RIGHT_PX = 12;
@@ -218,13 +219,16 @@ export class TouchActionButtons {
   private layoutStack(): void {
     const w = this.app.screen.width;
     const h = this.app.screen.height;
-    let cursorY = h - PADDING_BOTTOM_PX;
+    // Safe-area insets lift the stack above the iPhone home indicator
+    // and shift it inward away from a landscape-orientation cutout.
+    const rightPad = PADDING_RIGHT_PX + SafeArea.right;
+    let cursorY = h - PADDING_BOTTOM_PX - SafeArea.bottom;
     for (let i = 0; i < this.buttons.length; i++) {
       const entry = this.buttons[i];
       const child = this.container.children[i];
       if (!entry || !child) continue;
       cursorY -= entry.spec.radius;
-      child.position.set(w - PADDING_RIGHT_PX - entry.spec.radius, cursorY);
+      child.position.set(w - rightPad - entry.spec.radius, cursorY);
       cursorY -= entry.spec.radius + STACK_GAP;
     }
   }

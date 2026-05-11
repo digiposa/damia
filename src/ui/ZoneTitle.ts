@@ -1,5 +1,6 @@
 import type { Application } from 'pixi.js';
 import { Container, Text } from 'pixi.js';
+import { SafeArea } from '@services/SafeArea';
 
 const FADE_IN_MS = 500;
 const HOLD_MS = 2500;
@@ -82,8 +83,10 @@ export class ZoneTitle {
   private reposition(): void {
     // Sit just below the top HUD strip (portrait + bars take ~90 px).
     // Centred horizontally so the title visually anchors the world below.
+    // Add the safe-area top inset so the title clears the iPhone Dynamic
+    // Island / status bar without overlapping.
     const cx = this.app.screen.width / 2;
-    this.container.position.set(cx, 110);
+    this.container.position.set(cx, 110 + SafeArea.top);
     this.title.position.set(0, 0);
     this.subtitle.position.set(0, 50);
   }

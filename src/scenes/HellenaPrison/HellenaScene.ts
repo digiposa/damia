@@ -471,6 +471,9 @@ export class HellenaScene implements Scene {
       gridWidth: map.size.w,
       gridHeight: map.size.h,
     });
+    this.input.setIgnorePointerCheck(
+      (pointerId) => this.virtualJoystick?.getActivePointerId() === pointerId,
+    );
 
     this.input.onClick((cmd) => {
       if (!this.world || this.playerId === null) return;

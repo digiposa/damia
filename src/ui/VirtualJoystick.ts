@@ -140,6 +140,16 @@ export class VirtualJoystick {
     return this.activePointerId !== null;
   }
 
+  /** The pointer id currently owned by the joystick, or null when
+   *  released. Lets the scene's InputController identify the lift-off
+   *  event coming from this finger and skip the world-click it would
+   *  otherwise emit (the finger naturally lands outside the joystick
+   *  hit area when the thumb was pushed to an edge, which routes the
+   *  Pixi `pointerup` to the viewport). */
+  getActivePointerId(): number | null {
+    return this.activePointerId;
+  }
+
   destroy(): void {
     this.cleanupFns.forEach((fn) => fn());
     this.cleanupFns.length = 0;

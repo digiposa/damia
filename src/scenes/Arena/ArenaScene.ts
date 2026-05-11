@@ -267,6 +267,12 @@ export class ArenaScene implements Scene {
       gridWidth: ARENA_SIZE,
       gridHeight: ARENA_SIZE,
     });
+    // Let the InputController know which pointer id the joystick
+    // currently owns so a finger lift-off outside the joystick hit
+    // area doesn't synthesise a tap-to-move click on the world.
+    this.input.setIgnorePointerCheck(
+      (pointerId) => this.virtualJoystick?.getActivePointerId() === pointerId,
+    );
 
     this.input.onClick((cmd) => {
       if (!this.world || this.playerId === null) return;

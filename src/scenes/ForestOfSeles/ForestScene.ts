@@ -521,6 +521,12 @@ export class ForestScene implements Scene {
       gridWidth: map.size.w,
       gridHeight: map.size.h,
     });
+    // Veto world-clicks coming from the joystick's pointer lift — see
+    // ArenaScene + InputController.setIgnorePointerCheck for the
+    // rationale.
+    this.input.setIgnorePointerCheck(
+      (pointerId) => this.virtualJoystick?.getActivePointerId() === pointerId,
+    );
 
     this.input.onClick((cmd) => {
       if (!this.world || this.playerId === null) return;

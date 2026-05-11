@@ -46,6 +46,11 @@ export class InputController {
    *  map edge when held against a corner, which crashed the pathfinder. */
   private readonly gridWidth: number;
   private readonly gridHeight: number;
+  /** Predicate set by the scene (defaults to "never ignore") so the
+   *  joystick can tell us "this pointer is mine, skip the world click
+   *  on its lift-off". Keeps InputController unaware of the
+   *  VirtualJoystick instance specifically. */
+  private ignorePointerCheck: (pointerId: number) => boolean = () => false;
 
   /**
    * Physical-key → hotbar slot index (0-based). We match `KeyboardEvent.code`
@@ -83,6 +88,17 @@ export class InputController {
       if (e.button === 0) button = 'left';
       else if (e.button === 2) button = 'right';
       else return;
+
+      // Skip the click when the pointer belongs to an active virtual
+      // joystick interaction. When the user pushes the joystick thumb
+      // to an edge, the lift point can land outside the joystick base's
+      // hit area — Pixi then routes the pointerup to the viewport,
+      // which would otherwise emit a tap-to-move click on whatever
+      // world tile lies under that screen position (typically south of
+      // Dart, since the joystick sits at the bottom-left of the screen).
+      // The scene tells us which pointer id owns the joystick so we
+      // can let that lift-off pass without firing a click.
+      if (this.ignorePointerCheck(e.pointerId)) return;
 
       const local = viewport.toWorld(e.global);
       const grid = worldToGrid(local.x, local.y);
@@ -143,6 +159,13 @@ export class InputController {
    * these instead of synthesising fake DOM events. The scene's listeners
    * don't know or care which input source emitted them.
    */
+  /** Wire a filter that vetoes specific pointerIds from emitting a
+   *  world click. Used by scenes to keep joystick lift-offs from
+   *  silently emitting tap-to-move commands. */
+  setIgnorePointerCheck(check: (pointerId: number) => boolean): void {
+    this.ignorePointerCheck = check;
+  }
+
   emitClick(cmd: ClickCommand): void {
     // Clamp to the playable grid before dispatching. The joystick projects
     // a target ~5 tiles ahead of the player; pushed against a map edge it

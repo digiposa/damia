@@ -2,7 +2,7 @@ import type { System, World } from '@core/ecs';
 import { worldToGrid } from '@core/math/iso';
 import type { Components } from '@gameplay/components';
 import { computeDamage } from '@data/balance';
-import { spawnFloatingText } from '@gameplay/entities/floatingText';
+import { FLOAT_DAMAGE, spawnFloatingText } from '@gameplay/entities/floatingText';
 import { playSfx } from '@services/AudioManager';
 
 const TARGET_RECHECK_MS = 100;
@@ -25,6 +25,12 @@ export class CombatSystem implements System<Components> {
       // the Addition / Spell pipelines own the attacker for their duration.
       if (world.hasComponent(id, 'Addition')) continue;
       if (world.hasComponent(id, 'Spell')) continue;
+      // Defenders are committed: no chase, no swing for the lock-in window.
+      // The scene heals + adds the Defending component; DefenseSystem owns
+      // the timer and removes it on expiry. Skipping CombatSystem entirely
+      // here is what stops Dart from creeping toward the target while
+      // defending.
+      if (world.hasComponent(id, 'Defending')) continue;
       const intent = world.getComponent(id, 'CombatIntent');
       const stats = world.getComponent(id, 'Stats');
       const pos = world.getComponent(id, 'Position');
@@ -90,7 +96,7 @@ export class CombatSystem implements System<Components> {
         x: targetPos.x,
         y: targetPos.y,
         text: String(dmg),
-        color: defending ? 0x9bb6ff : 0xff6b6b,
+        color: FLOAT_DAMAGE,
       });
 
       // Visual lunge: store unit-vector toward target so RenderSystem can

@@ -44,7 +44,7 @@ import { ADDITIONS, DEFEND, type AdditionKind, type MobKind } from '@data/balanc
 import { DART_ADDITION_UNLOCKS_BY_LEVEL, applyDartRow } from '@data/dart';
 import { ITEMS, type ItemKind } from '@data/items';
 import { SPELLS, type SpellKind } from '@data/spells';
-import { spawnFloatingText } from '@gameplay/entities/floatingText';
+import { FLOAT_HEAL, spawnFloatingText } from '@gameplay/entities/floatingText';
 import { spawnVfx } from '@gameplay/entities/vfx';
 import { AssetManager } from '@services/AssetManager';
 import { Toast } from '@ui/Toast';
@@ -530,9 +530,19 @@ export class HellenaScene implements Scene {
           totalMs: DEFEND.durationMs,
         });
         const hp = this.world.getComponent(this.playerId, 'Health');
+        const pos = this.world.getComponent(this.playerId, 'Position');
         if (hp) {
-          const heal = Math.round(hp.max * DEFEND.healFrac);
-          hp.current = Math.min(hp.max, hp.current + heal);
+          const want = Math.round(hp.max * DEFEND.healFrac);
+          const healed = Math.min(hp.max, hp.current + want) - hp.current;
+          hp.current += healed;
+          if (healed > 0 && pos) {
+            spawnFloatingText(this.world, {
+              x: pos.x,
+              y: pos.y,
+              text: `+${healed}`,
+              color: FLOAT_HEAL,
+            });
+          }
         }
       } else {
         this.world.removeComponent(this.playerId, 'Defending');
@@ -999,7 +1009,7 @@ export class HellenaScene implements Scene {
         x: pos.x,
         y: pos.y,
         text: `+${healed}`,
-        color: 0x9bff9b,
+        color: FLOAT_HEAL,
       });
       playSfx('items.pickup');
       return;

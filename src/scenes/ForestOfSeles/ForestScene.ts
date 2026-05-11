@@ -44,7 +44,7 @@ import { DART_ADDITION_UNLOCKS_BY_LEVEL, applyDartRow } from '@data/dart';
 import { xpThresholdForLevel } from '@data/progression';
 import { ITEMS, type ItemKind } from '@data/items';
 import { SPELLS, type SpellKind } from '@data/spells';
-import { spawnFloatingText } from '@gameplay/entities/floatingText';
+import { FLOAT_HEAL, spawnFloatingText } from '@gameplay/entities/floatingText';
 import { spawnVfx } from '@gameplay/entities/vfx';
 import { AssetManager } from '@services/AssetManager';
 import { Toast } from '@ui/Toast';
@@ -577,11 +577,22 @@ export class ForestScene implements Scene {
           totalMs: DEFEND.durationMs,
         });
         // Heal 10 % of max HP at the moment of the block — the reward
-        // for committing to the lock-in.
+        // for committing to the lock-in. Floats the actual amount
+        // restored so the player gets a clear cue the defend ticked.
         const hp = this.world.getComponent(this.playerId, 'Health');
+        const pos = this.world.getComponent(this.playerId, 'Position');
         if (hp) {
-          const heal = Math.round(hp.max * DEFEND.healFrac);
-          hp.current = Math.min(hp.max, hp.current + heal);
+          const want = Math.round(hp.max * DEFEND.healFrac);
+          const healed = Math.min(hp.max, hp.current + want) - hp.current;
+          hp.current += healed;
+          if (healed > 0 && pos) {
+            spawnFloatingText(this.world, {
+              x: pos.x,
+              y: pos.y,
+              text: `+${healed}`,
+              color: FLOAT_HEAL,
+            });
+          }
         }
       } else {
         this.world.removeComponent(this.playerId, 'Defending');
@@ -1078,7 +1089,7 @@ export class ForestScene implements Scene {
         x: pos.x,
         y: pos.y,
         text: `+${healed}`,
-        color: 0x9bff9b,
+        color: FLOAT_HEAL,
       });
       playSfx('items.pickup');
       return;

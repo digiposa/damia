@@ -1,7 +1,7 @@
 import type { System, World } from '@core/ecs';
 import type { Components } from '@gameplay/components';
 import { ADDITIONS, computeDamage, type AdditionKind } from '@data/balance';
-import { spawnFloatingText } from '@gameplay/entities/floatingText';
+import { FLOAT_DAMAGE, spawnFloatingText } from '@gameplay/entities/floatingText';
 import { playSfx } from '@services/AudioManager';
 
 /**
@@ -81,7 +81,7 @@ export class AdditionSystem implements System<Components> {
       x: targetPos.x,
       y: targetPos.y,
       text: String(dmg),
-      color: defending ? 0x9bb6ff : 0xffd166,
+      color: FLOAT_DAMAGE,
     });
     playSfx('combat.hit');
   }

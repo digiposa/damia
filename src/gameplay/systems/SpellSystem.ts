@@ -1,7 +1,7 @@
 import type { System, World } from '@core/ecs';
 import type { Components, Position } from '@gameplay/components';
 import { computeDamage } from '@data/balance';
-import { spawnFloatingText } from '@gameplay/entities/floatingText';
+import { FLOAT_DAMAGE, spawnFloatingText } from '@gameplay/entities/floatingText';
 import { spawnVfx } from '@gameplay/entities/vfx';
 import { playSfx } from '@services/AudioManager';
 
@@ -97,8 +97,7 @@ export class SpellSystem implements System<Components> {
       x: pos.x,
       y: pos.y,
       text: String(dmg),
-      // Orange-red so spell damage reads distinct from regular hit (red) and addition (yellow).
-      color: 0xff8a3a,
+      color: FLOAT_DAMAGE,
     });
     playSfx('combat.hit');
   }

@@ -108,6 +108,11 @@ export class ArenaScene implements Scene {
   private activeAddition: AdditionKind = 'doubleSlash';
   private joystickEmitMs = 0;
   private joystickDriven = false;
+  /** Last direction the joystick poll committed to the pathfinder. Lets us
+   *  detect "release transients" — natural finger slides as the user
+   *  lifts off, which fire a reversed direction for a frame or two
+   *  before pointerup actually fires. */
+  private lastJoystickDir: { x: number; y: number } | null = null;
   private manualCombatLockUntilMs = 0;
   /** Run timer / kills / xp / level. Ticked each frame; the upcoming
    *  HUD + level-up modal read from it. */
@@ -747,6 +752,7 @@ export class ArenaScene implements Scene {
     if (!dir) {
       if (this.joystickDriven) {
         this.joystickDriven = false;
+        this.lastJoystickDir = null;
         if (!this.world.hasComponent(this.playerId, 'CombatIntent')) {
           const pf = this.world.getComponent(this.playerId, 'Pathfinder');
           if (pf) {
@@ -758,11 +764,21 @@ export class ArenaScene implements Scene {
       }
       return;
     }
+    // Suppress release transients: when the finger naturally slides off
+    // the joystick on lift-off, it briefly reports a reversed direction
+    // with falling magnitude. Skipping the emit in that case prevents
+    // Dart from taking a step in the wrong direction in the frame
+    // before `pointerup` actually fires and the joystick releases.
+    if (this.lastJoystickDir) {
+      const dot = this.lastJoystickDir.x * dir.x + this.lastJoystickDir.y * dir.y;
+      if (dot < 0 && dir.magnitude < 0.8) return;
+    }
     const now = performance.now();
     if (now - this.joystickEmitMs < 150) return;
     if (now < this.manualCombatLockUntilMs) return;
     this.joystickEmitMs = now;
     this.joystickDriven = true;
+    this.lastJoystickDir = { x: dir.x, y: dir.y };
     const pos = this.world.getComponent(this.playerId, 'Position');
     if (!pos) return;
     const STEPS = 2;

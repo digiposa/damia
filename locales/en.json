@@ -31,7 +31,7 @@
   },
   "gameOver": {
     "title": "You died",
-    "subtitle": "Tap the screen or press R to restart",
+    "subtitle": "Restart or return to the menu",
     "restart": "Restart"
   },
   "items": {

@@ -10,7 +10,7 @@ import { Layers } from '@rendering/Layers';
 import { createCamera } from '@rendering/Camera';
 import { TileMap } from '@rendering/TileMap';
 import { AssetManager } from '@services/AssetManager';
-import { playMusic, playSfx } from '@services/AudioManager';
+import { isMuted, playMusic, playSfx, toggleMute } from '@services/AudioManager';
 import { isTouchDevice } from '@services/Device';
 import { t } from '@services/I18nService';
 
@@ -251,6 +251,8 @@ export class ArenaScene implements Scene {
           else this.openInventoryPanel();
         },
         onSettings: () => this.settings?.toggle(),
+        onMute: () => toggleMute(),
+        isMuted: () => isMuted(),
       });
       this.layers.ui.addChild(this.touchMenuButtons.container);
       this.additionsPicker = new AdditionsPicker(ctx.app);
@@ -391,7 +393,7 @@ export class ArenaScene implements Scene {
     death.onPlayerDeath(() => {
       this.playerDied = true;
       queueMicrotask(() => {
-        void ctx.scenes.switchTo(new GameOverScene(), ctx);
+        void ctx.scenes.switchTo(new GameOverScene('survival'), ctx);
       });
     });
 

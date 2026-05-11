@@ -66,7 +66,7 @@ import { FogOfWar } from '@services/FogOfWar';
 import { FogOfWarOverlay } from '@rendering/FogOfWarOverlay';
 import { isTouchDevice } from '@services/Device';
 import { t } from '@services/I18nService';
-import { playMusic, playSfx, stopMusic } from '@services/AudioManager';
+import { isMuted, playMusic, playSfx, stopMusic, toggleMute } from '@services/AudioManager';
 import { SaveManager, type SaveDataV5 } from '@services/SaveManager';
 import { WorldMapScene } from '@scenes/WorldMapScene';
 import { GameOverScene } from '@scenes/GameOverScene';
@@ -403,6 +403,8 @@ export class HellenaScene implements Scene {
           else this.openInventoryPanel();
         },
         onSettings: () => this.settings?.toggle(),
+        onMute: () => toggleMute(),
+        isMuted: () => isMuted(),
       });
       this.layers.ui.addChild(this.touchMenuButtons.container);
     }

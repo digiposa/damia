@@ -2,36 +2,49 @@ import { Container, Graphics, Text } from 'pixi.js';
 import type { GameContext } from '@/Game';
 import type { Scene } from './Scene';
 import { t } from '@services/I18nService';
+import type { GameMode } from '@data/mode';
 import { ForestScene } from './ForestOfSeles/ForestScene';
+import { ArenaScene } from './Arena/ArenaScene';
+import { TitleScene } from './TitleScene';
 
-const BTN_WIDTH = 220;
-const BTN_HEIGHT = 60;
+const BTN_WIDTH = 240;
+const BTN_HEIGHT = 56;
+const BTN_GAP = 14;
 
+/**
+ * Death overlay. Knows which mode the player died in so the "Restart"
+ * button starts a fresh run of THAT mode instead of always dropping the
+ * player into Story. A second button takes them back to the title.
+ *
+ * Backwards-compat default is `mode: 'story'` — old call sites that
+ * `new GameOverScene()` still route through Forest.
+ */
 export class GameOverScene implements Scene {
   readonly name = 'game-over';
   private container: Container | null = null;
   private cleanupKey: (() => void) | null = null;
 
+  constructor(private readonly mode: GameMode = 'story') {}
+
   enter(ctx: GameContext): void {
     const { width, height } = ctx.app.screen;
     this.container = new Container({ label: 'game-over-scene' });
 
-    // Make the whole backdrop a tap target so a careless poke anywhere on
-    // the screen also restarts — convenient on mobile when you don't want
-    // to aim for the small button.
     const bg = new Graphics().rect(0, 0, width, height).fill(0x1a0606);
-    bg.eventMode = 'static';
-    bg.cursor = 'pointer';
     this.container.addChild(bg);
 
     const restart = (): void => {
-      // Defer the scene swap to avoid tearing down listeners while one of
-      // them is still firing.
+      // Defer scene swap to avoid tearing down listeners mid-event.
       queueMicrotask(() => {
-        void ctx.scenes.switchTo(new ForestScene(), ctx);
+        const next: Scene = this.mode === 'survival' ? new ArenaScene() : new ForestScene();
+        void ctx.scenes.switchTo(next, ctx);
       });
     };
-    bg.on('pointertap', restart);
+    const backToTitle = (): void => {
+      queueMicrotask(() => {
+        void ctx.scenes.switchTo(new TitleScene(), ctx);
+      });
+    };
 
     const title = new Text({
       text: t('gameOver.title'),
@@ -43,7 +56,7 @@ export class GameOverScene implements Scene {
       },
     });
     title.anchor.set(0.5);
-    title.position.set(width / 2, height / 2 - 60);
+    title.position.set(width / 2, height / 2 - 90);
 
     const subtitle = new Text({
       text: t('gameOver.subtitle'),
@@ -57,37 +70,24 @@ export class GameOverScene implements Scene {
       },
     });
     subtitle.anchor.set(0.5);
-    subtitle.position.set(width / 2, height / 2 + 10);
+    subtitle.position.set(width / 2, height / 2 - 24);
 
-    // Big restart button — primary tap target. Sits below the subtitle so
-    // mobile thumbs land on it naturally without scrolling the eye.
-    const btnContainer = new Container({ label: 'gameover-restart-btn' });
-    const btnBg = new Graphics()
-      .roundRect(-BTN_WIDTH / 2, -BTN_HEIGHT / 2, BTN_WIDTH, BTN_HEIGHT, 8)
-      .fill({ color: 0x882222, alpha: 0.95 })
-      .stroke({ width: 3, color: 0xff7070, alpha: 0.9 });
-    const btnLabel = new Text({
-      text: t('gameOver.restart'),
-      style: {
-        fontFamily: 'system-ui, sans-serif',
-        fontSize: 26,
-        fill: 0xfaf6e8,
-        fontWeight: 'bold',
-      },
-    });
-    btnLabel.anchor.set(0.5);
-    btnContainer.addChild(btnBg, btnLabel);
-    btnContainer.position.set(width / 2, height / 2 + 90);
-    btnContainer.eventMode = 'static';
-    btnContainer.cursor = 'pointer';
-    btnContainer.on('pointertap', (e) => {
-      // Stop the bubble so the backdrop doesn't double-fire restart() and
-      // queue two scene swaps for the same tap.
-      e.stopPropagation();
-      restart();
-    });
+    const restartBtn = this.makeButton(
+      t('gameOver.restart'),
+      width / 2,
+      height / 2 + 40,
+      { fill: 0x882222, stroke: 0xff7070 },
+      restart,
+    );
+    const titleBtn = this.makeButton(
+      t('survival.backToTitle'),
+      width / 2,
+      height / 2 + 40 + BTN_HEIGHT + BTN_GAP,
+      { fill: 0x2a2a36, stroke: 0xa08050 },
+      backToTitle,
+    );
 
-    this.container.addChild(title, subtitle, btnContainer);
+    this.container.addChild(title, subtitle, restartBtn, titleBtn);
     ctx.app.stage.addChild(this.container);
 
     const onKey = (e: KeyboardEvent): void => {
@@ -108,4 +108,37 @@ export class GameOverScene implements Scene {
   }
 
   update(): void {}
+
+  private makeButton(
+    label: string,
+    x: number,
+    y: number,
+    colours: { fill: number; stroke: number },
+    onTap: () => void,
+  ): Container {
+    const container = new Container({ label: `gameover-btn-${label}` });
+    const bg = new Graphics()
+      .roundRect(-BTN_WIDTH / 2, -BTN_HEIGHT / 2, BTN_WIDTH, BTN_HEIGHT, 8)
+      .fill({ color: colours.fill, alpha: 0.95 })
+      .stroke({ width: 3, color: colours.stroke, alpha: 0.9 });
+    const text = new Text({
+      text: label,
+      style: {
+        fontFamily: 'system-ui, sans-serif',
+        fontSize: 22,
+        fill: 0xfaf6e8,
+        fontWeight: 'bold',
+      },
+    });
+    text.anchor.set(0.5);
+    container.addChild(bg, text);
+    container.position.set(x, y);
+    container.eventMode = 'static';
+    container.cursor = 'pointer';
+    container.on('pointertap', (e) => {
+      e.stopPropagation();
+      onTap();
+    });
+    return container;
+  }
 }

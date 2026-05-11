@@ -33,37 +33,49 @@ interface VolumeState {
   sfx: number;
 }
 
+interface PersistedAudioState extends VolumeState {
+  muted: boolean;
+}
+
 const DEFAULT_VOLUMES: VolumeState = { master: 0.7, music: 0.5, sfx: 0.6 };
+/** Start muted on first load — current focus is testing and the
+ *  background music interferes. Users can unmute via the in-game
+ *  button; the choice is then persisted. */
+const DEFAULT_MUTED = true;
 
 let ctx: AudioContext | null = null;
 let masterGain: GainNode | null = null;
 let sfxGain: GainNode | null = null;
 let musicGain: GainNode | null = null;
 let volumes: VolumeState = { ...DEFAULT_VOLUMES };
+let muted: boolean = DEFAULT_MUTED;
+const mutedListeners = new Set<(muted: boolean) => void>();
 let initialized = false;
 let pendingResume = false;
 /** Cached Howl instances per alias so re-entering the same scene reuses the loaded buffer. */
 const musicHowls = new Map<MusicAlias, Howl>();
 let currentMusic: { alias: MusicAlias; howl: Howl } | null = null;
 
-function readVolumes(): VolumeState {
+function readPersisted(): PersistedAudioState {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
-    if (!raw) return { ...DEFAULT_VOLUMES };
-    const parsed = JSON.parse(raw) as Partial<VolumeState>;
+    if (!raw) return { ...DEFAULT_VOLUMES, muted: DEFAULT_MUTED };
+    const parsed = JSON.parse(raw) as Partial<PersistedAudioState>;
     return {
       master: clamp(parsed.master ?? DEFAULT_VOLUMES.master),
       music: clamp(parsed.music ?? DEFAULT_VOLUMES.music),
       sfx: clamp(parsed.sfx ?? DEFAULT_VOLUMES.sfx),
+      muted: parsed.muted ?? DEFAULT_MUTED,
     };
   } catch {
-    return { ...DEFAULT_VOLUMES };
+    return { ...DEFAULT_VOLUMES, muted: DEFAULT_MUTED };
   }
 }
 
-function writeVolumes(): void {
+function writePersisted(): void {
   try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(volumes));
+    const state: PersistedAudioState = { ...volumes, muted };
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
   } catch {
     // ignore storage errors (private mode etc.)
   }
@@ -76,7 +88,9 @@ function clamp(v: number): number {
 function ensureCtx(): void {
   if (initialized) return;
   initialized = true;
-  volumes = readVolumes();
+  const persisted = readPersisted();
+  volumes = { master: persisted.master, music: persisted.music, sfx: persisted.sfx };
+  muted = persisted.muted;
   try {
     ctx = new AudioContext();
     masterGain = ctx.createGain();
@@ -92,8 +106,9 @@ function ensureCtx(): void {
 }
 
 function applyGains(): void {
+  const masterEffective = muted ? 0 : volumes.master;
   if (masterGain && sfxGain && musicGain) {
-    masterGain.gain.value = volumes.master;
+    masterGain.gain.value = masterEffective;
     sfxGain.gain.value = volumes.sfx;
     musicGain.gain.value = volumes.music;
   }
@@ -107,7 +122,8 @@ function syncMusicHowlVolume(): void {
   if (!currentMusic) return;
   const entry = MUSIC_MANIFEST[currentMusic.alias];
   const trackVol = entry.trackVolume ?? 1;
-  currentMusic.howl.volume(volumes.master * volumes.music * trackVol);
+  const masterEffective = muted ? 0 : volumes.master;
+  currentMusic.howl.volume(masterEffective * volumes.music * trackVol);
 }
 
 /**
@@ -139,17 +155,39 @@ export function getVolumes(): VolumeState {
 export function setMasterVolume(v: number): void {
   volumes.master = clamp(v);
   applyGains();
-  writeVolumes();
+  writePersisted();
 }
 export function setMusicVolume(v: number): void {
   volumes.music = clamp(v);
   applyGains();
-  writeVolumes();
+  writePersisted();
 }
 export function setSfxVolume(v: number): void {
   volumes.sfx = clamp(v);
   applyGains();
-  writeVolumes();
+  writePersisted();
+}
+
+export function isMuted(): boolean {
+  return muted;
+}
+
+export function setMuted(value: boolean): void {
+  if (muted === value) return;
+  muted = value;
+  applyGains();
+  writePersisted();
+  for (const l of mutedListeners) l(muted);
+}
+
+export function toggleMute(): void {
+  setMuted(!muted);
+}
+
+/** Subscribe to mute-state changes. Returns the unsubscribe fn. */
+export function onMuteChange(listener: (muted: boolean) => void): () => void {
+  mutedListeners.add(listener);
+  return () => mutedListeners.delete(listener);
 }
 
 export function playSfx(alias: SfxAlias): void {

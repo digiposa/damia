@@ -31,7 +31,7 @@
   },
   "gameOver": {
     "title": "Vous êtes mort",
-    "subtitle": "Touchez l'écran ou appuyez sur R pour recommencer",
+    "subtitle": "Recommencer ou retour au menu",
     "restart": "Recommencer"
   },
   "items": {

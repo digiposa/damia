@@ -12,7 +12,8 @@
  * Public API kept tight: scenes interact through hooks and the
  * read-only handles surfaced on the controller (world, ui, viewport).
  */
-import type { Graphics } from 'pixi.js';
+import type { FederatedPointerEvent } from 'pixi.js';
+import { Graphics } from 'pixi.js';
 import type { Viewport } from 'pixi-viewport';
 
 import type { Entity, System } from '@core/ecs';
@@ -70,7 +71,7 @@ import {
 
 import { AssetManager } from '@services/AssetManager';
 import { FogOfWar } from '@services/FogOfWar';
-import { playMusic, playSfx, type MusicAlias } from '@services/AudioManager';
+import { playMusic, playSfx, stopMusic, type MusicAlias } from '@services/AudioManager';
 import { t } from '@services/I18nService';
 
 import { VisionHalo } from '@ui/VisionHalo';
@@ -117,14 +118,18 @@ export class GameplayController {
   private joystickDriven = false;
   private manualCombatLockUntilMs = 0;
   // --- Fog (story only) ----------------------------------------------
-  private readonly fog: FogOfWar | null;
-  private readonly fogOverlay: FogOfWarOverlay | null;
-  private readonly visionHalo: VisionHalo | null;
+  readonly fog: FogOfWar | null;
+  readonly fogOverlay: FogOfWarOverlay | null;
+  readonly visionHalo: VisionHalo | null;
   // --- Misc ----------------------------------------------------------
   private readonly ctx: GameContext;
   private readonly config: SceneConfig;
-  private readonly encounterSystem: EncounterSystem | null;
+  readonly encounterSystem: EncounterSystem | null;
   private readonly cleanups: Array<() => void> = [];
+  /** Latest pointer position in world coords — set by pointermove on the
+   *  viewport, read each frame by the cursor-overlay update to decide
+   *  default vs. attack mode. Null until the first pointermove. */
+  private lastMouseWorld: { x: number; y: number } | null = null;
   /** Active ground-targeting state for groundAoE spells. */
   private groundTargeting: {
     spell: SpellKind;
@@ -213,6 +218,33 @@ export class GameplayController {
           ]
         : [null, null, null, null, null, null, null, null];
 
+    // Save restoration. Inventory + hotbar + progression + activeAddition
+    // transfer across zones (the player is the same character regardless of
+    // where they entered from). HP and grid position only transfer when the
+    // save was recorded IN this zone — cross-zone arrivals top up to max via
+    // the scene's character-row apply pass.
+    const save = config.saveData ?? null;
+    if (save) {
+      const inv = this.world.getComponent(this.playerId, 'Inventory');
+      if (inv) {
+        inv.items = { ...save.inventory.items };
+        inv.gold = save.inventory.gold;
+      }
+      const prog = this.world.getComponent(this.playerId, 'Progression');
+      if (prog) {
+        prog.level = save.progression.level;
+        prog.xp = save.progression.xp;
+        prog.xpToNext = save.progression.xpToNext;
+      }
+      this.hotbarSlots = [...save.hotbar];
+      this.activeAddition = save.activeAddition;
+      const fromThisZone = o.fogSaveZoneId !== undefined && save.currentZoneId === o.fogSaveZoneId;
+      if (fromThisZone) {
+        const hp = this.world.getComponent(this.playerId, 'Health');
+        if (hp) hp.current = save.player.hp;
+      }
+    }
+
     for (const prop of map.props) spawnProp(this.world, prop);
     for (const exit of map.exits) spawnExit(this.world, exit);
     for (const mob of map.mobs) {
@@ -299,7 +331,7 @@ export class GameplayController {
       inventoryCallbacks: {
         onBind: (kind, slotIdx) => this.bindItemToHotbar(kind, slotIdx),
         onUse: (kind) => this.tryConsumeItem(kind),
-        onDrop: (kind) => this.dropItemToWorld(kind),
+        onDrop: (kind) => this.config.hooks?.onDropItem?.(kind),
       },
       onInventoryToggle: () => {
         if (this.ui.inventoryPanel.isOpen) this.ui.inventoryPanel.close();
@@ -321,7 +353,49 @@ export class GameplayController {
     this.ui = new GameplayUI(ctx.app, this.layers, config, uiHandlers, {
       fog: this.fog,
       pathZones: map.pathZones,
+      viewport: this.viewport,
     });
+
+    // Cursor overlay needs per-frame world-space pointer coords to decide
+    // between default and attack mode. Tracking lives on the controller so
+    // findEnemyAtWorld can be used directly.
+    if (this.ui.cursorOverlay) {
+      const onPointerMove = (e: FederatedPointerEvent): void => {
+        const local = this.viewport.toWorld(e.global);
+        this.lastMouseWorld = { x: local.x, y: local.y };
+      };
+      this.viewport.on('pointermove', onPointerMove);
+      this.cleanups.push(() => this.viewport.off('pointermove', onPointerMove));
+    }
+
+    // Auto-persist when the user leaves the tab. Scenes with no save (e.g.
+    // Survival) ignore the hook so this is a no-op there.
+    const onVisibility = (): void => {
+      if (document.hidden) this.persist();
+    };
+    document.addEventListener('visibilitychange', onVisibility);
+    this.cleanups.push(() => document.removeEventListener('visibilitychange', onVisibility));
+
+    // Inventory panel keyboard shortcuts. `I` toggles the panel, `Esc`
+    // closes it, `D` drops the currently-selected item via the scene's
+    // onDropItem hook. Number keys 1..8 are handled by InputController
+    // and resolved in activateHotbarSlot (re-bind when the panel is open).
+    const onInventoryKey = (e: KeyboardEvent): void => {
+      if (e.key === 'i' || e.key === 'I') {
+        if (this.ui.inventoryPanel.isOpen) this.ui.inventoryPanel.close();
+        else this.openInventoryPanel();
+        return;
+      }
+      if (this.ui.inventoryPanel.isOpen) {
+        if (e.key === 'Escape') this.ui.inventoryPanel.close();
+        else if (e.key === 'd' || e.key === 'D') {
+          const sel = this.ui.inventoryPanel.getSelectedKind();
+          if (sel) this.config.hooks?.onDropItem?.(sel);
+        }
+      }
+    };
+    window.addEventListener('keydown', onInventoryKey);
+    this.cleanups.push(() => window.removeEventListener('keydown', onInventoryKey));
 
     // --- Camera initial centre + zoom ------------------------------
     const playerWorld = gridToWorld(spawn.gx, spawn.gy);
@@ -463,10 +537,34 @@ export class GameplayController {
       if (this.ui.minimap) this.ui.minimap.update(this.world);
       if (this.ui.additionsBar) {
         this.ui.additionsBar.setState({
-          unlocked: [this.activeAddition], // controller defers to scene hook for full pool
+          unlocked: this.computeUnlockedAdditions(),
           active: this.activeAddition,
           cooldowns: additionCooldowns,
         });
+      }
+
+      // Encounter meter indicator — pinned above the player. Fraction
+      // comes from the EncounterSystem's accumulator so the pill fills
+      // as the player walks.
+      if (this.ui.encounterIndicator && this.encounterSystem && pos) {
+        this.ui.encounterIndicator.setFill(this.encounterSystem.fraction(), dt);
+        this.ui.encounterIndicator.setPosition(pos.x, pos.y - 96);
+      }
+
+      // Cursor overlay (desktop story) — swap to the attack sprite when
+      // hovering an enemy in click-pick range. Ground-target mode owns
+      // the cursor visual (the aoe reticle), so the sword stays default.
+      if (this.ui.cursorOverlay) {
+        let mode: 'default' | 'attack' = 'default';
+        if (
+          this.lastMouseWorld &&
+          !this.groundTargeting &&
+          this.findEnemyAtWorld(this.lastMouseWorld.x, this.lastMouseWorld.y) !== null
+        ) {
+          mode = 'attack';
+        }
+        this.ui.cursorOverlay.setMode(mode);
+        this.ui.cursorOverlay.update(dt);
       }
 
       // Inventory panel refresh while open (mirrors live state).
@@ -486,9 +584,21 @@ export class GameplayController {
     }
   }
 
-  destroy(): void {
+  /** Push the live state to the scene's `onPersist` hook (typically a
+   *  SaveManager.save). Safe to call repeatedly; no-op when the player
+   *  has died (the save was just cleared and we don't want to revive a
+   *  doomed state). */
+  persist(): void {
+    if (this.playerDied) return;
     this.config.hooks?.onPersist?.(this.snapshot());
+  }
+
+  destroy(): void {
+    this.persist();
     if (this.groundTargeting) this.exitGroundTargeting(false);
+    // Halt music so the next scene starts clean. The next scene's
+    // playMusic in its enter() handles restart with its own track.
+    if (this.config.overrides?.musicAlias) stopMusic();
     this.input.destroy();
     this.ui.destroy();
     this.visionHalo?.destroy();
@@ -937,9 +1047,10 @@ export class GameplayController {
         return;
       }
     }
-    // No target available — fall back to manual ground-targeting (story
-    // path); survival no-ops since the toast already covers the user.
-    this.ui.toast.show(t('inventory.noTarget'));
+    // No target available — fall back to manual ground-targeting. The
+    // player clicks anywhere within castRangePx to commit; right-click
+    // or Esc cancels without consuming the item.
+    this.enterGroundTargeting(itemKind, spellKind);
   }
 
   private decrementItem(inv: { items: Partial<Record<ItemKind, number>> }, kind: ItemKind): void {
@@ -947,20 +1058,107 @@ export class GameplayController {
     if (c > 0) inv.items[kind] = c - 1;
   }
 
-  private dropItemToWorld(_kind: ItemKind): void {
-    // Story-only behaviour. The scene wires its own override via the
-    // inventory callbacks; default is no-op so survival doesn't waste
-    // items by accident.
+  /**
+   * Enter ground-targeting mode for an AoE spell. Spawns a translucent
+   * preview circle on the fx layer, attaches pointermove/Esc listeners.
+   * The click handler in the main input route picks up commit/cancel via
+   * the `groundTargeting` state.
+   */
+  private enterGroundTargeting(itemKind: ItemKind, spellKind: SpellKind): void {
+    if (this.playerId === null) return;
+    if (this.groundTargeting) this.exitGroundTargeting(false);
+    const spellDef = SPELLS[spellKind];
+    if (spellDef.target !== 'groundAoE') return;
+    const playerPos = this.world.getComponent(this.playerId, 'Position');
+    if (!playerPos) return;
+
+    const cursor = new Graphics()
+      .circle(0, 0, spellDef.aoeRadiusPx)
+      .fill({ color: 0xff4040, alpha: 0.18 })
+      .stroke({ color: 0xff6060, width: 2, alpha: 0.85 });
+    cursor.position.set(playerPos.x, playerPos.y);
+    this.layers.fx.addChild(cursor);
+
+    const viewport = this.viewport;
+    const onMove = (e: FederatedPointerEvent): void => {
+      if (!this.groundTargeting || this.playerId === null) return;
+      const playerNow = this.world.getComponent(this.playerId, 'Position');
+      if (!playerNow) return;
+      const local = viewport.toWorld(e.global);
+      const dx = local.x - playerNow.x;
+      const dy = local.y - playerNow.y;
+      const dist = Math.hypot(dx, dy);
+      const range = this.groundTargeting.castRangePx;
+      if (dist > range) {
+        const k = range / dist;
+        cursor.position.set(playerNow.x + dx * k, playerNow.y + dy * k);
+      } else {
+        cursor.position.set(local.x, local.y);
+      }
+    };
+    viewport.on('pointermove', onMove);
+
+    const onKey = (e: KeyboardEvent): void => {
+      if (e.key === 'Escape' && this.groundTargeting) this.exitGroundTargeting(false);
+    };
+    window.addEventListener('keydown', onKey);
+
+    this.groundTargeting = {
+      spell: spellKind,
+      itemKind,
+      aoeRadiusPx: spellDef.aoeRadiusPx,
+      castRangePx: spellDef.castRangePx,
+      cursor,
+      cleanups: [
+        () => viewport.off('pointermove', onMove),
+        () => window.removeEventListener('keydown', onKey),
+      ],
+    };
   }
 
-  private exitGroundTargeting(_commit: boolean): void {
-    if (!this.groundTargeting) return;
+  private exitGroundTargeting(commit: boolean): void {
     const gt = this.groundTargeting;
+    if (!gt) return;
     this.groundTargeting = null;
     gt.cleanups.forEach((fn) => fn());
+    const cursorX = gt.cursor.x;
+    const cursorY = gt.cursor.y;
     gt.cursor.destroy();
-    // groundTargeting commit path is story-only — surfacing it via a
-    // hook is a follow-up. v1 controller never enters this branch.
+
+    if (!commit || this.playerId === null) return;
+    const playerPos = this.world.getComponent(this.playerId, 'Position');
+    const inv = this.world.getComponent(this.playerId, 'Inventory');
+    if (!playerPos || !inv) return;
+    if ((inv.items[gt.itemKind] ?? 0) <= 0) return;
+    const spellDef = SPELLS[gt.spell];
+    if (spellDef.target !== 'groundAoE') return;
+
+    const dx = cursorX - playerPos.x;
+    const dy = cursorY - playerPos.y;
+    const len = Math.hypot(dx, dy) || 1;
+    this.world.addComponent(this.playerId, 'Spell', {
+      kind: gt.spell,
+      elapsedMs: 0,
+      totalMs: spellDef.totalMs,
+      hitTimingMs: spellDef.hitTimingMs,
+      hitApplied: false,
+      magicAtkMul: spellDef.magicAtkMul,
+      target: 'groundAoE',
+      targetX: cursorX,
+      targetY: cursorY,
+      aoeRadiusPx: gt.aoeRadiusPx,
+      dirX: dx / len,
+      dirY: dy / len,
+      vfxKind: spellDef.vfx,
+      vfxRadiusPx: spellDef.vfxRadiusPx ?? gt.aoeRadiusPx,
+    });
+    this.decrementItem(inv, gt.itemKind);
+    const pf = this.world.getComponent(this.playerId, 'Pathfinder');
+    if (pf) {
+      pf.waypoints = null;
+      pf.targetGrid = null;
+    }
+    playSfx('combat.swing');
   }
 
   private autoBindItemToHotbar(kind: ItemKind): void {
@@ -1002,12 +1200,18 @@ export class GameplayController {
   private openAdditionsPicker(): void {
     if (!this.ui.additionsPicker) return;
     if (this.groundTargeting) this.exitGroundTargeting(false);
-    // v1: just the active addition. Story scenes can override via a
-    // future "unlockedAdditions" hook on SceneConfig once Dart's
-    // progression is fully wired through the controller.
-    this.ui.additionsPicker.open([this.activeAddition], this.activeAddition, (kind) => {
+    this.ui.additionsPicker.open(this.computeUnlockedAdditions(), this.activeAddition, (kind) => {
       this.activeAddition = kind;
     });
+  }
+
+  /** Resolve the addition unlock pool via the scene hook, falling back to
+   *  `[active]` so the picker is never empty. */
+  private computeUnlockedAdditions(): ReadonlyArray<AdditionKind> {
+    const hook = this.config.hooks?.unlockedAdditions;
+    if (!hook || this.playerId === null) return [this.activeAddition];
+    const prog = this.world.getComponent(this.playerId, 'Progression');
+    return hook(prog?.level ?? 1);
   }
 
   // ====================================================================

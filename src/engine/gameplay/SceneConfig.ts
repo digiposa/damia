@@ -14,6 +14,7 @@ import type { GameMode } from '@data/mode';
 import type { MapData } from '@scenes/ForestOfSeles/MapLoader';
 import type { MusicAlias } from '@services/AudioManager';
 import type { ItemKind } from '@data/items';
+import type { AdditionKind } from '@data/balance';
 import type { Components, Exit, Interactable } from '@gameplay/components';
 import type { Entity, World } from '@core/ecs';
 import type { GameContext } from '@/Game';
@@ -53,6 +54,9 @@ export interface SceneOverrides {
   showAdditionsBar?: boolean;
   /** Encounter meter indicator pill in the FX layer. */
   showEncounterIndicator?: boolean;
+  /** Animated sword cursor follower at app-stage level. Skipped on touch
+   *  (no mouse). Story-only knob — Survival keeps the native cursor. */
+  showCursorOverlay?: boolean;
   /** Music to start on enter. */
   musicAlias?: MusicAlias;
   /** Override the player spawn (defaults to `map.spawn`). */
@@ -84,6 +88,14 @@ export interface SceneHooks {
   onTickHotbar?: (hotbar: Hotbar, world: World<Components>, playerId: Entity) => void;
   /** Mob pickup landed in the player inventory. */
   onPickup?: (kind: ItemKind, result: 'ok' | 'full' | 'gold', gold?: number) => void;
+  /** Player chose "Drop" in the inventory panel. Story scenes spawn a
+   *  pickable Item entity on the ground; Survival no-ops so the test
+   *  loadout can't be wasted. */
+  onDropItem?: (kind: ItemKind) => void;
+  /** Returns the additions the player has unlocked at the given character
+   *  level. Drives the AdditionsBar repaint and the touch picker. Defaults
+   *  to `[active]` when omitted. */
+  unlockedAdditions?: (level: number) => ReadonlyArray<AdditionKind>;
 }
 
 /** Snapshot of the live gameplay state. Passed to `onPersist` so the
@@ -100,7 +112,7 @@ export interface GameplaySnapshot {
   readonly progressionLevel: number;
   readonly progressionXp: number;
   readonly progressionXpToNext: number;
-  readonly activeAddition: string;
+  readonly activeAddition: AdditionKind;
 }
 
 /** Top-level config the scene hands to `new GameplayController(ctx, config)`. */

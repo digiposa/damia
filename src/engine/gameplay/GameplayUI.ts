@@ -29,6 +29,8 @@ import { VirtualJoystick } from '@ui/VirtualJoystick';
 import { TouchActionButtons } from '@ui/TouchActionButtons';
 import { TouchMenuButtons } from '@ui/TouchMenuButtons';
 import { EncounterIndicator } from '@ui/EncounterIndicator';
+import { CursorOverlay } from '@ui/CursorOverlay';
+import type { Viewport } from 'pixi-viewport';
 
 import type { SceneConfig } from './SceneConfig';
 import type { AdditionKind } from '@data/balance';
@@ -64,6 +66,10 @@ export interface GameplayUIMounts {
   fog?: FogOfWar | null;
   /** Path zones drawn on the minimap. */
   pathZones?: readonly TileMapPathZone[];
+  /** Required when `overrides.showCursorOverlay` is true — the cursor
+   *  overlay reads viewport scale to keep its sprite at constant px size
+   *  regardless of camera zoom. */
+  viewport?: Viewport;
 }
 
 export class GameplayUI {
@@ -78,6 +84,7 @@ export class GameplayUI {
   readonly zoneTitle: ZoneTitle | null;
   readonly actionLog: ActionLog | null;
   readonly encounterIndicator: EncounterIndicator | null;
+  readonly cursorOverlay: CursorOverlay | null;
   readonly virtualJoystick: VirtualJoystick | null;
   readonly touchActionButtons: TouchActionButtons | null;
   readonly touchMenuButtons: TouchMenuButtons | null;
@@ -114,6 +121,16 @@ export class GameplayUI {
     this.actionLog = o.showActionLog ? new ActionLog(app) : null;
     this.encounterIndicator = o.showEncounterIndicator ? new EncounterIndicator() : null;
     if (this.encounterIndicator) layers.fx.addChild(this.encounterIndicator.node);
+
+    // Custom sword cursor — desktop-only follower above every layer. The
+    // controller updates `setMode` per frame to swap to the attack sprite
+    // when hovering an enemy. Touch devices have no mouse cursor, so we
+    // skip the mount entirely.
+    this.cursorOverlay =
+      o.showCursorOverlay && !this.touch && mounts.viewport
+        ? new CursorOverlay(app, mounts.viewport)
+        : null;
+    if (this.cursorOverlay) app.stage.addChild(this.cursorOverlay.node);
 
     // Additions bar — desktop-only display. On touch we hide it but
     // keep the instance so the controller can still push setState; the
@@ -181,6 +198,8 @@ export class GameplayUI {
     this.minimap?.destroy();
     this.zoneTitle?.destroy();
     this.actionLog?.destroy();
+    this.cursorOverlay?.destroy();
+    this.encounterIndicator?.destroy();
     this.toast.destroy();
     this.hotbar.destroy();
     this.hud.destroy();

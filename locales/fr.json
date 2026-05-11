@@ -4,7 +4,16 @@
     "subtitle": "Projet secret TLoD",
     "newGame": "Nouvelle partie",
     "continue": "Continuer",
-    "settings": "Options"
+    "settings": "Options",
+    "modeStory": "Mode Histoire",
+    "modeSurvival": "Mode Survival",
+    "back": "Retour"
+  },
+  "survival": {
+    "title": "Mode Survival",
+    "comingSoon": "Bientôt disponible",
+    "subtitle": "Vague après vague, jusqu'à la fin",
+    "backToTitle": "Retour au menu"
   },
   "settings": {
     "title": "Options",

@@ -4,7 +4,16 @@
     "subtitle": "TLoD secret project",
     "newGame": "New Game",
     "continue": "Continue",
-    "settings": "Settings"
+    "settings": "Settings",
+    "modeStory": "Story Mode",
+    "modeSurvival": "Survival Mode",
+    "back": "Back"
+  },
+  "survival": {
+    "title": "Survival Mode",
+    "comingSoon": "Coming soon",
+    "subtitle": "Wave after wave, until the end",
+    "backToTitle": "Back to title"
   },
   "settings": {
     "title": "Settings",

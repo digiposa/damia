@@ -7,12 +7,31 @@ import { AssetManager } from '@services/AssetManager';
 import { playMusic, playSfx, unlockAudio } from '@services/AudioManager';
 import { ForestScene } from '@scenes/ForestOfSeles/ForestScene';
 import { HellenaScene } from '@scenes/HellenaPrison/HellenaScene';
+import { SurvivalScene } from '@scenes/SurvivalScene';
 
 interface ButtonHandle {
   container: Container;
   setEnabled: (enabled: boolean) => void;
 }
 
+/** Sizing knobs for the bottom action stack. Tuned for thumb taps on
+ *  portrait mobile while still looking right on desktop. */
+const BTN_WIDTH = 280;
+const BTN_HEIGHT = 48;
+const BTN_GAP = 14;
+/** Distance from the screen bottom edge to the first (lowest) button. */
+const STACK_BOTTOM_PADDING = 28;
+
+/**
+ * Title screen. Acts as the routing junction for the two game modes:
+ *  - Story (Forest / Hellena chain, with save/load via SaveManager).
+ *  - Survival (placeholder until the wave-spawner mode lands; the entry
+ *    button is wired so we keep the menu shape stable).
+ *
+ * Buttons stack vertically at the bottom-centre so a single tap finger
+ * reaches anything without scrolling and the bg artwork stays visible
+ * up top. Continue is greyed out when there's no save.
+ */
 export class TitleScene implements Scene {
   readonly name = 'title';
   private container: Container | null = null;
@@ -22,9 +41,8 @@ export class TitleScene implements Scene {
     const { width, height } = ctx.app.screen;
     this.container = new Container({ label: 'title-scene' });
 
-    // Background — TLoD mainscreen image, cover-scaled (max ratio fills screen
-    // without leaving gaps; some content may be cropped on extreme aspects).
-    // Falls back to a flat dark fill if the texture didn't load.
+    // Background — TLoD mainscreen image, cover-scaled. Falls back to a
+    // flat dark fill if the texture didn't load.
     const bgTex = AssetManager.getTexture('ui.mainscreen');
     if (bgTex) {
       const bg = new PixiSprite(bgTex);
@@ -36,9 +54,8 @@ export class TitleScene implements Scene {
       this.container.addChild(new Graphics().rect(0, 0, width, height).fill(0x0e1814));
     }
 
-    // The bg already carries the LoD logo, so we don't re-stamp a big "DAMIA"
-    // title on top. Keep the project subtitle as a small footer caption so the
-    // origin of the build is still visible.
+    // Project subtitle footer (no big "DAMIA" overlay — bg art already
+    // carries the LoD logo).
     const subtitle = new Text({
       text: `${t('title.name')} — ${t('title.subtitle')}`,
       style: {
@@ -50,29 +67,55 @@ export class TitleScene implements Scene {
       },
     });
     subtitle.anchor.set(0.5, 1);
-    subtitle.position.set(width / 2, height - 12);
+    subtitle.position.set(width / 2, height - 8);
 
-    // Buttons sit at the bottom-center so they don't cover the logo art.
-    const btnY1 = height - 130;
-    const btnY2 = height - 70;
-    const newGameBtn = this.makeButton(t('title.newGame'), width / 2, btnY1, () => {
-      playSfx('ui.click');
-      SaveManager.clear();
-      void ctx.scenes.switchTo(new ForestScene(), ctx);
-    });
-    const continueBtn = this.makeButton(t('title.continue'), width / 2, btnY2, () => {
-      const save = SaveManager.load();
-      if (!save) return;
-      playSfx('ui.click');
-      // Route Continue back to whichever zone was active when the player saved.
-      // Forest stays the default fallback for any unexpected zone id.
-      const next: Scene =
-        save.currentZoneId === 'hellena' ? new HellenaScene(save) : new ForestScene(save);
-      void ctx.scenes.switchTo(next, ctx);
-    });
+    // Bottom stack: Survival (newest, on top), Continue, New Game (default
+    // primary, sits at the bottom = closest to the thumb).
+    const stackBottomY = height - STACK_BOTTOM_PADDING - BTN_HEIGHT / 2;
+
+    const newGameBtn = this.makeButton(
+      `${t('title.modeStory')} — ${t('title.newGame')}`,
+      width / 2,
+      stackBottomY,
+      () => {
+        playSfx('ui.click');
+        SaveManager.clear();
+        void ctx.scenes.switchTo(new ForestScene(), ctx);
+      },
+    );
+
+    const continueBtn = this.makeButton(
+      `${t('title.modeStory')} — ${t('title.continue')}`,
+      width / 2,
+      stackBottomY - (BTN_HEIGHT + BTN_GAP),
+      () => {
+        const save = SaveManager.load();
+        if (!save) return;
+        playSfx('ui.click');
+        // Route Continue back to whichever zone was active at save time.
+        const next: Scene =
+          save.currentZoneId === 'hellena' ? new HellenaScene(save) : new ForestScene(save);
+        void ctx.scenes.switchTo(next, ctx);
+      },
+    );
     continueBtn.setEnabled(SaveManager.has());
 
-    this.container.addChild(subtitle, newGameBtn.container, continueBtn.container);
+    const survivalBtn = this.makeButton(
+      t('title.modeSurvival'),
+      width / 2,
+      stackBottomY - 2 * (BTN_HEIGHT + BTN_GAP),
+      () => {
+        playSfx('ui.click');
+        void ctx.scenes.switchTo(new SurvivalScene(), ctx);
+      },
+    );
+
+    this.container.addChild(
+      subtitle,
+      survivalBtn.container,
+      continueBtn.container,
+      newGameBtn.container,
+    );
     ctx.app.stage.addChild(this.container);
 
     // First user click anywhere unlocks the AudioContext (browser policy)
@@ -86,8 +129,6 @@ export class TitleScene implements Scene {
     };
     window.addEventListener('pointerdown', unlock);
     this.cleanups.push(() => window.removeEventListener('pointerdown', unlock));
-    // Try once on enter — works on subsequent visits when audio is already
-    // unlocked. First-ever enter is a no-op until the unlock click fires.
     startTitleMusic();
   }
 
@@ -104,16 +145,19 @@ export class TitleScene implements Scene {
   update(): void {}
 
   private makeButton(label: string, x: number, y: number, onClick: () => void): ButtonHandle {
-    const w = 220;
-    const h = 44;
     const container = new Container({ label: `btn-${label}` });
     const bg = new Graphics()
-      .roundRect(-w / 2, -h / 2, w, h, 6)
+      .roundRect(-BTN_WIDTH / 2, -BTN_HEIGHT / 2, BTN_WIDTH, BTN_HEIGHT, 6)
       .fill({ color: 0x202820, alpha: 0.95 })
       .stroke({ width: 2, color: 0xa08050 });
     const text = new Text({
       text: label,
-      style: { fontFamily: 'system-ui, sans-serif', fontSize: 20, fill: 0xfaf6e8 },
+      style: {
+        fontFamily: 'system-ui, sans-serif',
+        fontSize: 18,
+        fill: 0xfaf6e8,
+        fontWeight: 'bold',
+      },
     });
     text.anchor.set(0.5);
     container.addChild(bg, text);

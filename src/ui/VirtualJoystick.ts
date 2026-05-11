@@ -1,8 +1,16 @@
-import { Container, Graphics } from 'pixi.js';
+import { Container, Graphics, Circle } from 'pixi.js';
 import type { Application, FederatedPointerEvent } from 'pixi.js';
 
 const BASE_RADIUS_PX = 60;
 const THUMB_RADIUS_PX = 28;
+/** Hit-area radius for catching the user's tap. Larger than the visible
+ *  ring (60 px) so taps that land just outside the painted edge still
+ *  count as "joystick taps" instead of falling through to the world
+ *  click handler — which would emit a tap-to-move click on whatever
+ *  world tile happens to lie under the joystick on screen. The diff is
+ *  the difference between a forgiving thumb target and Dart silently
+ *  walking off to a tile next to the joystick. */
+const HIT_RADIUS_PX = 84;
 /** Vertical padding from the bottom edge. Sized to clear the hotbar
  *  strip (slot 48 + 24 padding = 72 px) plus a small breathing gap so
  *  the joystick doesn't visually kiss the slots. */
@@ -65,6 +73,11 @@ export class VirtualJoystick {
     // simplifies the drag flow (one pointer source).
     this.base.eventMode = 'static';
     this.base.cursor = 'pointer';
+    // Wider hit area than the visible ring so taps landing just outside
+    // the painted circle (corners of the bounding box, finger imprecision)
+    // still count as joystick interactions instead of falling through to
+    // the world click handler.
+    this.base.hitArea = new Circle(0, 0, HIT_RADIUS_PX);
     // Explicitly silence the thumb. Pixi's default `eventMode` was leaving
     // the thumb in the hit-test path on mobile, so taps that landed on
     // the thumb (= dead-centre of the joystick at rest) hit the thumb,

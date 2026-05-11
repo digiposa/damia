@@ -51,28 +51,28 @@ export class WorldMapScene implements Scene {
     const { width: screenW, height: screenH } = ctx.app.screen;
     this.container = new Container({ label: 'world-map' });
 
+    // Thematic dark fill behind the map — also serves as the letterbox
+    // background when the contain-fit leaves margins (mobile portrait
+    // against a landscape map, ultrawide desktop, etc.). Markers stay in
+    // bounds regardless of screen aspect, which the previous cover-fit
+    // didn't guarantee.
+    this.container.addChild(new Graphics().rect(0, 0, screenW, screenH).fill(0x0e1a28));
+
     const tex = AssetManager.getTexture('ui.worldmap');
-    // Cover-fit the worldmap image so it always fills the screen, with the
-    // overflow cropped symmetrically (same approach as TitleScene). We compute
-    // the cover scale + offset once, then place markers in those local coords.
     let bgW = screenW;
     let bgH = screenH;
     let bgOffsetX = 0;
     let bgOffsetY = 0;
     if (tex) {
-      const cover = Math.max(screenW / tex.width, screenH / tex.height);
-      bgW = tex.width * cover;
-      bgH = tex.height * cover;
+      const contain = Math.min(screenW / tex.width, screenH / tex.height);
+      bgW = tex.width * contain;
+      bgH = tex.height * contain;
       bgOffsetX = (screenW - bgW) / 2;
       bgOffsetY = (screenH - bgH) / 2;
       const bg = new Sprite(tex);
-      bg.scale.set(cover);
+      bg.scale.set(contain);
       bg.position.set(bgOffsetX, bgOffsetY);
       this.container.addChild(bg);
-    } else {
-      // Fallback if the texture didn't load — flat dark fill so the screen is
-      // never blank (the markers still work, just without the illustration).
-      this.container.addChild(new Graphics().rect(0, 0, screenW, screenH).fill(0x0e1a28));
     }
 
     // Header overlay — reads "Map of Endiness" already in the bg art, so we

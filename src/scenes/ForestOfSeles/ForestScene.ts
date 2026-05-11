@@ -106,6 +106,11 @@ export class ForestScene implements Scene {
   /** Wall-clock timestamp of the last joystick-driven move emit. Throttled
    *  so we don't pound the pathfinder every frame while the joystick is held. */
   private joystickEmitMs = 0;
+  /** True while the joystick is actively driving movement. Lets us know
+   *  whether the live Pathfinder target was set by the joystick (so we
+   *  should clear it on release) versus by a tap-to-move click (where the
+   *  player expects Dart to keep walking to the tapped tile). */
+  private joystickDriven = false;
   /** Wall-clock deadline before joystick polls may resume after the user
    *  manually engaged a mob. Without this, a held joystick tick (150 ms)
    *  would clear the fresh CombatIntent and the engagement would silently
@@ -1324,25 +1329,51 @@ export class ForestScene implements Scene {
 
   /**
    * Touch overlay — poll the virtual joystick and emit a left-click toward
-   * a cell ≈ 5 tiles ahead of the player in the joystick's direction. We
-   * throttle to ~150 ms because each click triggers a pathfinder request,
-   * and we re-target the same kind of cell while the joystick is held —
-   * faster polling would just spam the path solver.
+   * a cell ≈ 2 tiles ahead of the player in the joystick's direction.
+   * Throttled to ~150 ms; each emit triggers a pathfinder request and the
+   * re-target rate doesn't need to be higher.
+   *
+   * The short lookahead + release-clears-path treatment below makes the
+   * joystick feel analog: a brief flick walks a couple tiles, releasing
+   * the stick stops Dart immediately. Without the release-clear, the
+   * last poll's 5-tile-ahead target would drag Dart well past where the
+   * player wanted to stop (the old "ghost walking after release" bug).
    */
   private pollJoystickMove(): void {
     if (!this.virtualJoystick || !this.input || !this.world || this.playerId === null) return;
     const dir = this.virtualJoystick.direction();
-    if (!dir) return;
+    if (!dir) {
+      // Joystick released. If we were driving Dart with it and no manual
+      // combat target is pending, stop him in place by wiping the
+      // Pathfinder. Tap-to-move (which sets pf without going through the
+      // joystick path) keeps its target because `joystickDriven` was
+      // never set.
+      if (this.joystickDriven) {
+        this.joystickDriven = false;
+        if (!this.world.hasComponent(this.playerId, 'CombatIntent')) {
+          const pf = this.world.getComponent(this.playerId, 'Pathfinder');
+          if (pf) {
+            pf.targetGrid = null;
+            pf.waypoints = null;
+            pf.computing = false;
+          }
+        }
+      }
+      return;
+    }
     const now = performance.now();
     if (now - this.joystickEmitMs < 150) return;
     // Yield to a fresh manual mob target so the engagement isn't undone
     // by the next joystick tick.
     if (now < this.manualCombatLockUntilMs) return;
     this.joystickEmitMs = now;
+    this.joystickDriven = true;
     const pos = this.world.getComponent(this.playerId, 'Position');
     if (!pos) return;
-    // 5 tiles in the joystick direction. Tile diagonal in iso = √(W² + H²).
-    const STEPS = 5;
+    // 2 tiles ahead — short enough that release-stop lands roughly where
+    // the player intended, long enough that 150 ms repaths don't choke
+    // on tiny segments.
+    const STEPS = 2;
     const tileDiag = Math.sqrt(64 * 64 + 32 * 32);
     const targetWx = pos.x + dir.x * STEPS * tileDiag;
     const targetWy = pos.y + dir.y * STEPS * tileDiag;

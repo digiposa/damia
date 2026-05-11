@@ -130,6 +130,7 @@ export class HellenaScene implements Scene {
   private touchMenuButtons: TouchMenuButtons | null = null;
   /** Last joystick-driven move emit (ms). Throttles re-targeting. */
   private joystickEmitMs = 0;
+  private joystickDriven = false;
   /** See ForestScene for the rationale — yields the joystick poll to a
    *  fresh tap-on-mob CombatIntent for 600 ms. */
   private manualCombatLockUntilMs = 0;
@@ -1247,14 +1248,28 @@ export class HellenaScene implements Scene {
   private pollJoystickMove(): void {
     if (!this.virtualJoystick || !this.input || !this.world || this.playerId === null) return;
     const dir = this.virtualJoystick.direction();
-    if (!dir) return;
+    if (!dir) {
+      if (this.joystickDriven) {
+        this.joystickDriven = false;
+        if (!this.world.hasComponent(this.playerId, 'CombatIntent')) {
+          const pf = this.world.getComponent(this.playerId, 'Pathfinder');
+          if (pf) {
+            pf.targetGrid = null;
+            pf.waypoints = null;
+            pf.computing = false;
+          }
+        }
+      }
+      return;
+    }
     const now = performance.now();
     if (now - this.joystickEmitMs < 150) return;
     if (now < this.manualCombatLockUntilMs) return;
     this.joystickEmitMs = now;
+    this.joystickDriven = true;
     const pos = this.world.getComponent(this.playerId, 'Position');
     if (!pos) return;
-    const STEPS = 5;
+    const STEPS = 2;
     const tileDiag = Math.sqrt(64 * 64 + 32 * 32);
     const targetWx = pos.x + dir.x * STEPS * tileDiag;
     const targetWy = pos.y + dir.y * STEPS * tileDiag;

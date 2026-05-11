@@ -51,6 +51,7 @@ import { Toast } from '@ui/Toast';
 import { Hud } from '@ui/Hud';
 import { Hotbar, type HotbarSlot } from '@ui/Hotbar';
 import { AdditionsBar } from '@ui/AdditionsBar';
+import { AdditionsPicker } from '@ui/AdditionsPicker';
 import { MiniMap } from '@ui/MiniMap';
 import { ZoneTitle } from '@ui/ZoneTitle';
 import { ActionLog } from '@ui/ActionLog';
@@ -146,6 +147,7 @@ export class HellenaScene implements Scene {
    *  slot in the AdditionsBar. */
   private activeAddition: AdditionKind = 'doubleSlash';
   private additionsBar: AdditionsBar | null = null;
+  private additionsPicker: AdditionsPicker | null = null;
 
   /** Active ground-targeting state. While set, the click handler commits/cancels
    *  the spell instead of moving Dart, and the cursor circle in fxLayer follows
@@ -338,12 +340,16 @@ export class HellenaScene implements Scene {
     });
     this.layers.ui.addChild(this.inventoryPanel.container);
 
-    // AdditionsBar — sits above the Hotbar. Click a slot to make it the active
-    // addition; right-click in the world casts the active one.
+    // AdditionsBar — sits above the Hotbar on desktop. Touch builds hide
+    // it in favour of the long-press picker on the on-screen Addition
+    // button (see ForestScene for the same treatment).
     this.additionsBar = new AdditionsBar(ctx.app);
     this.additionsBar.setOnSelect((kind) => {
       this.activeAddition = kind;
     });
+    if (isTouchDevice()) {
+      this.additionsBar.container.visible = false;
+    }
     this.layers.ui.addChild(this.additionsBar.container);
 
     // Custom animated sword cursor — skipped on touch devices (no mouse).
@@ -378,11 +384,17 @@ export class HellenaScene implements Scene {
       this.touchActionButtons = new TouchActionButtons(ctx.app, {
         onAttack: () => this.touchAttackNearest(),
         onAddition: () => this.input?.emitClick({ button: 'right', gx: 0, gy: 0 }),
+        onAdditionLongPress: () => this.openAdditionsPicker(),
+        currentAddition: () => this.activeAddition,
+        additionCooldownFrac: () => this.computeActiveAdditionCdFrac(),
         onDefend: () => this.input?.emitDefend(true),
         isDefending: () => this.input?.isDefending() ?? false,
         defendCooldownFrac: () => this.input?.defendCooldownFrac() ?? 0,
       });
       this.layers.ui.addChild(this.touchActionButtons.container);
+
+      this.additionsPicker = new AdditionsPicker(ctx.app);
+      this.layers.ui.addChild(this.additionsPicker.container);
 
       this.touchMenuButtons = new TouchMenuButtons(ctx.app, {
         onInventory: () => {
@@ -633,6 +645,8 @@ export class HellenaScene implements Scene {
     this.inventoryPanel = null;
     this.additionsBar?.destroy();
     this.additionsBar = null;
+    this.additionsPicker?.destroy();
+    this.additionsPicker = null;
     this.input?.destroy();
     this.input = null;
     for (const sys of this.systems) sys.destroy?.();
@@ -1279,6 +1293,27 @@ export class HellenaScene implements Scene {
       gx: Math.round(grid.x),
       gy: Math.round(grid.y),
     });
+  }
+
+  /** Open the touch addition picker (long-press on Addition button). */
+  private openAdditionsPicker(): void {
+    if (!this.additionsPicker) return;
+    const unlocked = this.unlockedAdditions();
+    this.additionsPicker.open(unlocked, this.activeAddition, (kind) => {
+      this.activeAddition = kind;
+    });
+  }
+
+  /** Cooldown fraction (0..1) of the active addition — feeds the touch
+   *  Addition button's radial dim. Same shape as ForestScene's helper. */
+  private computeActiveAdditionCdFrac(): number {
+    if (!this.world || this.playerId === null) return 0;
+    const cd = this.world.getComponent(this.playerId, 'SkillCooldown');
+    if (!cd) return 0;
+    const remaining = cd.remainingMs[this.activeAddition] ?? 0;
+    const total = ADDITIONS[this.activeAddition]?.cooldownMs ?? 0;
+    if (remaining <= 0 || total <= 0) return 0;
+    return Math.min(1, remaining / total);
   }
 
   /** Touch attack button — picks the nearest enemy in melee range and

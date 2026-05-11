@@ -51,6 +51,7 @@ import { Toast } from '@ui/Toast';
 import { Hud } from '@ui/Hud';
 import { Hotbar, type HotbarSlot } from '@ui/Hotbar';
 import { AdditionsBar } from '@ui/AdditionsBar';
+import { AdditionsPicker } from '@ui/AdditionsPicker';
 import { MiniMap } from '@ui/MiniMap';
 import { ZoneTitle } from '@ui/ZoneTitle';
 import { ActionLog } from '@ui/ActionLog';
@@ -128,6 +129,8 @@ export class ForestScene implements Scene {
    *  slot in the AdditionsBar. */
   private activeAddition: AdditionKind = 'doubleSlash';
   private additionsBar: AdditionsBar | null = null;
+  /** Long-press picker on the touch Addition button — null on desktop. */
+  private additionsPicker: AdditionsPicker | null = null;
 
   /** Active ground-targeting state. While set, the click handler commits/cancels
    *  the spell instead of moving Dart, and the cursor circle in fxLayer follows
@@ -373,12 +376,18 @@ export class ForestScene implements Scene {
     });
     this.layers.ui.addChild(this.inventoryPanel.container);
 
-    // AdditionsBar — sits above the Hotbar. Click a slot to make it the active
-    // addition; right-click in the world casts the active one.
+    // AdditionsBar — sits above the Hotbar on desktop. Click a slot to make
+    // it the active addition; right-click in the world casts the active one.
+    // On touch we hide the permanent bar in favour of a long-press picker
+    // on the on-screen Addition button, freeing up the top strip for the
+    // game world.
     this.additionsBar = new AdditionsBar(ctx.app);
     this.additionsBar.setOnSelect((kind) => {
       this.activeAddition = kind;
     });
+    if (isTouchDevice()) {
+      this.additionsBar.container.visible = false;
+    }
     this.layers.ui.addChild(this.additionsBar.container);
 
     // Custom animated sword cursor — added at the app stage level so it sits
@@ -416,6 +425,9 @@ export class ForestScene implements Scene {
       this.touchActionButtons = new TouchActionButtons(ctx.app, {
         onAttack: () => this.touchAttackNearest(),
         onAddition: () => this.input?.emitClick({ button: 'right', gx: 0, gy: 0 }),
+        onAdditionLongPress: () => this.openAdditionsPicker(),
+        currentAddition: () => this.activeAddition,
+        additionCooldownFrac: () => this.computeActiveAdditionCdFrac(),
         // Tap-to-trigger; emitDefend rejects silently when on cooldown or
         // already defending, so a no-op tap is safe.
         onDefend: () => this.input?.emitDefend(true),
@@ -423,6 +435,11 @@ export class ForestScene implements Scene {
         defendCooldownFrac: () => this.input?.defendCooldownFrac() ?? 0,
       });
       this.layers.ui.addChild(this.touchActionButtons.container);
+
+      // Long-press picker: replaces the always-visible AdditionsBar on
+      // touch so the top strip stays clear for the game world.
+      this.additionsPicker = new AdditionsPicker(ctx.app);
+      this.layers.ui.addChild(this.additionsPicker.container);
 
       this.touchMenuButtons = new TouchMenuButtons(ctx.app, {
         onInventory: () => {
@@ -694,6 +711,8 @@ export class ForestScene implements Scene {
     this.inventoryPanel = null;
     this.additionsBar?.destroy();
     this.additionsBar = null;
+    this.additionsPicker?.destroy();
+    this.additionsPicker = null;
     this.input?.destroy();
     this.input = null;
     for (const sys of this.systems) sys.destroy?.();
@@ -1383,6 +1402,32 @@ export class ForestScene implements Scene {
       gx: Math.round(grid.x),
       gy: Math.round(grid.y),
     });
+  }
+
+  /** Open the touch addition picker pre-filled with whichever additions the
+   *  player has unlocked at the current level. Cancels any in-flight
+   *  ground-targeting first so we don't strand the player in a half-state. */
+  private openAdditionsPicker(): void {
+    if (!this.additionsPicker) return;
+    if (this.groundTargeting) this.exitGroundTargeting(false);
+    const unlocked = this.unlockedAdditions();
+    this.additionsPicker.open(unlocked, this.activeAddition, (kind) => {
+      this.activeAddition = kind;
+    });
+  }
+
+  /** Cooldown fraction (0..1) of the *currently-active* addition only —
+   *  used by the touch addition button to paint its radial dim. Reads the
+   *  same `SkillCooldown` component the per-frame HUD repaint already
+   *  walks, so the values stay in lockstep. */
+  private computeActiveAdditionCdFrac(): number {
+    if (!this.world || this.playerId === null) return 0;
+    const cd = this.world.getComponent(this.playerId, 'SkillCooldown');
+    if (!cd) return 0;
+    const remaining = cd.remainingMs[this.activeAddition] ?? 0;
+    const total = ADDITIONS[this.activeAddition]?.cooldownMs ?? 0;
+    if (remaining <= 0 || total <= 0) return 0;
+    return Math.min(1, remaining / total);
   }
 
   /**

@@ -1,5 +1,6 @@
 import { Container, Graphics, Text } from 'pixi.js';
 import type { Application, FederatedPointerEvent } from 'pixi.js';
+import { ADDITIONS, type AdditionKind } from '@data/balance';
 
 /** Right-edge padding (kept tight so the buttons hug the screen edge). */
 const PADDING_RIGHT_PX = 12;
@@ -10,34 +11,50 @@ const BTN_LARGE = 38;
 const BTN_MEDIUM = 30;
 /** Vertical gap between stacked buttons. */
 const STACK_GAP = 12;
+/** Long-press threshold for the addition button (opens the picker). */
+const LONG_PRESS_MS = 380;
 
 interface ButtonSpec {
+  /** Initial label. May be overridden every frame via `getLabel`. */
   label: string;
   radius: number;
-  /** Fired on pointerdown — fire-and-forget. We deliberately don't wait
-   *  for pointerup because mobile browsers occasionally swallow it as a
-   *  cancel, and for action buttons faster feedback feels better. */
+  /** Fired on a short tap (pointerdown for non-longpress buttons, or
+   *  pointerup-before-threshold for buttons that opt into long-press). */
   onTap: () => void;
-  /** Optional state-driven tint. Polled every frame so the visual reflects
-   *  the controller's truth without internal state to drift. */
+  /** Optional long-press handler. When set, the button uses a press-timer
+   *  model: tap fires on pointerup if held < LONG_PRESS_MS, otherwise the
+   *  long-press fires automatically once the threshold is crossed. */
+  onLongPress?: () => void;
+  /** Polled every frame; when defined we keep `label` in sync with the
+   *  callback's return value so the addition button can reflect the
+   *  currently-active addition. */
+  getLabel?: () => string;
+  /** Optional active-state tint (e.g. defend on). */
   isActive?: () => boolean;
-  /** Optional [0, 1] cooldown fraction (1 = just triggered, 0 = ready).
-   *  Polled every frame to paint a sweeping radial dim over the button
-   *  while the action is on cooldown. */
+  /** Optional [0, 1] cooldown sweep overlay. */
   cooldownFrac?: () => number;
 }
 
 /**
  * On-screen action buttons for touch devices. Vertical stack at bottom-
- * right: Attack (largest), Addition, Defend.
+ * right: Attack (largest), Addition (medium, with long-press picker),
+ * Defend (medium, with cooldown radial).
  *
- * Defend uses both `isActive` (red while the 3 s block is in progress)
- * and `cooldownFrac` (gray dim radial during the 10 s cooldown after).
+ * The addition button is the only one that opts into long-press —
+ * single tap fires the active addition like before, holding for ~400 ms
+ * opens the picker so the player can switch active addition without a
+ * permanent AdditionsBar eating top-screen real estate.
  */
 export class TouchActionButtons {
   readonly container: Container;
   private app: Application;
-  private buttons: Array<{ spec: ButtonSpec; bg: Graphics; cd: Graphics }> = [];
+  private buttons: Array<{
+    spec: ButtonSpec;
+    bg: Graphics;
+    cd: Graphics;
+    label: Text;
+    lastLabel: string;
+  }> = [];
   private cleanupFns: Array<() => void> = [];
   private tickerCb: (() => void) | null = null;
 
@@ -46,6 +63,9 @@ export class TouchActionButtons {
     handlers: {
       onAttack: () => void;
       onAddition: () => void;
+      onAdditionLongPress: () => void;
+      currentAddition: () => AdditionKind;
+      additionCooldownFrac: () => number;
       onDefend: () => void;
       isDefending: () => boolean;
       defendCooldownFrac: () => number;
@@ -54,9 +74,18 @@ export class TouchActionButtons {
     this.app = app;
     this.container = new Container({ label: 'touch-action-buttons' });
 
+    const additionLabel = (): string => initialsFor(handlers.currentAddition());
+
     const specs: ButtonSpec[] = [
       { label: 'A', radius: BTN_LARGE, onTap: handlers.onAttack },
-      { label: '*', radius: BTN_MEDIUM, onTap: handlers.onAddition },
+      {
+        label: additionLabel(),
+        radius: BTN_MEDIUM,
+        onTap: handlers.onAddition,
+        onLongPress: handlers.onAdditionLongPress,
+        getLabel: additionLabel,
+        cooldownFrac: handlers.additionCooldownFrac,
+      },
       {
         label: 'D',
         radius: BTN_MEDIUM,
@@ -68,7 +97,13 @@ export class TouchActionButtons {
 
     for (const spec of specs) {
       const built = this.makeButton(spec);
-      this.buttons.push({ spec, bg: built.bg, cd: built.cd });
+      this.buttons.push({
+        spec,
+        bg: built.bg,
+        cd: built.cd,
+        label: built.label,
+        lastLabel: spec.label,
+      });
       this.container.addChild(built.container);
     }
 
@@ -89,40 +124,95 @@ export class TouchActionButtons {
     this.container.destroy({ children: true });
   }
 
-  private makeButton(spec: ButtonSpec): { container: Container; bg: Graphics; cd: Graphics } {
+  private makeButton(spec: ButtonSpec): {
+    container: Container;
+    bg: Graphics;
+    cd: Graphics;
+    label: Text;
+  } {
     const container = new Container({ label: `touch-btn-${spec.label}` });
     const bg = new Graphics()
       .circle(0, 0, spec.radius)
       .fill({ color: 0x1c2840, alpha: 0.85 })
       .stroke({ width: 2, color: 0xa08050, alpha: 0.9 });
-    const text = new Text({
+    const label = new Text({
       text: spec.label,
       style: {
         fontFamily: 'system-ui, sans-serif',
-        fontSize: spec.radius,
+        fontSize: spec.label.length <= 1 ? spec.radius : Math.round(spec.radius * 0.7),
         fill: 0xfaf6e8,
         fontWeight: 'bold',
         stroke: { color: 0x000000, width: 2 },
       },
     });
-    text.anchor.set(0.5);
-    // Cooldown overlay — drawn ON TOP of the bg + label so the radial dim
-    // visually sweeps across both. Re-painted in refreshOverlays().
+    label.anchor.set(0.5);
     const cd = new Graphics();
-    container.addChild(bg, text, cd);
+    container.addChild(bg, label, cd);
 
     container.eventMode = 'static';
     container.cursor = 'pointer';
-    // Fire on pointerdown (fast feedback + survives a stray pointercancel
-    // between down and up that would kill `pointertap`).
-    const onDown = (e: FederatedPointerEvent): void => {
-      e.stopPropagation();
-      spec.onTap();
-    };
-    container.on('pointerdown', onDown);
-    this.cleanupFns.push(() => container.off('pointerdown', onDown));
 
-    return { container, bg, cd };
+    if (spec.onLongPress) {
+      // Press-timer model so the addition button can distinguish a quick
+      // tap (fire addition) from a long hold (open picker). Threshold is
+      // ~380 ms — long enough to ignore a fumbled tap, short enough that
+      // the picker feels responsive.
+      let pressedAt = 0;
+      let timerHandle: number | null = null;
+      const cancelTimer = (): void => {
+        if (timerHandle !== null) {
+          window.clearTimeout(timerHandle);
+          timerHandle = null;
+        }
+      };
+      const onDown = (e: FederatedPointerEvent): void => {
+        e.stopPropagation();
+        pressedAt = performance.now();
+        cancelTimer();
+        timerHandle = window.setTimeout(() => {
+          if (pressedAt > 0) {
+            spec.onLongPress!();
+            pressedAt = 0; // long-press consumed, ignore the matching pointerup
+          }
+          timerHandle = null;
+        }, LONG_PRESS_MS);
+      };
+      const onUp = (e: FederatedPointerEvent): void => {
+        cancelTimer();
+        if (pressedAt === 0) return;
+        const heldMs = performance.now() - pressedAt;
+        pressedAt = 0;
+        if (heldMs < LONG_PRESS_MS) {
+          e.stopPropagation();
+          spec.onTap();
+        }
+      };
+      const onCancel = (): void => {
+        cancelTimer();
+        pressedAt = 0;
+      };
+      container.on('pointerdown', onDown);
+      container.on('pointerup', onUp);
+      container.on('pointerupoutside', onCancel);
+      this.cleanupFns.push(
+        () => container.off('pointerdown', onDown),
+        () => container.off('pointerup', onUp),
+        () => container.off('pointerupoutside', onCancel),
+        cancelTimer,
+      );
+    } else {
+      // Fire-on-pointerdown: faster feedback + survives the
+      // pointercancel-between-down-and-up failure mode we hit on
+      // Android. No long-press affordance needed for Attack / Defend.
+      const onDown = (e: FederatedPointerEvent): void => {
+        e.stopPropagation();
+        spec.onTap();
+      };
+      container.on('pointerdown', onDown);
+      this.cleanupFns.push(() => container.off('pointerdown', onDown));
+    }
+
+    return { container, bg, cd, label };
   }
 
   private layoutStack(): void {
@@ -139,9 +229,11 @@ export class TouchActionButtons {
     }
   }
 
-  /** Per-frame refresh of `isActive` tint + `cooldownFrac` radial dim. */
+  /** Per-frame refresh of active tint + cooldown radial dim + dynamic
+   *  label (poll-based so the scene doesn't have to push state). */
   private refreshOverlays(): void {
-    for (const { spec, bg, cd } of this.buttons) {
+    for (const entry of this.buttons) {
+      const { spec, bg, cd, label } = entry;
       const active = spec.isActive?.() ?? false;
       const colour = active ? 0xa08050 : 0x1c2840;
       bg.clear()
@@ -149,13 +241,23 @@ export class TouchActionButtons {
         .fill({ color: colour, alpha: active ? 0.95 : 0.85 })
         .stroke({ width: 2, color: 0xa08050, alpha: 0.9 });
 
+      if (spec.getLabel) {
+        const next = spec.getLabel();
+        if (next !== entry.lastLabel) {
+          label.text = next;
+          // Re-fit font size when the glyph count changes (e.g. "DS" → "VS"
+          // is fine, but "DS" → "F" would otherwise look tiny).
+          const newSize = next.length <= 1 ? spec.radius : Math.round(spec.radius * 0.7);
+          if (label.style.fontSize !== newSize) {
+            label.style.fontSize = newSize;
+          }
+          entry.lastLabel = next;
+        }
+      }
+
       cd.clear();
       const frac = spec.cooldownFrac?.() ?? 0;
       if (frac > 0.001) {
-        // Radial sweep: clockwise pie slice covering `frac × 360°` of the
-        // disc. arc() goes from -90° (top) clockwise. Drawn in the same
-        // dim grey we use for unrevealed fog so the visual is immediately
-        // legible as "blocked".
         const start = -Math.PI / 2;
         const end = start + frac * Math.PI * 2;
         cd.moveTo(0, 0)
@@ -165,4 +267,15 @@ export class TouchActionButtons {
       }
     }
   }
+}
+
+/** First letter of each word in the addition's name — same convention as
+ *  the hotbar / picker slot painters so the visuals rhyme. */
+function initialsFor(kind: AdditionKind): string {
+  const name = ADDITIONS[kind]?.name ?? '';
+  return name
+    .split(' ')
+    .map((w) => w[0])
+    .filter(Boolean)
+    .join('');
 }

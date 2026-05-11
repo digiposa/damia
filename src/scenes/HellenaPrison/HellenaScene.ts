@@ -1100,7 +1100,43 @@ export class HellenaScene implements Scene {
       return;
     }
 
-    // groundAoE — open targeting mode; spell + item commit happens on click.
+    // groundAoE — auto-blast the current target on tap (mobile-friendly).
+    // See ForestScene.startSpellFromItem for the rationale.
+    const aoeSpell = spell;
+    const lockOn = this.pickAdditionTarget(pos.x, pos.y, aoeSpell.castRangePx);
+    if (lockOn !== null) {
+      const tp = this.world.getComponent(lockOn, 'Position');
+      if (tp) {
+        const dx = tp.x - pos.x;
+        const dy = tp.y - pos.y;
+        const len = Math.hypot(dx, dy) || 1;
+        this.world.addComponent(this.playerId, 'Spell', {
+          kind: spellKind,
+          elapsedMs: 0,
+          totalMs: aoeSpell.totalMs,
+          hitTimingMs: aoeSpell.hitTimingMs,
+          hitApplied: false,
+          magicAtkMul: aoeSpell.magicAtkMul,
+          target: 'groundAoE',
+          targetX: tp.x,
+          targetY: tp.y,
+          aoeRadiusPx: aoeSpell.aoeRadiusPx,
+          dirX: dx / len,
+          dirY: dy / len,
+          vfxKind: aoeSpell.vfx,
+          vfxRadiusPx: aoeSpell.vfxRadiusPx ?? aoeSpell.aoeRadiusPx,
+        });
+        const inv = this.world.getComponent(this.playerId, 'Inventory');
+        if (inv) this.decrementItem(inv, itemKind);
+        const pf = this.world.getComponent(this.playerId, 'Pathfinder');
+        if (pf) {
+          pf.waypoints = null;
+          pf.targetGrid = null;
+        }
+        playSfx('combat.swing');
+        return;
+      }
+    }
     this.enterGroundTargeting(itemKind, spellKind);
   }
 

@@ -1192,7 +1192,47 @@ export class ForestScene implements Scene {
       return;
     }
 
-    // groundAoE — open targeting mode; spell + item commit happens on click.
+    // groundAoE — try to fire immediately on the player's current combat
+    // target (or nearest enemy in cast range). On thumb-driven mobile,
+    // forcing a second tap on the ground to commit the cast was clunky;
+    // when there IS a clear target we just blast its tile. Falls back to
+    // the manual ground-targeting cursor when no enemy is in range so
+    // the player can still place AoEs precisely.
+    const aoeSpell = spell;
+    const lockOn = this.pickAdditionTarget(pos.x, pos.y, aoeSpell.castRangePx);
+    if (lockOn !== null) {
+      const tp = this.world.getComponent(lockOn, 'Position');
+      if (tp) {
+        const dx = tp.x - pos.x;
+        const dy = tp.y - pos.y;
+        const len = Math.hypot(dx, dy) || 1;
+        this.world.addComponent(this.playerId, 'Spell', {
+          kind: spellKind,
+          elapsedMs: 0,
+          totalMs: aoeSpell.totalMs,
+          hitTimingMs: aoeSpell.hitTimingMs,
+          hitApplied: false,
+          magicAtkMul: aoeSpell.magicAtkMul,
+          target: 'groundAoE',
+          targetX: tp.x,
+          targetY: tp.y,
+          aoeRadiusPx: aoeSpell.aoeRadiusPx,
+          dirX: dx / len,
+          dirY: dy / len,
+          vfxKind: aoeSpell.vfx,
+          vfxRadiusPx: aoeSpell.vfxRadiusPx ?? aoeSpell.aoeRadiusPx,
+        });
+        const inv = this.world.getComponent(this.playerId, 'Inventory');
+        if (inv) this.decrementItem(inv, itemKind);
+        const pf = this.world.getComponent(this.playerId, 'Pathfinder');
+        if (pf) {
+          pf.waypoints = null;
+          pf.targetGrid = null;
+        }
+        playSfx('combat.swing');
+        return;
+      }
+    }
     this.enterGroundTargeting(itemKind, spellKind);
   }
 

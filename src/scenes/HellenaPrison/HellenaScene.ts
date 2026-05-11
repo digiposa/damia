@@ -132,6 +132,9 @@ export class HellenaScene implements Scene {
   /** Last joystick-driven move emit (ms). Throttles re-targeting. */
   private joystickEmitMs = 0;
   private joystickDriven = false;
+  /** Last direction the joystick poll committed — used to filter release
+   *  transients. See ForestScene for the rationale. */
+  private lastJoystickDir: { x: number; y: number } | null = null;
   /** See ForestScene for the rationale — yields the joystick poll to a
    *  fresh tap-on-mob CombatIntent for 600 ms. */
   private manualCombatLockUntilMs = 0;
@@ -1349,6 +1352,7 @@ export class HellenaScene implements Scene {
     if (!dir) {
       if (this.joystickDriven) {
         this.joystickDriven = false;
+        this.lastJoystickDir = null;
         if (!this.world.hasComponent(this.playerId, 'CombatIntent')) {
           const pf = this.world.getComponent(this.playerId, 'Pathfinder');
           if (pf) {
@@ -1360,11 +1364,17 @@ export class HellenaScene implements Scene {
       }
       return;
     }
+    // Suppress release transients (see ForestScene).
+    if (this.lastJoystickDir) {
+      const dot = this.lastJoystickDir.x * dir.x + this.lastJoystickDir.y * dir.y;
+      if (dot < 0 && dir.magnitude < 0.8) return;
+    }
     const now = performance.now();
     if (now - this.joystickEmitMs < 150) return;
     if (now < this.manualCombatLockUntilMs) return;
     this.joystickEmitMs = now;
     this.joystickDriven = true;
+    this.lastJoystickDir = { x: dir.x, y: dir.y };
     const pos = this.world.getComponent(this.playerId, 'Position');
     if (!pos) return;
     const STEPS = 2;

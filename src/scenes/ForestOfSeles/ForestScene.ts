@@ -112,6 +112,10 @@ export class ForestScene implements Scene {
    *  should clear it on release) versus by a tap-to-move click (where the
    *  player expects Dart to keep walking to the tapped tile). */
   private joystickDriven = false;
+  /** Last direction the joystick poll committed. Used to detect "release
+   *  transients" (the natural finger slide as the user lifts off, which
+   *  briefly reports a reversed direction before pointerup). */
+  private lastJoystickDir: { x: number; y: number } | null = null;
   /** Wall-clock deadline before joystick polls may resume after the user
    *  manually engaged a mob. Without this, a held joystick tick (150 ms)
    *  would clear the fresh CombatIntent and the engagement would silently
@@ -1469,6 +1473,7 @@ export class ForestScene implements Scene {
       // never set.
       if (this.joystickDriven) {
         this.joystickDriven = false;
+        this.lastJoystickDir = null;
         if (!this.world.hasComponent(this.playerId, 'CombatIntent')) {
           const pf = this.world.getComponent(this.playerId, 'Pathfinder');
           if (pf) {
@@ -1480,6 +1485,15 @@ export class ForestScene implements Scene {
       }
       return;
     }
+    // Suppress release transients: when the finger naturally slides off
+    // on lift-off, the joystick briefly reports a reversed direction
+    // with falling magnitude. Ignoring that poll keeps Dart from
+    // stepping the wrong way in the frame before `pointerup` clears
+    // the joystick.
+    if (this.lastJoystickDir) {
+      const dot = this.lastJoystickDir.x * dir.x + this.lastJoystickDir.y * dir.y;
+      if (dot < 0 && dir.magnitude < 0.8) return;
+    }
     const now = performance.now();
     if (now - this.joystickEmitMs < 150) return;
     // Yield to a fresh manual mob target so the engagement isn't undone
@@ -1487,6 +1501,7 @@ export class ForestScene implements Scene {
     if (now < this.manualCombatLockUntilMs) return;
     this.joystickEmitMs = now;
     this.joystickDriven = true;
+    this.lastJoystickDir = { x: dir.x, y: dir.y };
     const pos = this.world.getComponent(this.playerId, 'Position');
     if (!pos) return;
     // 2 tiles ahead — short enough that release-stop lands roughly where

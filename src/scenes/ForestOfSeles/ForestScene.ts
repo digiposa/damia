@@ -1465,12 +1465,12 @@ export class ForestScene implements Scene {
   private pollJoystickMove(): void {
     if (!this.virtualJoystick || !this.input || !this.world || this.playerId === null) return;
     const dir = this.virtualJoystick.direction();
-    if (!dir) {
-      // Joystick released. If we were driving Dart with it and no manual
-      // combat target is pending, stop him in place by wiping the
-      // Pathfinder. Tap-to-move (which sets pf without going through the
-      // joystick path) keeps its target because `joystickDriven` was
-      // never set.
+    // Only treat the joystick as released when the finger is actually
+    // off the screen. A null `dir` while still held is a dead-zone
+    // passage (e.g. the slide as the user reverses direction) — wiping
+    // state there would re-arm the reversal filter and let an overshoot
+    // emit a click in the wrong direction.
+    if (!this.virtualJoystick.isHeld()) {
       if (this.joystickDriven) {
         this.joystickDriven = false;
         this.lastJoystickDir = null;
@@ -1485,6 +1485,7 @@ export class ForestScene implements Scene {
       }
       return;
     }
+    if (!dir) return; // held inside dead zone — wait for real movement
     // Suppress release transients: when the finger naturally slides off
     // on lift-off, the joystick briefly reports a reversed direction
     // with falling magnitude. Ignoring that poll keeps Dart from

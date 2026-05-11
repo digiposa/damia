@@ -112,15 +112,19 @@ export class VirtualJoystick {
   }
 
   /** Returns the current joystick direction as a normalised vector with
-   *  magnitude ∈ [DEAD_ZONE_FRAC, 1]. Null when the joystick is idle (thumb
-   *  released or inside the dead zone). The scene polls this each frame. */
+   *  magnitude ∈ [DEAD_ZONE_FRAC, 1]. Null when the joystick is idle. */
   direction(): { x: number; y: number; magnitude: number } | null {
     const mag = Math.hypot(this.dirX, this.dirY);
     if (mag < DEAD_ZONE_FRAC) return null;
-    // Re-normalise so the magnitude reads as 0..1 after dead-zone clamp,
-    // which makes the downstream "how aggressively am I moving?" easier to
-    // reason about (1 = thumb at the ring edge).
     return { x: this.dirX / mag, y: this.dirY / mag, magnitude: mag };
+  }
+
+  /** True while the user's finger is still on the joystick — regardless
+   *  of whether the current offset is inside the dead zone. Lets callers
+   *  distinguish a momentary slide-through-centre (still active) from a
+   *  real lift-off (finger gone). */
+  isHeld(): boolean {
+    return this.activePointerId !== null;
   }
 
   destroy(): void {

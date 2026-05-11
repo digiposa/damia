@@ -747,7 +747,14 @@ export class ArenaScene implements Scene {
   private pollJoystickMove(): void {
     if (!this.virtualJoystick || !this.input || !this.world || this.playerId === null) return;
     const dir = this.virtualJoystick.direction();
-    if (!dir) {
+    // True end-of-input: the finger is OFF the joystick entirely. Only
+    // here do we wipe the pathfinder and reset history. A null `dir`
+    // while the finger is still touching is just a dead-zone passage
+    // (e.g., user slid through the centre while reversing direction)
+    // and must not clear state — otherwise the slide that overshoots
+    // past the centre would emit a fresh click in the new direction
+    // without the reversal filter active.
+    if (!this.virtualJoystick.isHeld()) {
       if (this.joystickDriven) {
         this.joystickDriven = false;
         this.lastJoystickDir = null;
@@ -762,11 +769,11 @@ export class ArenaScene implements Scene {
       }
       return;
     }
+    if (!dir) return; // held but inside dead zone — wait for real movement
     // Suppress release transients: when the finger naturally slides off
-    // the joystick on lift-off, it briefly reports a reversed direction
-    // with falling magnitude. Skipping the emit in that case prevents
-    // Dart from taking a step in the wrong direction in the frame
-    // before `pointerup` actually fires and the joystick releases.
+    // on lift-off, the joystick briefly reports a reversed direction
+    // with falling magnitude. Skipping the emit prevents Dart from
+    // stepping the wrong way in the frame before `pointerup` clears.
     if (this.lastJoystickDir) {
       const dot = this.lastJoystickDir.x * dir.x + this.lastJoystickDir.y * dir.y;
       if (dot < 0 && dir.magnitude < 0.8) return;

@@ -1349,7 +1349,7 @@ export class HellenaScene implements Scene {
   private pollJoystickMove(): void {
     if (!this.virtualJoystick || !this.input || !this.world || this.playerId === null) return;
     const dir = this.virtualJoystick.direction();
-    if (!dir) {
+    if (!this.virtualJoystick.isHeld()) {
       if (this.joystickDriven) {
         this.joystickDriven = false;
         this.lastJoystickDir = null;
@@ -1364,6 +1364,7 @@ export class HellenaScene implements Scene {
       }
       return;
     }
+    if (!dir) return; // held inside dead zone — wait for real movement
     // Suppress release transients (see ForestScene).
     if (this.lastJoystickDir) {
       const dot = this.lastJoystickDir.x * dir.x + this.lastJoystickDir.y * dir.y;

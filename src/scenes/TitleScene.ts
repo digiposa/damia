@@ -7,7 +7,7 @@ import { AssetManager } from '@services/AssetManager';
 import { playMusic, playSfx, unlockAudio } from '@services/AudioManager';
 import { ForestScene } from '@scenes/ForestOfSeles/ForestScene';
 import { HellenaScene } from '@scenes/HellenaPrison/HellenaScene';
-import { SurvivalScene } from '@scenes/SurvivalScene';
+import { ArenaScene } from '@scenes/Arena/ArenaScene';
 
 interface ButtonHandle {
   container: Container;
@@ -106,7 +106,7 @@ export class TitleScene implements Scene {
       stackBottomY - 2 * (BTN_HEIGHT + BTN_GAP),
       () => {
         playSfx('ui.click');
-        void ctx.scenes.switchTo(new SurvivalScene(), ctx);
+        void ctx.scenes.switchTo(new ArenaScene(), ctx);
       },
     );
 

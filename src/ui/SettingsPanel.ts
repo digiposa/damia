@@ -263,9 +263,13 @@ export class SettingsPanel {
   }
 
   private reposition(): void {
-    this.panel.position.set(
-      (this.app.screen.width - PANEL_WIDTH) / 2,
-      (this.app.screen.height - PANEL_HEIGHT) / 2,
-    );
+    const w = this.app.screen.width;
+    const h = this.app.screen.height;
+    // Scale uniformly to fit narrow portrait screens (panel was designed
+    // for 460 px desktop). Pixi inherits the transform so the buttons
+    // hit-areas stay aligned with the visual.
+    const scale = Math.min(1, (w - 24) / PANEL_WIDTH, (h - 32) / PANEL_HEIGHT);
+    this.panel.scale.set(scale);
+    this.panel.position.set((w - PANEL_WIDTH * scale) / 2, (h - PANEL_HEIGHT * scale) / 2);
   }
 }

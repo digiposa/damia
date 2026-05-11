@@ -225,7 +225,13 @@ export class InventoryPanel {
     const w = this.app.screen.width;
     const h = this.app.screen.height;
     this.overlay.clear().rect(0, 0, w, h).fill({ color: 0x000000, alpha: 0.65 });
-    this.panel.position.set((w - PANEL_WIDTH) / 2, (h - PANEL_HEIGHT) / 2);
+    // Fit the desktop-sized panel inside narrow portrait screens by
+    // uniformly scaling the whole container. Pixi propagates the
+    // transform to children, so drag hit-areas + grid taps remain
+    // correctly mapped without per-component math.
+    const scale = Math.min(1, (w - 24) / PANEL_WIDTH, (h - 32) / PANEL_HEIGHT);
+    this.panel.scale.set(scale);
+    this.panel.position.set((w - PANEL_WIDTH * scale) / 2, (h - PANEL_HEIGHT * scale) / 2);
   }
 
   private rebuildGrid(): void {

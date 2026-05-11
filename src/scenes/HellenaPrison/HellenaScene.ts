@@ -529,6 +529,15 @@ export class HellenaScene implements Scene {
           elapsedMs: 0,
           totalMs: DEFEND.durationMs,
         });
+        // Drop combat intent + pending pathfinder waypoints immediately
+        // (see ForestScene for the one-frame-of-creep rationale).
+        this.world.removeComponent(this.playerId, 'CombatIntent');
+        const pf = this.world.getComponent(this.playerId, 'Pathfinder');
+        if (pf) {
+          pf.targetGrid = null;
+          pf.waypoints = null;
+          pf.computing = false;
+        }
         const hp = this.world.getComponent(this.playerId, 'Health');
         const pos = this.world.getComponent(this.playerId, 'Position');
         if (hp) {

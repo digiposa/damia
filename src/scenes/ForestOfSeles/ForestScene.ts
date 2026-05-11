@@ -576,6 +576,18 @@ export class ForestScene implements Scene {
           elapsedMs: 0,
           totalMs: DEFEND.durationMs,
         });
+        // Drop the manual combat target + pathfinder waypoints
+        // immediately. Otherwise CombatSystem's pre-defense path stays
+        // queued and Pathfinding/MovementSystem make Dart take one or two
+        // steps toward the mob during the first frame after defend before
+        // DefenseSystem clears it.
+        this.world.removeComponent(this.playerId, 'CombatIntent');
+        const pf = this.world.getComponent(this.playerId, 'Pathfinder');
+        if (pf) {
+          pf.targetGrid = null;
+          pf.waypoints = null;
+          pf.computing = false;
+        }
         // Heal 10 % of max HP at the moment of the block — the reward
         // for committing to the lock-in. Floats the actual amount
         // restored so the player gets a clear cue the defend ticked.

@@ -3,10 +3,10 @@ import type { Application, FederatedPointerEvent } from 'pixi.js';
 
 const BASE_RADIUS_PX = 60;
 const THUMB_RADIUS_PX = 28;
-/** Vertical padding from the bottom edge. Sized to clear the new hotbar
- *  strip (slot 38 + 8 padding ≈ 46 px) plus a small breathing gap so the
- *  joystick doesn't visually kiss the slots. */
-const PADDING_BOTTOM_PX = 60;
+/** Vertical padding from the bottom edge. Sized to clear the hotbar
+ *  strip (slot 48 + 12 padding = 60 px) plus a small breathing gap so
+ *  the joystick doesn't visually kiss the slots. */
+const PADDING_BOTTOM_PX = 76;
 /** Horizontal padding from the left edge — pushed close to the screen
  *  edge so the joystick feels natural for left-thumb on portrait mobile. */
 const PADDING_LEFT_PX = 8;

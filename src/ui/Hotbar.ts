@@ -1,5 +1,5 @@
 import type { Application, FederatedPointerEvent } from 'pixi.js';
-import { Container, Graphics, Text } from 'pixi.js';
+import { Container, Graphics, Rectangle, Text } from 'pixi.js';
 import { ADDITIONS, type AdditionKind } from '@data/balance';
 import { ITEMS, type ItemKind } from '@data/items';
 import { t } from '@services/I18nService';
@@ -11,14 +11,18 @@ import { Tooltip } from './Tooltip';
  *  buttons. Save data still serialises this length, so a future bump back
  *  to 8 only needs the constant change + slot 6/7 keys re-bound. */
 export const HOTBAR_SLOT_COUNT = 6;
-/** Slot square size. Compact enough that 8 slots + gaps fit a 360 px-wide
- *  portrait screen with margin (8*38 + 7*4 = 332 px). */
-const SLOT_SIZE = 38;
-const SLOT_GAP = 4;
-/** Sit flush against the bottom edge — joystick + action buttons get
- *  lifted above the hotbar (their own padding bumped to ~60 px) so they
- *  don't compete for the same row. */
-const PADDING_BOTTOM = 8;
+/** Slot square size. Bumped to 48 px to meet Material's minimum tap
+ *  target — below that, fingers miss the small visual far too easily.
+ *  6 slots * 48 + 5 * 6 = 318 px fits cleanly inside a 360 px portrait. */
+const SLOT_SIZE = 48;
+const SLOT_GAP = 6;
+/** Pixels of generous hit-area beyond the visible slot rect, on every
+ *  side. With 4 px padding the effective tap zone is 56×56 with no
+ *  visual change — drift toward the gap between slots still registers. */
+const HIT_AREA_PADDING = 4;
+/** Lift the strip a notch off the bottom edge so it clears any
+ *  system gesture bar on Android. */
+const PADDING_BOTTOM = 12;
 
 export type HotbarSlot =
   | { kind: 'addition'; addition: AdditionKind }
@@ -85,9 +89,18 @@ export class Hotbar {
         .roundRect(x, 0, SLOT_SIZE, SLOT_SIZE, 5)
         .fill({ color: 0x101010, alpha: 0.7 })
         .stroke({ width: 1, color: 0x806040, alpha: 0.8 });
-      // Make the slot frame interactive for hover tooltips + taps.
+      // Make the slot frame interactive for hover tooltips + taps. An
+      // explicit hitArea overrides the default geometry-bounds rule so
+      // taps that drift a few pixels past the visible edge still count
+      // — the gap between slots was a frequent miss zone on real fingers.
       slot.eventMode = 'static';
       slot.cursor = 'pointer';
+      slot.hitArea = new Rectangle(
+        x - HIT_AREA_PADDING,
+        -HIT_AREA_PADDING,
+        SLOT_SIZE + HIT_AREA_PADDING * 2,
+        SLOT_SIZE + HIT_AREA_PADDING * 2,
+      );
       slot.on('pointerover', () => this.showTooltipFor(i));
       slot.on('pointerout', () => this.hideTooltip());
       // Fire on pointerdown so the slot survives a `pointercancel` between

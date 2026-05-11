@@ -66,6 +66,7 @@
     "empty": "Inventaire vide",
     "noTarget": "Aucune cible",
     "noMana": "Pas assez d'item",
+    "busy": "Action en cours",
     "title": "Inventaire",
     "hotbarLabel": "Barre d'action — glisse un item ou appuie 1-8",
     "hint": "Clic gauche : sélectionner • Glisser : équiper • Clic droit : utiliser • D : jeter • Échap : fermer"

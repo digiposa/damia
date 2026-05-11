@@ -834,10 +834,15 @@ export class ForestScene implements Scene {
       }
       if (this.hotbar) {
         const inv = this.world.getComponent(this.playerId, 'Inventory');
+        const itemsLocked =
+          this.world.hasComponent(this.playerId, 'Addition') ||
+          this.world.hasComponent(this.playerId, 'Spell') ||
+          this.world.hasComponent(this.playerId, 'Defending');
         this.hotbar.setState({
           slots: this.hotbarSlots,
           additionCooldowns,
           itemCounts: inv?.items ?? {},
+          itemsLocked,
         });
       }
       if (this.additionsBar) {
@@ -1091,10 +1096,19 @@ export class ForestScene implements Scene {
     if (!this.world || this.playerId === null) return;
     if (this.playerDied) return;
     if (this.settings?.isOpen) return;
-    if (this.world.hasComponent(this.playerId, 'Addition')) return;
-    if (this.world.hasComponent(this.playerId, 'Spell')) return;
+    // Surface every "you can't use that right now" reason with a toast so
+    // the player isn't left guessing why a hotbar tap didn't fire. The
+    // hotbar also paints a dim overlay on item slots while `itemsLocked`
+    // is true (computed in update()), but the toast adds the *why*.
+    if (
+      this.world.hasComponent(this.playerId, 'Addition') ||
+      this.world.hasComponent(this.playerId, 'Spell') ||
+      this.world.hasComponent(this.playerId, 'Defending')
+    ) {
+      this.toast?.show(t('inventory.busy'));
+      return;
+    }
     if (this.world.hasComponent(this.playerId, 'Dying')) return;
-    if (this.world.hasComponent(this.playerId, 'Defending')) return;
 
     const inv = this.world.getComponent(this.playerId, 'Inventory');
     if (!inv) return;

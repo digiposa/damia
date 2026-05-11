@@ -66,6 +66,7 @@
     "empty": "Inventory empty",
     "noTarget": "No target",
     "noMana": "No items left",
+    "busy": "Action in progress",
     "title": "Inventory",
     "hotbarLabel": "Action bar — drag an item or press 1-8",
     "hint": "Left-click: select • Drag: equip • Right-click: use • D: drop • Esc: close"

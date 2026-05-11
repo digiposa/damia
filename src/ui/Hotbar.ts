@@ -32,7 +32,17 @@ export interface HotbarState {
   additionCooldowns: Partial<Record<AdditionKind, number>>;
   /** ItemKind → owned count (so the slot can show the badge). */
   itemCounts: Partial<Record<ItemKind, number>>;
+  /** True while the player is mid-Spell, mid-Addition, Defending, or
+   *  dying — anything that makes `tryConsumeItem` reject silently. The
+   *  hotbar paints a dim overlay over every item slot so the player
+   *  sees the slot is busy instead of "I tapped and nothing happened". */
+  itemsLocked?: boolean;
 }
+
+/** Brief tap-confirmation flash duration. The slot pulses for this long
+ *  on every pointerdown so the user can tell whether the tap landed,
+ *  regardless of whether the underlying action fired. */
+const FLASH_MS = 160;
 
 /**
  * Centered bottom hotbar — 8 slots labeled 1..8. Pure renderer: takes a state
@@ -47,6 +57,14 @@ export class Hotbar {
   private app: Application;
   /** Per-slot dynamic content container — cleared and repainted each frame. */
   private readonly slotContents: Container[] = [];
+  /** Per-slot tap-confirmation flash overlay — drawn on top of the slot
+   *  content for FLASH_MS after every pointerdown so the player sees the
+   *  tap landed. */
+  private readonly slotFlashes: Graphics[] = [];
+  private readonly flashUntilMs: number[] = [];
+  /** Per-slot lock overlay (dim wash) — painted while items are
+   *  unavailable. Kept separate from the flash so they layer cleanly. */
+  private readonly slotLocks: Graphics[] = [];
   /** Hover tooltip — single shared instance, hidden by default. */
   private readonly tooltip: Tooltip;
   /** Latest state passed to setState — read by hover handlers to format the tooltip. */
@@ -55,6 +73,7 @@ export class Hotbar {
    *  as hitting the matching number key (1..8). Null by default so desktop
    *  / scenes that don't wire it stay click-inert. */
   private slotTapHandler: ((slotIdx: number) => void) | null = null;
+  private tickerCb: (() => void) | null = null;
 
   constructor(app: Application) {
     this.app = app;
@@ -77,6 +96,9 @@ export class Hotbar {
       // TouchActionButtons.
       slot.on('pointerdown', (e: FederatedPointerEvent) => {
         e.stopPropagation();
+        // Pulse the slot regardless of whether the underlying action
+        // fires — the flash is the tap-landed receipt.
+        this.flashUntilMs[i] = performance.now() + FLASH_MS;
         this.slotTapHandler?.(i);
       });
       const label = new Text({
@@ -86,8 +108,19 @@ export class Hotbar {
       label.position.set(x + 4, 3);
       const content = new Container();
       content.position.set(x, 0);
-      this.container.addChild(slot, label, content);
+      const lock = new Graphics();
+      lock.position.set(x, 0);
+      lock.visible = false;
+      const flash = new Graphics();
+      flash.position.set(x, 0);
+      flash.visible = false;
+      // Order: frame → content → lock dim → flash (flash on top of
+      // everything so the tap pulse is always visible).
+      this.container.addChild(slot, label, content, lock, flash);
       this.slotContents.push(content);
+      this.slotLocks.push(lock);
+      this.slotFlashes.push(flash);
+      this.flashUntilMs.push(0);
     }
 
     // Tooltip — added LAST so it draws above the slot frames.
@@ -96,6 +129,11 @@ export class Hotbar {
 
     this.reposition();
     app.renderer.on('resize', () => this.reposition());
+
+    // Per-frame tick to fade the tap flashes. Cheap — at most
+    // HOTBAR_SLOT_COUNT Graphics redraws per frame.
+    this.tickerCb = (): void => this.refreshFlashes();
+    app.ticker.add(this.tickerCb);
   }
 
   private showTooltipFor(slotIdx: number): void {
@@ -134,9 +172,11 @@ export class Hotbar {
     for (let i = 0; i < HOTBAR_SLOT_COUNT; i++) {
       const slot = state.slots[i] ?? null;
       const container = this.slotContents[i];
-      if (!container) continue;
+      const lock = this.slotLocks[i];
+      if (!container || !lock) continue;
       if (!slot) {
         container.removeChildren().forEach((c) => c.destroy());
+        lock.visible = false;
         continue;
       }
       if (slot.kind === 'addition') {
@@ -144,11 +184,22 @@ export class Hotbar {
           size: SLOT_SIZE,
           cooldownFrac: state.additionCooldowns[slot.addition] ?? 0,
         });
+        // Additions paint their own per-cooldown dim — no whole-slot lock.
+        lock.visible = false;
       } else {
         paintItemSlot(container, slot.item, {
           size: SLOT_SIZE,
           count: state.itemCounts[slot.item] ?? 0,
         });
+        if (state.itemsLocked) {
+          lock
+            .clear()
+            .roundRect(0, 0, SLOT_SIZE, SLOT_SIZE, 5)
+            .fill({ color: 0x000000, alpha: 0.55 });
+          lock.visible = true;
+        } else {
+          lock.visible = false;
+        }
       }
     }
   }
@@ -161,8 +212,32 @@ export class Hotbar {
   }
 
   destroy(): void {
+    if (this.tickerCb) this.app.ticker.remove(this.tickerCb);
+    this.tickerCb = null;
     this.slotContents.length = 0;
+    this.slotFlashes.length = 0;
+    this.slotLocks.length = 0;
+    this.flashUntilMs.length = 0;
     this.container.destroy({ children: true });
+  }
+
+  /** Fade the tap-pulse flashes each frame. Alpha decays linearly from 1
+   *  at the tap moment to 0 at `flashUntilMs[i]`. */
+  private refreshFlashes(): void {
+    const now = performance.now();
+    for (let i = 0; i < this.slotFlashes.length; i++) {
+      const flash = this.slotFlashes[i];
+      const until = this.flashUntilMs[i] ?? 0;
+      if (!flash) continue;
+      if (until <= 0 || now >= until) {
+        if (flash.visible) flash.visible = false;
+        continue;
+      }
+      const remaining = until - now;
+      const alpha = Math.min(0.55, (remaining / FLASH_MS) * 0.55);
+      flash.clear().roundRect(0, 0, SLOT_SIZE, SLOT_SIZE, 5).fill({ color: 0xfaf6e8, alpha });
+      flash.visible = true;
+    }
   }
 
   private reposition(): void {

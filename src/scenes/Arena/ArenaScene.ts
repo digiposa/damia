@@ -107,12 +107,11 @@ export class ArenaScene implements Scene {
   private hotbarSlots: HotbarSlot[] = [null, null, null, null, null, null, null, null];
   private activeAddition: AdditionKind = 'doubleSlash';
   private joystickEmitMs = 0;
+  /** True while the joystick last set the player's Pathfinder target.
+   *  Lets us tell a Pathfinder owned by the joystick (clear on
+   *  release) from one set by a tap-to-move click (keep until Dart
+   *  arrives). */
   private joystickDriven = false;
-  /** Last direction the joystick poll committed to the pathfinder. Lets us
-   *  detect "release transients" — natural finger slides as the user
-   *  lifts off, which fire a reversed direction for a frame or two
-   *  before pointerup actually fires. */
-  private lastJoystickDir: { x: number; y: number } | null = null;
   private manualCombatLockUntilMs = 0;
   /** Run timer / kills / xp / level. Ticked each frame; the upcoming
    *  HUD + level-up modal read from it. */
@@ -749,21 +748,24 @@ export class ArenaScene implements Scene {
     });
   }
 
-  /** Touch joystick poll — see ForestScene for the full rationale. */
+  /**
+   * Touch joystick poll. Each frame:
+   *  - Finger off the joystick → clear our Pathfinder target so Dart
+   *    stops (only when we own it; tap-to-move targets stay).
+   *  - Finger held but inside the dead zone → wait, don't touch state.
+   *  - Finger held with a real direction → throttled (150 ms) emit of a
+   *    left-click on a tile ~2 tiles ahead in that direction; pathfinder
+   *    chases via the same pipeline as a real tap.
+   *
+   * `InputController.setIgnorePointerCheck` is wired to the joystick's
+   * pointer id so a lift-off that leaves the base hit area doesn't fire
+   * a spurious tap-to-move on the world.
+   */
   private pollJoystickMove(): void {
     if (!this.virtualJoystick || !this.input || !this.world || this.playerId === null) return;
-    const dir = this.virtualJoystick.direction();
-    // True end-of-input: the finger is OFF the joystick entirely. Only
-    // here do we wipe the pathfinder and reset history. A null `dir`
-    // while the finger is still touching is just a dead-zone passage
-    // (e.g., user slid through the centre while reversing direction)
-    // and must not clear state — otherwise the slide that overshoots
-    // past the centre would emit a fresh click in the new direction
-    // without the reversal filter active.
     if (!this.virtualJoystick.isHeld()) {
       if (this.joystickDriven) {
         this.joystickDriven = false;
-        this.lastJoystickDir = null;
         if (!this.world.hasComponent(this.playerId, 'CombatIntent')) {
           const pf = this.world.getComponent(this.playerId, 'Pathfinder');
           if (pf) {
@@ -775,21 +777,13 @@ export class ArenaScene implements Scene {
       }
       return;
     }
-    if (!dir) return; // held but inside dead zone — wait for real movement
-    // Suppress release transients: when the finger naturally slides off
-    // on lift-off, the joystick briefly reports a reversed direction
-    // with falling magnitude. Skipping the emit prevents Dart from
-    // stepping the wrong way in the frame before `pointerup` clears.
-    if (this.lastJoystickDir) {
-      const dot = this.lastJoystickDir.x * dir.x + this.lastJoystickDir.y * dir.y;
-      if (dot < 0 && dir.magnitude < 0.8) return;
-    }
+    const dir = this.virtualJoystick.direction();
+    if (!dir) return;
     const now = performance.now();
     if (now - this.joystickEmitMs < 150) return;
     if (now < this.manualCombatLockUntilMs) return;
     this.joystickEmitMs = now;
     this.joystickDriven = true;
-    this.lastJoystickDir = { x: dir.x, y: dir.y };
     const pos = this.world.getComponent(this.playerId, 'Position');
     if (!pos) return;
     const STEPS = 2;

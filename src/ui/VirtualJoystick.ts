@@ -132,20 +132,19 @@ export class VirtualJoystick {
     return { x: this.dirX / mag, y: this.dirY / mag, magnitude: mag };
   }
 
-  /** True while the user's finger is still on the joystick — regardless
-   *  of whether the current offset is inside the dead zone. Lets callers
-   *  distinguish a momentary slide-through-centre (still active) from a
-   *  real lift-off (finger gone). */
+  /** True while the user's finger is still on the joystick, regardless
+   *  of whether the current offset sits in the dead zone. Lets the scene
+   *  treat a dead-zone hover as "still active, just no movement" rather
+   *  than a release. */
   isHeld(): boolean {
     return this.activePointerId !== null;
   }
 
-  /** The pointer id currently owned by the joystick, or null when
-   *  released. Lets the scene's InputController identify the lift-off
-   *  event coming from this finger and skip the world-click it would
-   *  otherwise emit (the finger naturally lands outside the joystick
-   *  hit area when the thumb was pushed to an edge, which routes the
-   *  Pixi `pointerup` to the viewport). */
+  /** Pointer id currently owned by the joystick, or null when released.
+   *  Used by `InputController.setIgnorePointerCheck` so the lift-off
+   *  event — which can land outside the base hit area when the thumb
+   *  was pushed to an edge — doesn't fire a tap-to-move on whatever
+   *  world tile happens to lie under the joystick on screen. */
   getActivePointerId(): number | null {
     return this.activePointerId;
   }

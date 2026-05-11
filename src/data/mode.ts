@@ -32,10 +32,7 @@ export const MODE_TUNING: Readonly<Record<GameMode, ModeTuning>> = {
   },
   survival: {
     label: 'Survival',
-    // Temporarily set to 1.0 to test whether the "release goes south"
-    // bug on Arena is zoom-related. Will restore to 0.7 once the joystick
-    // issue is isolated.
-    cameraZoom: 1.0,
+    cameraZoom: 0.7,
     fogOfWar: false,
     targetRunSec: 1200, // 20 min target run length
   },

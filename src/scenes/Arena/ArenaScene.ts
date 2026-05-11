@@ -129,6 +129,9 @@ export class ArenaScene implements Scene {
       worldWidth: bounds.width * 2,
       worldHeight: bounds.height * 2,
     });
+    // Pull the camera out a notch so the player can read incoming waves
+    // earlier — survival relies on anticipating crowds.
+    this.viewport.setZoom(MODE_TUNING.survival.cameraZoom, true);
     ctx.app.stage.addChild(this.viewport);
 
     this.layers = new Layers();
@@ -251,11 +254,6 @@ export class ArenaScene implements Scene {
     }
 
     const playerWorld = gridToWorld(SPAWN_GX, SPAWN_GY);
-    this.viewport.moveCenter(playerWorld.x, playerWorld.y);
-    // Pull the camera out a notch so the player can read incoming waves
-    // earlier. Applied AFTER moveCenter so the zoom pivots around the
-    // player's spawn instead of the world origin.
-    this.viewport.setZoom(MODE_TUNING.survival.cameraZoom, true);
     this.viewport.moveCenter(playerWorld.x, playerWorld.y);
 
     this.input = new InputController({

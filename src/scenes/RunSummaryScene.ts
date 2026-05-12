@@ -7,6 +7,7 @@ import { RunHighScores, type SurvivalRunRecord } from '@services/RunHighScores';
 import { SafeArea } from '@services/SafeArea';
 import { ArenaScene } from './Arena/ArenaScene';
 import { TitleScene } from './TitleScene';
+import type { CharacterDef } from '@data/characters';
 
 const BTN_WIDTH = 240;
 const BTN_HEIGHT = 52;
@@ -32,6 +33,9 @@ export interface RunSummaryInput {
   wave: number;
   kills: number;
   level: number;
+  /** Character that ran. Passed back to ArenaScene on Replay so the
+   *  player keeps their pick without going back through the selector. */
+  character: CharacterDef;
 }
 
 /**
@@ -67,7 +71,7 @@ export class RunSummaryScene implements Scene {
       wave: this.input.wave,
       kills: this.input.kills,
       level: this.input.level,
-      character: 'dart',
+      character: this.input.character.id,
       savedAtMs: Date.now(),
     };
     const rank = RunHighScores.submit(record);
@@ -119,7 +123,7 @@ export class RunSummaryScene implements Scene {
     const replay = (): void => {
       playSfx('ui.click');
       queueMicrotask(() => {
-        void ctx.scenes.switchTo(new ArenaScene(), ctx);
+        void ctx.scenes.switchTo(new ArenaScene(this.input.character), ctx);
       });
     };
     const backToTitle = (): void => {

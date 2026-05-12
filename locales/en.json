@@ -106,6 +106,19 @@
     "dart": { "name": "Dart" },
     "shana": { "name": "Shana" }
   },
+  "characterSelect": {
+    "title": "Choose your character",
+    "subtitle": "Tap a card to start the run",
+    "back": "Back",
+    "pattern": {
+      "melee": "Melee",
+      "ranged": "Ranged"
+    },
+    "blurb": {
+      "dart": "Sword. Balanced, high HP, explosive additions.",
+      "shana": "Bow. Fragile but kites at range, light magic."
+    }
+  },
   "interactables": {
     "merchantComingSoon": "Merchant — Coming soon"
   },

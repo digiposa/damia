@@ -13,6 +13,7 @@ import { ARENA_MIN_SPAWN_DIST_PX, ARENA_WAVE_DURATION_MS, buildArenaWave } from 
 import { SurvivalHUD } from '@ui/SurvivalHUD';
 import { LevelUpChoiceModal } from '@ui/LevelUpChoiceModal';
 import { UPGRADES, rollUpgradeChoices, type UpgradeKind } from '@data/upgrades';
+import { DART, type CharacterDef } from '@data/characters';
 
 const ARENA_SIZE = 28;
 const SPAWN_GX = Math.floor(ARENA_SIZE / 2);
@@ -57,6 +58,10 @@ export class ArenaScene implements Scene {
   private waveSpawner: WaveSpawnerSystem | null = null;
   private survivalHud: SurvivalHUD | null = null;
   private levelUpModal: LevelUpChoiceModal | null = null;
+  /** Character to spawn. Picked by the CharacterSelectScene; defaults
+   *  to Dart for the legacy entry path where the title screen jumps
+   *  straight in (rare now that the selector exists). */
+  private readonly character: CharacterDef;
   /** Upgrades picked during this run, in pick order. Re-applied (the
    *  non-oneShot ones) on every subsequent level-up so stat bumps
    *  survive the Dart-row reset that DeathSystem performs. */
@@ -65,10 +70,21 @@ export class ArenaScene implements Scene {
    *  `update()` so multi-level XP gains chain pickers cleanly. */
   private pendingChoices = 0;
 
+  constructor(character: CharacterDef = DART) {
+    this.character = character;
+  }
+
+  /** Read by RunSummaryScene + future RunHighScores entries so the
+   *  picked character travels with the run record. */
+  getCharacter(): CharacterDef {
+    return this.character;
+  }
+
   enter(ctx: GameContext): void {
     const config: SceneConfig = {
       mode: 'survival',
       map: buildArenaMap(),
+      character: this.character,
       overrides: {
         cameraZoom: MODE_TUNING.survival.cameraZoom,
         enablePan: false,
@@ -233,7 +249,13 @@ export class ArenaScene implements Scene {
    *  controller and its ECS world are still alive. Read once and pass
    *  the snapshot into RunSummaryScene so the scene swap can tear
    *  everything down without losing the values to display. */
-  private snapshotRun(): { ms: number; wave: number; kills: number; level: number } {
+  private snapshotRun(): {
+    ms: number;
+    wave: number;
+    kills: number;
+    level: number;
+    character: CharacterDef;
+  } {
     const snap = this.runState.read();
     const wave = Math.max(1, (this.waveSpawner?.currentWave ?? 0) + 1);
     let level = 1;
@@ -241,6 +263,6 @@ export class ArenaScene implements Scene {
       const prog = this.controller.world.getComponent(this.controller.playerId, 'Progression');
       if (prog) level = prog.level;
     }
-    return { ms: snap.elapsedMs, wave, kills: snap.kills, level };
+    return { ms: snap.elapsedMs, wave, kills: snap.kills, level, character: this.character };
   }
 }

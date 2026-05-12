@@ -106,6 +106,19 @@
     "dart": { "name": "Dart" },
     "shana": { "name": "Shana" }
   },
+  "characterSelect": {
+    "title": "Choisis ton personnage",
+    "subtitle": "Toucher une carte pour lancer la run",
+    "back": "Retour",
+    "pattern": {
+      "melee": "Mêlée",
+      "ranged": "Distance"
+    },
+    "blurb": {
+      "dart": "Épée. Polyvalent, gros HP, additions explosives.",
+      "shana": "Arc. Fragile mais kite à distance, magie lumineuse."
+    }
+  },
   "interactables": {
     "merchantComingSoon": "Marchand — Bientôt disponible"
   },

@@ -7,6 +7,7 @@
  * the shape changes so old runs are cleanly ignored instead of
  * deserialising into invalid records.
  */
+import type { CharacterId } from '@data/characters';
 
 export interface SurvivalRunRecord {
   /** Time survived during the run, in milliseconds. */
@@ -17,9 +18,9 @@ export interface SurvivalRunRecord {
   kills: number;
   /** Character level reached (from the player entity's Progression). */
   level: number;
-  /** Active character. 'dart' is the only option for now; future
-   *  unlocks (Shana, Rose, …) will plug here. */
-  character: 'dart';
+  /** Active character id. Future leaderboard splits per-character
+   *  unlock criteria off this. */
+  character: CharacterId;
   /** Wall-clock timestamp when the record was saved — used to break
    *  ties on equal ms and to display "X days ago" later if we want it. */
   savedAtMs: number;
@@ -83,7 +84,7 @@ class RunHighScoresService {
       typeof r.wave === 'number' &&
       typeof r.kills === 'number' &&
       typeof r.level === 'number' &&
-      r.character === 'dart' &&
+      typeof r.character === 'string' &&
       typeof r.savedAtMs === 'number'
     );
   }

@@ -207,7 +207,7 @@ export class GameplayController {
       gy: spawn.gy,
       // Scenes can pick a character; falls back to Dart inside
       // spawnPlayer when omitted.
-      ...(config.character ? { character: config.character } : {}),
+      ...(config.character ? { avatar: config.character } : {}),
     });
 
     // Prefill inventory + hotbar (used by both Survival dev loadout and

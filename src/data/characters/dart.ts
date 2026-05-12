@@ -23,13 +23,12 @@ export const DART: CharacterAvatar = {
         doubleSlash: ['sprite.player.dart.attack', 'sprite.player.dart.doubleSlash.2'],
       },
     },
-    // Placeholder — Dragoon form sprites for Dart not generated
-    // yet, reuse the base. Commit 4 of the character refactor
-    // swaps these to dedicated PNGs.
+    // Red-Eye Dragoon form. Single pose for now — same alias drives
+    // idle / attack / defend until pose variants land.
     dragoon: {
-      idle: 'sprite.player.dart',
-      attack: 'sprite.player.dart.attack',
-      defend: 'sprite.player.dart.defend',
+      idle: 'sprite.player.dart.dragoon',
+      attack: 'sprite.player.dart.dragoon',
+      defend: 'sprite.player.dart.dragoon',
     },
   },
 };

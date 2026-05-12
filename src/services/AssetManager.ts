@@ -23,6 +23,12 @@ const MANIFEST = {
     kind: 'texture',
     url: '/assets/sprites/player/dart-doubleSlash-2.png',
   },
+  // Red-Eye Dragoon form — single pose reused for idle / attack /
+  // defend until pose variants exist.
+  'sprite.player.dart.dragoon': {
+    kind: 'texture',
+    url: '/assets/sprites/player/dart-dragoon.png',
+  },
   // Dart portrait used in the HUD (top-left of the screen, in the portrait slot).
   'ui.portrait.dart': { kind: 'texture', url: '/assets/ui/dart-portrait.png' },
 

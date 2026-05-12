@@ -19,6 +19,7 @@ import type { Pathfinder } from './Pathfinder';
 import type { Player } from './Player';
 import type { Position } from './Position';
 import type { Progression } from './Progression';
+import type { Projectile } from './Projectile';
 import type { RandomEncounter } from './RandomEncounter';
 import type { SkillCooldown } from './SkillCooldown';
 import type { Speed } from './Speed';
@@ -57,6 +58,7 @@ export interface Components {
   Spell: Spell;
   Vfx: Vfx;
   Progression: Progression;
+  Projectile: Projectile;
 }
 
 export type ComponentName = keyof Components;
@@ -83,6 +85,7 @@ export type {
   Player,
   Position,
   Progression,
+  Projectile,
   RandomEncounter,
   SkillCooldown,
   Spell,

@@ -125,6 +125,10 @@ export class RenderSystem implements System<Components> {
       }
 
       node.position.set(pos.x + swingX, pos.y + yOffset + swingY + bobY);
+      // Optional rotation (radians). Used by Projectile arrows to point
+      // along their direction-of-travel. Defaults to 0 so non-rotating
+      // sprites stay axis-aligned.
+      node.rotation = sprite.rotation ?? 0;
 
       // Compute scale every frame: fit textured nodes to the sprite's intended size
       // (otherwise they'd render at native texture resolution), then multiply by

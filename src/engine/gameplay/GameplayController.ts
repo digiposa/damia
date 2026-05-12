@@ -44,6 +44,7 @@ import { DeathSystem } from '@gameplay/systems/DeathSystem';
 import { DyingSystem } from '@gameplay/systems/DyingSystem';
 import { ItemPickupSystem } from '@gameplay/systems/ItemPickupSystem';
 import { EncounterSystem } from '@gameplay/systems/EncounterSystem';
+import { ProjectileSystem } from '@gameplay/systems/ProjectileSystem';
 
 import { RenderSystem } from '@rendering/systems/RenderSystem';
 import { FloatingTextSystem } from '@rendering/systems/FloatingTextSystem';
@@ -281,6 +282,7 @@ export class GameplayController {
     const spell = new SpellSystem();
     const pickup = new ItemPickupSystem();
     const swing = new AttackSwingSystem();
+    const projectiles = new ProjectileSystem();
     const render = new RenderSystem(this.layers);
     const floating = new FloatingTextSystem(this.layers.fx);
     const entityHud = new EntityHudSystem(this.layers.fx);
@@ -307,6 +309,11 @@ export class GameplayController {
       combat,
       pathfinding,
       movement,
+      // Projectiles tick after MovementSystem so target positions are
+      // already resolved this frame, and before DeathSystem so a
+      // killing-blow arrow drops the mob into the dying pipeline on
+      // the same tick.
+      projectiles,
       exits,
       interactables,
       defense,

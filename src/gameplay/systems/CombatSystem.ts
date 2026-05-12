@@ -3,6 +3,7 @@ import { worldToGrid } from '@core/math/iso';
 import type { Components } from '@gameplay/components';
 import { computeDamage } from '@data/balance';
 import { FLOAT_DAMAGE, spawnFloatingText } from '@gameplay/entities/floatingText';
+import { spawnProjectile } from '@gameplay/entities/projectile';
 import { playSfx } from '@services/AudioManager';
 
 const TARGET_RECHECK_MS = 100;
@@ -87,6 +88,51 @@ export class CombatSystem implements System<Components> {
 
       if (cd.remainingMs > 0) continue;
 
+      // Branch on the attacker's CharacterDef.attackPattern when
+      // present. Mobs have no Character component → fall through to
+      // melee, preserving the legacy behaviour.
+      const character = world.getComponent(id, 'Character');
+      const pattern = character?.def.attackPattern ?? 'melee';
+      const len = Math.hypot(dx, dy) || 1;
+      const dirX = dx / len;
+      const dirY = dy / len;
+
+      if (pattern === 'ranged') {
+        // Ranged: spawn an arrow projectile heading toward the current
+        // target. ProjectileSystem applies damage on collision (it
+        // also picks the actual hit target, which may be any enemy
+        // along the line — handy when the arc passes through a swarm).
+        // Spawn point is offset along the firing direction so the
+        // arrow doesn't immediately collide with the player's own
+        // hit radius. Faction lookup is safe: Faction was added on
+        // spawn for every Player/Mob.
+        const fac = world.getComponent(id, 'Faction');
+        const spawnOffsetPx = 22;
+        spawnProjectile(world, {
+          sourceId: id,
+          sourceFaction: fac?.side ?? 'player',
+          x: pos.x + dirX * spawnOffsetPx,
+          y: pos.y + dirY * spawnOffsetPx,
+          dirX,
+          dirY,
+          atk: stats.atk,
+        });
+        cd.remainingMs = 1000 / Math.max(0.1, stats.atkSpeed);
+        // AttackSwing still drives the bow-draw pose visually: a brief
+        // sprite-swap to the attack texture even though no melee lunge
+        // happens. Direction stored so the pose orientates correctly
+        // when RenderSystem grows side-facing logic later.
+        world.addComponent(id, 'AttackSwing', {
+          elapsedMs: 0,
+          totalMs: 260,
+          dirX,
+          dirY,
+        });
+        playSfx('combat.swing');
+        continue;
+      }
+
+      // Melee: immediate damage on the locked target + visual lunge.
       const defending = world.hasComponent(intent.targetId, 'Defending');
       const dmg = computeDamage(stats.atk, targetStats.def, Math.random(), defending);
       targetHealth.current = Math.max(0, targetHealth.current - dmg);
@@ -101,12 +147,11 @@ export class CombatSystem implements System<Components> {
 
       // Visual lunge: store unit-vector toward target so RenderSystem can
       // offset the attacker's sprite forward then back over `totalMs`.
-      const len = Math.hypot(dx, dy) || 1;
       world.addComponent(id, 'AttackSwing', {
         elapsedMs: 0,
         totalMs: 220,
-        dirX: dx / len,
-        dirY: dy / len,
+        dirX,
+        dirY,
       });
 
       playSfx('combat.swing');

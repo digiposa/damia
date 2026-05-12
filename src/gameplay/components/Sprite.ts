@@ -33,6 +33,11 @@ export interface Sprite {
   defendTextureAlias?: AssetAlias;
   /** Optional alias used while the entity has a Dying component. Triggers the death-animation pipeline. */
   deathTextureAlias?: AssetAlias;
+  /** Rotation in radians, applied to the rendered Pixi node. Defaults
+   *  to 0. Used by Projectile arrows to point along their flight path
+   *  — RenderSystem reads this each frame, so updating it on the
+   *  component immediately re-orients the sprite. */
+  rotation?: number;
   /**
    * Optional ordered alias frames played while the entity has an Addition component.
    * RenderSystem cycles through them by progress fraction, so a 2-frame array splits

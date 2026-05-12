@@ -1,4 +1,5 @@
 import { Container, Graphics, Sprite, Text } from 'pixi.js';
+import type { FederatedPointerEvent } from 'pixi.js';
 import type { GameContext } from '@/Game';
 import type { Scene } from './Scene';
 import { t } from '@services/I18nService';
@@ -67,10 +68,30 @@ const SELECTOR_ORDER: ReadonlyArray<CharacterId> = [
  * Round 3 will gate Shana behind a meta-progression unlock; for
  * now both characters are freely selectable.
  */
+/** Cards have to bubble pointer events to the scroll container, but if
+ *  the user drags more than this many world-px the gesture is reclassified
+ *  as a scroll and the tap-pick on the card is cancelled. */
+const SCROLL_DRAG_THRESHOLD_PX = 8;
+
 export class CharacterSelectScene implements Scene {
   readonly name = 'character-select';
   private container: Container | null = null;
   private cleanupKey: (() => void) | null = null;
+  /** Inner Container holding only the cards. Translated vertically by
+   *  the drag handlers; clipped to the scroll viewport by a mask. */
+  private cardsContainer: Container | null = null;
+  private scrollMask: Graphics | null = null;
+  /** Drag state. Captured on pointerdown over the cards area. */
+  private dragStartY: number | null = null;
+  private dragStartContainerY = 0;
+  /** Min Y for the cards container (most-scrolled-down position).
+   *  Computed once after layout — 0 when content fits the viewport
+   *  so the drag clamps to a no-op. */
+  private scrollMinY = 0;
+  /** True from the moment a pointerdown exceeds the drag threshold
+   *  until the next pointerup. Cards check this in their `pointertap`
+   *  to suppress the pick when the gesture was actually a scroll. */
+  private didScrollSinceDown = false;
 
   enter(ctx: GameContext): void {
     const { width: screenW, height: screenH } = ctx.app.screen;
@@ -110,31 +131,67 @@ export class CharacterSelectScene implements Scene {
     this.container.addChild(subtitle);
     cursorY += SUBTITLE_FONT_SIZE + HEADER_GAP;
 
+    // Reserve a band at the bottom of the screen for the Back button
+    // (+ safe-area bottom inset). The cards scroll-area spans from
+    // `cursorY` to `scrollBottom`. With 9 cards the content height
+    // (1314 px at the current dimensions) overflows the viewport on
+    // most phones, so this band needs to be scrollable.
+    const backBtnReservedHeight = BTN_HEIGHT + 24 + SafeArea.bottom;
+    const scrollTop = cursorY;
+    const scrollBottom = screenH - backBtnReservedHeight;
+    const scrollViewportHeight = Math.max(0, scrollBottom - scrollTop);
+
     const cardW = Math.min(CARD_MAX_WIDTH, screenW - 32);
+    const cards: Container[] = [];
+    let cardsCursorY = 0;
     for (const id of SELECTOR_ORDER) {
       const def = CHARACTERS[id];
       if (!def) continue;
       const unlocked = UnlockManager.isUnlocked(id);
       const card = this.buildCard(def, cardW, unlocked, (picked) => {
         if (!unlocked) return;
+        // Gesture-classification gate — if the player was scrolling,
+        // suppress the pick. Reset on pointerup so the next tap is
+        // considered fresh.
+        if (this.didScrollSinceDown) return;
         playSfx('ui.click');
         queueMicrotask(() => {
           void ctx.scenes.switchTo(new ArenaScene(picked), ctx);
         });
       });
-      card.position.set(cx - cardW / 2, cursorY);
-      this.container.addChild(card);
-      cursorY += CARD_HEIGHT + CARD_GAP;
+      card.position.set(cx - cardW / 2, cardsCursorY);
+      cards.push(card);
+      cardsCursorY += CARD_HEIGHT + CARD_GAP;
     }
+    const contentHeight = Math.max(0, cardsCursorY - CARD_GAP);
 
-    cursorY += 12;
+    // Mount the cards inside a scrollable child container. Mask
+    // clips overflow at the scroll viewport boundaries so cards
+    // don't bleed into the title or the back button.
+    this.cardsContainer = new Container({ label: 'character-select-cards' });
+    this.cardsContainer.position.set(0, scrollTop);
+    for (const card of cards) this.cardsContainer.addChild(card);
+
+    this.scrollMask = new Graphics()
+      .rect(0, scrollTop, screenW, scrollViewportHeight)
+      .fill(0xffffff);
+    this.container.addChild(this.scrollMask);
+    this.cardsContainer.mask = this.scrollMask;
+    this.container.addChild(this.cardsContainer);
+
+    // Compute the scroll range. Negative because translating the
+    // container UP scrolls the content. When content fits the
+    // viewport scrollMinY is 0 → drag handlers turn into no-ops.
+    this.scrollMinY = Math.min(0, scrollViewportHeight - contentHeight);
+    this.wireScroll(scrollTop, scrollBottom, screenW);
+
     const backBtn = this.buildBackButton(() => {
       playSfx('ui.click');
       queueMicrotask(() => {
         void ctx.scenes.switchTo(new TitleScene(), ctx);
       });
     });
-    backBtn.position.set(cx, cursorY + BTN_HEIGHT / 2);
+    backBtn.position.set(cx, screenH - SafeArea.bottom - 12 - BTN_HEIGHT / 2);
     this.container.addChild(backBtn);
 
     ctx.app.stage.addChild(this.container);
@@ -154,11 +211,65 @@ export class CharacterSelectScene implements Scene {
   exit(ctx: GameContext): void {
     this.cleanupKey?.();
     this.cleanupKey = null;
+    this.cardsContainer = null;
+    this.scrollMask = null;
     if (this.container) {
       ctx.app.stage.removeChild(this.container);
       this.container.destroy({ children: true });
       this.container = null;
     }
+  }
+
+  /** Attach pointer-drag handlers to the scene's root container so
+   *  every child event (cards, back button, gaps between cards)
+   *  bubbles into the same scroll classifier. Gestures starting
+   *  outside the scroll viewport's Y range are ignored, which keeps
+   *  taps on the back button + the title area from arming the drag
+   *  state.
+   *
+   *  The cards' own `pointertap` checks `didScrollSinceDown` to
+   *  decide whether to invoke the pick — if the gesture exceeded
+   *  the drag threshold, the tap is suppressed. */
+  private wireScroll(top: number, bottom: number, _width: number): void {
+    if (!this.container || !this.cardsContainer) return;
+    if (this.scrollMinY === 0) return; // content fits — nothing to scroll
+
+    // eventMode:'static' on the root container lets it receive
+    // bubbled federated events from any descendant.
+    this.container.eventMode = 'static';
+
+    const onDown = (e: FederatedPointerEvent): void => {
+      // Only engage drag when the gesture starts in the scroll
+      // viewport's Y range. Anything above (title / subtitle) or
+      // below (back button area) is left untouched.
+      if (e.global.y < top || e.global.y > bottom) return;
+      this.dragStartY = e.global.y;
+      this.dragStartContainerY = this.cardsContainer?.y ?? 0;
+      this.didScrollSinceDown = false;
+    };
+    const onMove = (e: FederatedPointerEvent): void => {
+      if (this.dragStartY === null || !this.cardsContainer) return;
+      const delta = e.global.y - this.dragStartY;
+      if (Math.abs(delta) > SCROLL_DRAG_THRESHOLD_PX) {
+        this.didScrollSinceDown = true;
+      }
+      // top is the absolute viewport-Y where the cards container
+      // starts at rest. Translate that base by the drag delta and
+      // clamp to [top + scrollMinY, top]. scrollMinY ≤ 0 so the
+      // clamp shifts the container UP (negative delta accumulated).
+      const next = Math.max(top + this.scrollMinY, Math.min(top, this.dragStartContainerY + delta));
+      this.cardsContainer.y = next;
+    };
+    const onUp = (): void => {
+      this.dragStartY = null;
+      // didScrollSinceDown stays true through the bubbling
+      // pointertap on the card so the pick is suppressed; the next
+      // pointerdown resets it (in `onDown` above).
+    };
+    this.container.on('pointerdown', onDown);
+    this.container.on('pointermove', onMove);
+    this.container.on('pointerup', onUp);
+    this.container.on('pointerupoutside', onUp);
   }
 
   update(): void {}

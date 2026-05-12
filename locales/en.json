@@ -114,9 +114,32 @@
     "kongol": { "name": "Kongol" },
     "miranda": { "name": "Miranda" }
   },
+  "archetype": {
+    "redEyeDragoon": { "name": "Red-Eye Dragoon" },
+    "jadeDragoon": { "name": "Jade Dragoon" },
+    "whiteSilverDragoon": { "name": "White-Silver Dragoon" },
+    "darkBurstDragoon": { "name": "Dark Burst Dragoon" },
+    "violetDragoon": { "name": "Violet Dragoon" },
+    "blueSeaDragoon": { "name": "Blue-Sea Dragoon" },
+    "goldenDragoon": { "name": "Golden Dragoon" }
+  },
+  "element": {
+    "fire": "Fire",
+    "water": "Water",
+    "wind": "Wind",
+    "earth": "Earth",
+    "thunder": "Thunder",
+    "light": "Light",
+    "darkness": "Darkness",
+    "divine": "Divine"
+  },
   "characterSelect": {
     "title": "Choose your character",
     "subtitle": "Tap a card to start the run",
+    "submodalTitle": "Available skins",
+    "submodalSubtitle": "Tap an avatar to start",
+    "skinCount": "{{n}} skin",
+    "skinCountPlural": "{{n}} skins",
     "back": "Back",
     "locked": "Locked",
     "pattern": {

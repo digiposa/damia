@@ -17,7 +17,7 @@
  * CharacterId = AvatarId, CHARACTERS = AVATARS) keep older
  * consumer code compiling while the migration lands.
  */
-import type { AvatarId, CharacterAvatar } from './types';
+import type { ArchetypeId, AvatarId, CharacterAvatar } from './types';
 import { ARCHETYPES } from './archetypes';
 import { DART } from './dart';
 import { LAVITZ } from './lavitz';
@@ -40,6 +40,36 @@ export const AVATARS: Partial<Record<AvatarId, CharacterAvatar>> = {
   meru: MERU,
   kongol: KONGOL,
 };
+
+/**
+ * Per-archetype list of avatars, in canonical TLoD party-join
+ * order. The first entry is the archetype's "visage" — used as
+ * the portrait + name on the main selector card when the avatar
+ * selection is implicit. Future Survival skins (Shirley for
+ * White-Silver, Damia for Blue-Sea, Graham / Syuveh for Jade,
+ * Zieg for Red-Eye) slot into their archetype's list when their
+ * avatar files land. */
+export const AVATARS_BY_ARCHETYPE: Record<ArchetypeId, ReadonlyArray<CharacterAvatar>> = {
+  redEyeDragoon: [DART],
+  jadeDragoon: [LAVITZ, ALBERT],
+  whiteSilverDragoon: [SHANA, MIRANDA],
+  darkBurstDragoon: [ROSE],
+  violetDragoon: [HASCHEL],
+  blueSeaDragoon: [MERU],
+  goldenDragoon: [KONGOL],
+};
+
+/** Display order of the archetype cards on the selector. Mirrors
+ *  TLoD's narrative join sequence. */
+export const ARCHETYPE_ORDER: ReadonlyArray<ArchetypeId> = [
+  'redEyeDragoon',
+  'jadeDragoon',
+  'whiteSilverDragoon',
+  'darkBurstDragoon',
+  'violetDragoon',
+  'blueSeaDragoon',
+  'goldenDragoon',
+];
 
 /** Default playable avatar — Dart. Used as a fallback when a
  *  scene config doesn't specify one. */

@@ -114,9 +114,32 @@
     "kongol": { "name": "Kongol" },
     "miranda": { "name": "Miranda" }
   },
+  "archetype": {
+    "redEyeDragoon": { "name": "Dragoon de Feu" },
+    "jadeDragoon": { "name": "Dragoon de Vent" },
+    "whiteSilverDragoon": { "name": "Dragoon de Lumière" },
+    "darkBurstDragoon": { "name": "Dragoon des Ténèbres" },
+    "violetDragoon": { "name": "Dragoon de Foudre" },
+    "blueSeaDragoon": { "name": "Dragoon d'Eau" },
+    "goldenDragoon": { "name": "Dragoon de Terre" }
+  },
+  "element": {
+    "fire": "Feu",
+    "water": "Eau",
+    "wind": "Vent",
+    "earth": "Terre",
+    "thunder": "Foudre",
+    "light": "Lumière",
+    "darkness": "Ténèbres",
+    "divine": "Divin"
+  },
   "characterSelect": {
     "title": "Choisis ton personnage",
     "subtitle": "Toucher une carte pour lancer la run",
+    "submodalTitle": "Skins disponibles",
+    "submodalSubtitle": "Toucher un avatar pour lancer",
+    "skinCount": "{{n}} skin",
+    "skinCountPlural": "{{n}} skins",
     "back": "Retour",
     "locked": "Verrouillé",
     "pattern": {

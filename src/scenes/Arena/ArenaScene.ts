@@ -7,14 +7,17 @@ import { TitleScene } from '../TitleScene';
 import { GameOverScene } from '../GameOverScene';
 import { RunState } from '@/store/RunState';
 import { MODE_TUNING } from '@data/mode';
+import { MOBS } from '@data/balance';
+import { WaveSpawnerSystem } from '@gameplay/systems/WaveSpawnerSystem';
+import { ARENA_MIN_SPAWN_DIST_PX, ARENA_WAVE_DURATION_MS, buildArenaWave } from '@data/arenaWaves';
 
 const ARENA_SIZE = 28;
 const SPAWN_GX = Math.floor(ARENA_SIZE / 2);
 const SPAWN_GY = Math.floor(ARENA_SIZE / 2);
 
-/** Flat 28×28 arena with a placeholder mob ring around the centre.
- *  Replaced by the `WaveSpawnerSystem` once that ships — for now the
- *  ring is just enough mobs to test combat. */
+/** Flat 28×28 arena with no pre-placed mobs — every enemy in Survival
+ *  comes from `WaveSpawnerSystem` so the difficulty curve stays in one
+ *  place (data/arenaWaves.ts). */
 function buildArenaMap(): MapData {
   return {
     name: 'arena',
@@ -23,12 +26,7 @@ function buildArenaMap(): MapData {
     pathZones: [{ x: 0, y: 0, w: ARENA_SIZE, h: ARENA_SIZE }],
     props: [],
     exits: [],
-    mobs: [
-      { kind: 'berserkMouse', gx: SPAWN_GX - 5, gy: SPAWN_GY - 4 },
-      { kind: 'goblin', gx: SPAWN_GX + 5, gy: SPAWN_GY - 4 },
-      { kind: 'berserkMouse', gx: SPAWN_GX - 5, gy: SPAWN_GY + 4 },
-      { kind: 'goblin', gx: SPAWN_GX + 5, gy: SPAWN_GY + 4 },
-    ],
+    mobs: [],
     interactables: [],
   };
 }
@@ -37,20 +35,22 @@ function buildArenaMap(): MapData {
  * Survival arena. Reuses the full gameplay pipeline from
  * `GameplayController` — only mode-specific bits live here:
  *
- *  - `RunState` tracks elapsed run time + kills + run level.
- *  - HUD's level / xp slots are hijacked to surface kills + run level
- *    until the dedicated survival HUD overlay lands.
- *  - Death routes to `GameOverScene('survival')` so the restart button
- *    spawns a fresh arena instead of dropping the player into Forest.
- *
- * Wave spawning + level-up choices + run summary land in subsequent
- * commits; this scene is the lightest possible shell that proves the
- * controller works end-to-end with `mode: 'survival'`.
+ *  - `RunState` tracks elapsed run time + kills + per-run level / XP
+ *    (independent of the player entity's `Progression` component, which
+ *    is Story-only).
+ *  - `WaveSpawnerSystem` ticks alongside the controller, spawning mobs
+ *    on the arena edges in waves of rising difficulty. Endless: the
+ *    `buildArenaWave(idx)` curve never plateaus.
+ *  - HUD's level / XP slots are temporarily hijacked to surface kills +
+ *    run level until the dedicated SurvivalHUD overlay ships.
+ *  - Death routes to `GameOverScene('survival')` so restart spawns a
+ *    fresh arena instead of dropping the player into Forest.
  */
 export class ArenaScene implements Scene {
   readonly name = 'arena';
   private controller: GameplayController | null = null;
   private readonly runState = new RunState();
+  private waveSpawner: WaveSpawnerSystem | null = null;
 
   enter(ctx: GameContext): void {
     const config: SceneConfig = {
@@ -94,6 +94,10 @@ export class ArenaScene implements Scene {
             void ctx.scenes.switchTo(new TitleScene(), ctx);
           });
         },
+        onMobDeath: (kind) => {
+          // Survival's per-run progression: count + per-mob XP.
+          this.runState.recordKill(MOBS[kind].xp);
+        },
         onTickHUD: (hud) => {
           // Surface run stats in the level / XP slots until the
           // dedicated survival HUD ships.
@@ -104,18 +108,40 @@ export class ArenaScene implements Scene {
       },
     };
     this.controller = new GameplayController(ctx, config);
+
+    // Wave director — ticks outside the controller's ECS pipeline so
+    // survival-only logic stays out of the shared engine. Reads the
+    // controller's player + mob registry through closures.
+    const controller = this.controller;
+    this.waveSpawner = new WaveSpawnerSystem({
+      waveDurationMs: ARENA_WAVE_DURATION_MS,
+      buildWave: (idx) => buildArenaWave(idx),
+      arenaSize: { width: ARENA_SIZE, height: ARENA_SIZE },
+      // Arena has no obstacles; every in-bounds cell is walkable.
+      isWalkable: () => true,
+      getPlayerEntity: () => controller.playerId,
+      minPlayerDistPx: ARENA_MIN_SPAWN_DIST_PX,
+      onSpawn: (entity, kind) => {
+        controller.mobKinds.set(entity, kind);
+      },
+    });
   }
 
   exit(ctx: GameContext): void {
     this.controller?.destroy();
     this.controller = null;
-    // Silence "unused" until the controller's exit needs ctx (it doesn't
-    // today — destroy handles teardown internally).
+    this.waveSpawner = null;
     void ctx;
   }
 
   update(dt: number): void {
     this.controller?.update(dt);
+    // Pause the run timer + wave drip when a modal owns input — same
+    // gate the controller uses for its ECS pipeline.
+    if (this.controller?.ui.isPaused()) return;
     this.runState.tick(dt);
+    if (this.controller && this.waveSpawner) {
+      this.waveSpawner.update(dt, this.controller.world);
+    }
   }
 }

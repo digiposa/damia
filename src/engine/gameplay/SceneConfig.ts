@@ -14,7 +14,7 @@ import type { GameMode } from '@data/mode';
 import type { MapData } from '@scenes/ForestOfSeles/MapLoader';
 import type { MusicAlias } from '@services/AudioManager';
 import type { ItemKind } from '@data/items';
-import type { AdditionKind } from '@data/balance';
+import type { AdditionKind, MobKind } from '@data/balance';
 import type { Components, Exit, Interactable } from '@gameplay/components';
 import type { Entity, World } from '@core/ecs';
 import type { GameContext } from '@/Game';
@@ -88,6 +88,10 @@ export interface SceneHooks {
   onTickHotbar?: (hotbar: Hotbar, world: World<Components>, playerId: Entity) => void;
   /** Mob pickup landed in the player inventory. */
   onPickup?: (kind: ItemKind, result: 'ok' | 'full' | 'gold', gold?: number) => void;
+  /** A mob died. Fired exactly once per mob (Survival counts kills via
+   *  this hook). The DeathSystem already handles XP / loot / death sfx
+   *  internally — the hook is purely a notification channel. */
+  onMobDeath?: (kind: MobKind) => void;
   /** Player chose "Drop" in the inventory panel. Story scenes spawn a
    *  pickable Item entity on the ground; Survival no-ops so the test
    *  loadout can't be wasted. */

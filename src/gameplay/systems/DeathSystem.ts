@@ -9,6 +9,7 @@ import { xpThresholdForLevel } from '@data/progression';
 import { playSfx } from '@services/AudioManager';
 
 export type PlayerDeathListener = () => void;
+export type MobDeathListener = (kind: MobKind) => void;
 
 /**
  * Sweeps entities at or below 0 HP. Players trigger Game Over (via listener).
@@ -19,12 +20,20 @@ export type PlayerDeathListener = () => void;
  */
 export class DeathSystem implements System<Components> {
   private listener: PlayerDeathListener | null = null;
+  private mobListener: MobDeathListener | null = null;
   private playerDeathFired = false;
 
   constructor(private readonly mobKindResolver?: (id: number) => MobKind | null) {}
 
   onPlayerDeath(listener: PlayerDeathListener): void {
     this.listener = listener;
+  }
+
+  /** Notification fired exactly once per mob death — Survival's
+   *  RunState reads this to count kills and route XP into the
+   *  per-run level curve. */
+  onMobDeath(listener: MobDeathListener): void {
+    this.mobListener = listener;
   }
 
   update(_dt: number, world: World<Components>): void {
@@ -45,6 +54,7 @@ export class DeathSystem implements System<Components> {
 
       const pos = world.getComponent(id, 'Position');
       const mobKind = this.mobKindResolver?.(id) ?? null;
+      if (mobKind) this.mobListener?.(mobKind);
       if (pos && mobKind) {
         const xp = MOBS[mobKind].xp;
         if (xp > 0) {
@@ -85,6 +95,7 @@ export class DeathSystem implements System<Components> {
 
   destroy(): void {
     this.listener = null;
+    this.mobListener = null;
     this.playerDeathFired = false;
   }
 

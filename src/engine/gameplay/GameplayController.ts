@@ -431,6 +431,9 @@ export class GameplayController {
     death.onMobDeath((kind) => {
       this.config.hooks?.onMobDeath?.(kind);
     });
+    death.onPlayerLevelUp((level) => {
+      this.config.hooks?.onPlayerLevelUp?.(level);
+    });
     exits.onTrigger(({ exit }) => {
       this.config.hooks?.onZoneExit?.(ctx, exit);
     });

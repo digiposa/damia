@@ -29,6 +29,28 @@
       "topScores": "Top scores",
       "noScores": "—",
       "replay": "Replay"
+    },
+    "levelup": {
+      "title": "Level up!",
+      "subtitle": "Pick an upgrade"
+    },
+    "upgrades": {
+      "atk": { "name": "Attack +{{n}}", "desc": "Physical attack +{{n}}." },
+      "def": { "name": "Defense +{{n}}", "desc": "Physical defense +{{n}}." },
+      "magicAtk": { "name": "Magic +{{n}}", "desc": "Magical attack +{{n}}." },
+      "magicDef": { "name": "Resist +{{n}}", "desc": "Magical defense +{{n}}." },
+      "hpMax": { "name": "Vitality +{{n}}", "desc": "Max HP +{{n}}." },
+      "atkSpeed": { "name": "Haste +{{n}}%", "desc": "Attack speed +{{n}}%." },
+      "range": { "name": "Reach +{{n}}%", "desc": "Attack range +{{n}}%." },
+      "moveSpeed": { "name": "Swiftness +{{n}}%", "desc": "Movement speed +{{n}}%." },
+      "freeBurnout": {
+        "name": "Unlimited Burnout",
+        "desc": "Burnout becomes free for the rest of the run."
+      },
+      "freeGushingMagma": {
+        "name": "Unlimited Gushing Magma",
+        "desc": "Gushing Magma becomes free for the rest of the run."
+      }
     }
   },
   "settings": {

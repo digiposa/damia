@@ -10,6 +10,7 @@ import { playSfx } from '@services/AudioManager';
 
 export type PlayerDeathListener = () => void;
 export type MobDeathListener = (kind: MobKind) => void;
+export type PlayerLevelUpListener = (level: number) => void;
 
 export interface DeathSystemOptions {
   mobKindResolver?: (id: number) => MobKind | null;
@@ -33,6 +34,7 @@ export interface DeathSystemOptions {
 export class DeathSystem implements System<Components> {
   private listener: PlayerDeathListener | null = null;
   private mobListener: MobDeathListener | null = null;
+  private levelUpListener: PlayerLevelUpListener | null = null;
   private playerDeathFired = false;
   private readonly mobKindResolver: ((id: number) => MobKind | null) | undefined;
   private readonly awardPlayerXp: boolean;
@@ -58,6 +60,16 @@ export class DeathSystem implements System<Components> {
    *  per-run level curve. */
   onMobDeath(listener: MobDeathListener): void {
     this.mobListener = listener;
+  }
+
+  /** Notification fired once per player level-up (multiple times on
+   *  the same frame if a single XP gain crosses several thresholds).
+   *  Fires AFTER the Dart row + full heal have been applied, so scene
+   *  hooks can layer their own bonuses on top (e.g. Survival's
+   *  LevelUpChoiceModal upgrade re-application). No-op when
+   *  awardPlayerXp is false (mob kills don't level the player). */
+  onPlayerLevelUp(listener: PlayerLevelUpListener): void {
+    this.levelUpListener = listener;
   }
 
   update(_dt: number, world: World<Components>): void {
@@ -155,6 +167,10 @@ export class DeathSystem implements System<Components> {
         durationMs: 1400,
       });
       playSfx('items.pickup');
+      // Fire AFTER the Dart row + heal so listeners observe the new
+      // canonical stats and can layer their own modifiers on top
+      // (Survival's run-upgrade re-application path).
+      this.levelUpListener?.(prog.level);
     }
   }
 }

@@ -106,6 +106,12 @@ export interface SceneHooks {
    *  level. Drives the AdditionsBar repaint and the touch picker. Defaults
    *  to `[active]` when omitted. */
   unlockedAdditions?: (level: number) => ReadonlyArray<AdditionKind>;
+  /** Player crossed an XP threshold. Fires AFTER the Dart row + full
+   *  heal have been applied, once per level gained (twice in one tick
+   *  if a single XP award crossed two thresholds). Survival hooks here
+   *  to re-apply accumulated run upgrades and pop the LevelUpChoiceModal;
+   *  Story scenes ignore it for now. */
+  onPlayerLevelUp?: (level: number) => void;
 }
 
 /** Snapshot of the live gameplay state. Passed to `onPersist` so the

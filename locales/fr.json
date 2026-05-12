@@ -105,7 +105,8 @@
   },
   "character": {
     "dart": { "name": "Dart" },
-    "shana": { "name": "Shana" }
+    "shana": { "name": "Shana" },
+    "meru": { "name": "Meru" }
   },
   "characterSelect": {
     "title": "Choisis ton personnage",
@@ -118,10 +119,12 @@
     },
     "blurb": {
       "dart": "Épée. Polyvalent, gros HP, additions explosives.",
-      "shana": "Arc. Fragile mais kite à distance, magie lumineuse."
+      "shana": "Arc. Fragile mais kite à distance, magie lumineuse.",
+      "meru": "Marteau. Mêlée rapide, agile, magie aquatique."
     },
     "unlockHint": {
-      "shana": "Atteins la vague 5 en Survival pour débloquer."
+      "shana": "Atteins la vague 5 en Survival pour débloquer.",
+      "meru": "Atteins la vague 10 et 50 tués pour débloquer."
     }
   },
   "interactables": {

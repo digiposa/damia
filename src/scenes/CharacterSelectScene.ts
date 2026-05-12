@@ -35,7 +35,7 @@ const SUBTITLE_FONT_SIZE = 14;
 /** Order in which characters appear in the selector. Future
  *  additions slot in here; locked entries (Round 3) will hide
  *  themselves via the `UnlockManager`. */
-const SELECTOR_ORDER: ReadonlyArray<CharacterId> = ['dart', 'shana'];
+const SELECTOR_ORDER: ReadonlyArray<CharacterId> = ['dart', 'shana', 'meru'];
 
 /**
  * Pre-run character picker for Survival mode. Sits between the

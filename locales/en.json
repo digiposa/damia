@@ -105,7 +105,8 @@
   },
   "character": {
     "dart": { "name": "Dart" },
-    "shana": { "name": "Shana" }
+    "shana": { "name": "Shana" },
+    "meru": { "name": "Meru" }
   },
   "characterSelect": {
     "title": "Choose your character",
@@ -118,10 +119,12 @@
     },
     "blurb": {
       "dart": "Sword. Balanced, high HP, explosive additions.",
-      "shana": "Bow. Fragile but kites at range, light magic."
+      "shana": "Bow. Fragile but kites at range, light magic.",
+      "meru": "Hammer. Fast melee, agile, water magic."
     },
     "unlockHint": {
-      "shana": "Reach wave 5 in Survival to unlock."
+      "shana": "Reach wave 5 in Survival to unlock.",
+      "meru": "Reach wave 10 with 50 kills to unlock."
     }
   },
   "interactables": {

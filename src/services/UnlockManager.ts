@@ -27,6 +27,11 @@ const UNLOCK_CRITERIA: Partial<Record<CharacterId, (record: SurvivalRunRecord) =
   // Hits ~ 2 min in so first-time players bump into it during their
   // second or third attempt. Easy to bump later if the bar feels off.
   shana: (r) => r.wave >= 5,
+  // Meru — second meta-unlock. Bumped to wave 10 + 50 kills so the
+  // player has to genuinely survive past Fruegel's boss wave before
+  // earning the wind dancer. The double criterion guards against a
+  // very-low-kills wave-skipper exploit (running away from spawns).
+  meru: (r) => r.wave >= 10 && r.kills >= 50,
 };
 
 class UnlockManagerService {
@@ -126,4 +131,5 @@ export const UnlockManager = new UnlockManagerService();
  *  characters that aren't gated. */
 export const UNLOCK_HINT_KEYS: Partial<Record<CharacterId, string>> = {
   shana: 'characterSelect.unlockHint.shana',
+  meru: 'characterSelect.unlockHint.meru',
 };

@@ -41,6 +41,19 @@ const MANIFEST = {
     kind: 'texture',
     url: '/assets/sprites/player/shana.png',
   },
+
+  // Meru — Wind/Water Dragoon (TLoD's Blue-Sea Dragoon). Single
+  // pose available for now, reused across idle / attack / defend.
+  // Replace with dedicated PNGs as soon as we have pose variants.
+  'sprite.player.meru': { kind: 'texture', url: '/assets/sprites/player/meru.png' },
+  'sprite.player.meru.attack': {
+    kind: 'texture',
+    url: '/assets/sprites/player/meru.png',
+  },
+  'sprite.player.meru.defend': {
+    kind: 'texture',
+    url: '/assets/sprites/player/meru.png',
+  },
   // Main menu background (TLoD title screen).
   'ui.mainscreen': { kind: 'texture', url: '/assets/ui/mainscreen.jpg' },
   // Endiness overworld map — backdrop of WorldMapScene with fog-of-war markers.

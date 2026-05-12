@@ -69,6 +69,11 @@ export class ArenaScene implements Scene {
         showAdditionsBar: false,
         showEncounterIndicator: false,
         musicAlias: 'music.forestAmbient',
+        // Survival runs its own XP curve through `RunState`. Disable the
+        // Story-side Progression bump so the player isn't mid-run healed
+        // to full and given Dart's TLoD stat row each time the cumulative
+        // XP crosses a Story threshold (LV 2 hits at just 20 XP).
+        awardPlayerXp: false,
       },
       // Dev loadout so the spell / heal flow is testable without
       // loot drops. TODO: remove once level-up rewards exist.

@@ -11,6 +11,18 @@ import { playSfx } from '@services/AudioManager';
 export type PlayerDeathListener = () => void;
 export type MobDeathListener = (kind: MobKind) => void;
 
+export interface DeathSystemOptions {
+  mobKindResolver?: (id: number) => MobKind | null;
+  /** When false, the system fires `onMobDeath` but does NOT touch the
+   *  player's `Progression` component or apply Dart's stat row. Survival
+   *  needs this: it runs its own per-run XP curve in `RunState`, and
+   *  letting Story's level-up logic also tick would (a) heal the player
+   *  to full at every Story-level threshold (~LV 2 at 20 XP) and (b)
+   *  inflate Dart's stats mid-run. Defaults to true so Story zones keep
+   *  the TLoD-canonical Progression behaviour. */
+  awardPlayerXp?: boolean;
+}
+
 /**
  * Sweeps entities at or below 0 HP. Players trigger Game Over (via listener).
  * Other entities are destroyed and yield XP + a chance for a loot drop.
@@ -22,8 +34,20 @@ export class DeathSystem implements System<Components> {
   private listener: PlayerDeathListener | null = null;
   private mobListener: MobDeathListener | null = null;
   private playerDeathFired = false;
+  private readonly mobKindResolver: ((id: number) => MobKind | null) | undefined;
+  private readonly awardPlayerXp: boolean;
 
-  constructor(private readonly mobKindResolver?: (id: number) => MobKind | null) {}
+  constructor(options?: DeathSystemOptions | ((id: number) => MobKind | null)) {
+    // Back-compat: legacy callers passed the resolver function directly.
+    // Keep that path working so we don't have to touch every scene at once.
+    if (typeof options === 'function') {
+      this.mobKindResolver = options;
+      this.awardPlayerXp = true;
+    } else {
+      this.mobKindResolver = options?.mobKindResolver;
+      this.awardPlayerXp = options?.awardPlayerXp ?? true;
+    }
+  }
 
   onPlayerDeath(listener: PlayerDeathListener): void {
     this.listener = listener;
@@ -65,7 +89,7 @@ export class DeathSystem implements System<Components> {
             color: 0xffe27a,
             durationMs: 1100,
           });
-          this.awardXp(world, xp, pos.x, pos.y);
+          if (this.awardPlayerXp) this.awardXp(world, xp, pos.x, pos.y);
         }
         const loot = rollLoot(Math.random(), Math.random());
         if (loot) {

@@ -266,7 +266,10 @@ export class GameplayController {
     const exits = new ExitSystem();
     const interactables = new InteractableSystem();
     const defense = new DefenseSystem();
-    const death = new DeathSystem((id) => this.mobKinds.get(id) ?? null);
+    const death = new DeathSystem({
+      mobKindResolver: (id) => this.mobKinds.get(id) ?? null,
+      awardPlayerXp: o.awardPlayerXp ?? true,
+    });
     const dying = new DyingSystem();
     const addition = new AdditionSystem();
     const spell = new SpellSystem();

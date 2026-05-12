@@ -61,6 +61,12 @@ export interface SceneOverrides {
   musicAlias?: MusicAlias;
   /** Override the player spawn (defaults to `map.spawn`). */
   spawnOverride?: { gx: number; gy: number };
+  /** When false, mob kills no longer write to the player's `Progression`
+   *  component or trigger the Dart-row level-up heal. Survival flips this
+   *  off because it owns a separate per-run XP curve (in `RunState`) and
+   *  Story-style level-ups would mid-run inflate HP / stats on top of it.
+   *  Defaults to true (Story behaviour preserved). */
+  awardPlayerXp?: boolean;
 }
 
 /** Optional callbacks the controller invokes when scene-specific

@@ -78,6 +78,12 @@ export function spawnPlayer(world: World<Components>, opts: SpawnPlayerOptions):
   world.addComponent(id, 'AttackCooldown', { remainingMs: 0 });
   world.addComponent(id, 'SkillCooldown', { remainingMs: {} });
   world.addComponent(id, 'Inventory', { items: {}, gold: 0 });
+  // SP gauge — fills via combat actions, drives the Dragoon
+  // transformation. Per-archetype cap (see DragoonConfig.spMax).
+  world.addComponent(id, 'SpGauge', {
+    current: 0,
+    max: archetype.dragoon.spMax,
+  });
   // xpToNext = cumulative XP threshold to reach LV 2 (= 20 for Dart).
   world.addComponent(id, 'Progression', {
     level: 1,

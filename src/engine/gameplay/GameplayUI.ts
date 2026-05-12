@@ -57,6 +57,10 @@ export interface GameplayUIHandlers {
   onTouchDefend: () => void;
   getIsDefending: () => boolean;
   getDefendCooldownFrac: () => number;
+  // Dragoon transform — fourth touch button, SP-gated.
+  onTouchDragoonTransform: () => void;
+  getIsDragoonActive: () => boolean;
+  getDragoonSpFrac: () => number;
   // Additions bar (desktop only)
   onAdditionsBarSelect: (kind: AdditionKind) => void;
 }
@@ -162,6 +166,9 @@ export class GameplayUI {
         onDefend: handlers.onTouchDefend,
         isDefending: handlers.getIsDefending,
         defendCooldownFrac: handlers.getDefendCooldownFrac,
+        onDragoonTransform: handlers.onTouchDragoonTransform,
+        isDragoonActive: handlers.getIsDragoonActive,
+        dragoonSpFrac: handlers.getDragoonSpFrac,
       });
       layers.ui.addChild(this.touchActionButtons.container);
 

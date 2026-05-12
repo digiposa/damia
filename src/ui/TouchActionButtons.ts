@@ -70,6 +70,17 @@ export class TouchActionButtons {
       onDefend: () => void;
       isDefending: () => boolean;
       defendCooldownFrac: () => number;
+      /** Tap-trigger for the Dragoon transformation. The handler
+       *  is expected to no-op when the conditions aren't met (SP
+       *  not full, already transformed, etc.) — the button stays
+       *  active visually so the radial fill is always readable. */
+      onDragoonTransform: () => void;
+      /** True while the player is currently in Dragoon form. Drives
+       *  the gold-active tint on the button. */
+      isDragoonActive: () => boolean;
+      /** 0..1 fill fraction for the SP gauge (cooldownFrac drains
+       *  the inverse — so 0 SP → fully dim, full SP → fully bright). */
+      dragoonSpFrac: () => number;
     },
   ) {
     this.app = app;
@@ -93,6 +104,18 @@ export class TouchActionButtons {
         onTap: handlers.onDefend,
         isActive: handlers.isDefending,
         cooldownFrac: handlers.defendCooldownFrac,
+      },
+      {
+        // Dragoon transform — bottom of the stack. The cooldown
+        // radial inverts to a fill: empty (dark) when SP gauge is
+        // 0, fully bright when SP is full. The handler decides
+        // whether the tap actually triggers the form (or no-ops
+        // when conditions aren't met).
+        label: 'DR',
+        radius: BTN_MEDIUM,
+        onTap: handlers.onDragoonTransform,
+        isActive: handlers.isDragoonActive,
+        cooldownFrac: () => 1 - handlers.dragoonSpFrac(),
       },
     ];
 

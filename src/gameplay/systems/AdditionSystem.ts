@@ -2,6 +2,7 @@ import type { System, World } from '@core/ecs';
 import type { Components } from '@gameplay/components';
 import { ADDITIONS, computeDamage, type AdditionKind } from '@data/balance';
 import { FLOAT_DAMAGE, spawnFloatingText } from '@gameplay/entities/floatingText';
+import { addSp } from '@gameplay/sp';
 import { playSfx } from '@services/AudioManager';
 
 /**
@@ -51,6 +52,14 @@ export class AdditionSystem implements System<Components> {
       }
 
       if (add.elapsedMs >= def.totalMs) {
+        // Addition complete — credit the attacker's SP gauge if it
+        // has one (player only, mobs don't have Character +
+        // SpGauge). Per-archetype gain rate; ranged archetypes set
+        // this to 0 because they gain SP on auto-attacks instead.
+        const character = world.getComponent(id, 'Character');
+        if (character) {
+          addSp(world, id, character.avatar.archetype.dragoon.spGainPerAddition);
+        }
         world.removeComponent(id, 'Addition');
       }
     }

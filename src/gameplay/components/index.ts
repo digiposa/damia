@@ -6,6 +6,7 @@ import type { Character } from './Character';
 import type { Collider } from './Collider';
 import type { CombatIntent } from './CombatIntent';
 import type { Defending } from './Defending';
+import type { Dragoon } from './Dragoon';
 import type { Dying } from './Dying';
 import type { Exit } from './Exit';
 import type { Faction } from './Faction';
@@ -23,6 +24,7 @@ import type { Projectile } from './Projectile';
 import type { RandomEncounter } from './RandomEncounter';
 import type { SkillCooldown } from './SkillCooldown';
 import type { Speed } from './Speed';
+import type { SpGauge } from './SpGauge';
 import type { Spell } from './Spell';
 import type { Sprite } from './Sprite';
 import type { Vfx } from './Vfx';
@@ -35,6 +37,7 @@ export interface Components {
   Player: Player;
   Pathfinder: Pathfinder;
   Speed: Speed;
+  SpGauge: SpGauge;
   Collider: Collider;
   Exit: Exit;
   Health: Health;
@@ -44,6 +47,7 @@ export interface Components {
   CombatIntent: CombatIntent;
   AttackCooldown: AttackCooldown;
   Defending: Defending;
+  Dragoon: Dragoon;
   Dying: Dying;
   FloatingText: FloatingText;
   AI: AI;
@@ -72,6 +76,7 @@ export type {
   Collider,
   CombatIntent,
   Defending,
+  Dragoon,
   Dying,
   Exit,
   Faction,
@@ -90,6 +95,7 @@ export type {
   SkillCooldown,
   Spell,
   Speed,
+  SpGauge,
   Sprite,
   Stats,
   Vfx,

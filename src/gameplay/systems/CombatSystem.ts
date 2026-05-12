@@ -4,6 +4,7 @@ import type { Components } from '@gameplay/components';
 import { computeDamage } from '@data/balance';
 import { FLOAT_DAMAGE, spawnFloatingText } from '@gameplay/entities/floatingText';
 import { spawnProjectile } from '@gameplay/entities/projectile';
+import { addSp } from '@gameplay/sp';
 import { playSfx } from '@services/AudioManager';
 
 const TARGET_RECHECK_MS = 100;
@@ -129,6 +130,11 @@ export class CombatSystem implements System<Components> {
           dirY,
         });
         playSfx('combat.swing');
+        // Auto-attack SP gain (ranged archetypes only — melee
+        // ones use Additions instead, see AdditionSystem).
+        if (character) {
+          addSp(world, id, character.avatar.archetype.dragoon.spGainPerAutoAttack);
+        }
         continue;
       }
 
@@ -156,6 +162,11 @@ export class CombatSystem implements System<Components> {
 
       playSfx('combat.swing');
       playSfx('combat.hit');
+      // Auto-attack SP gain (no-op for Dart-style melee archetypes
+      // whose spGainPerAutoAttack is 0 — they gain via Additions).
+      if (character) {
+        addSp(world, id, character.avatar.archetype.dragoon.spGainPerAutoAttack);
+      }
     }
   }
 

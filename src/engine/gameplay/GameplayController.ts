@@ -45,6 +45,7 @@ import { DyingSystem } from '@gameplay/systems/DyingSystem';
 import { ItemPickupSystem } from '@gameplay/systems/ItemPickupSystem';
 import { EncounterSystem } from '@gameplay/systems/EncounterSystem';
 import { ProjectileSystem } from '@gameplay/systems/ProjectileSystem';
+import { DragoonSystem, enterDragoonForm } from '@gameplay/systems/DragoonSystem';
 
 import { RenderSystem } from '@rendering/systems/RenderSystem';
 import { FloatingTextSystem } from '@rendering/systems/FloatingTextSystem';
@@ -283,6 +284,7 @@ export class GameplayController {
     const pickup = new ItemPickupSystem();
     const swing = new AttackSwingSystem();
     const projectiles = new ProjectileSystem();
+    const dragoon = new DragoonSystem();
     const render = new RenderSystem(this.layers);
     const floating = new FloatingTextSystem(this.layers.fx);
     const entityHud = new EntityHudSystem(this.layers.fx);
@@ -317,6 +319,10 @@ export class GameplayController {
       exits,
       interactables,
       defense,
+      // Dragoon ticks before death so a player whose form ends
+      // mid-frame doesn't carry the boosted stats into the death
+      // sweep on the same tick.
+      dragoon,
       death,
       dying,
       addition,
@@ -362,6 +368,10 @@ export class GameplayController {
       onTouchDefend: () => this.input.emitDefend(true),
       getIsDefending: () => this.input.isDefending(),
       getDefendCooldownFrac: () => this.input.defendCooldownFrac(),
+      onTouchDragoonTransform: () => this.tryEnterDragoon(),
+      getIsDragoonActive: () =>
+        this.playerId !== null && this.world.hasComponent(this.playerId, 'Dragoon'),
+      getDragoonSpFrac: () => this.readDragoonSpFrac(),
       onAdditionsBarSelect: (kind) => {
         this.activeAddition = kind;
       },
@@ -409,6 +419,9 @@ export class GameplayController {
           if (sel) this.config.hooks?.onDropItem?.(sel);
         }
       }
+      // Desktop shortcut for the Dragoon transformation. Same
+      // no-op-when-not-ready semantics as the touch button.
+      if (e.key === 't' || e.key === 'T') this.tryEnterDragoon();
     };
     window.addEventListener('keydown', onInventoryKey);
     this.cleanups.push(() => window.removeEventListener('keydown', onInventoryKey));
@@ -504,7 +517,12 @@ export class GameplayController {
       const hp = this.world.getComponent(this.playerId, 'Health');
       const pos = this.world.getComponent(this.playerId, 'Position');
       if (hp) this.ui.hud.setHealth(hp.current, hp.max);
-      this.ui.hud.setSp(0, PLAYER_SP_MAX);
+      // SP bar surfaces the Dragoon-form gauge. Fills via combat
+      // actions (Additions for melee archetypes, auto-attacks for
+      // ranged) — see CombatSystem / AdditionSystem `addSp` calls.
+      const sp = this.world.getComponent(this.playerId, 'SpGauge');
+      if (sp) this.ui.hud.setSp(sp.current, sp.max);
+      else this.ui.hud.setSp(0, PLAYER_SP_MAX);
       this.ui.hud.setMp(0, PLAYER_MP_MAX);
       this.ui.hud.setZoom(this.viewport.scale.x);
 
@@ -933,6 +951,24 @@ export class GameplayController {
     const total = ADDITIONS[this.activeAddition]?.cooldownMs ?? 0;
     if (remaining <= 0 || total <= 0) return 0;
     return Math.min(1, remaining / total);
+  }
+
+  /** SP gauge fill fraction read by the Dragoon touch button.
+   *  Returns 0 when the player has no gauge (shouldn't happen
+   *  for players spawned by spawnPlayer, defensive). */
+  private readDragoonSpFrac(): number {
+    if (this.playerId === null) return 0;
+    const sp = this.world.getComponent(this.playerId, 'SpGauge');
+    if (!sp || sp.max <= 0) return 0;
+    return Math.min(1, Math.max(0, sp.current / sp.max));
+  }
+
+  /** Touch button tap-handler. Wraps `enterDragoonForm` so the
+   *  scene doesn't need to know the import. No-op when conditions
+   *  aren't met (SP not full, already in form, ...). */
+  private tryEnterDragoon(): void {
+    if (this.playerId === null) return;
+    enterDragoonForm(this.world, this.playerId);
   }
 
   // ====================================================================

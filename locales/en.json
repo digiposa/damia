@@ -59,6 +59,7 @@
     "master": "Master volume",
     "music": "Music volume",
     "sfx": "SFX volume",
+    "voice": "Voice volume",
     "language": "Language",
     "resume": "Resume",
     "quitToTitle": "Quit to Title"

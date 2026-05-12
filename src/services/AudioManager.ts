@@ -9,6 +9,7 @@
  * extending `playSfx` to look up a SFX_MANIFEST.
  */
 import { Howl } from 'howler';
+import { getLanguage } from './I18nService';
 
 export type SfxAlias = 'combat.swing' | 'combat.hit' | 'combat.death' | 'items.pickup' | 'ui.click';
 
@@ -25,19 +26,31 @@ const MUSIC_MANIFEST: Record<MusicAlias, MusicEntry> = {
   'music.titleScreen': { url: '/audio/music/title.ogg', trackVolume: 0.85 },
 };
 
+/**
+ * Voice clip registry — declarative list of "this avatar has a voice line for
+ * this addition". Lookup is by `<avatarId>.<additionId>` to keep this layer
+ * independent of the data/character/balance modules. The actual file URL is
+ * resolved at play-time via `voiceUrlFor` using the current locale, with an
+ * 'en' fallback for any locale without a recording yet.
+ */
+const VOICE_MANIFEST: Record<string, true> = {
+  'dart.doubleSlash': true,
+};
+
 const STORAGE_KEY = 'damia.audio';
 
 interface VolumeState {
   master: number;
   music: number;
   sfx: number;
+  voice: number;
 }
 
 interface PersistedAudioState extends VolumeState {
   muted: boolean;
 }
 
-const DEFAULT_VOLUMES: VolumeState = { master: 0.7, music: 0.5, sfx: 0.6 };
+const DEFAULT_VOLUMES: VolumeState = { master: 0.7, music: 0.5, sfx: 0.6, voice: 0.8 };
 /** Start muted on first load — current focus is testing and the
  *  background music interferes. Users can unmute via the in-game
  *  button; the choice is then persisted. */
@@ -47,6 +60,7 @@ let ctx: AudioContext | null = null;
 let masterGain: GainNode | null = null;
 let sfxGain: GainNode | null = null;
 let musicGain: GainNode | null = null;
+let voiceGain: GainNode | null = null;
 let volumes: VolumeState = { ...DEFAULT_VOLUMES };
 let muted: boolean = DEFAULT_MUTED;
 const mutedListeners = new Set<(muted: boolean) => void>();
@@ -55,6 +69,11 @@ let pendingResume = false;
 /** Cached Howl instances per alias so re-entering the same scene reuses the loaded buffer. */
 const musicHowls = new Map<MusicAlias, Howl>();
 let currentMusic: { alias: MusicAlias; howl: Howl } | null = null;
+/** Decoded AudioBuffer per voice key (`<avatarId>.<additionId>`). 'pending'
+ *  during the in-flight fetch+decode, 'error' if no clip exists in either the
+ *  current locale or the 'en' fallback (cached so we don't re-fetch on every
+ *  trigger). */
+const voiceBuffers = new Map<string, AudioBuffer | 'pending' | 'error'>();
 
 function readPersisted(): PersistedAudioState {
   try {
@@ -65,6 +84,7 @@ function readPersisted(): PersistedAudioState {
       master: clamp(parsed.master ?? DEFAULT_VOLUMES.master),
       music: clamp(parsed.music ?? DEFAULT_VOLUMES.music),
       sfx: clamp(parsed.sfx ?? DEFAULT_VOLUMES.sfx),
+      voice: clamp(parsed.voice ?? DEFAULT_VOLUMES.voice),
       muted: parsed.muted ?? DEFAULT_MUTED,
     };
   } catch {
@@ -89,15 +109,22 @@ function ensureCtx(): void {
   if (initialized) return;
   initialized = true;
   const persisted = readPersisted();
-  volumes = { master: persisted.master, music: persisted.music, sfx: persisted.sfx };
+  volumes = {
+    master: persisted.master,
+    music: persisted.music,
+    sfx: persisted.sfx,
+    voice: persisted.voice,
+  };
   muted = persisted.muted;
   try {
     ctx = new AudioContext();
     masterGain = ctx.createGain();
     sfxGain = ctx.createGain();
     musicGain = ctx.createGain();
+    voiceGain = ctx.createGain();
     sfxGain.connect(masterGain);
     musicGain.connect(masterGain);
+    voiceGain.connect(masterGain);
     masterGain.connect(ctx.destination);
     applyGains();
   } catch {
@@ -107,10 +134,11 @@ function ensureCtx(): void {
 
 function applyGains(): void {
   const masterEffective = muted ? 0 : volumes.master;
-  if (masterGain && sfxGain && musicGain) {
+  if (masterGain && sfxGain && musicGain && voiceGain) {
     masterGain.gain.value = masterEffective;
     sfxGain.gain.value = volumes.sfx;
     musicGain.gain.value = volumes.music;
+    voiceGain.gain.value = volumes.voice;
   }
   // Howler has its own audio graph (HTMLAudioElement-backed by default),
   // independent from our Web Audio context. Mirror our gains onto it so the
@@ -167,6 +195,11 @@ export function setSfxVolume(v: number): void {
   applyGains();
   writePersisted();
 }
+export function setVoiceVolume(v: number): void {
+  volumes.voice = clamp(v);
+  applyGains();
+  writePersisted();
+}
 
 export function isMuted(): boolean {
   return muted;
@@ -216,6 +249,59 @@ export function playSfx(alias: SfxAlias): void {
       tone(now, 800, 30, 'square', 0.18);
       break;
   }
+}
+
+/**
+ * Play the voice clip that goes with `<avatarId>` performing `<additionId>`
+ * (e.g. Dart shouting "Double Slash"). Lazy-loads + caches the decoded
+ * AudioBuffer on first call; the clip plays from the second trigger onward
+ * and is fire-and-forget thereafter. No-op when no clip is registered for the
+ * pair, when audio init failed, or while the buffer is still loading.
+ *
+ * Locale resolution: we try the current i18n language first, then fall back
+ * to 'en' (the placeholder VO source). Both 404s are cached as 'error' so we
+ * stop hammering the network on every addition trigger.
+ */
+export function playAdditionVoice(avatarId: string, additionId: string): void {
+  ensureCtx();
+  if (!ctx || !voiceGain) return;
+  const key = `${avatarId}.${additionId}`;
+  if (!VOICE_MANIFEST[key]) return;
+  const cached = voiceBuffers.get(key);
+  if (cached === 'pending' || cached === 'error') return;
+  if (!cached) {
+    voiceBuffers.set(key, 'pending');
+    void loadVoiceBuffer(key, avatarId, additionId);
+    return;
+  }
+  const src = ctx.createBufferSource();
+  src.buffer = cached;
+  src.connect(voiceGain);
+  src.start();
+}
+
+async function loadVoiceBuffer(key: string, avatarId: string, additionId: string): Promise<void> {
+  if (!ctx) {
+    voiceBuffers.set(key, 'error');
+    return;
+  }
+  const base = import.meta.env.BASE_URL || '/';
+  const lang = getLanguage();
+  const candidates = lang === 'en' ? ['en'] : [lang, 'en'];
+  for (const locale of candidates) {
+    const url = `${base}audio/voice/${locale}/${avatarId}/${additionId}.ogg`;
+    try {
+      const res = await fetch(url);
+      if (!res.ok) continue;
+      const ab = await res.arrayBuffer();
+      const buf = await ctx.decodeAudioData(ab);
+      voiceBuffers.set(key, buf);
+      return;
+    } catch {
+      // try next candidate
+    }
+  }
+  voiceBuffers.set(key, 'error');
 }
 
 function tone(

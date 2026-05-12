@@ -59,6 +59,7 @@
     "master": "Volume général",
     "music": "Volume musique",
     "sfx": "Volume effets",
+    "voice": "Volume voix",
     "language": "Langue",
     "resume": "Reprendre",
     "quitToTitle": "Retour au titre"

@@ -7,10 +7,11 @@ import {
   setMasterVolume,
   setMusicVolume,
   setSfxVolume,
+  setVoiceVolume,
 } from '@services/AudioManager';
 
 const PANEL_WIDTH = 460;
-const PANEL_HEIGHT = 440;
+const PANEL_HEIGHT = 484;
 const ROW_HEIGHT = 44;
 const VOLUME_STEP = 0.1;
 
@@ -30,6 +31,7 @@ export class SettingsPanel {
   private masterValueText!: Text;
   private musicValueText!: Text;
   private sfxValueText!: Text;
+  private voiceValueText!: Text;
   private langValueText!: Text;
 
   constructor(app: Application) {
@@ -117,6 +119,8 @@ export class SettingsPanel {
     this.musicValueText = this.addVolumeRow(t('settings.music'), y, 'music');
     y += ROW_HEIGHT;
     this.sfxValueText = this.addVolumeRow(t('settings.sfx'), y, 'sfx');
+    y += ROW_HEIGHT;
+    this.voiceValueText = this.addVolumeRow(t('settings.voice'), y, 'voice');
     y += ROW_HEIGHT + 16;
     this.langValueText = this.addLangRow(t('settings.language'), y);
     y += ROW_HEIGHT + 24;
@@ -126,7 +130,7 @@ export class SettingsPanel {
     this.addActionButton(t('settings.quitToTitle'), y, 'quit-to-title');
   }
 
-  private addVolumeRow(label: string, y: number, kind: 'master' | 'music' | 'sfx'): Text {
+  private addVolumeRow(label: string, y: number, kind: 'master' | 'music' | 'sfx' | 'voice'): Text {
     const labelText = new Text({
       text: label,
       style: { fontFamily: 'system-ui, sans-serif', fontSize: 16, fill: 0xddcfae },
@@ -151,13 +155,14 @@ export class SettingsPanel {
     return valueText;
   }
 
-  private adjustVolume(kind: 'master' | 'music' | 'sfx', delta: number): void {
+  private adjustVolume(kind: 'master' | 'music' | 'sfx' | 'voice', delta: number): void {
     playSfx('ui.click');
     const v = getVolumes();
     const next = Math.max(0, Math.min(1, v[kind] + delta));
     if (kind === 'master') setMasterVolume(next);
     else if (kind === 'music') setMusicVolume(next);
-    else setSfxVolume(next);
+    else if (kind === 'sfx') setSfxVolume(next);
+    else setVoiceVolume(next);
     this.refreshValues();
   }
 
@@ -259,6 +264,7 @@ export class SettingsPanel {
     this.masterValueText.text = `${Math.round(v.master * 100)}%`;
     this.musicValueText.text = `${Math.round(v.music * 100)}%`;
     this.sfxValueText.text = `${Math.round(v.sfx * 100)}%`;
+    this.voiceValueText.text = `${Math.round(v.voice * 100)}%`;
     this.langValueText.text = getLanguage().toUpperCase();
   }
 

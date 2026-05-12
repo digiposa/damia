@@ -4,7 +4,7 @@ import { GameplayController } from '@/engine/gameplay/GameplayController';
 import type { SceneConfig } from '@/engine/gameplay/SceneConfig';
 import type { MapData } from '@scenes/ForestOfSeles/MapLoader';
 import { TitleScene } from '../TitleScene';
-import { GameOverScene } from '../GameOverScene';
+import { RunSummaryScene } from '../RunSummaryScene';
 import { RunState } from '@/store/RunState';
 import { MODE_TUNING } from '@data/mode';
 import { MOBS } from '@data/balance';
@@ -93,8 +93,12 @@ export class ArenaScene implements Scene {
       ],
       hooks: {
         onPlayerDeath: () => {
+          // Snapshot the run for the summary screen BEFORE the
+          // controller tears down — once destroy() runs, the player
+          // entity is gone and we can't read level / xp anymore.
+          const summary = this.snapshotRun();
           queueMicrotask(() => {
-            void ctx.scenes.switchTo(new GameOverScene('survival'), ctx);
+            void ctx.scenes.switchTo(new RunSummaryScene(summary), ctx);
           });
         },
         onQuit: () => {
@@ -167,5 +171,20 @@ export class ArenaScene implements Scene {
         kills: snap.kills,
       });
     }
+  }
+
+  /** Capture the run's stats the moment the player dies, while the
+   *  controller and its ECS world are still alive. Read once and pass
+   *  the snapshot into RunSummaryScene so the scene swap can tear
+   *  everything down without losing the values to display. */
+  private snapshotRun(): { ms: number; wave: number; kills: number; level: number } {
+    const snap = this.runState.read();
+    const wave = Math.max(1, (this.waveSpawner?.currentWave ?? 0) + 1);
+    let level = 1;
+    if (this.controller && this.controller.playerId !== null) {
+      const prog = this.controller.world.getComponent(this.controller.playerId, 'Progression');
+      if (prog) level = prog.level;
+    }
+    return { ms: snap.elapsedMs, wave, kills: snap.kills, level };
   }
 }

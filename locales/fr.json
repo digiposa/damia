@@ -17,6 +17,18 @@
     "hud": {
       "wave": "Vague {{n}}",
       "kills": "Tués : {{n}}"
+    },
+    "summary": {
+      "title": "Run terminée",
+      "time": "Temps",
+      "wave": "Vague",
+      "kills": "Tués",
+      "level": "Niveau",
+      "newRecord": "Nouveau record !",
+      "rank": "Classement #{{n}}",
+      "topScores": "Meilleurs scores",
+      "noScores": "—",
+      "replay": "Rejouer"
     }
   },
   "settings": {

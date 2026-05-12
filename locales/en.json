@@ -17,6 +17,18 @@
     "hud": {
       "wave": "Wave {{n}}",
       "kills": "Kills: {{n}}"
+    },
+    "summary": {
+      "title": "Run ended",
+      "time": "Time",
+      "wave": "Wave",
+      "kills": "Kills",
+      "level": "Level",
+      "newRecord": "New record!",
+      "rank": "Rank #{{n}}",
+      "topScores": "Top scores",
+      "noScores": "—",
+      "replay": "Replay"
     }
   },
   "settings": {

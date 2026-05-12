@@ -13,7 +13,11 @@
     "title": "Mode Survival",
     "comingSoon": "Bientôt disponible",
     "subtitle": "Vague après vague, jusqu'à la fin",
-    "backToTitle": "Retour au menu"
+    "backToTitle": "Retour au menu",
+    "hud": {
+      "wave": "Vague {{n}}",
+      "kills": "Tués : {{n}}"
+    }
   },
   "settings": {
     "title": "Options",

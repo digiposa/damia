@@ -10,6 +10,7 @@ import { MODE_TUNING } from '@data/mode';
 import { MOBS } from '@data/balance';
 import { WaveSpawnerSystem } from '@gameplay/systems/WaveSpawnerSystem';
 import { ARENA_MIN_SPAWN_DIST_PX, ARENA_WAVE_DURATION_MS, buildArenaWave } from '@data/arenaWaves';
+import { SurvivalHUD } from '@ui/SurvivalHUD';
 
 const ARENA_SIZE = 28;
 const SPAWN_GX = Math.floor(ARENA_SIZE / 2);
@@ -51,6 +52,7 @@ export class ArenaScene implements Scene {
   private controller: GameplayController | null = null;
   private readonly runState = new RunState();
   private waveSpawner: WaveSpawnerSystem | null = null;
+  private survivalHud: SurvivalHUD | null = null;
 
   enter(ctx: GameContext): void {
     const config: SceneConfig = {
@@ -127,9 +129,19 @@ export class ArenaScene implements Scene {
         controller.mobKinds.set(entity, kind);
       },
     });
+
+    // Top-center timer + wave + kills strip. Mounted on the shared UI
+    // layer so it auto-rides through controller resize/teardown without
+    // extra wiring.
+    this.survivalHud = new SurvivalHUD(ctx.app);
+    controller.layers.ui.addChild(this.survivalHud.container);
   }
 
   exit(ctx: GameContext): void {
+    // Destroy the HUD before the controller so its Pixi container isn't
+    // mid-teardown when layers.destroy() cascades.
+    this.survivalHud?.destroy();
+    this.survivalHud = null;
     this.controller?.destroy();
     this.controller = null;
     this.waveSpawner = null;
@@ -144,6 +156,17 @@ export class ArenaScene implements Scene {
     this.runState.tick(dt);
     if (this.controller && this.waveSpawner) {
       this.waveSpawner.update(dt, this.controller.world);
+    }
+    if (this.survivalHud && this.waveSpawner) {
+      const snap = this.runState.read();
+      this.survivalHud.setState({
+        elapsedMs: snap.elapsedMs,
+        // currentWave is 0-based internally; +1 for the player-facing
+        // count (Vague 1, 2, 3 …). Clamp at 1 during the pre-spawn
+        // grace tick so the HUD never reads "Vague 0".
+        wave: Math.max(1, this.waveSpawner.currentWave + 1),
+        kills: snap.kills,
+      });
     }
   }
 }

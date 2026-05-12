@@ -13,7 +13,11 @@
     "title": "Survival Mode",
     "comingSoon": "Coming soon",
     "subtitle": "Wave after wave, until the end",
-    "backToTitle": "Back to title"
+    "backToTitle": "Back to title",
+    "hud": {
+      "wave": "Wave {{n}}",
+      "kills": "Kills: {{n}}"
+    }
   },
   "settings": {
     "title": "Settings",

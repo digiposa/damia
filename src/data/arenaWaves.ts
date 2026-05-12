@@ -56,10 +56,17 @@ export function buildArenaWave(idx: number): WaveSpawnList {
   if (named) return named;
   const tier = Math.floor(idx / 5);
   const spawns: { kind: MobKind; count: number }[] = [];
-  spawns.push({ kind: 'berserkMouse', count: 2 + tier });
-  if (tier >= 1) spawns.push({ kind: 'goblin', count: tier });
-  if (tier >= 3) spawns.push({ kind: 'assassinCock', count: tier - 2 });
-  if (tier >= 5) spawns.push({ kind: 'trent', count: tier - 4 });
+  // Counts roughly doubled vs the original curve — Dart's stat
+  // scaling makes 3-mob waves trivial past LV5. Each tier also
+  // brings a slightly higher base count so the swarm density
+  // grows visibly between tiers.
+  spawns.push({ kind: 'berserkMouse', count: 4 + tier * 2 });
+  if (tier >= 1) spawns.push({ kind: 'goblin', count: 3 + tier });
+  if (tier >= 3) spawns.push({ kind: 'assassinCock', count: 2 + (tier - 3) });
+  if (tier >= 5) spawns.push({ kind: 'trent', count: 1 + (tier - 5) });
+  // Mini-boss every 5 waves (waves 5, 10, 15…): an extra trent
+  // dropped into the mix. Named bosses (BOSS_WAVES) override the
+  // whole list earlier so this never collides with Fruegel & co.
   if ((idx + 1) % 5 === 0) spawns.push({ kind: 'trent', count: 1 });
   return spawns;
 }

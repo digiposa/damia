@@ -14,6 +14,8 @@ import { SurvivalHUD } from '@ui/SurvivalHUD';
 import { LevelUpChoiceModal } from '@ui/LevelUpChoiceModal';
 import { UPGRADES, rollUpgradeChoices, type UpgradeKind } from '@data/upgrades';
 import { DART, type CharacterDef } from '@data/characters';
+import { RunHighScores } from '@services/RunHighScores';
+import { UnlockManager } from '@services/UnlockManager';
 
 const ARENA_SIZE = 28;
 const SPAWN_GX = Math.floor(ARENA_SIZE / 2);
@@ -120,6 +122,13 @@ export class ArenaScene implements Scene {
           });
         },
         onQuit: () => {
+          // Persist + evaluate unlocks BEFORE switching scenes so a
+          // player who quits a high-water-mark run (without dying)
+          // still gets credit on the leaderboard + on the unlock
+          // ladder. Without this, the only way to bank a run was to
+          // die — frustrating when an over-leveled Dart simply
+          // can't be killed by current mob stats.
+          this.persistRunOnExit();
           queueMicrotask(() => {
             void ctx.scenes.switchTo(new TitleScene(), ctx);
           });
@@ -264,5 +273,41 @@ export class ArenaScene implements Scene {
       if (prog) level = prog.level;
     }
     return { ms: snap.elapsedMs, wave, kills: snap.kills, level, character: this.character };
+  }
+
+  /** Submit a snapshot of the live run to the high-score table and
+   *  pump any qualifying unlocks. Called from the Quit-to-title path
+   *  so a player who's clearly conquered the current scaling can
+   *  still bank progress; death's path goes through RunSummaryScene
+   *  which does the same write + banner reveal. No-op when the run
+   *  hasn't started yet (player quit before the first wave). */
+  private persistRunOnExit(): void {
+    const summary = this.snapshotRun();
+    if (summary.ms <= 0) return;
+    const rank = RunHighScores.submit({
+      ms: summary.ms,
+      wave: summary.wave,
+      kills: summary.kills,
+      level: summary.level,
+      character: summary.character.id,
+      savedAtMs: Date.now(),
+    });
+    // evaluateUnlocks reads `load()` internally so it sees the
+    // freshly-submitted record. Discard the returned diff list — the
+    // CharacterSelectScene will surface any newly-unlocked entries
+    // the next time the player opens it; we don't pop a banner on
+    // the quit path because there's no overlay to host it.
+    UnlockManager.evaluateUnlocks({
+      ms: summary.ms,
+      wave: summary.wave,
+      kills: summary.kills,
+      level: summary.level,
+      character: summary.character.id,
+      savedAtMs: Date.now(),
+    });
+    // Suppress the unused-rank warning — kept the variable for the
+    // future case where we want to show a toast on quit if the run
+    // made the leaderboard.
+    void rank;
   }
 }

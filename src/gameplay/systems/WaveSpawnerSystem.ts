@@ -118,6 +118,20 @@ export class WaveSpawnerSystem implements System<Components> {
     }
   }
 
+  /** Per-wave compounding scalars applied to a freshly-spawned mob.
+   *  Wave 0 = base stats; each subsequent wave multiplies HP and ATK
+   *  by these factors. Chosen so that at wave 10 mobs deal real
+   *  damage to a LV10 Dart (overcoming his DEF clamp) and at wave 20
+   *  a mob swarm becomes a credible threat against a fully-upgraded
+   *  player. Tune by feel — the formula lives on the spawner so the
+   *  WaveSpawner stays the single tuning lever for arena pacing. */
+  private hpScalar(waveIdx: number): number {
+    return Math.pow(1.07, Math.max(0, waveIdx));
+  }
+  private atkScalar(waveIdx: number): number {
+    return Math.pow(1.12, Math.max(0, waveIdx));
+  }
+
   private spawnAt(world: World<Components>, kind: MobKind): void {
     const playerId = this.opts.getPlayerEntity();
     const playerPos = playerId !== null ? world.getComponent(playerId, 'Position') : null;
@@ -164,6 +178,21 @@ export class WaveSpawnerSystem implements System<Components> {
       }
       const stats = world.getComponent(id, 'Stats');
       if (stats) stats.aggroRange = 99_999;
+      // Per-wave stat scaling. Multiplicative on Stats.atk and on
+      // Health.max so that high-wave swarms can actually deplete a
+      // leveled Dart's HP (which would otherwise stay full once mob
+      // ATK falls below his DEF and the damage formula clamps to 1).
+      // HP scales softer than ATK so mobs don't become bullet-spongey
+      // — the design intent is "they hit harder", not "they take
+      // longer to kill".
+      const hpFactor = this.hpScalar(this.currentWaveIdx);
+      const atkFactor = this.atkScalar(this.currentWaveIdx);
+      if (stats) stats.atk = Math.round(stats.atk * atkFactor);
+      const hp = world.getComponent(id, 'Health');
+      if (hp) {
+        hp.max = Math.round(hp.max * hpFactor);
+        hp.current = hp.max;
+      }
       this.opts.onSpawn(id, kind);
       return;
     }

@@ -11,9 +11,6 @@ import { MOBS } from '@data/balance';
 import { WaveSpawnerSystem } from '@gameplay/systems/WaveSpawnerSystem';
 import { ARENA_MIN_SPAWN_DIST_PX, ARENA_WAVE_DURATION_MS, buildArenaWave } from '@data/arenaWaves';
 import { SurvivalHUD } from '@ui/SurvivalHUD';
-import { applyDartRow } from '@data/dart';
-import { FLOAT_HEAL, spawnFloatingText } from '@gameplay/entities/floatingText';
-import { playSfx } from '@services/AudioManager';
 
 const ARENA_SIZE = 28;
 const SPAWN_GX = Math.floor(ARENA_SIZE / 2);
@@ -39,14 +36,15 @@ function buildArenaMap(): MapData {
  * Survival arena. Reuses the full gameplay pipeline from
  * `GameplayController` — only mode-specific bits live here:
  *
- *  - `RunState` tracks elapsed run time + kills + per-run level / XP
- *    (independent of the player entity's `Progression` component, which
- *    is Story-only).
+ *  - `RunState` tracks per-run telemetry (elapsed time + kills) for the
+ *    SurvivalHUD overlay + future high-score / leaderboard write path.
+ *    Character progression (level / XP / HP / stats) is intentionally
+ *    routed through the same Story system (DeathSystem.awardXp + Dart's
+ *    TLoD row) so the level-up feel is identical across modes — we'll
+ *    diverge the curves later when Survival needs its own balance.
  *  - `WaveSpawnerSystem` ticks alongside the controller, spawning mobs
  *    on the arena edges in waves of rising difficulty. Endless: the
  *    `buildArenaWave(idx)` curve never plateaus.
- *  - HUD's level / XP slots are temporarily hijacked to surface kills +
- *    run level until the dedicated SurvivalHUD overlay ships.
  *  - Death routes to `GameOverScene('survival')` so restart spawns a
  *    fresh arena instead of dropping the player into Forest.
  */
@@ -72,11 +70,11 @@ export class ArenaScene implements Scene {
         showAdditionsBar: false,
         showEncounterIndicator: false,
         musicAlias: 'music.forestAmbient',
-        // Survival runs its own XP curve through `RunState`. Disable the
-        // Story-side Progression bump so the player isn't mid-run healed
-        // to full and given Dart's TLoD stat row each time the cumulative
-        // XP crosses a Story threshold (LV 2 hits at just 20 XP).
-        awardPlayerXp: false,
+        // awardPlayerXp stays at its default (true): mob kills feed the
+        // shared Story Progression curve (LV thresholds from xp.txt) so
+        // HP / ATK / DEF / MAT / MDF scale identically in Story and
+        // Survival. The shared Hud's level + XP slots reflect this — no
+        // override needed.
       },
       // Dev loadout so the spell / heal flow is testable without
       // loot drops. TODO: remove once level-up rewards exist.
@@ -105,17 +103,10 @@ export class ArenaScene implements Scene {
           });
         },
         onMobDeath: (kind) => {
-          // Survival's per-run progression: count + per-mob XP.
+          // Per-run telemetry — kill counter (HUD) + dormant XP curve
+          // we keep around so the upcoming LevelUpChoiceModal can pop
+          // independently of Story-side level-ups when the design lands.
           this.runState.recordKill(MOBS[kind].xp);
-        },
-        onTickHUD: (hud) => {
-          // Surface run progression in the level + XP slots until the
-          // dedicated SurvivalHUD overlay ships. Showing kills here was
-          // misleading: the bar maxed at 0 so the player couldn't see
-          // real progress toward the next level-up.
-          const snap = this.runState.read();
-          hud.setLevel(snap.level);
-          hud.setXp(snap.xp, this.runState.xpToNext);
         },
       },
     };
@@ -165,7 +156,6 @@ export class ArenaScene implements Scene {
     if (this.controller && this.waveSpawner) {
       this.waveSpawner.update(dt, this.controller.world);
     }
-    this.consumePendingLevelUps();
     if (this.survivalHud && this.waveSpawner) {
       const snap = this.runState.read();
       this.survivalHud.setState({
@@ -176,35 +166,6 @@ export class ArenaScene implements Scene {
         wave: Math.max(1, this.waveSpawner.currentWave + 1),
         kills: snap.kills,
       });
-    }
-  }
-
-  /** Apply each pending level-up: bump the player's Stats + Health.max
-   *  to Dart's TLoD row at the new run level, full-heal, and surface
-   *  cue (SFX + floating "LV N!"). Survival's level-up arc replaces
-   *  the Story-side one we disabled via `awardPlayerXp: false`. */
-  private consumePendingLevelUps(): void {
-    const controller = this.controller;
-    if (!controller || controller.playerId === null) return;
-    const world = controller.world;
-    const playerId = controller.playerId;
-    while (this.runState.consumeLevelUp()) {
-      const level = this.runState.read().level;
-      const stats = world.getComponent(playerId, 'Stats');
-      const hp = world.getComponent(playerId, 'Health');
-      applyDartRow(stats, hp, level, false);
-      if (hp) hp.current = hp.max;
-      const pos = world.getComponent(playerId, 'Position');
-      if (pos) {
-        spawnFloatingText(world, {
-          x: pos.x,
-          y: pos.y - 30,
-          text: `LV ${level}!`,
-          color: FLOAT_HEAL,
-          durationMs: 1400,
-        });
-      }
-      playSfx('items.pickup');
     }
   }
 }

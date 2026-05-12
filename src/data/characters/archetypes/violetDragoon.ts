@@ -54,12 +54,17 @@ export const VIOLET_DRAGOON: DragoonArchetype = {
     magicDefPerLevel: 1.7,
   }),
   xpToReachLevel: XP_TO_REACH_LEVEL,
+  // Haschel's TLoD canonical unlocks. Omni-Sweep is the Master
+  // Addition (declared on `masterAddition`). Six basic additions —
+  // the second-largest kit after Dart.
   additionUnlocksByLevel: new Map([
     [1, 'doublePunch'],
-    [8, 'flurryOfStyx'],
-    [15, 'summonFourGods'],
+    [14, 'flurryOfStyx'],
+    [18, 'summon4Gods'],
     [22, 'fiveRingShattering'],
+    [26, 'hexHammer'],
   ]),
+  masterAddition: 'omniSweep',
   dragoon: {
     durationMsBase: 15_000,
     durationMsPerLevel: 500,

@@ -53,14 +53,14 @@ export const DARK_BURST_DRAGOON: DragoonArchetype = {
     magicDefPerLevel: 2.1,
   }),
   xpToReachLevel: XP_TO_REACH_LEVEL,
-  // Rose's TLoD Additions: Whip Smack, More & More, Hard Blade,
-  // Demon's Dance. Slugs not in ADDITIONS yet.
+  // Rose's TLoD canonical unlocks. Demon's Dance is the Master
+  // Addition (declared on `masterAddition`).
   additionUnlocksByLevel: new Map([
     [1, 'whipSmack'],
-    [8, 'moreAndMore'],
-    [15, 'hardBlade'],
-    [22, 'demonsDance'],
+    [14, 'moreAndMore'],
+    [19, 'hardBlade'],
   ]),
+  masterAddition: 'demonsDance',
   dragoon: {
     durationMsBase: 15_000,
     durationMsPerLevel: 500,

@@ -50,19 +50,12 @@ interface SaveDataV4Wire {
 /** Zone identifier — extend with each new playable zone. */
 export type ZoneId = 'forest' | 'hellena';
 
-/**
- * V5: multi-zone support. `currentZoneId` lets Continue resume the right zone.
- * `fogByZone` persists the minimap-revealed grid per zone so revisiting shows
- * what we already explored. `discoveredZones` is the set the WorldMap renders
- * markers for.
- */
-export interface SaveDataV5 {
+/** V5 (now legacy): multi-zone support, but progression still tracks only
+ *  level / xp / xpToNext. */
+interface SaveDataV5Wire {
   schemaVersion: 5;
   currentZoneId: ZoneId;
   discoveredZones: ReadonlyArray<ZoneId>;
-  /** Per-zone minimap fog reveal grid. Indexed by zone id; entries are 2D
-   *  boolean arrays of `revealed[gx][gy]`. Optional — missing zones start fully
-   *  unrevealed (the MiniMap will rebuild the grid). */
   fogByZone?: Partial<Record<ZoneId, boolean[][]>>;
   player: { hp: number; maxHp: number; gx: number; gy: number };
   inventory: { items: Partial<Record<ItemKind, number>>; gold: number };
@@ -72,11 +65,39 @@ export interface SaveDataV5 {
   savedAtMs: number;
 }
 
+/**
+ * V6: addition mastery. `progression.additionUses` is the per-slug trigger
+ * counter that drives the Lv1..5 mastery curve (every 20 uses raises the
+ * level — see `getAdditionLevel`). Empty record on fresh saves; legacy V5
+ * payloads migrate by seeding it to `{}`.
+ */
+export interface SaveDataV6 {
+  schemaVersion: 6;
+  currentZoneId: ZoneId;
+  discoveredZones: ReadonlyArray<ZoneId>;
+  /** Per-zone minimap fog reveal grid. Indexed by zone id; entries are 2D
+   *  boolean arrays of `revealed[gx][gy]`. Optional — missing zones start fully
+   *  unrevealed (the MiniMap will rebuild the grid). */
+  fogByZone?: Partial<Record<ZoneId, boolean[][]>>;
+  player: { hp: number; maxHp: number; gx: number; gy: number };
+  inventory: { items: Partial<Record<ItemKind, number>>; gold: number };
+  hotbar: ReadonlyArray<HotbarSlot>;
+  progression: {
+    level: number;
+    xp: number;
+    xpToNext: number;
+    additionUses: Partial<Record<AdditionKind, number>>;
+  };
+  activeAddition: AdditionKind;
+  savedAtMs: number;
+}
+
 /** Public aliases used by callers — always point at the latest schema. */
-export type SaveDataV1 = SaveDataV5;
-export type SaveDataV2 = SaveDataV5;
-export type SaveDataV3 = SaveDataV5;
-export type SaveDataV4 = SaveDataV5;
+export type SaveDataV1 = SaveDataV6;
+export type SaveDataV2 = SaveDataV6;
+export type SaveDataV3 = SaveDataV6;
+export type SaveDataV4 = SaveDataV6;
+export type SaveDataV5 = SaveDataV6;
 
 /** V2's defaults — additions still lived in slot 0 back then. */
 const DEFAULT_HOTBAR_V2: ReadonlyArray<HotbarSlot> = [
@@ -142,7 +163,7 @@ function migrateV3ToV4(v3: SaveDataV3Wire): SaveDataV4Wire {
  * Hellena so migrated saves can immediately access the WorldMap (matches
  * the new-game default — see DEFAULT_DISCOVERED_ZONES at the call site).
  */
-function migrateV4ToV5(v4: SaveDataV4Wire): SaveDataV5 {
+function migrateV4ToV5(v4: SaveDataV4Wire): SaveDataV5Wire {
   return {
     schemaVersion: 5,
     currentZoneId: v4.zone,
@@ -156,9 +177,26 @@ function migrateV4ToV5(v4: SaveDataV4Wire): SaveDataV5 {
   };
 }
 
+function migrateV5ToV6(v5: SaveDataV5Wire): SaveDataV6 {
+  return {
+    schemaVersion: 6,
+    currentZoneId: v5.currentZoneId,
+    discoveredZones: v5.discoveredZones,
+    ...(v5.fogByZone ? { fogByZone: v5.fogByZone } : {}),
+    player: v5.player,
+    inventory: v5.inventory,
+    hotbar: v5.hotbar,
+    // Seed mastery counters empty — pre-V6 saves never tracked uses, so
+    // every addition starts fresh at Lv 1 in the new model.
+    progression: { ...v5.progression, additionUses: {} },
+    activeAddition: v5.activeAddition,
+    savedAtMs: v5.savedAtMs,
+  };
+}
+
 export const SaveManager = {
-  save(payload: Omit<SaveDataV5, 'schemaVersion' | 'savedAtMs'>): void {
-    const data: SaveDataV5 = { schemaVersion: 5, savedAtMs: Date.now(), ...payload };
+  save(payload: Omit<SaveDataV6, 'schemaVersion' | 'savedAtMs'>): void {
+    const data: SaveDataV6 = { schemaVersion: 6, savedAtMs: Date.now(), ...payload };
     try {
       localStorage.setItem(KEY, JSON.stringify(data));
     } catch (e) {
@@ -166,21 +204,24 @@ export const SaveManager = {
     }
   },
 
-  load(): SaveDataV5 | null {
+  load(): SaveDataV6 | null {
     try {
       const raw = localStorage.getItem(KEY);
       if (!raw) return null;
       const parsed = JSON.parse(raw) as { schemaVersion?: number };
-      if (parsed.schemaVersion === 5) return parsed as SaveDataV5;
-      if (parsed.schemaVersion === 4) return migrateV4ToV5(parsed as SaveDataV4Wire);
+      if (parsed.schemaVersion === 6) return parsed as SaveDataV6;
+      if (parsed.schemaVersion === 5) return migrateV5ToV6(parsed as SaveDataV5Wire);
+      if (parsed.schemaVersion === 4) return migrateV5ToV6(migrateV4ToV5(parsed as SaveDataV4Wire));
       if (parsed.schemaVersion === 3) {
-        return migrateV4ToV5(migrateV3ToV4(parsed as SaveDataV3Wire));
+        return migrateV5ToV6(migrateV4ToV5(migrateV3ToV4(parsed as SaveDataV3Wire)));
       }
       if (parsed.schemaVersion === 2) {
-        return migrateV4ToV5(migrateV3ToV4(migrateV2ToV3(parsed as SaveDataV2Wire)));
+        return migrateV5ToV6(migrateV4ToV5(migrateV3ToV4(migrateV2ToV3(parsed as SaveDataV2Wire))));
       }
       if (parsed.schemaVersion === 1) {
-        return migrateV4ToV5(migrateV3ToV4(migrateV2ToV3(migrateV1ToV2(parsed as SaveDataV1Wire))));
+        return migrateV5ToV6(
+          migrateV4ToV5(migrateV3ToV4(migrateV2ToV3(migrateV1ToV2(parsed as SaveDataV1Wire)))),
+        );
       }
       return null;
     } catch {

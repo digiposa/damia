@@ -54,12 +54,13 @@ export const GOLDEN_DRAGOON: DragoonArchetype = {
     magicDefPerLevel: 1.3,
   }),
   xpToReachLevel: XP_TO_REACH_LEVEL,
-  // Kongol's TLoD Additions: Pursuit, Inferno (the late-joiner's
-  // smaller set).
+  // Kongol's TLoD canonical unlocks (smallest kit of the cast: 2
+  // basics + 1 master). Bone Crush is the Master Addition.
   additionUnlocksByLevel: new Map([
     [1, 'pursuit'],
-    [8, 'inferno'],
+    [23, 'inferno'],
   ]),
+  masterAddition: 'boneCrush',
   dragoon: {
     durationMsBase: 15_000,
     durationMsPerLevel: 500,

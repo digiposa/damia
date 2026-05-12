@@ -163,12 +163,15 @@ export const DART_XP_TO_REACH_LEVEL: ReadonlyArray<number> = [
  *   36 → Moon Strike
  *   50 → Blazing Dynamo
  */
-export const DART_ADDITION_UNLOCKS_BY_LEVEL: ReadonlyMap<number, string> = new Map([
+import type { AdditionKind } from '@data/balance';
+
+export const DART_ADDITION_UNLOCKS_BY_LEVEL: ReadonlyMap<number, AdditionKind> = new Map([
   [1, 'doubleSlash'],
-  [8, 'volcano'],
-  [15, 'burningRush'],
-  [22, 'crushDance'],
-  [29, 'madnessHero'],
-  [36, 'moonStrike'],
-  [50, 'blazingDynamo'],
+  [2, 'volcano'],
+  [8, 'burningRush'],
+  [15, 'crushDance'],
+  [22, 'madnessHero'],
+  [29, 'moonStrike'],
+  // Blazing Dynamo is the Master Addition — unlocked via mastery,
+  // declared on the archetype's `masterAddition` field, not here.
 ]);

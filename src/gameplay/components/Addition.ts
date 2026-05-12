@@ -1,5 +1,5 @@
 import type { Entity } from '@core/ecs';
-import type { AdditionKind } from '@data/balance';
+import type { AdditionKind, AdditionLevelIndex } from '@data/balance';
 
 /**
  * Active Addition (skill animation in flight). While present:
@@ -16,8 +16,21 @@ export interface Addition {
   targetId: Entity;
   elapsedMs: number;
   totalMs: number;
-  /** Indices into ADDITIONS[kind].hitTimingsMs that have already been applied. */
+  /** Indices into ADDITIONS[kind].hitTimingsMs that have already been
+   *  *processed* (regardless of whether the hit actually landed). */
   hitsApplied: number;
+  /** Number of those checkpoints that actually landed damage. Drives
+   *  per-hit SP awards in AdditionSystem. */
+  hitsLanded: number;
+  /** Did the most recently processed checkpoint land? Set to true after
+   *  every successful hit, false on any miss (target dead / out of
+   *  range). The voice line plays on completion iff this is still true,
+   *  matching TLoD's "addition succeeded" feedback. */
+  lastHitLanded: boolean;
+  /** Snapshot of the addition's level (1..5) at trigger time. Keeps the
+   *  damage / SP table stable mid-animation if the player happens to
+   *  cross the 20-uses mastery threshold while the swing is in flight. */
+  level: AdditionLevelIndex;
   /** Unit vector toward target at trigger — used by RenderSystem for facing/lunge. */
   dirX: number;
   dirY: number;

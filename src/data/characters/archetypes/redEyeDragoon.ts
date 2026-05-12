@@ -31,6 +31,7 @@ export const RED_EYE_DRAGOON: DragoonArchetype = {
   statsByLevel: DART_STATS_BY_LEVEL,
   xpToReachLevel: DART_XP_TO_REACH_LEVEL,
   additionUnlocksByLevel: DART_ADDITION_UNLOCKS_BY_LEVEL,
+  masterAddition: 'blazingDynamo',
   // Placeholder dragoon config — same shape across all archetypes
   // for v1, will tune per-archetype once SP/transform combat lands.
   dragoon: {

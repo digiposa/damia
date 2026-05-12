@@ -3,20 +3,17 @@ import type { Components } from '@gameplay/components';
 import { ADDITIONS, computeDamage, type AdditionKind } from '@data/balance';
 import { FLOAT_DAMAGE, spawnFloatingText } from '@gameplay/entities/floatingText';
 import { addSp } from '@gameplay/sp';
-import { playSfx } from '@services/AudioManager';
+import { playSfx, playAdditionVoice } from '@services/AudioManager';
 
 /**
- * Drives Active addition animations and ticks per-skill cooldowns.
+ * Drives active addition animations and ticks per-skill cooldowns.
  *
- * - For each entity with an `Addition`, advance `elapsedMs`. Each time we cross
- *   a `hitTimingsMs[i]` checkpoint, apply one damage hit to the locked target.
- *   On completion, remove the component (cooldown is *not* reset here — it was
- *   started on trigger so interrupting can't refund it).
- * - For each entity with a `SkillCooldown`, decrement every entry and prune
- *   entries that hit zero so `remainingMs[kind]` returns undefined when ready.
- *
- * Damage uses `computeDamage` with `attackerAtk = round(stats.atk * mul)` so
- * Defending mobs still halve incoming damage like a regular hit.
+ * Damage / SP follow TLoD's per-level mastery table (`def.levels[level-1]`),
+ * snapshotted on the Addition component at trigger time so a mid-animation
+ * mastery promotion never warps the numbers. The total damage multiplier is
+ * split evenly across hits, and each hit that actually lands awards its
+ * fractional share of `spGain`. The avatar's voice line plays on completion
+ * iff the final hit landed — same "addition succeeded" feel as TLoD.
  */
 export class AdditionSystem implements System<Components> {
   update(dt: number, world: World<Components>): void {
@@ -38,6 +35,10 @@ export class AdditionSystem implements System<Components> {
       if (!add || !stats) continue;
 
       const def = ADDITIONS[add.kind];
+      const nbHits = def.hitTimingsMs.length;
+      const levelRow = def.levels[add.level - 1] ?? def.levels[0]!;
+      const dmgMulPerHit = levelRow.dmgMul / nbHits;
+      const spPerHit = levelRow.spGain / nbHits;
       const before = add.elapsedMs;
       add.elapsedMs += dt;
 
@@ -47,36 +48,51 @@ export class AdditionSystem implements System<Components> {
         if (t === undefined) break;
         if (t > add.elapsedMs) break;
         if (t < before) continue; // shouldn't happen (hitsApplied protects us) but be defensive
-        this.applyHit(world, id, add.targetId, stats.atk, def.atkMulPerHit);
+        const landed = this.applyHit(world, id, add.targetId, stats.atk, dmgMulPerHit);
         add.hitsApplied = i + 1;
+        add.lastHitLanded = landed;
+        if (landed) {
+          add.hitsLanded += 1;
+          // Per-hit SP gain — only credited on actual damage, so the
+          // gauge tracks effective combat output rather than button
+          // mashes. Floor-then-floor sums of fractional SP can drift by
+          // 1 over a full sequence; `addSp` accepts floats and the HUD
+          // renders the gauge as a fraction so we ignore the rounding.
+          if (world.hasComponent(id, 'Character')) {
+            addSp(world, id, spPerHit);
+          }
+        }
       }
 
       if (add.elapsedMs >= def.totalMs) {
-        // Addition complete — credit the attacker's SP gauge if it
-        // has one (player only, mobs don't have Character +
-        // SpGauge). Per-archetype gain rate; ranged archetypes set
-        // this to 0 because they gain SP on auto-attacks instead.
-        const character = world.getComponent(id, 'Character');
-        if (character) {
-          addSp(world, id, character.avatar.archetype.dragoon.spGainPerAddition);
+        // Voice line plays iff the final hit landed — addition
+        // "succeeded" in the TLoD sense. Skipped silently for mobs
+        // (no Character component) or for fizzled swings where the
+        // last hit missed.
+        if (add.lastHitLanded) {
+          const character = world.getComponent(id, 'Character');
+          if (character) playAdditionVoice(character.avatar.id, add.kind);
         }
         world.removeComponent(id, 'Addition');
       }
     }
   }
 
+  /** Apply one hit checkpoint. Returns `true` when damage actually landed
+   *  on a live target, `false` when the target was missing / dying / dead
+   *  (used by the caller to gate SP gain + the success-voice trigger). */
   private applyHit(
     world: World<Components>,
     _attackerId: number,
     targetId: number,
     attackerAtk: number,
     mul: number,
-  ): void {
+  ): boolean {
     const targetHealth = world.getComponent(targetId, 'Health');
     const targetStats = world.getComponent(targetId, 'Stats');
     const targetPos = world.getComponent(targetId, 'Position');
-    if (!targetHealth || !targetStats || !targetPos) return;
-    if (targetHealth.current <= 0 || world.hasComponent(targetId, 'Dying')) return;
+    if (!targetHealth || !targetStats || !targetPos) return false;
+    if (targetHealth.current <= 0 || world.hasComponent(targetId, 'Dying')) return false;
 
     const defending = world.hasComponent(targetId, 'Defending');
     const dmg = computeDamage(
@@ -93,5 +109,6 @@ export class AdditionSystem implements System<Components> {
       color: FLOAT_DAMAGE,
     });
     playSfx('combat.hit');
+    return true;
   }
 }

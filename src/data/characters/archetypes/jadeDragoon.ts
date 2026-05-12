@@ -102,14 +102,15 @@ export const JADE_DRAGOON: DragoonArchetype = {
   },
   statsByLevel: STATS_BY_LEVEL,
   xpToReachLevel: XP_TO_REACH_LEVEL,
-  // Canonical TLoD unlock schedule for Lavitz/Albert.
+  // Canonical TLoD unlock schedule for Lavitz/Albert. Flower Storm
+  // is the Master Addition (declared on `masterAddition`), not here.
   additionUnlocksByLevel: new Map([
     [1, 'harpoon'],
-    [9, 'spinningCane'],
-    [18, 'rodTyphoon'],
-    [32, 'gustOfWindDance'],
-    [50, 'flowerStorm'],
+    [5, 'spinningCane'],
+    [7, 'rodTyphoon'],
+    [11, 'gustOfWindDance'],
   ]),
+  masterAddition: 'flowerStorm',
   dragoon: {
     durationMsBase: 15_000,
     durationMsPerLevel: 500,

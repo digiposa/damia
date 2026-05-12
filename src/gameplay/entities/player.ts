@@ -85,10 +85,13 @@ export function spawnPlayer(world: World<Components>, opts: SpawnPlayerOptions):
     max: archetype.dragoon.spMax,
   });
   // xpToNext = cumulative XP threshold to reach LV 2 (= 20 for Dart).
+  // additionUses starts empty — every addition is at Lv 1 with 0 uses
+  // and gets incremented on each trigger by the controller.
   world.addComponent(id, 'Progression', {
     level: 1,
     xp: 0,
     xpToNext: xpToReachLevel(archetype, 2),
+    additionUses: {},
   });
 
   return id;

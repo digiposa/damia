@@ -101,14 +101,15 @@ export const BLUE_SEA_DRAGOON: DragoonArchetype = {
   },
   statsByLevel: STATS_BY_LEVEL,
   xpToReachLevel: XP_TO_REACH_LEVEL,
+  // Meru's TLoD canonical unlocks. Perky Step is the Master Addition
+  // (declared on `masterAddition`).
   additionUnlocksByLevel: new Map([
     [1, 'doubleSmack'],
-    [8, 'hammerSpin'],
-    [15, 'coolBoogie'],
-    [22, 'perkyStep'],
-    [29, 'catsCradle'],
-    [36, 'diamondDust'],
+    [21, 'hammerSpin'],
+    [26, 'coolBoogie'],
+    [30, 'catsCradle'],
   ]),
+  masterAddition: 'perkyStep',
   dragoon: {
     durationMsBase: 15_000,
     durationMsPerLevel: 500,

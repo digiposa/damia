@@ -21,6 +21,7 @@
  */
 import type { Stats } from '@gameplay/components';
 import type { AssetAlias } from '@services/AssetManager';
+import type { AdditionKind } from '@data/balance';
 
 /** TLoD-style elemental affinity. */
 export type CharacterElement =
@@ -141,9 +142,15 @@ export interface DragoonArchetype {
   statsByLevel: ReadonlyArray<CharacterLevelRow>;
   /** Cumulative XP needed to reach each level — same indexing. */
   xpToReachLevel: ReadonlyArray<number>;
-  /** Base-form addition unlock schedule. Slug strings (filtered
-   *  by `slug in ADDITIONS` at consume time). */
-  additionUnlocksByLevel: ReadonlyMap<number, string>;
+  /** Base-form addition unlock schedule, keyed by character level. The
+   *  string values must match an `AdditionKind` slug — kept as
+   *  `AdditionKind` so missing entries surface at compile time. */
+  additionUnlocksByLevel: ReadonlyMap<number, AdditionKind>;
+  /** Optional Master Addition. Canonically unlocks once every other
+   *  addition on this archetype is mastered to Lv 5; the unlock check
+   *  itself is deferred to a follow-up commit (this field just declares
+   *  the slug so the picker can render it ahead of time). */
+  masterAddition?: AdditionKind;
   /** Dragoon transformation config. Required — every TLoD party
    *  member has one. */
   dragoon: DragoonConfig;

@@ -129,6 +129,10 @@ export interface GameplaySnapshot {
   readonly progressionLevel: number;
   readonly progressionXp: number;
   readonly progressionXpToNext: number;
+  /** Per-addition lifetime trigger counter (drives the Lv1..5 mastery
+   *  curve). Snapshot is a shallow clone so save sites can't mutate
+   *  the live ECS component. */
+  readonly progressionAdditionUses: Readonly<Partial<Record<AdditionKind, number>>>;
   readonly activeAddition: AdditionKind;
 }
 

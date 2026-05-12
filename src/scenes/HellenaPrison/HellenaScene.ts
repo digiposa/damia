@@ -203,6 +203,7 @@ export class HellenaScene implements Scene {
         level: snap.progressionLevel,
         xp: snap.progressionXp,
         xpToNext: snap.progressionXpToNext,
+        additionUses: { ...snap.progressionAdditionUses },
       },
       activeAddition: snap.activeAddition,
     });

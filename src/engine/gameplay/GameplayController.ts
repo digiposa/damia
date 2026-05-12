@@ -21,8 +21,13 @@ import { World } from '@core/ecs';
 import { gridToWorld, worldToGrid } from '@core/math/iso';
 
 import type { Components } from '@gameplay/components';
-import type { AdditionKind, MobKind } from '@data/balance';
-import { ADDITIONS, DEFEND } from '@data/balance';
+import {
+  ADDITIONS,
+  DEFEND,
+  getAdditionLevel,
+  type AdditionKind,
+  type MobKind,
+} from '@data/balance';
 import { ITEMS, type ItemKind } from '@data/items';
 import { SPELLS, type SpellKind } from '@data/spells';
 import { MODE_TUNING } from '@data/mode';
@@ -243,6 +248,7 @@ export class GameplayController {
         prog.level = save.progression.level;
         prog.xp = save.progression.xp;
         prog.xpToNext = save.progression.xpToNext;
+        prog.additionUses = { ...save.progression.additionUses };
       }
       this.hotbarSlots = [...save.hotbar];
       this.activeAddition = save.activeAddition;
@@ -664,6 +670,7 @@ export class GameplayController {
     let level = 1;
     let xp = 0;
     let xpToNext = 0;
+    let additionUses: Partial<Record<AdditionKind, number>> = {};
     if (this.playerId !== null) {
       const h = this.world.getComponent(this.playerId, 'Health');
       const p = this.world.getComponent(this.playerId, 'Position');
@@ -686,6 +693,7 @@ export class GameplayController {
         level = pr.level;
         xp = pr.xp;
         xpToNext = pr.xpToNext;
+        additionUses = { ...pr.additionUses };
       }
     }
     return {
@@ -699,6 +707,7 @@ export class GameplayController {
       progressionLevel: level,
       progressionXp: xp,
       progressionXpToNext: xpToNext,
+      progressionAdditionUses: additionUses,
       activeAddition: this.activeAddition,
     };
   }
@@ -925,11 +934,24 @@ export class GameplayController {
     const dx = tp.x - pos.x;
     const dy = tp.y - pos.y;
     const len = Math.hypot(dx, dy) || 1;
+    // Snapshot the addition's mastery level so the swing's damage /
+    // SP table doesn't shift mid-animation when the use counter
+    // happens to cross a 20-uses threshold. Increment the use
+    // counter on trigger (TLoD model — uses count even when the
+    // addition fizzles, matching the "5 completions for a single
+    // Dragoon round" tooltip language).
+    const prog = this.world.getComponent(this.playerId, 'Progression');
+    const usesBefore = prog?.additionUses[kind] ?? 0;
+    const addLevel = getAdditionLevel(usesBefore);
+    if (prog) prog.additionUses[kind] = usesBefore + 1;
     this.world.addComponent(this.playerId, 'Addition', {
       kind,
       elapsedMs: 0,
       totalMs: def.totalMs,
       hitsApplied: 0,
+      hitsLanded: 0,
+      lastHitLanded: false,
+      level: addLevel,
       targetId: target,
       dirX: dx / len,
       dirY: dy / len,

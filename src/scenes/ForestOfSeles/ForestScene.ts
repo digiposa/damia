@@ -166,16 +166,30 @@ export class ForestScene implements Scene {
     controller.hotbarSlots[2] = { kind: 'item', item: 'burnOut' };
   }
 
-  /** Translate the player's per-level addition unlock schedule into
-   *  engine-known kinds. Future additions (Volcano, Burning Rush, …)
-   *  appear here once they ship in ADDITIONS. */
+  /** Translate Dart's per-level addition unlock schedule into engine-
+   *  known kinds. The Master Addition (Blazing Dynamo) appears once
+   *  every basic in the kit is mastered to Lv 5 — TLoD canon. */
   private unlockedAdditions(level: number): ReadonlyArray<AdditionKind> {
+    const archetype = DART.archetype;
     const out: AdditionKind[] = [];
-    for (const [unlockLv, slug] of DART.archetype.additionUnlocksByLevel) {
+    for (const [unlockLv, slug] of archetype.additionUnlocksByLevel) {
       if (level < unlockLv) continue;
-      if (slug in ADDITIONS) out.push(slug as AdditionKind);
+      if (slug in ADDITIONS) out.push(slug);
+    }
+    if (archetype.masterAddition && this.isMasterUnlocked()) {
+      out.push(archetype.masterAddition);
     }
     return out.length > 0 ? out : ['doubleSlash'];
+  }
+
+  private isMasterUnlocked(): boolean {
+    if (!this.controller || this.controller.playerId === null) return false;
+    const prog = this.controller.world.getComponent(this.controller.playerId, 'Progression');
+    if (!prog) return false;
+    for (const slug of DART.archetype.additionUnlocksByLevel.values()) {
+      if ((prog.additionUses[slug] ?? 0) < 80) return false;
+    }
+    return true;
   }
 
   /** Inventory-panel drop: spawn a pickable Item entity at the player's

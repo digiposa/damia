@@ -215,6 +215,19 @@ export class GameplayController {
       ...(config.character ? { avatar: config.character } : {}),
     });
 
+    // Seed the default active addition from the spawned avatar's
+    // archetype rather than the hardcoded 'doubleSlash' field
+    // initializer. Without this, picking Lavitz / Rose / etc. would
+    // boot the run with an addition the avatar doesn't own — the
+    // picker would let them switch, but the very first slot would
+    // be invalid. The save-restore branch below overrides this with
+    // the persisted choice when the run resumes from a save.
+    const spawnedChar = this.world.getComponent(this.playerId, 'Character');
+    if (spawnedChar) {
+      const firstUnlock = spawnedChar.avatar.archetype.additionUnlocksByLevel.get(1);
+      if (firstUnlock) this.activeAddition = firstUnlock;
+    }
+
     // Prefill inventory + hotbar (used by both Survival dev loadout and
     // future starter-kit configs). Saved games override below.
     if (config.prefilledInventory) {

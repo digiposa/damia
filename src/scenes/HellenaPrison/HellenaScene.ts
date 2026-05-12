@@ -152,12 +152,26 @@ export class HellenaScene implements Scene {
   }
 
   private unlockedAdditions(level: number): ReadonlyArray<AdditionKind> {
+    const archetype = DART.archetype;
     const out: AdditionKind[] = [];
-    for (const [unlockLv, slug] of DART.archetype.additionUnlocksByLevel) {
+    for (const [unlockLv, slug] of archetype.additionUnlocksByLevel) {
       if (level < unlockLv) continue;
-      if (slug in ADDITIONS) out.push(slug as AdditionKind);
+      if (slug in ADDITIONS) out.push(slug);
+    }
+    if (archetype.masterAddition && this.isMasterUnlocked()) {
+      out.push(archetype.masterAddition);
     }
     return out.length > 0 ? out : ['doubleSlash'];
+  }
+
+  private isMasterUnlocked(): boolean {
+    if (!this.controller || this.controller.playerId === null) return false;
+    const prog = this.controller.world.getComponent(this.controller.playerId, 'Progression');
+    if (!prog) return false;
+    for (const slug of DART.archetype.additionUnlocksByLevel.values()) {
+      if ((prog.additionUses[slug] ?? 0) < 80) return false;
+    }
+    return true;
   }
 
   private dropItemToWorld(kind: ItemKind): void {

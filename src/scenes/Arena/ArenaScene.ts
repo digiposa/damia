@@ -7,7 +7,7 @@ import { TitleScene } from '../TitleScene';
 import { RunSummaryScene } from '../RunSummaryScene';
 import { RunState } from '@/store/RunState';
 import { MODE_TUNING } from '@data/mode';
-import { MOBS } from '@data/balance';
+import { ADDITIONS, MOBS, type AdditionKind } from '@data/balance';
 import { WaveSpawnerSystem } from '@gameplay/systems/WaveSpawnerSystem';
 import { ARENA_MIN_SPAWN_DIST_PX, ARENA_WAVE_DURATION_MS, buildArenaWave } from '@data/arenaWaves';
 import { SurvivalHUD } from '@ui/SurvivalHUD';
@@ -115,6 +115,7 @@ export class ArenaScene implements Scene {
         null,
       ],
       hooks: {
+        unlockedAdditions: (level) => this.unlockedAdditions(level),
         onPlayerDeath: () => {
           const summary = this.snapshotRun();
           queueMicrotask(() => {
@@ -252,6 +253,37 @@ export class ArenaScene implements Scene {
       if (def.oneShot) continue;
       def.apply(ctx);
     }
+  }
+
+  /** Resolve the addition pool for the run's chosen avatar at the
+   *  current level. Filters against `ADDITIONS` so the picker only
+   *  surfaces slugs the engine actually knows. The Master Addition
+   *  is appended once every basic on the kit is mastered to Lv 5
+   *  — see `isMasterUnlocked`. */
+  private unlockedAdditions(level: number): ReadonlyArray<AdditionKind> {
+    const archetype = this.character.archetype;
+    const out: AdditionKind[] = [];
+    for (const [unlockLv, slug] of archetype.additionUnlocksByLevel) {
+      if (level < unlockLv) continue;
+      if (slug in ADDITIONS) out.push(slug);
+    }
+    if (archetype.masterAddition && this.isMasterUnlocked()) {
+      out.push(archetype.masterAddition);
+    }
+    return out.length > 0 ? out : [archetype.additionUnlocksByLevel.get(1) ?? 'doubleSlash'];
+  }
+
+  /** Master Addition gating: TLoD canon requires every basic addition
+   *  in the kit to be mastered to Lv 5 (= 80+ uses). Reads the live
+   *  `Progression.additionUses` counter off the player. */
+  private isMasterUnlocked(): boolean {
+    if (!this.controller || this.controller.playerId === null) return false;
+    const prog = this.controller.world.getComponent(this.controller.playerId, 'Progression');
+    if (!prog) return false;
+    for (const slug of this.character.archetype.additionUnlocksByLevel.values()) {
+      if ((prog.additionUses[slug] ?? 0) < 80) return false;
+    }
+    return true;
   }
 
   /** Capture the run's stats the moment the player dies, while the

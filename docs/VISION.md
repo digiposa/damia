@@ -152,7 +152,27 @@ pas vérifier rapidement à l'œil.
 
 ---
 
-## 6. Sections à venir
+## 6. État du chantier — focus courant
+
+L'auteur précise qu'**une part substantielle du code est déjà
+implémentée** (avant un `/clear` accidentel qui m'a fait perdre le
+contexte en cours de session — cette doc en est en partie la
+reconstruction).
+
+Ce qui est posé à ce jour, d'après l'auteur :
+
+- **Système d'items** — en place.
+- **Personnages, additions et Dragoons** — **chantier actif en cours**
+  d'implémentation. C'est le focus actuel du développement.
+
+> Le détail technique de l'existant (modules livrés, schémas data,
+> hooks, etc.) sera reconsigné dans `ARCHITECTURE.md` lors de la passe
+> de re-documentation suivante. Cette doc-ci (VISION) reste au niveau
+> macro / direction.
+
+---
+
+## 7. Sections à venir
 
 > Cette doc grossira à mesure que l'auteur précise sa vision. Sections
 > attendues (à compléter ensemble) :
@@ -170,4 +190,4 @@ pas vérifier rapidement à l'œil.
 
 ---
 
-_Dernière mise à jour : 2026-05-12 — sections 1-5 captées._
+_Dernière mise à jour : 2026-05-12 — sections 1-6 captées._

@@ -2,6 +2,7 @@ import type { Addition } from './Addition';
 import type { AI } from './AI';
 import type { AttackCooldown } from './AttackCooldown';
 import type { AttackSwing } from './AttackSwing';
+import type { Character } from './Character';
 import type { Collider } from './Collider';
 import type { CombatIntent } from './CombatIntent';
 import type { Defending } from './Defending';
@@ -50,6 +51,7 @@ export interface Components {
   Interactable: Interactable;
   AttackSwing: AttackSwing;
   Addition: Addition;
+  Character: Character;
   SkillCooldown: SkillCooldown;
   RandomEncounter: RandomEncounter;
   Spell: Spell;
@@ -64,6 +66,7 @@ export type {
   AI,
   AttackCooldown,
   AttackSwing,
+  Character,
   Collider,
   CombatIntent,
   Defending,

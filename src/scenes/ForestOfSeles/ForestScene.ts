@@ -4,8 +4,7 @@ import { GameplayController } from '@/engine/gameplay/GameplayController';
 import type { GameplaySnapshot, SceneConfig } from '@/engine/gameplay/SceneConfig';
 import { ForestMap } from './MapLoader';
 import { ADDITIONS, type AdditionKind } from '@data/balance';
-import { applyDartRow, DART_ADDITION_UNLOCKS_BY_LEVEL } from '@data/dart';
-import { xpThresholdForLevel } from '@data/progression';
+import { applyCharacterRow, DART, xpToReachLevel } from '@data/characters';
 import { ITEMS, type ItemKind } from '@data/items';
 import { spawnItem } from '@gameplay/entities/items';
 import { SaveManager, type SaveDataV5 } from '@services/SaveManager';
@@ -136,7 +135,7 @@ export class ForestScene implements Scene {
     const stats = world.getComponent(playerId, 'Stats');
     const hp = world.getComponent(playerId, 'Health');
     const level = prog?.level ?? 1;
-    applyDartRow(stats, hp, level, fromThisZone);
+    applyCharacterRow(stats, hp, DART, level, fromThisZone);
     if (!fromThisZone && hp) hp.current = hp.max;
   }
 
@@ -153,10 +152,10 @@ export class ForestScene implements Scene {
     const hp = world.getComponent(playerId, 'Health');
     if (prog) {
       prog.level = 5;
-      prog.xp = xpThresholdForLevel(5);
-      prog.xpToNext = xpThresholdForLevel(6);
+      prog.xp = xpToReachLevel(DART, 5);
+      prog.xpToNext = xpToReachLevel(DART, 6);
     }
-    applyDartRow(stats, hp, 5, false);
+    applyCharacterRow(stats, hp, DART, 5, false);
     if (hp) hp.current = hp.max;
     const inv = world.getComponent(playerId, 'Inventory');
     if (inv) {
@@ -167,12 +166,12 @@ export class ForestScene implements Scene {
     controller.hotbarSlots[2] = { kind: 'item', item: 'burnOut' };
   }
 
-  /** Translate Dart's per-level addition unlock schedule into engine-known
-   *  kinds. Future additions (Volcano, Burning Rush, …) appear here once
-   *  they ship in ADDITIONS. */
+  /** Translate the player's per-level addition unlock schedule into
+   *  engine-known kinds. Future additions (Volcano, Burning Rush, …)
+   *  appear here once they ship in ADDITIONS. */
   private unlockedAdditions(level: number): ReadonlyArray<AdditionKind> {
     const out: AdditionKind[] = [];
-    for (const [unlockLv, slug] of DART_ADDITION_UNLOCKS_BY_LEVEL) {
+    for (const [unlockLv, slug] of DART.additionUnlocksByLevel) {
       if (level < unlockLv) continue;
       if (slug in ADDITIONS) out.push(slug as AdditionKind);
     }

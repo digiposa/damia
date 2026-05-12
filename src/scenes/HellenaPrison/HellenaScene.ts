@@ -4,7 +4,7 @@ import { GameplayController } from '@/engine/gameplay/GameplayController';
 import type { GameplaySnapshot, SceneConfig } from '@/engine/gameplay/SceneConfig';
 import type { MapData } from '../ForestOfSeles/MapLoader';
 import { ADDITIONS, type AdditionKind } from '@data/balance';
-import { DART_ADDITION_UNLOCKS_BY_LEVEL, applyDartRow } from '@data/dart';
+import { DART, applyCharacterRow } from '@data/characters';
 import { ITEMS, type ItemKind } from '@data/items';
 import { spawnItem } from '@gameplay/entities/items';
 import { SaveManager, type SaveDataV5 } from '@services/SaveManager';
@@ -147,13 +147,13 @@ export class HellenaScene implements Scene {
     const stats = world.getComponent(playerId, 'Stats');
     const hp = world.getComponent(playerId, 'Health');
     const level = prog?.level ?? 1;
-    applyDartRow(stats, hp, level, fromThisZone);
+    applyCharacterRow(stats, hp, DART, level, fromThisZone);
     if (!fromThisZone && hp) hp.current = hp.max;
   }
 
   private unlockedAdditions(level: number): ReadonlyArray<AdditionKind> {
     const out: AdditionKind[] = [];
-    for (const [unlockLv, slug] of DART_ADDITION_UNLOCKS_BY_LEVEL) {
+    for (const [unlockLv, slug] of DART.additionUnlocksByLevel) {
       if (level < unlockLv) continue;
       if (slug in ADDITIONS) out.push(slug as AdditionKind);
     }

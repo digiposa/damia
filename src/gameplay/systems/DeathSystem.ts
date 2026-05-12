@@ -4,8 +4,7 @@ import { spawnFloatingText } from '@gameplay/entities/floatingText';
 import { spawnItem } from '@gameplay/entities/items';
 import { MOBS, type MobKind } from '@data/balance';
 import { rollLoot } from '@data/items';
-import { DART_XP_TO_REACH_LEVEL, applyDartRow } from '@data/dart';
-import { xpThresholdForLevel } from '@data/progression';
+import { applyCharacterRow, xpToReachLevel } from '@data/characters';
 import { playSfx } from '@services/AudioManager';
 
 export type PlayerDeathListener = () => void;
@@ -141,22 +140,24 @@ export class DeathSystem implements System<Components> {
    * No-op if there's no player or no Progression.
    */
   private awardXp(world: World<Components>, xp: number, mobX: number, mobY: number): void {
-    const players = world.query(['Player', 'Progression']);
+    const players = world.query(['Player', 'Progression', 'Character']);
     const playerId = players[0];
     if (playerId === undefined) return;
     const prog = world.getComponent(playerId, 'Progression');
-    if (!prog) return;
+    const character = world.getComponent(playerId, 'Character');
+    if (!prog || !character) return;
+    const def = character.def;
     prog.xp += xp;
-    const cap = DART_XP_TO_REACH_LEVEL.length; // 60
+    const cap = def.xpToReachLevel.length;
     // TLoD model: xp accumulates lifelong. We level up while the cumulative
     // counter crosses the threshold for the next level. xpToNext stays the
     // cumulative threshold (NOT a delta).
     while (prog.level < cap && prog.xp >= prog.xpToNext) {
       prog.level += 1;
-      prog.xpToNext = xpThresholdForLevel(prog.level + 1);
+      prog.xpToNext = xpToReachLevel(def, prog.level + 1);
       const stats = world.getComponent(playerId, 'Stats');
       const hp = world.getComponent(playerId, 'Health');
-      applyDartRow(stats, hp, prog.level, false);
+      applyCharacterRow(stats, hp, def, prog.level, false);
       // Full heal on level up — match TLoD's level-up behavior.
       if (hp) hp.current = hp.max;
       spawnFloatingText(world, {

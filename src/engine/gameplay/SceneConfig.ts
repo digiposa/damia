@@ -15,6 +15,7 @@ import type { MapData } from '@scenes/ForestOfSeles/MapLoader';
 import type { MusicAlias } from '@services/AudioManager';
 import type { ItemKind } from '@data/items';
 import type { AdditionKind, MobKind } from '@data/balance';
+import type { CharacterDef } from '@data/characters';
 import type { Components, Exit, Interactable } from '@gameplay/components';
 import type { Entity, World } from '@core/ecs';
 import type { GameContext } from '@/Game';
@@ -135,6 +136,10 @@ export interface GameplaySnapshot {
 export interface SceneConfig {
   mode: GameMode;
   map: MapData;
+  /** Playable character to spawn. Defaults to Dart when omitted —
+   *  Story zones lean on the default; Survival's future character
+   *  selector will pass an explicit pick here. */
+  character?: CharacterDef;
   /** Save record to restore from (Story re-entry). Null for fresh runs
    *  and for Survival. */
   saveData?: SaveDataV5 | null;

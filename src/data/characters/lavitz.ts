@@ -15,8 +15,11 @@ export const LAVITZ: CharacterAvatar = {
       idle: 'sprite.player.lavitz',
       attack: 'sprite.player.lavitz.attack',
       defend: 'sprite.player.lavitz.defend',
+      additions: {
+        harpoon: ['sprite.player.lavitz.attack', 'sprite.player.lavitz.harpoon.2'],
+      },
     },
-    // Dragoon-form sprites land in commit 4. Reuse base meanwhile.
+    // Jade-armor dragoon-form sprite is still pending. Reuse base meanwhile.
     dragoon: {
       idle: 'sprite.player.lavitz',
       attack: 'sprite.player.lavitz.attack',

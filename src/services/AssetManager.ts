@@ -67,14 +67,23 @@ const MANIFEST = {
   // and update the references) when sprites land. Characters are
   // wired all the way through the engine + CHARACTERS registry, so
   // the swap is purely a content drop — no code change needed.
-  'sprite.player.lavitz': { kind: 'texture', url: '/assets/sprites/player/dart.png' },
+  // Lavitz — Jade Dragoon. Four poses: standing (idle), spear thrust
+  // (attack), shield-up (defend), and the Harpoon 2nd-hit arc.
+  // The 1st hit of Harpoon reuses the attack pose, mirroring Dart's
+  // Double Slash. Albert keeps Dart placeholders until his own art
+  // ships (same archetype, distinct avatar).
+  'sprite.player.lavitz': { kind: 'texture', url: '/assets/sprites/player/lavitz.png' },
   'sprite.player.lavitz.attack': {
     kind: 'texture',
-    url: '/assets/sprites/player/dart-attack.png',
+    url: '/assets/sprites/player/lavitz-attack.png',
   },
   'sprite.player.lavitz.defend': {
     kind: 'texture',
-    url: '/assets/sprites/player/dart-defend.png',
+    url: '/assets/sprites/player/lavitz-defend.png',
+  },
+  'sprite.player.lavitz.harpoon.2': {
+    kind: 'texture',
+    url: '/assets/sprites/player/lavitz-harpoon-2.png',
   },
   'sprite.player.rose': { kind: 'texture', url: '/assets/sprites/player/dart.png' },
   'sprite.player.rose.attack': {

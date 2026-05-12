@@ -8,7 +8,7 @@
  * row from shareAI/assetsTLOD/characters/Albert/stats.txt lands.
  */
 import type { CharacterDef } from './types';
-import { placeholderStatsByLevel } from './types';
+import { LAVITZ_STATS_BY_LEVEL } from './lavitz';
 
 /** Cumulative XP to reach each level — same column as Lavitz. */
 const ALBERT_XP_TO_REACH_LEVEL: ReadonlyArray<number> = [
@@ -37,29 +37,20 @@ export const ALBERT: CharacterDef = {
       magicAvoid: 0,
     },
   },
-  // TODO: replace with the canonical TLoD Albert stat row. Profile
-  // softer than Lavitz on physical, stronger on magic (king who
-  // studied — narrative archetype).
-  statsByLevel: placeholderStatsByLevel({
-    baseHp: 27,
-    hpPerLevel: 24,
-    hpMidGameBonus: 38,
-    baseAtk: 2,
-    atkPerLevel: 1.9,
-    baseDef: 4,
-    defPerLevel: 1.9,
-    baseMagicAtk: 3,
-    magicAtkPerLevel: 2.3,
-    baseMagicDef: 4,
-    magicDefPerLevel: 2.1,
-  }),
+  // Albert shares Lavitz's canonical stat row in TLoD's tables
+  // (both Jade Dragoon, Albert inherits the Spirit) — reuse the
+  // same const so they stay perfectly in sync.
+  statsByLevel: LAVITZ_STATS_BY_LEVEL,
   xpToReachLevel: ALBERT_XP_TO_REACH_LEVEL,
-  // Same Additions as Lavitz (he inherits the Jade Dragoon Spirit).
+  // Same Additions as Lavitz — inherits the Jade Dragoon Spirit.
+  // Harpoon → Spinning Cane → Rod Typhoon → Gust of Wind Dance →
+  // Flower Storm. None declared in ADDITIONS yet.
   additionUnlocksByLevel: new Map([
-    [1, 'spinningCane'],
-    [8, 'rodTyphoon'],
-    [15, 'falconDive'],
-    [22, 'gustOfWindDance'],
+    [1, 'harpoon'],
+    [9, 'spinningCane'],
+    [18, 'rodTyphoon'],
+    [32, 'gustOfWindDance'],
+    [50, 'flowerStorm'],
   ]),
   sprite: {
     idle: 'sprite.player.albert',

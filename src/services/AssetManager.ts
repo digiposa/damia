@@ -70,6 +70,19 @@ const MANIFEST = {
   'sprite.mob.trent.attack': { kind: 'texture', url: '/assets/sprites/mobs/trent-attack.png' },
   'sprite.mob.trent.death': { kind: 'texture', url: '/assets/sprites/mobs/trent-death.png' },
 
+  // Bosses. Fruegel placeholder textures point at trent assets until the
+  // boss-specific PNG ships — swap the URLs once the sprite is uploaded
+  // to /assets/sprites/bosses/fruegel*.png.
+  'sprite.mob.fruegel': { kind: 'texture', url: '/assets/sprites/mobs/trent.png' },
+  'sprite.mob.fruegel.attack': {
+    kind: 'texture',
+    url: '/assets/sprites/mobs/trent-attack.png',
+  },
+  'sprite.mob.fruegel.death': {
+    kind: 'texture',
+    url: '/assets/sprites/mobs/trent-death.png',
+  },
+
   // M8 forest tiles.
   // Ground = first Gemini grass variant (sampled into iso-diamond Graphics fills,
   // so its white bg is naturally clipped by the polygon shape).

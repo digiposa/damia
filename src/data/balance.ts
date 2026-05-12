@@ -40,7 +40,7 @@ export const PLAYER_BASE = {
   } as Stats,
 } as const;
 
-export type MobKind = 'berserkMouse' | 'goblin' | 'assassinCock' | 'trent';
+export type MobKind = 'berserkMouse' | 'goblin' | 'assassinCock' | 'trent' | 'fruegel';
 
 export interface MobDefinition {
   health: number;
@@ -167,6 +167,46 @@ export const MOBS: Record<MobKind, MobDefinition> = {
       deathTextureAlias: 'sprite.mob.trent.death',
     },
     xp: 15,
+  },
+  // BOSS — Fruegel, Hellena Prison's warden. Numbers are TLoD-canonical
+  // (1st visit, US/EU column): high physical defence + middling damage,
+  // designed in the original to be brutally tanky for the player's first
+  // proper boss. Action-RPG translation: melee swing every ~1.5 s, world
+  // speed slow enough that the player can kite. We keep aggroRange tiny
+  // here because the WaveSpawnerSystem overrides it to 99 999 on spawn —
+  // bosses are pre-engaged so they march on the player from across the
+  // arena instead of idling.
+  fruegel: {
+    health: 90,
+    speed: 0.05,
+    stats: {
+      atk: 6,
+      def: 100,
+      magicAtk: 4,
+      magicDef: 80,
+      speed: 50,
+      attackHit: 100,
+      magicHit: 100,
+      attackAvoid: 0,
+      magicAvoid: 0,
+      atkSpeed: 0.7,
+      range: 96,
+      aggroRange: 200,
+    },
+    sprite: {
+      // Humanoid silhouette — wider than goblin (he's a hulking warden
+      // in TLoD art). Placeholder textures resolve to the trent sprite
+      // via AssetManager until the dedicated PNG is uploaded.
+      shape: 'capsule',
+      color: 0x5a2a2a,
+      width: 90,
+      height: 130,
+      fitMode: 'height',
+      textureAlias: 'sprite.mob.fruegel',
+      attackTextureAlias: 'sprite.mob.fruegel.attack',
+      deathTextureAlias: 'sprite.mob.fruegel.death',
+    },
+    xp: 240,
   },
 } as const;
 

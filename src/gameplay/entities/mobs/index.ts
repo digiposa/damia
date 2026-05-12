@@ -8,6 +8,10 @@ const KIND_TO_BEHAVIOR: Record<MobKind, AIBehavior> = {
   goblin: 'goblin',
   assassinCock: 'cock',
   trent: 'trent',
+  // Fruegel rides the humanoid melee AI for v1 — chase + swing on
+  // contact. Boss-specific behaviour (charge, AoE smash, phase
+  // transition) lands in a dedicated 'boss' branch later.
+  fruegel: 'goblin',
 };
 
 /** Generic mob assembler. Looks up stats/sprite in `MOBS` and AI behavior in the table above. */

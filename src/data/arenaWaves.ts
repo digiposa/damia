@@ -11,6 +11,22 @@ export const ARENA_WAVE_DURATION_MS = 30_000;
  *  player's head. */
 export const ARENA_MIN_SPAWN_DIST_PX = 572;
 
+/** Boss waves replace the regular tier mix entirely so the named boss
+ *  isn't drowned in chaff. Keyed by 0-based wave index, evaluated by
+ *  `buildArenaWave` before the procedural curve. */
+const BOSS_WAVES: ReadonlyMap<number, WaveSpawnList> = new Map<number, WaveSpawnList>([
+  // Wave 10 (idx 9): Fruegel + 3 Hellena Wardens (goblin proxy until we
+  // have a Warden sprite). TLoD-canonical pacing — Fruegel is the
+  // player's first taste of "wall with HP".
+  [
+    9,
+    [
+      { kind: 'fruegel', count: 1 },
+      { kind: 'goblin', count: 3 },
+    ],
+  ],
+]);
+
 /**
  * Procedural difficulty curve for the endless arena. Tier rolls every 5
  * waves (≈ 2.5 min). Mob kinds gate-in progressively so the early game
@@ -27,13 +43,17 @@ export const ARENA_MIN_SPAWN_DIST_PX = 572;
  *                          player decides when to die.
  *
  * Mini-boss every 5 waves (4, 9, 14, …): one extra trent dropped into
- * the mix, even at low tiers, so the wave-end carries weight.
+ * the mix, even at low tiers, so the wave-end carries weight. Named
+ * bosses override the mix entirely via `BOSS_WAVES` (currently wave 10
+ * = Fruegel + 3 wardens).
  *
  * Tuning lever: edit `tier` math + per-kind counts. Wave count is
  * read off the current run elapsed-time, not stored, so the curve can
  * be retuned without invalidating in-flight runs.
  */
 export function buildArenaWave(idx: number): WaveSpawnList {
+  const named = BOSS_WAVES.get(idx);
+  if (named) return named;
   const tier = Math.floor(idx / 5);
   const spawns: { kind: MobKind; count: number }[] = [];
   spawns.push({ kind: 'berserkMouse', count: 2 + tier });

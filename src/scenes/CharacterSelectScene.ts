@@ -6,6 +6,7 @@ import { playSfx } from '@services/AudioManager';
 import { AssetManager } from '@services/AssetManager';
 import { SafeArea } from '@services/SafeArea';
 import { CHARACTERS, type CharacterDef, type CharacterId } from '@data/characters';
+import { UnlockManager, UNLOCK_HINT_KEYS } from '@services/UnlockManager';
 import { ArenaScene } from './Arena/ArenaScene';
 import { TitleScene } from './TitleScene';
 
@@ -97,7 +98,9 @@ export class CharacterSelectScene implements Scene {
     for (const id of SELECTOR_ORDER) {
       const def = CHARACTERS[id];
       if (!def) continue;
-      const card = this.buildCard(def, cardW, (picked) => {
+      const unlocked = UnlockManager.isUnlocked(id);
+      const card = this.buildCard(def, cardW, unlocked, (picked) => {
+        if (!unlocked) return;
         playSfx('ui.click');
         queueMicrotask(() => {
           void ctx.scenes.switchTo(new ArenaScene(picked), ctx);
@@ -147,14 +150,22 @@ export class CharacterSelectScene implements Scene {
   private buildCard(
     def: CharacterDef,
     width: number,
+    unlocked: boolean,
     onPick: (def: CharacterDef) => void,
   ): Container {
     const card = new Container({ label: `character-card-${def.id}` });
+    // Locked cards render with a desaturated palette so the player
+    // can still see who they're working toward but can't confuse
+    // the card for a tappable option.
+    const fill = unlocked ? CARD_BG : 0x10141c;
+    const stroke = unlocked ? CARD_STROKE : 0x4a4a52;
+    const alpha = unlocked ? 0.95 : 0.8;
     const bg = new Graphics()
       .roundRect(0, 0, width, CARD_HEIGHT, 12)
-      .fill({ color: CARD_BG, alpha: 0.95 })
-      .stroke({ width: 2, color: CARD_STROKE, alpha: 0.9 });
+      .fill({ color: fill, alpha })
+      .stroke({ width: 2, color: stroke, alpha });
     card.addChild(bg);
+    if (!unlocked) card.alpha = 0.65;
 
     // Portrait — uses the character's idle sprite alias scaled into a
     // square slot at the card's left edge. Falls back to a tinted
@@ -209,12 +220,22 @@ export class CharacterSelectScene implements Scene {
     badge.position.set(textX, 46);
     card.addChild(badge);
 
+    // Locked cards swap the blurb for the unlock hint so the player
+    // knows what to chase. Falls back to a generic "Verrouillé" if
+    // the hint key isn't registered yet (defensive — shouldn't
+    // happen at the current pool size of 2 characters).
+    const blurbText = unlocked
+      ? t(`characterSelect.blurb.${def.id}`)
+      : UNLOCK_HINT_KEYS[def.id]
+        ? t(UNLOCK_HINT_KEYS[def.id]!)
+        : t('characterSelect.locked');
     const blurb = new Text({
-      text: t(`characterSelect.blurb.${def.id}`),
+      text: blurbText,
       style: {
         fontFamily: 'system-ui, sans-serif',
         fontSize: 13,
-        fill: CARD_DESC_COLOR,
+        fill: unlocked ? CARD_DESC_COLOR : 0xeec040,
+        fontStyle: unlocked ? 'normal' : 'italic',
         wordWrap: true,
         wordWrapWidth: textW,
       },
@@ -223,19 +244,21 @@ export class CharacterSelectScene implements Scene {
     card.addChild(blurb);
 
     card.eventMode = 'static';
-    card.cursor = 'pointer';
-    card.on('pointerdown', () => {
-      bg.clear()
-        .roundRect(0, 0, width, CARD_HEIGHT, 12)
-        .fill({ color: CARD_PRESSED_BG, alpha: 0.95 })
-        .stroke({ width: 2, color: CARD_STROKE, alpha: 1 });
-    });
-    card.on('pointerupoutside', () => {
-      bg.clear()
-        .roundRect(0, 0, width, CARD_HEIGHT, 12)
-        .fill({ color: CARD_BG, alpha: 0.95 })
-        .stroke({ width: 2, color: CARD_STROKE, alpha: 0.9 });
-    });
+    card.cursor = unlocked ? 'pointer' : 'not-allowed';
+    if (unlocked) {
+      card.on('pointerdown', () => {
+        bg.clear()
+          .roundRect(0, 0, width, CARD_HEIGHT, 12)
+          .fill({ color: CARD_PRESSED_BG, alpha: 0.95 })
+          .stroke({ width: 2, color: CARD_STROKE, alpha: 1 });
+      });
+      card.on('pointerupoutside', () => {
+        bg.clear()
+          .roundRect(0, 0, width, CARD_HEIGHT, 12)
+          .fill({ color: CARD_BG, alpha: 0.95 })
+          .stroke({ width: 2, color: CARD_STROKE, alpha: 0.9 });
+      });
+    }
     card.on('pointertap', (e) => {
       e.stopPropagation();
       onPick(def);

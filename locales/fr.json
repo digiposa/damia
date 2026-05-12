@@ -28,7 +28,8 @@
       "rank": "Classement #{{n}}",
       "topScores": "Meilleurs scores",
       "noScores": "—",
-      "replay": "Rejouer"
+      "replay": "Rejouer",
+      "unlocked": "Personnage débloqué : {{name}} !"
     },
     "levelup": {
       "title": "Niveau supérieur !",
@@ -110,6 +111,7 @@
     "title": "Choisis ton personnage",
     "subtitle": "Toucher une carte pour lancer la run",
     "back": "Retour",
+    "locked": "Verrouillé",
     "pattern": {
       "melee": "Mêlée",
       "ranged": "Distance"
@@ -117,6 +119,9 @@
     "blurb": {
       "dart": "Épée. Polyvalent, gros HP, additions explosives.",
       "shana": "Arc. Fragile mais kite à distance, magie lumineuse."
+    },
+    "unlockHint": {
+      "shana": "Atteins la vague 5 en Survival pour débloquer."
     }
   },
   "interactables": {

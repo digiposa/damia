@@ -28,7 +28,8 @@
       "rank": "Rank #{{n}}",
       "topScores": "Top scores",
       "noScores": "—",
-      "replay": "Replay"
+      "replay": "Replay",
+      "unlocked": "Character unlocked: {{name}}!"
     },
     "levelup": {
       "title": "Level up!",
@@ -110,6 +111,7 @@
     "title": "Choose your character",
     "subtitle": "Tap a card to start the run",
     "back": "Back",
+    "locked": "Locked",
     "pattern": {
       "melee": "Melee",
       "ranged": "Ranged"
@@ -117,6 +119,9 @@
     "blurb": {
       "dart": "Sword. Balanced, high HP, explosive additions.",
       "shana": "Bow. Fragile but kites at range, light magic."
+    },
+    "unlockHint": {
+      "shana": "Reach wave 5 in Survival to unlock."
     }
   },
   "interactables": {

@@ -5,9 +5,10 @@ import { t } from '@services/I18nService';
 import { playSfx } from '@services/AudioManager';
 import { RunHighScores, type SurvivalRunRecord } from '@services/RunHighScores';
 import { SafeArea } from '@services/SafeArea';
+import { UnlockManager } from '@services/UnlockManager';
 import { ArenaScene } from './Arena/ArenaScene';
 import { TitleScene } from './TitleScene';
-import type { CharacterDef } from '@data/characters';
+import { CHARACTERS, type CharacterDef, type CharacterId } from '@data/characters';
 
 const BTN_WIDTH = 240;
 const BTN_HEIGHT = 52;
@@ -76,6 +77,12 @@ export class RunSummaryScene implements Scene {
     };
     const rank = RunHighScores.submit(record);
     const top = RunHighScores.load();
+    // Test the run against every gated character. Returns the list of
+    // characters that just transitioned from locked → unlocked; the
+    // service has already persisted them. We surface the first new
+    // unlock as a celebratory banner — multi-unlock runs are rare
+    // enough at v1 that one banner is fine.
+    const newlyUnlocked = UnlockManager.evaluateUnlocks(record);
 
     const bg = new Graphics().rect(0, 0, screenW, screenH).fill(COLOR_BG);
     this.container.addChild(bg);
@@ -104,6 +111,13 @@ export class RunSummaryScene implements Scene {
 
     if (rank >= 0) {
       const banner = this.makeRecordBanner(rank);
+      banner.position.set(cx, cursorY);
+      this.container.addChild(banner);
+      cursorY += 44;
+    }
+
+    if (newlyUnlocked.length > 0) {
+      const banner = this.makeUnlockBanner(newlyUnlocked[0]!);
       banner.position.set(cx, cursorY);
       this.container.addChild(banner);
       cursorY += 44;
@@ -183,6 +197,34 @@ export class RunSummaryScene implements Scene {
       .stroke({ width: 2, color: COLOR_HIGHLIGHT, alpha: 0.95 });
     const label = new Text({
       text: `${t('survival.summary.newRecord')}  ${t('survival.summary.rank', { n: rank + 1 })}`,
+      style: {
+        fontFamily: 'system-ui, sans-serif',
+        fontSize: 16,
+        fill: COLOR_TITLE,
+        fontWeight: 'bold',
+      },
+    });
+    label.anchor.set(0.5, 0.5);
+    label.position.set(0, h / 2);
+    c.addChild(bg, label);
+    return c;
+  }
+
+  /** Celebratory banner for a freshly-unlocked character. Same
+   *  geometry as the high-score banner but tinted with the
+   *  rare-pip gold so the player notices it's a different reward. */
+  private makeUnlockBanner(id: CharacterId): Container {
+    const c = new Container({ label: 'unlock-banner' });
+    const w = CARD_WIDTH;
+    const h = 36;
+    const bg = new Graphics()
+      .roundRect(-w / 2, 0, w, h, 8)
+      .fill({ color: 0x3a5d2a, alpha: 0.95 })
+      .stroke({ width: 2, color: COLOR_HIGHLIGHT, alpha: 0.95 });
+    const def = CHARACTERS[id];
+    const name = def ? t(def.displayNameKey) : id;
+    const label = new Text({
+      text: t('survival.summary.unlocked', { name }),
       style: {
         fontFamily: 'system-ui, sans-serif',
         fontSize: 16,

@@ -91,6 +91,12 @@ export class RunState {
     return this.snapshot;
   }
 
+  /** XP needed to clear the *current* level. The HUD reads this so the
+   *  XP bar fills toward the right threshold each level. */
+  get xpToNext(): number {
+    return xpThresholdFor(this.snapshot.level);
+  }
+
   /** XP fraction toward next level — [0, 1]. HUD bar reads this. */
   xpFrac(): number {
     const need = xpThresholdFor(this.snapshot.level);

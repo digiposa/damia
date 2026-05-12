@@ -99,11 +99,13 @@ export class ArenaScene implements Scene {
           this.runState.recordKill(MOBS[kind].xp);
         },
         onTickHUD: (hud) => {
-          // Surface run stats in the level / XP slots until the
-          // dedicated survival HUD ships.
+          // Surface run progression in the level + XP slots until the
+          // dedicated SurvivalHUD overlay ships. Showing kills here was
+          // misleading: the bar maxed at 0 so the player couldn't see
+          // real progress toward the next level-up.
           const snap = this.runState.read();
           hud.setLevel(snap.level);
-          hud.setXp(snap.kills, 0);
+          hud.setXp(snap.xp, this.runState.xpToNext);
         },
       },
     };

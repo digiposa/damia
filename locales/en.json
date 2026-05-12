@@ -105,8 +105,14 @@
   },
   "character": {
     "dart": { "name": "Dart" },
+    "lavitz": { "name": "Lavitz" },
     "shana": { "name": "Shana" },
-    "meru": { "name": "Meru" }
+    "rose": { "name": "Rose" },
+    "haschel": { "name": "Haschel" },
+    "albert": { "name": "Albert" },
+    "meru": { "name": "Meru" },
+    "kongol": { "name": "Kongol" },
+    "miranda": { "name": "Miranda" }
   },
   "characterSelect": {
     "title": "Choose your character",
@@ -119,12 +125,24 @@
     },
     "blurb": {
       "dart": "Sword. Balanced, high HP, explosive additions.",
+      "lavitz": "Lance. Steady knight, solid defence, wind.",
       "shana": "Bow. Fragile but kites at range, light magic.",
-      "meru": "Hammer. Fast melee, agile, water magic."
+      "rose": "Rapier. Fast, agile, veteran shadow magic.",
+      "haschel": "Martial arts. Lightning-fast, short reach, thunder.",
+      "albert": "Lance. Mage-knight, boosted wind magic.",
+      "meru": "Hammer. Fast melee, agile, water magic.",
+      "kongol": "Giant axe. Slow but a wall of HP, raw earth.",
+      "miranda": "Bow. Precise shot, aggressive light magic."
     },
     "unlockHint": {
       "shana": "Reach wave 5 in Survival to unlock.",
-      "meru": "Reach wave 10 with 50 kills to unlock."
+      "lavitz": "Reach wave 7 with 25 kills to unlock.",
+      "meru": "Reach wave 10 with 50 kills to unlock.",
+      "rose": "Reach wave 12 with 80 kills to unlock.",
+      "haschel": "Reach wave 15 with 120 kills to unlock.",
+      "albert": "Reach wave 18 with 160 kills to unlock.",
+      "kongol": "Reach wave 22 with 220 kills to unlock.",
+      "miranda": "Reach wave 28 with 300 kills to unlock."
     }
   },
   "interactables": {

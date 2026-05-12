@@ -23,15 +23,18 @@ const ALWAYS_UNLOCKED: ReadonlyArray<CharacterId> = ['dart'];
  * the selector card without re-implementing the logic.
  */
 const UNLOCK_CRITERIA: Partial<Record<CharacterId, (record: SurvivalRunRecord) => boolean>> = {
-  // Shana — first meta-unlock. Reach wave 5 in any Survival run.
-  // Hits ~ 2 min in so first-time players bump into it during their
-  // second or third attempt. Easy to bump later if the bar feels off.
+  // Ladder mirrors the TLoD party-join order with progressively
+  // higher bars. Double criteria (wave + kills) on mid/late
+  // unlocks guard against the wave-skipper exploit (run away,
+  // bank the wave count without fighting).
   shana: (r) => r.wave >= 5,
-  // Meru — second meta-unlock. Bumped to wave 10 + 50 kills so the
-  // player has to genuinely survive past Fruegel's boss wave before
-  // earning the wind dancer. The double criterion guards against a
-  // very-low-kills wave-skipper exploit (running away from spawns).
+  lavitz: (r) => r.wave >= 7 && r.kills >= 25,
   meru: (r) => r.wave >= 10 && r.kills >= 50,
+  rose: (r) => r.wave >= 12 && r.kills >= 80,
+  haschel: (r) => r.wave >= 15 && r.kills >= 120,
+  albert: (r) => r.wave >= 18 && r.kills >= 160,
+  kongol: (r) => r.wave >= 22 && r.kills >= 220,
+  miranda: (r) => r.wave >= 28 && r.kills >= 300,
 };
 
 class UnlockManagerService {
@@ -131,5 +134,11 @@ export const UnlockManager = new UnlockManagerService();
  *  characters that aren't gated. */
 export const UNLOCK_HINT_KEYS: Partial<Record<CharacterId, string>> = {
   shana: 'characterSelect.unlockHint.shana',
+  lavitz: 'characterSelect.unlockHint.lavitz',
   meru: 'characterSelect.unlockHint.meru',
+  rose: 'characterSelect.unlockHint.rose',
+  haschel: 'characterSelect.unlockHint.haschel',
+  albert: 'characterSelect.unlockHint.albert',
+  kongol: 'characterSelect.unlockHint.kongol',
+  miranda: 'characterSelect.unlockHint.miranda',
 };

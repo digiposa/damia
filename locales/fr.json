@@ -105,8 +105,14 @@
   },
   "character": {
     "dart": { "name": "Dart" },
+    "lavitz": { "name": "Lavitz" },
     "shana": { "name": "Shana" },
-    "meru": { "name": "Meru" }
+    "rose": { "name": "Rose" },
+    "haschel": { "name": "Haschel" },
+    "albert": { "name": "Albert" },
+    "meru": { "name": "Meru" },
+    "kongol": { "name": "Kongol" },
+    "miranda": { "name": "Miranda" }
   },
   "characterSelect": {
     "title": "Choisis ton personnage",
@@ -119,12 +125,24 @@
     },
     "blurb": {
       "dart": "Épée. Polyvalent, gros HP, additions explosives.",
+      "lavitz": "Lance. Chevalier équilibré, défense solide, vent.",
       "shana": "Arc. Fragile mais kite à distance, magie lumineuse.",
-      "meru": "Marteau. Mêlée rapide, agile, magie aquatique."
+      "rose": "Rapière. Rapide, agile, magie ténébreuse vétérane.",
+      "haschel": "Arts martiaux. Très rapide, courte portée, foudre.",
+      "albert": "Lance. Mage-chevalier, magie de vent renforcée.",
+      "meru": "Marteau. Mêlée rapide, agile, magie aquatique.",
+      "kongol": "Hache géante. Lent mais mur de PV, terre brute.",
+      "miranda": "Arc. Tir précis, magie lumineuse aggressive."
     },
     "unlockHint": {
       "shana": "Atteins la vague 5 en Survival pour débloquer.",
-      "meru": "Atteins la vague 10 et 50 tués pour débloquer."
+      "lavitz": "Atteins la vague 7 et 25 tués pour débloquer.",
+      "meru": "Atteins la vague 10 et 50 tués pour débloquer.",
+      "rose": "Atteins la vague 12 et 80 tués pour débloquer.",
+      "haschel": "Atteins la vague 15 et 120 tués pour débloquer.",
+      "albert": "Atteins la vague 18 et 160 tués pour débloquer.",
+      "kongol": "Atteins la vague 22 et 220 tués pour débloquer.",
+      "miranda": "Atteins la vague 28 et 300 tués pour débloquer."
     }
   },
   "interactables": {

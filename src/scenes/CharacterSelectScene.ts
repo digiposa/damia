@@ -35,7 +35,23 @@ const SUBTITLE_FONT_SIZE = 14;
 /** Order in which characters appear in the selector. Future
  *  additions slot in here; locked entries (Round 3) will hide
  *  themselves via the `UnlockManager`. */
-const SELECTOR_ORDER: ReadonlyArray<CharacterId> = ['dart', 'shana', 'meru'];
+/** Display order on the selector — mirrors TLoD's party-join
+ *  sequence. The card list will overflow a portrait phone at 9
+ *  entries (~1314 px tall vs ~900 px viewport); a follow-up will
+ *  add a vertical drag-scroll to the cards container. For now
+ *  locked cards still render but require scrolling past the
+ *  visible window on mid-size phones. */
+const SELECTOR_ORDER: ReadonlyArray<CharacterId> = [
+  'dart',
+  'lavitz',
+  'shana',
+  'rose',
+  'haschel',
+  'albert',
+  'meru',
+  'kongol',
+  'miranda',
+];
 
 /**
  * Pre-run character picker for Survival mode. Sits between the

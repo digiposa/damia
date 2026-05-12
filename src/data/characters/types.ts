@@ -124,6 +124,50 @@ export function xpToReachLevel(c: CharacterDef, level: number): number {
  * in `actionStats.base` and are NOT touched here — they're written
  * once on spawn and never overwritten by level-ups.
  */
+/**
+ * Profile knobs for `placeholderStatsByLevel`. Tunes the early /
+ * mid / late values without committing to a specific table — used
+ * while we wait for the canonical TLoD `stats.txt` column for each
+ * non-Dart character. When the canonical row lands, replace the
+ * `placeholderStatsByLevel(profile)` call in the character's file
+ * with an explicit `ReadonlyArray<CharacterLevelRow>` literal.
+ */
+export interface PlaceholderProfile {
+  baseHp: number;
+  hpPerLevel: number;
+  /** Extra HP per level past 11 — mirrors Dart's TLoD inflection
+   *  where Dragoon transformation kicks the HP curve into a higher
+   *  gear. Set to 0 for a flat curve. */
+  hpMidGameBonus: number;
+  baseAtk: number;
+  atkPerLevel: number;
+  baseDef: number;
+  defPerLevel: number;
+  baseMagicAtk: number;
+  magicAtkPerLevel: number;
+  baseMagicDef: number;
+  magicDefPerLevel: number;
+}
+
+/** Generate a 60-row placeholder stat table from a `PlaceholderProfile`.
+ *  Marked as placeholder so the eventual canonical-stats commit is
+ *  a literal array swap, not a helper-removal refactor. */
+export function placeholderStatsByLevel(p: PlaceholderProfile): ReadonlyArray<CharacterLevelRow> {
+  return Array.from({ length: 60 }, (_unused, idx) => {
+    const level = idx + 1;
+    return {
+      level,
+      hp: Math.round(
+        p.baseHp + (level - 1) * p.hpPerLevel + Math.max(0, level - 11) * p.hpMidGameBonus,
+      ),
+      atk: Math.round(p.baseAtk + (level - 1) * p.atkPerLevel),
+      def: Math.round(p.baseDef + (level - 1) * p.defPerLevel),
+      magicAtk: Math.round(p.baseMagicAtk + (level - 1) * p.magicAtkPerLevel),
+      magicDef: Math.round(p.baseMagicDef + (level - 1) * p.magicDefPerLevel),
+    };
+  });
+}
+
 export function applyCharacterRow(
   stats: { atk: number; def: number; magicAtk: number; magicDef: number } | undefined,
   hp: { current: number; max: number } | undefined,

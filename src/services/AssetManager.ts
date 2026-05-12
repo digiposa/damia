@@ -54,6 +54,67 @@ const MANIFEST = {
     kind: 'texture',
     url: '/assets/sprites/player/meru.png',
   },
+
+  // --- Remaining TLoD party placeholders --------------------------
+  // Every alias below resolves to Dart's PNGs until dedicated art
+  // ships. Swap the URLs (or drop new PNGs at /assets/sprites/player/
+  // and update the references) when sprites land. Characters are
+  // wired all the way through the engine + CHARACTERS registry, so
+  // the swap is purely a content drop — no code change needed.
+  'sprite.player.lavitz': { kind: 'texture', url: '/assets/sprites/player/dart.png' },
+  'sprite.player.lavitz.attack': {
+    kind: 'texture',
+    url: '/assets/sprites/player/dart-attack.png',
+  },
+  'sprite.player.lavitz.defend': {
+    kind: 'texture',
+    url: '/assets/sprites/player/dart-defend.png',
+  },
+  'sprite.player.rose': { kind: 'texture', url: '/assets/sprites/player/dart.png' },
+  'sprite.player.rose.attack': {
+    kind: 'texture',
+    url: '/assets/sprites/player/dart-attack.png',
+  },
+  'sprite.player.rose.defend': {
+    kind: 'texture',
+    url: '/assets/sprites/player/dart-defend.png',
+  },
+  'sprite.player.haschel': { kind: 'texture', url: '/assets/sprites/player/dart.png' },
+  'sprite.player.haschel.attack': {
+    kind: 'texture',
+    url: '/assets/sprites/player/dart-attack.png',
+  },
+  'sprite.player.haschel.defend': {
+    kind: 'texture',
+    url: '/assets/sprites/player/dart-defend.png',
+  },
+  'sprite.player.albert': { kind: 'texture', url: '/assets/sprites/player/dart.png' },
+  'sprite.player.albert.attack': {
+    kind: 'texture',
+    url: '/assets/sprites/player/dart-attack.png',
+  },
+  'sprite.player.albert.defend': {
+    kind: 'texture',
+    url: '/assets/sprites/player/dart-defend.png',
+  },
+  'sprite.player.kongol': { kind: 'texture', url: '/assets/sprites/player/dart.png' },
+  'sprite.player.kongol.attack': {
+    kind: 'texture',
+    url: '/assets/sprites/player/dart-attack.png',
+  },
+  'sprite.player.kongol.defend': {
+    kind: 'texture',
+    url: '/assets/sprites/player/dart-defend.png',
+  },
+  'sprite.player.miranda': { kind: 'texture', url: '/assets/sprites/player/dart.png' },
+  'sprite.player.miranda.attack': {
+    kind: 'texture',
+    url: '/assets/sprites/player/dart-attack.png',
+  },
+  'sprite.player.miranda.defend': {
+    kind: 'texture',
+    url: '/assets/sprites/player/dart-defend.png',
+  },
   // Main menu background (TLoD title screen).
   'ui.mainscreen': { kind: 'texture', url: '/assets/ui/mainscreen.jpg' },
   // Endiness overworld map — backdrop of WorldMapScene with fog-of-war markers.

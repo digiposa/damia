@@ -4,7 +4,7 @@ import { spawnFloatingText } from '@gameplay/entities/floatingText';
 import { spawnItem } from '@gameplay/entities/items';
 import { MOBS, type MobKind } from '@data/balance';
 import { rollLoot } from '@data/items';
-import { applyCharacterRow, xpToReachLevel } from '@data/characters';
+import { applyArchetypeRow, xpToReachLevel } from '@data/characters';
 import { playSfx } from '@services/AudioManager';
 
 export type PlayerDeathListener = () => void;
@@ -146,18 +146,18 @@ export class DeathSystem implements System<Components> {
     const prog = world.getComponent(playerId, 'Progression');
     const character = world.getComponent(playerId, 'Character');
     if (!prog || !character) return;
-    const def = character.def;
+    const archetype = character.avatar.archetype;
     prog.xp += xp;
-    const cap = def.xpToReachLevel.length;
+    const cap = archetype.xpToReachLevel.length;
     // TLoD model: xp accumulates lifelong. We level up while the cumulative
     // counter crosses the threshold for the next level. xpToNext stays the
     // cumulative threshold (NOT a delta).
     while (prog.level < cap && prog.xp >= prog.xpToNext) {
       prog.level += 1;
-      prog.xpToNext = xpToReachLevel(def, prog.level + 1);
+      prog.xpToNext = xpToReachLevel(archetype, prog.level + 1);
       const stats = world.getComponent(playerId, 'Stats');
       const hp = world.getComponent(playerId, 'Health');
-      applyCharacterRow(stats, hp, def, prog.level, false);
+      applyArchetypeRow(stats, hp, archetype, prog.level, false);
       // Full heal on level up — match TLoD's level-up behavior.
       if (hp) hp.current = hp.max;
       spawnFloatingText(world, {

@@ -306,7 +306,7 @@ export class CharacterSelectScene implements Scene {
       .stroke({ width: 1, color: 0x000000, alpha: 0.6 });
     card.addChild(portraitBg);
 
-    const tex = AssetManager.getTexture(def.sprite.idle);
+    const tex = AssetManager.getTexture(def.sprite.base.idle);
     if (tex) {
       const portrait = new Sprite(tex);
       const scale = Math.min(PORTRAIT_SIZE / tex.width, PORTRAIT_SIZE / tex.height);
@@ -333,8 +333,9 @@ export class CharacterSelectScene implements Scene {
     name.position.set(textX, 16);
     card.addChild(name);
 
-    const patternTint = def.attackPattern === 'ranged' ? CARD_RANGED_TINT : CARD_MELEE_TINT;
-    const patternLabel = t(`characterSelect.pattern.${def.attackPattern}`);
+    const patternTint =
+      def.archetype.attackPattern === 'ranged' ? CARD_RANGED_TINT : CARD_MELEE_TINT;
+    const patternLabel = t(`characterSelect.pattern.${def.archetype.attackPattern}`);
     const badge = new Text({
       text: patternLabel,
       style: {

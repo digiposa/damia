@@ -152,8 +152,8 @@ export class ForestScene implements Scene {
     const hp = world.getComponent(playerId, 'Health');
     if (prog) {
       prog.level = 5;
-      prog.xp = xpToReachLevel(DART, 5);
-      prog.xpToNext = xpToReachLevel(DART, 6);
+      prog.xp = xpToReachLevel(DART.archetype, 5);
+      prog.xpToNext = xpToReachLevel(DART.archetype, 6);
     }
     applyCharacterRow(stats, hp, DART, 5, false);
     if (hp) hp.current = hp.max;
@@ -171,7 +171,7 @@ export class ForestScene implements Scene {
    *  appear here once they ship in ADDITIONS. */
   private unlockedAdditions(level: number): ReadonlyArray<AdditionKind> {
     const out: AdditionKind[] = [];
-    for (const [unlockLv, slug] of DART.additionUnlocksByLevel) {
+    for (const [unlockLv, slug] of DART.archetype.additionUnlocksByLevel) {
       if (level < unlockLv) continue;
       if (slug in ADDITIONS) out.push(slug as AdditionKind);
     }

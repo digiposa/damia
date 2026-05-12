@@ -92,7 +92,7 @@ export class CombatSystem implements System<Components> {
       // present. Mobs have no Character component → fall through to
       // melee, preserving the legacy behaviour.
       const character = world.getComponent(id, 'Character');
-      const pattern = character?.def.attackPattern ?? 'melee';
+      const pattern = character?.avatar.archetype.attackPattern ?? 'melee';
       const len = Math.hypot(dx, dy) || 1;
       const dirX = dx / len;
       const dirY = dy / len;

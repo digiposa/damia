@@ -153,7 +153,7 @@ export class HellenaScene implements Scene {
 
   private unlockedAdditions(level: number): ReadonlyArray<AdditionKind> {
     const out: AdditionKind[] = [];
-    for (const [unlockLv, slug] of DART.additionUnlocksByLevel) {
+    for (const [unlockLv, slug] of DART.archetype.additionUnlocksByLevel) {
       if (level < unlockLv) continue;
       if (slug in ADDITIONS) out.push(slug as AdditionKind);
     }

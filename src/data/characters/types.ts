@@ -1,33 +1,28 @@
 /**
- * Character data model. Anything that differs between two playable
- * characters lives on the `CharacterDef` record so the engine code
- * (spawnPlayer, DeathSystem, AdditionsBar, future ranged/melee combat
- * branches…) reads from the record instead of from per-character
- * hardcoded constants.
+ * Character data model. Two layers:
  *
- * Adding a new character is meant to be additive — drop a new file in
- * `src/data/characters/<name>.ts` exporting a `CharacterDef`, register
- * it in `src/data/characters/index.ts`. No engine code needs to know
- * its name.
+ *  - `DragoonArchetype`: the mechanical class (= TLoD's Dragoon
+ *    Spirit holder). Owns stats per level, XP curve, action
+ *    parameters (atkSpeed / range / hit / avoid), addition unlock
+ *    schedule, dragoon-form configuration (timer, drain rate,
+ *    stat multipliers, dragoon-form additions/spells). Shared by
+ *    every avatar of the same archetype.
+ *
+ *  - `CharacterAvatar`: an individual playable face. Holds id,
+ *    display name, sprite bundles (base + dragoon), a reference
+ *    to its archetype, and the Survival unlock criterion. Lavitz
+ *    and Albert are two avatars sharing the Jade Dragoon
+ *    archetype; Shana and Miranda share White-Silver; etc.
+ *
+ * Story-mode transitions (Lavitz dies → Albert inherits) mutate
+ * just the Character component's `avatar` field — same archetype
+ * means identical stat scaling, additions, dragoon access, so
+ * the player's progression carries over with zero data shuffling.
  */
 import type { Stats } from '@gameplay/components';
 import type { AssetAlias } from '@services/AssetManager';
 
-/** Known character roster. Keep in sync with the registry in
- *  `src/data/characters/index.ts`. */
-export type CharacterId =
-  | 'dart'
-  | 'shana'
-  | 'lavitz'
-  | 'rose'
-  | 'haschel'
-  | 'albert'
-  | 'meru'
-  | 'kongol'
-  | 'miranda';
-
-/** TLoD-style elemental affinity. Used later by SpellSystem +
- *  enemy resistance tables. */
+/** TLoD-style elemental affinity. */
 export type CharacterElement =
   | 'fire'
   | 'water'
@@ -38,10 +33,38 @@ export type CharacterElement =
   | 'darkness'
   | 'divine';
 
-/** Combat archetype. v1 reads `melee` only — `ranged` will branch
- *  CombatSystem into projectile-spawn logic once Shana / Miranda
- *  ship. */
+/** Combat archetype. v1 reads `melee` only — `ranged` ships with
+ *  the Projectile branch (already in place for Shana). */
 export type AttackPattern = 'melee' | 'ranged';
+
+/** The seven Dragoon Spirits of TLoD. Each binds an element + role
+ *  pair (e.g. Fire + sword melee = Red-Eye Dragoon). */
+export type ArchetypeId =
+  | 'redEyeDragoon' // Dart (Fire)
+  | 'jadeDragoon' // Lavitz / Albert / Graham / Syuveh (Wind)
+  | 'whiteSilverDragoon' // Shana / Miranda / Shirley (Light)
+  | 'darkBurstDragoon' // Rose (Darkness)
+  | 'violetDragoon' // Haschel (Thunder)
+  | 'blueSeaDragoon' // Meru / Damia (Water)
+  | 'goldenDragoon'; // Kongol (Earth)
+
+/** Individual playable face. Multiple avatars can share an
+ *  archetype — TLoD's narrative substitutions (Lavitz → Albert,
+ *  Shana → Miranda) ride this rail. */
+export type AvatarId =
+  | 'dart'
+  | 'lavitz'
+  | 'albert'
+  | 'graham'
+  | 'syuveh'
+  | 'shana'
+  | 'miranda'
+  | 'shirley'
+  | 'rose'
+  | 'haschel'
+  | 'meru'
+  | 'damia'
+  | 'kongol';
 
 export interface CharacterLevelRow {
   level: number;
@@ -52,130 +75,155 @@ export interface CharacterLevelRow {
   magicDef: number;
 }
 
-/** Static config for one playable character. Immutable per-instance —
- *  every player entity carries a reference to the same `CharacterDef`
- *  object via its `Character` component. */
-export interface CharacterDef {
-  id: CharacterId;
-  /** i18n key for the character's display name (selector / HUD). */
-  displayNameKey: string;
+/** Multipliers applied to base Stats while the avatar is
+ *  transformed into Dragoon form. 1.0 = unchanged. */
+export interface DragoonStatsMultiplier {
+  atk: number;
+  def: number;
+  magicAtk: number;
+  magicDef: number;
+  hp: number;
+  /** Movement speed multiplier (multiplies the Speed component's
+   *  `value`). */
+  moveSpeed: number;
+}
+
+/** Configuration for the timer-driven Dragoon transformation
+ *  (Survival mode opt-in upgrade, Story narrative event). */
+export interface DragoonConfig {
+  /** Maximum transformation duration at the archetype's LV 1, ms.
+   *  Scales with character level by `durationMsPerLevel`. */
+  durationMsBase: number;
+  /** ms added to the max duration per character level. */
+  durationMsPerLevel: number;
+  /** Extra ms drained from the timer when the avatar performs a
+   *  dragoon-form action (regular attack, addition, spell). The
+   *  timer also ticks down passively at 1× wall-clock. */
+  drainPerActionMs: number;
+  /** Multipliers applied to Stats / Health / Speed while in form. */
+  statsMultiplier: DragoonStatsMultiplier;
+  /** Dragoon-form addition / spell unlock schedule. Slugs filtered
+   *  with `slug in ADDITIONS` at consume time. */
+  additionUnlocksByLevel: ReadonlyMap<number, string>;
+  /** SP a regular addition grants toward the transformation
+   *  meter. Ranged archetypes without additions (White-Silver
+   *  Dragoon) gain SP per auto-attack instead — encoded via
+   *  `spGainPerAutoAttack`. */
+  spGainPerAddition: number;
+  /** SP gained per auto-attack hit. Non-zero for archetypes
+   *  without an Addition combo (ranged). */
+  spGainPerAutoAttack: number;
+  /** Total SP needed to trigger the transformation. */
+  spMax: number;
+}
+
+/**
+ * Mechanical class. Shared by every avatar of the same archetype
+ * — Lavitz and Albert read the same `statsByLevel`, the same
+ * `additionUnlocksByLevel`, the same `dragoon` config. The
+ * avatar only contributes id + sprite + lore.
+ */
+export interface DragoonArchetype {
+  id: ArchetypeId;
   element: CharacterElement;
   attackPattern: AttackPattern;
-  /** Action-RPG fields that don't scale per-level. Movement speed
-   *  lives outside `base` because it maps to the `Speed` component,
-   *  not `Stats`. */
+  /** Action-RPG fields that don't scale per-level (movement
+   *  speed + non-scaling subset of Stats). */
   actionStats: {
-    /** World pixels per millisecond — written to the Speed component. */
+    /** World pixels per millisecond — written to the Speed
+     *  component on spawn. */
     moveSpeed: number;
-    /** Subset of Stats that stays constant across levels. ATK / DEF /
-     *  M.ATK / M.DEF are overwritten on every level-up via
-     *  `applyCharacterRow`, so they're sourced from `statsByLevel`
-     *  instead of this block. */
+    /** Subset of Stats that stays constant across levels. ATK /
+     *  DEF / M.ATK / M.DEF live in `statsByLevel`. */
     base: Omit<Stats, 'atk' | 'def' | 'magicAtk' | 'magicDef'>;
   };
-  /** Per-level stat row. Index 0 = level 1. The length defines the
-   *  level cap. */
+  /** Canonical TLoD per-level row. Index 0 = LV 1; length = cap. */
   statsByLevel: ReadonlyArray<CharacterLevelRow>;
-  /** Cumulative XP needed to reach each level — same indexing as
-   *  `statsByLevel`. xpToReachLevel[0] = 0 (already at level 1). */
+  /** Cumulative XP needed to reach each level — same indexing. */
   xpToReachLevel: ReadonlyArray<number>;
-  /** Map of unlock level → addition slug. Slugs are intentionally
-   *  loose strings (not the `AdditionKind` union) because future
-   *  additions aren't declared in `ADDITIONS` yet. Consumers filter
-   *  with `slug in ADDITIONS`. */
+  /** Base-form addition unlock schedule. Slug strings (filtered
+   *  by `slug in ADDITIONS` at consume time). */
   additionUnlocksByLevel: ReadonlyMap<number, string>;
-  /** Sprite-alias bundle. Loaded via AssetManager. Typed as the
-   *  strict `AssetAlias` union so typos surface at compile time.
-   *  `additions` maps per-addition slug → ordered list of frame
-   *  aliases the RenderSystem swaps through during the cast
-   *  animation. */
+  /** Dragoon transformation config. Required — every TLoD party
+   *  member has one. */
+  dragoon: DragoonConfig;
+}
+
+/** Sprite bundle for one combat form (base or dragoon). */
+export interface AvatarSpriteForm {
+  idle: AssetAlias;
+  attack: AssetAlias;
+  defend: AssetAlias;
+  /** Optional per-addition frame sequences (e.g. Dart's Double
+   *  Slash second-hit frame). Slug → ordered alias list. Empty
+   *  map falls back to the attack texture. */
+  additions?: Readonly<Record<string, ReadonlyArray<AssetAlias>>>;
+}
+
+/** Optional Survival unlock criterion. Evaluated against a
+ *  `SurvivalRunRecord` by `UnlockManager.evaluateUnlocks`. */
+export interface UnlockCriterion {
+  wave?: number;
+  kills?: number;
+  level?: number;
+}
+
+/**
+ * Individual playable face. Multiple avatars per archetype is
+ * the whole point of this layer — Shirley / Damia / Graham join
+ * as Survival skins of the same mechanical class.
+ */
+export interface CharacterAvatar {
+  id: AvatarId;
+  displayNameKey: string;
+  /** Direct archetype reference (not an id lookup) so consumers
+   *  read `avatar.archetype.statsByLevel` with no indirection. */
+  archetype: DragoonArchetype;
   sprite: {
-    idle: AssetAlias;
-    attack: AssetAlias;
-    defend: AssetAlias;
-    additions: Readonly<Record<string, ReadonlyArray<AssetAlias>>>;
+    /** Base form sprite bundle. Used outside transformation. */
+    base: AvatarSpriteForm;
+    /** Dragoon form sprite bundle. Visually distinct per avatar
+     *  (Lavitz Dragoon ≠ Albert Dragoon) even when the
+     *  underlying spell pool is shared at the archetype level. */
+    dragoon: AvatarSpriteForm;
   };
+  /** Survival-only unlock criterion. Default-unlocked avatars
+   *  (Dart) omit this field. */
+  unlock?: UnlockCriterion;
+  /** Optional i18n key for the "lore blurb" displayed on the
+   *  selector card when this avatar is focused. */
+  loreKey?: string;
 }
 
-/** Lookup the stat row for `level`, clamping out-of-range. */
-export function getCharacterStatsAtLevel(c: CharacterDef, level: number): CharacterLevelRow {
-  const idx = Math.max(1, Math.min(c.statsByLevel.length, Math.round(level))) - 1;
-  return c.statsByLevel[idx]!;
+// --- Lookup helpers -----------------------------------------------
+
+export function getCharacterStatsAtLevel(
+  archetype: DragoonArchetype,
+  level: number,
+): CharacterLevelRow {
+  const idx = Math.max(1, Math.min(archetype.statsByLevel.length, Math.round(level))) - 1;
+  return archetype.statsByLevel[idx]!;
 }
 
-/** Cumulative XP needed to reach `level`. Clamps to cap when level
- *  exceeds the table — used by DeathSystem to set `xpToNext` after
- *  level-up. */
-export function xpToReachLevel(c: CharacterDef, level: number): number {
-  const idx = Math.max(1, Math.min(c.xpToReachLevel.length, Math.round(level))) - 1;
-  return c.xpToReachLevel[idx]!;
+export function xpToReachLevel(archetype: DragoonArchetype, level: number): number {
+  const idx = Math.max(1, Math.min(archetype.xpToReachLevel.length, Math.round(level))) - 1;
+  return archetype.xpToReachLevel[idx]!;
 }
 
 /**
- * Write the character's row at `level` onto the player's `Stats` +
- * `Health` components. Mutates in place — caller passes the live
- * component references.
- *
- * `clampHpToMax` keeps the current HP at or below the new max (used
- * on save-load resume). When false, the caller is expected to refill
- * HP itself (level-up does a full heal via `current = max`).
- *
- * Action-RPG fields (atkSpeed, range, hit/avoid, SPEED scalar) live
- * in `actionStats.base` and are NOT touched here — they're written
- * once on spawn and never overwritten by level-ups.
+ * Write the archetype's row at `level` onto the player's `Stats`
+ * + `Health` components. Same semantics as the legacy
+ * `applyDartRow` (signature kept stable for consumer migration —
+ * the engine reads the archetype off `Character.avatar.archetype`).
  */
-/**
- * Profile knobs for `placeholderStatsByLevel`. Tunes the early /
- * mid / late values without committing to a specific table — used
- * while we wait for the canonical TLoD `stats.txt` column for each
- * non-Dart character. When the canonical row lands, replace the
- * `placeholderStatsByLevel(profile)` call in the character's file
- * with an explicit `ReadonlyArray<CharacterLevelRow>` literal.
- */
-export interface PlaceholderProfile {
-  baseHp: number;
-  hpPerLevel: number;
-  /** Extra HP per level past 11 — mirrors Dart's TLoD inflection
-   *  where Dragoon transformation kicks the HP curve into a higher
-   *  gear. Set to 0 for a flat curve. */
-  hpMidGameBonus: number;
-  baseAtk: number;
-  atkPerLevel: number;
-  baseDef: number;
-  defPerLevel: number;
-  baseMagicAtk: number;
-  magicAtkPerLevel: number;
-  baseMagicDef: number;
-  magicDefPerLevel: number;
-}
-
-/** Generate a 60-row placeholder stat table from a `PlaceholderProfile`.
- *  Marked as placeholder so the eventual canonical-stats commit is
- *  a literal array swap, not a helper-removal refactor. */
-export function placeholderStatsByLevel(p: PlaceholderProfile): ReadonlyArray<CharacterLevelRow> {
-  return Array.from({ length: 60 }, (_unused, idx) => {
-    const level = idx + 1;
-    return {
-      level,
-      hp: Math.round(
-        p.baseHp + (level - 1) * p.hpPerLevel + Math.max(0, level - 11) * p.hpMidGameBonus,
-      ),
-      atk: Math.round(p.baseAtk + (level - 1) * p.atkPerLevel),
-      def: Math.round(p.baseDef + (level - 1) * p.defPerLevel),
-      magicAtk: Math.round(p.baseMagicAtk + (level - 1) * p.magicAtkPerLevel),
-      magicDef: Math.round(p.baseMagicDef + (level - 1) * p.magicDefPerLevel),
-    };
-  });
-}
-
-export function applyCharacterRow(
+export function applyArchetypeRow(
   stats: { atk: number; def: number; magicAtk: number; magicDef: number } | undefined,
   hp: { current: number; max: number } | undefined,
-  character: CharacterDef,
+  archetype: DragoonArchetype,
   level: number,
   clampHpToMax: boolean,
 ): void {
-  const row = getCharacterStatsAtLevel(character, level);
+  const row = getCharacterStatsAtLevel(archetype, level);
   if (stats) {
     stats.atk = row.atk;
     stats.def = row.def;
@@ -186,4 +234,27 @@ export function applyCharacterRow(
     hp.max = row.hp;
     if (clampHpToMax) hp.current = Math.min(hp.current, hp.max);
   }
+}
+
+// --- Back-compat aliases -----------------------------------------
+// External consumers (scenes, components, services) still import
+// these names. Keep the aliases so migration can happen in a
+// follow-up sweep without breaking compile here.
+
+/** @deprecated Use `CharacterAvatar`. */
+export type CharacterDef = CharacterAvatar;
+
+/** @deprecated Use `AvatarId`. */
+export type CharacterId = AvatarId;
+
+/** @deprecated Use `applyArchetypeRow` directly with the
+ *  archetype from `avatar.archetype`. */
+export function applyCharacterRow(
+  stats: { atk: number; def: number; magicAtk: number; magicDef: number } | undefined,
+  hp: { current: number; max: number } | undefined,
+  avatar: CharacterAvatar,
+  level: number,
+  clampHpToMax: boolean,
+): void {
+  applyArchetypeRow(stats, hp, avatar.archetype, level, clampHpToMax);
 }

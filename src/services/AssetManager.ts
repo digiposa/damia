@@ -26,18 +26,20 @@ const MANIFEST = {
   // Dart portrait used in the HUD (top-left of the screen, in the portrait slot).
   'ui.portrait.dart': { kind: 'texture', url: '/assets/ui/dart-portrait.png' },
 
-  // Shana — skeleton character entry. Sprites point at Dart's textures
-  // until Shana-specific art ships (the character isn't yet exposed
-  // through any selector, so the placeholder is invisible to players).
-  // Swap the URLs once the dedicated PNGs land in /assets/sprites/player/.
-  'sprite.player.shana': { kind: 'texture', url: '/assets/sprites/player/dart.png' },
+  // Shana — childhood friend, future White-Silver Dragoon. Two poses
+  // available: standing (idle/defend) and bow draw (attack). Update
+  // dimensions in MOBS-equivalent / character sprite block if the
+  // native ratio shifts.
+  'sprite.player.shana': { kind: 'texture', url: '/assets/sprites/player/shana.png' },
   'sprite.player.shana.attack': {
     kind: 'texture',
-    url: '/assets/sprites/player/dart-attack.png',
+    url: '/assets/sprites/player/shana-attack.png',
   },
+  // No dedicated defend pose yet — reuse the idle so the Defending
+  // component visual at least doesn't fall back to the bow-draw.
   'sprite.player.shana.defend': {
     kind: 'texture',
-    url: '/assets/sprites/player/dart-defend.png',
+    url: '/assets/sprites/player/shana.png',
   },
   // Main menu background (TLoD title screen).
   'ui.mainscreen': { kind: 'texture', url: '/assets/ui/mainscreen.jpg' },

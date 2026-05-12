@@ -102,6 +102,10 @@
       "objective": "Free Shana"
     }
   },
+  "character": {
+    "dart": { "name": "Dart" },
+    "shana": { "name": "Shana" }
+  },
   "interactables": {
     "merchantComingSoon": "Merchant — Coming soon"
   },

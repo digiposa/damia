@@ -9,15 +9,17 @@
  */
 import type { CharacterDef, CharacterId } from './types';
 import { DART } from './dart';
+import { SHANA } from './shana';
 
 export const CHARACTERS: Partial<Record<CharacterId, CharacterDef>> = {
   dart: DART,
+  shana: SHANA,
 };
 
 /** Default playable character. Used as the fallback when a scene
  *  doesn't specify one in its config. */
 export const DEFAULT_CHARACTER: CharacterDef = DART;
 
-export { DART };
+export { DART, SHANA };
 export type { CharacterDef, CharacterId, CharacterElement, AttackPattern } from './types';
 export { applyCharacterRow, getCharacterStatsAtLevel, xpToReachLevel } from './types';

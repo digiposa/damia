@@ -25,6 +25,20 @@ const MANIFEST = {
   },
   // Dart portrait used in the HUD (top-left of the screen, in the portrait slot).
   'ui.portrait.dart': { kind: 'texture', url: '/assets/ui/dart-portrait.png' },
+
+  // Shana — skeleton character entry. Sprites point at Dart's textures
+  // until Shana-specific art ships (the character isn't yet exposed
+  // through any selector, so the placeholder is invisible to players).
+  // Swap the URLs once the dedicated PNGs land in /assets/sprites/player/.
+  'sprite.player.shana': { kind: 'texture', url: '/assets/sprites/player/dart.png' },
+  'sprite.player.shana.attack': {
+    kind: 'texture',
+    url: '/assets/sprites/player/dart-attack.png',
+  },
+  'sprite.player.shana.defend': {
+    kind: 'texture',
+    url: '/assets/sprites/player/dart-defend.png',
+  },
   // Main menu background (TLoD title screen).
   'ui.mainscreen': { kind: 'texture', url: '/assets/ui/mainscreen.jpg' },
   // Endiness overworld map — backdrop of WorldMapScene with fog-of-war markers.

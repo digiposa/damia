@@ -102,6 +102,10 @@
       "objective": "Libérer Shana"
     }
   },
+  "character": {
+    "dart": { "name": "Dart" },
+    "shana": { "name": "Shana" }
+  },
   "interactables": {
     "merchantComingSoon": "Marchand — Bientôt disponible"
   },

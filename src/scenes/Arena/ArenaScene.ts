@@ -11,6 +11,9 @@ import { MOBS } from '@data/balance';
 import { WaveSpawnerSystem } from '@gameplay/systems/WaveSpawnerSystem';
 import { ARENA_MIN_SPAWN_DIST_PX, ARENA_WAVE_DURATION_MS, buildArenaWave } from '@data/arenaWaves';
 import { SurvivalHUD } from '@ui/SurvivalHUD';
+import { applyDartRow } from '@data/dart';
+import { FLOAT_HEAL, spawnFloatingText } from '@gameplay/entities/floatingText';
+import { playSfx } from '@services/AudioManager';
 
 const ARENA_SIZE = 28;
 const SPAWN_GX = Math.floor(ARENA_SIZE / 2);
@@ -162,6 +165,7 @@ export class ArenaScene implements Scene {
     if (this.controller && this.waveSpawner) {
       this.waveSpawner.update(dt, this.controller.world);
     }
+    this.consumePendingLevelUps();
     if (this.survivalHud && this.waveSpawner) {
       const snap = this.runState.read();
       this.survivalHud.setState({
@@ -172,6 +176,35 @@ export class ArenaScene implements Scene {
         wave: Math.max(1, this.waveSpawner.currentWave + 1),
         kills: snap.kills,
       });
+    }
+  }
+
+  /** Apply each pending level-up: bump the player's Stats + Health.max
+   *  to Dart's TLoD row at the new run level, full-heal, and surface
+   *  cue (SFX + floating "LV N!"). Survival's level-up arc replaces
+   *  the Story-side one we disabled via `awardPlayerXp: false`. */
+  private consumePendingLevelUps(): void {
+    const controller = this.controller;
+    if (!controller || controller.playerId === null) return;
+    const world = controller.world;
+    const playerId = controller.playerId;
+    while (this.runState.consumeLevelUp()) {
+      const level = this.runState.read().level;
+      const stats = world.getComponent(playerId, 'Stats');
+      const hp = world.getComponent(playerId, 'Health');
+      applyDartRow(stats, hp, level, false);
+      if (hp) hp.current = hp.max;
+      const pos = world.getComponent(playerId, 'Position');
+      if (pos) {
+        spawnFloatingText(world, {
+          x: pos.x,
+          y: pos.y - 30,
+          text: `LV ${level}!`,
+          color: FLOAT_HEAL,
+          durationMs: 1400,
+        });
+      }
+      playSfx('items.pickup');
     }
   }
 }

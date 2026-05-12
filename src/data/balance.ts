@@ -195,11 +195,13 @@ export const MOBS: Record<MobKind, MobDefinition> = {
     },
     sprite: {
       // Humanoid silhouette — wider than goblin (he's a hulking warden
-      // in TLoD art). Placeholder textures resolve to the trent sprite
-      // via AssetManager until the dedicated PNG is uploaded.
+      // in TLoD art). 100×130 keeps the native 152×199 ratio (~0.76)
+      // close enough while sitting between goblin (60×80) and trent
+      // (90×160) in screen presence — visibly a boss without dwarfing
+      // the player.
       shape: 'capsule',
       color: 0x5a2a2a,
-      width: 90,
+      width: 100,
       height: 130,
       fitMode: 'height',
       textureAlias: 'sprite.mob.fruegel',

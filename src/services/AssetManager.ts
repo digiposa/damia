@@ -70,17 +70,18 @@ const MANIFEST = {
   'sprite.mob.trent.attack': { kind: 'texture', url: '/assets/sprites/mobs/trent-attack.png' },
   'sprite.mob.trent.death': { kind: 'texture', url: '/assets/sprites/mobs/trent-death.png' },
 
-  // Bosses. Fruegel placeholder textures point at trent assets until the
-  // boss-specific PNG ships — swap the URLs once the sprite is uploaded
-  // to /assets/sprites/bosses/fruegel*.png.
-  'sprite.mob.fruegel': { kind: 'texture', url: '/assets/sprites/mobs/trent.png' },
+  // Bosses. Fruegel — single sprite, reused for idle / attack / death
+  // poses until pose-specific variants get generated. Native size is
+  // 152×199; MOBS.fruegel.sprite.width/height drive the on-screen
+  // dimensions and the AI scales accordingly.
+  'sprite.mob.fruegel': { kind: 'texture', url: '/assets/sprites/mobs/fruegel.png' },
   'sprite.mob.fruegel.attack': {
     kind: 'texture',
-    url: '/assets/sprites/mobs/trent-attack.png',
+    url: '/assets/sprites/mobs/fruegel.png',
   },
   'sprite.mob.fruegel.death': {
     kind: 'texture',
-    url: '/assets/sprites/mobs/trent-death.png',
+    url: '/assets/sprites/mobs/fruegel.png',
   },
 
   // M8 forest tiles.

@@ -232,8 +232,8 @@ adapté temps réel) :
   sur la liste des sorts Dragoon dispo selon DLV, et `tryTriggerAddition`
   doit refuser quand `Dragoon` est présent.
 - **Items consommables** (Burn Out, Gushing Magma, potions, etc.).
-- **Défense ?** — comportement à confirmer (probablement disponible,
-  mais à valider).
+- **Défense** — **interdite** en forme Dragoon. La posture défensive
+  n'a pas de sens en Dragoon (auteur).
 
 ### 6.4 MP — magies Dragoon
 
@@ -263,14 +263,18 @@ adapté temps réel) :
 - → **Bug à corriger** signalé par l'auteur : actuellement en Story,
   la jauge SP se remplit dès que le joueur utilise des additions, alors
   qu'elle ne devrait commencer à se remplir **qu'après le déblocage
-  scénarisé de la forme Dragoon**. Comportement à gater par un flag
-  story (`worldFlags.dragoonUnlocked.<archetypeId>` ou similaire).
+  scénarisé de la forme Dragoon**. Comportement à gater par un **flag
+  sur le `Character` component** (ex : `dragoonUnlocked: boolean`).
+  Quand un avatar est remplacé scénaristiquement (Lavitz → Albert,
+  Shana → Miranda), le flag est **hérité** avec le reste — Albert
+  arrive donc déjà avec la Dragoon débloquée s'il succède à Lavitz
+  après son unlock.
 
 #### Survival
 
-- La forme Dragoon doit se débloquer **via un upgrade pris dans le
-  LevelUpChoiceModal**, **probablement après la première mort de boss**
-  (à confirmer).
+- La forme Dragoon se débloque **via un upgrade tiré dans le
+  LevelUpChoiceModal**, **disponible après la mort du premier boss**
+  (proposition de départ, peut évoluer).
 - Tant que pas débloqué, SP gauge cachée / inactive — même règle qu'en
   Story.
 

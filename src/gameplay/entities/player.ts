@@ -47,8 +47,10 @@ export function spawnPlayer(world: World<Components>, opts: SpawnPlayerOptions):
     waypoints: null,
     computing: false,
   });
-  // Base-form sprite. The DragoonSystem (commit 3) swaps to
-  // avatar.sprite.dragoon while transformed.
+  // Base-form sprite. The DragoonSystem swaps the alias trio to
+  // avatar.sprite.dragoon.* on transform entry. Addition frames are
+  // NOT stored on Sprite — RenderSystem looks them up live from
+  // avatar.sprite.base.additions[addition.kind] each render frame.
   world.addComponent(id, 'Sprite', {
     shape: 'capsule',
     color: 0xc8201f,
@@ -59,9 +61,6 @@ export function spawnPlayer(world: World<Components>, opts: SpawnPlayerOptions):
     textureAlias: avatar.sprite.base.idle,
     attackTextureAlias: avatar.sprite.base.attack,
     defendTextureAlias: avatar.sprite.base.defend,
-    additionTextureAliases: avatar.sprite.base.additions?.doubleSlash ?? [
-      avatar.sprite.base.attack,
-    ],
   });
   world.addComponent(id, 'Health', {
     current: startHp,

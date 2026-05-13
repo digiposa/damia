@@ -38,12 +38,11 @@ export interface Sprite {
    *  — RenderSystem reads this each frame, so updating it on the
    *  component immediately re-orients the sprite. */
   rotation?: number;
-  /**
-   * Optional ordered alias frames played while the entity has an Addition component.
-   * RenderSystem cycles through them by progress fraction, so a 2-frame array splits
-   * the animation in halves, a 3-frame array in thirds, etc. (Currently shared across
-   * additions on this sprite — fine while characters have one addition; revisit when
-   * Dart unlocks Volcano / Burning Rush.)
-   */
-  additionTextureAliases?: readonly AssetAlias[];
 }
+
+// NB: addition frame sequences are NOT stored here. RenderSystem resolves
+// them at draw time from `Character.avatar.sprite.base.additions[kind]` for
+// the entity's currently active `Addition.kind`. Keeps the (avatar, addition)
+// → frame mapping centralized on CharacterAvatar (single source of truth),
+// and makes Story-mode avatar swaps (Lavitz → Albert) plus skin variants
+// (Shana/Miranda/Shirley) "just work" without re-pushing data onto Sprite.

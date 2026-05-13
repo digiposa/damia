@@ -61,12 +61,31 @@ export class RenderSystem implements System<Components> {
         let desiredAlias: AssetAlias | undefined = sprite.textureAlias;
         if (dying && sprite.deathTextureAlias) {
           desiredAlias = sprite.deathTextureAlias;
-        } else if (addition && sprite.additionTextureAliases?.length) {
-          // Split duration evenly across the frame array. With 2 frames this
-          // means: frame 0 for the first half, frame 1 for the second.
-          const frames = sprite.additionTextureAliases;
-          const t = Math.min(0.999, addition.elapsedMs / addition.totalMs);
-          desiredAlias = frames[Math.floor(t * frames.length)];
+        } else if (addition) {
+          // Resolve the addition's frame sequence at draw time from the
+          // entity's avatar, instead of caching it on Sprite at spawn.
+          // CharacterAvatar.sprite.base.additions is the single source of
+          // truth: Story-mode avatar swaps (Lavitz → Albert) and skin
+          // variants (Shana/Miranda/Shirley) pick up the right frames on
+          // the next paint with zero re-wiring.
+          //
+          // Additions are base-form only (VISION.md §6.3 — disabled in
+          // Dragoon form), so we always read .base.additions; no branch
+          // on the Dragoon component is needed.
+          //
+          // Mobs without a Character component (or characters without a
+          // declared sequence for this addition slug) fall back to the
+          // attack pose — single static frame for the whole animation.
+          const character = world.getComponent(id, 'Character');
+          const frames = character?.avatar.sprite.base.additions?.[addition.kind];
+          if (frames && frames.length > 0) {
+            // Split duration evenly across the frame array. With 2 frames
+            // this means: frame 0 for the first half, frame 1 for the second.
+            const t = Math.min(0.999, addition.elapsedMs / addition.totalMs);
+            desiredAlias = frames[Math.floor(t * frames.length)];
+          } else if (sprite.attackTextureAlias) {
+            desiredAlias = sprite.attackTextureAlias;
+          }
         } else if (defending && sprite.defendTextureAlias) {
           desiredAlias = sprite.defendTextureAlias;
         } else if (swing && sprite.attackTextureAlias) {

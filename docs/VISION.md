@@ -166,6 +166,9 @@ complété au fil des sessions.
   le timer : chaque action en forme Dragoon draine la jauge, et la
   transformation prend fin automatiquement quand `SP = 0` (retour
   forme humaine).
+- **Drain passif** : **2 SP par seconde**, en continu, **idle ou en
+  mouvement** (pas de distinction pour l'instant). S'additionne aux
+  drains d'action ci-dessous.
 - → **Implication code** : `Dragoon.timerMs` + les champs
   `durationMsBase` / `durationMsPerLevel` / `drainPerActionMs` du
   `DragoonConfig` actuel **deviennent obsolètes**. Le seul compteur
@@ -189,11 +192,14 @@ complété au fil des sessions.
     (déjà capturé en data via `archetype.dragoon.additionUnlocksByLevel`
     — clé "level" à reinterpréter comme DLV, pas character level).
 - **Source de progression du DLV** : **fonction du total de SP généré
-  lifetime** (déclaration auteur). Seuils par palier **à définir**.
-- **Portée du DLV** — _à clarifier_ : per-character ou per-archetype ?
-  Vu que la vision "Albert hérite tout de Lavitz" inclut les stats /
-  XP / additions, le **per-archetype** est l'hypothèse de travail.
-  À confirmer.
+  lifetime** (en Story). Seuils par palier à fournir par l'auteur
+  (data en cours d'envoi).
+- **Portée du DLV** : **per-archetype**. Quand un avatar meurt et qu'un
+  autre hérite du Spirit (Lavitz → Albert, Shana → Miranda), le DLV
+  est **carry-over** — comme dans TLoD PS1.
+- **Survival** : le DLV est **reset à chaque run** pour l'instant.
+  Évolution possible plus tard : méta-perks hors-run qui débloqueraient
+  un DLV de départ supérieur à 1 (à voir, hors scope court terme).
 
 ### 6.3 Actions en forme Dragoon
 
@@ -201,15 +207,24 @@ En forme Dragoon, **les actions sont restreintes à deux** (canon TLoD
 adapté temps réel) :
 
 1. **Auto-attack — splash AoE avec effet élémentaire.**
-   - Élément = celui de l'archetype Dragoon (Red-Eye = feu, Jade =
+   - **Élément** = celui de l'archetype Dragoon (Red-Eye = feu, Jade =
      vent, etc.).
    - L'attaque physique TLoD PS1 est un QTE ; chez nous on simplifie
      en boostant les dégâts et en appliquant l'effet élémentaire +
      splash AoE autour de la cible.
-   - **Drain SP** : léger, à chaque swing — à définir.
+   - **Forme de l'AoE** : **cône de 120°** devant le personnage.
+   - **Radius du cône** : à définir (l'auteur attend une proposition
+     équilibrée — à creuser au moment de l'implémentation).
+   - **Drain SP** : **-10 SP par swing**.
+   - **Single-target** (cas où une seule cible est dans le cône) :
+     léger boost de dégâts par rapport au baseline, sans rendre le
+     comportement OP. Valeur exacte à calibrer.
 2. **Magie Dragoon.**
-   - **Drain SP** : lourd (gros chunk de timer consommé) — à définir.
-   - **Coût MP** : selon le spell — à définir par spell.
+   - **Drain SP** : **-60 SP par cast** (uniforme). Pré-requis :
+     `SpGauge.current ≥ 60` pour pouvoir caster (sinon le sort est
+     bloqué, comme un cooldown matériel).
+   - **Coût MP** : variable selon le spell, à définir avec la liste
+     des sorts par archétype (data à venir).
 
 **Désactivés en forme Dragoon** :
 
@@ -224,10 +239,15 @@ adapté temps réel) :
 
 - **Pool MP** : ressource séparée de SP, consommée à chaque sort
   Dragoon casté.
-- **Régénération MP** : via **certains items et équipements** (canon
-  TLoD : Mana Sphere, Spirit Potion, etc.). Pas de régen passive
-  par défaut.
-- **Valeurs MP de base / par level / par archétype** : **à définir**.
+- **Cap MP par défaut** : **20 MP × DLV courant** (au sens de l'auteur,
+  référencé au jeu PS1). Soit 20 / 40 / 60 / 80 / 100 MP de DLV 1 à 5.
+  Valeur exacte à valider contre les sources TLoD si besoin.
+- **Régénération MP** : aucune régen passive par défaut. La récupération
+  passe par **certains items et équipements** (canon TLoD : Mana Sphere,
+  Spirit Potion, etc.).
+- **Buffs d'équipement** : certains items / équipements TLoD **doublent
+  le cap MP** ou permettent une **regen** active. À détailler dans la
+  data items quand elle sera reprise.
 - → **Implication code** : un nouveau composant `MpGauge` calqué sur
   `SpGauge`, attaché à spawn, alimenté par les items inventaire.
 
@@ -310,5 +330,5 @@ Ce qui est posé à ce jour, d'après l'auteur :
 
 ---
 
-_Dernière mise à jour : 2026-05-13 — sections 1-7 captées, §6 capture
-la vision Dragoon / SP / DLV / MP._
+_Dernière mise à jour : 2026-05-13 — sections 1-7 captées. §6 affinée
+avec drains SP / cap MP par DLV / portée DLV per-archetype._

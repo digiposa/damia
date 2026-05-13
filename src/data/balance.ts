@@ -56,19 +56,27 @@ export interface MobDefinition {
   boss?: boolean;
 }
 
+// TLoD-canon stat blocks (HP / AT / DF / MAT / MDF / SPD / A-AV / M-AV
+// + XP / Gold drop) come from the author's full enemy spreadsheet (Bestiary
+// row #s noted per mob). The action-RPG-specific fields stay tuned for our
+// real-time engine: `speed` is the world px / ms travel rate (not the TLoD
+// SPD turn-order stat — that one lives in `stats.speed` for future use),
+// `range` is the world-px attack reach, `aggroRange` controls AI engagement
+// distance.
 export const MOBS: Record<MobKind, MobDefinition> = {
+  // Bestiary #25.
   berserkMouse: {
-    health: 20,
+    health: 2,
     speed: 0.12,
     stats: {
-      atk: 5,
-      def: 1,
-      magicAtk: 0,
-      magicDef: 1,
-      speed: 60,
+      atk: 1,
+      def: 80,
+      magicAtk: 1,
+      magicDef: 45,
+      speed: 120,
       attackHit: 100,
       magicHit: 100,
-      attackAvoid: 5,
+      attackAvoid: 0,
       magicAvoid: 0,
       atkSpeed: 1,
       range: 80,
@@ -84,17 +92,18 @@ export const MOBS: Record<MobKind, MobDefinition> = {
       attackTextureAlias: 'sprite.mob.berserkMouse.attack',
       deathTextureAlias: 'sprite.mob.berserkMouse.death',
     },
-    xp: 5,
+    xp: 3,
   },
+  // Bestiary #9.
   goblin: {
-    health: 40,
+    health: 4,
     speed: 0.1,
     stats: {
-      atk: 8,
-      def: 4,
-      magicAtk: 0,
-      magicDef: 2,
-      speed: 45,
+      atk: 2,
+      def: 120,
+      magicAtk: 1,
+      magicDef: 40,
+      speed: 120,
       attackHit: 100,
       magicHit: 100,
       attackAvoid: 0,
@@ -113,20 +122,21 @@ export const MOBS: Record<MobKind, MobDefinition> = {
       attackTextureAlias: 'sprite.mob.goblin.attack',
       deathTextureAlias: 'sprite.mob.goblin.death',
     },
-    xp: 12,
+    xp: 4,
   },
+  // Bestiary #22.
   assassinCock: {
-    health: 30,
+    health: 3,
     speed: 0.16,
     stats: {
-      atk: 7,
-      def: 2,
+      atk: 2,
+      def: 100,
       magicAtk: 2,
-      magicDef: 2,
-      speed: 70,
+      magicDef: 45,
+      speed: 120,
       attackHit: 100,
       magicHit: 100,
-      attackAvoid: 10,
+      attackAvoid: 0,
       magicAvoid: 0,
       atkSpeed: 1.4,
       range: 96,
@@ -142,21 +152,22 @@ export const MOBS: Record<MobKind, MobDefinition> = {
       attackTextureAlias: 'sprite.mob.assassinCock.attack',
       deathTextureAlias: 'sprite.mob.assassinCock.death',
     },
-    xp: 8,
+    xp: 5,
   },
+  // Bestiary #39.
   trent: {
-    health: 50,
+    health: 5,
     speed: 0.06,
     stats: {
-      atk: 12,
-      def: 6,
-      magicAtk: 4,
-      magicDef: 5,
-      speed: 25,
+      atk: 2,
+      def: 160,
+      magicAtk: 2,
+      magicDef: 30,
+      speed: 40,
       attackHit: 100,
       magicHit: 100,
       attackAvoid: 0,
-      magicAvoid: 5,
+      magicAvoid: 0,
       atkSpeed: 0.5,
       range: 80,
       aggroRange: 192,
@@ -171,7 +182,7 @@ export const MOBS: Record<MobKind, MobDefinition> = {
       attackTextureAlias: 'sprite.mob.trent.attack',
       deathTextureAlias: 'sprite.mob.trent.death',
     },
-    xp: 15,
+    xp: 4,
   },
   // BOSS — Fruegel, Hellena Prison's warden. Numbers are TLoD-canonical
   // (1st visit, US/EU column): high physical defence + middling damage,

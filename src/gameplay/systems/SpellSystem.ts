@@ -1,9 +1,8 @@
 import type { System, World } from '@core/ecs';
 import type { Components, Position } from '@gameplay/components';
-import { computeDamage } from '@data/balance';
+import { computeMagicalItemDamage } from '@gameplay/damage';
 import { FLOAT_DAMAGE, spawnFloatingText } from '@gameplay/entities/floatingText';
 import { spawnVfx } from '@gameplay/entities/vfx';
-import { effectiveDef, effectiveMagicAtk } from '@gameplay/stats';
 import { playSfx } from '@services/AudioManager';
 
 /**
@@ -15,10 +14,11 @@ import { playSfx } from '@services/AudioManager';
  *        of (targetX, targetY).
  *  3. When `elapsedMs >= totalMs`, remove the component.
  *
- * Damage = `computeDamage(magicAtk * mul, defender.def, roll, defending)`. We
- * reuse the physical damage helper because the formula shape (atk - def +
- * variance, halved by Defending, clamped to minDamage) is identical for now;
- * elemental multipliers will plug in here later when Element ships.
+ * Damage uses TLoD's Item Magic formula via
+ * `computeMagicalItemDamage(world, casterId, targetId, bid)`:
+ *   floor[(LV+5) × MAT × 5 / MDF] × BID / 100
+ * with the modifier wrapper (Guard, future Fear/Power/Field/Element)
+ * applied inside the helper.
  */
 export class SpellSystem implements System<Components> {
   update(dt: number, world: World<Components>): void {
@@ -31,7 +31,7 @@ export class SpellSystem implements System<Components> {
       spell.elapsedMs += dt;
 
       if (!spell.hitApplied && before < spell.hitTimingMs && spell.elapsedMs >= spell.hitTimingMs) {
-        this.applyDamage(world, spell, effectiveMagicAtk(world, id));
+        this.applyDamage(world, id, spell);
         spell.hitApplied = true;
       }
 
@@ -43,14 +43,13 @@ export class SpellSystem implements System<Components> {
 
   private applyDamage(
     world: World<Components>,
+    casterId: number,
     spell: Components['Spell'],
-    magicAtk: number,
   ): void {
-    const baseAtk = Math.max(1, Math.round(magicAtk * spell.magicAtkMul));
     if (spell.target === 'lockedTarget') {
       if (spell.targetId === undefined) return;
       const tp = world.getComponent(spell.targetId, 'Position');
-      this.hit(world, spell.targetId, baseAtk);
+      this.hit(world, casterId, spell.targetId, spell.bid);
       // Spawn the impact VFX at the target's position (after hit so it overlays
       // the floating-text that hit() may have just spawned).
       if (tp) spawnVfx(world, { kind: spell.vfxKind, x: tp.x, y: tp.y, radius: spell.vfxRadiusPx });
@@ -64,16 +63,16 @@ export class SpellSystem implements System<Components> {
       return;
     }
     const r2 = spell.aoeRadiusPx * spell.aoeRadiusPx;
-    for (const id of world.query(['Health', 'Position', 'Faction'])) {
-      const fac = world.getComponent(id, 'Faction');
+    for (const targetId of world.query(['Health', 'Position', 'Faction'])) {
+      const fac = world.getComponent(targetId, 'Faction');
       if (!fac || fac.side === 'player') continue;
-      if (world.hasComponent(id, 'Dying')) continue;
-      const p = world.getComponent(id, 'Position');
+      if (world.hasComponent(targetId, 'Dying')) continue;
+      const p = world.getComponent(targetId, 'Position');
       if (!p) continue;
       const dx = p.x - spell.targetX;
       const dy = p.y - spell.targetY;
       if (dx * dx + dy * dy > r2) continue;
-      this.hit(world, id, baseAtk);
+      this.hit(world, casterId, targetId, spell.bid);
     }
     // Single big burst at the AoE center — covers the whole damage radius.
     spawnVfx(world, {
@@ -85,14 +84,13 @@ export class SpellSystem implements System<Components> {
     });
   }
 
-  private hit(world: World<Components>, targetId: number, atk: number): void {
+  private hit(world: World<Components>, casterId: number, targetId: number, bid: number): void {
     const hp = world.getComponent(targetId, 'Health');
     const stats = world.getComponent(targetId, 'Stats');
     const pos: Position | undefined = world.getComponent(targetId, 'Position');
     if (!hp || !stats || !pos) return;
     if (hp.current <= 0 || world.hasComponent(targetId, 'Dying')) return;
-    const defending = world.hasComponent(targetId, 'Defending');
-    const dmg = computeDamage(atk, effectiveDef(world, targetId), Math.random(), defending);
+    const dmg = computeMagicalItemDamage(world, casterId, targetId, bid);
     hp.current = Math.max(0, hp.current - dmg);
     spawnFloatingText(world, {
       x: pos.x,

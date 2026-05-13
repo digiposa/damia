@@ -14,11 +14,11 @@ import type { FactionSide } from './Faction';
  * `maxLifeMs` is the hard ceiling — if the arrow misses everything,
  * it's destroyed when the timer expires (no "infinite arrow" debris).
  *
- * Damage is computed at hit time (not fire time) so the target's
- * current DEF + Defending state apply. Storing only `atk` + `roll`
- * keeps the random factor fixed per arrow so two arrows fired in the
- * same frame don't deal an identical damage roll twice in a row when
- * the variance is large.
+ * Damage is computed at hit time so the target's current DEF +
+ * Defending state apply. We snapshot the attacker's ATK and LV at
+ * fire time (the attacker may level up, equip gear, leave Dragoon
+ * form etc. before the arrow lands — TLoD canon "freezes" the
+ * attacker's state at the swing moment).
  */
 export interface Projectile {
   /** Entity that fired the arrow. Excluded from collision so
@@ -34,12 +34,13 @@ export interface Projectile {
   dirY: number;
   /** World pixels per millisecond. Larger = faster arrow. */
   speedPxPerMs: number;
-  /** Attacker's ATK at fire time. Damage rolled at collision via
-   *  `computeDamage(atk, target.def, roll, defending)`. */
-  atk: number;
-  /** Pre-rolled [0, 1) variance factor so the random component is
-   *  fixed per arrow. */
-  roll: number;
+  /** Attacker's effective AT at fire time (already includes the
+   *  Dragoon multiplier when applicable). Plugged into the player
+   *  Archer Attack formula at hit time. */
+  attackerAt: number;
+  /** Attacker's character level at fire time. Used by the Archer
+   *  Attack formula's `(LV + 5) × 5` factor. */
+  attackerLv: number;
   /** Wall-clock since fire (ms). */
   elapsedMs: number;
   /** Hard despawn timer. The system kills any arrow whose elapsed

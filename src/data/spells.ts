@@ -23,8 +23,11 @@ interface SpellBase {
   totalMs: number;
   /** Time (ms from start) at which damage is applied. */
   hitTimingMs: number;
-  /** magicAtk × this multiplier = base damage applied to each victim. */
-  magicAtkMul: number;
+  /** TLoD-canon Item Magic BID (Base In-Damage), 100-based. Plugged into
+   *  the formula `floor[(LV+5) × MAT × 5 / MDF] × BID / 100`. Reference
+   *  values from the doc: Detonate Rock 100, All-Target Multi 100,
+   *  Single-Target Multi 150, All-Target Powerful 300, Psyche Bomb X 400. */
+  bid: number;
   /** Element tag (no multiplier yet — preserved for the future resistance system). */
   element: SpellElement;
   /** Cooldown after cast, in ms. 0 = no cooldown (only the item count gates). */
@@ -57,7 +60,8 @@ export const SPELLS: Record<SpellKind, SpellDefinition> = {
     name: 'Burn Out',
     totalMs: 600,
     hitTimingMs: 350,
-    magicAtkMul: 2.0,
+    // Single-target multi item — TLoD canonical BID 150.
+    bid: 150,
     element: 'fire',
     cooldownMs: 0,
     target: 'lockedTarget',
@@ -69,7 +73,8 @@ export const SPELLS: Record<SpellKind, SpellDefinition> = {
     name: 'Gushing Magma',
     totalMs: 900,
     hitTimingMs: 550,
-    magicAtkMul: 1.4,
+    // All-target multi item — TLoD canonical BID 100.
+    bid: 100,
     element: 'fire',
     cooldownMs: 0,
     target: 'groundAoE',

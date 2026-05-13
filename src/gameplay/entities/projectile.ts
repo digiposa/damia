@@ -13,9 +13,13 @@ export interface SpawnProjectileOptions {
   /** Unit-vector direction of travel. */
   dirX: number;
   dirY: number;
-  /** Attacker's ATK — damage rolled at collision against the
-   *  target's current DEF. */
-  atk: number;
+  /** Attacker's effective ATK at fire time (already includes the
+   *  Dragoon multiplier when applicable). Plugged into the player
+   *  Archer Attack formula at collision. */
+  attackerAt: number;
+  /** Attacker's character level at fire time. Plugged into the
+   *  same formula's `(LV + 5) × 5` factor. */
+  attackerLv: number;
   /** Optional override of the default arrow speed (px/ms). */
   speedPxPerMs?: number;
   /** Optional override of the default flight cap (ms). */
@@ -56,8 +60,8 @@ export function spawnProjectile(world: World<Components>, opts: SpawnProjectileO
     dirX: opts.dirX,
     dirY: opts.dirY,
     speedPxPerMs: opts.speedPxPerMs ?? DEFAULT_SPEED_PX_PER_MS,
-    atk: opts.atk,
-    roll: Math.random(),
+    attackerAt: opts.attackerAt,
+    attackerLv: opts.attackerLv,
     elapsedMs: 0,
     maxLifeMs: opts.maxLifeMs ?? DEFAULT_MAX_LIFE_MS,
     hitRadiusPx: opts.hitRadiusPx ?? DEFAULT_HIT_RADIUS_PX,

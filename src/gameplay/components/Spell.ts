@@ -19,8 +19,10 @@ export interface Spell {
   hitTimingMs: number;
   /** True once the hit checkpoint has been crossed (idempotency on slow frames). */
   hitApplied: boolean;
-  /** Damage = caster.magicAtk × magicAtkMul. */
-  magicAtkMul: number;
+  /** TLoD-canon Item Magic BID (100-based) — see `data/spells.ts`. The
+   *  damage formula `floor[(LV+5) × MAT × 5 / MDF] × BID / 100` runs
+   *  inside `gameplay/damage.ts → computeMagicalItemDamage`. */
+  bid: number;
   /** Discriminator. Determines which of the targetXxx fields below is meaningful. */
   target: 'lockedTarget' | 'groundAoE';
   /** lockedTarget only — entity to hit. Validated at apply time (Dying/dead → no-op). */

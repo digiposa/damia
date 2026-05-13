@@ -1,6 +1,6 @@
 import type { System, World } from '@core/ecs';
 import type { Components } from '@gameplay/components';
-import { computeDamage } from '@data/balance';
+import { COMBAT } from '@data/balance';
 import { FLOAT_DAMAGE, spawnFloatingText } from '@gameplay/entities/floatingText';
 import { effectiveDef } from '@gameplay/stats';
 import { playSfx } from '@services/AudioManager';
@@ -56,8 +56,12 @@ export class ProjectileSystem implements System<Components> {
       }
       if (hitId === null) continue;
 
-      // Resolve damage. computeDamage clamps to COMBAT.minDamage so
-      // even high-DEF bosses (Fruegel's DEF 100) take at least 1.
+      // Resolve damage using TLoD's player Archer Attack formula
+      //   round[AT × (LV+5) × 5 / DF]
+      // with attacker AT + LV snapshotted at fire time on the
+      // projectile (the source may have leveled up / left form / died
+      // between fire and impact). Guard modifier applies via the
+      // Defending check; floor at COMBAT.minDamage for UX.
       const tStats = world.getComponent(hitId, 'Stats');
       const tHp = world.getComponent(hitId, 'Health');
       if (!tStats || !tHp) {
@@ -67,7 +71,10 @@ export class ProjectileSystem implements System<Components> {
         continue;
       }
       const defending = world.hasComponent(hitId, 'Defending');
-      const dmg = computeDamage(proj.atk, effectiveDef(world, hitId), proj.roll, defending);
+      const def = Math.max(1, effectiveDef(world, hitId));
+      let raw = Math.floor((proj.attackerAt * (proj.attackerLv + 5) * 5 + def / 2) / def);
+      if (defending) raw = Math.floor(raw * COMBAT.defendingDamageMul);
+      const dmg = Math.max(COMBAT.minDamage, raw);
       tHp.current = Math.max(0, tHp.current - dmg);
       spawnFloatingText(world, {
         x: pos.x,

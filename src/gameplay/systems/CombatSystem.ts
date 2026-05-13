@@ -1,11 +1,11 @@
 import type { System, World } from '@core/ecs';
 import { worldToGrid } from '@core/math/iso';
 import type { Components } from '@gameplay/components';
-import { computeDamage } from '@data/balance';
+import { computePhysicalDamage } from '@gameplay/damage';
 import { FLOAT_DAMAGE, spawnFloatingText } from '@gameplay/entities/floatingText';
 import { spawnProjectile } from '@gameplay/entities/projectile';
 import { addSp } from '@gameplay/sp';
-import { effectiveAtk, effectiveDef } from '@gameplay/stats';
+import { effectiveAtk } from '@gameplay/stats';
 import { playSfx } from '@services/AudioManager';
 
 const TARGET_RECHECK_MS = 100;
@@ -110,6 +110,11 @@ export class CombatSystem implements System<Components> {
         // spawn for every Player/Mob.
         const fac = world.getComponent(id, 'Faction');
         const spawnOffsetPx = 22;
+        // Snapshot AT + LV at fire time for the TLoD Archer Attack
+        // formula. The arrow can outlive the player's current state
+        // (level-up, form exit, etc.) so the projectile carries its
+        // own damage inputs.
+        const prog = world.getComponent(id, 'Progression');
         spawnProjectile(world, {
           sourceId: id,
           sourceFaction: fac?.side ?? 'player',
@@ -117,7 +122,8 @@ export class CombatSystem implements System<Components> {
           y: pos.y + dirY * spawnOffsetPx,
           dirX,
           dirY,
-          atk: effectiveAtk(world, id),
+          attackerAt: effectiveAtk(world, id),
+          attackerLv: prog?.level ?? 1,
         });
         cd.remainingMs = 1000 / Math.max(0.1, stats.atkSpeed);
         // AttackSwing still drives the bow-draw pose visually: a brief
@@ -140,16 +146,12 @@ export class CombatSystem implements System<Components> {
       }
 
       // Melee: immediate damage on the locked target + visual lunge.
-      // Read both sides through effective* helpers so the Dragoon
-      // multiplier — when the attacker is transformed — and a
-      // hypothetical mob-side multiplier (none today) are honoured.
-      const defending = world.hasComponent(intent.targetId, 'Defending');
-      const dmg = computeDamage(
-        effectiveAtk(world, id),
-        effectiveDef(world, intent.targetId),
-        Math.random(),
-        defending,
-      );
+      // computePhysicalDamage dispatches on the attacker's class —
+      // Player Archer Attack formula vs Enemy Physical, both reading
+      // effective stats through gameplay/stats.ts so Dragoon-form
+      // boosts apply automatically. Defending (Guard) goes through
+      // the formula's modifier wrapper.
+      const dmg = computePhysicalDamage(world, id, intent.targetId);
       targetHealth.current = Math.max(0, targetHealth.current - dmg);
       cd.remainingMs = 1000 / Math.max(0.1, stats.atkSpeed);
 

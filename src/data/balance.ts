@@ -1,11 +1,13 @@
 import type { Sprite, Stats } from '@gameplay/components';
 
 export const COMBAT = {
-  /** Damage rolled uniformly in [base - variance, base + variance]. */
-  damageVariance: 2,
-  /** Multiplier applied to incoming damage while Defending. */
+  /** Multiplier applied to incoming damage while Defending — TLoD's
+   *  Guard modifier in the damage doc, applied inside the modifier
+   *  wrapper of every formula in `gameplay/damage.ts`. */
   defendingDamageMul: 0.5,
-  /** Hard floor: every successful hit deals at least this much. */
+  /** Hard floor: every successful hit deals at least this much.
+   *  Also enforced inside `gameplay/damage.ts` as a UX safety so
+   *  formulas can't print "0 dmg" floating numbers. */
   minDamage: 1,
 } as const;
 
@@ -216,24 +218,12 @@ export const MOBS: Record<MobKind, MobDefinition> = {
   },
 } as const;
 
-/**
- * Pure damage formula. Tested in `tests/gameplay/combat.test.ts`.
- * Returns the integer damage dealt (clamped to `COMBAT.minDamage`).
- *
- * `roll` is a [0, 1) random factor (injected for testability).
- * `defending` halves the result before flooring.
- */
-export function computeDamage(
-  attackerAtk: number,
-  defenderDef: number,
-  roll: number,
-  defending: boolean,
-): number {
-  const variance = (roll * 2 - 1) * COMBAT.damageVariance;
-  let dmg = attackerAtk - defenderDef + variance;
-  if (defending) dmg *= COMBAT.defendingDamageMul;
-  return Math.max(COMBAT.minDamage, Math.round(dmg));
-}
+// Damage math lives in `gameplay/damage.ts` now — the TLoD canon
+// formulas (Player Archer Attack / Enemy Physical / Addition / Item
+// Magic) are deterministic and read effective stats through the
+// Dragoon-aware helpers, so the old subtractive `computeDamage` stub
+// + RNG variance went away. `COMBAT.defendingDamageMul` is consumed
+// directly inside damage.ts as the Guard modifier.
 
 /**
  * TLoD-canonical addition slugs. The set is shared across all archetypes —
@@ -283,10 +273,11 @@ export type AdditionKind =
 /** One row of an addition's level table. Levels run 1..5; addition uses
  *  raise the level every 20 triggers (see `getAdditionLevel`). */
 export interface AdditionLevel {
-  /** Total damage multiplier across the full sequence (`1.50` = +50 % of
-   *  baseAtk over all hits combined). The system splits this evenly per
-   *  landing hit at apply time. */
-  dmgMul: number;
+  /** Per-level damage multiplier in TLoD canon (100-based: 100 = 1.0×,
+   *  150 = 1.5×). Plugged into the addition damage formula as
+   *  `floor[hitValue × multiplier / 100]`. Source: TLoD damage doc,
+   *  "Addition Multiplier Data" tables. */
+  multiplier: number;
   /** SP awarded over the full sequence (split per landing hit). */
   spGain: number;
 }
@@ -294,7 +285,11 @@ export interface AdditionLevel {
 export interface AdditionDefinition {
   /** Display name (used by Hotbar tooltip / ActionLog). */
   name: string;
-  /** Total animation duration in ms. */
+  /** TLoD-canon hit-by-hit base values ("Addition Hit Data" chart).
+   *  Length defines the number of hits — `hits.length === nbHits`.
+   *  Per-hit damage uses `hits[i]` directly in the addition formula. */
+  hits: readonly number[];
+  /** Total animation duration in ms. Derived from `hits.length`. */
   totalMs: number;
   /** Hit checkpoint timings (ms from start). Damage applies once per entry. */
   hitTimingsMs: readonly number[];
@@ -319,190 +314,228 @@ const TAIL_MS = 100;
 const COOLDOWN_BASE_MS = 6000;
 const COOLDOWN_PER_EXTRA_HIT_MS = 1500;
 
+/** Builder for an `AdditionDefinition`. The hits + multipliers tables
+ *  are the TLoD-canon "Addition Hit Data" + "Addition Multiplier Data"
+ *  charts (source: TLoD damage doc). spGains is our SP design — not
+ *  canon TLoD. Animation timings + cooldown are derived from the hit
+ *  count so adding a new addition is a single builder call. */
 function build(opts: {
   name: string;
-  /** TLoD's `Add (#)` is the number of timed inputs after the free first
-   *  strike. We store the **total** hit count = `Add(#) + 1`. */
-  nbHits: number;
-  levels: AdditionDefinition['levels'];
+  hits: readonly number[];
+  multipliers: readonly [number, number, number, number, number];
+  spGains: readonly [number, number, number, number, number];
   rangeOverridePx?: number;
 }): AdditionDefinition {
-  const hitTimingsMs = Array.from({ length: opts.nbHits }, (_, i) => (i + 1) * HIT_INTERVAL_MS);
-  const totalMs = opts.nbHits * HIT_INTERVAL_MS + TAIL_MS;
-  const cooldownMs = COOLDOWN_BASE_MS + Math.max(0, opts.nbHits - 2) * COOLDOWN_PER_EXTRA_HIT_MS;
+  const nbHits = opts.hits.length;
+  const hitTimingsMs = Array.from({ length: nbHits }, (_, i) => (i + 1) * HIT_INTERVAL_MS);
+  const totalMs = nbHits * HIT_INTERVAL_MS + TAIL_MS;
+  const cooldownMs = COOLDOWN_BASE_MS + Math.max(0, nbHits - 2) * COOLDOWN_PER_EXTRA_HIT_MS;
+  const levels = opts.multipliers.map((multiplier, i) => ({
+    multiplier,
+    spGain: opts.spGains[i] ?? 0,
+  })) as unknown as AdditionDefinition['levels'];
   return {
     name: opts.name,
+    hits: opts.hits,
     totalMs,
     hitTimingsMs,
     cooldownMs,
-    levels: opts.levels,
+    levels,
     ...(opts.rangeOverridePx !== undefined ? { rangeOverridePx: opts.rangeOverridePx } : {}),
   };
 }
-
-const L = (dmgMul: number, spGain: number): AdditionLevel => ({ dmgMul, spGain });
 
 export const ADDITIONS: Record<AdditionKind, AdditionDefinition> = {
   // --- Red-Eye Dragoon (Dart) ---------------------------------------------
   doubleSlash: build({
     name: 'Double Slash',
-    nbHits: 2,
-    levels: [L(1.5, 35), L(1.57, 35), L(1.65, 35), L(1.8, 35), L(2.02, 35)],
+    hits: [100, 50],
+    multipliers: [100, 105, 110, 120, 135],
+    spGains: [35, 35, 35, 35, 35],
   }),
   volcano: build({
     name: 'Volcano',
-    nbHits: 4,
-    levels: [L(2.0, 20), L(2.1, 24), L(2.2, 28), L(2.3, 32), L(2.5, 36)],
+    hits: [50, 50, 50, 50],
+    multipliers: [100, 105, 110, 115, 125],
+    spGains: [20, 24, 28, 32, 36],
   }),
   burningRush: build({
     name: 'Burning Rush',
-    nbHits: 3,
-    levels: [L(1.5, 30), L(1.5, 45), L(1.5, 60), L(1.5, 75), L(1.5, 102)],
+    hits: [50, 50, 50],
+    multipliers: [100, 100, 100, 100, 100],
+    spGains: [30, 45, 60, 75, 102],
   }),
   crushDance: build({
     name: 'Crush Dance',
-    nbHits: 5,
-    levels: [L(1.5, 50), L(1.72, 60), L(1.95, 75), L(2.17, 85), L(2.5, 100)],
+    hits: [30, 30, 30, 30, 30],
+    multipliers: [100, 115, 130, 145, 167],
+    spGains: [50, 60, 75, 85, 100],
   }),
   madnessHero: build({
     name: 'Madness Hero',
-    nbHits: 6,
-    levels: [L(1.0, 60), L(1.0, 90), L(1.0, 120), L(1.0, 150), L(1.0, 204)],
+    hits: [20, 20, 20, 20, 10, 10],
+    multipliers: [100, 100, 100, 100, 100],
+    spGains: [60, 90, 120, 150, 204],
   }),
   moonStrike: build({
     name: 'Moon Strike',
-    nbHits: 7,
-    levels: [L(2.0, 20), L(2.4, 20), L(2.8, 20), L(3.2, 20), L(3.5, 20)],
+    hits: [30, 30, 30, 30, 30, 30, 20],
+    multipliers: [100, 120, 140, 160, 175],
+    spGains: [20, 20, 20, 20, 20],
   }),
   blazingDynamo: build({
     name: 'Blazing Dynamo',
-    nbHits: 8,
-    levels: [L(2.5, 100), L(3.0, 110), L(3.5, 120), L(4.0, 130), L(4.5, 150)],
+    hits: [40, 30, 30, 30, 30, 30, 30, 30],
+    multipliers: [100, 120, 140, 160, 180],
+    spGains: [100, 110, 120, 130, 150],
   }),
 
   // --- Jade Dragoon (Lavitz / Albert) -------------------------------------
   harpoon: build({
     name: 'Harpoon',
-    nbHits: 2,
-    levels: [L(1.0, 35), L(1.1, 38), L(1.2, 42), L(1.3, 45), L(1.5, 50)],
+    hits: [75, 25],
+    multipliers: [100, 110, 120, 130, 150],
+    spGains: [35, 38, 42, 45, 50],
   }),
   spinningCane: build({
     name: 'Spinning Cane',
-    nbHits: 3,
-    levels: [L(1.0, 35), L(1.25, 35), L(1.5, 35), L(1.75, 35), L(2.0, 35)],
+    hits: [50, 25, 25],
+    multipliers: [100, 125, 150, 175, 200],
+    spGains: [35, 35, 35, 35, 35],
   }),
   rodTyphoon: build({
     name: 'Rod Typhoon',
-    nbHits: 5,
-    levels: [L(1.5, 30), L(1.62, 45), L(1.74, 60), L(1.86, 75), L(2.02, 100)],
+    hits: [30, 30, 30, 30, 30],
+    multipliers: [100, 108, 116, 124, 135],
+    spGains: [30, 45, 60, 75, 100],
   }),
   gustOfWindDance: build({
     name: 'Gust of Wind Dance',
-    nbHits: 7,
-    levels: [L(2.0, 35), L(2.4, 35), L(2.8, 35), L(3.2, 35), L(3.5, 35)],
+    hits: [30, 30, 30, 30, 30, 30, 20],
+    multipliers: [100, 120, 140, 160, 175],
+    spGains: [35, 35, 35, 35, 35],
   }),
   flowerStorm: build({
     name: 'Flower Storm',
-    nbHits: 8,
-    levels: [L(3.0, 60), L(3.24, 90), L(3.48, 120), L(3.72, 150), L(4.05, 202)],
+    hits: [30, 30, 30, 40, 40, 40, 40, 50],
+    multipliers: [100, 108, 116, 124, 135],
+    spGains: [60, 90, 120, 150, 202],
   }),
 
   // --- Dark Burst Dragoon (Rose) ------------------------------------------
   whipSmack: build({
     name: 'Whip Smack',
-    nbHits: 2,
-    levels: [L(1.0, 35), L(1.25, 35), L(1.5, 35), L(1.75, 35), L(2.0, 35)],
+    hits: [75, 25],
+    multipliers: [100, 125, 150, 175, 200],
+    spGains: [35, 35, 35, 35, 35],
   }),
   moreAndMore: build({
     name: 'More & More',
-    nbHits: 3,
-    levels: [L(1.5, 30), L(1.5, 45), L(1.5, 60), L(1.5, 75), L(1.5, 102)],
+    hits: [50, 50, 50],
+    multipliers: [100, 100, 100, 100, 100],
+    spGains: [30, 45, 60, 75, 102],
   }),
   hardBlade: build({
     name: 'Hard Blade',
-    nbHits: 6,
-    levels: [L(1.0, 35), L(1.5, 35), L(2.0, 35), L(2.5, 35), L(3.0, 35)],
+    hits: [20, 20, 20, 20, 10, 10],
+    multipliers: [100, 150, 200, 250, 300],
+    spGains: [35, 35, 35, 35, 35],
   }),
   demonsDance: build({
     name: "Demon's Dance",
-    nbHits: 8,
-    levels: [L(2.0, 100), L(2.8, 100), L(3.6, 100), L(4.4, 100), L(5.0, 100)],
+    hits: [30, 30, 30, 30, 20, 20, 20, 20],
+    multipliers: [100, 140, 180, 220, 250],
+    spGains: [100, 100, 100, 100, 100],
   }),
 
   // --- Violet Dragoon (Haschel) -------------------------------------------
   doublePunch: build({
     name: 'Double Punch',
-    nbHits: 2,
-    levels: [L(1.0, 35), L(1.1, 38), L(1.2, 42), L(1.3, 45), L(1.5, 50)],
+    hits: [75, 25],
+    multipliers: [100, 110, 120, 130, 150],
+    spGains: [35, 38, 42, 45, 50],
   }),
   flurryOfStyx: build({
     name: 'Flurry of Styx',
-    nbHits: 3,
-    levels: [L(1.5, 20), L(1.62, 20), L(1.74, 20), L(1.86, 20), L(2.02, 20)],
+    hits: [100, 25, 25],
+    multipliers: [100, 108, 116, 124, 135],
+    spGains: [20, 20, 20, 20, 20],
   }),
   summon4Gods: build({
     name: 'Summon 4 Gods',
-    nbHits: 4,
-    levels: [L(1.0, 50), L(1.0, 61), L(1.0, 75), L(1.0, 86), L(1.0, 100)],
+    hits: [25, 25, 25, 25],
+    multipliers: [100, 100, 100, 100, 100],
+    spGains: [50, 61, 75, 86, 100],
   }),
   fiveRingShattering: build({
     name: '5-Ring Shattering',
-    nbHits: 5,
-    levels: [L(1.5, 35), L(1.87, 35), L(2.25, 40), L(2.62, 45), L(3.0, 50)],
+    hits: [30, 30, 30, 30, 30],
+    multipliers: [100, 125, 150, 175, 200],
+    spGains: [35, 35, 40, 45, 50],
   }),
   hexHammer: build({
     name: 'Hex Hammer',
-    nbHits: 7,
-    levels: [L(2.0, 15), L(2.5, 15), L(3.0, 15), L(3.5, 15), L(4.0, 15)],
+    hits: [30, 30, 30, 30, 30, 30, 20],
+    multipliers: [100, 125, 150, 175, 200],
+    spGains: [15, 15, 15, 15, 15],
   }),
   omniSweep: build({
     name: 'Omni-Sweep',
-    nbHits: 8,
-    levels: [L(3.0, 50), L(3.45, 75), L(3.9, 100), L(4.35, 125), L(5.01, 150)],
+    hits: [30, 30, 30, 40, 40, 40, 40, 50],
+    multipliers: [100, 115, 130, 145, 167],
+    spGains: [50, 75, 100, 125, 150],
   }),
 
   // --- Blue-Sea Dragoon (Meru) --------------------------------------------
   doubleSmack: build({
     name: 'Double Smack',
-    nbHits: 2,
-    levels: [L(1.0, 20), L(1.1, 24), L(1.2, 28), L(1.3, 32), L(1.5, 34)],
+    hits: [75, 25],
+    multipliers: [100, 110, 120, 130, 150],
+    spGains: [20, 24, 28, 32, 34],
   }),
   hammerSpin: build({
     name: 'Hammer Spin',
-    nbHits: 4,
-    levels: [L(1.5, 35), L(1.62, 46), L(1.74, 51), L(1.86, 59), L(2.02, 70)],
+    hits: [50, 50, 25, 25],
+    multipliers: [100, 108, 116, 124, 135],
+    spGains: [35, 46, 51, 59, 70],
   }),
   coolBoogie: build({
     name: 'Cool Boogie',
-    nbHits: 5,
-    levels: [L(1.0, 60), L(1.0, 90), L(1.0, 120), L(1.0, 150), L(1.0, 200)],
+    hits: [20, 20, 20, 20, 20],
+    multipliers: [100, 100, 100, 100, 100],
+    spGains: [60, 90, 120, 150, 200],
   }),
   catsCradle: build({
     name: "Cat's Cradle",
-    nbHits: 7,
-    levels: [L(1.5, 20), L(1.95, 20), L(2.4, 20), L(2.85, 20), L(3.51, 20)],
+    hits: [30, 20, 20, 20, 20, 20, 20],
+    multipliers: [100, 130, 160, 190, 234],
+    spGains: [20, 20, 20, 20, 20],
   }),
   perkyStep: build({
     name: 'Perky Step',
-    nbHits: 8,
-    levels: [L(2.0, 100), L(3.0, 100), L(4.0, 100), L(5.0, 100), L(6.0, 100)],
+    hits: [30, 30, 30, 30, 20, 20, 20, 20],
+    multipliers: [100, 150, 200, 250, 300],
+    spGains: [100, 100, 100, 100, 100],
   }),
 
   // --- Golden Dragoon (Kongol) --------------------------------------------
   pursuit: build({
     name: 'Pursuit',
-    nbHits: 2,
-    levels: [L(1.0, 35), L(1.1, 38), L(1.2, 42), L(1.3, 45), L(1.5, 50)],
+    hits: [75, 25],
+    multipliers: [100, 110, 120, 130, 150],
+    spGains: [35, 38, 42, 45, 50],
   }),
   inferno: build({
     name: 'Inferno',
-    nbHits: 4,
-    levels: [L(1.0, 20), L(1.25, 20), L(1.5, 20), L(1.75, 20), L(2.0, 20)],
+    hits: [40, 20, 20, 20],
+    multipliers: [100, 125, 150, 175, 200],
+    spGains: [20, 20, 20, 20, 20],
   }),
   boneCrush: build({
     name: 'Bone Crush',
-    nbHits: 6,
-    levels: [L(2.0, 100), L(2.2, 100), L(2.4, 100), L(2.6, 100), L(3.0, 100)],
+    hits: [50, 30, 30, 30, 30, 30],
+    multipliers: [100, 110, 120, 130, 150],
+    spGains: [100, 100, 100, 100, 100],
   }),
 };
 

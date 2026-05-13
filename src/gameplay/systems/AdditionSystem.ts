@@ -1,9 +1,9 @@
 import type { System, World } from '@core/ecs';
 import type { Components } from '@gameplay/components';
-import { ADDITIONS, computeDamage, type AdditionKind } from '@data/balance';
+import { ADDITIONS, type AdditionKind } from '@data/balance';
+import { computeAdditionDamage } from '@gameplay/damage';
 import { FLOAT_DAMAGE, spawnFloatingText } from '@gameplay/entities/floatingText';
 import { addSp } from '@gameplay/sp';
-import { effectiveAtk, effectiveDef } from '@gameplay/stats';
 import { playSfx, playAdditionVoice } from '@services/AudioManager';
 
 /**
@@ -38,7 +38,7 @@ export class AdditionSystem implements System<Components> {
       const def = ADDITIONS[add.kind];
       const nbHits = def.hitTimingsMs.length;
       const levelRow = def.levels[add.level - 1] ?? def.levels[0]!;
-      const dmgMulPerHit = levelRow.dmgMul / nbHits;
+      const multiplier = levelRow.multiplier;
       const spPerHit = levelRow.spGain / nbHits;
       const before = add.elapsedMs;
       add.elapsedMs += dt;
@@ -49,16 +49,15 @@ export class AdditionSystem implements System<Components> {
         if (t === undefined) break;
         if (t > add.elapsedMs) break;
         if (t < before) continue; // shouldn't happen (hitsApplied protects us) but be defensive
-        // VISION §6.3 forbids additions in Dragoon form so the multiplier
-        // wouldn't normally apply, but reading via effectiveAtk keeps the
-        // path correct if the controller-side gate ever lapses.
-        const landed = this.applyHit(
-          world,
-          id,
-          add.targetId,
-          effectiveAtk(world, id),
-          dmgMulPerHit,
-        );
+        // Per-hit damage uses the TLoD addition formula:
+        //   round[floor[floor[hitValue × multiplier / 100] × AT / 100] × (LV+5) × 5 / DF]
+        // Sum across hits approximates the canonical "perfect addition"
+        // damage (off by the floor truncation per hit). VISION §6.3
+        // forbids additions in Dragoon form so the multiplier wouldn't
+        // normally apply, but the formula stays correct if the
+        // controller-side gate ever lapses.
+        const hitValue = def.hits[i] ?? 0;
+        const landed = this.applyHit(world, id, add.targetId, hitValue, multiplier);
         add.hitsApplied = i + 1;
         add.lastHitLanded = landed;
         if (landed) {
@@ -93,10 +92,10 @@ export class AdditionSystem implements System<Components> {
    *  (used by the caller to gate SP gain + the success-voice trigger). */
   private applyHit(
     world: World<Components>,
-    _attackerId: number,
+    attackerId: number,
     targetId: number,
-    attackerAtk: number,
-    mul: number,
+    hitValue: number,
+    multiplier: number,
   ): boolean {
     const targetHealth = world.getComponent(targetId, 'Health');
     const targetStats = world.getComponent(targetId, 'Stats');
@@ -104,13 +103,7 @@ export class AdditionSystem implements System<Components> {
     if (!targetHealth || !targetStats || !targetPos) return false;
     if (targetHealth.current <= 0 || world.hasComponent(targetId, 'Dying')) return false;
 
-    const defending = world.hasComponent(targetId, 'Defending');
-    const dmg = computeDamage(
-      Math.max(1, Math.round(attackerAtk * mul)),
-      effectiveDef(world, targetId),
-      Math.random(),
-      defending,
-    );
+    const dmg = computeAdditionDamage(world, attackerId, targetId, hitValue, multiplier);
     targetHealth.current = Math.max(0, targetHealth.current - dmg);
     spawnFloatingText(world, {
       x: targetPos.x,

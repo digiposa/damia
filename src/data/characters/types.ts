@@ -77,13 +77,15 @@ export interface CharacterLevelRow {
 }
 
 /** Multipliers applied to base Stats while the avatar is
- *  transformed into Dragoon form. 1.0 = unchanged. */
+ *  transformed into Dragoon form. 1.0 = unchanged. Max HP is
+ *  intentionally NOT in this multiplier set — the canonical TLoD
+ *  Dragoon form boosts offense/defense/speed, not effective health
+ *  (see VISION §6.2). */
 export interface DragoonStatsMultiplier {
   atk: number;
   def: number;
   magicAtk: number;
   magicDef: number;
-  hp: number;
   /** Movement speed multiplier (multiplies the Speed component's
    *  `value`). */
   moveSpeed: number;

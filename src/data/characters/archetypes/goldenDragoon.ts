@@ -65,7 +65,7 @@ export const GOLDEN_DRAGOON: DragoonArchetype = {
     durationMsBase: 15_000,
     durationMsPerLevel: 500,
     drainPerActionMs: 1500,
-    statsMultiplier: { atk: 1.5, def: 1.5, magicAtk: 1.1, magicDef: 1.2, hp: 1.1, moveSpeed: 1.05 },
+    statsMultiplier: { atk: 1.5, def: 1.5, magicAtk: 1.1, magicDef: 1.2, moveSpeed: 1.05 },
     additionUnlocksByLevel: new Map([
       [1, 'goldenDragoonSmash'],
       [10, 'meteorStrike'],

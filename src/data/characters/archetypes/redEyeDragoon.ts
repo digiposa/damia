@@ -38,7 +38,7 @@ export const RED_EYE_DRAGOON: DragoonArchetype = {
     durationMsBase: 15_000,
     durationMsPerLevel: 500,
     drainPerActionMs: 1500,
-    statsMultiplier: { atk: 1.3, def: 1.3, magicAtk: 1.5, magicDef: 1.3, hp: 1.0, moveSpeed: 1.15 },
+    statsMultiplier: { atk: 1.3, def: 1.3, magicAtk: 1.5, magicDef: 1.3, moveSpeed: 1.15 },
     additionUnlocksByLevel: new Map([
       // TLoD canonical dragoon spells for Red-Eye: Flame Shot,
       // Explosion, Final Burst. Slugs not declared in ADDITIONS

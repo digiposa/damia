@@ -114,7 +114,7 @@ export const BLUE_SEA_DRAGOON: DragoonArchetype = {
     durationMsBase: 15_000,
     durationMsPerLevel: 500,
     drainPerActionMs: 1500,
-    statsMultiplier: { atk: 1.3, def: 1.2, magicAtk: 1.5, magicDef: 1.4, hp: 1.0, moveSpeed: 1.15 },
+    statsMultiplier: { atk: 1.3, def: 1.2, magicAtk: 1.5, magicDef: 1.4, moveSpeed: 1.15 },
     // Blue-Sea Dragoon spells: Rainbow Breath, Freezing Ring,
     // Diamond Dust (dragoon version), Box of Light.
     additionUnlocksByLevel: new Map([

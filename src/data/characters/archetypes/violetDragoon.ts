@@ -69,7 +69,7 @@ export const VIOLET_DRAGOON: DragoonArchetype = {
     durationMsBase: 15_000,
     durationMsPerLevel: 500,
     drainPerActionMs: 1500,
-    statsMultiplier: { atk: 1.4, def: 1.2, magicAtk: 1.3, magicDef: 1.2, hp: 1.0, moveSpeed: 1.2 },
+    statsMultiplier: { atk: 1.4, def: 1.2, magicAtk: 1.3, magicDef: 1.2, moveSpeed: 1.2 },
     additionUnlocksByLevel: new Map([
       [1, 'thunderGod'],
       [10, 'thunderKid'],

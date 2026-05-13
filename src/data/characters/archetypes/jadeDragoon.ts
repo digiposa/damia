@@ -115,7 +115,7 @@ export const JADE_DRAGOON: DragoonArchetype = {
     durationMsBase: 15_000,
     durationMsPerLevel: 500,
     drainPerActionMs: 1500,
-    statsMultiplier: { atk: 1.3, def: 1.4, magicAtk: 1.4, magicDef: 1.3, hp: 1.0, moveSpeed: 1.1 },
+    statsMultiplier: { atk: 1.3, def: 1.4, magicAtk: 1.4, magicDef: 1.3, moveSpeed: 1.1 },
     // Jade Dragoon spells in TLoD: Wing Blaster, Rose Storm, Gates
     // of Heaven. Slugs not in ADDITIONS yet.
     additionUnlocksByLevel: new Map([

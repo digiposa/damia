@@ -1,20 +1,15 @@
 import type { Stats } from './Stats';
 
 /**
- * Transient component carrying the live Dragoon transformation
- * state. Present on the player only while transformed; absent
- * otherwise. The DragoonSystem ticks `timerMs` down each frame
- * (passive drain) and on each action (action drain). When
- * `timerMs <= 0` the system reverses the multipliers stored in
- * `preStats` / `preMoveSpeed` / `preHpMax`, restores the base
- * sprite aliases (`avatar.sprite.base.*`), and removes the
- * component.
+ * Transient component carrying the live Dragoon transformation state.
+ * Present on the player only while transformed; absent otherwise.
+ * DragoonSystem ticks `timerMs` down each frame and removes the
+ * component on expiry, restoring the snapshotted stats/speed.
  *
- * Snapshotting the pre-transform state on this component sidesteps
- * floating-point drift over multiple transform cycles (no
- * accumulated rounding from "× 1.3 ÷ 1.3" math) and stays correct
- * even when the player ate a level-up during the transform (the
- * scene re-snapshots after applyArchetypeRow runs).
+ * Max HP is NOT snapshotted: the canonical TLoD Dragoon form does not
+ * multiply max HP (see VISION §6.2), so a level-up mid-transform
+ * propagates cleanly to `Health.max` without any restore logic to
+ * fight against it.
  */
 export interface Dragoon {
   /** Remaining transform duration in ms. */
@@ -29,16 +24,10 @@ export interface Dragoon {
   preMagicDef: number;
   /** Movement speed (Speed.value) at transform start. */
   preMoveSpeed: number;
-  /** Health.max at transform start. Health.current isn't
-   *  snapshotted because we don't want to revert combat damage
-   *  taken during the transform — the player's HP at end-of-form
-   *  carries over (clamped to the restored max). */
-  preHpMax: number;
 }
 
 /** Multipliers applied at transform start. Subset of Stats keys
- *  the player's `Dragoon` config affects + Speed + HP. */
+ *  the player's `Dragoon` config affects + Speed. */
 export type DragoonMultiplierKey =
   | keyof Pick<Stats, 'atk' | 'def' | 'magicAtk' | 'magicDef'>
-  | 'moveSpeed'
-  | 'hp';
+  | 'moveSpeed';

@@ -65,7 +65,7 @@ export const DARK_BURST_DRAGOON: DragoonArchetype = {
     durationMsBase: 15_000,
     durationMsPerLevel: 500,
     drainPerActionMs: 1500,
-    statsMultiplier: { atk: 1.4, def: 1.3, magicAtk: 1.5, magicDef: 1.3, hp: 1.0, moveSpeed: 1.15 },
+    statsMultiplier: { atk: 1.4, def: 1.3, magicAtk: 1.5, magicDef: 1.3, moveSpeed: 1.15 },
     // Dark Burst Dragoon spells: Astral Drain, Demon's Gate,
     // Death Dimension.
     additionUnlocksByLevel: new Map([

@@ -112,7 +112,7 @@ export const WHITE_SILVER_DRAGOON: DragoonArchetype = {
     durationMsBase: 15_000,
     durationMsPerLevel: 500,
     drainPerActionMs: 1500,
-    statsMultiplier: { atk: 1.2, def: 1.2, magicAtk: 1.6, magicDef: 1.4, hp: 1.0, moveSpeed: 1.0 },
+    statsMultiplier: { atk: 1.2, def: 1.2, magicAtk: 1.6, magicDef: 1.4, moveSpeed: 1.0 },
     // White-Silver Dragoon spells: Moon Light (heal), Star
     // Children, Gates of Heaven.
     additionUnlocksByLevel: new Map([

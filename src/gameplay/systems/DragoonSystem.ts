@@ -53,29 +53,24 @@ export function enterDragoonForm(world: World<Components>, entityId: number): bo
   if (sp.current < sp.max) return false;
   const stats = world.getComponent(entityId, 'Stats');
   const speed = world.getComponent(entityId, 'Speed');
-  const hp = world.getComponent(entityId, 'Health');
   const sprite = world.getComponent(entityId, 'Sprite');
-  if (!stats || !speed || !hp || !sprite) return false;
+  if (!stats || !speed || !sprite) return false;
 
   const archetype: DragoonArchetype = character.avatar.archetype;
   const mult = archetype.dragoon.statsMultiplier;
   // Snapshot before mutation so the exit path can restore exactly.
+  // Health.max is not snapshotted — see Dragoon component JSDoc.
   const preAtk = stats.atk;
   const preDef = stats.def;
   const preMagicAtk = stats.magicAtk;
   const preMagicDef = stats.magicDef;
   const preMoveSpeed = speed.value;
-  const preHpMax = hp.max;
 
   stats.atk = Math.round(preAtk * mult.atk);
   stats.def = Math.round(preDef * mult.def);
   stats.magicAtk = Math.round(preMagicAtk * mult.magicAtk);
   stats.magicDef = Math.round(preMagicDef * mult.magicDef);
   speed.value = preMoveSpeed * mult.moveSpeed;
-  hp.max = Math.round(preHpMax * mult.hp);
-  // Don't auto-heal — the transform is a power-up, not a refill.
-  // Just keep current clamped to the new max in case mult.hp < 1.
-  if (hp.current > hp.max) hp.current = hp.max;
 
   // Swap sprite aliases to the avatar's dragoon-form bundle.
   // RenderSystem reads these each frame, so the texture changes on
@@ -93,7 +88,6 @@ export function enterDragoonForm(world: World<Components>, entityId: number): bo
     preMagicAtk,
     preMagicDef,
     preMoveSpeed,
-    preHpMax,
   });
   sp.current = 0;
 
@@ -125,7 +119,6 @@ export function exitDragoonForm(world: World<Components>, entityId: number): voi
   const character = world.getComponent(entityId, 'Character');
   const stats = world.getComponent(entityId, 'Stats');
   const speed = world.getComponent(entityId, 'Speed');
-  const hp = world.getComponent(entityId, 'Health');
   const sprite = world.getComponent(entityId, 'Sprite');
 
   if (stats) {
@@ -135,10 +128,6 @@ export function exitDragoonForm(world: World<Components>, entityId: number): voi
     stats.magicDef = d.preMagicDef;
   }
   if (speed) speed.value = d.preMoveSpeed;
-  if (hp) {
-    hp.max = d.preHpMax;
-    if (hp.current > hp.max) hp.current = hp.max;
-  }
   if (sprite && character) {
     sprite.textureAlias = character.avatar.sprite.base.idle;
     sprite.attackTextureAlias = character.avatar.sprite.base.attack;

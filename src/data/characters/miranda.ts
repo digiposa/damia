@@ -23,4 +23,7 @@ export const MIRANDA: CharacterAvatar = {
     },
   },
   unlock: { wave: 28, kills: 300 },
+  // Miranda is the Shana substitution at Disc 3; she shares the
+  // White-Silver Dragoon column so the join level mirrors Shana's LV5.
+  joinLevel: 5,
 };

@@ -202,6 +202,14 @@ export interface CharacterAvatar {
   /** Optional i18n key for the "lore blurb" displayed on the
    *  selector card when this avatar is focused. */
   loreKey?: string;
+  /** TLoD-canon level at which this avatar joins the party
+   *  (Lavitz LV4, Shana LV5, Rose LV9, Haschel LV14, Meru LV18,
+   *  Kongol LV20). Drives Survival's spawn-level so the chosen
+   *  avatar starts with their canon-join HP / ATK / DEF instead
+   *  of Dart's LV1 placeholder values. Story-mode avatar swaps
+   *  (Lavitz → Albert) ignore this — the inheritor keeps the
+   *  party's current level. Defaults to 1 (Dart's join level). */
+  joinLevel?: number;
 }
 
 // --- Lookup helpers -----------------------------------------------

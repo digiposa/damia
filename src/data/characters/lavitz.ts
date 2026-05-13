@@ -27,4 +27,6 @@ export const LAVITZ: CharacterAvatar = {
     },
   },
   unlock: { wave: 7, kills: 25 },
+  // TLoD canon: Lavitz joins the Forest of Seles party at LV4.
+  joinLevel: 4,
 };

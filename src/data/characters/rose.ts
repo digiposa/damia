@@ -22,4 +22,6 @@ export const ROSE: CharacterAvatar = {
     },
   },
   unlock: { wave: 12, kills: 80 },
+  // TLoD canon: Rose joins the party at LV9 (post-Hellena rescue).
+  joinLevel: 9,
 };

@@ -22,4 +22,6 @@ export const HASCHEL: CharacterAvatar = {
     },
   },
   unlock: { wave: 15, kills: 120 },
+  // TLoD canon: Haschel joins the party at LV14 (Lohan tournament).
+  joinLevel: 14,
 };

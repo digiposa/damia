@@ -12,20 +12,26 @@ export interface SpawnPlayerOptions {
   gx: number;
   gy: number;
   /** Override starting HP (clamped to max). Defaults to the
-   *  archetype's LV1 HP. */
+   *  archetype's row HP at the spawn level. */
   hp?: number;
   /** Which playable avatar to spawn. Defaults to Dart so legacy
    *  call sites that don't yet pass one keep their old behaviour.
    *  Stats come from `avatar.archetype`. */
   avatar?: CharacterAvatar;
+  /** Override starting character level. Defaults to the avatar's
+   *  `joinLevel` (TLoD canon: Dart 1, Lavitz 4, Shana 5, etc.) so
+   *  Survival picks land each character with their canon-join HP /
+   *  ATK / DEF, not Dart's LV1 placeholder values. Story zones can
+   *  override per scene if a save restore demands a different LV. */
+  startLevel?: number;
 }
 
 /**
  * Spawn a player entity at (gx, gy). Stats, action-RPG fields and
- * the per-level row at LV 1 all come from the avatar's archetype.
- * Sprite bundle comes from the avatar's base form. A `Character`
- * component holds the avatar reference so downstream systems
- * (DeathSystem level-up, CombatSystem ranged branch, future
+ * the per-level row at the spawn level all come from the avatar's
+ * archetype. Sprite bundle comes from the avatar's base form. A
+ * `Character` component holds the avatar reference so downstream
+ * systems (DeathSystem level-up, CombatSystem ranged branch,
  * DragoonSystem) can read avatar + archetype + dragoon config
  * without an extra registry lookup.
  */
@@ -34,8 +40,9 @@ export function spawnPlayer(world: World<Components>, opts: SpawnPlayerOptions):
   const archetype = avatar.archetype;
   const { x, y } = gridToWorld(opts.gx, opts.gy);
   const id = world.createEntity();
-  const lvl1 = getCharacterStatsAtLevel(archetype, 1);
-  const max = lvl1.hp;
+  const startLevel = opts.startLevel ?? avatar.joinLevel ?? 1;
+  const startRow = getCharacterStatsAtLevel(archetype, startLevel);
+  const max = startRow.hp;
   const startHp = Math.max(1, Math.min(max, opts.hp ?? max));
 
   world.addComponent(id, 'Player', {});
@@ -71,10 +78,10 @@ export function spawnPlayer(world: World<Components>, opts: SpawnPlayerOptions):
   });
   world.addComponent(id, 'Stats', {
     ...archetype.actionStats.base,
-    atk: lvl1.atk,
-    def: lvl1.def,
-    magicAtk: lvl1.magicAtk,
-    magicDef: lvl1.magicDef,
+    atk: startRow.atk,
+    def: startRow.def,
+    magicAtk: startRow.magicAtk,
+    magicDef: startRow.magicDef,
   });
   world.addComponent(id, 'Faction', { side: 'player' });
   world.addComponent(id, 'AttackCooldown', { remainingMs: 0 });
@@ -86,13 +93,15 @@ export function spawnPlayer(world: World<Components>, opts: SpawnPlayerOptions):
     current: 0,
     max: archetype.dragoon.spMax,
   });
-  // xpToNext = cumulative XP threshold to reach LV 2 (= 20 for Dart).
-  // additionUses starts empty — every addition is at Lv 1 with 0 uses
-  // and gets incremented on each trigger by the controller.
+  // XP is cumulative lifetime — when the avatar spawns at a non-LV1
+  // join level, seed `xp` to the canon cumulative threshold for that
+  // level so the next level-up requires the canon delta (matching
+  // TLoD's progression curve). additionUses stays empty; every
+  // addition starts at Lv 1 with 0 uses, gated by the controller.
   world.addComponent(id, 'Progression', {
-    level: 1,
-    xp: 0,
-    xpToNext: xpToReachLevel(archetype, 2),
+    level: startLevel,
+    xp: xpToReachLevel(archetype, startLevel),
+    xpToNext: xpToReachLevel(archetype, startLevel + 1),
     additionUses: {},
   });
 

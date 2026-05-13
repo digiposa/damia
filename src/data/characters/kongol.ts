@@ -22,4 +22,6 @@ export const KONGOL: CharacterAvatar = {
     },
   },
   unlock: { wave: 22, kills: 220 },
+  // TLoD canon: Kongol joins the party at LV20 (Disc 2 ending).
+  joinLevel: 20,
 };

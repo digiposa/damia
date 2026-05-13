@@ -23,4 +23,6 @@ export const MERU: CharacterAvatar = {
     },
   },
   unlock: { wave: 10, kills: 50 },
+  // TLoD canon: Meru joins the party at LV18 (Donau / Furni arc).
+  joinLevel: 18,
 };

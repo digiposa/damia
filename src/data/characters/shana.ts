@@ -22,4 +22,6 @@ export const SHANA: CharacterAvatar = {
     },
   },
   unlock: { wave: 5 },
+  // TLoD canon: Shana joins the party at LV5 (Hellena Prison).
+  joinLevel: 5,
 };

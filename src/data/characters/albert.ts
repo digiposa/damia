@@ -25,4 +25,7 @@ export const ALBERT: CharacterAvatar = {
     },
   },
   unlock: { wave: 18, kills: 160 },
+  // Albert is the Lavitz substitution after Disc 2; he shares the
+  // Jade Dragoon column so the join level mirrors Lavitz's LV4.
+  joinLevel: 4,
 };

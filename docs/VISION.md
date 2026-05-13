@@ -152,7 +152,127 @@ pas vérifier rapidement à l'œil.
 
 ---
 
-## 6. État du chantier — focus courant
+## 6. Mécaniques verrouillées — forme Dragoon, SP, DLV, MP
+
+Décisions de design captées au fil des discussions, à respecter strictement
+côté code. Tout ce qui est marqué **à définir** reste ouvert et sera
+complété au fil des sessions.
+
+### 6.1 Forme Dragoon — déclenchement et durée
+
+- **Pré-requis pour transformer** : la jauge **SP** atteint au moins
+  **100** points (valeur de base au DLV 1).
+- **Pas de timer séparé pendant la transformation.** La jauge SP **EST**
+  le timer : chaque action en forme Dragoon draine la jauge, et la
+  transformation prend fin automatiquement quand `SP = 0` (retour
+  forme humaine).
+- → **Implication code** : `Dragoon.timerMs` + les champs
+  `durationMsBase` / `durationMsPerLevel` / `drainPerActionMs` du
+  `DragoonConfig` actuel **deviennent obsolètes**. Le seul compteur
+  vivant pendant la form, c'est `SpGauge.current` qui descend.
+
+### 6.2 DLV (Dragoon Level) — progression
+
+- **Plage** : DLV 1 → DLV 5 (5 paliers, canon TLoD).
+- **Effets cumulés par palier de DLV** :
+  - **Cap de SP augmenté de +100** par DLV : 100 (DLV 1) → 200 → 300
+    → 400 → **500** (DLV 5). Plus le DLV est haut, plus on peut rester
+    longtemps en form (et plus la transformation dure quand on l'engage).
+  - **Multiplicateurs de stats en forme Dragoon** (ATK / DEF / M.ATK /
+    M.DEF) qui montent par palier — voir tableau Shana / White-Silver
+    en exemple (déjà fourni par l'auteur) ; les 6 autres archétypes
+    sont **à définir**.
+  - **SP gagné par action** (auto-attack ou addition) qui monte par
+    palier — confirmé par le wiki sur Shana (35 → 150 SP par auto-attack
+    entre DLV 1 et 5).
+  - **Sorts Dragoon supplémentaires débloqués** par seuils de DLV
+    (déjà capturé en data via `archetype.dragoon.additionUnlocksByLevel`
+    — clé "level" à reinterpréter comme DLV, pas character level).
+- **Source de progression du DLV** : **fonction du total de SP généré
+  lifetime** (déclaration auteur). Seuils par palier **à définir**.
+- **Portée du DLV** — _à clarifier_ : per-character ou per-archetype ?
+  Vu que la vision "Albert hérite tout de Lavitz" inclut les stats /
+  XP / additions, le **per-archetype** est l'hypothèse de travail.
+  À confirmer.
+
+### 6.3 Actions en forme Dragoon
+
+En forme Dragoon, **les actions sont restreintes à deux** (canon TLoD
+adapté temps réel) :
+
+1. **Auto-attack — splash AoE avec effet élémentaire.**
+   - Élément = celui de l'archetype Dragoon (Red-Eye = feu, Jade =
+     vent, etc.).
+   - L'attaque physique TLoD PS1 est un QTE ; chez nous on simplifie
+     en boostant les dégâts et en appliquant l'effet élémentaire +
+     splash AoE autour de la cible.
+   - **Drain SP** : léger, à chaque swing — à définir.
+2. **Magie Dragoon.**
+   - **Drain SP** : lourd (gros chunk de timer consommé) — à définir.
+   - **Coût MP** : selon le spell — à définir par spell.
+
+**Désactivés en forme Dragoon** :
+
+- **Additions** — interdites en form Dragoon. → Le picker doit basculer
+  sur la liste des sorts Dragoon dispo selon DLV, et `tryTriggerAddition`
+  doit refuser quand `Dragoon` est présent.
+- **Items consommables** (Burn Out, Gushing Magma, potions, etc.).
+- **Défense ?** — comportement à confirmer (probablement disponible,
+  mais à valider).
+
+### 6.4 MP — magies Dragoon
+
+- **Pool MP** : ressource séparée de SP, consommée à chaque sort
+  Dragoon casté.
+- **Régénération MP** : via **certains items et équipements** (canon
+  TLoD : Mana Sphere, Spirit Potion, etc.). Pas de régen passive
+  par défaut.
+- **Valeurs MP de base / par level / par archétype** : **à définir**.
+- → **Implication code** : un nouveau composant `MpGauge` calqué sur
+  `SpGauge`, attaché à spawn, alimenté par les items inventaire.
+
+### 6.5 Acquisition de la forme Dragoon — Story vs Survival
+
+#### Story (canon TLoD)
+
+- **Dart** débloque sa transformation à **Hoax** (early game).
+- **Lavitz** débloque la sienne après la **mort de Graham** (boss).
+- **Albert** hérite du Jade Dragoon Spirit à la mort de Lavitz (Disc 2).
+  Stats / XP / additions / DLV (per-archetype) carry-over.
+- **Shana → Miranda** : substitution similaire en Disc 3.
+- → **Bug à corriger** signalé par l'auteur : actuellement en Story,
+  la jauge SP se remplit dès que le joueur utilise des additions, alors
+  qu'elle ne devrait commencer à se remplir **qu'après le déblocage
+  scénarisé de la forme Dragoon**. Comportement à gater par un flag
+  story (`worldFlags.dragoonUnlocked.<archetypeId>` ou similaire).
+
+#### Survival
+
+- La forme Dragoon doit se débloquer **via un upgrade pris dans le
+  LevelUpChoiceModal**, **probablement après la première mort de boss**
+  (à confirmer).
+- Tant que pas débloqué, SP gauge cachée / inactive — même règle qu'en
+  Story.
+
+### 6.6 Personnages partagés (skins)
+
+Vision déjà partiellement implémentée dans le code (`DragoonArchetype` +
+`CharacterAvatar`), à dérouler côté avatars manquants :
+
+- **Lavitz / Albert / Graham / Syuveh** partagent le **Jade Dragoon**
+  archetype. Mêmes stats, additions, courbe XP, DLV (per-archetype).
+  Différences : sprite, voix, lore.
+- **Shana / Miranda / Shirley** partagent **White-Silver Dragoon**.
+- **Meru / Damia** partagent **Blue-Sea Dragoon**.
+- En Story : seuls les avatars canon de l'arc en cours sont jouables
+  (substitutions narratives).
+- En Survival : tous les avatars unlockés sont sélectionnables,
+  qu'ils soient "canon principal" ou "skin" (Shirley / Damia / Graham
+  / Syuveh / Zieg / etc.). Méta-progression via runs.
+
+---
+
+## 7. État du chantier — focus courant
 
 L'auteur précise qu'**une part substantielle du code est déjà
 implémentée** (avant un `/clear` accidentel qui m'a fait perdre le
@@ -172,7 +292,7 @@ Ce qui est posé à ce jour, d'après l'auteur :
 
 ---
 
-## 7. Sections à venir
+## 8. Sections à venir
 
 > Cette doc grossira à mesure que l'auteur précise sa vision. Sections
 > attendues (à compléter ensemble) :
@@ -190,4 +310,5 @@ Ce qui est posé à ce jour, d'après l'auteur :
 
 ---
 
-_Dernière mise à jour : 2026-05-12 — sections 1-6 captées._
+_Dernière mise à jour : 2026-05-13 — sections 1-7 captées, §6 capture
+la vision Dragoon / SP / DLV / MP._

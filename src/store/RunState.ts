@@ -18,6 +18,10 @@ export interface RunSnapshot {
   elapsedMs: number;
   /** Total mobs killed during the run. */
   kills: number;
+  /** Subset of `kills` that were named bosses (MobDefinition.boss).
+   *  Read by the upgrade-roll filter so the `dragoonUnlock` upgrade
+   *  surfaces only after the first boss is down (VISION §6.5). */
+  bossesKilled: number;
   /** Current run level (1-based). Drives level-up choice triggers. */
   level: number;
   /** Accumulated XP inside the current level — resets to 0 on level-up. */
@@ -49,11 +53,19 @@ export class RunState {
     this.snapshot = {
       elapsedMs: 0,
       kills: 0,
+      bossesKilled: 0,
       level: 1,
       xp: 0,
       character,
       paused: false,
     };
+  }
+
+  /** Tag this kill as a boss kill. Caller is expected to also call
+   *  `recordKill` for the XP / generic kill counter — they're decoupled
+   *  so the boss flag stays separate from the XP curve. */
+  recordBossKill(): void {
+    this.snapshot.bossesKilled++;
   }
 
   /** Advance the run clock. Caller decides when to call (skip when paused). */

@@ -39,7 +39,10 @@ export function spawnPlayer(world: World<Components>, opts: SpawnPlayerOptions):
   const startHp = Math.max(1, Math.min(max, opts.hp ?? max));
 
   world.addComponent(id, 'Player', {});
-  world.addComponent(id, 'Character', { avatar });
+  // Dragoon form is locked at spawn. In Survival the LevelUpChoiceModal
+  // `dragoonUnlock` upgrade flips it on (gated behind the first boss
+  // kill); Story flips it via narrative events (not yet implemented).
+  world.addComponent(id, 'Character', { avatar, dragoonUnlocked: false });
   world.addComponent(id, 'Position', { x, y });
   world.addComponent(id, 'Speed', { value: archetype.actionStats.moveSpeed });
   world.addComponent(id, 'Pathfinder', {

@@ -49,6 +49,9 @@ export interface MobDefinition {
   sprite: Omit<Sprite, 'layer' | 'scale'>;
   /** XP awarded on kill. */
   xp: number;
+  /** True for named bosses. Drives Survival's first-boss-kill counter
+   *  used by the Dragoon-unlock upgrade gate (VISION §6.5). */
+  boss?: boolean;
 }
 
 export const MOBS: Record<MobKind, MobDefinition> = {
@@ -209,6 +212,7 @@ export const MOBS: Record<MobKind, MobDefinition> = {
       deathTextureAlias: 'sprite.mob.fruegel.death',
     },
     xp: 240,
+    boss: true,
   },
 } as const;
 

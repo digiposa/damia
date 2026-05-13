@@ -32,7 +32,8 @@ export type UpgradeKind =
   | 'range'
   | 'moveSpeed'
   | 'freeBurnout'
-  | 'freeGushingMagma';
+  | 'freeGushingMagma'
+  | 'dragoonUnlock';
 
 export type UpgradeRarity = 'common' | 'uncommon' | 'rare';
 
@@ -64,9 +65,21 @@ export interface UpgradeDef {
    *  re-evaluation. Skipped during the scene's per-level-up re-apply
    *  loop. */
   oneShot?: boolean;
-  /** Optional gate — keeps single-use rare unlocks (free spells) from
-   *  rolling again once picked. */
-  isAvailable?: (state: { ownedKinds: ReadonlyArray<UpgradeKind> }) => boolean;
+  /** Optional gate. Returns true if the upgrade can appear in the
+   *  current roll. Reads scene-level state so single-use rares hide
+   *  themselves once picked, and so unlock-style upgrades can require
+   *  a milestone (e.g. `dragoonUnlock` needs the first boss to be
+   *  down). */
+  isAvailable?: (state: UpgradeRollState) => boolean;
+}
+
+/** State exposed to `isAvailable` filters. The scene assembles this
+ *  from its `runUpgrades` list + the live RunState snapshot. */
+export interface UpgradeRollState {
+  ownedKinds: ReadonlyArray<UpgradeKind>;
+  /** Cumulative bosses killed in the current run. Lets the
+   *  Dragoon-unlock upgrade gate itself behind the first boss kill. */
+  bossesKilled: number;
 }
 
 const RARITY_PIP: Record<UpgradeRarity, number> = {
@@ -96,6 +109,14 @@ function mutateInventory(
 ): void {
   const i = ctx.world.getComponent(ctx.playerId, 'Inventory');
   if (i) mutate(i);
+}
+
+function mutateCharacter(
+  ctx: UpgradeApplyContext,
+  mutate: (c: Components['Character']) => void,
+): void {
+  const c = ctx.world.getComponent(ctx.playerId, 'Character');
+  if (c) mutate(c);
 }
 
 /** Registry: declarative pool. Order doesn't matter — the picker
@@ -231,6 +252,25 @@ export const UPGRADES: Readonly<Record<UpgradeKind, UpgradeDef>> = {
         inv.items.gushingMagma = 99;
       }),
   },
+  // Dragoon-form unlock. Surfaces in the picker only after the first
+  // boss kill of the run (VISION §6.5 Survival path). Picking it flips
+  // Character.dragoonUnlocked to true, after which addSp starts crediting
+  // gauge gain and the DR transform button becomes responsive. One-shot.
+  dragoonUnlock: {
+    kind: 'dragoonUnlock',
+    rarity: 'rare',
+    weight: 3,
+    nameKey: 'survival.upgrades.dragoonUnlock.name',
+    descKey: 'survival.upgrades.dragoonUnlock.desc',
+    pipColor: RARITY_PIP.rare,
+    oneShot: true,
+    isAvailable: ({ ownedKinds, bossesKilled }) =>
+      bossesKilled >= 1 && !ownedKinds.includes('dragoonUnlock'),
+    apply: (c) =>
+      mutateCharacter(c, (ch) => {
+        ch.dragoonUnlocked = true;
+      }),
+  },
 };
 
 /**
@@ -240,12 +280,9 @@ export const UPGRADES: Readonly<Record<UpgradeKind, UpgradeDef>> = {
  * than `count` only if the pool exhausts itself — never expected at
  * v1's pool size of 10.
  */
-export function rollUpgradeChoices(
-  count: number,
-  ownedKinds: ReadonlyArray<UpgradeKind>,
-): UpgradeKind[] {
+export function rollUpgradeChoices(count: number, state: UpgradeRollState): UpgradeKind[] {
   const candidates = (Object.values(UPGRADES) as UpgradeDef[]).filter((u) =>
-    u.isAvailable ? u.isAvailable({ ownedKinds }) : true,
+    u.isAvailable ? u.isAvailable(state) : true,
   );
   const picked: UpgradeKind[] = [];
   // Sample without replacement by cumulative-weight roll, then strip

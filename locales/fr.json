@@ -51,6 +51,10 @@
       "freeGushingMagma": {
         "name": "Gushing Magma illimité",
         "desc": "Le sort Gushing Magma devient gratuit pour le reste de la run."
+      },
+      "dragoonUnlock": {
+        "name": "Esprit Dragoon",
+        "desc": "Éveille ta forme Dragoon. La jauge SP commence à se remplir ; touche DR quand elle est pleine pour te transformer."
       }
     }
   },

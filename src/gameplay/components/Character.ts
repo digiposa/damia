@@ -14,7 +14,14 @@ import type { CharacterAvatar } from '@data/characters';
  * The archetype reference is direct (not an id lookup) so consumers
  * have zero indirection. Survival's avatar-swap "skin" pattern (same
  * archetype, different visual) collapses to a Character mutation.
+ *
+ * `dragoonUnlocked` gates SP gain + the transformation itself
+ * (VISION §6.5). False until a Story scenario unlock or — in
+ * Survival — the LevelUpChoiceModal `dragoonUnlock` upgrade pick.
+ * Survives Lavitz → Albert / Shana → Miranda swaps because the
+ * Character component carries forward.
  */
 export interface Character {
   avatar: CharacterAvatar;
+  dragoonUnlocked: boolean;
 }

@@ -136,6 +136,9 @@ export class ArenaScene implements Scene {
         },
         onMobDeath: (kind) => {
           this.runState.recordKill(MOBS[kind].xp);
+          // Tag boss kills separately so the dragoonUnlock upgrade can
+          // gate itself behind the first one (VISION §6.5).
+          if (MOBS[kind].boss) this.runState.recordBossKill();
         },
         onPlayerLevelUp: () => {
           // DeathSystem has already overwritten the player's stats with
@@ -217,7 +220,10 @@ export class ArenaScene implements Scene {
     const modal = this.levelUpModal;
     const controller = this.controller;
     if (!modal || !controller || controller.playerId === null) return;
-    const choices = rollUpgradeChoices(UPGRADE_PICKS_PER_LEVELUP, this.runUpgrades);
+    const choices = rollUpgradeChoices(UPGRADE_PICKS_PER_LEVELUP, {
+      ownedKinds: this.runUpgrades,
+      bossesKilled: this.runState.read().bossesKilled,
+    });
     if (choices.length === 0) {
       // Pool exhausted (shouldn't happen at v1's 10-upgrade pool size,
       // but defend against future shrinks). Skip the pick silently.

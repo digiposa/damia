@@ -34,6 +34,10 @@ interface ButtonSpec {
   isActive?: () => boolean;
   /** Optional [0, 1] cooldown sweep overlay. */
   cooldownFrac?: () => number;
+  /** Optional visibility gate. False hides the button + disables its
+   *  hit area, and `layoutStack` skips the slot entirely (no empty gap).
+   *  Polled each frame so an in-run unlock surfaces the button live. */
+  isVisible?: () => boolean;
 }
 
 /**
@@ -81,6 +85,9 @@ export class TouchActionButtons {
       /** 0..1 fill fraction for the SP gauge (cooldownFrac drains
        *  the inverse — so 0 SP → fully dim, full SP → fully bright). */
       dragoonSpFrac: () => number;
+      /** Whether the avatar has earned access to the Dragoon form
+       *  yet (VISION §6.5). False = the DR button is hidden + inert. */
+      isDragoonUnlocked: () => boolean;
     },
   ) {
     this.app = app;
@@ -110,12 +117,14 @@ export class TouchActionButtons {
         // radial inverts to a fill: empty (dark) when SP gauge is
         // 0, fully bright when SP is full. The handler decides
         // whether the tap actually triggers the form (or no-ops
-        // when conditions aren't met).
+        // when conditions aren't met). Hidden entirely while the
+        // form is locked (VISION §6.5).
         label: 'DR',
         radius: BTN_MEDIUM,
         onTap: handlers.onDragoonTransform,
         isActive: handlers.isDragoonActive,
         cooldownFrac: () => 1 - handlers.dragoonSpFrac(),
+        isVisible: handlers.isDragoonUnlocked,
       },
     ];
 
@@ -250,6 +259,13 @@ export class TouchActionButtons {
       const entry = this.buttons[i];
       const child = this.container.children[i];
       if (!entry || !child) continue;
+      // A button hidden via isVisible() reserves no slot — the stack
+      // collapses around it so unlocked buttons sit flush against the
+      // safe-area baseline.
+      const visible = entry.spec.isVisible?.() ?? true;
+      child.visible = visible;
+      child.eventMode = visible ? 'static' : 'none';
+      if (!visible) continue;
       cursorY -= entry.spec.radius;
       child.position.set(w - rightPad - entry.spec.radius, cursorY);
       cursorY -= entry.spec.radius + STACK_GAP;
@@ -293,6 +309,10 @@ export class TouchActionButtons {
           .fill({ color: 0x000000, alpha: 0.55 });
       }
     }
+    // Re-flow each frame so a mid-run visibility change (e.g. picking
+    // the dragoonUnlock upgrade reveals the DR button) takes effect
+    // immediately. Cheap — 4 buttons, plain arithmetic.
+    this.layoutStack();
   }
 }
 

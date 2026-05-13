@@ -50,6 +50,10 @@ export function enterDragoonForm(world: World<Components>, entityId: number): bo
   const character = world.getComponent(entityId, 'Character');
   const sp = world.getComponent(entityId, 'SpGauge');
   if (!character || !sp) return false;
+  // Belt + suspenders: addSp already no-ops while the form is locked,
+  // so the gauge cannot legitimately be full. Catches any stray call
+  // path that sets sp.current directly (debug consoles, future cheats).
+  if (!character.dragoonUnlocked) return false;
   if (sp.current < sp.max) return false;
   const stats = world.getComponent(entityId, 'Stats');
   const speed = world.getComponent(entityId, 'Speed');

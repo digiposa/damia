@@ -51,6 +51,10 @@
       "freeGushingMagma": {
         "name": "Unlimited Gushing Magma",
         "desc": "Gushing Magma becomes free for the rest of the run."
+      },
+      "dragoonUnlock": {
+        "name": "Dragoon Spirit",
+        "desc": "Awaken your Dragoon form. SP gauge starts filling; tap DR when full to transform."
       }
     }
   },

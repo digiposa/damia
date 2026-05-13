@@ -61,6 +61,9 @@ export interface GameplayUIHandlers {
   onTouchDragoonTransform: () => void;
   getIsDragoonActive: () => boolean;
   getDragoonSpFrac: () => number;
+  /** Whether the avatar has earned access to the Dragoon form
+   *  (VISION §6.5). Drives DR button visibility + SP bar locked state. */
+  getIsDragoonUnlocked: () => boolean;
   // Additions bar (desktop only)
   onAdditionsBarSelect: (kind: AdditionKind) => void;
 }
@@ -169,6 +172,7 @@ export class GameplayUI {
         onDragoonTransform: handlers.onTouchDragoonTransform,
         isDragoonActive: handlers.getIsDragoonActive,
         dragoonSpFrac: handlers.getDragoonSpFrac,
+        isDragoonUnlocked: handlers.getIsDragoonUnlocked,
       });
       layers.ui.addChild(this.touchActionButtons.container);
 

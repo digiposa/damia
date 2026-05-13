@@ -211,14 +211,20 @@ export class Hud {
     this.hpText.text = `HP ${Math.round(current)} / ${max}`;
   }
 
-  setSp(current: number, max: number): void {
+  setSp(current: number, max: number, locked = false): void {
     const ratio = max > 0 ? Math.max(0, Math.min(1, current / max)) : 0;
     const spY = 4 + BAR_HEIGHT + BAR_GAP;
-    this.spBar
-      .clear()
-      .roundRect(PORTRAIT_SIZE + 10, spY, BAR_WIDTH * ratio, BAR_HEIGHT, 3)
-      .fill(SP_FG);
-    this.spText.text = `SP ${Math.round(current)} / ${max}`;
+    this.spBar.clear();
+    if (!locked) {
+      this.spBar.roundRect(PORTRAIT_SIZE + 10, spY, BAR_WIDTH * ratio, BAR_HEIGHT, 3).fill(SP_FG);
+      this.spText.text = `SP ${Math.round(current)} / ${max}`;
+    } else {
+      // Locked: empty bar slot, "—" label. Keeps the layout stable so
+      // unlock during a run doesn't shift the MP bar around. Aligned
+      // with VISION §6.5 — Dragoon (and its SP gauge) is hidden until
+      // the avatar earns access to the form.
+      this.spText.text = 'SP —';
+    }
   }
 
   setMp(current: number, max: number): void {

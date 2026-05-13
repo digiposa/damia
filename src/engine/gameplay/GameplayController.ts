@@ -391,6 +391,7 @@ export class GameplayController {
       getIsDragoonActive: () =>
         this.playerId !== null && this.world.hasComponent(this.playerId, 'Dragoon'),
       getDragoonSpFrac: () => this.readDragoonSpFrac(),
+      getIsDragoonUnlocked: () => this.isDragoonUnlocked(),
       onAdditionsBarSelect: (kind) => {
         this.activeAddition = kind;
       },
@@ -539,9 +540,13 @@ export class GameplayController {
       // SP bar surfaces the Dragoon-form gauge. Fills via combat
       // actions (Additions for melee archetypes, auto-attacks for
       // ranged) — see CombatSystem / AdditionSystem `addSp` calls.
+      // While the form is locked (VISION §6.5), the bar renders empty
+      // with a "—" label so the UI doesn't promise a mechanic the
+      // avatar can't yet access.
+      const dragoonUnlocked = this.isDragoonUnlocked();
       const sp = this.world.getComponent(this.playerId, 'SpGauge');
-      if (sp) this.ui.hud.setSp(sp.current, sp.max);
-      else this.ui.hud.setSp(0, PLAYER_SP_MAX);
+      if (sp) this.ui.hud.setSp(sp.current, sp.max, !dragoonUnlocked);
+      else this.ui.hud.setSp(0, PLAYER_SP_MAX, !dragoonUnlocked);
       this.ui.hud.setMp(0, PLAYER_MP_MAX);
       this.ui.hud.setZoom(this.viewport.scale.x);
 
@@ -996,6 +1001,15 @@ export class GameplayController {
     const sp = this.world.getComponent(this.playerId, 'SpGauge');
     if (!sp || sp.max <= 0) return 0;
     return Math.min(1, Math.max(0, sp.current / sp.max));
+  }
+
+  /** Whether the spawned avatar has earned access to the Dragoon form
+   *  (VISION §6.5). Drives the DR button visibility, the SP bar locked
+   *  state, and the keyboard transform shortcut gate. */
+  private isDragoonUnlocked(): boolean {
+    if (this.playerId === null) return false;
+    const c = this.world.getComponent(this.playerId, 'Character');
+    return c?.dragoonUnlocked ?? false;
   }
 
   /** Touch button tap-handler. Wraps `enterDragoonForm` so the

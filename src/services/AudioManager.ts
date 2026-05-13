@@ -10,6 +10,7 @@
  */
 import { Howl } from 'howler';
 import { getLanguage } from './I18nService';
+import { AVATARS_BY_ARCHETYPE } from '@data/characters';
 
 export type SfxAlias = 'combat.swing' | 'combat.hit' | 'combat.death' | 'items.pickup' | 'ui.click';
 
@@ -27,15 +28,39 @@ const MUSIC_MANIFEST: Record<MusicAlias, MusicEntry> = {
 };
 
 /**
- * Voice clip registry — declarative list of "this avatar has a voice line for
- * this addition". Lookup is by `<avatarId>.<additionId>` to keep this layer
- * independent of the data/character/balance modules. The actual file URL is
- * resolved at play-time via `voiceUrlFor` using the current locale, with an
- * 'en' fallback for any locale without a recording yet.
+ * Voice clip registry. Built once at module init from the character data:
+ * for every canonical avatar of every archetype, we register a key for each
+ * addition slug the archetype owns (base unlocks + Master Addition). Lookups
+ * are keyed by `<avatarId>.<additionId>`.
+ *
+ * Why derive vs. hardcode: this keeps the manifest in lockstep with the data
+ * model. Adding a new addition slug + dropping a clip = manifest auto-updates.
+ * Adding a Survival skin avatar (Shirley / Damia / Graham / Syuveh) registers
+ * its keys here too — if the .ogg files don't exist yet, the play-time fetch
+ * 404s and the buffer caches as 'error', so the trigger goes silent without
+ * any extra wiring.
+ *
+ * The actual file URL is resolved at play-time via `loadVoiceBuffer` using
+ * the current locale, with an 'en' fallback for any locale without a
+ * recording yet.
  */
-const VOICE_MANIFEST: Record<string, true> = {
-  'dart.doubleSlash': true,
-};
+function buildVoiceManifest(): Readonly<Record<string, true>> {
+  const manifest: Record<string, true> = {};
+  for (const avatars of Object.values(AVATARS_BY_ARCHETYPE)) {
+    for (const avatar of avatars) {
+      const archetype = avatar.archetype;
+      for (const slug of archetype.additionUnlocksByLevel.values()) {
+        manifest[`${avatar.id}.${slug}`] = true;
+      }
+      if (archetype.masterAddition) {
+        manifest[`${avatar.id}.${archetype.masterAddition}`] = true;
+      }
+    }
+  }
+  return manifest;
+}
+
+const VOICE_MANIFEST: Readonly<Record<string, true>> = buildVoiceManifest();
 
 const STORAGE_KEY = 'damia.audio';
 

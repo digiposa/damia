@@ -3,6 +3,7 @@ import type { Components } from '@gameplay/components';
 import { ADDITIONS, computeDamage, type AdditionKind } from '@data/balance';
 import { FLOAT_DAMAGE, spawnFloatingText } from '@gameplay/entities/floatingText';
 import { addSp } from '@gameplay/sp';
+import { effectiveAtk, effectiveDef } from '@gameplay/stats';
 import { playSfx, playAdditionVoice } from '@services/AudioManager';
 
 /**
@@ -48,7 +49,16 @@ export class AdditionSystem implements System<Components> {
         if (t === undefined) break;
         if (t > add.elapsedMs) break;
         if (t < before) continue; // shouldn't happen (hitsApplied protects us) but be defensive
-        const landed = this.applyHit(world, id, add.targetId, stats.atk, dmgMulPerHit);
+        // VISION §6.3 forbids additions in Dragoon form so the multiplier
+        // wouldn't normally apply, but reading via effectiveAtk keeps the
+        // path correct if the controller-side gate ever lapses.
+        const landed = this.applyHit(
+          world,
+          id,
+          add.targetId,
+          effectiveAtk(world, id),
+          dmgMulPerHit,
+        );
         add.hitsApplied = i + 1;
         add.lastHitLanded = landed;
         if (landed) {
@@ -97,7 +107,7 @@ export class AdditionSystem implements System<Components> {
     const defending = world.hasComponent(targetId, 'Defending');
     const dmg = computeDamage(
       Math.max(1, Math.round(attackerAtk * mul)),
-      targetStats.def,
+      effectiveDef(world, targetId),
       Math.random(),
       defending,
     );

@@ -55,30 +55,13 @@ export function enterDragoonForm(world: World<Components>, entityId: number): bo
   // path that sets sp.current directly (debug consoles, future cheats).
   if (!character.dragoonUnlocked) return false;
   if (sp.current < sp.max) return false;
-  const stats = world.getComponent(entityId, 'Stats');
-  const speed = world.getComponent(entityId, 'Speed');
   const sprite = world.getComponent(entityId, 'Sprite');
-  if (!stats || !speed || !sprite) return false;
+  if (!sprite) return false;
 
-  const archetype: DragoonArchetype = character.avatar.archetype;
-  const mult = archetype.dragoon.statsMultiplier;
-  // Snapshot before mutation so the exit path can restore exactly.
-  // Health.max is not snapshotted — see Dragoon component JSDoc.
-  const preAtk = stats.atk;
-  const preDef = stats.def;
-  const preMagicAtk = stats.magicAtk;
-  const preMagicDef = stats.magicDef;
-  const preMoveSpeed = speed.value;
-
-  stats.atk = Math.round(preAtk * mult.atk);
-  stats.def = Math.round(preDef * mult.def);
-  stats.magicAtk = Math.round(preMagicAtk * mult.magicAtk);
-  stats.magicDef = Math.round(preMagicDef * mult.magicDef);
-  speed.value = preMoveSpeed * mult.moveSpeed;
-
-  // Swap sprite aliases to the avatar's dragoon-form bundle.
-  // RenderSystem reads these each frame, so the texture changes on
-  // the next paint.
+  // Stats are NOT mutated here — the dragoon multiplier is applied at
+  // read time by gameplay/stats.ts helpers. Adding the Dragoon
+  // component is enough to flip the entity into "multiplied stats"
+  // mode for combat / movement reads.
   sprite.textureAlias = character.avatar.sprite.dragoon.idle;
   sprite.attackTextureAlias = character.avatar.sprite.dragoon.attack;
   sprite.defendTextureAlias = character.avatar.sprite.dragoon.defend;
@@ -87,11 +70,6 @@ export function enterDragoonForm(world: World<Components>, entityId: number): bo
   world.addComponent(entityId, 'Dragoon', {
     timerMs: totalDuration,
     maxTimerMs: totalDuration,
-    preAtk,
-    preDef,
-    preMagicAtk,
-    preMagicDef,
-    preMoveSpeed,
   });
   sp.current = 0;
 
@@ -118,20 +96,13 @@ export function enterDragoonForm(world: World<Components>, entityId: number): bo
  * absent (no-op).
  */
 export function exitDragoonForm(world: World<Components>, entityId: number): void {
-  const d = world.getComponent(entityId, 'Dragoon');
-  if (!d) return;
+  if (!world.hasComponent(entityId, 'Dragoon')) return;
   const character = world.getComponent(entityId, 'Character');
-  const stats = world.getComponent(entityId, 'Stats');
-  const speed = world.getComponent(entityId, 'Speed');
   const sprite = world.getComponent(entityId, 'Sprite');
 
-  if (stats) {
-    stats.atk = d.preAtk;
-    stats.def = d.preDef;
-    stats.magicAtk = d.preMagicAtk;
-    stats.magicDef = d.preMagicDef;
-  }
-  if (speed) speed.value = d.preMoveSpeed;
+  // Removing the Dragoon component is enough to drop the multiplier
+  // from every effective-stat read on the next frame. No restoration
+  // dance — Stats already holds the up-to-date base values.
   if (sprite && character) {
     sprite.textureAlias = character.avatar.sprite.base.idle;
     sprite.attackTextureAlias = character.avatar.sprite.base.attack;

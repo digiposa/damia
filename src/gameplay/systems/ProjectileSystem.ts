@@ -2,6 +2,7 @@ import type { System, World } from '@core/ecs';
 import type { Components } from '@gameplay/components';
 import { computeDamage } from '@data/balance';
 import { FLOAT_DAMAGE, spawnFloatingText } from '@gameplay/entities/floatingText';
+import { effectiveDef } from '@gameplay/stats';
 import { playSfx } from '@services/AudioManager';
 
 /**
@@ -66,7 +67,7 @@ export class ProjectileSystem implements System<Components> {
         continue;
       }
       const defending = world.hasComponent(hitId, 'Defending');
-      const dmg = computeDamage(proj.atk, tStats.def, proj.roll, defending);
+      const dmg = computeDamage(proj.atk, effectiveDef(world, hitId), proj.roll, defending);
       tHp.current = Math.max(0, tHp.current - dmg);
       spawnFloatingText(world, {
         x: pos.x,

@@ -3,6 +3,7 @@ import type { Components, Position } from '@gameplay/components';
 import { computeDamage } from '@data/balance';
 import { FLOAT_DAMAGE, spawnFloatingText } from '@gameplay/entities/floatingText';
 import { spawnVfx } from '@gameplay/entities/vfx';
+import { effectiveDef, effectiveMagicAtk } from '@gameplay/stats';
 import { playSfx } from '@services/AudioManager';
 
 /**
@@ -30,7 +31,7 @@ export class SpellSystem implements System<Components> {
       spell.elapsedMs += dt;
 
       if (!spell.hitApplied && before < spell.hitTimingMs && spell.elapsedMs >= spell.hitTimingMs) {
-        this.applyDamage(world, spell, stats.magicAtk);
+        this.applyDamage(world, spell, effectiveMagicAtk(world, id));
         spell.hitApplied = true;
       }
 
@@ -91,7 +92,7 @@ export class SpellSystem implements System<Components> {
     if (!hp || !stats || !pos) return;
     if (hp.current <= 0 || world.hasComponent(targetId, 'Dying')) return;
     const defending = world.hasComponent(targetId, 'Defending');
-    const dmg = computeDamage(atk, stats.def, Math.random(), defending);
+    const dmg = computeDamage(atk, effectiveDef(world, targetId), Math.random(), defending);
     hp.current = Math.max(0, hp.current - dmg);
     spawnFloatingText(world, {
       x: pos.x,

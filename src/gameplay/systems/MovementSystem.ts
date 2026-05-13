@@ -1,5 +1,6 @@
 import type { System, World } from '@core/ecs';
 import type { Components } from '@gameplay/components';
+import { effectiveMoveSpeed } from '@gameplay/stats';
 
 /** Snap distance: when within this many pixels of a waypoint, consider it reached. */
 const ARRIVAL_EPSILON = 0.5;
@@ -19,7 +20,10 @@ export class MovementSystem implements System<Components> {
       const waypoints = pf.waypoints;
       if (!waypoints || waypoints.length === 0) continue;
 
-      let remaining = speed.value * dt;
+      // Read through effectiveMoveSpeed so a transformed player picks
+      // up the archetype's moveSpeed multiplier without any extra
+      // wiring (VISION §6.2).
+      let remaining = effectiveMoveSpeed(world, id) * dt;
       while (remaining > 0 && waypoints.length > 0) {
         const target = waypoints[0];
         if (!target) break;

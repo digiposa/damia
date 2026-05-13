@@ -5,6 +5,7 @@ import { computeDamage } from '@data/balance';
 import { FLOAT_DAMAGE, spawnFloatingText } from '@gameplay/entities/floatingText';
 import { spawnProjectile } from '@gameplay/entities/projectile';
 import { addSp } from '@gameplay/sp';
+import { effectiveAtk, effectiveDef } from '@gameplay/stats';
 import { playSfx } from '@services/AudioManager';
 
 const TARGET_RECHECK_MS = 100;
@@ -116,7 +117,7 @@ export class CombatSystem implements System<Components> {
           y: pos.y + dirY * spawnOffsetPx,
           dirX,
           dirY,
-          atk: stats.atk,
+          atk: effectiveAtk(world, id),
         });
         cd.remainingMs = 1000 / Math.max(0.1, stats.atkSpeed);
         // AttackSwing still drives the bow-draw pose visually: a brief
@@ -139,8 +140,16 @@ export class CombatSystem implements System<Components> {
       }
 
       // Melee: immediate damage on the locked target + visual lunge.
+      // Read both sides through effective* helpers so the Dragoon
+      // multiplier — when the attacker is transformed — and a
+      // hypothetical mob-side multiplier (none today) are honoured.
       const defending = world.hasComponent(intent.targetId, 'Defending');
-      const dmg = computeDamage(stats.atk, targetStats.def, Math.random(), defending);
+      const dmg = computeDamage(
+        effectiveAtk(world, id),
+        effectiveDef(world, intent.targetId),
+        Math.random(),
+        defending,
+      );
       targetHealth.current = Math.max(0, targetHealth.current - dmg);
       cd.remainingMs = 1000 / Math.max(0.1, stats.atkSpeed);
 

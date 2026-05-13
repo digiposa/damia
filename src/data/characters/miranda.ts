@@ -26,4 +26,7 @@ export const MIRANDA: CharacterAvatar = {
   // Miranda is the Shana substitution at Disc 3; she shares the
   // White-Silver Dragoon column so the join level mirrors Shana's LV5.
   joinLevel: 5,
+  // Same starter loadout as Shana (shared archetype = shared bow line
+  // + female regular armor).
+  startingEquipment: ['shortBow', 'clothes', 'leatherShoes'],
 };

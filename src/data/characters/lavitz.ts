@@ -29,4 +29,7 @@ export const LAVITZ: CharacterAvatar = {
   unlock: { wave: 7, kills: 25 },
   // TLoD canon: Lavitz joins the Forest of Seles party at LV4.
   joinLevel: 4,
+  // Spear is the Initial Lavitz/Albert weapon. The Initial male helm
+  // / armor / boots line is shared with Dart, so reuse it.
+  startingEquipment: ['spear', 'bandana', 'leatherArmor', 'leatherBoots'],
 };

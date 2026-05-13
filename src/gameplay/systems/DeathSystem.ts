@@ -5,6 +5,7 @@ import { spawnItem } from '@gameplay/entities/items';
 import { MOBS, type MobKind } from '@data/balance';
 import { rollLoot } from '@data/items';
 import { applyArchetypeRow, xpToReachLevel } from '@data/characters';
+import { totalEquipmentBonuses } from '@data/equipment';
 import { playSfx } from '@services/AudioManager';
 
 export type PlayerDeathListener = () => void;
@@ -158,6 +159,17 @@ export class DeathSystem implements System<Components> {
       const stats = world.getComponent(playerId, 'Stats');
       const hp = world.getComponent(playerId, 'Health');
       applyArchetypeRow(stats, hp, archetype, prog.level, false);
+      // Re-apply equipment on top of the freshly-overwritten archetype
+      // row so the bonuses survive the level-up reset (mirrors the
+      // pattern Survival uses for upgrade picks). Equipment swap will
+      // call this same helper with the new loadout when it ships.
+      if (stats) {
+        const eq = totalEquipmentBonuses(character.avatar.startingEquipment, archetype.id);
+        stats.atk += eq.atk;
+        stats.def += eq.def;
+        stats.magicAtk += eq.magicAtk;
+        stats.magicDef += eq.magicDef;
+      }
       // Full heal on level up — match TLoD's level-up behavior.
       if (hp) hp.current = hp.max;
       spawnFloatingText(world, {

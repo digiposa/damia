@@ -31,4 +31,9 @@ export const DART: CharacterAvatar = {
       defend: 'sprite.player.dart.dragoon',
     },
   },
+  // TLoD canon Forest of Seles intro loadout (reverse-engineered from
+  // the author's Knight of Sandora damage observations: Dart effective
+  // AT 4 = base 2 + Broad Sword, effective DEF 6 = base 4 + Leather
+  // Armor). Bandana + Leather Boots fill the helm/boots slots.
+  startingEquipment: ['broadSword', 'bandana', 'leatherArmor', 'leatherBoots'],
 };

@@ -7,6 +7,7 @@ import {
   getCharacterStatsAtLevel,
   xpToReachLevel,
 } from '@data/characters';
+import { totalEquipmentBonuses } from '@data/equipment';
 
 export interface SpawnPlayerOptions {
   gx: number;
@@ -76,12 +77,23 @@ export function spawnPlayer(world: World<Components>, opts: SpawnPlayerOptions):
     current: startHp,
     max,
   });
+  // Bake equipment bonuses on top of the per-level row. Re-applied
+  // by DeathSystem.awardXp on every level-up so the row reset doesn't
+  // wipe them. Effects-only items (elemental damage, status chance,
+  // SP modifiers, +Max HP/MP, ...) are noted on EQUIPMENT[slug].effect
+  // and consumed by their owning systems when those ship.
+  const eq = totalEquipmentBonuses(avatar.startingEquipment, archetype.id);
   world.addComponent(id, 'Stats', {
     ...archetype.actionStats.base,
-    atk: startRow.atk,
-    def: startRow.def,
-    magicAtk: startRow.magicAtk,
-    magicDef: startRow.magicDef,
+    atk: startRow.atk + eq.atk,
+    def: startRow.def + eq.def,
+    magicAtk: startRow.magicAtk + eq.magicAtk,
+    magicDef: startRow.magicDef + eq.magicDef,
+    speed: archetype.actionStats.base.speed + eq.speed,
+    attackHit: archetype.actionStats.base.attackHit + eq.attackHit,
+    magicHit: archetype.actionStats.base.magicHit + eq.magicHit,
+    attackAvoid: archetype.actionStats.base.attackAvoid + eq.attackAvoid,
+    magicAvoid: archetype.actionStats.base.magicAvoid + eq.magicAvoid,
   });
   world.addComponent(id, 'Faction', { side: 'player' });
   world.addComponent(id, 'AttackCooldown', { remainingMs: 0 });

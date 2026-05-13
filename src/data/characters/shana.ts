@@ -24,4 +24,8 @@ export const SHANA: CharacterAvatar = {
   unlock: { wave: 5 },
   // TLoD canon: Shana joins the party at LV5 (Hellena Prison).
   joinLevel: 5,
+  // Initial loadout: Short Bow + Clothes + Leather Shoes. No starter
+  // helmet for female chars (Felt Hat unlocks at Hellena 2nd visit,
+  // not earlier).
+  startingEquipment: ['shortBow', 'clothes', 'leatherShoes'],
 };

@@ -24,4 +24,7 @@ export const HASCHEL: CharacterAvatar = {
   unlock: { wave: 15, kills: 120 },
   // TLoD canon: Haschel joins the party at LV14 (Lohan tournament).
   joinLevel: 14,
+  // Initial loadout: Iron Knuckle + Bandana (male regular helm) +
+  // Disciple Vest (Haschel-only armor) + Leather Boots.
+  startingEquipment: ['ironKnuckle', 'bandana', 'discipleVest', 'leatherBoots'],
 };

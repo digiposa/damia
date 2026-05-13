@@ -28,4 +28,7 @@ export const ALBERT: CharacterAvatar = {
   // Albert is the Lavitz substitution after Disc 2; he shares the
   // Jade Dragoon column so the join level mirrors Lavitz's LV4.
   joinLevel: 4,
+  // Same starter loadout as Lavitz (shared archetype = shared weapons
+  // + male regular armor line).
+  startingEquipment: ['spear', 'bandana', 'leatherArmor', 'leatherBoots'],
 };

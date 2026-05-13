@@ -24,4 +24,8 @@ export const KONGOL: CharacterAvatar = {
   unlock: { wave: 22, kills: 220 },
   // TLoD canon: Kongol joins the party at LV20 (Disc 2 ending).
   joinLevel: 20,
+  // Initial loadout: Axe + Lion Fur (Kongol-only armor) + Leather
+  // Boots (male regular boots). No starter helmet — Kongol typically
+  // joins bare-headed in canon.
+  startingEquipment: ['axe', 'lionFur', 'leatherBoots'],
 };

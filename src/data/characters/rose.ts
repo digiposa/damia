@@ -24,4 +24,8 @@ export const ROSE: CharacterAvatar = {
   unlock: { wave: 12, kills: 80 },
   // TLoD canon: Rose joins the party at LV9 (post-Hellena rescue).
   joinLevel: 9,
+  // Initial loadout: Rapier + Leather Jacket (Rose-shared female armor)
+  // + Leather Shoes. No starter helmet (Rose's Hairband is Vellweb-
+  // late-game).
+  startingEquipment: ['rapier', 'leatherJacket', 'leatherShoes'],
 };

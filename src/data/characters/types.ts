@@ -22,6 +22,7 @@
 import type { Stats } from '@gameplay/components';
 import type { AssetAlias } from '@services/AssetManager';
 import type { AdditionKind } from '@data/balance';
+import type { EquipmentSlug } from '@data/equipment';
 
 /** TLoD-style elemental affinity. */
 export type CharacterElement =
@@ -210,6 +211,14 @@ export interface CharacterAvatar {
    *  (Lavitz → Albert) ignore this — the inheritor keeps the
    *  party's current level. Defaults to 1 (Dart's join level). */
   joinLevel?: number;
+  /** TLoD-canon equipment the avatar is wearing when they join the
+   *  party. Each slug references `EQUIPMENT[slug]` — the registry
+   *  validates archetype compatibility. Stat bonuses are baked into
+   *  Stats at spawn AND re-applied on every level-up so the row
+   *  reset doesn't wipe them. Future drops / shop / inventory UI
+   *  will let the player swap items, but for now this is the only
+   *  equipment entry point. */
+  startingEquipment?: ReadonlyArray<EquipmentSlug>;
 }
 
 // --- Lookup helpers -----------------------------------------------

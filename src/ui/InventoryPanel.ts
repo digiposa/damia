@@ -94,6 +94,16 @@ export class InventoryPanel extends Modal {
     if (state) this.setState(state);
   }
 
+  protected override onOpen(): void {
+    // The tooltip was added to `this.container` during `buildPanel()`,
+    // but Modal.open() addChild's the panel *after* buildPanel returns,
+    // so the panel ends up on top. Re-raise the tooltip every open
+    // so it always paints above the inventory card + drag ghost path.
+    if (this.tooltip) {
+      this.container.setChildIndex(this.tooltip.node, this.container.children.length - 1);
+    }
+  }
+
   protected override onClose(): void {
     this.cancelDrag();
     this.selectedKind = null;

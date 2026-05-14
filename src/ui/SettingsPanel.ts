@@ -10,7 +10,7 @@ import {
   setVoiceVolume,
 } from '@services/AudioManager';
 import { Modal } from './Modal';
-import { SPACING, TEXT } from './theme';
+import { MODAL, SPACING, TEXT } from './theme';
 import { mkButton, mkCloseButton, mkPanel, mkRow, mkText } from './layoutHelpers';
 
 const VOLUME_STEP = 0.1;
@@ -65,9 +65,31 @@ export class SettingsPanel extends Modal {
     this.refreshValues();
   }
 
+  /** Override the default sizing — Settings only has a handful of
+   *  short rows, so we size to content rather than fill the modal's
+   *  max height. Width still uses the modal cap (clamped to the
+   *  viewport), height comes from Yoga via `auto`, and we re-center
+   *  using the measured Pixi bounds. */
+  protected override applyPanelSize(): void {
+    if (!this.panel) return;
+    const w = Math.min(MODAL.maxWidth, this.app.screen.width - MODAL.margin);
+    const maxH = this.app.screen.height - MODAL.margin;
+    const existing = this.panel.layout?.style ?? {};
+    this.panel.layout = { ...existing, width: w, height: 'auto', maxHeight: maxH };
+    const measuredH = this.panel.getBounds().height || maxH;
+    this.panel.position.set(
+      Math.floor((this.app.screen.width - w) / 2),
+      Math.floor((this.app.screen.height - measuredH) / 2),
+    );
+  }
+
   protected buildPanel(): Container {
+    // No `flex: 1` — we want the panel to shrink to the content
+    // (5 short rows + 2 action buttons) rather than fill the modal
+    // box vertically. Height stays `auto`; `applyPanelSize()` below
+    // re-centers based on the measured content height.
     const panel = mkPanel({
-      layout: { flex: 1, gap: SPACING.gap, alignItems: 'stretch' },
+      layout: { gap: SPACING.gap, alignItems: 'stretch' },
     });
 
     // --- Title strip (title centered + close on the right) -------------

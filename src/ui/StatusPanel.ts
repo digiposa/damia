@@ -1,4 +1,5 @@
 import type { Application } from 'pixi.js';
+import type { TextStyleOptions } from 'pixi.js';
 import { Container, Graphics, Text } from 'pixi.js';
 import { LayoutContainer } from '@pixi/layout/components';
 import type { Entity, World } from '@core/ecs';
@@ -61,6 +62,17 @@ const mutedStyle = { fill: COLOR_MUTED, fontSize: 13 } as const;
 const cellLabelStyle = { fill: COLOR_LABEL, fontSize: 12, fontWeight: 'bold' } as const;
 const cellValueStyle = { fill: COLOR_VALUE, fontSize: 12 } as const;
 const cellMutedStyle = { fill: COLOR_MUTED, fontSize: 12 } as const;
+
+/** Create a Text marked as a layout leaf so Yoga uses its intrinsic
+ *  width/height inside the parent's flex flow. Without this every
+ *  text falls through `Container.layout = null` and lands at (0, 0)
+ *  inside its parent — the layout engine only flows children that
+ *  have their own `.layout` set. */
+function mkText(text: string, style: TextStyleOptions): Text {
+  const t = new Text({ text, style });
+  t.layout = { isLeaf: true };
+  return t;
+}
 
 export class StatusPanel {
   readonly container: Container;
@@ -171,7 +183,7 @@ export class StatusPanel {
           alignItems: 'center',
         },
       });
-      this.panel.addChild(new Text({ text: t('status.noPlayer'), style: labelStyle }));
+      this.panel.addChild(mkText(t('status.noPlayer'), labelStyle));
       this.container.addChild(this.panel);
       this.applyPanelSize();
       return;
@@ -255,13 +267,8 @@ export class StatusPanel {
     const row = new Container({
       layout: { flexDirection: 'row', justifyContent: 'space-between', width: '100%' },
     });
-    row.addChild(new Text({ text: label, style: labelStyle }));
-    row.addChild(
-      new Text({
-        text: value,
-        style: opts.muted ? mutedStyle : valueStyle,
-      }),
-    );
+    row.addChild(mkText(label, labelStyle));
+    row.addChild(mkText(value, opts.muted ? mutedStyle : valueStyle));
     return row;
   }
 
@@ -281,7 +288,7 @@ export class StatusPanel {
     const mpCur = 0;
     const mpMax = 0;
 
-    panel.addChild(new Text({ text: `${name}    LV ${lv}`, style: titleStyle }));
+    panel.addChild(mkText(`${name}    LV ${lv}`, titleStyle));
     panel.addChild(this.buildRow("D'LV", `${dlv}    SP ${Math.floor(sp.current)}`));
     panel.addChild(this.buildRow('HP', `${Math.floor(hp.current)} / ${hp.max}`));
     panel.addChild(this.buildRow('MP', `${mpCur} / ${mpMax}`));
@@ -301,15 +308,10 @@ export class StatusPanel {
       equipped[def.slot] = def.name;
     }
 
-    panel.addChild(new Text({ text: t('status.equipment'), style: headerStyle }));
+    panel.addChild(mkText(t('status.equipment'), headerStyle));
     for (const slot of slots) {
       const name = equipped[slot];
-      panel.addChild(
-        new Text({
-          text: name ?? '—',
-          style: name ? valueStyle : mutedStyle,
-        }),
-      );
+      panel.addChild(mkText(name ?? '—', name ? valueStyle : mutedStyle));
     }
     return panel;
   }
@@ -389,7 +391,7 @@ export class StatusPanel {
       const cell = new Container({
         layout: { flexBasis: '18%', flexGrow: 1, alignItems: 'flex-end' },
       });
-      cell.addChild(new Text({ text: t(`status.col.${col}`), style: cellLabelStyle }));
+      cell.addChild(mkText(t(`status.col.${col}`), cellLabelStyle));
       row.addChild(cell);
     }
     return row;
@@ -413,7 +415,7 @@ export class StatusPanel {
     const labelCell = new Container({
       layout: { flexBasis: '28%', justifyContent: 'flex-start' },
     });
-    labelCell.addChild(new Text({ text: label, style: cellLabelStyle }));
+    labelCell.addChild(mkText(label, cellLabelStyle));
     row.addChild(labelCell);
 
     // Body column. Empty for pct-style stats (TLoD canon).
@@ -421,7 +423,7 @@ export class StatusPanel {
       layout: { flexBasis: '18%', flexGrow: 1, alignItems: 'flex-end' },
     });
     if (!pct) {
-      bodyCell.addChild(new Text({ text: String(bodyVal), style: cellValueStyle }));
+      bodyCell.addChild(mkText(String(bodyVal), cellValueStyle));
     }
     row.addChild(bodyCell);
 
@@ -430,10 +432,7 @@ export class StatusPanel {
       layout: { flexBasis: '18%', flexGrow: 1, alignItems: 'flex-end' },
     });
     weaponCell.addChild(
-      new Text({
-        text: weaponVal === 0 && pct ? '0%' : `${weaponVal}${suffix}`,
-        style: cellValueStyle,
-      }),
+      mkText(weaponVal === 0 && pct ? '0%' : `${weaponVal}${suffix}`, cellValueStyle),
     );
     row.addChild(weaponCell);
 
@@ -441,7 +440,7 @@ export class StatusPanel {
     const totalCell = new Container({
       layout: { flexBasis: '18%', flexGrow: 1, alignItems: 'flex-end' },
     });
-    totalCell.addChild(new Text({ text: `${total}${suffix}`, style: cellValueStyle }));
+    totalCell.addChild(mkText(`${total}${suffix}`, cellValueStyle));
     row.addChild(totalCell);
 
     // Dragoon column.
@@ -449,11 +448,9 @@ export class StatusPanel {
       layout: { flexBasis: '18%', flexGrow: 1, alignItems: 'flex-end' },
     });
     if (affectedByDragoon && dragoonMult !== null) {
-      dragoonCell.addChild(
-        new Text({ text: `${Math.round(dragoonMult * 100)}%`, style: cellValueStyle }),
-      );
+      dragoonCell.addChild(mkText(`${Math.round(dragoonMult * 100)}%`, cellValueStyle));
     } else {
-      dragoonCell.addChild(new Text({ text: '—', style: cellMutedStyle }));
+      dragoonCell.addChild(mkText('—', cellMutedStyle));
     }
     row.addChild(dragoonCell);
 
@@ -473,16 +470,13 @@ export class StatusPanel {
     const headerRow = new Container({
       layout: { flexDirection: 'row', justifyContent: 'space-between', width: '100%' },
     });
-    headerRow.addChild(new Text({ text: t('status.magic'), style: headerStyle }));
-    headerRow.addChild(new Text({ text: t('status.mp'), style: headerStyle }));
+    headerRow.addChild(mkText(t('status.magic'), headerStyle));
+    headerRow.addChild(mkText(t('status.mp'), headerStyle));
     panel.addChild(headerRow);
 
     if (spells.length === 0) {
       panel.addChild(
-        new Text({
-          text: t('status.magic.none'),
-          style: { fill: COLOR_MUTED, fontSize: 12, fontStyle: 'italic' },
-        }),
+        mkText(t('status.magic.none'), { fill: COLOR_MUTED, fontSize: 12, fontStyle: 'italic' }),
       );
       return panel;
     }
@@ -494,11 +488,11 @@ export class StatusPanel {
         layout: { flexDirection: 'row', justifyContent: 'space-between', width: '100%' },
       });
       const left = new Container({ layout: { flexDirection: 'row', gap: 6 } });
-      left.addChild(new Text({ text: `${i + 1}`, style: cellLabelStyle }));
-      left.addChild(new Text({ text: prettifySlug(slug), style: cellValueStyle }));
+      left.addChild(mkText(`${i + 1}`, cellLabelStyle));
+      left.addChild(mkText(prettifySlug(slug), cellValueStyle));
       row.addChild(left);
       // MP cost placeholder — pending spell registry.
-      row.addChild(new Text({ text: '—', style: cellMutedStyle }));
+      row.addChild(mkText('—', cellMutedStyle));
       panel.addChild(row);
     });
     return panel;

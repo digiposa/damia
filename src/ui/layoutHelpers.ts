@@ -115,6 +115,53 @@ export function mkPanel(opts: { layout?: LayoutStyle } = {}): LayoutContainer {
 }
 
 /**
+ * Generic clickable button with hover-tint feedback. Returns a leaf
+ * container with the requested width × height so it fits naturally
+ * in a flex row / column. The `label` glyph is centered on the
+ * background. Variants:
+ *   - `primary` (default) — full-width action button.
+ *   - `stepper` — small square +/-/</> button used by Settings.
+ */
+export function mkButton(opts: {
+  label: string;
+  width: number;
+  height: number;
+  onTap: () => void;
+  fontSize?: number;
+  fontWeight?: 'normal' | 'bold';
+}): Container {
+  const w = opts.width;
+  const h = opts.height;
+  const c = new Container({ label: `button-${opts.label}` });
+  const bg = new Graphics()
+    .roundRect(0, 0, w, h, 5)
+    .fill({ color: COLORS.buttonBg, alpha: 0.95 })
+    .stroke({ width: 1, color: COLORS.border, alpha: 0.9 });
+  const text = new Text({
+    text: opts.label,
+    style: {
+      fill: COLORS.textValue,
+      fontSize: opts.fontSize ?? 14,
+      fontWeight: opts.fontWeight ?? 'bold',
+    },
+  });
+  text.anchor.set(0.5);
+  text.position.set(w / 2, h / 2);
+  c.addChild(bg, text);
+  c.eventMode = 'static';
+  c.cursor = 'pointer';
+  c.on('pointertap', opts.onTap);
+  c.on('pointerover', () => {
+    bg.tint = COLORS.borderActive;
+  });
+  c.on('pointerout', () => {
+    bg.tint = 0xffffff;
+  });
+  c.layout = { width: w, height: h, isLeaf: true };
+  return c;
+}
+
+/**
  * Standard "×" close button used by modal panels (top-right corner).
  * Tap fires `onTap`. The returned container is a 28 × 28 leaf so it
  * fits naturally into a flex header row (`justify-content: flex-end`).

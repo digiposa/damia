@@ -22,7 +22,6 @@
  */
 import type { Application } from 'pixi.js';
 import { Container, Graphics } from 'pixi.js';
-import type { LayoutContainer } from '@pixi/layout/components';
 import { COLORS, MODAL } from './theme';
 
 export abstract class Modal {
@@ -30,8 +29,11 @@ export abstract class Modal {
   readonly container: Container;
   protected readonly app: Application;
   protected readonly dim: Graphics;
-  /** Inner panel — built by the subclass via `buildPanel()`. */
-  protected panel: LayoutContainer | null = null;
+  /** Inner panel — built by the subclass via `buildPanel()`. Can be
+   *  any Pixi Container (typically a `LayoutContainer` via `mkPanel`
+   *  for flex-based modals, or a plain `Container` for legacy modals
+   *  with manual positioning). */
+  protected panel: Container | null = null;
   private isOpen_ = false;
   private readonly cleanups: Array<() => void> = [];
 
@@ -57,11 +59,11 @@ export abstract class Modal {
     this.cleanups.push(() => app.renderer.off('resize', onResize));
   }
 
-  /** Subclasses build their inner panel (a LayoutContainer typically
-   *  via `mkPanel`) and return it. The base mounts it as a child of
-   *  the root container. Called once during the first `open()` so
-   *  expensive construction is deferred until first use. */
-  protected abstract buildPanel(): LayoutContainer;
+  /** Subclass builds its inner panel and returns it. The base mounts
+   *  it as a child of the root container. Called once during the
+   *  first `open()` so expensive construction is deferred until
+   *  first use. */
+  protected abstract buildPanel(): Container;
 
   /** Optional hook fired after the panel is built / shown. Subclasses
    *  use this to refresh content from live state. */
@@ -109,12 +111,18 @@ export abstract class Modal {
   }
 
   /** Recompute the panel's responsive size + center it within the
-   *  dim backdrop. Yoga handles the panel's internal layout once
-   *  the outer width/height are set. */
+   *  dim backdrop. The default applies `min(MAX, screen - margin)` to
+   *  flex-based panels (panels whose `.layout` accepts width/height
+   *  in pixels). Subclasses that don't use flex layout — e.g. legacy
+   *  panels with their own scale-to-fit math — should override this
+   *  to do nothing or apply their own sizing. */
   protected applyPanelSize(): void {
     if (!this.panel) return;
     const w = Math.min(MODAL.maxWidth, this.app.screen.width - MODAL.margin);
     const h = Math.min(MODAL.maxHeight, this.app.screen.height - MODAL.margin);
+    // The layout mixin tolerates being set on any Container — and on
+    // panels that already have `.layout` (StatusPanel etc.) we merge
+    // the existing style + the new width/height.
     const existing = this.panel.layout?.style ?? {};
     this.panel.layout = { ...existing, width: w, height: h };
     this.panel.position.set(

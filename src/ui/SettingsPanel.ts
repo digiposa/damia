@@ -1,5 +1,5 @@
 import type { Application } from 'pixi.js';
-import { Container, Graphics, Text } from 'pixi.js';
+import { Container, type Text } from 'pixi.js';
 import { t, getLanguage, setLanguage, SUPPORTED_LANGUAGES } from '@services/I18nService';
 import {
   getVolumes,
@@ -9,55 +9,35 @@ import {
   setSfxVolume,
   setVoiceVolume,
 } from '@services/AudioManager';
+import { Modal } from './Modal';
+import { SPACING, TEXT } from './theme';
+import { mkButton, mkCloseButton, mkPanel, mkRow, mkText } from './layoutHelpers';
 
-const PANEL_WIDTH = 460;
-const PANEL_HEIGHT = 484;
-const ROW_HEIGHT = 44;
 const VOLUME_STEP = 0.1;
+const STEPPER_SIZE = 32;
+const ACTION_BUTTON_HEIGHT = 36;
 
 export type SettingsPanelAction = 'resume' | 'quit-to-title';
 
+type VolumeKind = 'master' | 'music' | 'sfx' | 'voice';
+
 /**
- * Esc-toggled settings overlay. Provides volume +/- controls (10% step),
- * a language toggle (full reload via I18nService.setLanguage), and Resume /
- * Quit-to-Title buttons. The scene wires the action callback.
+ * Esc-toggled settings overlay. Volume sliders (4 channels), language
+ * toggle, Resume / Quit-to-Title actions. Built on the shared Modal
+ * base + flex layout, so resize / responsive sizing comes for free.
  */
-export class SettingsPanel {
-  readonly container: Container;
-  private readonly panel: Container;
-  private readonly app: Application;
-  private readonly cleanups: Array<() => void> = [];
+export class SettingsPanel extends Modal {
   private actionListener: ((action: SettingsPanelAction) => void) | null = null;
-  private masterValueText!: Text;
-  private musicValueText!: Text;
-  private sfxValueText!: Text;
-  private voiceValueText!: Text;
-  private langValueText!: Text;
+  /** Refs to value Text nodes so refreshValues() can rewrite them
+   *  without rebuilding the panel. */
+  private masterValueText: Text | null = null;
+  private musicValueText: Text | null = null;
+  private sfxValueText: Text | null = null;
+  private voiceValueText: Text | null = null;
+  private langValueText: Text | null = null;
 
   constructor(app: Application) {
-    this.app = app;
-    this.container = new Container({ label: 'settings-panel' });
-    this.container.visible = false;
-
-    const dim = new Graphics()
-      .rect(0, 0, app.screen.width, app.screen.height)
-      .fill({ color: 0x000000, alpha: 0.65 });
-    dim.eventMode = 'static';
-    this.container.addChild(dim);
-
-    this.panel = new Container({ label: 'settings-panel-box' });
-    this.container.addChild(this.panel);
-    this.buildPanel();
-
-    this.reposition();
-    app.renderer.on('resize', () => {
-      dim
-        .clear()
-        .rect(0, 0, app.screen.width, app.screen.height)
-        .fill({ color: 0x000000, alpha: 0.65 });
-      this.reposition();
-    });
-
+    super(app, 'settings-panel');
     const onKey = (e: KeyboardEvent): void => {
       if (e.key === 'Escape') {
         this.toggle();
@@ -65,102 +45,151 @@ export class SettingsPanel {
       }
     };
     window.addEventListener('keydown', onKey);
-    this.cleanups.push(() => window.removeEventListener('keydown', onKey));
+    this.registerCleanup(() => window.removeEventListener('keydown', onKey));
   }
 
   onAction(listener: (action: SettingsPanelAction) => void): void {
     this.actionListener = listener;
   }
 
+  /** Back-compat alias for old call sites (`settings.toggle()` etc.). */
   show(): void {
-    this.refreshValues();
-    this.container.visible = true;
-    // Raise above any overlay that was addChild'd after us
-    // (SurvivalHUD, touch buttons, joystick, LevelUpChoiceModal, …).
-    // Same pattern as StatusPanel.open().
-    const parent = this.container.parent;
-    if (parent) parent.setChildIndex(this.container, parent.children.length - 1);
+    this.open();
   }
+  /** Back-compat alias. */
   hide(): void {
-    this.container.visible = false;
-  }
-  toggle(): void {
-    if (this.container.visible) this.hide();
-    else this.show();
-  }
-  get isOpen(): boolean {
-    return this.container.visible;
+    this.close();
   }
 
-  destroy(): void {
-    for (const c of this.cleanups) c();
-    this.cleanups.length = 0;
-    this.container.destroy({ children: true });
+  protected override onOpen(): void {
+    this.refreshValues();
   }
 
-  private buildPanel(): void {
-    const bg = new Graphics()
-      .roundRect(0, 0, PANEL_WIDTH, PANEL_HEIGHT, 8)
-      .fill({ color: 0x101814, alpha: 0.98 })
-      .stroke({ width: 2, color: 0xa08050 });
-    this.panel.addChild(bg);
+  protected buildPanel(): Container {
+    const panel = mkPanel({
+      layout: { flex: 1, gap: SPACING.gap, alignItems: 'stretch' },
+    });
 
-    const title = new Text({
-      text: t('settings.title'),
-      style: {
-        fontFamily: 'system-ui, sans-serif',
-        fontSize: 28,
-        fill: 0xfaf6e8,
-        fontWeight: 'bold',
+    // --- Title strip (title centered + close on the right) -------------
+    const titleStrip = mkRow({
+      layout: {
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        width: '100%',
+        height: 32,
       },
     });
-    title.anchor.set(0.5, 0);
-    title.position.set(PANEL_WIDTH / 2, 18);
-    this.panel.addChild(title);
+    // Spacer on the left so the title visually centers despite the
+    // close button only being on the right.
+    titleStrip.addChild(new Container({ layout: { width: 28, height: 28, isLeaf: true } }));
+    titleStrip.addChild(mkText(t('settings.title'), TEXT.title));
+    titleStrip.addChild(mkCloseButton(() => this.close()));
+    panel.addChild(titleStrip);
 
-    let y = 80;
-    this.masterValueText = this.addVolumeRow(t('settings.master'), y, 'master');
-    y += ROW_HEIGHT;
-    this.musicValueText = this.addVolumeRow(t('settings.music'), y, 'music');
-    y += ROW_HEIGHT;
-    this.sfxValueText = this.addVolumeRow(t('settings.sfx'), y, 'sfx');
-    y += ROW_HEIGHT;
-    this.voiceValueText = this.addVolumeRow(t('settings.voice'), y, 'voice');
-    y += ROW_HEIGHT + 16;
-    this.langValueText = this.addLangRow(t('settings.language'), y);
-    y += ROW_HEIGHT + 24;
+    // --- Volume rows ----------------------------------------------------
+    this.masterValueText = this.buildVolumeRow(panel, t('settings.master'), 'master');
+    this.musicValueText = this.buildVolumeRow(panel, t('settings.music'), 'music');
+    this.sfxValueText = this.buildVolumeRow(panel, t('settings.sfx'), 'sfx');
+    this.voiceValueText = this.buildVolumeRow(panel, t('settings.voice'), 'voice');
 
-    this.addActionButton(t('settings.resume'), y, 'resume');
-    y += ROW_HEIGHT;
-    this.addActionButton(t('settings.quitToTitle'), y, 'quit-to-title');
+    // --- Language row ---------------------------------------------------
+    this.langValueText = this.buildLangRow(panel, t('settings.language'));
+
+    // --- Spacer + action buttons ---------------------------------------
+    panel.addChild(new Container({ layout: { height: SPACING.gapLarge, isLeaf: true } }));
+    panel.addChild(this.buildActionButton(t('settings.resume'), 'resume'));
+    panel.addChild(this.buildActionButton(t('settings.quitToTitle'), 'quit-to-title'));
+
+    return panel;
   }
 
-  private addVolumeRow(label: string, y: number, kind: 'master' | 'music' | 'sfx' | 'voice'): Text {
-    const labelText = new Text({
-      text: label,
-      style: { fontFamily: 'system-ui, sans-serif', fontSize: 16, fill: 0xddcfae },
+  private buildVolumeRow(parent: Container, label: string, kind: VolumeKind): Text {
+    const row = mkRow({
+      layout: { alignItems: 'center', justifyContent: 'space-between', width: '100%', gap: 8 },
     });
-    labelText.position.set(28, y + 8);
-    this.panel.addChild(labelText);
-
-    const valueText = new Text({
-      text: '',
-      style: { fontFamily: 'monospace', fontSize: 16, fill: 0xfaf6e8 },
-    });
-    valueText.anchor.set(1, 0);
-    valueText.position.set(PANEL_WIDTH - 100, y + 8);
-    this.panel.addChild(valueText);
-
-    this.makeStepperButton('-', PANEL_WIDTH - 80, y + 4, () =>
-      this.adjustVolume(kind, -VOLUME_STEP),
+    row.addChild(mkText(label, TEXT.label));
+    const right = mkRow({ layout: { alignItems: 'center', gap: 8 } });
+    const value = mkText('', { ...TEXT.value, fontFamily: 'monospace' });
+    right.addChild(
+      mkButton({
+        label: '-',
+        width: STEPPER_SIZE,
+        height: STEPPER_SIZE,
+        fontSize: 18,
+        onTap: () => this.adjustVolume(kind, -VOLUME_STEP),
+      }),
     );
-    this.makeStepperButton('+', PANEL_WIDTH - 40, y + 4, () =>
-      this.adjustVolume(kind, VOLUME_STEP),
+    right.addChild(value);
+    right.addChild(
+      mkButton({
+        label: '+',
+        width: STEPPER_SIZE,
+        height: STEPPER_SIZE,
+        fontSize: 18,
+        onTap: () => this.adjustVolume(kind, VOLUME_STEP),
+      }),
     );
-    return valueText;
+    row.addChild(right);
+    parent.addChild(row);
+    return value;
   }
 
-  private adjustVolume(kind: 'master' | 'music' | 'sfx' | 'voice', delta: number): void {
+  private buildLangRow(parent: Container, label: string): Text {
+    const row = mkRow({
+      layout: { alignItems: 'center', justifyContent: 'space-between', width: '100%', gap: 8 },
+    });
+    row.addChild(mkText(label, TEXT.label));
+    const right = mkRow({ layout: { alignItems: 'center', gap: 8 } });
+    const value = mkText('', { ...TEXT.value, fontFamily: 'monospace' });
+    right.addChild(
+      mkButton({
+        label: '<',
+        width: STEPPER_SIZE,
+        height: STEPPER_SIZE,
+        fontSize: 18,
+        onTap: () => this.cycleLanguage(-1),
+      }),
+    );
+    right.addChild(value);
+    right.addChild(
+      mkButton({
+        label: '>',
+        width: STEPPER_SIZE,
+        height: STEPPER_SIZE,
+        fontSize: 18,
+        onTap: () => this.cycleLanguage(1),
+      }),
+    );
+    row.addChild(right);
+    parent.addChild(row);
+    return value;
+  }
+
+  private buildActionButton(label: string, action: SettingsPanelAction): Container {
+    // Use 100% width so the button stretches to the panel's inner width.
+    const wrapper = new Container({
+      layout: { width: '100%', height: ACTION_BUTTON_HEIGHT, alignItems: 'stretch' },
+    });
+    const btn = mkButton({
+      label,
+      width: 360, // best-effort default; full width comes from flex stretch
+      height: ACTION_BUTTON_HEIGHT,
+      onTap: () => {
+        playSfx('ui.click');
+        this.actionListener?.(action);
+      },
+    });
+    btn.layout = {
+      ...(btn.layout?.style ?? {}),
+      width: '100%',
+      height: ACTION_BUTTON_HEIGHT,
+      flex: 1,
+    };
+    wrapper.addChild(btn);
+    return wrapper;
+  }
+
+  private adjustVolume(kind: VolumeKind, delta: number): void {
     playSfx('ui.click');
     const v = getVolumes();
     const next = Math.max(0, Math.min(1, v[kind] + delta));
@@ -169,27 +198,6 @@ export class SettingsPanel {
     else if (kind === 'sfx') setSfxVolume(next);
     else setVoiceVolume(next);
     this.refreshValues();
-  }
-
-  private addLangRow(label: string, y: number): Text {
-    const labelText = new Text({
-      text: label,
-      style: { fontFamily: 'system-ui, sans-serif', fontSize: 16, fill: 0xddcfae },
-    });
-    labelText.position.set(28, y + 8);
-    this.panel.addChild(labelText);
-
-    const valueText = new Text({
-      text: '',
-      style: { fontFamily: 'monospace', fontSize: 16, fill: 0xfaf6e8 },
-    });
-    valueText.anchor.set(1, 0);
-    valueText.position.set(PANEL_WIDTH - 100, y + 8);
-    this.panel.addChild(valueText);
-
-    this.makeStepperButton('<', PANEL_WIDTH - 80, y + 4, () => this.cycleLanguage(-1));
-    this.makeStepperButton('>', PANEL_WIDTH - 40, y + 4, () => this.cycleLanguage(1));
-    return valueText;
   }
 
   private cycleLanguage(direction: number): void {
@@ -203,84 +211,13 @@ export class SettingsPanel {
     if (next && next !== cur) setLanguage(next);
   }
 
-  private addActionButton(label: string, y: number, action: SettingsPanelAction): void {
-    const btn = new Container();
-    const bg = new Graphics()
-      .roundRect(0, 0, PANEL_WIDTH - 56, ROW_HEIGHT - 8, 5)
-      .fill({ color: 0x202820 })
-      .stroke({ width: 1, color: 0xa08050 });
-    const text = new Text({
-      text: label,
-      style: { fontFamily: 'system-ui, sans-serif', fontSize: 16, fill: 0xfaf6e8 },
-    });
-    text.anchor.set(0.5);
-    text.position.set((PANEL_WIDTH - 56) / 2, (ROW_HEIGHT - 8) / 2);
-    btn.addChild(bg, text);
-    btn.position.set(28, y);
-    btn.eventMode = 'static';
-    btn.cursor = 'pointer';
-    btn.on('pointertap', () => {
-      playSfx('ui.click');
-      this.actionListener?.(action);
-    });
-    btn.on('pointerover', () => {
-      bg.tint = 0xc8b58a;
-    });
-    btn.on('pointerout', () => {
-      bg.tint = 0xffffff;
-    });
-    this.panel.addChild(btn);
-  }
-
-  private makeStepperButton(label: string, x: number, y: number, onClick: () => void): void {
-    const size = 32;
-    const btn = new Container();
-    const bg = new Graphics()
-      .roundRect(0, 0, size, size, 4)
-      .fill({ color: 0x202820 })
-      .stroke({ width: 1, color: 0xa08050 });
-    const text = new Text({
-      text: label,
-      style: {
-        fontFamily: 'system-ui, sans-serif',
-        fontSize: 18,
-        fill: 0xfaf6e8,
-        fontWeight: 'bold',
-      },
-    });
-    text.anchor.set(0.5);
-    text.position.set(size / 2, size / 2 - 1);
-    btn.addChild(bg, text);
-    btn.position.set(x, y);
-    btn.eventMode = 'static';
-    btn.cursor = 'pointer';
-    btn.on('pointertap', onClick);
-    btn.on('pointerover', () => {
-      bg.tint = 0xc8b58a;
-    });
-    btn.on('pointerout', () => {
-      bg.tint = 0xffffff;
-    });
-    this.panel.addChild(btn);
-  }
-
   private refreshValues(): void {
+    if (!this.masterValueText) return;
     const v = getVolumes();
     this.masterValueText.text = `${Math.round(v.master * 100)}%`;
-    this.musicValueText.text = `${Math.round(v.music * 100)}%`;
-    this.sfxValueText.text = `${Math.round(v.sfx * 100)}%`;
-    this.voiceValueText.text = `${Math.round(v.voice * 100)}%`;
-    this.langValueText.text = getLanguage().toUpperCase();
-  }
-
-  private reposition(): void {
-    const w = this.app.screen.width;
-    const h = this.app.screen.height;
-    // Scale uniformly to fit narrow portrait screens (panel was designed
-    // for 460 px desktop). Pixi inherits the transform so the buttons
-    // hit-areas stay aligned with the visual.
-    const scale = Math.min(1, (w - 24) / PANEL_WIDTH, (h - 32) / PANEL_HEIGHT);
-    this.panel.scale.set(scale);
-    this.panel.position.set((w - PANEL_WIDTH * scale) / 2, (h - PANEL_HEIGHT * scale) / 2);
+    if (this.musicValueText) this.musicValueText.text = `${Math.round(v.music * 100)}%`;
+    if (this.sfxValueText) this.sfxValueText.text = `${Math.round(v.sfx * 100)}%`;
+    if (this.voiceValueText) this.voiceValueText.text = `${Math.round(v.voice * 100)}%`;
+    if (this.langValueText) this.langValueText.text = getLanguage().toUpperCase();
   }
 }

@@ -3,6 +3,9 @@ import { Container, Graphics, Sprite as PixiSprite, Text } from 'pixi.js';
 import { ITEMS, type ItemKind } from '@data/items';
 import { AssetManager } from '@services/AssetManager';
 import { t } from '@services/I18nService';
+import { Modal } from './Modal';
+import { COLORS, MODAL, TEXT } from './theme';
+import { mkCloseButton } from './layoutHelpers';
 import { type HotbarSlot, HOTBAR_SLOT_COUNT } from './Hotbar';
 import { paintAdditionSlot, paintItemSlot, paintSlotFrame } from './slot';
 import { Tooltip } from './Tooltip';
@@ -33,212 +36,161 @@ export interface InventoryPanelState {
 }
 
 export interface InventoryPanelCallbacks {
-  /** Player asked to bind `kind` to hotbar `slotIdx`. Replaces any existing binding. */
   onBind: (kind: ItemKind, slotIdx: number) => void;
-  /** Player asked to consume one of `kind` (heal / cast spell). */
   onUse: (kind: ItemKind) => void;
-  /** Player asked to drop one `kind` on the ground. */
   onDrop: (kind: ItemKind) => void;
 }
 
 /**
- * Modal inventory panel. Toggled by ForestScene on key `I`, with the world
- * paused while open (same pattern as SettingsPanel). Layout:
- *  - Header with title + gold counter.
- *  - 8x4 grid of slots, one per ItemKind owned (insertion order).
- *  - Mini-hotbar (8 slots) so drag-from-inventory drops land inside the modal.
- *  - Hint bar with control reminders.
+ * Modal inventory panel. Built on the shared Modal base for the
+ * backdrop / open / close / raise-to-top boilerplate; internals keep
+ * the absolute-positioned 8×4 grid + drag-drop + mini-hotbar layout
+ * (the drag-bounds math is easier to reason about with explicit
+ * pixel offsets than via flex). The panel itself is scale-to-fit on
+ * narrow viewports — `applyPanelSize()` is overridden to keep that
+ * behaviour instead of the default flex-width approach.
  *
  * Interactions:
  *  - Hover: tooltip with name + description + count.
  *  - Click on item slot: select (gold border).
  *  - Drag from inventory slot to a mini-hotbar slot: bind.
  *  - Right-click on item slot: use.
- *  - Keyboard `1`..`8` while item selected: bind to that slot.
- *  - Keyboard `D` while item selected: drop.
- *  - Esc / I: close (handled by the scene's input).
+ *  - Top-right "×" or Esc / I: close.
  */
-export class InventoryPanel {
-  readonly container: Container;
-  isOpen = false;
-  private app: Application;
+export class InventoryPanel extends Modal {
   private callbacks: InventoryPanelCallbacks | null = null;
   private state: InventoryPanelState = { items: {}, gold: 0, hotbarSlots: [] };
-
-  // Layered Containers we rebuild each `setState`:
-  private readonly overlay: Graphics; // full-screen dim
-  private readonly panel: Container; // centered card
-  private readonly grid: Container; // 8x4 inventory slots
-  private readonly hotbarMini: Container; // 8-slot hotbar mirror inside the modal
-  private readonly tooltip: Tooltip;
-  private readonly goldText: Text;
-  private readonly hintText: Text;
-
-  // Drag-and-drop state.
-  private drag: {
-    kind: ItemKind;
-    ghost: Container;
-  } | null = null;
-  /** Item kind selected via left-click (highlighted gold border). */
+  private innerPanel: Container | null = null;
+  private grid: Container | null = null;
+  private hotbarMini: Container | null = null;
+  private tooltip: Tooltip | null = null;
+  private goldText: Text | null = null;
+  private hintText: Text | null = null;
+  private drag: { kind: ItemKind; ghost: Container } | null = null;
   private selectedKind: ItemKind | null = null;
-  /** Per-mini-hotbar-slot Container so the drop hit-test can compare rects. */
   private readonly miniHotbarSlots: Container[] = [];
 
   constructor(app: Application) {
-    this.app = app;
-    this.container = new Container({ label: 'inventory-panel' });
-    this.container.visible = false;
+    super(app, 'inventory-panel');
     this.container.eventMode = 'static';
-
-    this.overlay = new Graphics();
-    this.container.addChild(this.overlay);
-
-    this.panel = new Container({ label: 'inventory-card' });
-    this.container.addChild(this.panel);
-
-    // Card background painted once on resize/build.
-    const panelBg = new Graphics()
-      .roundRect(0, 0, PANEL_WIDTH, PANEL_HEIGHT, 8)
-      .fill({ color: 0x101010, alpha: 0.95 })
-      .stroke({ color: 0xa08050, width: 2, alpha: 0.85 });
-    this.panel.addChild(panelBg);
-
-    const titleText = new Text({
-      text: '',
-      style: {
-        fontFamily: 'system-ui, sans-serif',
-        fontSize: 20,
-        fill: 0xfaf6e8,
-        fontWeight: 'bold',
-      },
-    });
-    titleText.position.set(PADDING, PADDING);
-    this.panel.addChild(titleText);
-
-    this.goldText = new Text({
-      text: '',
-      style: {
-        fontFamily: 'system-ui, sans-serif',
-        fontSize: 16,
-        fill: 0xeec040,
-        fontWeight: 'bold',
-        stroke: { color: 0x000000, width: 2 },
-      },
-    });
-    this.goldText.anchor.set(1, 0);
-    this.goldText.position.set(PANEL_WIDTH - PADDING, PADDING + 2);
-    this.panel.addChild(this.goldText);
-
-    // Inventory grid container — populated each setState.
-    this.grid = new Container();
-    this.grid.position.set(PADDING, PADDING + HEADER_HEIGHT);
-    this.panel.addChild(this.grid);
-
-    const gridHeightPx = ROWS * SLOT_SIZE + (ROWS - 1) * SLOT_GAP;
-    const hotbarLabelY = PADDING + HEADER_HEIGHT + gridHeightPx + PADDING;
-    const hotbarLabel = new Text({
-      text: '',
-      style: {
-        fontFamily: 'system-ui, sans-serif',
-        fontSize: 13,
-        fill: 0xc8b58a,
-        fontStyle: 'italic',
-      },
-    });
-    hotbarLabel.position.set(PADDING, hotbarLabelY);
-    this.panel.addChild(hotbarLabel);
-
-    this.hotbarMini = new Container();
-    this.hotbarMini.position.set(PADDING, hotbarLabelY + HOTBAR_LABEL_HEIGHT);
-    this.panel.addChild(this.hotbarMini);
-
-    const hintY = hotbarLabelY + HOTBAR_LABEL_HEIGHT + SLOT_SIZE + PADDING;
-    this.hintText = new Text({
-      text: '',
-      style: {
-        fontFamily: 'system-ui, sans-serif',
-        fontSize: 11,
-        fill: 0x806040,
-      },
-    });
-    this.hintText.position.set(PADDING, hintY);
-    this.panel.addChild(this.hintText);
-
-    // Tooltip layer (above panel, below drag ghost).
-    this.tooltip = new Tooltip();
-    this.container.addChild(this.tooltip.node);
-
-    // Cache i18n once so we don't t() every frame.
-    titleText.text = t('inventory.title');
-    hotbarLabel.text = t('inventory.hotbarLabel');
-    this.hintText.text = t('inventory.hint');
-
-    this.reposition();
-    app.renderer.on('resize', () => this.reposition());
-
-    // Mouse-up anywhere ends an in-flight drag.
     this.container.on('pointerup', (e) => this.endDrag(e));
     this.container.on('pointerupoutside', (e) => this.endDrag(e));
     this.container.on('pointermove', (e) => this.moveDrag(e));
   }
 
-  /** Wire scene-side handlers for bind / use / drop. Call once on construction. */
   setCallbacks(cb: InventoryPanelCallbacks): void {
     this.callbacks = cb;
   }
 
-  /** Returns the currently-selected item kind (set via left-click). */
   getSelectedKind(): ItemKind | null {
     return this.selectedKind;
   }
 
-  open(state: InventoryPanelState): void {
-    this.isOpen = true;
-    this.container.visible = true;
-    this.setState(state);
-    // Raise above any overlay that was addChild'd after us — same
-    // pattern as StatusPanel / SettingsPanel.
-    const parent = this.container.parent;
-    if (parent) parent.setChildIndex(this.container, parent.children.length - 1);
+  /** Compat with old `open(state)` signature. The base Modal's open()
+   *  is parameterless, so we override here to forward state through. */
+  override open(state?: InventoryPanelState): void {
+    if (state) this.state = state;
+    super.open();
+    if (state) this.setState(state);
   }
 
-  close(): void {
-    this.isOpen = false;
-    this.container.visible = false;
+  protected override onClose(): void {
     this.cancelDrag();
     this.selectedKind = null;
-    this.tooltip.hide();
+    this.tooltip?.hide();
   }
 
-  /** Refresh the grid + mini-hotbar + gold from a fresh state snapshot. */
+  protected buildPanel(): Container {
+    const panel = new Container({ label: 'inventory-card' });
+    this.innerPanel = panel;
+
+    const panelBg = new Graphics()
+      .roundRect(0, 0, PANEL_WIDTH, PANEL_HEIGHT, 8)
+      .fill({ color: COLORS.cardBg, alpha: 0.95 })
+      .stroke({ color: COLORS.border, width: 2, alpha: 0.85 });
+    panel.addChild(panelBg);
+
+    const titleText = new Text({
+      text: t('inventory.title'),
+      style: { ...TEXT.title, fill: COLORS.textCream, fontSize: 20 },
+    });
+    titleText.position.set(PADDING, PADDING);
+    panel.addChild(titleText);
+
+    this.goldText = new Text({
+      text: '',
+      style: {
+        fill: COLORS.gold,
+        fontSize: 16,
+        fontWeight: 'bold',
+        stroke: { color: 0x000000, width: 2 },
+      },
+    });
+    this.goldText.anchor.set(1, 0);
+    // Reserve space for the close button on the right.
+    this.goldText.position.set(PANEL_WIDTH - PADDING - 36, PADDING + 2);
+    panel.addChild(this.goldText);
+
+    // Close button — top-right corner, matches the StatusPanel one.
+    const close = mkCloseButton(() => this.close());
+    close.position.set(PANEL_WIDTH - PADDING - 28, PADDING - 2);
+    panel.addChild(close);
+
+    // Inventory grid container — populated each setState.
+    this.grid = new Container();
+    this.grid.position.set(PADDING, PADDING + HEADER_HEIGHT);
+    panel.addChild(this.grid);
+
+    const gridHeightPx = ROWS * SLOT_SIZE + (ROWS - 1) * SLOT_GAP;
+    const hotbarLabelY = PADDING + HEADER_HEIGHT + gridHeightPx + PADDING;
+    const hotbarLabel = new Text({
+      text: t('inventory.hotbarLabel'),
+      style: { fill: COLORS.textSand, fontSize: 13, fontStyle: 'italic' },
+    });
+    hotbarLabel.position.set(PADDING, hotbarLabelY);
+    panel.addChild(hotbarLabel);
+
+    this.hotbarMini = new Container();
+    this.hotbarMini.position.set(PADDING, hotbarLabelY + HOTBAR_LABEL_HEIGHT);
+    panel.addChild(this.hotbarMini);
+
+    const hintY = hotbarLabelY + HOTBAR_LABEL_HEIGHT + SLOT_SIZE + PADDING;
+    this.hintText = new Text({
+      text: t('inventory.hint'),
+      style: { fill: 0x806040, fontSize: 11 },
+    });
+    this.hintText.position.set(PADDING, hintY);
+    panel.addChild(this.hintText);
+
+    // Tooltip — owned by the modal container (above panel, below drag ghost).
+    this.tooltip = new Tooltip();
+    this.container.addChild(this.tooltip.node);
+
+    this.rebuildGrid();
+    this.rebuildHotbarMini();
+    return panel;
+  }
+
+  /** Override the default flex-sizing — this panel uses absolute
+   *  positioning and scales uniformly to fit narrow viewports. */
+  protected override applyPanelSize(): void {
+    if (!this.innerPanel) return;
+    const w = this.app.screen.width;
+    const h = this.app.screen.height;
+    const scale = Math.min(1, (w - MODAL.margin) / PANEL_WIDTH, (h - MODAL.margin) / PANEL_HEIGHT);
+    this.innerPanel.scale.set(scale);
+    this.innerPanel.position.set((w - PANEL_WIDTH * scale) / 2, (h - PANEL_HEIGHT * scale) / 2);
+  }
+
   setState(state: InventoryPanelState): void {
     this.state = state;
-    this.goldText.text = `${state.gold} G`;
+    if (this.goldText) this.goldText.text = `${state.gold} G`;
     this.rebuildGrid();
     this.rebuildHotbarMini();
   }
 
-  destroy(): void {
-    this.cancelDrag();
-    this.container.destroy({ children: true });
-  }
-
-  // ---- internal ----
-
-  private reposition(): void {
-    const w = this.app.screen.width;
-    const h = this.app.screen.height;
-    this.overlay.clear().rect(0, 0, w, h).fill({ color: 0x000000, alpha: 0.65 });
-    // Fit the desktop-sized panel inside narrow portrait screens by
-    // uniformly scaling the whole container. Pixi propagates the
-    // transform to children, so drag hit-areas + grid taps remain
-    // correctly mapped without per-component math.
-    const scale = Math.min(1, (w - 24) / PANEL_WIDTH, (h - 32) / PANEL_HEIGHT);
-    this.panel.scale.set(scale);
-    this.panel.position.set((w - PANEL_WIDTH * scale) / 2, (h - PANEL_HEIGHT * scale) / 2);
-  }
-
   private rebuildGrid(): void {
+    if (!this.grid) return;
     this.grid.removeChildren().forEach((c) => c.destroy());
 
     const kinds = (Object.keys(this.state.items) as ItemKind[]).filter(
@@ -270,7 +222,7 @@ export class InventoryPanel {
 
         slot.cursor = 'grab';
         slot.on('pointerover', () => this.showTooltipAtSlot(slot, kind));
-        slot.on('pointerout', () => this.hideTooltip());
+        slot.on('pointerout', () => this.tooltip?.hide());
         slot.on('pointerdown', (e) => this.onSlotPointerDown(e, kind));
         slot.on('rightclick', () => this.callbacks?.onUse(kind));
       } else {
@@ -282,6 +234,7 @@ export class InventoryPanel {
   }
 
   private rebuildHotbarMini(): void {
+    if (!this.hotbarMini) return;
     this.hotbarMini.removeChildren().forEach((c) => c.destroy());
     this.miniHotbarSlots.length = 0;
 
@@ -296,7 +249,7 @@ export class InventoryPanel {
 
       const label = new Text({
         text: String(i + 1),
-        style: { fontFamily: 'system-ui, sans-serif', fontSize: 11, fill: 0xa08050 },
+        style: { fontSize: 11, fill: COLORS.border },
       });
       label.position.set(4, 3);
       slot.addChild(label);
@@ -318,30 +271,22 @@ export class InventoryPanel {
   }
 
   private showTooltipAtSlot(slotContainer: Container, kind: ItemKind): void {
+    if (!this.tooltip) return;
     const def = ITEMS[kind];
     const count = this.state.items[kind] ?? 0;
     const name = t(def.nameKey);
     const desc = t(`items.${kind}.desc`);
     this.tooltip.setText(`${name} (×${count})\n${desc}`);
-    // Resolve absolute position of the slot in the screen-space container.
     const global = slotContainer.getGlobalPosition();
     const local = this.container.toLocal(global);
     this.tooltip.showAbove(local.x + SLOT_SIZE / 2, local.y, 4);
   }
 
-  private hideTooltip(): void {
-    this.tooltip.hide();
-  }
-
   private onSlotPointerDown(e: FederatedPointerEvent, kind: ItemKind): void {
-    if (e.button === 2) {
-      // Right-click goes to onUse via the rightclick handler — no drag.
-      return;
-    }
-    // Left-click selects + starts a drag.
+    if (e.button === 2) return; // right-click handled via rightclick listener
     this.selectedKind = kind;
     this.startDrag(kind, e);
-    this.rebuildGrid(); // re-render with the new selection highlight
+    this.rebuildGrid();
   }
 
   private startDrag(kind: ItemKind, e: FederatedPointerEvent): void {
@@ -359,7 +304,7 @@ export class InventoryPanel {
       ghost.addChild(new Graphics().circle(0, 0, 12).fill(def.sprite.color));
     }
     ghost.alpha = 0.85;
-    ghost.eventMode = 'none'; // never intercept pointer events
+    ghost.eventMode = 'none';
     this.container.addChild(ghost);
     this.drag = { kind, ghost };
     this.moveDragTo(e.global.x, e.global.y);
@@ -382,7 +327,6 @@ export class InventoryPanel {
     this.drag = null;
     this.container.removeChild(drag.ghost);
     drag.ghost.destroy();
-    // Hit-test against mini-hotbar slots.
     for (let i = 0; i < this.miniHotbarSlots.length; i++) {
       const slot = this.miniHotbarSlots[i]!;
       const bounds = slot.getBounds();

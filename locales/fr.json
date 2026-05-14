@@ -58,6 +58,30 @@
       }
     }
   },
+  "status": {
+    "noPlayer": "Aucun personnage actif.",
+    "equipment": "Équipement",
+    "magic": "Magie",
+    "mp": "MP",
+    "magic.none": "(pas encore de magie Dragoon)",
+    "col": {
+      "body": "Corps",
+      "weapon": "Arme",
+      "total": "Total",
+      "dragoon": "Dragoon"
+    },
+    "stat": {
+      "at": "AT",
+      "df": "DF",
+      "mat": "MAT",
+      "mdf": "MDF",
+      "speed": "VIT",
+      "aHit": "P-TCH",
+      "mHit": "M-TCH",
+      "aAv": "P-ESQ",
+      "mAv": "M-ESQ"
+    }
+  },
   "settings": {
     "title": "Options",
     "master": "Volume général",

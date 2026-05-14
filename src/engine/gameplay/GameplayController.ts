@@ -400,6 +400,8 @@ export class GameplayController {
       fog: this.fog,
       pathZones: map.pathZones,
       viewport: this.viewport,
+      world: this.world,
+      getPlayerId: () => this.playerId,
     });
 
     // Cursor overlay needs per-frame world-space pointer coords to decide
@@ -442,6 +444,16 @@ export class GameplayController {
       // Desktop shortcut for the Dragoon transformation. Same
       // no-op-when-not-ready semantics as the touch button.
       if (e.key === 't' || e.key === 'T') this.tryEnterDragoon();
+      // Character status panel — TLoD-style read-only sheet. `C`
+      // toggles, `Esc` closes when open.
+      if (e.key === 'c' || e.key === 'C') {
+        if (this.ui.statusPanel.isOpen) this.ui.statusPanel.close();
+        else this.ui.statusPanel.open();
+        return;
+      }
+      if (this.ui.statusPanel.isOpen && e.key === 'Escape') {
+        this.ui.statusPanel.close();
+      }
     };
     window.addEventListener('keydown', onInventoryKey);
     this.cleanups.push(() => window.removeEventListener('keydown', onInventoryKey));

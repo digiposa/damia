@@ -30,7 +30,10 @@ import { TouchActionButtons } from '@ui/TouchActionButtons';
 import { TouchMenuButtons } from '@ui/TouchMenuButtons';
 import { EncounterIndicator } from '@ui/EncounterIndicator';
 import { CursorOverlay } from '@ui/CursorOverlay';
+import { StatusPanel } from '@ui/StatusPanel';
 import type { Viewport } from 'pixi-viewport';
+import type { Entity, World } from '@core/ecs';
+import type { Components } from '@gameplay/components';
 
 import type { SceneConfig } from './SceneConfig';
 import type { AdditionKind } from '@data/balance';
@@ -77,6 +80,13 @@ export interface GameplayUIMounts {
    *  overlay reads viewport scale to keep its sprite at constant px size
    *  regardless of camera zoom. */
   viewport?: Viewport;
+  /** ECS world snapshot accessor. Required by read-only panels that
+   *  render live component state (StatusPanel, future Magic /
+   *  Additions / Equipment panels). */
+  world: World<Components>;
+  /** Returns the live player entity id, or null when no player is
+   *  spawned yet. */
+  getPlayerId: () => Entity | null;
 }
 
 export class GameplayUI {
@@ -84,6 +94,7 @@ export class GameplayUI {
   readonly hotbar: Hotbar;
   readonly settings: SettingsPanel;
   readonly inventoryPanel: InventoryPanel;
+  readonly statusPanel: StatusPanel;
   readonly toast: Toast;
   readonly additionsBar: AdditionsBar | null;
   readonly additionsPicker: AdditionsPicker | null;
@@ -103,7 +114,7 @@ export class GameplayUI {
     layers: Layers,
     config: SceneConfig,
     handlers: GameplayUIHandlers,
-    mounts: GameplayUIMounts = {},
+    mounts: GameplayUIMounts,
   ) {
     this.touch = isTouchDevice();
     const o = config.overrides ?? {};
@@ -118,6 +129,12 @@ export class GameplayUI {
     this.inventoryPanel = new InventoryPanel(app);
     this.inventoryPanel.setCallbacks(handlers.inventoryCallbacks);
     layers.ui.addChild(this.inventoryPanel.container);
+    // Status panel — read-only TLoD-style character sheet. The world
+    // accessor lets it pull live ECS state without coupling GameplayUI
+    // to the ECS directly (future Magic / Additions / Equipment panels
+    // will share the same accessor).
+    this.statusPanel = new StatusPanel(app, mounts.world, mounts.getPlayerId);
+    layers.ui.addChild(this.statusPanel.container);
 
     // Optional Story / world UI (config-flagged).
     this.minimap =
@@ -178,6 +195,10 @@ export class GameplayUI {
 
       this.touchMenuButtons = new TouchMenuButtons(app, {
         onInventory: handlers.onInventoryToggle,
+        onStatus: () => {
+          if (this.statusPanel.isOpen) this.statusPanel.close();
+          else this.statusPanel.open();
+        },
         onSettings: () => this.settings.toggle(),
         onMute: () => toggleMute(),
         isMuted: () => isMuted(),
@@ -197,7 +218,7 @@ export class GameplayUI {
   /** True while a modal panel (Settings / Inventory) is owning input —
    *  the controller uses this to hard-pause the simulation. */
   isPaused(): boolean {
-    return this.settings.isOpen || this.inventoryPanel.isOpen;
+    return this.settings.isOpen || this.inventoryPanel.isOpen || this.statusPanel.isOpen;
   }
 
   destroy(): void {
@@ -216,5 +237,6 @@ export class GameplayUI {
     this.hud.destroy();
     this.settings.destroy();
     this.inventoryPanel.destroy();
+    this.statusPanel.destroy();
   }
 }

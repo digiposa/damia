@@ -39,6 +39,7 @@ export class TouchMenuButtons {
     app: Application,
     handlers: {
       onInventory: () => void;
+      onStatus: () => void;
       onSettings: () => void;
       onMute: () => void;
       isMuted: () => boolean;
@@ -50,6 +51,7 @@ export class TouchMenuButtons {
     const muteLabel = (): string => (handlers.isMuted() ? '🔇' : '🔊');
     const specs: MenuButtonSpec[] = [
       { label: 'I', onTap: handlers.onInventory },
+      { label: 'C', onTap: handlers.onStatus },
       { label: muteLabel(), onTap: handlers.onMute, getLabel: muteLabel },
       { label: '⚙', onTap: handlers.onSettings },
     ];

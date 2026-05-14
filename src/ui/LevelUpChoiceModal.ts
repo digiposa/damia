@@ -119,6 +119,10 @@ export class LevelUpChoiceModal {
     this.pickHandler = onPick;
     this.opened = true;
     this.container.visible = true;
+    // Raise above any overlay that was addChild'd after us — same
+    // pattern as StatusPanel / SettingsPanel / InventoryPanel.
+    const parent = this.container.parent;
+    if (parent) parent.setChildIndex(this.container, parent.children.length - 1);
     this.disposeCards();
     this.paintBackdrop();
 

@@ -64,6 +64,10 @@ export class AdditionsPicker {
     this.layout();
     this.isOpen = true;
     this.container.visible = true;
+    // Raise above any overlay that was addChild'd after us — same
+    // pattern as StatusPanel / SettingsPanel / InventoryPanel.
+    const parent = this.container.parent;
+    if (parent) parent.setChildIndex(this.container, parent.children.length - 1);
   }
 
   close(): void {

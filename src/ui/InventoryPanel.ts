@@ -196,6 +196,10 @@ export class InventoryPanel {
     this.isOpen = true;
     this.container.visible = true;
     this.setState(state);
+    // Raise above any overlay that was addChild'd after us — same
+    // pattern as StatusPanel / SettingsPanel.
+    const parent = this.container.parent;
+    if (parent) parent.setChildIndex(this.container, parent.children.length - 1);
   }
 
   close(): void {

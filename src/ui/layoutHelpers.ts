@@ -113,3 +113,30 @@ export function mkPanel(opts: { layout?: LayoutStyle } = {}): LayoutContainer {
     },
   });
 }
+
+/**
+ * Standard "×" close button used by modal panels (top-right corner).
+ * Tap fires `onTap`. The returned container is a 28 × 28 leaf so it
+ * fits naturally into a flex header row (`justify-content: flex-end`).
+ */
+export function mkCloseButton(onTap: () => void): Container {
+  const c = new Container({ label: 'modal-close' });
+  const bg = new Graphics()
+    .roundRect(0, 0, 28, 28, 4)
+    .fill({ color: COLORS.buttonBg, alpha: 0.95 })
+    .stroke({ width: 1, color: COLORS.border, alpha: 0.9 });
+  const x = new Text({
+    text: '×',
+    style: { fill: COLORS.textValue, fontSize: 22, fontWeight: 'bold' },
+  });
+  // Center the × glyph inside the 28 px button. The glyph's natural
+  // bounds aren't centered on its baseline, so a tiny manual offset
+  // looks better than relying on text-align.
+  x.position.set(9, 0);
+  c.addChild(bg, x);
+  c.eventMode = 'static';
+  c.cursor = 'pointer';
+  c.on('pointertap', onTap);
+  c.layout = { width: 28, height: 28, isLeaf: true };
+  return c;
+}

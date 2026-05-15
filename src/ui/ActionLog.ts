@@ -1,6 +1,7 @@
 import type { Application } from 'pixi.js';
 import { Container, Text } from 'pixi.js';
 import { SafeArea } from '@services/SafeArea';
+import { COLORS, TEXT } from './theme';
 
 const MAX_LINES = 3;
 const LINE_HEIGHT = 22;
@@ -34,10 +35,11 @@ export class ActionLog {
     const text = new Text({
       text: message,
       style: {
-        fontFamily: 'system-ui, sans-serif',
+        ...TEXT.value,
+        fontWeight: 'normal',
         fontSize: 14,
-        fill: 0xfaf6e8,
-        stroke: { color: 0x000000, width: 3 },
+        fill: COLORS.textCream,
+        stroke: { color: COLORS.textStroke, width: 3 },
       },
     });
     text.anchor.set(1, 1); // bottom-right

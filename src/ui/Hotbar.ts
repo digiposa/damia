@@ -5,6 +5,7 @@ import { ITEMS, type ItemKind } from '@data/items';
 import { t } from '@services/I18nService';
 import { SafeArea } from '@services/SafeArea';
 import { paintAdditionSlot, paintItemSlot } from './slot';
+import { COLORS, TEXT } from './theme';
 import { Tooltip } from './Tooltip';
 
 /** Visible hotbar slot count. Held at 6 for the mobile-portrait layout —
@@ -93,8 +94,8 @@ export class Hotbar {
       const x = i * (SLOT_SIZE + SLOT_GAP);
       const slot = new Graphics()
         .roundRect(x, 0, SLOT_SIZE, SLOT_SIZE, 5)
-        .fill({ color: 0x101010, alpha: 0.7 })
-        .stroke({ width: 1, color: 0x806040, alpha: 0.8 });
+        .fill({ color: COLORS.cardBg, alpha: 0.7 })
+        .stroke({ width: 1, color: COLORS.slotKeyLabel, alpha: 0.8 });
       // Make the slot frame interactive for hover tooltips + taps. An
       // explicit hitArea overrides the default geometry-bounds rule so
       // taps that drift a few pixels past the visible edge still count
@@ -122,7 +123,7 @@ export class Hotbar {
       });
       const label = new Text({
         text: String(i + 1),
-        style: { fontFamily: 'system-ui, sans-serif', fontSize: 11, fill: 0xa08050 },
+        style: { ...TEXT.gauge, fontWeight: 'normal', fill: COLORS.border },
       });
       label.position.set(x + 4, 3);
       label.eventMode = 'none';
@@ -221,7 +222,7 @@ export class Hotbar {
           lock
             .clear()
             .roundRect(0, 0, SLOT_SIZE, SLOT_SIZE, 5)
-            .fill({ color: 0x000000, alpha: 0.55 });
+            .fill({ color: COLORS.textStroke, alpha: 0.55 });
           lock.visible = true;
         } else {
           lock.visible = false;
@@ -261,7 +262,10 @@ export class Hotbar {
       }
       const remaining = until - now;
       const alpha = Math.min(0.55, (remaining / FLASH_MS) * 0.55);
-      flash.clear().roundRect(0, 0, SLOT_SIZE, SLOT_SIZE, 5).fill({ color: 0xfaf6e8, alpha });
+      flash
+        .clear()
+        .roundRect(0, 0, SLOT_SIZE, SLOT_SIZE, 5)
+        .fill({ color: COLORS.textCream, alpha });
       flash.visible = true;
     }
   }

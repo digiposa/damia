@@ -1,8 +1,9 @@
-import type { Container} from 'pixi.js';
+import type { Container } from 'pixi.js';
 import { Graphics, Sprite as PixiSprite, Text } from 'pixi.js';
 import { ADDITIONS, type AdditionKind } from '@data/balance';
 import { ITEMS, type ItemKind } from '@data/items';
 import { AssetManager } from '@services/AssetManager';
+import { COLORS, TEXT } from './theme';
 
 /**
  * Shared slot painters used by Hotbar / AdditionsBar / InventoryPanel. The
@@ -38,7 +39,7 @@ export function paintItemSlot(container: Container, kind: ItemKind, opts: SlotPa
       new Graphics()
         .circle(opts.size / 2, opts.size / 2 + 1, 12)
         .fill(def.sprite.color)
-        .stroke({ color: 0x101010, width: 1, alpha: 0.8 }),
+        .stroke({ color: COLORS.cardBg, width: 1, alpha: 0.8 }),
     );
   }
 
@@ -46,11 +47,10 @@ export function paintItemSlot(container: Container, kind: ItemKind, opts: SlotPa
     const countText = new Text({
       text: String(opts.count),
       style: {
-        fontFamily: 'system-ui, sans-serif',
-        fontSize: 12,
-        fill: opts.count > 0 ? 0xffffff : 0x808080,
+        ...TEXT.cellValue,
         fontWeight: 'bold',
-        stroke: { color: 0x000000, width: 2 },
+        fill: opts.count > 0 ? COLORS.textValue : COLORS.textMuted,
+        stroke: { color: COLORS.textStroke, width: 2 },
       },
     });
     countText.anchor.set(1, 1);
@@ -62,7 +62,7 @@ export function paintItemSlot(container: Container, kind: ItemKind, opts: SlotPa
     container.addChild(
       new Graphics()
         .rect(0, opts.size * (1 - opts.cooldownFrac), opts.size, opts.size * opts.cooldownFrac)
-        .fill({ color: 0x000000, alpha: 0.55 }),
+        .fill({ color: COLORS.textStroke, alpha: 0.55 }),
     );
   }
 }
@@ -79,12 +79,7 @@ export function paintAdditionSlot(
       .split(' ')
       .map((w) => w[0])
       .join(''),
-    style: {
-      fontFamily: 'system-ui, sans-serif',
-      fontSize: 18,
-      fill: 0xe8d8a0,
-      fontWeight: 'bold',
-    },
+    style: { ...TEXT.title, fontSize: 18, fill: COLORS.textCream },
   });
   tag.anchor.set(0.5);
   tag.position.set(opts.size / 2, opts.size / 2 + 1);
@@ -94,7 +89,7 @@ export function paintAdditionSlot(
     container.addChild(
       new Graphics()
         .rect(0, opts.size * (1 - opts.cooldownFrac), opts.size, opts.size * opts.cooldownFrac)
-        .fill({ color: 0x000000, alpha: 0.55 }),
+        .fill({ color: COLORS.textStroke, alpha: 0.55 }),
     );
   }
 }
@@ -104,9 +99,9 @@ export function paintSlotFrame(g: Graphics, size: number, selected = false): Gra
   return g
     .clear()
     .roundRect(0, 0, size, size, 4)
-    .fill({ color: 0x101010, alpha: 0.7 })
+    .fill({ color: COLORS.cardBg, alpha: 0.7 })
     .stroke({
-      color: selected ? 0xeec040 : 0x806040,
+      color: selected ? COLORS.gold : COLORS.slotKeyLabel,
       width: selected ? 2 : 1,
       alpha: selected ? 1 : 0.7,
     });

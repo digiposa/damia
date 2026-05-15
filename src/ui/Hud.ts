@@ -4,6 +4,7 @@ import { t } from '@services/I18nService';
 import { AssetManager } from '@services/AssetManager';
 import { SafeArea } from '@services/SafeArea';
 import { isTouchDevice } from '@services/Device';
+import { COLORS, TEXT } from './theme';
 
 const PORTRAIT_SIZE = 72;
 const BAR_WIDTH = 200;
@@ -11,17 +12,15 @@ const BAR_HEIGHT = 14;
 const PADDING = 12;
 const BAR_GAP = 6;
 
-const HP_BG = 0x3a0808;
-const HP_FG = 0xd03030;
-const SP_BG = 0x0a1a3a;
-const SP_FG = 0x4a8fff;
-const MP_BG = 0x1a0a3a;
-const MP_FG = 0xb574ff;
-const XP_FG = 0xeec040;
-
 /**
- * Bottom-left HUD: portrait, HP bar, SP bar.
- * `update(world, playerId)` is called each frame from the scene.
+ * Top-left HUD: portrait, HP/SP/MP bars, level pip, gold + XP + zoom
+ * counters. Pure renderer — `update(world, playerId)` is called each
+ * frame from the scene; the HUD just exposes typed setters and never
+ * reads world state directly.
+ *
+ * Positioning is precise + corner-anchored (not flex-based), so this
+ * module composes its visuals from theme tokens (`COLORS` / `TEXT`)
+ * instead of the layout helpers used by modal panels.
  */
 export class Hud {
   readonly container: Container;
@@ -39,13 +38,14 @@ export class Hud {
   constructor(app: Application) {
     this.container = new Container({ label: 'hud' });
 
-    // Portrait frame + Dart picture (M8). The square frame stays as a backing
-    // so the portrait reads even on busy backgrounds; we sit a fitted Pixi.Sprite
-    // on top. Falls back to the localised text label when the asset is missing.
+    // Portrait frame + Dart picture. The square frame stays as a
+    // backing so the portrait reads even on busy backgrounds; a fitted
+    // Pixi.Sprite sits on top, with a text fallback when the asset
+    // isn't loaded.
     const portraitBg = new Graphics()
       .roundRect(0, 0, PORTRAIT_SIZE, PORTRAIT_SIZE, 6)
-      .fill(0x202020)
-      .stroke({ width: 2, color: 0xa08050, alpha: 0.9 });
+      .fill(COLORS.portraitBg)
+      .stroke({ width: 2, color: COLORS.border, alpha: 0.9 });
     const portraitTex = AssetManager.getTexture('ui.portrait.dart');
     const portraitVisual: PixiSprite | Text = portraitTex
       ? (() => {
@@ -62,12 +62,7 @@ export class Hud {
       : (() => {
           const text = new Text({
             text: t('hud.dart'),
-            style: {
-              fontFamily: 'system-ui, sans-serif',
-              fontSize: 14,
-              fill: 0xfaf6e8,
-              fontWeight: 'bold',
-            },
+            style: { ...TEXT.value, fill: COLORS.textCream },
           });
           text.anchor.set(0.5);
           text.position.set(PORTRAIT_SIZE / 2, PORTRAIT_SIZE / 2);
@@ -75,107 +70,76 @@ export class Hud {
         })();
 
     const barsX = PORTRAIT_SIZE + 10;
+    const barLabelStyle = { ...TEXT.gauge, fontSize: 12, fill: COLORS.textCream };
+    const counterStyle = {
+      ...TEXT.value,
+      fontSize: 13,
+      fill: COLORS.gold,
+      stroke: { color: COLORS.textStroke, width: 2 },
+    };
 
     // HP
-    const hpBg = new Graphics().roundRect(barsX, 4, BAR_WIDTH, BAR_HEIGHT, 3).fill(HP_BG);
+    const hpBg = new Graphics().roundRect(barsX, 4, BAR_WIDTH, BAR_HEIGHT, 3).fill(COLORS.hpBg);
     this.hpBar = new Graphics();
-    this.hpText = new Text({
-      text: '',
-      style: {
-        fontFamily: 'system-ui, sans-serif',
-        fontSize: 12,
-        fill: 0xfaf6e8,
-        fontWeight: 'bold',
-      },
-    });
+    this.hpText = new Text({ text: '', style: barLabelStyle });
     this.hpText.position.set(barsX + 6, 5);
 
     // SP
     const spY = 4 + BAR_HEIGHT + BAR_GAP;
-    const spBg = new Graphics().roundRect(barsX, spY, BAR_WIDTH, BAR_HEIGHT, 3).fill(SP_BG);
+    const spBg = new Graphics().roundRect(barsX, spY, BAR_WIDTH, BAR_HEIGHT, 3).fill(COLORS.spBg);
     this.spBar = new Graphics();
-    this.spText = new Text({
-      text: '',
-      style: {
-        fontFamily: 'system-ui, sans-serif',
-        fontSize: 12,
-        fill: 0xfaf6e8,
-        fontWeight: 'bold',
-      },
-    });
+    this.spText = new Text({ text: '', style: barLabelStyle });
     this.spText.position.set(barsX + 6, spY + 1);
 
-    // MP — third bar, below SP. Currently a placeholder (Dragoon system not
-    // wired yet) but exposed so the HUD layout doesn't shift later.
+    // MP — third bar, below SP. Currently a placeholder (Dragoon
+    // system not wired yet) but exposed so the HUD layout doesn't
+    // shift later.
     const mpY = spY + BAR_HEIGHT + BAR_GAP;
-    const mpBg = new Graphics().roundRect(barsX, mpY, BAR_WIDTH, BAR_HEIGHT, 3).fill(MP_BG);
+    const mpBg = new Graphics().roundRect(barsX, mpY, BAR_WIDTH, BAR_HEIGHT, 3).fill(COLORS.mpBg);
     this.mpBar = new Graphics();
-    this.mpText = new Text({
-      text: '',
-      style: {
-        fontFamily: 'system-ui, sans-serif',
-        fontSize: 12,
-        fill: 0xfaf6e8,
-        fontWeight: 'bold',
-      },
-    });
+    this.mpText = new Text({ text: '', style: barLabelStyle });
     this.mpText.position.set(barsX + 6, mpY + 1);
 
-    // Gold counter — sits below the MP bar so it doesn't shove the bars around
-    // when it gains digits.
-    this.goldText = new Text({
-      text: '',
-      style: {
-        fontFamily: 'system-ui, sans-serif',
-        fontSize: 13,
-        fill: 0xeec040,
-        fontWeight: 'bold',
-        stroke: { color: 0x000000, width: 2 },
-      },
-    });
+    // Gold counter — sits below the MP bar so it doesn't shove the
+    // bars around when it gains digits.
+    this.goldText = new Text({ text: '', style: counterStyle });
     this.goldText.position.set(barsX, mpY + BAR_HEIGHT + 4);
 
-    // XP counter — text-only, just under the MP bar next to the gold counter.
-    // Update is cheap (text change on level-up / kill); no progress bar yet.
+    // XP counter — text-only, just under the MP bar next to the gold
+    // counter. No progress bar yet; update is cheap (text change on
+    // level-up / kill).
     this.xpText = new Text({
       text: '',
-      style: {
-        fontFamily: 'system-ui, sans-serif',
-        fontSize: 12,
-        fill: XP_FG,
-        fontWeight: 'bold',
-        stroke: { color: 0x000000, width: 2 },
-      },
+      style: { ...counterStyle, fontSize: 12 },
     });
     this.xpText.position.set(barsX + 90, mpY + BAR_HEIGHT + 4);
 
-    // Zoom indicator — small read-out so the player can gauge sprite scale.
-    // Sits at the far right of the gold/xp line.
+    // Zoom indicator — small read-out so the player can gauge sprite
+    // scale. Sits at the far right of the gold/xp line. Hidden on
+    // touch — no zoom control there (pan/wheel disabled, no pinch
+    // yet) and the label was overlapping with the menu-button column
+    // on narrow phones.
     this.zoomText = new Text({
       text: '',
       style: {
-        fontFamily: 'system-ui, sans-serif',
+        ...TEXT.muted,
         fontSize: 12,
-        fill: 0xc8b58a,
-        stroke: { color: 0x000000, width: 2 },
+        fill: COLORS.textSand,
+        stroke: { color: COLORS.textStroke, width: 2 },
       },
     });
     this.zoomText.position.set(barsX + 200, mpY + BAR_HEIGHT + 4);
-    // Hide on touch — the player has no zoom control there (pan/wheel are
-    // disabled, no pinch yet) and the label was overlapping with the
-    // vertical menu-button column on narrow phones.
     this.zoomText.visible = !isTouchDevice();
 
-    // Level pip — top-left of the portrait, small badge so it doesn't compete
-    // with the portrait art.
+    // Level pip — top-left of the portrait, small badge so it doesn't
+    // compete with the portrait art.
     this.levelText = new Text({
       text: 'LV 1',
       style: {
-        fontFamily: 'system-ui, sans-serif',
+        ...TEXT.value,
         fontSize: 12,
-        fill: 0xfaf6e8,
-        fontWeight: 'bold',
-        stroke: { color: 0x000000, width: 3 },
+        fill: COLORS.textCream,
+        stroke: { color: COLORS.textStroke, width: 3 },
       },
     });
     this.levelText.position.set(4, 4);
@@ -207,7 +171,7 @@ export class Hud {
     this.hpBar
       .clear()
       .roundRect(PORTRAIT_SIZE + 10, 4, BAR_WIDTH * ratio, BAR_HEIGHT, 3)
-      .fill(HP_FG);
+      .fill(COLORS.hpFg);
     this.hpText.text = `HP ${Math.round(current)} / ${max}`;
   }
 
@@ -216,7 +180,9 @@ export class Hud {
     const spY = 4 + BAR_HEIGHT + BAR_GAP;
     this.spBar.clear();
     if (!locked) {
-      this.spBar.roundRect(PORTRAIT_SIZE + 10, spY, BAR_WIDTH * ratio, BAR_HEIGHT, 3).fill(SP_FG);
+      this.spBar
+        .roundRect(PORTRAIT_SIZE + 10, spY, BAR_WIDTH * ratio, BAR_HEIGHT, 3)
+        .fill(COLORS.spFg);
       this.spText.text = `SP ${Math.round(current)} / ${max}`;
     } else {
       // Locked: empty bar slot, "—" label. Keeps the layout stable so
@@ -233,7 +199,7 @@ export class Hud {
     this.mpBar
       .clear()
       .roundRect(PORTRAIT_SIZE + 10, mpY, BAR_WIDTH * ratio, BAR_HEIGHT, 3)
-      .fill(MP_FG);
+      .fill(COLORS.mpFg);
     this.mpText.text = `MP ${Math.round(current)} / ${max}`;
   }
 
@@ -258,12 +224,12 @@ export class Hud {
   }
 
   private reposition(): void {
-    // Top-left on mobile portrait: bottom-anchoring buried the HUD under
-    // the joystick + hotbar + EXP bar. The HUD is internally laid out
-    // around (0, 0) so its origin is also the top-left of the portrait
-    // frame — pin it directly to the top-left corner. Safe-area insets
-    // push the anchor clear of the notch / Dynamic Island on iPhone and
-    // status bars / cutouts on Android.
+    // Top-left on mobile portrait: bottom-anchoring buried the HUD
+    // under the joystick + hotbar + EXP bar. The HUD is internally
+    // laid out around (0, 0) so its origin is also the top-left of
+    // the portrait frame — pin it directly to the top-left corner.
+    // Safe-area insets push the anchor clear of the notch / Dynamic
+    // Island on iPhone and status bars / cutouts on Android.
     this.container.position.set(PADDING + SafeArea.left, PADDING + SafeArea.top);
   }
 }

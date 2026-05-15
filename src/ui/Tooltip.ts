@@ -1,4 +1,5 @@
 import { Container, Graphics, Text } from 'pixi.js';
+import { COLORS, TEXT } from './theme';
 
 const PAD_X = 8;
 const PAD_Y = 6;
@@ -23,12 +24,7 @@ export class Tooltip {
     this.bg = new Graphics();
     this.text = new Text({
       text: '',
-      style: {
-        fontFamily: 'system-ui, sans-serif',
-        fontSize: 12,
-        fill: 0xfaf6e8,
-        align: 'center',
-      },
+      style: { ...TEXT.cellValue, fill: COLORS.textCream, align: 'center' },
     });
     this.node.addChild(this.bg, this.text);
   }
@@ -43,8 +39,8 @@ export class Tooltip {
     this.bg
       .clear()
       .roundRect(0, 0, w, h, 4)
-      .fill({ color: 0x101010, alpha: 0.92 })
-      .stroke({ color: 0xa08050, width: 1, alpha: 0.85 });
+      .fill({ color: COLORS.cardBg, alpha: 0.92 })
+      .stroke({ color: COLORS.border, width: 1, alpha: 0.85 });
     this.text.position.set(PAD_X, PAD_Y);
   }
 

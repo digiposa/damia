@@ -2,6 +2,7 @@ import type { Application } from 'pixi.js';
 import { Container, Text } from 'pixi.js';
 import { t } from '@services/I18nService';
 import { SafeArea } from '@services/SafeArea';
+import { COLORS, TEXT } from './theme';
 
 /** Offset from the very top, in addition to SafeArea.top. Sits below the
  *  shared Hud strip (portrait + bars + level/xp + gold), which extends
@@ -11,10 +12,7 @@ const SECTION_GAP = 4;
 const TIMER_HEIGHT = 32;
 const SUBLINE_HEIGHT = 18;
 
-const STROKE = { color: 0x000000, width: 3 } as const;
-const TIMER_COLOR = 0xfaf6e8;
-const WAVE_COLOR = 0xeec040;
-const KILLS_COLOR = 0xfaf6e8;
+const STROKE = { color: COLORS.textStroke, width: 3 } as const;
 
 export interface SurvivalHUDState {
   /** Run elapsed time in ms. */
@@ -50,37 +48,19 @@ export class SurvivalHUD {
 
     this.timerText = new Text({
       text: '0:00',
-      style: {
-        fontFamily: 'system-ui, sans-serif',
-        fontSize: 28,
-        fill: TIMER_COLOR,
-        fontWeight: 'bold',
-        stroke: STROKE,
-      },
+      style: { ...TEXT.title, fontSize: 28, fill: COLORS.textCream, stroke: STROKE },
     });
     this.timerText.anchor.set(0.5, 0);
 
     this.waveText = new Text({
       text: '',
-      style: {
-        fontFamily: 'system-ui, sans-serif',
-        fontSize: 14,
-        fill: WAVE_COLOR,
-        fontWeight: 'bold',
-        stroke: STROKE,
-      },
+      style: { ...TEXT.value, fontSize: 14, fill: COLORS.gold, stroke: STROKE },
     });
     this.waveText.anchor.set(0.5, 0);
 
     this.killsText = new Text({
       text: '',
-      style: {
-        fontFamily: 'system-ui, sans-serif',
-        fontSize: 13,
-        fill: KILLS_COLOR,
-        fontWeight: 'bold',
-        stroke: STROKE,
-      },
+      style: { ...TEXT.value, fontSize: 13, fill: COLORS.textCream, stroke: STROKE },
     });
     this.killsText.anchor.set(0.5, 0);
 

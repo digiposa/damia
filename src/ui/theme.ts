@@ -31,6 +31,15 @@ export const COLORS = {
   borderActive: 0xeec040,
   /** Gold accent for XP / titles / rare-pip rarity. */
   gold: 0xeec040,
+  /** Drop-shadow / outline stroke used by overlay Text to stay
+   *  readable against the game world. */
+  textStroke: 0x000000,
+  /** Portrait frame background — neutral dark gray, so the avatar
+   *  reads even on busy zones. Distinct from the bluish panelBg. */
+  portraitBg: 0x202020,
+  /** Hotbar / inventory slot index label — dim brown, half a shade
+   *  darker than `border`, so the digit fades behind the icon. */
+  slotKeyLabel: 0x806040,
 
   /** High-contrast white for numeric values, names. */
   textValue: 0xffffff,

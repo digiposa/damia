@@ -34,6 +34,10 @@ export abstract class Modal {
    *  for flex-based modals, or a plain `Container` for legacy modals
    *  with manual positioning). */
   protected panel: Container | null = null;
+  /** Override in subclasses to cap the panel's vertical footprint at
+   *  something smaller than `MODAL.maxHeight`. The panel is always
+   *  clamped against `screen.height - MODAL.margin` on top of this. */
+  protected panelMaxHeight: number = MODAL.maxHeight;
   private isOpen_ = false;
   private readonly cleanups: Array<() => void> = [];
 
@@ -119,7 +123,7 @@ export abstract class Modal {
   protected applyPanelSize(): void {
     if (!this.panel) return;
     const w = Math.min(MODAL.maxWidth, this.app.screen.width - MODAL.margin);
-    const h = Math.min(MODAL.maxHeight, this.app.screen.height - MODAL.margin);
+    const h = Math.min(this.panelMaxHeight, this.app.screen.height - MODAL.margin);
     // The layout mixin tolerates being set on any Container — and on
     // panels that already have `.layout` (StatusPanel etc.) we merge
     // the existing style + the new width/height.

@@ -32,6 +32,13 @@ export class AdditionsPicker extends Modal {
   private card: Container | null = null;
   private grid: Container | null = null;
   private onSelectCb: ((kind: AdditionKind) => void) | null = null;
+  /** Stashed per-open arguments. The grid is created lazily in
+   *  `buildPanel()` (= first call to `super.open()`), so `rebuildGrid`
+   *  can't run from inside our `open()` override on the very first
+   *  open. Defer the rebuild to `onOpen()` which fires after the panel
+   *  is mounted. */
+  private pendingUnlocked: ReadonlyArray<AdditionKind> | null = null;
+  private pendingCurrent: AdditionKind | null = null;
 
   constructor(app: Application) {
     super(app, 'additions-picker');
@@ -52,10 +59,19 @@ export class AdditionsPicker extends Modal {
   ): void {
     if (onSelect) this.onSelectCb = onSelect;
     if (unlocked && current !== undefined) {
-      this.rebuildGrid(unlocked, current);
-      this.layout();
+      this.pendingUnlocked = unlocked;
+      this.pendingCurrent = current;
     }
     super.open();
+  }
+
+  protected override onOpen(): void {
+    if (this.pendingUnlocked && this.pendingCurrent !== null) {
+      this.rebuildGrid(this.pendingUnlocked, this.pendingCurrent);
+      this.layout();
+      this.pendingUnlocked = null;
+      this.pendingCurrent = null;
+    }
   }
 
   protected override onClose(): void {

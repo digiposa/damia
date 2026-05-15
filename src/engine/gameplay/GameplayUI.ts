@@ -142,7 +142,11 @@ export class GameplayUI {
         ? new MiniMap(app, { fog: mounts.fog, pathZones: mounts.pathZones ?? [] })
         : null;
     this.zoneTitle = o.showZoneTitle ? new ZoneTitle(app) : null;
-    this.actionLog = o.showActionLog ? new ActionLog(app) : null;
+    // ActionLog is bottom-right anchored, which collides with the touch
+    // action-button column on mobile portrait — skip it there. Toasts +
+    // floating damage numbers still cover the kill / XP / drop feedback
+    // surface on touch.
+    this.actionLog = o.showActionLog && !this.touch ? new ActionLog(app) : null;
     this.encounterIndicator = o.showEncounterIndicator ? new EncounterIndicator() : null;
     if (this.encounterIndicator) layers.fx.addChild(this.encounterIndicator.node);
 
@@ -166,7 +170,7 @@ export class GameplayUI {
       layers.ui.addChild(this.additionsBar.container);
     }
 
-    layers.ui.addChild(this.hud.container, this.hotbar.container, this.settings.container);
+    layers.ui.addChild(this.hud.container, this.settings.container);
     if (this.minimap) layers.ui.addChild(this.minimap.container);
     if (this.zoneTitle) layers.ui.addChild(this.zoneTitle.container);
     if (this.actionLog) layers.ui.addChild(this.actionLog.container);
@@ -213,6 +217,12 @@ export class GameplayUI {
       this.touchMenuButtons = null;
       this.additionsPicker = null;
     }
+
+    // Hotbar mounts LAST among non-modal UIs so its hover tooltip paints
+    // above the joystick / action-button siblings. The slot frames don't
+    // overlap with those widgets visually — only the floating tooltip
+    // needed the higher z-order.
+    layers.ui.addChild(this.hotbar.container);
   }
 
   /** True while a modal panel (Settings / Inventory) is owning input —

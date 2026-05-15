@@ -1,8 +1,14 @@
 import { Graphics } from 'pixi.js';
+import { COLORS } from './theme';
 
 const TRIANGLE_HALF_WIDTH = 8;
 const TRIANGLE_HEIGHT = 10;
-const STROKE_COLOR = 0x101010;
+/** Encounter-meter severity tints. Local because they're scoped to this
+ *  indicator — promoting them to theme would lock in semantics that
+ *  no other widget needs. */
+const SAFE_COLOR = 0x4f8bff;
+const CAUTION_COLOR = 0xffd166;
+const DANGER_COLOR = 0xe53935;
 
 /**
  * TLoD-style encounter indicator: a small downward-pointing triangle floating
@@ -38,10 +44,10 @@ export class EncounterIndicator {
 
     let color: number;
     let alpha = 1;
-    if (clamped < 0.5) color = 0x4f8bff;
-    else if (clamped < 0.85) color = 0xffd166;
+    if (clamped < 0.5) color = SAFE_COLOR;
+    else if (clamped < 0.85) color = CAUTION_COLOR;
     else {
-      color = 0xe53935;
+      color = DANGER_COLOR;
       alpha = 0.65 + 0.35 * Math.abs(Math.sin(this.pulseMs * 0.012));
     }
 
@@ -52,7 +58,7 @@ export class EncounterIndicator {
       this.node
         .poly([-TRIANGLE_HALF_WIDTH, -TRIANGLE_HEIGHT, TRIANGLE_HALF_WIDTH, -TRIANGLE_HEIGHT, 0, 0])
         .fill(color)
-        .stroke({ color: STROKE_COLOR, width: 1, alpha: 0.7 });
+        .stroke({ color: COLORS.textStroke, width: 1, alpha: 0.7 });
       this.lastShape = true;
       this.lastColor = color;
     }

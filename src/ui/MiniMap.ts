@@ -8,12 +8,25 @@ import type { FogOfWar } from '@services/FogOfWar';
 import { SafeArea } from '@services/SafeArea';
 import { TOUCH_MENU_STACK_HEIGHT } from './TouchMenuButtons';
 import { isTouchDevice } from '@services/Device';
+import { COLORS } from './theme';
 
 /** Bounding-box budget for the rendered iso diamond. Sized for portrait
  *  mobile: a 200 px diamond drowned the EXP / Zoom readouts on a 360 px
  *  wide screen. */
 const MAP_FIT_PX = 110;
 const PADDING = 12;
+
+/** Path-zone fill — warm brown so the road reads on the dark backdrop. */
+const PATH_ZONE_COLOR = 0x6e4a2c;
+/** Transition exit dot (zone-to-zone door) — golden so it reads as
+ *  "interactive destination" without competing with the player blip. */
+const EXIT_TRANSITION_COLOR = 0xffd060;
+/** Non-transition exit dot (despawn / cleared) — neutral gray. */
+const EXIT_OTHER_COLOR = 0x808080;
+/** Enemy blip — bright red so it stays visible against the dark fog. */
+const ENEMY_DOT_COLOR = 0xff6060;
+/** Player blip — cyan-blue so it stands out from the enemy red. */
+const PLAYER_DOT_COLOR = 0x60d8ff;
 
 interface MiniMapOptions {
   /** Shared per-zone fog state. The MiniMap reads from it to paint the fog
@@ -82,8 +95,8 @@ export class MiniMap {
         0,
         this.bboxH / 2,
       ])
-      .fill({ color: 0x000000, alpha: 0.6 })
-      .stroke({ width: 1, color: 0xa08050, alpha: 0.7 });
+      .fill({ color: COLORS.textStroke, alpha: 0.6 })
+      .stroke({ width: 1, color: COLORS.border, alpha: 0.7 });
 
     // Path zones become parallelograms (4 grid corners projected through iso).
     this.staticLayer = new Graphics();
@@ -98,7 +111,7 @@ export class MiniMap {
       const d = this.projectGrid(x0, y1);
       this.staticLayer
         .poly([a.x, a.y, b.x, b.y, c.x, c.y, d.x, d.y])
-        .fill({ color: 0x6e4a2c, alpha: 0.6 });
+        .fill({ color: PATH_ZONE_COLOR, alpha: 0.6 });
     }
 
     this.dynamicLayer = new Graphics();
@@ -154,7 +167,7 @@ export class MiniMap {
             p.x - cellW / 2,
             p.y,
           ])
-          .fill({ color: 0x000000, alpha: 0.85 });
+          .fill({ color: COLORS.textStroke, alpha: 0.85 });
       }
     }
 
@@ -165,7 +178,7 @@ export class MiniMap {
       if (!e) continue;
       // Don't reveal exits in unexplored cells.
       if (!this.fog.isRevealed(e.gx, e.gy)) continue;
-      const color = e.kind === 'transition' ? 0xffd060 : 0x808080;
+      const color = e.kind === 'transition' ? EXIT_TRANSITION_COLOR : EXIT_OTHER_COLOR;
       this.dot(g, e.gx, e.gy, 4, color);
     }
 
@@ -179,10 +192,10 @@ export class MiniMap {
       const gy = Math.round(grid.y);
       // Hide enemy dots in fog — only show what the player can "see".
       if (!this.fog.isRevealed(gx, gy)) continue;
-      this.dot(g, gx, gy, 3, 0xff6060);
+      this.dot(g, gx, gy, 3, ENEMY_DOT_COLOR);
     }
 
-    if (playerGx >= 0) this.dot(g, playerGx, playerGy, 4, 0x60d8ff);
+    if (playerGx >= 0) this.dot(g, playerGx, playerGy, 4, PLAYER_DOT_COLOR);
   }
 
   destroy(): void {

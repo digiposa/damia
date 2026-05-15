@@ -1,6 +1,7 @@
 import type { Application } from 'pixi.js';
 import { Container, Text } from 'pixi.js';
 import { SafeArea } from '@services/SafeArea';
+import { COLORS, TEXT } from './theme';
 
 const FADE_IN_MS = 500;
 const HOLD_MS = 2500;
@@ -24,11 +25,10 @@ export class ZoneTitle {
     this.title = new Text({
       text: '',
       style: {
-        fontFamily: 'system-ui, sans-serif',
+        ...TEXT.title,
         fontSize: 38,
-        fill: 0xfaf6e8,
-        fontWeight: 'bold',
-        stroke: { color: 0x000000, width: 4 },
+        fill: COLORS.textCream,
+        stroke: { color: COLORS.textStroke, width: 4 },
       },
     });
     this.title.anchor.set(0.5, 0);
@@ -36,10 +36,10 @@ export class ZoneTitle {
     this.subtitle = new Text({
       text: '',
       style: {
-        fontFamily: 'system-ui, sans-serif',
+        ...TEXT.label,
         fontSize: 16,
-        fill: 0xc8b58a,
-        stroke: { color: 0x000000, width: 3 },
+        fill: COLORS.textSand,
+        stroke: { color: COLORS.textStroke, width: 3 },
       },
     });
     this.subtitle.anchor.set(0.5, 0);

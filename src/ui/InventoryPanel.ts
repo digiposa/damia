@@ -133,7 +133,7 @@ export class InventoryPanel extends Modal {
         fill: COLORS.gold,
         fontSize: 16,
         fontWeight: 'bold',
-        stroke: { color: 0x000000, width: 2 },
+        stroke: { color: COLORS.textStroke, width: 2 },
       },
     });
     this.goldText.anchor.set(1, 0);
@@ -167,7 +167,7 @@ export class InventoryPanel extends Modal {
     const hintY = hotbarLabelY + HOTBAR_LABEL_HEIGHT + SLOT_SIZE + PADDING;
     this.hintText = new Text({
       text: t('inventory.hint'),
-      style: { fill: 0x806040, fontSize: 11 },
+      style: { fill: COLORS.slotKeyLabel, fontSize: 11 },
     });
     this.hintText.position.set(PADDING, hintY);
     panel.addChild(this.hintText);

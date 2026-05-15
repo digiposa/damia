@@ -15,6 +15,16 @@ const MODAL_MARGIN_X = 16;
 const MODAL_MAX_WIDTH = 360;
 const SUBTITLE_GAP = 8;
 const HEADER_TO_CARDS_GAP = 24;
+/** Subtitle tint — muted slate gray. File-local because the level-up
+ *  modal is the only widget using this exact slate (other modals lean
+ *  on `textMuted` / `textLabel`). */
+const SUBTITLE_COLOR = 0xa9b3c7;
+/** Pip-label face — near-black so the upgrade initial reads against
+ *  the rarity-tinted pip background. */
+const PIP_LABEL_COLOR = 0x1a1a1f;
+/** Card description text — lighter slate so it sits clearly under the
+ *  brighter card name. */
+const CARD_DESC_COLOR = 0xc4cad6;
 
 export type LevelUpPickHandler = (kind: UpgradeKind) => void;
 
@@ -60,7 +70,7 @@ export class LevelUpChoiceModal extends Modal {
 
     this.subtitle = new Text({
       text: t('survival.levelup.subtitle'),
-      style: { fill: 0xa9b3c7, fontSize: 14, fontStyle: 'italic' },
+      style: { fill: SUBTITLE_COLOR, fontSize: 14, fontStyle: 'italic' },
     });
     this.subtitle.anchor.set(0.5, 0);
 
@@ -148,7 +158,7 @@ export class LevelUpChoiceModal extends Modal {
       .stroke({ width: 2, color: COLORS.textStroke, alpha: 0.4 });
     const pipLabel = new Text({
       text: kind.charAt(0).toUpperCase(),
-      style: { fontSize: 26, fill: 0x1a1a1f, fontWeight: 'bold' },
+      style: { fontSize: 26, fill: PIP_LABEL_COLOR, fontWeight: 'bold' },
     });
     pipLabel.anchor.set(0.5);
     pipLabel.position.set(CARD_PADDING_X + CARD_PIP_SIZE / 2, pipY + CARD_PIP_SIZE / 2);
@@ -169,7 +179,7 @@ export class LevelUpChoiceModal extends Modal {
     name.position.set(textX, 14);
     const desc = new Text({
       text: t(def.descKey, def.args ?? {}),
-      style: { fill: 0xc4cad6, fontSize: 13, wordWrap: true, wordWrapWidth: textW },
+      style: { fill: CARD_DESC_COLOR, fontSize: 13, wordWrap: true, wordWrapWidth: textW },
     });
     desc.position.set(textX, 40);
     card.addChild(name, desc);

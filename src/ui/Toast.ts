@@ -1,6 +1,7 @@
 import type { Application } from 'pixi.js';
 import { Container, Graphics, Text } from 'pixi.js';
 import { SafeArea } from '@services/SafeArea';
+import { COLORS, TEXT } from './theme';
 
 const FADE_IN_MS = 150;
 const VISIBLE_MS = 2200;
@@ -31,12 +32,7 @@ export class Toast {
   show(message: string): void {
     const text = new Text({
       text: message,
-      style: {
-        fontFamily: 'system-ui, sans-serif',
-        fontSize: 18,
-        fill: 0xfaf6e8,
-        align: 'center',
-      },
+      style: { ...TEXT.title, fontSize: 18, fill: COLORS.textCream, align: 'center' },
     });
     const bg = new Graphics()
       .roundRect(
@@ -46,7 +42,7 @@ export class Toast {
         text.height + PADDING_Y * 2,
         6,
       )
-      .fill({ color: 0x000000, alpha: 0.7 });
+      .fill({ color: COLORS.textStroke, alpha: 0.7 });
 
     const container = new Container({ label: 'toast' });
     container.addChild(bg, text);

@@ -1,6 +1,7 @@
 import { Container, Graphics, Circle } from 'pixi.js';
 import type { Application, FederatedPointerEvent } from 'pixi.js';
 import { SafeArea } from '@services/SafeArea';
+import { COLORS } from './theme';
 
 const BASE_RADIUS_PX = 60;
 const THUMB_RADIUS_PX = 28;
@@ -62,12 +63,12 @@ export class VirtualJoystick {
     // the joystick's CENTRE coords directly.
     this.base = new Graphics()
       .circle(0, 0, BASE_RADIUS_PX)
-      .fill({ color: 0x000000, alpha: 0.35 })
-      .stroke({ width: 2, color: 0xfaf6e8, alpha: 0.5 });
+      .fill({ color: COLORS.textStroke, alpha: 0.35 })
+      .stroke({ width: 2, color: COLORS.textCream, alpha: 0.5 });
     this.thumb = new Graphics()
       .circle(0, 0, THUMB_RADIUS_PX)
-      .fill({ color: 0xfaf6e8, alpha: 0.7 })
-      .stroke({ width: 2, color: 0x000000, alpha: 0.6 });
+      .fill({ color: COLORS.textCream, alpha: 0.7 })
+      .stroke({ width: 2, color: COLORS.textStroke, alpha: 0.6 });
     this.container.addChild(this.base, this.thumb);
 
     // Make the BASE the hit-target so the thumb isn't itself interactive —

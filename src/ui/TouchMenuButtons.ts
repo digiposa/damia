@@ -1,6 +1,7 @@
 import { Container, Graphics, Text } from 'pixi.js';
 import type { Application, FederatedPointerEvent } from 'pixi.js';
 import { SafeArea } from '@services/SafeArea';
+import { COLORS, TEXT } from './theme';
 
 const PADDING_PX = 12;
 const BTN_RADIUS = 22;
@@ -83,16 +84,15 @@ export class TouchMenuButtons {
     const container = new Container({ label: `touch-menu-${spec.label}` });
     const bg = new Graphics()
       .circle(0, 0, BTN_RADIUS)
-      .fill({ color: 0x1c2840, alpha: 0.85 })
-      .stroke({ width: 2, color: 0xa08050, alpha: 0.9 });
+      .fill({ color: COLORS.tileBg, alpha: 0.85 })
+      .stroke({ width: 2, color: COLORS.border, alpha: 0.9 });
     const label = new Text({
       text: spec.label,
       style: {
-        fontFamily: 'system-ui, sans-serif',
+        ...TEXT.value,
         fontSize: BTN_RADIUS,
-        fill: 0xfaf6e8,
-        fontWeight: 'bold',
-        stroke: { color: 0x000000, width: 2 },
+        fill: COLORS.textCream,
+        stroke: { color: COLORS.textStroke, width: 2 },
       },
     });
     label.anchor.set(0.5);

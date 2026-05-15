@@ -6,8 +6,6 @@ import { UPGRADES, type UpgradeKind } from '@data/upgrades';
 import { Modal } from './Modal';
 import { COLORS, TEXT } from './theme';
 
-const CARD_BG = 0x1c2840;
-const CARD_PRESSED_BG = 0x2c3a52;
 const CARD_GAP = 12;
 const CARD_HEIGHT = 78;
 const CARD_PADDING_X = 16;
@@ -55,7 +53,7 @@ export class LevelUpChoiceModal extends Modal {
         ...TEXT.title,
         fontSize: 28,
         fill: COLORS.textCream,
-        stroke: { color: 0x000000, width: 4 },
+        stroke: { color: COLORS.textStroke, width: 4 },
       },
     });
     this.title.anchor.set(0.5, 0);
@@ -138,7 +136,7 @@ export class LevelUpChoiceModal extends Modal {
 
     const bg = new Graphics()
       .roundRect(0, 0, width, CARD_HEIGHT, 10)
-      .fill({ color: CARD_BG, alpha: 0.95 })
+      .fill({ color: COLORS.tileBg, alpha: 0.95 })
       .stroke({ width: 2, color: COLORS.border, alpha: 0.9 });
     card.addChild(bg);
 
@@ -147,7 +145,7 @@ export class LevelUpChoiceModal extends Modal {
     const pip = new Graphics()
       .roundRect(CARD_PADDING_X, pipY, CARD_PIP_SIZE, CARD_PIP_SIZE, 6)
       .fill({ color: def.pipColor, alpha: 0.95 })
-      .stroke({ width: 2, color: 0x000000, alpha: 0.4 });
+      .stroke({ width: 2, color: COLORS.textStroke, alpha: 0.4 });
     const pipLabel = new Text({
       text: kind.charAt(0).toUpperCase(),
       style: { fontSize: 26, fill: 0x1a1a1f, fontWeight: 'bold' },
@@ -182,13 +180,13 @@ export class LevelUpChoiceModal extends Modal {
       e.stopPropagation();
       bg.clear()
         .roundRect(0, 0, width, CARD_HEIGHT, 10)
-        .fill({ color: CARD_PRESSED_BG, alpha: 0.95 })
+        .fill({ color: COLORS.tilePressed, alpha: 0.95 })
         .stroke({ width: 2, color: COLORS.border, alpha: 1 });
     });
     card.on('pointerupoutside', () => {
       bg.clear()
         .roundRect(0, 0, width, CARD_HEIGHT, 10)
-        .fill({ color: CARD_BG, alpha: 0.95 })
+        .fill({ color: COLORS.tileBg, alpha: 0.95 })
         .stroke({ width: 2, color: COLORS.border, alpha: 0.9 });
     });
     card.on('pointertap', (e: FederatedPointerEvent) => {

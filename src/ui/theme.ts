@@ -24,6 +24,13 @@ export const COLORS = {
   buttonBg: 0x2a2f3b,
   /** Active / pressed UI button face — same hue as the accent border. */
   buttonActive: 0xa08050,
+  /** Touch / choice "tile" face — semi-transparent navy used by the
+   *  touch buttons (joystick siblings) and the level-up choice cards.
+   *  Sits darker than `panelBg` so the tile reads against the game
+   *  world without an extra backdrop. */
+  tileBg: 0x1c2840,
+  /** Tile pressed / hover state — one shade lighter than `tileBg`. */
+  tilePressed: 0x2c3a52,
 
   /** Default border / divider line. */
   border: 0xa08050,

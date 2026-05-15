@@ -2,6 +2,7 @@ import { Container, Graphics, Text } from 'pixi.js';
 import type { Application, FederatedPointerEvent } from 'pixi.js';
 import { ADDITIONS, type AdditionKind } from '@data/balance';
 import { SafeArea } from '@services/SafeArea';
+import { COLORS, TEXT } from './theme';
 
 /** Right-edge padding (kept tight so the buttons hug the screen edge). */
 const PADDING_RIGHT_PX = 12;
@@ -166,16 +167,15 @@ export class TouchActionButtons {
     const container = new Container({ label: `touch-btn-${spec.label}` });
     const bg = new Graphics()
       .circle(0, 0, spec.radius)
-      .fill({ color: 0x1c2840, alpha: 0.85 })
-      .stroke({ width: 2, color: 0xa08050, alpha: 0.9 });
+      .fill({ color: COLORS.tileBg, alpha: 0.85 })
+      .stroke({ width: 2, color: COLORS.border, alpha: 0.9 });
     const label = new Text({
       text: spec.label,
       style: {
-        fontFamily: 'system-ui, sans-serif',
+        ...TEXT.value,
         fontSize: spec.label.length <= 1 ? spec.radius : Math.round(spec.radius * 0.7),
-        fill: 0xfaf6e8,
-        fontWeight: 'bold',
-        stroke: { color: 0x000000, width: 2 },
+        fill: COLORS.textCream,
+        stroke: { color: COLORS.textStroke, width: 2 },
       },
     });
     label.anchor.set(0.5);
@@ -278,11 +278,11 @@ export class TouchActionButtons {
     for (const entry of this.buttons) {
       const { spec, bg, cd, label } = entry;
       const active = spec.isActive?.() ?? false;
-      const colour = active ? 0xa08050 : 0x1c2840;
+      const colour = active ? COLORS.buttonActive : COLORS.tileBg;
       bg.clear()
         .circle(0, 0, spec.radius)
         .fill({ color: colour, alpha: active ? 0.95 : 0.85 })
-        .stroke({ width: 2, color: 0xa08050, alpha: 0.9 });
+        .stroke({ width: 2, color: COLORS.border, alpha: 0.9 });
 
       if (spec.getLabel) {
         const next = spec.getLabel();
@@ -306,7 +306,7 @@ export class TouchActionButtons {
         cd.moveTo(0, 0)
           .arc(0, 0, spec.radius, start, end)
           .lineTo(0, 0)
-          .fill({ color: 0x000000, alpha: 0.55 });
+          .fill({ color: COLORS.textStroke, alpha: 0.55 });
       }
     }
     // Re-flow each frame so a mid-run visibility change (e.g. picking

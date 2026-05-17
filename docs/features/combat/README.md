@@ -17,17 +17,17 @@
 
 ## Aspects de la feature (création paresseuse)
 
-| Aspect             | Fichier               | Statut                     | Description                                          |
-| ------------------ | --------------------- | -------------------------- | ---------------------------------------------------- |
-| Formules de dégâts | `damage-formula.md`   | ⚪ pas encore créé         | Formules TLoD-canon (physical, addition, item magic) |
-| Auto-attack        | `basic-attack.md`     | ⚪ pas encore créé         | Click-to-attack, range, swing, cooldown              |
-| Defense / guard    | `defense.md`          | ⚪ pas encore créé         | Touche S, lock-in 3s, CD 10s, heal 10% HP            |
-| Additions          | `additions.md`        | ⚪ pas encore créé         | 28 combos sur 6 archetypes, levels 1-5, SP gains     |
-| Cooldowns          | `cooldowns.md`        | ⚪ pas encore créé         | AttackCooldown, SkillCooldown                        |
-| Mob AI             | `mob-ai.md`           | ⚪ pas encore créé         | Per-behavior (mouse flee, cock hit-run, standard)    |
-| Death & level-up   | `death-and-xp.md`     | ⚪ pas encore créé         | Death pipeline, XP awards, level-up effects          |
-| Damage modifiers   | `damage-modifiers.md` | ⚪ pas encore créé         | Guard, Fear, Power, Element, Field, Destroyer Mace   |
-| Status effects     | `status-effects.md`   | ⚪ pas encore créé (futur) | Burn, poison, stun (canon TLoD, non wiré)            |
+| Aspect             | Fichier                                    | Statut                     | Description                                          |
+| ------------------ | ------------------------------------------ | -------------------------- | ---------------------------------------------------- |
+| Formules de dégâts | [`damage-formula.md`](./damage-formula.md) | 🟡 draft                   | Formules TLoD-canon (physical, addition, item magic) |
+| Auto-attack        | `basic-attack.md`                          | ⚪ pas encore créé         | Click-to-attack, range, swing, cooldown              |
+| Defense / guard    | `defense.md`                               | ⚪ pas encore créé         | Touche S, lock-in 3s, CD 10s, heal 10% HP            |
+| Additions          | `additions.md`                             | ⚪ pas encore créé         | 28 combos sur 6 archetypes, levels 1-5, SP gains     |
+| Cooldowns          | `cooldowns.md`                             | ⚪ pas encore créé         | AttackCooldown, SkillCooldown                        |
+| Mob AI             | `mob-ai.md`                                | ⚪ pas encore créé         | Per-behavior (mouse flee, cock hit-run, standard)    |
+| Death & level-up   | `death-and-xp.md`                          | ⚪ pas encore créé         | Death pipeline, XP awards, level-up effects          |
+| Damage modifiers   | `damage-modifiers.md`                      | ⚪ pas encore créé         | Guard, Fear, Power, Element, Field, Destroyer Mace   |
+| Status effects     | `status-effects.md`                        | ⚪ pas encore créé (futur) | Burn, poison, stun (canon TLoD, non wiré)            |
 
 Légende : ⚪ pas encore créé — 🟡 draft — 🟢 validé — 🔵 implémenté
 

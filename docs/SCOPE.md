@@ -53,8 +53,7 @@ Voir aussi [VISION §3](VISION.md#3-rôle-de-lassistant-claude--capitaine-code).
 
 - **Public principal** : **communauté TLoD PS1** — fans du jeu original qui attendent un remake qui « ne viendra probablement jamais »
 - **Tonalité** : faite par un fan pour les fans, pas un produit grand public
-
-> **À clarifier** : place des newcomers (joueurs découvrant TLoD via Damia) ? On les accueille ou on assume une audience qui connaît déjà le jeu source ?
+- **Posture assumée** : **fan-only**. Les newcomers découvrant TLoD via Damia ne sont pas une cible prioritaire — on ne sacrifie pas la fidélité canon ni la profondeur pour faciliter leur entrée.
 
 ## 6. Plateformes cibles
 
@@ -62,7 +61,7 @@ Toutes en **premier rang** (pas de plateforme privilégiée) :
 
 - **Navigateur PC** — clavier + souris
 - **Navigateur Mobile** — tactile (joystick virtuel, gestures, boutons)
-- **Play Store** — tentative d'intégration envisagée
+- **Play Store** — tentative d'intégration envisagée via **wrapper natif** (Capacitor / Cordova / TWA / équivalent — choix technique exact à valider lors de l'intégration)
 
 Contraintes induites :
 
@@ -70,7 +69,7 @@ Contraintes induites :
 - Layout responsive (safe-area iOS, portrait/paysage)
 - 60 FPS y compris sur mobile milieu de gamme
 
-> **À clarifier** : Play Store via PWA, Capacitor, Cordova, ou autre ? Choix techniques à anticiper.
+**Pipeline de dev — contrainte forte** : pendant tout le développement, on **maintient un déploiement web automatisé via GitHub Actions** (preview/staging accessible par URL). Le user code actuellement depuis son mobile et a besoin de tester chaque push sans setup local. Le wrapper natif est un objectif de packaging, **il ne doit jamais casser ni remplacer ce workflow web-deploy**.
 
 ## 7. Modes de jeu
 
@@ -102,34 +101,39 @@ Ce qui **diffère par mode** :
 
 ## 8. Priorités et long terme
 
+### Ambition de contenu
+
+- **Story mode** : couvrir **TLoD canon complet** — les **4 discs**, monde entier d'Endiness, tous les bosses, toutes les cutscenes, toutes les zones. Pas de sous-ensemble.
+- **Survival mode** : contenu généré / vagues infinies — pas de borne narrative
+
 ### Court terme (priorités actuelles)
 
 - Focus **solo**, Story + Survival
-- Continuer le chantier en cours (cf. [VISION §7](VISION.md#7-état-du-chantier--focus-courant) + [ROADMAP_MVP.md](ROADMAP_MVP.md))
+- Continuer le chantier en cours (cf. [VISION §7](VISION.md#7-état-du-chantier--focus-courant))
+- **Note** : [ROADMAP_MVP.md](ROADMAP_MVP.md) est **outdated** — voir §9.1
 
 ### Long terme (vision, non priorisé)
 
 - **Multijoueur coop Survival**
 - **Multijoueur Story**
 - Distribution Play Store (cf. §6)
+- Localisation au-delà d'EN/FR (multi-langues prévu, détails à venir)
 
-> **À clarifier** : roadmap macro post-M8 — l'actuelle s'arrête à un MVP "Forêt de Seles", mais le projet est déjà bien plus avancé selon VISION §7. Calage à faire (voir §9 contradictions).
+## 9. Contradictions / zones grises
 
-## 9. Contradictions / zones grises à résoudre
+État après clarifications user (mai 2026) :
 
-Identifiées en relisant la doc existante :
+1. **MVP vs implémentation actuelle** — ✅ **RÉSOLU**
+   - `ROADMAP_MVP.md` est **outdated** (s'arrête à M8 / MVP "Forêt de Seles" alors que le chantier est déjà au-delà)
+   - `VISION.md` reste **valable comme cible** — mais tout ce qui y est décrit n'est pas forcément déjà implémenté ; c'est la vision à concrétiser au fil
+   - **Conséquence** : `ROADMAP_MVP.md` à reprendre / archiver dans une future passe. La doc qu'on construit dans `features/` peut reprendre des éléments de VISION (redite acceptable)
+2. **Exceptions à la fidélité TLoD** — ⏳ **OUVERT (au fil)**
+   - La phrase « sauf. » de [VISION §4.1](VISION.md#41-mode-story--fidélité-maximale-à-tlod) n'est pas complétée
+   - **Posture user** : pas de liste exhaustive à définir maintenant. On documentera chaque exception **au cas par cas** quand elle se présente (dans la doc de la feature concernée, section "Décisions & rationale")
 
-1. **MVP vs implémentation actuelle**
-   - `ROADMAP_MVP.md` Backlog post-MVP liste "Transformation Dragoon", "Système de classes Dragoon", "Additions QTE", "Magie / Items utilisables" comme **hors scope MVP**
-   - Mais `VISION §6` détaille des décisions Dragoon verrouillées (SP/DLV/MP) et `VISION §7` dit que "Personnages, additions et Dragoons" sont en **chantier actif**
-   - → **Quelle est la vérité actuelle ?** Le ROADMAP est obsolète ou la VISION anticipe ?
-
-2. **Exception à la fidélité TLoD** ([VISION §4.1](VISION.md#41-mode-story--fidélité-maximale-à-tlod))
-   - Une phrase amorcée par "sauf." n'a jamais été complétée
-   - → Quelles **exceptions assumées** à la fidélité ?
-
-3. **Critères de "fini"**
-   - Pas encore défini : quand est-ce qu'une feature est considérée canon-fidèle / mergeable ?
+3. **Critères de "fini" / canon-fidèle** — ⏳ **OUVERT (à définir plus tard)**
+   - Pas de définition opérationnelle pour l'instant
+   - En attendant : Claude tranche au feeling, user valide à la session de revue
 
 ## 10. Hors-scope assumé
 
@@ -137,24 +141,27 @@ Identifiées en relisant la doc existante :
 - ❌ Tentative AAA / publication commerciale
 - ❌ Multijoueur court terme (vision long terme uniquement)
 
-> **À clarifier (autres hors-scope potentiels)** :
->
-> - Open-source du code (repo public ouvert aux contributions) ou repo privé ?
-> - Mods / éditeur de map joueur ?
-> - Remaster console (Switch, PS5) ?
-> - Localisation au-delà de EN/FR ?
+### Statut du repo
 
-## 11. Questions ouvertes synthèse
+- Repo `digiposa/damia` actuellement **public** — peut éventuellement basculer en **privé** plus tard (décision user à venir si besoin)
 
-À trancher progressivement pour stabiliser le scope :
+### Autres hors-scope à clarifier (non priorisé)
 
-- [ ] **Audience newcomers** : on accueille les non-fans TLoD ou audience fan-only assumée ? (§5)
-- [ ] **Play Store technique** : PWA / Capacitor / Cordova / autre ? (§6)
-- [ ] **Contradiction MVP/Dragoon** : statut réel du chantier ? (§9.1)
-- [ ] **Exceptions fidélité TLoD** : compléter la phrase « sauf. » de VISION §4.1 (§9.2)
-- [ ] **Critères de canon-fidélité** : définition opérationnelle "fini = mergeable" (§9.3)
-- [ ] **Open-source ou repo privé** ? (§10)
-- [ ] **Scope canon final** : full TLoD (4 discs, monde complet) ou sous-ensemble ? Étalonnage de l'ambition
+- Mods / éditeur de map joueur ?
+- Remaster console (Switch, PS5) ?
+
+## 11. Questions — synthèse statut
+
+| Question                     | Statut             | Réponse / suite                                                                                                                 |
+| ---------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
+| Audience newcomers ?         | ✅ tranché         | **Fan-only** assumée (§5)                                                                                                       |
+| Play Store technique ?       | 🟡 cap posé        | **Wrapper natif** envisagé (Capacitor/Cordova/TWA), choix exact différé. Pipeline web GitHub Actions maintenu pendant dev. (§6) |
+| Contradiction MVP/Dragoon ?  | ✅ tranché         | ROADMAP outdated ; VISION valable comme cible. (§9.1)                                                                           |
+| Scope canon final ?          | ✅ tranché         | **TLoD canon complet, 4 discs** (§8)                                                                                            |
+| Exceptions fidélité TLoD ?   | ⏳ ouvert (au fil) | Documenté au cas par cas dans chaque feature concernée (§9.2)                                                                   |
+| Critères de canon-fidélité ? | ⏳ ouvert          | À définir plus tard. Entre-temps : Claude tranche, user valide. (§9.3)                                                          |
+| Open-source ou repo privé ?  | 🟡 actuel          | **Public** maintenant, peut passer privé plus tard (§10)                                                                        |
+| Langues > EN/FR ?            | 🟡 cap posé        | **Multi-langues prévu** au-delà d'EN/FR, détails plus tard (§8)                                                                 |
 
 ---
 
@@ -162,6 +169,6 @@ Identifiées en relisant la doc existante :
 
 - [VISION.md](VISION.md) — vision macro, mécaniques verrouillées Dragoon
 - [PROJECT_BLUEPRINT.md](PROJECT_BLUEPRINT.md) — archi technique, stack, conventions code
-- [ROADMAP_MVP.md](ROADMAP_MVP.md) — jalons M0→M8 (statut MVP)
+- [ROADMAP_MVP.md](ROADMAP_MVP.md) — ⚠️ **outdated**, à reprendre / archiver
 - [ARCHITECTURE.md](ARCHITECTURE.md) — état fonctionnel à un instant T
 - [features/](features/README.md) — doc fonctionnelle par thématique

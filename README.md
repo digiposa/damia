@@ -25,6 +25,7 @@ npm run test       # vitest
 - [docs/PROJECT_BLUEPRINT.md](docs/PROJECT_BLUEPRINT.md) — architecture cible, conventions, libs
 - [docs/ROADMAP_MVP.md](docs/ROADMAP_MVP.md) — jalons M0→M8 avec statut
 - [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) — **état fonctionnel + organisation du code (mis à jour à chaque jalon)**
+- [docs/features/](docs/features/README.md) — **doc fonctionnelle par thématique (canon TLoD + vision Damia)**
 
 ## Structure
 

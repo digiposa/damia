@@ -189,27 +189,52 @@ Pistes (à valider au moment du design `items/equipment.md`) :
 
 → Décision exacte différée au moment d'implémenter l'équipement.
 
-#### 4. Per-hit vs sum-first damage formula
+#### Q4 — Lavitz vs Albert (et Shana vs Miranda) : ✅ **Identiques gameplay, héritage narratif**
 
-Canon : `[Σhits] × Multiplier × AT × ...` (sum first, multiplier après).
-Damia : per-hit (chaque hit applique son propre damage individuel).
+**Mode Story** :
 
-**Délibéré pour UX** (cf. damage-formula.md §Décisions) : montrer un floating number par hit, accumulation floor truncation = ±1 vs canon perfect. Trade-off acceptable.
+- Pas de différence gameplay / stats entre Lavitz et Albert (idem Shana / Miranda).
+- Albert **hérite** de tout l'état de Lavitz à la mort de ce dernier : niveau d'apprentissage des additions, stats, XP, DLV.
+- Idem Miranda hérite de Shana en Disc 3.
+- Pattern canon = **inherited_from_predecessor** (cf. archetypes acquisition Dragoon).
 
-#### 5. Lavitz vs Albert différenciation
+**Mode Survival** :
 
-Canon : mêmes additions, **rythmes différents** (donc QTE différent) + **counter opportunities différentes** (Lavitz Rod Typhoon counter Group 28 only / Albert Gust of Wind Dance et Flower Storm ont opportunities différentes).
+- Lavitz, Albert, **Greham**, **Syuveil**, etc. = **skins différents** du même archetype (**Jade Dragoon**).
+- Tous unlockables via méta-progression. Stats / additions identiques (puisque même archetype).
+- Greham en mode Story reste un **boss** avec son propre skillset (gameplay distinct du Jade Dragoon archetype joueur).
 
-Damia : si pas de QTE, le rythme disparait. Reste les counters → si on porte les counters, alors Lavitz et Albert ont des "courbes de risque" différentes selon les enemies.
+**Pattern architectural** (cf. [VISION §6.6](../../VISION.md#66-personnages-partagés-skins)) :
 
-**Si on skip counters** : Lavitz et Albert deviennent fonctionnellement identiques (mêmes additions, mêmes dégâts). Différencier via stats ou autre serait nécessaire pour qu'ils gardent du caractère.
+- **Archetype** (`DragoonArchetype`) = mécanique partagée (stats curves, additions, magic, élément, DLV)
+- **Avatar** (`CharacterAvatar`) = variante perso (sprite, voix, lore) sans impact mécanique
+- Story mode : un seul avatar de l'archetype actif à la fois (substitutions canon)
+- Survival mode : tous avatars unlockés sélectionnables, peu importe story-canon ou skin
 
-#### 6. Level applied after battle vs immediate
+→ Pas d'action design supplémentaire pour Damia : conserver l'archi `Archetype + Avatar` (déjà partiellement implémentée).
 
-Canon : level up après battle end (préserve la cohérence d'un seul battle).
-Damia : à vérifier en code. Probablement immediate.
+#### Q5 — Level up timing : ✅ **Option A — Immediate**
 
-**Question design** : importance de respecter ce détail ? Si Damia level up immediate → c'est plus permissif (gameplay arena Survival favorable). En Story Classic, on pourrait respecter le delay pour la fidélité.
+Level up s'applique **immédiatement** quand le seuil de 20 performances est atteint (comme Diablo 2). Pas de logique "applied after battle" du canon PS1.
+
+**Rationale** : cohérent gameplay real-time action-RPG (pas de notion stricte de "fin de combat" en arena/survival), feedback immédiat plus satisfaisant.
+
+#### Q6 — Performances tracked past level cap : ❓ **À clarifier**
+
+> _Question reformulée pour clarté_
+
+**"Performance"** ici = une **utilisation réussie** d'une Addition (i.e. addition complétée avec succès). Le canon compte les performances : **20 performances** = +1 level, jusqu'au max level 5 (donc 100 performances totales pour passer de Lv 1 à Lv 5).
+
+**Question** : une fois l'Addition au max level 5, continue-t-on à compter les uses ?
+
+- **a)** Cap dur à 100 (compteur s'arrête au max level, plus rien tracké)
+- **b)** Compteur continue (utile pour stats / achievements / méta-progression Survival ?)
+
+→ À trancher.
+
+#### Q7 — Bug wiki Albert Dmg%/SP colonnes inversées : ✅ **Typo wiki confirmé**
+
+User a confirmé : Albert a **exactement les mêmes stats** que Lavitz (puisque archetype Jade Dragoon partagé). L'inversion Dmg%/SP dans la table Albert wiki est une typo. À utiliser la table Lavitz comme référence pour les deux.
 
 ## Décisions & rationale
 

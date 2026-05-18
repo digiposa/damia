@@ -69,9 +69,13 @@
 
 - [ ] **Design Wargod accessories Damia** — Imaginer les effets exacts d'Ultimate Wargod + Wargod Calling reframés. À traiter dans `items/equipment.md` quand on attaque l'équipement. Source: additions.md §Q3.
 
-- [ ] **Lavitz vs Albert différenciation** — Sans QTE/counters → fonctionnellement identiques. Comment les différencier (stats ? autre design) ? Source: additions.md §Q5.
+- [x] **Lavitz vs Albert différenciation** — ✅ **TRANCHÉ 2026-05-18** : pas de différence gameplay/stats. Pattern `Archetype + Avatar` (cf. VISION §6.6). Story mode : héritage narratif Lavitz→Albert (Shana→Miranda). Survival mode : tous avatars du même archetype = skins (incl. Greham, Syuveil, etc.). Greham en Story reste boss avec skillset distinct. Source: [`features/combat/additions.md`](features/combat/additions.md) §Q4.
 
-- [ ] **Level applied after battle vs immediate** — Canon : level up appliqué après battle end. Vérifier comportement code Damia. Acter design (Classic = canon, Modern = immediate ?). Source: additions.md §Q6.
+- [x] **Level applied after battle vs immediate** — ✅ **TRANCHÉ 2026-05-18** : Option A — Immediate (style Diablo 2). Pas de notion "fin de combat" en real-time. Source: additions.md §Q5.
+
+- [ ] **Performances tracked past level cap (Q6)** — Une fois Addition au max level 5, continue-t-on à compter les uses ? Options : (a) cap dur à 100 / (b) compteur continue (utile pour stats / méta-progression Survival ?). À trancher. Source: additions.md §Q6.
+
+- [x] **Albert Dmg%/SP table wiki** — ✅ **RÉSOLU** : typo wiki, Albert = Lavitz (mêmes stats / additions / SP, archetype Jade Dragoon partagé). Utiliser table Lavitz comme référence. Source: additions.md §Q7.
 
 - [ ] **Mob counter groups** — Si on implémente jamais les counters (cf. idée future), il faudra le data-model. Canon : ~140 enemies sortés en 10 groupes (1, 2, 3, 4, 9, 13, 16, 19, 23, 28). Damia mobs identifiés : Berserk Mouse=28, Goblin=28, Trent=28, Assassin Cock=19, Fruegel=28. Source: additions.md. Priorité: basse (dépend idée future Q2).
 

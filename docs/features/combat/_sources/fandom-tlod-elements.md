@@ -1,7 +1,11 @@
 # Elements — TLoD (Fandom Wiki)
 
 > **Source** : [The Legend of Dragoon Wiki — Element](https://legendofdragoon.fandom.com/wiki/Element).
-> **Fiabilité** : 🥉 **tier 3** (cf. [hiérarchie sources](../../README.md#hiérarchie-de-fiabilité-des-sources-canon-tlod)) — vue narrative, simplifications possibles. **Préférer Wulves (🥇)** ou legendofdragoon.org (🥈) pour les nombres et formules. Le fandom reste utile pour les **relations qualitatives** et **listings** (qui résiste qui, enemies par élément, lore).
+> **Fiabilité** : 🥉 **tier 3** (cf. [hiérarchie sources](../../README.md#hiérarchie-de-fiabilité-des-sources-canon-tlod)) — vue narrative, **plusieurs claims démentis par tier 1/2** (×2 opposing, ×2 Non-Elemental vs all, Divine Dragon "divine element").
+>
+> ⚠️ **Préférer** [`lod-wiki-element.md`](./lod-wiki-element.md) (🥈) ou [`wulves-tlod-damage-formulas.md`](./wulves-tlod-damage-formulas.md) (🥇) pour les **nombres et formules**.
+>
+> Le fandom reste utile pour les **listings** (enemies par élément, lore narratif) — à recouper avec tier 1/2 quand possible.
 > **Sauvegardé le** : 2026-05-18.
 > **Usage** : référence pour [`elements.md`](../elements.md), [`damage-modifiers.md`](../damage-modifiers.md), [`damage-formula.md`](../damage-formula.md) (modifiers Field/Element), `dragoons/` (affinité par archetype), `items/` (armes élémentales), `bosses/` (éléments des bosses).
 

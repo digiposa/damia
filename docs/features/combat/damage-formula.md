@@ -195,9 +195,11 @@ Les 6 autres (`targetFear`, `attackerFear`, `power`, `field`, `element`, `destro
 
 ## Liens doc
 
-- **Source canon (formules)** : [`_sources/wulves-tlod-damage-formulas.md`](./_sources/wulves-tlod-damage-formulas.md)
-- **Source canon (éléments)** : [`_sources/fandom-tlod-elements.md`](./_sources/fandom-tlod-elements.md)
-- **Système élémental** : [`elements.md`](./elements.md) — 8 éléments, Field/Element rules
+- **Source canon (formules)** : [`_sources/wulves-tlod-damage-formulas.md`](./_sources/wulves-tlod-damage-formulas.md) 🥇
+- **Source canon (wiki LoD)** : [`_sources/lod-wiki-element.md`](./_sources/lod-wiki-element.md) 🥈 (Element system)
+- **Source canon (Discord)** : [`_sources/discord-tlod-clarifications.md`](./_sources/discord-tlod-clarifications.md) 🥇 (corrections fandom)
+- **Source fandom (historique)** : [`_sources/fandom-tlod-elements.md`](./_sources/fandom-tlod-elements.md) 🥉
+- **Système élémental** : [`elements.md`](./elements.md) — 8 éléments, Field/Element rules ×1.5/×0.5 (Wulves+wiki confirmés)
 - **Modifiers détaillés** : [`damage-modifiers.md`](./damage-modifiers.md) (à créer — Power/Fear/Destroyer Mace variables)
 - **Status effects** : [`status-effects.md`](./status-effects.md) (à créer — Confusion/Bewitchment/Poison/Fear)
 - **Additions** : [`additions.md`](./additions.md) (à créer — Hit Data + Multiplier Data par addition × niveau)

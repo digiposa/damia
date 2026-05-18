@@ -2,164 +2,174 @@
 
 > Système élémental TLoD — gouverne les modifiers `Field` et `Element` du wrapper de dégâts ([`damage-formula.md`](./damage-formula.md)).
 >
-> **Sources canon** :
+> **Sources canon** (par tier de fiabilité, cf. [hiérarchie](../README.md#hiérarchie-de-fiabilité-des-sources-canon-tlod)) :
 >
-> - [`_sources/wulves-tlod-damage-formulas.md`](./_sources/wulves-tlod-damage-formulas.md) — Wulves (🥇, formules numériques)
-> - [`_sources/discord-tlod-clarifications.md`](./_sources/discord-tlod-clarifications.md) — Discord communauté (🥇, confirmations / corrections)
-> - [`_sources/fandom-tlod-elements.md`](./_sources/fandom-tlod-elements.md) — fandom wiki (🥉, vue narrative + listing enemies par élément — **plusieurs claims démentis par tier 1**)
+> - 🥇 [`_sources/wulves-tlod-damage-formulas.md`](./_sources/wulves-tlod-damage-formulas.md) — Wulves (Discord), formules numériques exactes
+> - 🥇 [`_sources/discord-tlod-clarifications.md`](./_sources/discord-tlod-clarifications.md) — Discord communauté (DrewUniverse, Icarus), corrections aux sources
+> - 🥈 [`_sources/lod-wiki-element.md`](./_sources/lod-wiki-element.md) — legendofdragoon.org wiki, source la plus exhaustive sur le système élémental
+> - 🥉 [`_sources/fandom-tlod-elements.md`](./_sources/fandom-tlod-elements.md) — fandom (plusieurs claims démentis, listing enemies utile)
 
 ## Statut
 
-🟡 **draft** — système canon documenté + clarifié par tier 1 Discord (2026-05-18). **Pas câblé en code** : modifiers `Field` et `Element` ont un slot dans `DamageModifiers` mais aucun système ne les active. Aucun champ `element` sur les composants.
+🟡 **draft** — système canon complètement documenté (wiki LoD a tout clarifié). **Pas câblé en code** : modifiers `Field` et `Element` ont un slot dans `DamageModifiers` mais aucun système ne les active. Aucun champ `element` sur les composants.
 
 ## Canon PS1
 
 ### Les 8 éléments
 
-1. **Fire**
-2. **Water**
-3. **Wind**
-4. **Earth**
-5. **Light**
-6. **Darkness**
-7. **Thunder**
-8. **Non-Elemental** _(a.k.a. Unbased)_ — couleur grise en jeu
+TLoD a **8 éléments**. Chaque combattant et chaque attaque magique possède **un élément prédéterminé qui ne change jamais**. Certaines armes permettent aussi aux party members d'imbuer leurs attaques physiques d'un élément.
 
-> **Sur Non-Elemental** : élément qui **existe bel et bien en jeu** (avec représentation visuelle grise), confirmé par user. **Mais** le claim fandom du "×2 vs all other elements" est **démenti par Discord communauté** (Icarus, DrewUniverse — 2026-05-18, cf. [discord-tlod-clarifications.md](./_sources/discord-tlod-clarifications.md)). Fonctionnellement, Non-Elemental se comporte plus comme Thunder côté modifier Element : pas d'opposing, pas de bonus damage vs autres éléments. Le scaling élevé de Psyche Bomb / Divine Dragon attacks vient des **multipliers** (BID pour items, Multiplier pour Dragoon Magic), pas d'un effet ×2.
+| #   | Élément           | Visuel (couleur UI in-game)                                    |
+| --- | ----------------- | -------------------------------------------------------------- |
+| 1   | **Fire**          | rouge / orange                                                 |
+| 2   | **Water**         | bleu                                                           |
+| 3   | **Wind**          | vert                                                           |
+| 4   | **Earth**         | jaune / brun                                                   |
+| 5   | **Light**         | blanc / or                                                     |
+| 6   | **Darkness**      | violet sombre / noir                                           |
+| 7   | **Thunder**       | "magenta" officiel, en fait violet (HSL ~273, cf. wiki trivia) |
+| 8   | **Non-Elemental** | gris                                                           |
 
-### Relations canoniques
+> Détails exacts des couleurs RGB → cf. graphique `Element Colors.webp` du wiki LoD (à intégrer pour mapping UI Damia).
 
-| Élément           | Vs same element     | Vs opposed element      | Vs neither | Opposite |
-| ----------------- | ------------------- | ----------------------- | ---------- | -------- |
-| **Fire**          | Résiste (×0.5)      | Water → bonus damage    | ×1         | Water    |
-| **Water**         | Résiste             | Fire → bonus damage     | ×1         | Fire     |
-| **Wind**          | Résiste             | Earth → bonus damage    | ×1         | Earth    |
-| **Earth**         | Résiste             | Wind → bonus damage     | ×1         | Wind     |
-| **Light**         | Résiste             | Darkness → bonus damage | ×1         | Darkness |
-| **Darkness**      | Résiste             | Light → bonus damage    | ×1         | Light    |
-| **Thunder**       | Résiste             | **Aucun opposing** (×1) | ×1         | _(none)_ |
-| **Non-Elemental** | ❓ à confirmer wiki | **Aucun opposing** (×1) | ×1         | _(none)_ |
+L'élément d'un combattant est révélé in-game par **la couleur du window-frame de son nom** quand sélectionné. C'est l'identification visuelle canon.
 
-**Valeurs exactes du "bonus damage"** : Wulves dit **×1.5** (modifier Element = `1 + (+1/2) = 1.5`). Le fandom dit ×2 mais c'est une simplification narrative démentie au profit de Wulves (cf. hiérarchie sources). Voir détail ci-dessous §Application du système.
+### Relations opposées
 
-> ❓ **Question ouverte sur Non-Elemental** : se résiste-t-il lui-même comme les autres éléments (×0.5 vs same) ? Fandom dit non ("does not resist itself") mais cette affirmation provient du même paragraphe que le ×2 vs all (démenti). À confirmer via tier 1 (Discord ou legendofdragoon.org wiki). Tracé dans TODO.md.
+Avec l'exception de **Thunder** et **Non-Elemental** (qui n'ont aucun opposite), les éléments forment 3 paires opposées :
 
-### Divergences sources — résolutions
+- **Fire ↔ Water**
+- **Wind ↔ Earth**
+- **Light ↔ Darkness**
 
-| Sujet                          | Fandom (🥉)                          | Wulves / Discord (🥇)                                                        | Verdict                                                                                                                                                                                      |
-| ------------------------------ | ------------------------------------ | ---------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Opposing element bonus damage  | ×2                                   | ×1.5 (Element modifier = `1 + 1/2`)                                          | ✅ **Wulves prime** : ×1.5. Le ×2 fandom = simplification narrative (la perception ×2 vient de Field + Element combinés : `×1.5 × ×1.5 ≈ ×2.25` en Element Dimension).                       |
-| Non-Elemental ×2 vs tous       | Présenté comme un 8ᵉ élément spécial | ❌ N'existe pas comme tel                                                    | ✅ **Discord prime** (Icarus, DrewUniverse 2026-05-18) : Psyche Bomb et Divine Dragon scalent via leurs **multipliers**, pas via un élément spécial. Il n'y a **que 7 éléments mécaniques**. |
-| Divine Dragon "Divine element" | Implicite via Non-Elemental          | Sorts du Divine Dragon = élément régulier du sort (e.g. Burning Wave = Fire) | ✅ **Discord prime** (DrewUniverse).                                                                                                                                                         |
+### Variable multipliers — damage
 
-→ **Source de vérité** : Wulves + Discord pour les **mécaniques exactes**. Fandom utilisé **uniquement** pour les **relations qualitatives** (qui résiste qui, listing enemies par élément, lore) — et même là, vérifier.
+Confirmé par **wiki LoD 🥈 + Wulves 🥇** (la divergence ×2 du fandom est définitivement écartée) :
 
-### Application du système
+| Situation                                       | Multiplier | Concerné                                                       |
+| ----------------------------------------------- | ---------- | -------------------------------------------------------------- |
+| Attack vs target **opposite element**           | **×1.5**   | Tous (sauf Thunder & Non-Elemental qui n'ont pas d'opposite)   |
+| Attack vs target **same element**               | **×0.5**   | Tous **sauf Non-Elemental** (qui ne se résiste pas à lui-même) |
+| Attack vs target **neither match nor opposite** | ×1         | Default                                                        |
 
-L'élément intervient dans **deux modifiers distincts** du wrapper de dégâts :
+**Point clé Non-Elemental** : il ne résiste **pas** à lui-même (×1 en same-element, pas ×0.5). C'est l'exception. Pas de "×2 vs tous" — c'est un mythe fandom débunké.
 
-| Modifier    | Compare                                 | Match                   | Opposite                | Neither |
-| ----------- | --------------------------------------- | ----------------------- | ----------------------- | ------- |
-| **Field**   | Attack Element vs Special Field Element | `1 + (+1/2)` = **×1.5** | `1 + (-1/2)` = **×0.5** | ×1      |
-| **Element** | Target Element vs Attack Element        | `1 + (-1/2)` = **×0.5** | `1 + (+1/2)` = **×1.5** | ×1      |
+### Special Command — Element Field (canon TLoD)
 
-**Lecture** :
+Mécanique canon précise (source wiki LoD) :
 
-- Field favorise quand ton attaque matche le terrain. Punit quand opposite.
-- Element favorise quand ta cible est l'opposite de ton attaque. Punit quand match (canon "same element resists itself").
+- La commande **"Special"** en combat permet aux 3 membres actifs du party de se transformer simultanément en Dragoon.
+- **Le Dragoon initiateur de la transformation** établit un **Element Field** correspondant à **son** élément.
+- Le field reste actif **tant que l'initiateur reste transformé**.
 
-### Magic vs Physical
+Effet mécanique du field = un **modifier supplémentaire** dans la formule (= Field modifier de Wulves) :
 
-- **Magical attacks** (Dragoon Magic, Item Magic, monster magic) : Element modifier s'applique systématiquement
-- **Physical attacks** : Element modifier s'applique seulement si l'arme est **élémentale** (Heat Blade, Twister Glaive, Sparkle Arrow, Shadow Cutter, Thunder Fist)
+| Situation                         | Multiplier                                                      |
+| --------------------------------- | --------------------------------------------------------------- |
+| Attack matches field element      | **×1.5**                                                        |
+| Attack opposite to field element  | **×0.5**                                                        |
+| Attack neither match nor opposite | ×1                                                              |
+| Same-element exception            | Non-Elemental field ne donne pas ×1.5 sur Non-Elemental attacks |
+
+**⚠️ Bidirectionnel** — le field s'applique aux abilities **alliés ET ennemis** :
+
+- Exemple wiki : Meru's Water field actif → enemy's Spear Frost (Water) **GAGNE** un boost ×1.5 sur le party. Le field amplifie **toutes** les attaques de son élément, peu importe qui les lance.
+- Exemple wiki : ally cast Spinning Gale (Wind) pendant Kongol's Earth field actif → dégâts **réduits** ×0.5 (Wind opposite Earth).
+
+→ **Le Special n'est pas un buff défensif unilatéral**. C'est un modifier d'environnement qui change la stratégie : choisir l'initiateur dont l'élément maximise tes attaques et minimise celles attendues de l'ennemi.
+
+**Cas spécial — Divine Dragoon** : son Special field applique le ×1.5 **uniquement à ses propres sorts** Divine DG Cannon et Divine DG Ball. Pas aux autres sorts ni attaques même de son élément.
+
+### Sources d'élément d'une attaque
+
+| Type d'attaque                  | Source de l'élément                                                                                                                        |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| Physical Archer Attack          | Élément de l'arme équipée (ou aucun si arme non-élémentale)                                                                                |
+| Physical Addition               | Élément de l'arme équipée                                                                                                                  |
+| Dragoon Archer Attack (in form) | Élément du Dragoon                                                                                                                         |
+| Dragoon Addition                | Élément du Dragoon                                                                                                                         |
+| Dragoon Magic                   | Élément du sort (généralement = élément du Dragoon, exceptions possibles)                                                                  |
+| Item Magic                      | Élément de l'item (la plupart sont élémentaux ; Psyche Bomb / Detonate Rock = Non-Elemental)                                               |
+| Enemy Physical                  | Élément de l'enemy                                                                                                                         |
+| Enemy Magic                     | Élément du sort (canon : généralement = élément de l'enemy, exceptions possibles cf. Virages = Light, Last Kraken multi-éléments — fandom) |
+
+### Armes élémentales physical
+
+| Character       | Arme élémentale | Élément  |
+| --------------- | --------------- | -------- |
+| Dart            | Heat Blade      | Fire     |
+| Lavitz / Albert | Twister Glaive  | Wind     |
+| Shana           | Sparkle Arrow   | Light    |
+| Rose            | Shadow Cutter   | Darkness |
+| Haschel         | Thunder Fist    | Thunder  |
+| Kongol          | _(aucune)_      | —        |
+| Meru            | _(aucune)_      | —        |
+
+Ces armes infusent les attaques **physical** (Archer Attack + Addition) de leur élément, activant le modifier Element. Sans arme élémentale, le physical reste neutre (modifier Element = ×1).
 
 ### Élément du character / Dragoon
 
-| Character       | Élément Dragoon | Dragoon              |
-| --------------- | --------------- | -------------------- |
-| Dart            | Fire            | Red-Eye Dragon       |
-| Lavitz / Albert | Wind            | Jade Dragon          |
-| Shana / Miranda | Light           | White-Silver Dragon  |
-| Rose            | Darkness        | Darkness Dragon      |
-| Haschel         | Thunder         | Violet Dragon        |
-| Meru            | Water           | Blue-Sea Dragon      |
-| Kongol          | Earth           | Gold / Golden Dragon |
+| Character                     | Élément Dragoon | Dragoon              |
+| ----------------------------- | --------------- | -------------------- |
+| Dart                          | Fire            | Red-Eye Dragon       |
+| Lavitz / Albert               | Wind            | Jade Dragon          |
+| Shana / Miranda               | Light           | White-Silver Dragon  |
+| Rose                          | Darkness        | Darkness Dragon      |
+| Haschel                       | Thunder         | Violet Dragon        |
+| Meru                          | Water           | Blue-Sea Dragon      |
+| Kongol                        | Earth           | Gold / Golden Dragon |
+| Dart (Divine form, late game) | Non-Elemental\* | Divine Dragoon       |
 
-> **Note** : Kongol et Meru n'ont **pas d'arme élémentale dédiée** (les 5 autres en ont une, table dans le doc fandom).
+\* _Selon DrewUniverse, les sorts du Divine Dragon (boss) utilisent les éléments réguliers des sorts (e.g. Burning Wave = Fire). Le statut "Non-Elemental" du Divine Dragoon player-form est nuancé : c'est le tag de la forme, mais les sorts individuels (Divine DG Cannon, Divine DG Ball) sont eux-mêmes les seuls à bénéficier du field Divine._
 
 ### Element des enemies
 
-Chaque enemy a un élément. Le listing complet (~140 enemies par éléments) est dans [`_sources/fandom-tlod-elements.md`](./_sources/fandom-tlod-elements.md).
+Chaque enemy a un élément. Listing complet (~140 enemies) dans [`_sources/fandom-tlod-elements.md`](./_sources/fandom-tlod-elements.md) (🥉 — à vérifier au cas par cas, le wiki LoD 🥈 a aussi des listings par enemy).
 
 **Pour les mobs déjà présents dans Damia** (`src/data/balance.ts`) :
 
-| Mob (Damia)    | Élément canon                 |
-| -------------- | ----------------------------- |
-| Berserk Mouse  | Darkness                      |
-| Goblin         | Fire                          |
-| Assassin Cock  | Wind                          |
-| Trent          | Earth                         |
-| Fruegel (boss) | ❓ à vérifier — boss-specific |
-
-### Element Dimensions (Special Battle Command)
-
-Mécanique canon PS1 : la commande **"Special"** en combat permet l'enchaînement suivant — **les 3 membres actifs du party se transforment simultanément en Dragoon**. L'**initiateur de la transformation crée une Element Dimension** correspondant à **son** élément, qui :
-
-- Renforce les dégâts des attaques élémentales matchant le field
-- Réduit les dégâts élémentaux reçus (à confirmer en termes de quel élément + combien)
-
-**Effets damage canon (sources)** :
-
-| Effet                                           | Source             | Statut         |
-| ----------------------------------------------- | ------------------ | -------------- |
-| Dragoon Magic et Additions **×2 damage**        | Fandom 🥉          | À confirmer 🥇 |
-| Dragoon Additions **auto-complétées (perfect)** | Fandom 🥉          | À confirmer 🥇 |
-| **Diminution dégâts reçus** (% inconnu)         | User (mémoire PS1) | À confirmer 🥇 |
-| Visual : terrain coloré de l'élément initiateur | Fandom 🥉 + user   | ✅             |
-
-> ⚠️ Les pourcentages exacts (×2 damage, % défense) viennent du fandom (🥉) et de la mémoire user — à valider avec une source tier 1 (Discord ou legendofdragoon.org). Cf. [`TODO.md`](../../TODO.md).
-
-**Visuel uniquement** : Level 5 Dragoon Magic invoque aussi l'Element Dimension le temps de l'animation, **sans bonus damage** (fandom 🥉).
+| Mob (Damia)    | Élément canon (fandom 🥉) | Statut        |
+| -------------- | ------------------------- | ------------- |
+| Berserk Mouse  | Darkness                  | À vérifier 🥈 |
+| Goblin         | Fire                      | À vérifier 🥈 |
+| Assassin Cock  | Wind                      | À vérifier 🥈 |
+| Trent          | Earth                     | À vérifier 🥈 |
+| Fruegel (boss) | ❓ à déterminer           | —             |
 
 ## Vision Damia
 
 ### À court terme
 
-Le système élémental n'est **pas câblé** côté code aujourd'hui. Pas d'élément sur les entités, modifiers `Field` et `Element` muets.
+Le système élémental n'est **pas câblé** côté code aujourd'hui. Décisions à prendre avant câblage :
 
-Avant câblage, décisions à prendre :
-
-1. **Data-model "element"** côté entité — où ?
+1. **Data-model `Element`** côté entité — où ?
    - Champ optionnel sur `Stats` (`element?: Element`) ?
    - Composant dédié `Elemental` ?
    - Sur `Character.avatar.archetype` (déjà existant pour les Dragoons) + un nouveau pour les mobs ?
-2. **Source de l'élément de l'attaque** — selon le type d'attaque :
-   - Archer Attack physique → arme équipée (élémentale ou non)
-   - Addition → ?
-   - Dragoon Archer / Addition → élément du Dragoon
-   - Dragoon Magic → élément du sort (généralement = élément du Dragoon)
-   - Item Magic → BID + élément de l'item
-   - Enemy → élément de l'enemy
-3. **Field (Special Battle Command)** — quoi en Damia ?
-   - On n'a pas de "Battle Command" en real-time
-   - Option A : skip totalement (Field modifier inactif en permanence)
-   - Option B : Dragoon form = auto-Field correspondant à l'élément (cohérent canon level 5 Dragoon Magic + transformation visual)
-   - Option C : Special skill / item à activer manuellement
-4. **Élémentaire weapons** — Heat Blade etc. → quand on traitera l'équipement, ces armes auront un flag `element`
+2. **Source de l'élément de l'attaque** — selon le type (voir table "Sources d'élément d'une attaque" plus haut) :
+   - Physical → arme équipée
+   - Dragoon → archetype
+   - Spell / Item → définition statique
+3. **Element Field** (Special Battle Command) — comment en Damia (real-time, pas de Battle Command) ?
+   - Option A : skip totalement (Field modifier permanent à ×1)
+   - Option B : Dragoon form solo = auto-Field correspondant à son élément (simplification : pas besoin de coordonner 3 transforms)
+   - Option C : skill / ultimate à activer manuellement
+   - Option D : conserver la mécanique 3-transform-simultanée si on a un party-of-3 actif
+4. **Couleurs UI** — encoder les 8 couleurs canon pour les UIs (selecteur character, name window, effets visuels)
 
 ### Mode Classic vs Modern (Survival)
 
-- **Classic** : respect strict — 8 éléments, relations canon, Field/Element comme Wulves
-- **Modern** : potentielles modifications (e.g. crit vs même élément, nouveaux éléments hybrides, etc.) — à voir lors du design Survival Modern (cf. [SCOPE §7.2](../../SCOPE.md))
+- **Classic** : respect strict — 8 éléments, ×1.5 / ×0.5, Field bidirectionnel
+- **Modern** : potentielles modifications (e.g. crit vs même élément, immunités totales, nouveaux éléments hybrides) — à voir lors du design Survival Modern (cf. [SCOPE §7.2](../../SCOPE.md))
 
 ## Décisions & rationale
 
-| Décision                                                                              | Pourquoi                                                                                                 |
-| ------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| Suivre les nombres **Wulves** (×0.5 / ×1.5 / ×1) plutôt que la perception fandom (×2) | Testing formel > description narrative. La perception ×2 vient probablement de Field + Element combinés. |
-| Documenter le canon **avant** de câbler le code                                       | Évite de bricoler un système qui devra être refait. Le data-model attend décision design.                |
-| Non-Elemental traité comme **8ᵉ élément à part**, pas une absence                     | Canon : il a des règles spécifiques (×2 vs tous, pas de résistance), donc un type énuméré dédié.         |
-| Kongol et Meru sans arme élémentale dédiée — assumé canon                             | Si on les laisse comme canon, ça implique qu'ils ne bénéficient pas de bonus élémental en physical.      |
+| Décision                                                               | Pourquoi                                                                                                                                                                |
+| ---------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Suivre **wiki LoD + Wulves** pour les nombres exacts (×1.5 / ×0.5)     | Sources tier 🥈 et 🥇 alignées, fandom (×2) débunké                                                                                                                     |
+| Garder 8 éléments (avec Non-Elemental)                                 | Confirmé wiki + user (couleur grise en jeu). Non-Elemental N'EST PAS un 8ᵉ élément spécial avec ×2, c'est juste un élément normal sans opposing et sans self-resistance |
+| **Pas** de mécanique "diminution dégâts reçus" séparée pour le Special | Wiki LoD est explicite : seul effet du Special command = Field modifier, bidirectionnel. La "diminution" perçue venait probablement de cette mécanique mal interprétée  |
+| Documenter le canon **avant** câbler                                   | Le système est interdépendant (Element + Field + arme + Dragoon-form + items) — design d'abord, code après                                                              |
 
 ## Spec technique (proposition)
 
@@ -177,67 +187,73 @@ export type Element =
   | 'thunder'
   | 'non-elemental';
 
-// Option champ sur Stats
-interface Stats {
-  // … champs existants
-  element?: Element; // élément de l'entité (pour cible)
-}
-
-// Option : élément de l'attaque (au moment de l'attaque, pas persistant)
-interface AttackContext {
-  element?: Element; // élément de cette attaque spécifique (depuis arme / Dragoon / spell)
-}
-
-// Modifier wrapper étendu
-function elementModifier(attackElem: Element, targetElem?: Element): number {
-  if (!targetElem || !attackElem) return 1;
-  if (areOpposites(attackElem, targetElem)) return 1.5; // Wulves
-  if (attackElem === targetElem) return 0.5;
-  return 1;
-}
-
-const OPPOSITES: Record<Element, Element | null> = {
+// Opposites table (Thunder & Non-Elemental sans opposite)
+const OPPOSITES: Partial<Record<Element, Element>> = {
   fire: 'water',
   water: 'fire',
   wind: 'earth',
   earth: 'wind',
   light: 'darkness',
   darkness: 'light',
-  thunder: null,
-  'non-elemental': null,
+  // thunder, non-elemental absent (no opposite)
 };
 
-// Cas spécial Non-Elemental
-function nonElementalModifier(attackElem: Element, targetElem?: Element): number {
-  if (attackElem === 'non-elemental' && targetElem && targetElem !== 'non-elemental') {
-    return 2; // ×2 vs tout
-  }
+// Element modifier (target vs attack element)
+function elementModifier(attackElem: Element, targetElem?: Element): number {
+  if (!targetElem) return 1;
+  if (OPPOSITES[attackElem] === targetElem) return 1.5; // opposite
+  if (attackElem === targetElem && attackElem !== 'non-elemental') return 0.5; // same (sauf NE)
   return 1;
 }
+
+// Field modifier (attack vs current Element Field, if any)
+function fieldModifier(attackElem: Element, fieldElem?: Element): number {
+  if (!fieldElem) return 1;
+  if (OPPOSITES[attackElem] === fieldElem) return 0.5; // opposite to field
+  if (attackElem === fieldElem && attackElem !== 'non-elemental') return 1.5; // same as field
+  return 1;
+}
+
+// Couleurs UI (à compléter avec les valeurs exactes du wiki)
+const ELEMENT_COLOR: Record<Element, number> = {
+  fire: 0xff4422, // approx red
+  water: 0x4488ff, // approx blue
+  wind: 0x44cc44, // approx green
+  earth: 0xddaa44, // approx amber
+  light: 0xffffaa, // approx pale yellow
+  darkness: 0x553388, // approx deep purple
+  thunder: 0xaa55ee, // approx violet (HSL ~273)
+  'non-elemental': 0x888888, // gray
+};
 ```
 
 ## Liens code
 
 Pas de code encore. Quand câblé, prévoir :
 
-- `src/data/elements.ts` (enum + OPPOSITES + helpers)
+- `src/data/elements.ts` (enum + OPPOSITES + helpers + colors)
 - Champ `Stats.element` ou nouveau component `Elemental`
 - Extension `damage.ts` `readModifiers` pour incorporer Element et Field
-- Items : flag `element` sur weapons / spells
+- Items : flag `element` sur weapons / spells / attack items
+- État global / scene : tracker du Field actif (si on porte le Special)
 
 ## Liens doc
 
-- **Source canon (fandom)** : [`_sources/fandom-tlod-elements.md`](./_sources/fandom-tlod-elements.md)
-- **Source canon (Wulves)** : [`_sources/wulves-tlod-damage-formulas.md`](./_sources/wulves-tlod-damage-formulas.md) (modifiers Field/Element)
+- **Source canon (wiki LoD 🥈)** : [`_sources/lod-wiki-element.md`](./_sources/lod-wiki-element.md)
+- **Source canon (Wulves 🥇)** : [`_sources/wulves-tlod-damage-formulas.md`](./_sources/wulves-tlod-damage-formulas.md)
+- **Source canon (Discord 🥇)** : [`_sources/discord-tlod-clarifications.md`](./_sources/discord-tlod-clarifications.md)
+- **Source fandom (🥉, historique)** : [`_sources/fandom-tlod-elements.md`](./_sources/fandom-tlod-elements.md)
 - **Formule de base** : [`damage-formula.md`](./damage-formula.md)
 - **Modifiers détaillés** : [`damage-modifiers.md`](./damage-modifiers.md) (à créer)
-- **Armes élémentales** : `items/equipment.md` (à créer — `Heat Blade`, `Twister Glaive`, `Sparkle Arrow`, `Shadow Cutter`, `Thunder Fist`)
-- **Dragoon par élément** : `dragoons/README.md` (déjà mappé dans la table characters)
-- **Special Battle Command (Element Dimensions)** : à terme dans `dragoons/transformations.md`
+- **Armes élémentales** : `items/equipment.md` (à créer — Heat Blade, Twister Glaive, etc.)
+- **Dragoon par élément** : [`dragoons/README.md`](../dragoons/README.md)
+- **Special Battle Command** : à terme dans `dragoons/transformations.md`
 
 ## Questions ouvertes
 
-- **Data-model element côté entité** — Stats.element ? component dédié ? À trancher avant câblage.
-- **Special Battle Command (Field)** — porter ou skip ? Si oui, comment en real-time (Dragoon form = field auto ? skill séparé ?) ?
-- **Resolution divergence fandom/Wulves** — confirmer que la valeur canon code est bien ×1.5 et que le ×2 fandom = combiné Field+Element. À tester en émulateur si doute.
-- **Tagging des mobs custom Damia** (Fruegel etc.) — quel élément ? Probablement à choisir au cas par cas (Fruegel = Earth thématiquement ? boss-specific ?).
+- **Couleurs RGB exactes** des 8 éléments — l'image `Element Colors.webp` du wiki LoD donne les valeurs précises. À récupérer pour mapping UI Damia (ou au pire approximer depuis le wiki).
+- **Data-model element côté entité** — Stats.element ? component dédié ? À trancher avant câblage code.
+- **Special Battle Command en real-time Damia** — Option A / B / C / D (voir Vision Damia). À trancher avec le design Dragoon form.
+- **Tagging élémental des mobs custom Damia** (Fruegel, futurs mobs Damia-exclusive) — décider au cas par cas.
+- **Vérifier mob elements canon contre wiki LoD 🥈** plutôt que se baser sur le fandom 🥉 (cf. table mobs Damia).
+- **Détails Divine Dragon / Divine Dragoon** — la nuance entre "boss Divine Dragon utilise éléments réguliers de ses sorts" (Drew) et "Divine Dragoon Special field × 1.5 sur Divine DG Cannon/Ball" (wiki) à clarifier. Va dans `dragoons/transformations.md` ou `bosses/Divine Dragon.md` plus tard.

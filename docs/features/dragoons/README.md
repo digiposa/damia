@@ -44,16 +44,17 @@ _(à remplir au fil — exemples possibles : `native_pre_existing`, `inherited_f
 
 Chaque Dragoon a un élément attaché ([cf. `combat/elements.md`](../combat/elements.md)) :
 
-| Archetype           | Élément                                                       | Character(s) canon         |
-| ------------------- | ------------------------------------------------------------- | -------------------------- |
-| Red-Eye Dragon      | Fire                                                          | Dart                       |
-| Jade Dragon         | Wind                                                          | Lavitz, Albert             |
-| White-Silver Dragon | Light                                                         | Shana, Miranda, (Shirley)  |
-| Darkness Dragon     | Darkness                                                      | Rose                       |
-| Violet Dragon       | Thunder                                                       | Haschel                    |
-| Blue-Sea Dragon     | Water                                                         | Meru, (Damia)              |
-| Gold Dragon         | Earth                                                         | Kongol                     |
-| Divine Dragon       | _(boss, élément variable selon le sort — cf. Discord clarif)_ | (Boss, pas playable canon) |
+| Archetype                               | Élément                                                                                                         | Character(s) canon                           |
+| --------------------------------------- | --------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
+| Red-Eye Dragon                          | Fire                                                                                                            | Dart                                         |
+| Jade Dragon                             | Wind                                                                                                            | Lavitz, Albert                               |
+| White-Silver Dragon                     | Light                                                                                                           | Shana, Miranda, (Shirley)                    |
+| Darkness Dragon                         | Darkness                                                                                                        | Rose                                         |
+| Violet Dragon                           | Thunder                                                                                                         | Haschel                                      |
+| Blue-Sea Dragon                         | Water                                                                                                           | Meru, (Damia)                                |
+| Gold Dragon                             | Earth                                                                                                           | Kongol                                       |
+| Divine Dragoon (Dart late-game upgrade) | Non-Elemental (tag forme) — son Special field boost uniquement Divine DG Cannon + Divine DG Ball (cf. wiki LoD) | Dart (post-acquisition Divine Dragon Spirit) |
+| Divine Dragon (boss antagoniste)        | Sorts utilisent élément régulier de chaque sort (e.g. Burning Wave = Fire, cf. Discord DrewUniverse)            | Boss late game (non playable)                |
 
 L'élément du Dragoon détermine :
 

@@ -111,7 +111,11 @@ tlodRound(num, div): number  // floor((num + div/2) / div), div > 0
 
 ## Questions ouvertes
 
-- **Quand wirer les modifiers non-encore-actifs** ? Fear, Power, Field, Element, Destroyer Mace — chacun dépend d'un système qui n'existe pas encore (status effects, alignement élémentaire, équipement). À planifier au fil des features.
-- **Mob spells / mob magic** : la formule Item Magic est tagguée "player-only" en canon. Si on veut un jour des sorts ennemis, faut décider d'une formule (canon TLoD n'en a pas d'explicite côté enemy).
-- **Critical hits** : pas wirés. Canon TLoD a-t-il des crits ? À vérifier puis trancher.
-- **Resistance par élément** : prévue via `Element` modifier mais data-model côté entités (Faction ? Stats étendu ?) à définir.
+- **Wirer les modifiers infrastructure-ready** — Fear, Power, Field, Element, Destroyer Mace, etc. → 🟡 **doc d'abord, code après**. On documente leurs règles canon dans [`status-effects.md`](./status-effects.md) (à créer) + [`damage-modifiers.md`](./damage-modifiers.md) (à créer) ; l'implémentation suit quand la feature porteuse est traitée (status / éléments / équipement). Cette doc-ci (`damage-formula.md`) intégrera leur interaction au moment du wiring.
+- **Mob spells / mob magic formula** — ⏳ user cherche la formule canon (TLoD n'a pas d'enemy magic formula explicite côté wiki standard ; à confirmer). Une fois trouvée → ajouter un 4ᵉ entry point `computeEnemyMagicalDamage` ou étendre l'existant.
+- **Critical hits** — ✅ **tranché** : **pas de crits en canon TLoD**. Considérés comme **feature potentielle exclusive du Survival Modern** (cf. [SCOPE §7.2](../../SCOPE.md#72-mode-survival--fun-first)). À ré-évaluer quand on traitera spécifiquement le ruleset Modern.
+- **Resistance par élément** — ⏳ user fournit la doc canon. Une fois reçue → wirer `element` modifier + définir le data-model côté entités (champ sur `Stats` ? component dédié `Elemental` ?). Doc dédiée : [`damage-modifiers.md`](./damage-modifiers.md) (à créer).
+
+### Note transverse — interaction avec status effects
+
+Les statuts canon TLoD (Fear, Poison, Stun, Sleep, etc.) doivent **passer par le wrapper de modifiers** existant quand on les wirera. Le slot `targetFear` / `attackerFear` est déjà prévu pour ça. Voir future [`status-effects.md`](./status-effects.md) — l'intégration dans la damage formula y sera spécifiée pour préserver la cohérence canon.

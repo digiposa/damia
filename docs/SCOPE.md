@@ -87,6 +87,15 @@ Damia se développe sur **2 modes en parallèle**, **base de code unique**.
 - Laboratoire de feel : permet de tester en avance des éléments destinés à finir aussi en Story
 - Différences assumées avec Story : acquisition (méta-unlocks vs narrative), équilibrage (endless vs canon)
 
+#### Deux sous-modes de Survival
+
+Vision posée 2026-05-18.
+
+- **Survival Classic** — respecte le canon TLoD sur la majorité des mécaniques (formules de dégâts, modifiers, additions, Dragoons, etc.), simplement adapté à une boucle survival. Pas de mécaniques étrangères au jeu d'origine (ex : pas de critical hits).
+- **Survival Modern** — modifications plus profondes pour coller au feel Vampire-Survivors-pur. Mécaniques exclusives possibles : critical hits, modifiers spécifiques, scaling agressif, etc. Liberté gameplay assumée.
+
+→ **Implication code** : un **ruleset / mode flag** discriminant Classic vs Modern doit exister côté combat / progression / loot. Les features exclusives à Modern doivent être **gateables proprement** (pas de duplication, juste un opt-in par mode).
+
 ### 7.3 Code partagé vs spécifique
 
 Les **mécaniques de combat** (additions, Dragoon transform, SP, magies, items, stats) sont **partagées au niveau code** entre les deux modes.
@@ -158,6 +167,7 @@ Ce qui **diffère par mode** :
 | Play Store technique ?       | 🟡 cap posé        | **Wrapper natif** envisagé (Capacitor/Cordova/TWA), choix exact différé. Pipeline web GitHub Actions maintenu pendant dev. (§6) |
 | Contradiction MVP/Dragoon ?  | ✅ tranché         | ROADMAP outdated ; VISION valable comme cible. (§9.1)                                                                           |
 | Scope canon final ?          | ✅ tranché         | **TLoD canon complet, 4 discs** (§8)                                                                                            |
+| Survival sous-modes ?        | ✅ tranché         | **Classic** (canon-fidèle adapté) + **Modern** (Vampire-Survivors-pur, criticals etc.) (§7.2)                                   |
 | Exceptions fidélité TLoD ?   | ⏳ ouvert (au fil) | Documenté au cas par cas dans chaque feature concernée (§9.2)                                                                   |
 | Critères de canon-fidélité ? | ⏳ ouvert          | À définir plus tard. Entre-temps : Claude tranche, user valide. (§9.3)                                                          |
 | Open-source ou repo privé ?  | 🟡 actuel          | **Public** maintenant, peut passer privé plus tard (§10)                                                                        |

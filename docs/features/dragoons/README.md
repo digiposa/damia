@@ -63,6 +63,26 @@ L'élément du Dragoon détermine :
 - L'élément de son arme élémentale (Heat Blade, Twister Glaive, etc. — `items/equipment.md` à créer)
 - L'Element Dimension invoquée via Special Battle Command (canon, à voir si porté en Damia)
 
+### DLV thresholds & multipliers (canon — à compléter par archetype)
+
+Source de progression DLV = SP lifetime cumulé (cf. [VISION §6.2](../../VISION.md#62-dlv-dragoon-level--progression)). Données canon par archetype, à compléter au fil :
+
+#### Jade Dragon (Lavitz / Albert)
+
+Source : [`../party-members/Albert.md`](../party-members/Albert.md#dlv-thresholds--multipliers-canon).
+
+| DLV | SP lifetime threshold | AT bonus | DF bonus | MAT bonus | MDF bonus |
+| --- | --------------------- | -------- | -------- | --------- | --------- |
+| 1   | -                     | 150%     | 200%     | 200%      | 200%      |
+| 2   | 1,000                 | 155%     | 210%     | 205%      | 210%      |
+| 3   | 6,000                 | 160%     | 220%     | 210%      | 220%      |
+| 4   | 12,000                | 165%     | 230%     | 215%      | 230%      |
+| 5   | 20,000                | 170%     | 250%     | 220%      | 250%      |
+
+#### Red-Eye / White-Silver / Darkness / Violet / Blue-Sea / Gold / Divine Dragon
+
+_(à remplir au fil des pages character ingérées)_
+
 ### Flags / état système
 
 _(à remplir — ex : `hasDragoonSpirit.{character}`, `DragoonUnlockState.{element}`)_

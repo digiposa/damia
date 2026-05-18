@@ -125,6 +125,14 @@ Détails complets dans [`_sources/lod-wiki-additions.md`](./_sources/lod-wiki-ad
 
 **Note** : `*` dans le wiki = Addition jamais counter (généralement les 1-2 press qui n'ont pas d'opportunity, OU certaines marquées explicitement). Cette info est utile pour le design Damia (priorisation des additions safe).
 
+### Trivia voice lines (canon)
+
+Certaines additions ont une voice line distincte selon l'avatar qui les exécute, même si l'addition affichée à l'écran a le même nom :
+
+- **Flower Storm** (Lavitz / Albert, Jade Dragon) : Lavitz dit **"Rose Storm"** vocalement ; Albert dit **"Blossom Storm"** vocalement. Texte affiché identique dans les deux cas.
+
+→ Implication Damia : pour respecter ce détail canon, prévoir un **mapping voice clip par avatar** dans le système addition (pas seulement par addition kind). Tracé dans [`TODO.md`](../../TODO.md).
+
 ## Vision Damia
 
 ### Synthèse — comportement cible Damia

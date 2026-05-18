@@ -11,16 +11,16 @@ Documentation par thématique de gameplay. Chaque feature couvre :
 
 ## Catégories
 
-| Catégorie                           | Statut      | Description                                         |
-| ----------------------------------- | ----------- | --------------------------------------------------- |
-| [`dragoons/`](./dragoons/README.md) | 🟡 en cours | Dragoons : obtention, transformation, stats, magic  |
-| `party-members/`                    | ⚪ planifié | Profils characters au-delà du Dragoon               |
-| `bosses/`                           | ⚪ planifié | Encounters bosses (canon + adaptation Damia)        |
-| `combat/`                           | 🟡 en cours | Additions, auto-attack, defense, damage formula, AI |
-| `magic-system/`                     | ⚪ planifié | Sorts non-Dragoon, MP, éléments                     |
-| `items/`                            | ⚪ planifié | Équipement, consommables, key items                 |
-| `locations/`                        | ⚪ planifié | Donjons, villes, world map                          |
-| `quests/`                           | ⚪ planifié | Story beats, side quests                            |
+| Catégorie                                     | Statut      | Description                                         |
+| --------------------------------------------- | ----------- | --------------------------------------------------- |
+| [`dragoons/`](./dragoons/README.md)           | 🟡 en cours | Dragoons : obtention, transformation, stats, magic  |
+| [`party-members/`](./party-members/README.md) | 🟡 en cours | Profils characters au-delà du Dragoon               |
+| `bosses/`                                     | ⚪ planifié | Encounters bosses (canon + adaptation Damia)        |
+| `combat/`                                     | 🟡 en cours | Additions, auto-attack, defense, damage formula, AI |
+| `magic-system/`                               | ⚪ planifié | Sorts non-Dragoon, MP, éléments                     |
+| `items/`                                      | ⚪ planifié | Équipement, consommables, key items                 |
+| `locations/`                                  | ⚪ planifié | Donjons, villes, world map                          |
+| `quests/`                                     | ⚪ planifié | Story beats, side quests                            |
 
 ## Convention
 

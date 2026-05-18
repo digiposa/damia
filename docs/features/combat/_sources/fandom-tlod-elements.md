@@ -1,8 +1,9 @@
 # Elements — TLoD (Fandom Wiki)
 
 > **Source** : [The Legend of Dragoon Wiki — Element](https://legendofdragoon.fandom.com/wiki/Element).
+> **Fiabilité** : 🥉 **tier 3** (cf. [hiérarchie sources](../../README.md#hiérarchie-de-fiabilité-des-sources-canon-tlod)) — vue narrative, simplifications possibles. **Préférer Wulves (🥇)** ou legendofdragoon.org (🥈) pour les nombres et formules. Le fandom reste utile pour les **relations qualitatives** et **listings** (qui résiste qui, enemies par élément, lore).
 > **Sauvegardé le** : 2026-05-18.
-> **Usage** : référence canonique pour [`elements.md`](../elements.md), [`damage-modifiers.md`](../damage-modifiers.md), [`damage-formula.md`](../damage-formula.md) (modifiers Field/Element), `dragoons/` (affinité par archetype), `items/` (armes élémentales), `bosses/` (éléments des bosses).
+> **Usage** : référence pour [`elements.md`](../elements.md), [`damage-modifiers.md`](../damage-modifiers.md), [`damage-formula.md`](../damage-formula.md) (modifiers Field/Element), `dragoons/` (affinité par archetype), `items/` (armes élémentales), `bosses/` (éléments des bosses).
 
 > Light formatting markdown appliqué. Toutes informations / tables préservées.
 

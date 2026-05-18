@@ -1,6 +1,7 @@
 # Necessary Terms — TLoD Damage Formulas (Wulves)
 
-> **Source** : Wulves et al., serveur Discord LoD — doc de référence "Necessary Terms".
+> **Source** : Wulves et al. (Drew, tfz, Zychronix, Monoxide, Dedspawn), serveur Discord LoD — doc de référence "Necessary Terms".
+> **Fiabilité** : 🥇 **tier 1** (cf. [hiérarchie sources](../../README.md#hiérarchie-de-fiabilité-des-sources-canon-tlod)) — testing formel par cadors / modders communauté. **Source de vérité pour formules et nombres exacts**.
 > **Origine** : <https://pastebin.com/v1RGE5KD> (volatile, sauvegardé localement).
 > **Sauvegardé le** : 2026-05-18.
 > **Usage** : référence canonique pour [`damage-formula.md`](../damage-formula.md), [`damage-modifiers.md`](../damage-modifiers.md), [`status-effects.md`](../status-effects.md), [`additions.md`](../additions.md), et `dragoons/magic.md`.

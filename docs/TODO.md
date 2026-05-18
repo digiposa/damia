@@ -28,6 +28,9 @@
 
 ### Elements (système élémental)
 
+- [ ] **Vérifier ×2 Non-Elemental contre source tier 1** — La doc fandom (🥉) dit Non-Elemental ×2 vs tous, mais Wulves (🥇) ne traite pas explicitement Non-Elemental. Hypothèse actuelle : hardcodé sur items (Psyche Bomb, Divine Dragon). À confirmer via Discord communauté ou legendofdragoon.org wiki. Source: [`features/combat/elements.md`](features/combat/elements.md) §caveat. Priorité: **moyenne** (avant câblage modifier Element).
+- [ ] **Vérifier % Element Dimensions (Special Battle Command)** — Fandom dit ×2 Dragoon Magic + Additions ; user mentionne aussi "diminution dégâts reçus" (% inconnu). Confirmer ces chiffres via source tier 1. Source: elements.md §Element Dimensions.
+
 - [ ] **Data-model `Element`** — Définir le type (enum 8 valeurs : fire, water, wind, earth, light, darkness, thunder, non-elemental) + table `OPPOSITES`. Probablement `src/data/elements.ts`. Source: [`features/combat/elements.md`](features/combat/elements.md). Priorité: **haute** (préréquis à plein d'autres choses).
 
 - [ ] **Champ `element` côté entité** — Trancher : ajouter `Stats.element?` OU créer component `Elemental` dédié. Affecte les mobs (tagger Berserk Mouse=Dark, Goblin=Fire, etc.) ET les player characters (élément du Dragoon). Source: elements.md §Vision Damia. Priorité: **haute**.

@@ -26,31 +26,29 @@
 
 ### Relations canoniques
 
-| Source       | Vs same element         | Vs opposed element                                        | Vs anyone (modifier Element wrapper) |
-| ------------ | ----------------------- | --------------------------------------------------------- | ------------------------------------ |
-| **Fire**     | Resists itself (×0.5)   | × ? vs Water (voir divergence ci-dessous)                 |                                      |
-| **Water**    | Resists itself          | × ? vs Fire                                               |                                      |
-| **Wind**     | Resists itself          | × ? vs Earth                                              |                                      |
-| **Earth**    | Resists itself          | × ? vs Wind                                               |                                      |
-| **Light**    | Resists itself          | × ? vs Darkness                                           |                                      |
-| **Darkness** | Resists itself          | × ? vs Light                                              |                                      |
-| **Thunder**  | Resists itself          | **Aucun opposing** (×1 vs tous sauf Non-Elemental qui ×2) |                                      |
-| **Non-Elem** | **Ne résiste PAS** (×1) | **×2 vs TOUS les autres éléments**                        |                                      |
+| Source       | Vs same element         | Vs opposed element                                                           | Vs anyone (modifier Element wrapper) |
+| ------------ | ----------------------- | ---------------------------------------------------------------------------- | ------------------------------------ |
+| **Fire**     | Resists itself (×0.5)   | × ? vs Water (voir divergence ci-dessous)                                    |                                      |
+| **Water**    | Resists itself          | × ? vs Fire                                                                  |                                      |
+| **Wind**     | Resists itself          | × ? vs Earth                                                                 |                                      |
+| **Earth**    | Resists itself          | × ? vs Wind                                                                  |                                      |
+| **Light**    | Resists itself          | × ? vs Darkness                                                              |                                      |
+| **Darkness** | Resists itself          | × ? vs Light                                                                 |                                      |
+| **Thunder**  | Resists itself          | **Aucun opposing** (×1 vs tous sauf Non-Elemental, voir ci-dessous)          |                                      |
+| **Non-Elem** | **Ne résiste PAS** (×1) | **×2 vs TOUS les autres éléments** — ⚠️ **fandom-only**, non confirmé Wulves |                                      |
 
-### ⚠️ Divergence entre sources
+> ⚠️ **Caveat Non-Elemental ×2** : cette règle vient **uniquement de la doc fandom** (🥉). La doc Wulves (🥇) **ne traite pas explicitement Non-Elemental** dans sa table de modifiers — appliquer strictement le modifier Element de Wulves à un attaquant Non-Elemental contre n'importe quelle cible donnerait modifier = ×1 (ni match, ni opposite). Le ×2 observé en jeu est **probablement hardcodé** sur les items concernés (Psychedelic Bomb, Divine Dragon attacks) plutôt que dérivé du modifier Element standard. **À confirmer** auprès source tier 1 (Discord communauté ou legendofdragoon.org).
 
-- **Fandom** : opposing element deals **×2 damage** (e.g. Fire vs Water = ×2)
-- **Wulves** (Element modifier table) : opposite = `+1/2` ⇒ modifier `1 + (+1/2) = 1.5` ⇒ **×1.5 damage**
+### ⚠️ Divergence entre sources — résolution
 
-Hypothèses pour réconcilier :
+- **Fandom** (🥉) : opposing element deals **×2 damage**
+- **Wulves** (🥇) : Element modifier table = opposite `+1/2` ⇒ modifier `1 + (+1/2) = 1.5` ⇒ **×1.5 damage**
 
-- La perception "×2" du fandom pourrait venir de la **combinaison Field + Element** dans un Element Dimension matchant l'élément de l'attaque :
-  - Field bonus : `1 + (+1/2) = ×1.5` (attaque match field)
-  - Element bonus : `1 + (+1/2) = ×1.5` (cible opposite à l'attaque)
-  - **Combinés** : `×1.5 × ×1.5 = ×2.25` ≈ "double damage" perçu
-- Le fandom est une description narrative simplifiée, Wulves a fait du testing formel (cf. credits Dedspawn)
+**Résolution selon la [hiérarchie de fiabilité](../README.md#hiérarchie-de-fiabilité-des-sources-canon-tlod)** : **Wulves prime** (testing formel par cadors communauté). Le ×2 du fandom est une **simplification narrative** ; la valeur correcte côté formule est ×1.5.
 
-→ **Source de vérité retenue** : **Wulves** pour les nombres exacts. Le fandom reste référence pour les **relations** (qui résiste qui, qui oppose qui, listing enemies par élément).
+Note : la perception "×2" peut venir de la combinaison **Field + Element** quand les deux s'appliquent (`×1.5 × ×1.5 = ×2.25`), notamment en Element Dimension matchant l'attaque.
+
+→ **Source de vérité** : Wulves pour les **nombres**. Fandom utilisé uniquement pour les **relations qualitatives** (qui résiste qui, listing enemies par élément, lore).
 
 ### Application du système
 
@@ -101,13 +99,23 @@ Chaque enemy a un élément. Le listing complet (~140 enemies par éléments) es
 
 ### Element Dimensions (Special Battle Command)
 
-Mécanique canon : la commande "Special" en combat permet d'invoquer une **Element Dimension** correspondant à l'élément du Dragoon. Effets :
+Mécanique canon PS1 : la commande **"Special"** en combat permet l'enchaînement suivant — **les 3 membres actifs du party se transforment simultanément en Dragoon**. L'**initiateur de la transformation crée une Element Dimension** correspondant à **son** élément, qui :
 
-- Tous les Dragoon Magic et Dragoon Additions **×2 damage**
-- Dragoon Additions **automatiquement complétées** (perfect granted)
-- Visual : terrain coloré de l'élément
+- Renforce les dégâts des attaques élémentales matchant le field
+- Réduit les dégâts élémentaux reçus (à confirmer en termes de quel élément + combien)
 
-**Visuel uniquement** : Level 5 Dragoon Magic invoque aussi l'Element Dimension le temps de l'animation, **sans bonus damage**.
+**Effets damage canon (sources)** :
+
+| Effet                                           | Source             | Statut         |
+| ----------------------------------------------- | ------------------ | -------------- |
+| Dragoon Magic et Additions **×2 damage**        | Fandom 🥉          | À confirmer 🥇 |
+| Dragoon Additions **auto-complétées (perfect)** | Fandom 🥉          | À confirmer 🥇 |
+| **Diminution dégâts reçus** (% inconnu)         | User (mémoire PS1) | À confirmer 🥇 |
+| Visual : terrain coloré de l'élément initiateur | Fandom 🥉 + user   | ✅             |
+
+> ⚠️ Les pourcentages exacts (×2 damage, % défense) viennent du fandom (🥉) et de la mémoire user — à valider avec une source tier 1 (Discord ou legendofdragoon.org). Cf. [`TODO.md`](../../TODO.md).
+
+**Visuel uniquement** : Level 5 Dragoon Magic invoque aussi l'Element Dimension le temps de l'animation, **sans bonus damage** (fandom 🥉).
 
 ## Vision Damia
 

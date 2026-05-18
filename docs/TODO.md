@@ -55,6 +55,20 @@
 
 - [ ] **Tagging élémental des mobs Damia** — Berserk Mouse=Darkness, Goblin=Fire, Assassin Cock=Wind, Trent=Earth (canon). Fruegel=? (à décider). À ajouter dans `src/data/balance.ts` MOBS. Source: elements.md §Element des enemies. Priorité: à voir avec data-model.
 
+### Additions (système chained attacks)
+
+- [ ] **Trancher QTE timing en real-time** — Canon = timing sight + button press. Damia = pas de QTE actuellement. Options A (auto-complete, déjà l'état) / B (combo rythmique) / C (click multi-séquentiel) / D (Modern vs Classic différencié). Source: [`features/combat/additions.md`](features/combat/additions.md) §Q1. Priorité: **moyenne** (décision impacte plusieurs items dépendants).
+
+- [ ] **Trancher Counterattacks** — Canon : enemies counter avec circle button, max 1/Addition, formule dédiée. Damia : pas implémenté. Options α (skip) / β (parry button window) / γ (passif % chance) / δ (Modern-only). Dépend décision QTE. Source: additions.md §Q2.
+
+- [ ] **Wargod Calling / Ultimate Wargod accessoires** — Canon : Wargod Calling auto-complete avec ½ damage/SP/no leveling ; Ultimate Wargod auto-complete full. Si on choisit Option A QTE (auto-complete par défaut), ces items perdent leur sens. À reframer / skip selon décision Q1. Source: additions.md §Q3.
+
+- [ ] **Lavitz vs Albert différenciation** — Canon : mêmes additions, rythmes + counters différents. Sans QTE/counters → fonctionnellement identiques. Comment les différencier (stats ? autre) ? Source: additions.md §Q5.
+
+- [ ] **Level applied after battle vs immediate** — Canon : level up appliqué après battle end. Vérifier comportement code Damia. Acter design (Classic = canon, Modern = immediate ?). Source: additions.md §Q6.
+
+- [ ] **Mob counter groups** — Canon : ~140 enemies sortés en 10 groupes (1, 2, 3, 4, 9, 13, 16, 19, 23, 28). Data-model côté mob/balance à définir si on porte les counters. Damia mobs déjà identifiés : Berserk Mouse=28, Goblin=28, Trent=28, Assassin Cock=19, Fruegel=28. Source: additions.md.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

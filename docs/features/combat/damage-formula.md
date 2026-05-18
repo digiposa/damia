@@ -202,7 +202,7 @@ Les 6 autres (`targetFear`, `attackerFear`, `power`, `field`, `element`, `destro
 - **Système élémental** : [`elements.md`](./elements.md) — 8 éléments, Field/Element rules ×1.5/×0.5 (Wulves+wiki confirmés)
 - **Modifiers détaillés** : [`damage-modifiers.md`](./damage-modifiers.md) (à créer — Power/Fear/Destroyer Mace variables)
 - **Status effects** : [`status-effects.md`](./status-effects.md) (à créer — Confusion/Bewitchment/Poison/Fear)
-- **Additions** : [`additions.md`](./additions.md) (à créer — Hit Data + Multiplier Data par addition × niveau)
+- **Additions** : [`additions.md`](./additions.md) — Hit Data + Multiplier Data par addition × niveau + counter mechanic + Wargod accessories
 - **Dragoon spells** : `dragoons/magic.md` (à créer — Multipliers par spell par archetype)
 - **Backlog code** : [`TODO.md`](../../TODO.md#damage-formula)
 

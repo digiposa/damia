@@ -150,43 +150,44 @@ Détails complets dans [`_sources/lod-wiki-additions.md`](./_sources/lod-wiki-ad
 - ❌ Différenciation Lavitz vs Albert (rhythm + counters) — en canon ils ont mêmes additions mais opportunities différentes
 - ❌ Performances continuent à être tracked au-delà du seuil (level max = 5, mais comportement post-cap pas spec)
 
-### Discussion impl (à trancher)
+### Décisions impl (tranchées 2026-05-18)
 
-#### 1. QTE timing en real-time — comment ?
+#### Q1 — QTE timing en real-time : ✅ **Option A retenue — Auto-complete**
 
-Canon : presser X au moment où les carrés overlap. **Damia n'a pas de QTE**. Options :
+Toutes les additions s'auto-complètent en Damia (état actuel du code conservé). Simplification du gameplay, pas de friction QTE en real-time iso.
 
-- **Option A** : Auto-complete toutes les additions (Damia version), comme Ultimate Wargod canon. Dégâts max systématique. Simple, fun, pas de friction.
-- **Option B** : QTE adapté pour iso temps réel — e.g. click-to-attack initie addition, puis hold/release rythmique pour scaler dégâts (sans casser le flow temps réel)
-- **Option C** : Combo input séquentiel (presser X N fois dans une fenêtre temporelle), avec dégâts scalant sur N successful inputs
-- **Option D** : Modern Survival = auto-complete ; Classic Survival / Story = QTE (option B ou C)
+**Idée d'enrichissement futur** : réfléchir à une **mécanique fun cohérente 2D iso action** d'inputs joueur pendant l'animation, notamment pour le **mode Survival** (potentiellement Modern). Pistes :
 
-**Recommandation** : commencer par **Option A** (déjà l'état actuel, simple). Iter vers Option B/C si on veut plus de skill expression côté joueur.
+- Timing-based key tap pendant la fenêtre d'animation
+- Combo direction (flèche / swipe correspondant à la direction du hit)
+- Bonus damage / SP scalant sur N inputs réussis (cohérent canon)
 
-#### 2. Counterattacks — porter ?
+→ Tracé dans [`TODO.md`](../../TODO.md) comme idée à explorer.
 
-Mécanique signature canon (timing-based bouton O). **Sans QTE, comment porter ?**
+#### Q2 — Counterattacks : ✅ **Skip pour l'instant**
 
-Options :
+Pas d'implémentation du counter Addition canon (red flash + circle button + Counter formula). Le système reste simple : Addition lancée = anim joue jusqu'au bout sans interruption ennemie.
 
-- **Option α** : Skip totalement (Modern simplification)
-- **Option β** : "Random interrupt" : pendant l'addition animation, l'enemy peut placer un counter selon ses opportunities ; le joueur doit appuyer sur une touche dans une fenêtre courte (ex : Espace) pour parry. Sinon, dégâts du Counter formula.
-- **Option γ** : Counter automatique passif : enemy a x% chance de counter (depending on group), inflige dégâts du Counter formula. Pas d'input joueur.
-- **Option δ** : Skip Story / activable Modern Survival (perk to unlock).
+**Idée d'enrichissement futur** : réfléchir à une **mécanique fun de risque/récompense** cohérente real-time iso. Pistes :
 
-**Recommandation** : reposer cette question quand on aura tranché QTE. Le counter dépend du flow d'input principal.
+- "Parry window" : touche dédiée à presser quand l'enemy déclenche un signal visuel pendant l'addition
+- "Block press" : maintenir une touche pendant phases vulnérables
+- Mob ability "interrupt" qui force le joueur à esquiver
+- Mode Modern Survival = perk débloquable
 
-#### 3. Wargod accessories
+→ Tracé dans [`TODO.md`](../../TODO.md).
 
-Wargod Calling auto-complete mais nerf 50% / Ultimate Wargod auto-complete full.
+#### Q3 — Wargod Calling / Ultimate Wargod : ✅ **Reframer en mécanique différente, liée aux additions**
 
-Si on choisit **Option A (auto-complete par défaut)** pour les additions Damia : ces accessoires deviennent **redondants** (puisque tout est auto-complete déjà). Soit on :
+Les items canon perdent leur sens vu Q1 (auto-complete par défaut). On **garde le concept** "accessoires liés aux additions" mais avec une **mécanique différente Damia** à concevoir.
 
-- ❌ Skip ces items (perdent leur sens design)
-- ✅ Reframe : Ultimate Wargod = bonus damage / SP multiplier, Wargod Calling = trade-off (less damage but less SP cost or similar)
-- ✅ Garder pour le mode "QTE optionnel" si on implémente l'Option B/C
+Pistes (à valider au moment du design `items/equipment.md`) :
 
-→ Décision liée à Q1.
+- **Ultimate Wargod** → bonus damage multiplier (e.g. ×1.2) OU SP gain bonus (e.g. ×1.5) OU réduction cooldown skill
+- **Wargod Calling** → trade-off (e.g. cooldown réduit mais ½ damage)
+- Garder les noms canon, redesigner les effets pour rester intéressants en Damia
+
+→ Décision exacte différée au moment d'implémenter l'équipement.
 
 #### 4. Per-hit vs sum-first damage formula
 

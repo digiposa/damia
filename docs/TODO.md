@@ -57,17 +57,23 @@
 
 ### Additions (système chained attacks)
 
-- [ ] **Trancher QTE timing en real-time** — Canon = timing sight + button press. Damia = pas de QTE actuellement. Options A (auto-complete, déjà l'état) / B (combo rythmique) / C (click multi-séquentiel) / D (Modern vs Classic différencié). Source: [`features/combat/additions.md`](features/combat/additions.md) §Q1. Priorité: **moyenne** (décision impacte plusieurs items dépendants).
+- [x] **Trancher QTE timing en real-time** — ✅ **TRANCHÉ 2026-05-18** : Option A retenue. Auto-complete des additions (état actuel du code Damia conservé). Source: [`features/combat/additions.md`](features/combat/additions.md) §Q1.
 
-- [ ] **Trancher Counterattacks** — Canon : enemies counter avec circle button, max 1/Addition, formule dédiée. Damia : pas implémenté. Options α (skip) / β (parry button window) / γ (passif % chance) / δ (Modern-only). Dépend décision QTE. Source: additions.md §Q2.
+- [x] **Trancher Counterattacks** — ✅ **TRANCHÉ 2026-05-18** : Skip pour l'instant. Pas de mécanique de counter Addition implémentée en Damia. Source: additions.md §Q2.
 
-- [ ] **Wargod Calling / Ultimate Wargod accessoires** — Canon : Wargod Calling auto-complete avec ½ damage/SP/no leveling ; Ultimate Wargod auto-complete full. Si on choisit Option A QTE (auto-complete par défaut), ces items perdent leur sens. À reframer / skip selon décision Q1. Source: additions.md §Q3.
+- [x] **Wargod Calling / Ultimate Wargod accessoires** — ✅ **TRANCHÉ 2026-05-18** : Reframer en mécanique différente Damia (gardent le concept "accessoires liés aux additions" mais effets redessinés). Design exact à valider au moment de `items/equipment.md`. Source: additions.md §Q3.
 
-- [ ] **Lavitz vs Albert différenciation** — Canon : mêmes additions, rythmes + counters différents. Sans QTE/counters → fonctionnellement identiques. Comment les différencier (stats ? autre) ? Source: additions.md §Q5.
+- [ ] **💡 IDÉE FUTURE — Mécanique fun pour additions** (cohérente 2D iso action) — possiblement réservée Mode Survival (Modern ?). Pistes : timing key tap, combo direction, bonus damage scalant sur N inputs. Source: additions.md §Q1 (enrichissement). Priorité: basse (post-MVP).
+
+- [ ] **💡 IDÉE FUTURE — Mécanique fun pour counterattacks** (risque/récompense pendant additions) — pistes : parry window, block press, mob interrupt, perk Modern Survival. Source: additions.md §Q2 (enrichissement). Priorité: basse (post-MVP).
+
+- [ ] **Design Wargod accessories Damia** — Imaginer les effets exacts d'Ultimate Wargod + Wargod Calling reframés. À traiter dans `items/equipment.md` quand on attaque l'équipement. Source: additions.md §Q3.
+
+- [ ] **Lavitz vs Albert différenciation** — Sans QTE/counters → fonctionnellement identiques. Comment les différencier (stats ? autre design) ? Source: additions.md §Q5.
 
 - [ ] **Level applied after battle vs immediate** — Canon : level up appliqué après battle end. Vérifier comportement code Damia. Acter design (Classic = canon, Modern = immediate ?). Source: additions.md §Q6.
 
-- [ ] **Mob counter groups** — Canon : ~140 enemies sortés en 10 groupes (1, 2, 3, 4, 9, 13, 16, 19, 23, 28). Data-model côté mob/balance à définir si on porte les counters. Damia mobs déjà identifiés : Berserk Mouse=28, Goblin=28, Trent=28, Assassin Cock=19, Fruegel=28. Source: additions.md.
+- [ ] **Mob counter groups** — Si on implémente jamais les counters (cf. idée future), il faudra le data-model. Canon : ~140 enemies sortés en 10 groupes (1, 2, 3, 4, 9, 13, 16, 19, 23, 28). Damia mobs identifiés : Berserk Mouse=28, Goblin=28, Trent=28, Assassin Cock=19, Fruegel=28. Source: additions.md. Priorité: basse (dépend idée future Q2).
 
 ### À décider / explorer
 

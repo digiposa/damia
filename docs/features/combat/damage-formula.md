@@ -195,8 +195,10 @@ Les 6 autres (`targetFear`, `attackerFear`, `power`, `field`, `element`, `destro
 
 ## Liens doc
 
-- **Source canon** : [`_sources/wulves-tlod-damage-formulas.md`](./_sources/wulves-tlod-damage-formulas.md)
-- **Modifiers détaillés** : [`damage-modifiers.md`](./damage-modifiers.md) (à créer — Power/Field/Element variables)
+- **Source canon (formules)** : [`_sources/wulves-tlod-damage-formulas.md`](./_sources/wulves-tlod-damage-formulas.md)
+- **Source canon (éléments)** : [`_sources/fandom-tlod-elements.md`](./_sources/fandom-tlod-elements.md)
+- **Système élémental** : [`elements.md`](./elements.md) — 8 éléments, Field/Element rules
+- **Modifiers détaillés** : [`damage-modifiers.md`](./damage-modifiers.md) (à créer — Power/Fear/Destroyer Mace variables)
 - **Status effects** : [`status-effects.md`](./status-effects.md) (à créer — Confusion/Bewitchment/Poison/Fear)
 - **Additions** : [`additions.md`](./additions.md) (à créer — Hit Data + Multiplier Data par addition × niveau)
 - **Dragoon spells** : `dragoons/magic.md` (à créer — Multipliers par spell par archetype)

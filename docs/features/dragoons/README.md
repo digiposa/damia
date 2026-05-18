@@ -40,6 +40,28 @@ Les fichiers ci-dessous sont créés au fil de la couverture (création paresseu
 
 _(à remplir au fil — exemples possibles : `native_pre_existing`, `inherited_from_parent`, `chosen_by_spirit`, etc.)_
 
+### Affinité élémentaire par archetype
+
+Chaque Dragoon a un élément attaché ([cf. `combat/elements.md`](../combat/elements.md)) :
+
+| Archetype           | Élément       | Character(s) canon         |
+| ------------------- | ------------- | -------------------------- |
+| Red-Eye Dragon      | Fire          | Dart                       |
+| Jade Dragon         | Wind          | Lavitz, Albert             |
+| White-Silver Dragon | Light         | Shana, Miranda, (Shirley)  |
+| Darkness Dragon     | Darkness      | Rose                       |
+| Violet Dragon       | Thunder       | Haschel                    |
+| Blue-Sea Dragon     | Water         | Meru, (Damia)              |
+| Gold Dragon         | Earth         | Kongol                     |
+| Divine Dragon       | Non-Elemental | (Boss, pas playable canon) |
+
+L'élément du Dragoon détermine :
+
+- L'élément de ses sorts Dragoon Magic
+- L'élément de son auto-attack en form Dragoon (en canon : Dragoon Archer Attack via DRGNAT%)
+- L'élément de son arme élémentale (Heat Blade, Twister Glaive, etc. — `items/equipment.md` à créer)
+- L'Element Dimension invoquée via Special Battle Command (canon, à voir si porté en Damia)
+
 ### Flags / état système
 
 _(à remplir — ex : `hasDragoonSpirit.{character}`, `DragoonUnlockState.{element}`)_

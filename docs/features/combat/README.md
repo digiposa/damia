@@ -20,6 +20,7 @@
 | Aspect             | Fichier                                    | Statut                     | Description                                          |
 | ------------------ | ------------------------------------------ | -------------------------- | ---------------------------------------------------- |
 | Formules de dégâts | [`damage-formula.md`](./damage-formula.md) | 🟡 draft                   | Formules TLoD-canon (physical, addition, item magic) |
+| Elements           | [`elements.md`](./elements.md)             | 🟡 draft                   | Système élémental (8 éléments, Field/Element)        |
 | Auto-attack        | `basic-attack.md`                          | ⚪ pas encore créé         | Click-to-attack, range, swing, cooldown              |
 | Defense / guard    | `defense.md`                               | ⚪ pas encore créé         | Touche S, lock-in 3s, CD 10s, heal 10% HP            |
 | Additions          | `additions.md`                             | ⚪ pas encore créé         | 28 combos sur 6 archetypes, levels 1-5, SP gains     |

@@ -44,16 +44,16 @@ _(à remplir au fil — exemples possibles : `native_pre_existing`, `inherited_f
 
 Chaque Dragoon a un élément attaché ([cf. `combat/elements.md`](../combat/elements.md)) :
 
-| Archetype           | Élément       | Character(s) canon         |
-| ------------------- | ------------- | -------------------------- |
-| Red-Eye Dragon      | Fire          | Dart                       |
-| Jade Dragon         | Wind          | Lavitz, Albert             |
-| White-Silver Dragon | Light         | Shana, Miranda, (Shirley)  |
-| Darkness Dragon     | Darkness      | Rose                       |
-| Violet Dragon       | Thunder       | Haschel                    |
-| Blue-Sea Dragon     | Water         | Meru, (Damia)              |
-| Gold Dragon         | Earth         | Kongol                     |
-| Divine Dragon       | Non-Elemental | (Boss, pas playable canon) |
+| Archetype           | Élément                                                       | Character(s) canon         |
+| ------------------- | ------------------------------------------------------------- | -------------------------- |
+| Red-Eye Dragon      | Fire                                                          | Dart                       |
+| Jade Dragon         | Wind                                                          | Lavitz, Albert             |
+| White-Silver Dragon | Light                                                         | Shana, Miranda, (Shirley)  |
+| Darkness Dragon     | Darkness                                                      | Rose                       |
+| Violet Dragon       | Thunder                                                       | Haschel                    |
+| Blue-Sea Dragon     | Water                                                         | Meru, (Damia)              |
+| Gold Dragon         | Earth                                                         | Kongol                     |
+| Divine Dragon       | _(boss, élément variable selon le sort — cf. Discord clarif)_ | (Boss, pas playable canon) |
 
 L'élément du Dragoon détermine :
 

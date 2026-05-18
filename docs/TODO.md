@@ -28,7 +28,9 @@
 
 ### Elements (système élémental)
 
-- [ ] **Vérifier ×2 Non-Elemental contre source tier 1** — La doc fandom (🥉) dit Non-Elemental ×2 vs tous, mais Wulves (🥇) ne traite pas explicitement Non-Elemental. Hypothèse actuelle : hardcodé sur items (Psyche Bomb, Divine Dragon). À confirmer via Discord communauté ou legendofdragoon.org wiki. Source: [`features/combat/elements.md`](features/combat/elements.md) §caveat. Priorité: **moyenne** (avant câblage modifier Element).
+- [x] **Vérifier ×2 Non-Elemental contre source tier 1** — ✅ **RÉSOLU 2026-05-18** : claim fandom **FAUX** confirmé par Discord (Icarus + DrewUniverse). Non-Elemental existe comme élément (couleur grise) mais N'A PAS d'effet ×2 vs tous. Psyche Bomb scale via BID, Divine Dragon attacks utilisent leurs éléments réguliers (Burning Wave=Fire, etc.). Voir [`features/combat/_sources/discord-tlod-clarifications.md`](features/combat/_sources/discord-tlod-clarifications.md).
+
+- [ ] **Vérifier "Non-Elemental does not resist itself"** — Claim fandom non démenti explicitement, mais provient du même paragraphe BS que le ×2. À confirmer via tier 1 (legendofdragoon.org wiki ou Discord). Source: [`features/combat/elements.md`](features/combat/elements.md). Priorité: basse (cas edge).
 - [ ] **Vérifier % Element Dimensions (Special Battle Command)** — Fandom dit ×2 Dragoon Magic + Additions ; user mentionne aussi "diminution dégâts reçus" (% inconnu). Confirmer ces chiffres via source tier 1. Source: elements.md §Element Dimensions.
 
 - [ ] **Data-model `Element`** — Définir le type (enum 8 valeurs : fire, water, wind, earth, light, darkness, thunder, non-elemental) + table `OPPOSITES`. Probablement `src/data/elements.ts`. Source: [`features/combat/elements.md`](features/combat/elements.md). Priorité: **haute** (préréquis à plein d'autres choses).

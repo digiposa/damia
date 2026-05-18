@@ -47,6 +47,15 @@ Thunder has the **unique property of having no opposing element**. This means th
 
 ### Non-Elemental (Unbased)
 
+> ⚠️ **CETTE SECTION EST EN PARTIE DÉMENTIE PAR TIER 1** (Discord communauté, 2026-05-18). Voir [`discord-tlod-clarifications.md`](./discord-tlod-clarifications.md). Résumé :
+>
+> - **Non-Elemental existe** comme élément en jeu (couleur grise, confirmé user)
+> - ❌ Le claim **"deals double damage against all other elements"** est **FAUX** (BS confirmé par Icarus et DrewUniverse, cador crédité chez Wulves)
+> - ❌ Le claim que Psyche Bomb / Divine Dragon sont devastating à cause de Non-Elemental est **FAUX** : Psyche Bomb scale via BID élevé (400), Divine Dragon attacks utilisent les éléments réguliers indiqués par chaque sort (Burning Wave = Fire, etc.)
+> - ❓ "Does NOT resist itself" : provient du même paragraphe démenti, **à vérifier** indépendamment via tier 1
+>
+> **Conserver cette section uniquement à titre historique** pour expliquer les divergences. Ne pas utiliser comme source.
+
 Unique properties :
 
 - **No opposite**

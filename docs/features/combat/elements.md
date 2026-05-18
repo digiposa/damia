@@ -4,12 +4,13 @@
 >
 > **Sources canon** :
 >
-> - [`_sources/fandom-tlod-elements.md`](./_sources/fandom-tlod-elements.md) — fandom wiki (vue narrative + listing enemies par élément)
-> - [`_sources/wulves-tlod-damage-formulas.md`](./_sources/wulves-tlod-damage-formulas.md) — Wulves (formules numériques)
+> - [`_sources/wulves-tlod-damage-formulas.md`](./_sources/wulves-tlod-damage-formulas.md) — Wulves (🥇, formules numériques)
+> - [`_sources/discord-tlod-clarifications.md`](./_sources/discord-tlod-clarifications.md) — Discord communauté (🥇, confirmations / corrections)
+> - [`_sources/fandom-tlod-elements.md`](./_sources/fandom-tlod-elements.md) — fandom wiki (🥉, vue narrative + listing enemies par élément — **plusieurs claims démentis par tier 1**)
 
 ## Statut
 
-🟡 **draft** — système canon documenté. **Pas câblé en code** : les modifiers `Field` et `Element` ont un slot dans `DamageModifiers` mais aucun système ne les active. Aucun champ `element` sur les composants.
+🟡 **draft** — système canon documenté + clarifié par tier 1 Discord (2026-05-18). **Pas câblé en code** : modifiers `Field` et `Element` ont un slot dans `DamageModifiers` mais aucun système ne les active. Aucun champ `element` sur les composants.
 
 ## Canon PS1
 
@@ -22,33 +23,36 @@
 5. **Light**
 6. **Darkness**
 7. **Thunder**
-8. **Non-Elemental** (a.k.a. Unbased)
+8. **Non-Elemental** _(a.k.a. Unbased)_ — couleur grise en jeu
+
+> **Sur Non-Elemental** : élément qui **existe bel et bien en jeu** (avec représentation visuelle grise), confirmé par user. **Mais** le claim fandom du "×2 vs all other elements" est **démenti par Discord communauté** (Icarus, DrewUniverse — 2026-05-18, cf. [discord-tlod-clarifications.md](./_sources/discord-tlod-clarifications.md)). Fonctionnellement, Non-Elemental se comporte plus comme Thunder côté modifier Element : pas d'opposing, pas de bonus damage vs autres éléments. Le scaling élevé de Psyche Bomb / Divine Dragon attacks vient des **multipliers** (BID pour items, Multiplier pour Dragoon Magic), pas d'un effet ×2.
 
 ### Relations canoniques
 
-| Source       | Vs same element         | Vs opposed element                                                           | Vs anyone (modifier Element wrapper) |
-| ------------ | ----------------------- | ---------------------------------------------------------------------------- | ------------------------------------ |
-| **Fire**     | Resists itself (×0.5)   | × ? vs Water (voir divergence ci-dessous)                                    |                                      |
-| **Water**    | Resists itself          | × ? vs Fire                                                                  |                                      |
-| **Wind**     | Resists itself          | × ? vs Earth                                                                 |                                      |
-| **Earth**    | Resists itself          | × ? vs Wind                                                                  |                                      |
-| **Light**    | Resists itself          | × ? vs Darkness                                                              |                                      |
-| **Darkness** | Resists itself          | × ? vs Light                                                                 |                                      |
-| **Thunder**  | Resists itself          | **Aucun opposing** (×1 vs tous sauf Non-Elemental, voir ci-dessous)          |                                      |
-| **Non-Elem** | **Ne résiste PAS** (×1) | **×2 vs TOUS les autres éléments** — ⚠️ **fandom-only**, non confirmé Wulves |                                      |
+| Élément           | Vs same element     | Vs opposed element      | Vs neither | Opposite |
+| ----------------- | ------------------- | ----------------------- | ---------- | -------- |
+| **Fire**          | Résiste (×0.5)      | Water → bonus damage    | ×1         | Water    |
+| **Water**         | Résiste             | Fire → bonus damage     | ×1         | Fire     |
+| **Wind**          | Résiste             | Earth → bonus damage    | ×1         | Earth    |
+| **Earth**         | Résiste             | Wind → bonus damage     | ×1         | Wind     |
+| **Light**         | Résiste             | Darkness → bonus damage | ×1         | Darkness |
+| **Darkness**      | Résiste             | Light → bonus damage    | ×1         | Light    |
+| **Thunder**       | Résiste             | **Aucun opposing** (×1) | ×1         | _(none)_ |
+| **Non-Elemental** | ❓ à confirmer wiki | **Aucun opposing** (×1) | ×1         | _(none)_ |
 
-> ⚠️ **Caveat Non-Elemental ×2** : cette règle vient **uniquement de la doc fandom** (🥉). La doc Wulves (🥇) **ne traite pas explicitement Non-Elemental** dans sa table de modifiers — appliquer strictement le modifier Element de Wulves à un attaquant Non-Elemental contre n'importe quelle cible donnerait modifier = ×1 (ni match, ni opposite). Le ×2 observé en jeu est **probablement hardcodé** sur les items concernés (Psychedelic Bomb, Divine Dragon attacks) plutôt que dérivé du modifier Element standard. **À confirmer** auprès source tier 1 (Discord communauté ou legendofdragoon.org).
+**Valeurs exactes du "bonus damage"** : Wulves dit **×1.5** (modifier Element = `1 + (+1/2) = 1.5`). Le fandom dit ×2 mais c'est une simplification narrative démentie au profit de Wulves (cf. hiérarchie sources). Voir détail ci-dessous §Application du système.
 
-### ⚠️ Divergence entre sources — résolution
+> ❓ **Question ouverte sur Non-Elemental** : se résiste-t-il lui-même comme les autres éléments (×0.5 vs same) ? Fandom dit non ("does not resist itself") mais cette affirmation provient du même paragraphe que le ×2 vs all (démenti). À confirmer via tier 1 (Discord ou legendofdragoon.org wiki). Tracé dans TODO.md.
 
-- **Fandom** (🥉) : opposing element deals **×2 damage**
-- **Wulves** (🥇) : Element modifier table = opposite `+1/2` ⇒ modifier `1 + (+1/2) = 1.5` ⇒ **×1.5 damage**
+### Divergences sources — résolutions
 
-**Résolution selon la [hiérarchie de fiabilité](../README.md#hiérarchie-de-fiabilité-des-sources-canon-tlod)** : **Wulves prime** (testing formel par cadors communauté). Le ×2 du fandom est une **simplification narrative** ; la valeur correcte côté formule est ×1.5.
+| Sujet                          | Fandom (🥉)                          | Wulves / Discord (🥇)                                                        | Verdict                                                                                                                                                                                      |
+| ------------------------------ | ------------------------------------ | ---------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Opposing element bonus damage  | ×2                                   | ×1.5 (Element modifier = `1 + 1/2`)                                          | ✅ **Wulves prime** : ×1.5. Le ×2 fandom = simplification narrative (la perception ×2 vient de Field + Element combinés : `×1.5 × ×1.5 ≈ ×2.25` en Element Dimension).                       |
+| Non-Elemental ×2 vs tous       | Présenté comme un 8ᵉ élément spécial | ❌ N'existe pas comme tel                                                    | ✅ **Discord prime** (Icarus, DrewUniverse 2026-05-18) : Psyche Bomb et Divine Dragon scalent via leurs **multipliers**, pas via un élément spécial. Il n'y a **que 7 éléments mécaniques**. |
+| Divine Dragon "Divine element" | Implicite via Non-Elemental          | Sorts du Divine Dragon = élément régulier du sort (e.g. Burning Wave = Fire) | ✅ **Discord prime** (DrewUniverse).                                                                                                                                                         |
 
-Note : la perception "×2" peut venir de la combinaison **Field + Element** quand les deux s'appliquent (`×1.5 × ×1.5 = ×2.25`), notamment en Element Dimension matchant l'attaque.
-
-→ **Source de vérité** : Wulves pour les **nombres**. Fandom utilisé uniquement pour les **relations qualitatives** (qui résiste qui, listing enemies par élément, lore).
+→ **Source de vérité** : Wulves + Discord pour les **mécaniques exactes**. Fandom utilisé **uniquement** pour les **relations qualitatives** (qui résiste qui, listing enemies par élément, lore) — et même là, vérifier.
 
 ### Application du système
 

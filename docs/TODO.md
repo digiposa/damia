@@ -73,7 +73,16 @@
 
 - [x] **Level applied after battle vs immediate** — ✅ **TRANCHÉ 2026-05-18** : Option A — Immediate (style Diablo 2). Pas de notion "fin de combat" en real-time. Source: additions.md §Q5.
 
-- [ ] **Performances tracked past level cap (Q6)** — Une fois Addition au max level 5, continue-t-on à compter les uses ? Options : (a) cap dur à 100 / (b) compteur continue (utile pour stats / méta-progression Survival ?). À trancher. Source: additions.md §Q6.
+- [x] **Performances tracked past level cap (Q6)** — ✅ **TRANCHÉ 2026-05-18** : respect canon — compteur de performances cappé à 99 (s'arrête à 99 même si on continue), level cappé à 5 dès 80 uses. Source: [`features/combat/additions.md`](features/combat/additions.md) §Q6.
+
+### Additions — vérifications code (vs vision)
+
+- [ ] **Vérifier cap performances à 99** dans le code Damia (cohérent canon)
+- [ ] **Vérifier unlock progressif** des additions par character level (Story mode) dans le code
+- [ ] **Vérifier Master Addition gating** : final unlock conditionné à la maîtrise des autres
+- [ ] **Shana / Miranda** : pas d'addition, arc, SP scale DLV — état du code à vérifier (cf. VISION §6.2)
+- [ ] **Lavitz → Albert inheritance** : état apprentissage additions + stats + XP transféré à la mort de Lavitz — vérifier code
+- [ ] **Survival mode — additions persistence** : performances reset par run ou tracked across runs ? Design à acter
 
 - [x] **Albert Dmg%/SP table wiki** — ✅ **RÉSOLU** : typo wiki, Albert = Lavitz (mêmes stats / additions / SP, archetype Jade Dragoon partagé). Utiliser table Lavitz comme référence. Source: additions.md §Q7.
 

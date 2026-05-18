@@ -127,6 +127,33 @@ Détails complets dans [`_sources/lod-wiki-additions.md`](./_sources/lod-wiki-ad
 
 ## Vision Damia
 
+### Synthèse — comportement cible Damia
+
+Vision posée 2026-05-18, à respecter à l'impl :
+
+- **Auto-complete des additions** (cf. décision Q1) — pas de QTE, l'addition joue son animation complète et inflige son perfect damage canon
+- **Level up jusqu'à 5** suivant le canon :
+  - 20 successful uses (performances) = +1 level, max Lv 5
+  - Multipliers de dégâts canon par level (tables Wulves/wiki — déjà en `balance.ts`)
+  - Gain de SP canon par level (déjà en `balance.ts`)
+  - Compteur de performances **cappé à 99** (canon : le compteur affiché s'arrête à 99 même si on continue à utiliser l'addition ; le level est cappé à 5 dès 80 uses)
+- **Choix de l'addition active** par character (déjà implémenté code Damia — UI / picker)
+- **Unlock progressif** des additions par **character level** en Mode Story (cf. tables d'acquisition par character — Dart Volcano @Lv2, Crush Dance @Lv15, etc.)
+- **Final addition** (Master Addition canon) débloquée après avoir **maîtrisé toutes les autres** du character (canon : "Perform all prior additions 80 times")
+- **Shana / Miranda** = exception canon :
+  - **Pas d'addition** (canon respecté)
+  - Utilisent un **arc** comme arme (Archer / Bow)
+  - **Gain SP scale avec le DLV** (Dragoon Level) — cohérent VISION §6.2 (35→150 SP par auto-attack entre DLV 1 et 5, source wiki Shana)
+
+### Mode Survival vs Story
+
+| Aspect                  | Story mode                             | Survival mode                            |
+| ----------------------- | -------------------------------------- | ---------------------------------------- |
+| Unlock additions        | Progressif par character level (canon) | Méta-progression (méta-unlocks via runs) |
+| Level up additions      | Performances tracked across runs/saves | Performances reset par run (à confirmer) |
+| Final / Master addition | "Maîtriser toutes les autres" (canon)  | Méta-unlock ou drop reward (à voir)      |
+| Choix active            | Menu System Screen (canon)             | Quick-pick in-run / loadout              |
+
 ### État actuel (impl partielle)
 
 **Déjà en code** (cf. inventaire combat) :
@@ -139,16 +166,26 @@ Détails complets dans [`_sources/lod-wiki-additions.md`](./_sources/lod-wiki-ad
 - 20-uses-per-level threshold (aligné canon)
 - Voice line à la complétion si final hit landed
 - Formule `computeAdditionDamage` per-hit dans `src/gameplay/damage.ts`
+- Auto-complete (cf. Q1)
+- Level up immediate (cf. Q5)
 
-**Pas en code** (gaps vs canon) :
+**À vérifier / compléter** :
 
-- ❌ QTE / timing sight (real-time = pas de QTE possible — décision design)
+- ❓ Cap performances à 99 (canon) — vérifier le comportement actuel du compteur
+- ❓ Unlock progressif par character level (Mode Story) — déjà implémenté ?
+- ❓ Master Addition gating (debloquée après les autres) — déjà implémenté ?
+- ❓ Shana/Miranda : pas d'addition + arc + SP scale DLV — état du code ?
+- ❓ Lavitz → Albert inheritance state — déjà géré ?
+- ❓ Different damage formula sum-first vs per-hit (acté per-hit pour UX, vs canon sum-first — cf. damage-formula.md §Décisions)
+
+**Pas en code** (gaps acceptés vs canon) :
+
+- ❌ QTE / timing sight (real-time = pas de QTE possible — décision Q1 Option A)
 - ❌ Feedback white/blue/gray (sans QTE, sans pertinence)
-- ❌ **Counterattacks** (mécanique majeure canon)
-- ❌ **Wargod Calling / Ultimate Wargod** accessoires
-- ❌ Level applied **after battle** (Damia : probablement immediate — à vérifier code)
-- ❌ Différenciation Lavitz vs Albert (rhythm + counters) — en canon ils ont mêmes additions mais opportunities différentes
-- ❌ Performances continuent à être tracked au-delà du seuil (level max = 5, mais comportement post-cap pas spec)
+- ❌ **Counterattacks** (skip pour l'instant, cf. Q2 — idée future à explorer)
+- ❌ **Wargod Calling / Ultimate Wargod** canon (à reframer Damia, cf. Q3)
+- ❌ Level applied **after battle** (Damia : immediate, cf. Q5)
+- ❌ Différenciation gameplay Lavitz vs Albert (acté Q4 : identiques, skins différents)
 
 ### Décisions impl (tranchées 2026-05-18)
 

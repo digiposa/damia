@@ -47,9 +47,10 @@ Suite à l'ingestion de la [page fandom Elements](./fandom-tlod-elements.md), di
 
 ### Implications
 
-- **TLoD a 7 éléments mécaniques** (Fire, Water, Wind, Earth, Light, Darkness, Thunder), pas 8.
-- **"Non-Elemental" / "Unbased"** = descripteur "pas d'élément tagué" sur certains items/spells. Effet mécanique : le modifier Element s'applique avec `match=false / opposite=false` → modifier `×1` (pas de bonus, pas de malus). C'est donc **fonctionnellement neutre**, pas spécial.
+- **TLoD a bien 8 éléments en jeu** : Fire, Water, Wind, Earth, Light, Darkness, Thunder, **Non-Elemental** (couleur grise en jeu, confirmé user).
+- **Non-Elemental** existe comme élément mais **N'A PAS** l'effet "×2 vs tous" prétendu par le fandom. Fonctionnellement, il se comporte comme Thunder : pas d'opposing, donc le modifier Element donne ×1 vs les autres éléments. La résistance à lui-même reste à confirmer (claim fandom dans le même paragraphe BS).
 - Le scaling de damage des items "exotiques" (Psyche Bomb, Detonate Rock, etc.) vient **du BID** dans la formule Item Magic (voir [`damage-formula.md`](../damage-formula.md)), pas d'un modifier élémental spécial.
+- Les spells du Divine Dragon utilisent l'**élément régulier indiqué par chaque sort** (Burning Wave = Fire, etc.), pas un "élément Divine" exclusif.
 
 ### Actions appliquées
 

@@ -760,6 +760,34 @@
 
 - [ ] **Wink double-rescue canon** (Disc 2 Donau + Disc 3 Younger Bardel) — pattern Lloyd "saviour figure" établit trust durable. Important pour Disc 3 Crystal Palace kidnap context. À refléter `lore/lloyd-arc.md` (à créer).
 
+### Locations + Story / Lore (Donau fandom — 3 visits canon + corrections relations + Queen Fury)
+
+- [ ] **CORRECTION canon Donau relations** : **Kate = Lynn's fiancée** (PAS mère), **Mayor = Lynn's father** (PAS Kate's relation). Lynn went alone convince Gehrich Gang "few days before wedding day". À refléter `npcs/donau.md` (à créer). Source: [`features/locations/Donau.md`](features/locations/Donau.md).
+
+- [ ] **Donau localisation canon Tiberoa** — Donau dans **nord de Tiberoa** (fandom prime). Tiberoa = kingdom canon avec Fletz capital + King Zior + Twin Castle. À documenter `lore/tiberoa.md` (à créer) + `locations/Fletz.md` (à créer).
+
+- [ ] **3 visits canon Donau Disc 2** :
+  - **First Visit** : Meru recruit + Lynn rescue setup (mandatory)
+  - **Second Visit optional** : Wedding ceremony Kate+Lynn (post-Gehrich Home of Gigantos)
+  - **Third Visit** : Queen Fury boarding pursue Lenus Prison Island (post-Lenus Twin Castle)
+    → À orchestrer cinematic Damia (le code) avec story flags per visit. Source: Donau.md.
+
+- [ ] **Meru recruit canon mandatory** — "joins regardless of Dart's answer". Mandatory party member Disc 2 (pas optional). Dart's question = flavor only. À reflèter recruit logic (no branch).
+
+- [ ] **Twin Castle bedroom dialogue trigger canon** — trigger pour Meru bouquet outcome est **post-first banquet Twin Castle bedroom** (Fletz castle scene). Dart : "Meru pretty in wedding dress" Y/N. Si N → Haschel "lacks mature charm" + irks Meru canon. À orchestrer `quests/disc2-fletz-banquet.md` (à créer).
+
+- [ ] **Queen Fury boarding canon Donau Third Visit** — Commodore Puler (captain) + Kayla (assistant) NPCs. Routes : Donau-Fueno + Donau-Furni (Mille Seseau). À documenter `locations/Queen Fury.md` (à créer) + `npcs/queen-fury-crew.md`.
+
+- [ ] **Mr. Pelpee Mininto canon NPC** — confirme **Mininto species existe in-game** (cf. Divine Tree 99th fruit). Au bar Donau post-Kongol joins (vient de Lohan). Donne hint optional Kongol DS location (Lohan). À documenter `npcs/mr-pelpee.md` + enrichir `lore/108-species.md`.
+
+- [ ] **Mille Seseau knights chasing Lloyd canon Disc 2** — trivia canon : knights searching Lloyd around Donau shops post-Wink rescue. Implique **Lloyd antagoniste connu déjà Disc 2** par Mille Seseau. À documenter `lore/lloyd-arc.md` (à créer).
+
+- [ ] **Gehrich Gang bandits canon Disc 2** — terrorise Donau (mid-Disc 2 antagoniste). Origin canon : "area beyond Valley of Corrupted Gravity". Boss **Gehrich** au Home of Gigantos. À documenter `bosses/Gehrich.md` (à créer).
+
+- [ ] **King Zior + Tiberoa kingdom canon** — King Zior Fletz autorise entrée Valley of Corrupted Gravity. Tiberoa kingdom Disc 2. À documenter `lore/tiberoa.md` (à créer) + `npcs/king-zior.md`.
+
+- [ ] **Quest path canon Disc 2 Donau-arc** : Donau (Kate Letter) → Fletz (King Zior permission) → Valley of Corrupted Gravity → Home of Gigantos (Gehrich boss) → Lynn rescue → optional return Donau wedding → continue main quest. À documenter `quests/disc2-platinum-shadow.md` (à créer).
+
 ### Locations + Story / Lore (Divine Tree fandom — reveal mechanism + Caterpillar 3-phases + Coolon dies)
 
 - [ ] **CORRECTION canon Caterpillar = 3 phases sequential** (pas 3 mobs simultanés) — Caterpillar → Pupa → Imago, cycle de vie insectoid. Stats par phase :

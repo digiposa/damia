@@ -1,8 +1,11 @@
 # Divine Tree
 
-> **Sacred Tree of Soa Disc 4** post-Mayfil → pré-Moon That Never Sets. **Foundational lore TLoD** : Tree of Life planté par Soa, **108 fruits = 108 species** (Giganto/Mininto/Dragon/Human/Wingly/Virage + Demons/etc.). **Le 108ème fruit (Virage) = Moon That Never Sets** (flesh) + **Crystal Sphere** (soul). **Mille Seseau state religion** worships Divine Tree depuis 11k ans. Boss canon : **Caterpillar** (Non-Elemental, 13k EXP record). **Coolon crashes** here = arrivée canon party.
+> **Sacred Tree of Soa Disc 4** post-Mayfil → pré-Moon That Never Sets. **Foundational lore TLoD** : Tree of Life planté par Soa + followers, **108 fruits = 108 species** (Giganto/Mininto/Dragon/Human/Wingly/Virage + Demons/etc.). **7 rooted branches canon** (design). **Le 108ème fruit (Virage) = Moon That Never Sets** (flesh) + **Crystal Sphere** (soul). **Mille Seseau state religion** worships Divine Tree depuis 11k ans. Reveal Disc 4 : **final Signet Sphere détruit à Mayfil → Moon falls onto Divine Tree → swarm Virage crawl out**. **Coolon meurt** (crash post-Virage intercept). Boss canon : **Caterpillar mini-boss 3-phases sequential** (Caterpillar → Pupa → Imago, ~29,600 HP total). **Point of no return** : leaving Mayfil for Divine Tree = no return Endiness.
 >
-> **Source canon** : 🥈 [`_sources/lod-wiki-divine-tree.md`](./_sources/lod-wiki-divine-tree.md)
+> **Sources canon** :
+>
+> - 🥈 [`_sources/lod-wiki-divine-tree.md`](./_sources/lod-wiki-divine-tree.md) — wiki LoD (services / chests / 11 submaps / encounter formations / mob stats)
+> - 🥉 [`_sources/fandom-divine-tree.md`](./_sources/fandom-divine-tree.md) — fandom (Bishop Dille quote complète + Signet of Soa, reveal mechanism Moon falls post-Mayfil, 7 rooted branches design, Caterpillar 3-phases canon, Coolon dies post-Virage intercept, mob HP canon + JP divergence, Virage swarm forebearers God of Destruction)
 
 ## Statut
 
@@ -29,12 +32,41 @@
 
 ### Foundational lore TLoD (origine de toute vie)
 
-- **Soa** = créateur (deity Mille Seseau religion)
+- **Soa** = créateur (deity Mille Seseau religion). **Descended from the sky** + had **followers** (canon fandom) — équipe créatrice
 - **Divine Tree** = "Tree of Life" planté par Soa au début (world was empty + barren)
-- **Hauteur** : **2,500 m** tall
+- **Hauteur** : **2,500 m** tall + **7 rooted branches canon** (design)
 - **108 fruits** = 108 species différentes ; quand tous fruits tombent → tree dies → world cycle complete
+- **"Signet of Soa"** canon = seal protégeant le Divine Tree (distinct mais possiblement lié aux **Signet Spheres** Mille Seseau / Aglis / Mayfil)
 - **Mille Seseau state religion** worship Divine Tree (11k ans tradition, ancient ruins evidence)
 - **Bishop Dille** (Deningrad, cf. [`Deningrad.md`](./Deningrad.md)) = autorité religieuse représentant cette foi
+- **Quote canon Bishop Dille** : "_In the beginning, nothingness filled the world. Then, the creator Soa descended from the sky. He and his followers created the world. In the end, Soa sowed a seed on the earth. [...] Thus, 108 forms of life created to fill the world. [...] The world was established with a fate determined by Soa._"
+- **Existed only in legends** (jamais vu par a living being avant Disc 4 reveal) — myth devient réalité
+
+### Reveal mechanism canon (Disc 4 endgame)
+
+- **Final Signet Sphere détruit à Mayfil** (chain de Signet Spheres destruction Disc 3-4 : Crystal Palace Deningrad + Aglis + Mayfil)
+- **Moon That Never Sets falls down to earth** → bright flash from Moon
+- **Divine Tree reveals itself** dans "wide vast desert-like land" location inconnue d'Endiness
+- **Moon drops onto center of Divine Tree** :
+  - Écrase majorité des branches → crumble
+  - Seulement le center + bases des 7 branches restent
+  - **Moon links itself au Tree via thin branches** poussant dedans
+  - **Hundreds of Virage crawl out of the Moon** → forebearers du **God of Destruction** (nom canon du 108th species)
+
+### Coolon transport + crash canon
+
+- Party **ride on Coolon's back** pour atteindre la Moon
+- **Intercepted by a Virage** mid-flight (cf. swarm Virage crawl out)
+- **Crash landing** au pied du Divine Tree
+- **Coolon dies** post-crash 🪦 (canon tragique)
+- Party climb upward via **energy streams** Divine Tree → Moon
+
+### Beats narratifs canon Disc 4 (climbing the Tree)
+
+- Encounter **relics du passé** : dried up fruits (les 107 fruits déjà tombés, vestiges des species crées)
+- Use **energy streams** connecting Tree → Moon (mécanique vertical movement)
+- Battle **new species from unhatched fruit** = **Caterpillar/Pupa/Imago** (insectoid mini-boss)
+- Eventually arrive at the Moon (= final dungeon)
 
 ### Le 108ème fruit (Virage) — Moon That Never Sets canon
 
@@ -168,13 +200,18 @@ Aucun.
 
 ### Minor Enemies (5 — theme nature/varied elements)
 
-| Mob              | Élément  | EXP | Gold | Drop (%)              |
-| ---------------- | -------- | --- | ---- | --------------------- |
-| **Potbelly**     | Earth    | 144 | 24   | Healing Breeze 8%     |
-| **Slug**         | Earth    | 180 | 33   | Mind Purifier 10%     |
-| **Cute Cat**     | Thunder  | 162 | 51   | **Dancer's Shoes 2%** |
-| **Manticore**    | Darkness | 216 | 60   | Depetrifier 8%        |
-| **Mountain Ape** | Earth    | 198 | 42   | Angel's Prayer 10%    |
+| Mob              | Élément     | HP US/EU (JP)    | EXP | Gold US/EU (JP) | Drop (%)              |
+| ---------------- | ----------- | ---------------- | --- | --------------- | --------------------- |
+| **Potbelly**     | Earth       | 560 (700)        | 144 | 24 (8)          | Healing Breeze 8%     |
+| **Slug**         | Earth       | 1,200 (1,500)    | 180 | 33 (11)         | Mind Purifier 10%     |
+| **Cute Cat**     | Thunder     | 704 (800)        | 162 | 51 (17)         | **Dancer's Shoes 2%** |
+| **Manticore**    | Darkness ⚠️ | 960 (1,200)      | 216 | 60 (20)         | Depetrifier 8%        |
+| **Mountain Ape** | Earth       | 1,000 (1,800) ⚠️ | 198 | 42 (14)         | Angel's Prayer 10%    |
+
+> ⚠️ Divergences canon :
+>
+> - **Manticore element** : wiki LoD = Darkness / fandom = Earth → wiki LoD prime
+> - **Mountain Ape JP HP 1,800** = +80% vs US/EU (outlier vs typical JP +25%) — possible typo fandom JP, à reconfirmer tier 1
 
 > Notable :
 >
@@ -202,19 +239,27 @@ Retour au pattern classique random Disc 4 (vs Phantom Ship + Death Frontier = Co
 - **269** : Mountain Ape x2 + Cute Cat
 - **433** : **Caterpillar + Pupa + Imago** (Scripted, boss encounter submap 592)
 
-### Boss canon : Caterpillar
+### Boss canon : Caterpillar — **3-PHASES sequential** (CORRECTION canon fandom)
 
-| Boss            | Élément       | HP  | EXP    | Gold | Drops (100%)                                    |
-| --------------- | ------------- | --- | ------ | ---- | ----------------------------------------------- |
-| **Caterpillar** | Non-Elemental | ?   | 13,000 | 300  | **Healing Rain + Moon Serenade + Sun Rhapsody** |
+> 🆕 **CORRECTION canon** (fandom) : c'est **PAS** un trio mobs simultanés mais **3 phases sequential** d'un boss qui se transforme. Cycle de vie insectoid : **Caterpillar → Pupa → Imago**. Chaque phase a ses propres HP + drop 100%. Stats par phase :
 
-> 🆕 **Caterpillar boss** :
+| Phase              | Élément       | HP US/EU (JP)       | EXP        | Gold    | Drop (100%)       |
+| ------------------ | ------------- | ------------------- | ---------- | ------- | ----------------- |
+| **1. Caterpillar** | Non-Elemental | **10,400** (13,000) | N/A        | N/A     | **Moon Serenade** |
+| **2. Pupa**        | Non-Elemental | **3,200** (4,000)   | N/A        | N/A     | **Sun Rhapsody**  |
+| **3. Imago**       | Non-Elemental | **16,000** (20,000) | **13,000** | **300** | **Healing Rain**  |
+
+> Totaux :
 >
-> - **EXP 13,000** = **record canon party-member XP** (vs Belzac/Damia 6k = Vellweb anciens Dragoons)
-> - **Non-Elemental** boss canon (probable spells Non-Elemental type)
-> - Formation 433 inclut **3 forms** : Caterpillar + Pupa + Imago (cycle de vie insectoïde) — design canon "transformation boss" ?
-> - **Drop 100% × 3 items différents** = pattern unique canon (vs autres bosses drop 1 item 100%)
+> - **HP total : 29,600 US/EU / 37,000 JP**
+> - **EXP/Gold seulement à la phase finale Imago** (cohérent canon "boss defeat = final phase yield")
+> - **3 drops 100% différents** (1 par phase) — pattern unique canon
+> - **Tag fandom : "minor/mini-boss"** — pas un main boss malgré 29k HP (probable parce que pas de plot consequence majeure)
+> - **Phase 3 Imago** = la plus tanky (16k HP, plus que Damia 9k)
+> - **"New species from unhatched fruit"** = species canon (l'un des fruits non éclos du Divine Tree, oublié dans la liste 108 officielle)
 > - À documenter [`../bosses/Caterpillar.md`](../bosses/Caterpillar.md) (à créer)
+>
+> **🆕 Pattern boss canon "phase boss"** : Caterpillar = **1er boss à phases sequential documenté canon**. Mécanique : HP 0 phase actuelle → transition phase suivante (pas defeat, transformation). Data-model `Boss.phases: BossPhase[]` réutilisable (Emperor Doel 2 forms, Melbu Frahma final boss probable, etc.).
 
 ## Maps
 

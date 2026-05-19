@@ -636,6 +636,43 @@
 
 - [ ] **Kadessa lore canon** — Wingly capital où final battle Dragon Campaign (Zieg vs Melbu Frahma) → Crystal Sphere broke + Kadessa fell apart. Distinct Aglis/Forest of Winglies. À documenter `locations/Kadessa.md` (à créer) — possible location accessible Disc 4 ?
 
+### Locations + Story / Lore (Divine Tree fandom — reveal mechanism + Caterpillar 3-phases + Coolon dies)
+
+- [ ] **CORRECTION canon Caterpillar = 3 phases sequential** (pas 3 mobs simultanés) — Caterpillar → Pupa → Imago, cycle de vie insectoid. Stats par phase :
+  - Caterpillar : 10,400 HP (13,000 JP), N/A XP/Gold, drop Moon Serenade 100%
+  - Pupa : 3,200 HP (4,000 JP), N/A XP/Gold, drop Sun Rhapsody 100%
+  - Imago : 16,000 HP (20,000 JP), 13,000 EXP, 300 Gold, drop Healing Rain 100%
+  - Total : 29,600 HP US/EU / 37,000 JP
+    → Pattern boss canon "phase boss" : HP 0 phase → transition phase suivante. Data-model `Boss.phases: BossPhase[]`. Réutilisable Emperor Doel 2-forms, Melbu Frahma final boss probable. Source: [`features/locations/Divine Tree.md`](features/locations/Divine Tree.md) §Boss.
+
+- [ ] **Reveal mechanism Divine Tree canon Disc 4** — final Signet Sphere détruit à **Mayfil** → Moon falls to earth → bright flash → Divine Tree reveals dans desert-like land. Moon crushes branches du Tree, link via thin branches, **hundreds of Virage crawl out of Moon** = forebearers du **God of Destruction** (108th species). À orchestrer cinematic Disc 4 Damia.
+
+- [ ] **"Signet of Soa" canon** — distinct ou lié aux Signet Spheres ? Bishop Dille quote canon : "protected by the Signet of Soa". Le Divine Tree est protégé par ce seal Soa-related. Lien avec chain Signet Spheres (Crystal Palace Deningrad + Aglis + Mayfil = 3 connus minimum) ? À investiguer + documenter `lore/signet-of-soa.md` ou unifier `lore/signet-spheres.md`.
+
+- [ ] **Soa + followers canon** — fandom révèle : Soa "descended from the sky" avec **followers** qui ont créé le monde. Multiple deities ? Soa = chief deity + équipe créatrice ? À documenter `lore/soa-divine-tree.md` (à créer).
+
+- [ ] **7 rooted branches canon Divine Tree** — design visuel canon. 7 = nombre symbolique probable (7 anciens Dragoons ? 7 Sacred Sisters ? coincidence ?). À refléter design Damia (le code) — Tree visual.
+
+- [ ] **"God of Destruction" canon name** — fandom révèle : 108th fruit Virage = "God of Destruction" supposé naître. Distinct du concept "ends all life". Nom officiel à utiliser. À documenter `lore/virage.md` (à créer).
+
+- [ ] **Coolon dies canon** — post-crash mid-flight Virage intercept au pied du Divine Tree. Moment tragique. À orchestrer cinematic Damia (le code). Coolon = vehicle/creature Wingly canon mort en service.
+
+- [ ] **Energy streams Divine Tree** — mécanique gameplay vertical movement. Party climbs upward via energy streams. Auto-heal après stream exit (cohérent rest Water free). Pattern unique location.
+
+- [ ] **Point of no return canon Mayfil → Divine Tree** — leaving Mayfil = no return Endiness. Story flag majeur. À orchestrer warning UI Damia (cohérent canon last-warning prompt).
+
+- [ ] **"Death City Mayfil" canon name** — fandom canon. À utiliser pour ingestion future Mayfil.
+
+- [ ] **"New species from unhatched fruit" canon** — Caterpillar/Pupa/Imago = species canon, fruit non éclos oublié. Lore : explique pourquoi certaines espèces n'ont jamais éclot. À documenter `lore/108-species.md`.
+
+- [ ] **Mob HP canon Divine Tree** : Potbelly 560, Slug 1,200, Cute Cat 704, Manticore 960, Mountain Ape 1,000 (US/EU). JP +25% standard sauf **Mountain Ape JP 1,800 = +80%** (outlier à reconfirmer tier 1, possible typo fandom).
+
+- [ ] **Manticore element divergence canon** — wiki LoD = Darkness / fandom = Earth. Wiki LoD prime. À reconfirmer tier 1 si possible.
+
+- [ ] **Walkthrough linear canon** — Divine Tree = completely linear dungeon, climb upward only. Pattern simple Damia (le code) — pas de maze branching (vs Death Frontier).
+
+- [ ] **"Relics of the past" canon** — dried up fruits visibles dans le Divine Tree (les 107 fruits déjà tombés). Décor narratif à intégrer Damia (le code). Possible interaction NPC/codex pour lore (cohérent National Library Deningrad pattern).
+
 ### Locations + Story / Lore (Death Frontier fandom — narrative + farming canon)
 
 - [ ] **Power Up + Power Down items canon distincts (Repeat Items)** — clarif user : ce sont **2 items différents canon**, pas une divergence de nommage :

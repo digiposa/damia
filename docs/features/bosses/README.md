@@ -25,17 +25,17 @@ Liste à compléter au fil. Ordre alphabétique par section.
 
 ### Disc 2
 
-| Boss                    | Élément  | Location                  | Statut profil |
-| ----------------------- | -------- | ------------------------- | ------------- |
-| Caterpillar             | ?        | various                   | ⚪ à spec     |
-| Fruegel (2nd)           | Earth    | Hellena (2nd)             | ⚪ à spec     |
-| Gehrich                 | ?        | Barrens                   | ⚪ à spec     |
-| Ghost Commander         | Darkness | Phantom Ship              | ⚪ à spec     |
-| Lenus                   | ?        | Tiberoa / Prison Island   | ⚪ à spec     |
-| Polter Armor/Helm/Sword | ?        | Phantom Ship              | ⚪ à spec     |
-| Regole (Dragon Spirit)  | ?        | Mountain of Mortal Dragon | ⚪ à spec     |
-| Virage (various)        | ?        | various                   | ⚪ à spec     |
-| _(et autres)_           | —        | —                         | —             |
+| Boss                    | Élément           | Location                                                                                                  | Statut profil                                |
+| ----------------------- | ----------------- | --------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
+| **Caterpillar**         | **Non-Elemental** | various + **Divine Tree (Disc 4)** — 13k EXP record, 3-form (Caterpillar/Pupa/Imago), drop 100% × 3 items | ⚪ à spec (data Disc 4 ingérée via location) |
+| Fruegel (2nd)           | Earth             | Hellena (2nd)                                                                                             | ⚪ à spec                                    |
+| Gehrich                 | ?                 | Barrens                                                                                                   | ⚪ à spec                                    |
+| Ghost Commander         | Darkness          | Phantom Ship                                                                                              | ⚪ à spec                                    |
+| Lenus                   | ?                 | Tiberoa / Prison Island                                                                                   | ⚪ à spec                                    |
+| Polter Armor/Helm/Sword | ?                 | Phantom Ship                                                                                              | ⚪ à spec                                    |
+| Regole (Dragon Spirit)  | ?                 | Mountain of Mortal Dragon                                                                                 | ⚪ à spec                                    |
+| Virage (various)        | ?                 | various                                                                                                   | ⚪ à spec                                    |
+| _(et autres)_           | —                 | —                                                                                                         | —                                            |
 
 ### Disc 3
 

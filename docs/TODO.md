@@ -587,6 +587,55 @@
 
 - [ ] **Submap coordinates xy system canon** — wiki LoD utilise xy grid (left=+x, right=-x, up=+y, down=-y). Format inhabituel (inversé). Cohérent isométrique ? À adopter pour Damia (le code) ou inverser au format conventionnel.
 
+### Locations + Story / Lore (Divine Tree — foundational lore TLoD Disc 4)
+
+- [ ] **Foundational lore Divine Tree canon** — Tree of Life (2,500m), planté par Soa, 108 fruits = 108 species, quand tous tombent → tree meurt → cycle complete. Mille Seseau state religion 11k ans (Bishop Dille). À documenter `lore/soa-divine-tree.md` (à créer). Source: [`features/locations/Divine Tree.md`](features/locations/Divine Tree.md).
+
+- [ ] **108 Species canon** — liste partielle révélée :
+  - 97 = Giganto (3-8m, Kongol seul survivant bandit raid 20 ans)
+  - 99 = Mininto (1m fun-loving)
+  - 105 = Dragon (great destructive force)
+  - 106 = Human (no innate magic)
+  - 107 = Wingly (flight + teleport)
+  - 108 = Virage (ends all life, Embryo + vanguards)
+  - - Demons (Mayfil, Residents of Darkness, Zackwell/Menon, Selebus half-Demon)
+  - - Mermaid (probable, lien Damia + fruit aquatique submap 586)
+      → À documenter `lore/108-species.md` (à créer). Foundational pour codex/lore UI Damia.
+
+- [ ] **Moon Child cycle canon** — Crystal Sphere broken par Zieg vs Melbu Frahma final Dragon Campaign à Kadessa → soul du 108th fruit released → **cycle 108 ans** (soul possesses newborn human) → goal reach Moon → original cycle resumes → all life wiped out. Probable : **Shana = Moon Child** (Disc 4 reveal). À documenter `lore/moon-child-cycle.md` (à créer). Cross-ref Deningrad Ute folklore.
+
+- [ ] **Moon That Never Sets origine canon** — = **flesh du 108th fruit (Virage)** suspended in sky par Winglies. Cohérent Wingly fort capability (cf. Crystal Palace = Wingly fort canon). À documenter `locations/Moon (That Never Sets).md` (à créer).
+
+- [ ] **Crystal Sphere artifact canon** — magical container Wingly avec **soul du 108th fruit**. Broken in final Dragon Campaign battle. Distinct **Signet Spheres** (Crystal Palace Mille Seseau + Aglis + autres). Pattern Wingly artifacts canon : Signet Spheres + Crystal Sphere + Dragon Block Staff + Moon Mirror + Rose's Choker. À documenter `lore/wingly-artifacts.md` (à créer).
+
+- [ ] **Magical cloaking Divine Tree canon** — cloaked tant que 108th fruit suspended sky. Implication : Divine Tree devient accessible **uniquement à la fin Disc 4** (story flag spécifique). Data-model location accessibility condition canon. À orchestrer story flags Damia.
+
+- [ ] **Bishop Dille religious authority canon** — Mille Seseau state religion = Divine Tree worship. Bishop Dille = autorité confirmée. À documenter `npcs/bishop-dille.md` (à créer) + cross-ref `locations/Deningrad.md`.
+
+- [ ] **Soa creator canon** — deity TLoD, planté Divine Tree. Manifestation possible Disc 4 (cf. final boss arc Melbu Frahma possibly Soa-related ?). À investiguer + `lore/soa-divine-tree.md`.
+
+- [ ] **Coolon vehicle/creature canon** — crashes au Divine Tree submap 583 (arrivée party). Wingly origin probable. Mécanique transport canon Disc 4 ? À documenter `lore/coolon.md` (à créer) ou `npcs/`.
+
+- [ ] **Boss Caterpillar canon (Divine Tree Disc 4)** — Non-Elemental, **13,000 EXP** (record canon), 300G, **drop 100% × 3 items** (Healing Rain + Moon Serenade + Sun Rhapsody), 3-form encounter (Caterpillar + Pupa + Imago — life cycle insectoid). À documenter `bosses/Caterpillar.md` (à créer). Pattern boss "transformation cycle" canon.
+
+- [ ] **Multi-drop 100% canon pattern** — Caterpillar = premier boss canon avec **3 drops 100% différents**. Distinct du single 100% drop (Belzac Golden Stone, Damia Blue Sea Stone). Data-model `BossYield.guaranteedDrops: ItemId[]` (array, pas single). À implementer flexible.
+
+- [ ] **Rest "ultimate" pattern canon** — Divine Tree Water rest = **full HP+MP + remove ALL Status Ailments** (le plus puissant canon vs Hotel 50G HP+MP / Clinic 50G status only). Pattern endgame "sacred site full restore" gratuit. Data-model : `RestArea.effects: { restoreHp, restoreMp, removeAllStatus }`. Réutilisable autres sacred sites.
+
+- [ ] **Submap encounter grouping pattern canon** — Divine Tree submaps groupés par ID partagent encounter formations identiques : (583,589) (584,590) (585,591) (586,592) + 587 standalone. Data-model `EncounterGroup.submaps: SubmapId[]` réutilisation efficient. Pattern transverse à confirmer autres locations.
+
+- [ ] **Random Encounter (vs Contact) pattern canon Disc 4** — Divine Tree retour au pattern classique Random Encounter (vs Phantom Ship + Death Frontier = Collision Encounter). Pattern mixed Disc 4. À documenter.
+
+- [ ] **Items canon Divine Tree** (`items/` à créer) :
+  - **Phoenix Plume** — revive item probable (Phoenix lore) ?
+  - **Silver DG Armor** = **White-Silver Dragon's Armor** (display) = Miranda endgame armor. Pattern probable : Dragoon armor 1-par-archetype canon. À documenter `items/dragoon-armor.md` (à créer).
+  - **Dancer's Shoes** (drop Cute Cat 2%) — effet ? Speed +% ? Dance proc ?
+  - À investiguer all 3 items effects via fandom / wiki items pages.
+
+- [ ] **Mermaid species canon** — lien probable Damia (mi-mermaid) + fruit aquatique Divine Tree submap 586. Race canon non encore confirmée numérotation 108-species. À documenter `lore/108-species.md`.
+
+- [ ] **Kadessa lore canon** — Wingly capital où final battle Dragon Campaign (Zieg vs Melbu Frahma) → Crystal Sphere broke + Kadessa fell apart. Distinct Aglis/Forest of Winglies. À documenter `locations/Kadessa.md` (à créer) — possible location accessible Disc 4 ?
+
 ### Locations + Story / Lore (Death Frontier fandom — narrative + farming canon)
 
 - [ ] **Power Up + Power Down items canon distincts (Repeat Items)** — clarif user : ce sont **2 items différents canon**, pas une divergence de nommage :

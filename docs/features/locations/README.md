@@ -55,15 +55,15 @@ Ordre alphabétique. Découpage canon TLoD (4 discs, monde Endiness complet).
 
 ### Disc 4
 
-| Location               | Type                        | Statut profil |
-| ---------------------- | --------------------------- | ------------- |
-| **Aglis**              | Wingly dungeon (underwater) | 🟡 draft      |
-| Death Frontier         | Desert                      | ⚪ à spec     |
-| Divine Tree            | Sacred tree                 | ⚪ à spec     |
-| Mayfil                 | Underworld                  | ⚪ à spec     |
-| Moon (That Never Sets) | Final dungeon               | ⚪ à spec     |
-| Rouge                  | (location adjacente Aglis)  | ⚪ à spec     |
-| Vellweb                | Ruined city                 | ⚪ à spec     |
+| Location               | Type                               | Statut profil |
+| ---------------------- | ---------------------------------- | ------------- |
+| **Aglis**              | Wingly dungeon (underwater)        | 🟡 draft      |
+| **Death Frontier**     | **Desert + tunnels (ex-Gloriano)** | 🟡 draft      |
+| Divine Tree            | Sacred tree                        | ⚪ à spec     |
+| Mayfil                 | Underworld                         | ⚪ à spec     |
+| Moon (That Never Sets) | Final dungeon                      | ⚪ à spec     |
+| Rouge                  | (location adjacente Aglis)         | ⚪ à spec     |
+| Vellweb                | Ruined city                        | ⚪ à spec     |
 
 Légende : ⚪ à spec — 🟡 draft — 🟢 validé — 🔵 implémenté
 

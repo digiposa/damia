@@ -556,6 +556,37 @@
   - Holy Ahnk (wiki) vs Holy Ankh (fandom) → orthographe tier 1
     → consigner choix canon dans `combat/canon-divergences.md` (à créer).
 
+### Locations + Story / Lore (Death Frontier Disc 4 desert ex-Gloriano)
+
+- [ ] **Mécanique sinkholes / sand falls** — pattern unique Death Frontier : tomber dans sinkhole → tunnel souterrain (autre submap). ~14 sinkholes canon, certains chests sinkhole-gated. Data-model : `Interactable.type = "sinkhole"`, `Interactable.destination: SubmapId`. Pattern réutilisable Damia (e.g. autres caves canon). Source: [`features/locations/Death Frontier.md`](features/locations/Death Frontier.md).
+
+- [ ] **Lore Gloriano canon — désertification** — Death Frontier = formerly part of Gloriano (nation de Belzac). Lien direct **Cutscene 8 Ute Library** (Saint Imperial Gloriano scorched by gods' fire). Death Frontier = **memorial désertifié** de la Dragon Campaign. Foundational lore. À documenter `lore/gloriano.md` (à créer) + `lore/dragon-campaign.md` cross-ref.
+
+- [ ] **Scène canon "Miranda slaps Rose"** (submap 764 oasis) — cutscene majeure Disc 4. Motivation à investiguer fandom : Rose = Black Monster reveal confrontation ? Tensions party ? À orchestrer `quests/disc4-death-frontier.md` (à créer).
+
+- [ ] **Scène "Dart refuses path back"** (submap 745) — moment d'engagement narratif Disc 4. Trigger dialogue/cinematic à orchestrer.
+
+- [ ] **3 caves post-exit Death Frontier** (submaps 788-790) — préface Ulara probable. À explorer via ingestion Ulara.
+
+- [ ] **Cutscene Rose/Dart fighting flashback Ulara** (submap 512) — scène canon post-Death Frontier. Probable révélation Rose = Black Monster + confrontation. À documenter via Ulara/Rose ingestion.
+
+- [ ] **Free rest spots canon (Cave Water + Oases)** — pattern Disc 4 désert hostile = rest gratuit compense l'absence de shops. Damia (le code) : `RestArea.cost = 0` quand zone wilderness. Cohérent design.
+
+- [ ] **Encounter Contact 30% canon Disc 4** — pattern stable, à confirmer autres locations Disc 4.
+
+- [ ] **5 mobs canon Death Frontier** (Cactus / Spiky Beetle / Scorpion / Sandworm / Canbria Dayfly) — à documenter `combat/mobs.md` (à créer) ou `data/mobs.ts`. 4 Earth + 1 Wind (cohérent stratégie party Fire/Earth/Wind). EXP 112-168, Gold 21-51, drops 8-15%.
+
+- [ ] **Items canon nouveaux Death Frontier** (4 à documenter `items/`) :
+  - **Moon Serenade** — type ? Moon Objects related ? Healing ? Attack ?
+  - **Gladius** — weapon. Character cible ? (Dart non, cf. Dart.md weapons list ; possible Albert/Lavitz/Haschel à clarifier)
+  - **Power Up** — stat-boost permanent canon Disc 4 endgame
+  - **Bandit's Shoes** — accessory. Escape +%? Speed +%? Gold bonus ?
+    → À investiguer items canon + ingérer pages items wiki/fandom dédiées.
+
+- [ ] **Sinkhole network mapping Death Frontier** — 14+ sinkholes connectent les submaps. Cartographier précisément pour Damia (le code) — graph topology.
+
+- [ ] **Submap coordinates xy system canon** — wiki LoD utilise xy grid (left=+x, right=-x, up=+y, down=-y). Format inhabituel (inversé). Cohérent isométrique ? À adopter pour Damia (le code) ou inverser au format conventionnel.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

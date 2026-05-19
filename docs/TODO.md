@@ -636,6 +636,47 @@
 
 - [ ] **Kadessa lore canon** — Wingly capital où final battle Dragon Campaign (Zieg vs Melbu Frahma) → Crystal Sphere broke + Kadessa fell apart. Distinct Aglis/Forest of Winglies. À documenter `locations/Kadessa.md` (à créer) — possible location accessible Disc 4 ?
 
+### Bosses (Emperor Doel — antagoniste Disc 1, premier boss 2-phase canon documenté)
+
+- [ ] **Boss "2-phase transformation" data-model canon** — Emperor Doel (humain 600 HP) → Dragoon Doel (1,800 HP). Data-model :
+  - `Boss.phases: BossPhase[]`
+  - `BossPhase.transformTrigger: "hp_zero" | "hp_threshold"`
+  - Yield (EXP/Gold) **sur phase finale uniquement** (Emperor donne 3k XP / 200G, Dragoon 0/0)
+  - **Counter group per phase** : Emperor = group 28, Dragoon = 0 (no counter)
+  - Cinematic phase transition
+    → Pattern réutilisable Caterpillar (3 phases), Melbu Frahma final probable. Source: [`features/bosses/Emperor Doel.md`](features/bosses/Emperor Doel.md).
+
+- [ ] **Mécanique "Thunder Barrier" canon avancée** — Phase 2 Dragoon Doel : HP < 50% trigger auto Thunder Barrier (0× damage immune) → ability swap (Thunderbolt enabled / Beam+Spark disabled) → 4 turns plus tard Dispel Barrier auto reverse. Data-model :
+  - `Boss.damageReduction: number` (0 = immune state)
+  - `Boss.abilities[].enabledBy?: AbilityId` / `disabledBy?: AbilityId`
+  - `Boss.abilityCooldownTriggers: { abilityId, turnsLater, autoCast: AbilityId }`
+    → Premier boss canon avec **damage immunity + abilities swap**. Pattern data-model réutilisable.
+
+- [ ] **Counter Additions per phase canon** — Emperor Doel = group 28 (all counter opportunities) / Dragoon Doel = **group 0** (NO counter). Pattern : transformation Dragoon = perd counter capability, focus offensif magic. À refléter data-model.
+
+- [ ] **Doel family lore canon** — `lore/serdia.md` + `npcs/`(à créer) :
+  - **Carlo** = frère de Doel, **Albert's father**, **tué par Doel** pour rise to power
+  - **Katrina** = Doel's wife, **morte pendant Serdian War** (cause inconnue canon — mystère narratif)
+  - **Albert** = neveu de Doel (Bale-Basil heir age 6)
+  - **Kongol** = giganto child sauvé par Doel (post-genocide Home of Giganto)
+    → Famille tragique = base writing dialogue Doel pré-fight.
+
+- [ ] **Home of Giganto genocide canon** — Doel led Serdian army for **defend gigantos vs humans** mais failed prevent genocide. Sauvé Kongol enfant. À documenter `lore/giganto-genocide.md` (à créer). Backstory Disc 1 majeur.
+
+- [ ] **Violet Dragoon Spirit transfer mechanism canon** — Doel défait → Spirit obtenu mais Haschel pas présent Disc 1. Probable : DS carried by party until Haschel joins Disc 2/3. Cohérent pattern Lavitz death → DS held party → Albert receive. À documenter `lore/dragoon-spirit-inheritance.md`.
+
+- [ ] **Kanzas (Vellweb ancien Dragoon) → Doel inheritance probable** — Pattern : Belzac(Earth)→Kongol / Damia(Water)→Meru / Syuveil(Wind)→Lavitz/Albert / **Kanzas(Thunder?)→Doel**. Si confirmé : Kanzas = Violet/Thunder ancien Dragoon canon. Implication doc `bosses/Kanzas.md` + `lore/dragon-campaign.md`.
+
+- [ ] **Dark Doel rematch canon Disc 4** — alternate dimension Bale (Moon-related). Same Doel ressuscité ? Memory Manipulation by Melbu Frahma ? À investiguer ingestion `bosses/Dark Doel.md` (à créer).
+
+- [ ] **Boss "Drops Nothing" + scripted DS reward pattern** — Doel drops "Nothing" car DS = scripted reward (pas drop combat). Pattern canon vs Vellweb anciens Dragoons (drop 100% Spirit Stone). Distinction lore : ancien Dragoon Vellweb = dropped Stone, antagoniste vivant Disc 1-3 = scripted reward. À refléter data-model.
+
+- [ ] **Boss death behavior canon : defeat vs transform** — Emperor Doel HP=0 = transform (pas defeat). Data-model : `Boss.deathBehavior: "defeat" | "transform_phase_X"`. Distinguer game-over boss vs phase trigger.
+
+- [ ] **Retaliate "simple" vs "Patterned" canon** — Emperor Doel Retaliate = single ability (Multi-slash Slam) **vs** Belzac/Damia Retaliate Patterned (cycle 3 abilities). 2 patterns canon distincts. Data-model : `RetaliateTrait.type: "simple" | "patterned"`.
+
+- [ ] **8/8 status immunity dès Disc 1** — confirmé : tous bosses canon = status immune total, pas progression par Disc. Pattern stable. Important data-model `Boss.statusImmunity` = full default.
+
 ### Locations + Story / Lore (Divine Tree fandom — reveal mechanism + Caterpillar 3-phases + Coolon dies)
 
 - [ ] **CORRECTION canon Caterpillar = 3 phases sequential** (pas 3 mobs simultanés) — Caterpillar → Pupa → Imago, cycle de vie insectoid. Stats par phase :

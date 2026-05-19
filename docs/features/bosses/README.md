@@ -10,18 +10,18 @@ Liste à compléter au fil. Ordre alphabétique par section.
 
 ### Disc 1
 
-| Boss             | Élément     | Location                                                                                        | Statut profil |
-| ---------------- | ----------- | ----------------------------------------------------------------------------------------------- | ------------- |
-| Drake the Bandit | ?           | Shrine of Shirley                                                                               | ⚪ à spec     |
-| Feyrbrand        | Wind        | Marshlands / various                                                                            | ⚪ à spec     |
-| Fruegel (1st)    | Earth       | Hellena Prison                                                                                  | ⚪ à spec     |
-| Greham           | Wind        | Hoax                                                                                            | ⚪ à spec     |
-| Jiango           | ?           | Black Castle                                                                                    | ⚪ à spec     |
-| Kongol (boss)    | Earth       | Hoax / **Black Castle (Kazas)** — 2,000 XP / Wargod Calling 30% drop                            | ⚪ à spec     |
-| **Emperor Doel** | **Thunder** | **Black Castle (Kazas)** — 3,000 XP / 2-forme (humain + Dragoon Doel) / reward Violet Dragon DS | ⚪ à spec     |
-| Mappi            | ?           | Barrens / Gehrich fight                                                                         | ⚪ à spec     |
-| Sandora Elite    | ?           | Hoax                                                                                            | ⚪ à spec     |
-| _(et autres)_    | —           | —                                                                                               | —             |
+| Boss             | Élément     | Location                                                                                                                                                                                                        | Statut profil |
+| ---------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| Drake the Bandit | ?           | Shrine of Shirley                                                                                                                                                                                               | ⚪ à spec     |
+| Feyrbrand        | Wind        | Marshlands / various                                                                                                                                                                                            | ⚪ à spec     |
+| Fruegel (1st)    | Earth       | Hellena Prison                                                                                                                                                                                                  | ⚪ à spec     |
+| Greham           | Wind        | Hoax                                                                                                                                                                                                            | ⚪ à spec     |
+| Jiango           | ?           | Black Castle                                                                                                                                                                                                    | ⚪ à spec     |
+| Kongol (boss)    | Earth       | Hoax / **Black Castle (Kazas)** — 2,000 XP / Wargod Calling 30% drop                                                                                                                                            | ⚪ à spec     |
+| **Emperor Doel** | **Thunder** | **Black Castle (Kazas)** — 3,000 XP / **2-forme canon** (Emperor 600 HP humain + **Dragoon Doel** 1,800 HP) / **Thunder Barrier mécanique HP<50%** / reward Violet Dragon DS / **8/8 status immune dès Disc 1** | 🟡 draft      |
+| Mappi            | ?           | Barrens / Gehrich fight                                                                                                                                                                                         | ⚪ à spec     |
+| Sandora Elite    | ?           | Hoax                                                                                                                                                                                                            | ⚪ à spec     |
+| _(et autres)_    | —           | —                                                                                                                                                                                                               | —             |
 
 ### Disc 2
 

@@ -2,10 +2,11 @@
 
 > Système d'attaques chaînées TLoD — QTE-based en canon PS1, adapté real-time en Damia.
 >
-> **Sources canon** :
+> **Sources canon** (par tier) :
 >
-> - 🥈 [`_sources/lod-wiki-additions.md`](./_sources/lod-wiki-additions.md) — wiki LoD, **source la plus exhaustive** (28 additions, formules, counters, groups, tables hit/multiplier)
 > - 🥇 [`_sources/wulves-tlod-damage-formulas.md`](./_sources/wulves-tlod-damage-formulas.md) — Wulves, formules numériques
+> - 🥈 [`_sources/lod-wiki-additions.md`](./_sources/lod-wiki-additions.md) — wiki LoD, source la plus exhaustive (28 additions, formules, counters, groups, tables hit/multiplier)
+> - 🥉 [`_sources/fandom-additions.md`](./_sources/fandom-additions.md) — fandom, narratif + lore + trivia + tutorial NPC Tasman
 
 ## Statut
 
@@ -51,10 +52,10 @@ Quand une Addition commence :
 
 ### Accessoires Wargod
 
-| Accessoire          | Effet                                                                             |
-| ------------------- | --------------------------------------------------------------------------------- |
-| **Wargod Calling**  | Auto-complete Addition mais : **½ damage**, **½ SP**, **ne level pas** l'Addition |
-| **Ultimate Wargod** | Auto-complete Addition avec **full damage + SP + leveling** retenus               |
+| Accessoire          | Effet                                                                             | Prix canon                                     |
+| ------------------- | --------------------------------------------------------------------------------- | ---------------------------------------------- |
+| **Wargod Calling**  | Auto-complete Addition mais : **½ damage**, **½ SP**, **ne level pas** l'Addition | **1,000 G** (Lohan ou Fletz)                   |
+| **Ultimate Wargod** | Auto-complete Addition avec **full damage + SP + leveling** retenus               | **10,000 G** (Lohan) OU rare drop Phantom Ship |
 
 ### Counterattacks
 
@@ -79,6 +80,16 @@ floor{floor[floor{floor[(AT² × 250 / DF)] / 100} × Target Fear × Attacker Fe
 - **Jamais** sur le first ou last press → Additions ≤ 2 presses ne sont **jamais** counter
 - Certains enemies refusent de counter même quand possible
 - Certains enemies ne peuvent pas counter du tout
+
+**Additions jamais counterable (canon)** — utile pour design balance Damia :
+
+- **Toutes les additions Kongol** (Pursuit, Inferno, Bone Crush)
+- **Madness Hero** (Dart)
+- **Blazing Dynamo** (Dart)
+- **5-Ring Shattering** (Haschel)
+- **Omni-Sweep** (Haschel)
+- **Hammer Spin** (Meru)
+- Toute addition à 1-2 inputs (corollaire de la règle "jamais first ou last press")
 
 ### Groupes de counters
 
@@ -125,13 +136,42 @@ Détails complets dans [`_sources/lod-wiki-additions.md`](./_sources/lod-wiki-ad
 
 **Note** : `*` dans le wiki = Addition jamais counter (généralement les 1-2 press qui n'ont pas d'opportunity, OU certaines marquées explicitement). Cette info est utile pour le design Damia (priorisation des additions safe).
 
-### Trivia voice lines (canon)
+### Trivia voice lines + naming (canon)
 
 Certaines additions ont une voice line distincte selon l'avatar qui les exécute, même si l'addition affichée à l'écran a le même nom :
 
-- **Flower Storm** (Lavitz / Albert, Jade Dragon) : Lavitz dit **"Rose Storm"** vocalement ; Albert dit **"Blossom Storm"** vocalement. Texte affiché identique dans les deux cas.
+- **Flower Storm** (Lavitz / Albert, Jade Dragon) — version EN : Lavitz dit **"Rose Storm"** vocalement ; Albert dit **"Blossom Storm"** vocalement. Texte affiché : wiki LoD use "Flower Storm" ; fandom écrit "Blossom Storm" pour Albert dans sa table — léger conflit naming entre sources, le **texte affiché in-game est "Flower Storm"** au final, les voice lines diffèrent. Version JP unifie : both say **"Cherry Blossom Blizzard"** (桜の吹雪 _sakura fubuki_).
 
-→ Implication Damia : pour respecter ce détail canon, prévoir un **mapping voice clip par avatar** dans le système addition (pas seulement par addition kind). Tracé dans [`TODO.md`](../../TODO.md).
+- **"Flurry of Styx"** (Haschel) — **typo canon**. Vrai nom : **"Ferry of Styx"** (référence à la River Styx + River Sanzu canon japonais). Le combo display name à la fin affiche **"Ferry of Styx"** correctement, mais Haschel **dit "Flurry of Styx"** vocalement. Pattern : Haschel's additions are all named after the number of hits / numerology.
+
+→ Implication Damia : prévoir un **mapping voice clip par avatar × addition** + **gestion display-name vs voice-line** (cf. [`TODO.md`](../../TODO.md)).
+
+### Trivia gameplay & balance (canon)
+
+- **Kongol scripted counter** : aux combats vs Kongol (boss) — Hoax, Black Castle, et phase 1 final boss — un addition raté déclenche un **counter scripté** de Kongol qui inflige des dégâts. À porter si on respecte le canon des boss fights Kongol.
+- **Meru = damage cap canon** : Perky Step Lv5 = **600% damage multiplier**, le plus haut du jeu. SP cap : Pretty Hammer + Wargod's Sash + Cool Boogie mastered = **495 SP par addition**.
+- **Lavitz = fastest learner** : Spinning Cane Lv5, Rod Typhoon Lv7, Gust of Wind Dance Lv11. Joins at Lv3.
+- **Meru = slowest learner** : Cat's Cradle à Lv30.
+- **Initial addition guarantee** : chaque character a 150%+ damage et 34+ SP à Lv5 sur son initial addition. Permet de "beat the game" en mode minimal-additions.
+
+### Dragoon Additions (mécanique canon distincte)
+
+Hors-scope du présent fichier (additions player normales), mais brève mention canon car le système est conceptuellement proche :
+
+- En form Dragoon, le character utilise la **Dragoon Addition** comme attaque par défaut (vs normal "Attack")
+- Mécanique visuelle canon : **light rotating clockwise dans un cercle** (style horloge), presser X **quand la lumière est au top**
+- **Vitesse augmente à chaque input réussi** (chaque press devient plus difficile)
+- **Max inputs** :
+  - 🥇 **Wulves doc** : 5 Successful Inputs (Kongol limité à 4)
+  - 🥉 **Fandom** : 4 correct inputs (général)
+  - → **Divergence non-résolue** — wiki LoD n'a pas de section dédiée Dragoon Addition. À vérifier tier 1 (Discord). Hypothèse : "4 correct inputs **après** le strike initial" = 5 presses totales = aligne Wulves. Tracé dans [`TODO.md`](../../TODO.md).
+- Formule canon : `round{floor[floor{[0.05·Sᵢ² − 0.05·Sᵢ + 1] × 100 × DRGNAT%/100} × AT/100] × (LV+5) × 5 / DF}` (cf. [`damage-formula.md`](./damage-formula.md))
+
+**Implication Damia (form Dragoon)** : Damia ne porte pas la Dragoon Addition canon (Q1 décision = auto-complete + form Dragoon = splash AoE cône 120°, cf. [`../dragoons/`](../dragoons/)). Donc cette divergence canon est **académique** pour notre impl actuelle, mais à tracer pour cohérence doc.
+
+### Tutorial canon
+
+**Master Tasman à Seles** est le NPC tutorial qui explique le système Additions au joueur. À noter pour `locations/Seles.md` (futur) et `quests/disc1-seles-tutorial.md` (à créer si pertinent). Damia : si on garde le tutorial, c'est l'occasion d'expliquer notre adaptation auto-complete + skill cooldown.
 
 ## Vision Damia
 

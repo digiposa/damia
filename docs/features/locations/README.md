@@ -43,22 +43,25 @@ Ordre alphabétique. Découpage canon TLoD (4 discs, monde Endiness complet).
 
 | Location                    | Type        | Statut profil |
 | --------------------------- | ----------- | ------------- |
-| Aglis                       | Wingly city | ⚪ à spec     |
 | Evergreen Forest            | Forest      | ⚪ à spec     |
 | Forbidden Land              | Wilderness  | ⚪ à spec     |
 | Tower of Flanvel            | Tower       | ⚪ à spec     |
 | Valley of Corrupted Gravity | Dungeon     | ⚪ à spec     |
 | Zenebatos                   | Wingly city | ⚪ à spec     |
 
+> Note Disc 3/4 boundary : Aglis listée Disc 4 selon user, mais séquence canonique Rouge→Aglis→Zenebatos suggère mid/late Disc 3. À reconfirmer.
+
 ### Disc 4
 
-| Location               | Type          | Statut profil |
-| ---------------------- | ------------- | ------------- |
-| Death Frontier         | Desert        | ⚪ à spec     |
-| Divine Tree            | Sacred tree   | ⚪ à spec     |
-| Mayfil                 | Underworld    | ⚪ à spec     |
-| Moon (That Never Sets) | Final dungeon | ⚪ à spec     |
-| Vellweb                | Ruined city   | ⚪ à spec     |
+| Location               | Type                        | Statut profil |
+| ---------------------- | --------------------------- | ------------- |
+| **Aglis**              | Wingly dungeon (underwater) | 🟡 draft      |
+| Death Frontier         | Desert                      | ⚪ à spec     |
+| Divine Tree            | Sacred tree                 | ⚪ à spec     |
+| Mayfil                 | Underworld                  | ⚪ à spec     |
+| Moon (That Never Sets) | Final dungeon               | ⚪ à spec     |
+| Rouge                  | (location adjacente Aglis)  | ⚪ à spec     |
+| Vellweb                | Ruined city                 | ⚪ à spec     |
 
 Légende : ⚪ à spec — 🟡 draft — 🟢 validé — 🔵 implémenté
 

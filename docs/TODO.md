@@ -218,6 +218,56 @@
 
 - [ ] **5-year backstory Dart pre-game** — quête vengeance parents, hors-screen. Possible flashback/cinematic Damia (le code) ? Hors-scope MVP probable.
 
+### Party-members / Dart fandom complement — hometown Neet, lore, design
+
+- [ ] **Hometown canon = Neet (pas Seles)** — révélation fandom + cohérent canon Disc 3 (Ute Library reveal). Né à Neet, parents Zieg + Claire Feld morts 18 ans pre-game lors de l'attaque Black Monster. Dart avait 5 ans. Réfugié à Seles ensuite. À refléter `locations/Neet.md` (à créer) + `quests/disc3-deningrad.md` (Ute reveal scene).
+
+- [ ] **Parents Zieg Feld + Claire Feld canon** — Zieg = père (Red-Eye Dragoon ancien, possédé par Melbu Frahma Disc 4 reveal). Claire = mère, morte avec Zieg apparently à Neet. À documenter `lore/feld-family.md` (à créer) + `party-members/Zieg.md` (à créer).
+
+- [ ] **Haschel = Dart's grandfather canon** — reveal disputed Disc 4 (Haschel told Dart he looks like Dart when young, Dart nods). Probable maternal (Claire's father). Implication gameplay : pas d'effet mécanique, mais lore cross-ref. À documenter `party-members/Haschel.md` (à créer).
+
+- [ ] **DS found by child Dart in ashes of Neet** — fandom gallery caption canon. Cohérent avec correction user antérieure (Dart trouve DS à Neet, pas reçu de Rose). Cinematic à orchestrer Mode Story (flashback Disc 3 reveal).
+
+- [ ] **DS combat unlock at Hoax (Chapter 1 middle)** — Dart possède le DS depuis Neet mais ne peut pas l'utiliser. À Hoax, Rose intervient pendant le fight Kongol → calls forth Red-Eyed Dragon spirit → Dart bursts → knocks out Kongol → combat use unlocked. À orchestrer `quests/disc1-hoax.md` (à créer).
+
+- [ ] **Divine Dragoon DS acquisition timing canon** — Disc 4, **from Lloyd, after initial Melbu Frahma fight, BEFORE final battle**. Précision narrative importante. À documenter `quests/disc4-moon.md` (à créer).
+
+- [ ] **3 transformations Red-Eye outside player control canon** — 3 cutscenes à orchestrer Mode Story :
+  1. Hoax vs Kongol (first transform)
+  2. Block elder Bardel Brother's magic
+  3. Strike Zieg possédé Melbu Frahma (fails, overpowered)
+     → Important pour identité narrative Dart. À orchestrer dans quests respectifs.
+
+- [ ] **Red-Eye Dragoon form design = identique à Zieg** — fandom canon : Dart Red-Eye = identical à Zieg en Dragoon form. Important pour design visuel + cohérence narrative Disc 4 (Zieg reveal = "you look like me!"). Détails canon : red armor + green gem chest + blue-green pants + light red boots + green gem boots + dragon-motif headband + pale green/light red wings/blue-green outlines.
+
+- [ ] **Divine Dragoon form design canon détaillé** : white armor + red/orange accents + olive green gem (Divine Dragon eye) + left arm = cannon + reddish-orange headband + **7 green gems** forehead + green optic eyepiece left eye + dragon-feet boots + **6 wings** glowing orange/white/gray outlines + dragon fang-like sword. À documenter pour design Damia (le code).
+
+- [ ] **Personality canon Dart** — positive/idealistic outlook, loyalty + unwavering bravery, straightforward + practical, accepts feelings for Shana, respect companions, closure about past. Important pour writing/dialogue Damia (le code).
+
+- [ ] **Manual quote canon** — "_He is a brave and loyal warrior swordsman sworn to avenge the death of his parents by destroying the Black Monster. Dart carries the soul of the Dragoon. His destiny will take him far beyond a simple quest for revenge._" — character intro UI Mode Story possible.
+
+- [ ] **Voice Actor JP Seki Tomokazu** — VA JP canon (en plus de John Butterfield EN). Pour casting/dub Damia (le code).
+
+- [ ] **Stats divergence Dart Lv 10 MAT/MDF** — fandom 14/10 vs wiki LoD 21/21. Wiki LoD prime. Probable typo fandom Lv 10. À noter dans `combat/canon-divergences.md` (à créer).
+
+- [ ] **Cheat device test canon** — Dart avec les 2 DS simultanément → utilise seulement Divine Dragon DS. Implication data-model : Divine Dragon DS OVERRIDE Red-Eye DS quand les 2 sont possédés. `Character.activeDragoonSpirit = priority(divine_dragon) > red_eye`. Simplifie data-model (pas de switching dynamique). Source: Dart.md fandom trivia.
+
+- [ ] **Weapons table Dart canon (8 swords)** — Broad Sword AT 2 → Soul Eater AT 75. Heat Blade (Fire elemental, Kazas/Kashua), Mind Crush (Confusion proc, 350G), Fairy Sword (+50% SP gain, 400G Ulara), Claymore (Moon endgame), Soul Eater (-10% HP/turn drawback). À documenter `items/weapons-dart.md` (à créer) + crosslink locations (Bale/Kazas/Fueno/Ulara/Moon).
+
+- [ ] **Additions Lv 1-5 progression canon par addition** — table fandom détaillée. Pattern intentionnel canon : diversité de scaling (damage scaling only / SP scaling only / both / fixe). Data-model : `Addition.scaling: { damageByLevel: number[5], spByLevel: number[5] }` non-linéaire.
+
+- [ ] **Madness Hero = pure SP battery canon** — 100% damage constant Lv 1→5 mais 60→204 SP. Pattern design : "pure battery addition". À documenter `combat/additions.md`.
+
+- [ ] **2 idle poses canon Dart field** — pose 1: cross arms + tap foot, pose 2: hand on hip + tap foot. Animation alternation. À reproduire Damia (le code) sprites idle.
+
+- [ ] **Defending pose canon** — sword horizontally in front of face. Animation state defending Dart. À reproduire.
+
+- [ ] **Astro Bot cameo** — Dart apparaît dans Astro Bot (PS5 game). Hors-canon TLoD mais cool referential. Mention `trivia/easter-eggs.md` (à créer).
+
+- [ ] **Bardel Brothers boss (elder + younger)** — Bardel elder magic blocked by Dart Red-Eye transform (canon trivia). Younger Bardel attaque Wink patrol Disc 3 (cf. Deningrad lore). 2 bosses Bardel canon à documenter `bosses/Bardel.md` (à créer).
+
+- [ ] **Manual canon source** — "the manual" of TLoD = source character intros canon. Pour autres characters (Lavitz/Albert/Rose/Shana/etc.), ingérer manual quotes si trouvables.
+
 ### Party-members / Albert spécifique (de la fandom complement)
 
 - [ ] **STR % vs Multiplier UI** — Clarifier : le STR % affiché in-game canon n'est pas le damage multiplier réel (clarif fandom). Décider en Damia : afficher STR % canon-style dans UI menu spell OU afficher directement le Multiplier ? Cohérence pour le joueur. Source: [`features/party-members/Albert.md`](features/party-members/Albert.md).

@@ -1,11 +1,11 @@
 # Dart Feld
 
-> **Protagoniste canon de TLoD**, **Red-Eye Dragoon** (Fire). Jeune guerrier de **Seles**, parti 5 ans pour chasser le meurtrier de ses parents → revient pour trouver son village ravagé par Imperial Sandora + un Dragon. **Seul personnage canon à porter 2 Dragoon Spirits** (Red-Eye + Divine Dragon). **Toujours en active party** (cannot be removed sauf story circumstances).
+> **Protagoniste canon de TLoD**, **Red-Eye Dragoon** (Fire). **Hometown REAL : Neet** (où il est né), réfugié à **Seles** après la destruction de Neet par le **Black Monster** il y a **18 ans** (Dart avait 5 ans). **Fils de Zieg Feld et Claire Feld**. Jeune guerrier parti 5 ans pour chasser le meurtrier de ses parents → revient pour trouver Seles ravagée par Imperial Sandora + Feyrbrand. **Seul personnage canon à porter 2 Dragoon Spirits** (Red-Eye + Divine Dragon) **et 2 éléments** (Fire + Non-Elemental). **Toujours en active party**. **Haschel = grandfather canon** (reveal disputé Disc 4).
 >
 > **Sources canon** :
 >
 > - 🥈 [`_sources/lod-wiki-dart.md`](./_sources/lod-wiki-dart.md) — wiki LoD (stats Lv 1-60, additions, DLV thresholds, spells, trivia)
-> - 🥉 fandom (à ingérer)
+> - 🥉 [`_sources/fandom-dart.md`](./_sources/fandom-dart.md) — fandom (hometown Neet, parents Zieg+Claire, Black Monster 18 ans, design Red-Eye + Divine Dragoon, additions Lv 1-5 progression, weapons table, Haschel grandfather reveal, JP voice Seki Tomokazu, 3 transformations canon)
 
 ## Statut
 
@@ -13,37 +13,42 @@
 
 ## Profil
 
-| Attribut          | Valeur                                                                                                     |
-| ----------------- | ---------------------------------------------------------------------------------------------------------- |
-| Nom complet       | **Dart Feld**                                                                                              |
-| Age               | **23 ans**                                                                                                 |
-| Height            | **5'8" (178cm)**                                                                                           |
-| Species           | **Human**                                                                                                  |
-| **Élément**       | **Fire** (cf. [`../combat/elements.md`](../combat/elements.md))                                            |
-| Archetype Dragoon | **Red-Eye Dragon** (Fire) — Zieg Feld's predecessor (Disc 4 reveal canon)                                  |
-| 2ᵉ DS canon       | **Divine Dragon** (Non-Elemental) — auto sets DLV 5 lors d'acquisition                                     |
-| Apparence         | **Chestnut fringe-cut hair + blue eyes**                                                                   |
-| Voice Artist      | **John Butterfield**                                                                                       |
-| Village           | **Seles** (Forest of Seles area, Disc 1)                                                                   |
-| Sword master      | **Tasman** (NPC NPC Seles survivor)                                                                        |
-| Childhood friend  | **Shana** (kidnapped to Hellena Prison Disc 1 intro)                                                       |
-| Family            | Parents morts (5 ans avant le jeu) — quête de vengeance origin story. Father reveal Disc 4 : **Zieg Feld** |
-| Status combat     | **Cannot be removed** from active party (toujours présent sauf story circumstances)                        |
-| Acquisition Story | **Disc 1, scene initiale** (Forest of Seles intro)                                                         |
+| Attribut          | Valeur                                                                                                                                                                                                         |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Nom complet       | **Dart Feld** (ダート・フェルド, Dāto Ferudo)                                                                                                                                                                  |
+| Age               | **23 ans** (Official Guidebook)                                                                                                                                                                                |
+| Height            | **178cm** (= 5'10" per fandom / 5'8" per wiki LoD — **178cm ≈ 5'10" exact**)                                                                                                                                   |
+| Species           | **Human**                                                                                                                                                                                                      |
+| Gender            | **Male**                                                                                                                                                                                                       |
+| **Élément**       | **Fire** (Red-Eye) + **Non-Elemental** (Divine Dragoon) — **seul perso canon avec 2 éléments**                                                                                                                 |
+| Archetype Dragoon | **Red-Eye Dragon** (Fire) — Zieg Feld's predecessor                                                                                                                                                            |
+| 2ᵉ DS canon       | **Divine Dragon** (Non-Elemental) — auto sets DLV 5 lors d'acquisition (Disc 4 from Lloyd, post-initial Melbu Frahma fight)                                                                                    |
+| Apparence canon   | **Short spiked blonde hair with fringes**, **blue eyes**, **red headband**, red armor + single gauntlet (left), black undershirt, blue-gray pants, red knee-pads                                               |
+| Voice Artist      | EN **John Butterfield** / JP **Seki Tomokazu**                                                                                                                                                                 |
+| **Hometown réel** | **Neet** (détruit par Black Monster il y a 18 ans, Dart avait 5 ans, parents morts)                                                                                                                            |
+| Village de vie    | **Seles** (refuge post-Neet, Forest of Seles area, near Bale)                                                                                                                                                  |
+| Sword master      | **Tasman** (NPC Seles survivor)                                                                                                                                                                                |
+| Childhood friend  | **Shana** (kidnapped to Hellena Prison Disc 1 intro)                                                                                                                                                           |
+| Family            | **Père : Zieg Feld** (Red-Eye Dragoon ancien, reveal Disc 4 possédé par Melbu Frahma) + **Mère : Claire Feld** (morte 18 ans pre-game) + **Grandfather : Haschel** (probable maternal — reveal disputé Disc 4) |
+| Status combat     | **Cannot be removed** from active party (toujours présent sauf story circumstances) — _permanent and non-replacable_                                                                                           |
+| Acquisition Story | **Disc 1, scene initiale** (Forest of Seles intro) — DS already in possession, **unlock combat use post-Hoax battle vs Kongol** (Rose intervention canon)                                                      |
 
 ## Story / lore
 
-### Backstory (pré-jeu)
+### Backstory canon (18 ans pre-game → 5 ans pre-game)
 
-- Né à **Seles** (Forest of Seles area, near Bale)
-- Parents tués il y a **5 ans** par un attaquant inconnu (event canon Neet flashback Disc 3 → Black Monster Disc 4 reveal)
-- Survivant de **Neet** (révélation tardive Disc 3, via Librarian Ute Deningrad)
-- Quête de **5 ans** : chercher le responsable des meurtres parents
-- Sword training par **Tasman** à Seles
+- **Né à Neet** (village natal) — fils de **Zieg Feld** + **Claire Feld**
+- **18 ans avant le jeu** : Le **Black Monster** attaque et détruit Neet → **parents tués** → Dart, alors **âgé de 5 ans**, est un des rares survivants
+- Quote manual canon : "_He is a brave and loyal warrior swordsman sworn to avenge the death of his parents by destroying the Black Monster. Dart carries the soul of the Dragoon._"
+- **Child Dart canon design** : brown winter jacket, white high-neck undershirt, dark green pants, black shoes (cf. flashback canon)
+- **Dragoon Spirit found by Dart child dans les ashes de Neet** post-Black Monster attack (cf. fandom gallery "Young dart" caption)
+- Dart accompagne sa famille survivante (?) ou seul → s'installe à **Seles** (Forest of Seles area, near Bale) → vit avec **Tasman** (sword master) + childhood friend **Shana**
+- **5 ans pré-game** : Dart débute son **5-year journey** pour chasser le **Black Monster** (le tueur de ses parents)
+- Quête off-screen 5 ans → revient au début du jeu
 
 ### Chapter 1: Serdian War (acquisition canon)
 
-1. **Outskirts de Seles** : accosté par 2 **Knights of Sandora**
+1. **Outskirts de Seles** (retour de la 5-year journey) : accosté par 2 **Knights of Sandora**
 2. **Giant monster** (Feyrbrand canon) attaque → fait fuir tout le monde
 3. **Rose** (mysterious woman) sauve Dart
 4. Rose remarque : "strange that a Dragon was sent" (overkill pour un village)
@@ -53,14 +58,43 @@
 8. Apprend que **Shana** (childhood friend) a été kidnapped à **Hellena Prison**
 9. Resolves to free her → quest Hellena Prison débute
 
-→ Détails Story Disc 1-4 à compléter via fandom ingestion.
+### Hoax battle — DS unlock canon (Chapter 1 middle)
 
-### Arc narratif global (à compléter via fandom)
+- Dart **a déjà le Red-Eye Dragoon Spirit** dans ses affaires (depuis l'enfance Neet) mais ne peut **pas** l'utiliser
+- À **Hoax**, Dart et Lavitz struggle vs **Kongol**
+- **Rose intervient** et **calls forth the spirit of the Red-Eyed Dragon**
+- **Dart bursts en énergie Dragoon** → knocks out Kongol
+- À partir de là, **accès à la DS** unlocked
 
-- **Disc 1** : Serdian War + libération Shana + acquisition Red-Eye Dragoon Spirit
-- **Disc 2** : Tiberoa + Black Monster reveal + Phantom Ship + Mountain of Mortal Dragon
-- **Disc 3** : Mille Seseau + Divine Dragon → acquisition **Divine Dragon DS** (auto DLV 5) + Forbidden Land
-- **Disc 4** : Moon and Fate + reveal Zieg Feld (Dart's father) + Melbu Frahma final boss
+### Arc narratif global
+
+- **Disc 1 — Serdian War** : libération Shana Hellena + Bale Hero Competition + Hoax → **DS unlock** + Black Castle Doel
+- **Disc 2 — Platinum Shadow** : Tiberoa + Black Monster reveal (Rose = Black Monster) + Phantom Ship + Lenus arc + Mountain of Mortal Dragon Regole boss
+- **Disc 3 — Fate & Soul** :
+  - Mille Seseau (Deningrad National Library nerdy moment Albert + reveal Dart survivant Neet via Ute)
+  - **Divine Dragon awakens + attaque Deningrad** → quest Mountain of Mortal Dragon → Divine Dragon boss fight → **acquisition power Divine Dragon** (vs Cannon Lloyd takes ??)
+  - Tower of Flanvel Lloyd fight
+  - Shana abducted to Vellweb by Emperor Diaz → setup Chapter 4
+- **Disc 4 — Moon & Fate** : Mayfil + Aglis + Vellweb (4 anciens Dragoons libération) + Moon That Never Sets
+  - **Reveal Zieg Feld = Dart's father** (Red-Eye Dragoon ancien, survivant Dragon Campaign, possédé par Melbu Frahma)
+  - **Acquisition Divine Dragoon DS** : de **Lloyd**, post-initial Melbu Frahma fight (avant final battle)
+  - Final boss Melbu Frahma → fin canon
+
+### 3 transformations Red-Eye outside player control canon
+
+1. **Premier transform** : defeat Kongol post-Hoax (Rose calls forth spirit)
+2. **Second transform** : Dart blocks magic of vengeful **elder Bardel Brother**
+3. **Third transform** : Dart attempts to strike Zieg (possédé Melbu Frahma) — **fails**, Zieg overpowers Dart en un coup
+
+### Personality canon
+
+- Heart heavy (tragedy childhood) mais **positive et idealistic outlook**
+- Always helps a friend in need
+- **Loyalty + unwavering bravery**
+- Straightforward + practical
+- **Accepts feelings for Shana** pendant l'aventure (canon romance reveal)
+- Treats companions avec respect + camaraderie
+- Eventually comes to closure about his past
 
 ## Stats canon (Lv 1-60)
 
@@ -86,12 +120,50 @@
 | Lv 50     | 5,801 | 122 | 123 | 121 | 121 | 200,000  |
 | Lv 60     | 7,500 | 150 | 150 | 150 | 150 | 382,000  |
 
+> ⚠️ **Divergence stats fandom Lv 10** : fandom indique MAT 14 / MDF 10 (au lieu de 21/21 wiki LoD). Wiki LoD prime (🥈 > 🥉) — probable typo fandom à Lv 10.
+
+### Analyse gameplay canon (fandom)
+
+- **All-rounder** : stats moyennes sauf **HP au-dessus de la moyenne** → high survivability
+- **Cannot be replaced** (toujours en active party)
+- **Male character avec strongest Magical Attack + Magical Defense** (canon trivia)
+- **Highest amount of Additions** (7 vs ~4-6 autres characters)
+- **Longest play time** → master all additions naturally
+- **Almost guaranteed DLV 5** durant le game normal (sans grinding)
+- **Fire element** beneficial vs **decent amount of Water enemies** canon
+- **All spells offensives no further effect** (simple but effective)
+- **Final Burst** = signature high damage canon
+- **Most consistent + least polarizing character** of the cast canon
+
 > Notable :
 >
 > - Stats AT/DF/MAT/MDF **convergent vers 150 à Lv 60** (équilibre final)
 > - HP scaling : 30 → 7,500 (×250 sur 60 levels)
 > - XP curve : exponentielle douce (Lv 30 → 60 = 339k XP, près de 90% du total)
 > - Stats AT progression diverge légèrement Lv 12-21 (jump de 413 HP par level) — break point balance canon
+
+## Weapons canon (8 swords)
+
+| #   | Name              | Attack | Price | Source                                 | Effect canon                  |
+| --- | ----------------- | ------ | ----- | -------------------------------------- | ----------------------------- |
+| 1   | **Broad Sword**   | 2      | —     | Start, Hellena, Skeleton               | —                             |
+| 2   | **Bastard Sword** | 7      | 60G   | Limestone Cave, Bale, Hellena, Mr Bone | —                             |
+| 3   | **Heat Blade**    | 18     | 150G  | Kazas, Kashua Glacier                  | **Fire elemental attack**     |
+| 4   | **Falchion**      | 26     | 250G  | Fueno                                  | —                             |
+| 5   | **Mind Crush**    | 34     | 350G  | Kashua Glacier, Forbidden Land/Kadessa | **Chance to cause Confusion** |
+| 6   | **Fairy Sword**   | 39     | 400G  | Ulara                                  | **Gain 50% more SP**          |
+| 7   | **Claymore**      | 44     | 500G  | Moon                                   | —                             |
+| 8   | **Soul Eater**    | 75     | —     | Polter Armor, Loner Knight             | **Loses 10% HP each turn**    |
+
+> Notable :
+>
+> - **Heat Blade** (Disc 1 Kazas Disc 2 Kashua) = Fire elemental signature canon — cohérent Dart Red-Eye
+> - **Fairy Sword** (Ulara) = +50% SP gain — synergy avec Dragoon form (Madness Hero 204 SP + Fairy Sword = burst transform)
+> - **Mind Crush** = Confusion proc (cf. [`../combat/status-effects.md`](../combat/status-effects.md) à créer)
+> - **Soul Eater** AT 75 highest mais **-10% HP/turn** = trade-off endgame
+> - **Claymore** Moon = endgame "neutral" sword Disc 4
+> - Pattern : weapons sources cross 4 discs (Bale → Kazas → Kashua → Forbidden Land/Ulara → Moon)
+> - Cf. divergence price Heat Blade : wiki LoD 150G (kazas) vs fandom 150G — cohérent ici ✅
 
 ## Additions canon (7 total)
 
@@ -111,6 +183,26 @@
 > - **Moon Strike** = high damage (350%) faible SP (20) → addition "économique"
 > - **Blazing Dynamo** = **ultimate Dart** (450% damage, 7 inputs) → unlock via 80 uses de chaque addition précédente (= **480 uses total prior additions**)
 > - Pattern unlock : **6 additions level-gated** (Lv 2/8/15/22/29) + **1 unlocked via mastery** (Blazing Dynamo)
+
+### Progression Lv 1-5 par addition (fandom canon)
+
+> Distinction important canon : **certaines additions scalent damage**, d'autres **scalent SP** seulement, d'autres scalent les deux.
+
+| Addition       | Damage Lv 1→5     | SP Lv 1→5   | Type scaling                              |
+| -------------- | ----------------- | ----------- | ----------------------------------------- |
+| Double Slash   | 150% → **202%**   | 35 constant | Damage scaling, SP fixe                   |
+| Volcano        | 200% → **250%**   | 20 → 36     | **Damage + SP scaling** (modéré)          |
+| Burning Rush   | **150% constant** | 30 → 102    | **SP scaling pur** (battery rapide)       |
+| Crush Dance    | 150% → **250%**   | 50 → 100    | **Damage + SP scaling** (équilibré)       |
+| Madness Hero   | **100% constant** | 60 → 204    | **SP scaling pur extreme** (max battery)  |
+| Moon Strike    | 200% → **350%**   | 20 constant | Damage scaling pur, SP fixe               |
+| Blazing Dynamo | 250% → **450%**   | 100 → 150   | **Damage + SP scaling** (modéré ultimate) |
+
+→ Notable pour Damia (le code) :
+
+- Data-model `Addition.scaling: { damageByLevel: number[], spByLevel: number[] }` (pas une simple formule linéaire)
+- Pattern intentionnel canon : **diversité de scaling** par addition → joueur choisit selon besoin (damage ou SP gen)
+- **Madness Hero** = "pure battery" : 0 damage scaling, +240% SP scaling → **SP generator extreme**
 
 → Adaptation Damia (le code) : **Q1 = auto-complete** (cf. [`../combat/additions.md`](../combat/additions.md) §Q1). 7 additions toutes utilisables ; gating canon respecté.
 
@@ -145,30 +237,38 @@
 
 #### Red Dragon DS (Fire element, 4 spells)
 
-| Spell              | Multiplier | Target       | Cost | Acquisition |
-| ------------------ | ---------- | ------------ | ---- | ----------- |
-| **Flame Shot**     | 200        | Single Enemy | 10   | DLV 1 init  |
-| **Explosion**      | 100        | All Enemies  | 20   | DLV 2       |
-| **Final Burst**    | 300        | Single Enemy | 30   | DLV 3       |
-| **Red-Eye Dragon** | 300        | All Enemies  | 80   | DLV 5       |
+| Spell              | Multiplier (wiki LoD) | STR% (display) | Target       | Cost | Acquisition |
+| ------------------ | --------------------- | -------------- | ------------ | ---- | ----------- |
+| **Flame Shot**     | 200                   | 50%            | Single Enemy | 10   | DLV 1 init  |
+| **Explosion**      | 100                   | 25%            | All Enemies  | 20   | DLV 2       |
+| **Final Burst**    | 300                   | 75%            | Single Enemy | 30   | DLV 3       |
+| **Red-Eye Dragon** | 300                   | **75%** \*     | All Enemies  | 80   | DLV 5       |
 
-> Notable : **DLV 4 = pas de nouveau spell** pour Dart (pattern canon : 1 spell par DLV sauf DLV 4 souvent skip).
+> \* **Red-Eye Dragon STR%** : description in-game indique **175% (erreur canon)**, mais c'est **75%** (vérifié JP version, damage identique à Final Burst). Source: ref [1] fandom.
+>
+> Notable :
+>
+> - **DLV 4 = pas de nouveau spell** pour Dart (pattern canon : 1 spell par DLV sauf DLV 4 souvent skip)
+> - **STR% vs Multiplier** : Multiplier = formula damage variable réel (canon Wulves) ; STR% = display in-game unreliable. Damia (le code) : utiliser Multiplier en data, choix UI STR% style à trancher
 
 #### Divine Dragon DS (Non-Elemental, 2 spells initiaux)
 
-| Spell                | Multiplier | Target       | Cost | Acquisition |
-| -------------------- | ---------- | ------------ | ---- | ----------- |
-| **Divine DG Ball**   | **400**    | All Enemies  | 50   | Initial     |
-| **Divine DG Cannon** | **600**    | Single Enemy | 50   | Initial     |
+| Spell                | Multiplier (wiki LoD) | STR% (display) | Target       | Cost | Acquisition   |
+| -------------------- | --------------------- | -------------- | ------------ | ---- | ------------- |
+| **Divine DG Ball**   | **400**               | 50%            | All Enemies  | 50   | Initial DLV 5 |
+| **Divine DG Cannon** | **600**               | 100%           | Single Enemy | 50   | Initial DLV 5 |
 
 > ⚠️ **Spells canon Divine Dragon DS** :
 >
-> - **Non-Elemental** confirmé (cohérent canon Disc 3 : Divine Dragon attaque Deningrad utilise Divine DG Ball + Cannon)
+> - **Non-Elemental** confirmé (cohérent canon Disc 3 : Divine Dragon boss attaque Deningrad utilise Divine DG Ball + Cannon — Dart hérite le pouvoir)
 > - **400 / 600 multipliers** = les plus hauts du jeu (vs Final Burst 300 / Red-Eye Dragon 300 max Red-Eye)
 > - **Coût 50 MP** chacun = très accessible
 > - **Initial DLV 5** acquisition → arme endgame Disc 4
+> - Quote fandom : "_The Divine Dragoon uses the two strongest attacks the Divine Dragon himself uses. They are extremely strong, almost unrivaled in terms of their damage output relative to the MP used._"
 >
 > Cross-ref : [Divine Dragon boss](../bosses/Divine Dragon.md) (à créer) utilise les mêmes abilities (cohérent narrative — Dart hérite le pouvoir).
+
+> ⚠️ **BS fandom à ignorer** : fandom claim "Divine Dragoon spells deal **double damage against enemies of all other elements**" — **FAUX, confirmed Discord canon** (Icarus + DrewUniverse). Non-Elemental = juste no resist & no opposite, **PAS ×2**. Cf. [`../combat/elements.md`](../combat/elements.md) + [`../combat/_sources/discord-tlod-clarifications.md`](../combat/_sources/discord-tlod-clarifications.md).
 
 ## Vision Damia
 

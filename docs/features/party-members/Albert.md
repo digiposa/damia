@@ -2,7 +2,10 @@
 
 > Roi de Serdio — second porteur du Jade Dragoon Spirit (héritage de Lavitz).
 >
-> **Source canon** : 🥈 [`_sources/lod-wiki-albert.md`](./_sources/lod-wiki-albert.md)
+> **Sources canon** :
+>
+> - 🥈 [`_sources/lod-wiki-albert.md`](./_sources/lod-wiki-albert.md) — wiki LoD (stats per level, DLV thresholds, spell multipliers)
+> - 🥉 [`_sources/fandom-albert.md`](./_sources/fandom-albert.md) — fandom (lore narratif, family, story beats par chapter, weapons list, additions tables détaillées per level, trivia)
 
 ## Statut
 
@@ -10,35 +13,84 @@
 
 ## Profil
 
-| Attribut           | Valeur                                                       |
-| ------------------ | ------------------------------------------------------------ |
-| Identité           | **King Albert** (roi de Serdio)                              |
-| Âge                | 26                                                           |
-| Taille             | 5'7" / 175 cm                                                |
-| Espèce             | Humain                                                       |
-| Élément            | **Wind** (cf. [`combat/elements.md`](../combat/elements.md)) |
-| Archetype Dragoon  | **Jade Dragon** (hérité de Lavitz)                           |
-| Voice Artist (PS1) | David Babich                                                 |
+| Attribut          | Valeur                                                                                |
+| ----------------- | ------------------------------------------------------------------------------------- |
+| Identité          | **King Albert** (roi du **royaume de Basil**, nord de Serdio)                         |
+| Nom JP            | アルバート (Arubāto)                                                                  |
+| Âge               | 26                                                                                    |
+| Taille            | **5'9" / 175 cm** (per Official Guidebook fandom — résout divergence height initiale) |
+| Espèce            | Humain                                                                                |
+| Sexe              | Male                                                                                  |
+| Élément           | **Wind** (cf. [`combat/elements.md`](../combat/elements.md))                          |
+| Archetype Dragoon | **Jade Dragon** (hérité de Lavitz)                                                    |
+| Voice (EN)        | David Babich (partage avec **Melbu Frahma** — trivia)                                 |
+| Voice (JP)        | Shinichirô Miki                                                                       |
 
 ### Apparence
 
-Tall, slender, **golden eyes**, hair pulled into a **loose ponytail**. Style noble / scholarly.
+Tall, slender, **long golden brown hair** in ponytail. **Yeux bleus** (fandom) ; wiki LoD disait "golden eyes" — ⚠️ légère divergence, à vérifier tier 1.
+
+**Outfits canon** :
+
+- **NPC king Bale** : royal green cape (red straps), royal green tunic, white pants, black boots/gloves, royal staff
+- **Travel outfit** (party) : dark green cape, silver armor (gold trim), pale green tunic, light brown pants, dark brown boots
+- **Hellena captured** : shirtless + light brown pants + dark brown boots + white belt
+- **Dragoon form** : jade green armor (orange gem center) + jade green dragon headband + Dragoon Spear brown motif + wings pale yellow/jade green/orange. Plus slender que Lavitz Dragoon form.
 
 ### Caractère
 
-**Scholarly by nature**. Roi savant, contemplatif (vs Lavitz plus guerrier).
+**Generous, compassionate, level-headed king**. Modest, humble, lacking arrogance/entitlement despite royalty. Deeply loved by people and knights. Wishes to be treated as **simple friend who travels** (like Lavitz, vs traitement royal).
+
+**Poetic + well-educated + "nerdy"** :
+
+- Knowledgeable Dragoons, Winglies, Virages, statistics
+- Loves knowledge + reading (overflow d'enthousiasme à Mille Seseau National Library)
+- Souvent **calm and rational mind** dans le groupe
+- Cite historical facts, anatomical analysis (dismisses Haschel/Dart blood relation via statistique)
+
+Roi savant, contemplatif (vs Lavitz plus guerrier direct).
 
 ## Story / lore (canon)
 
-- Rencontré pour la première fois à **[Bale](../locations/Bale.md)** (capitale du royaume de Basil, nord de Serdio) dans le throne room de **Indels Castle**.
-- Hérite du **Jade Dragoon Spirit** à la mort de Lavitz (Disc 2).
+### Family lore (background)
+
+- **Père** : **King Carlo** (loved by his people, murdered 20 years before game by Doel)
+- **Oncle** : **Emperor Doel** (Carlo's brother, killed him, refused to accept Albert as king, defected, founded **Imperial Sandora** in southern Serdio)
+- **Albert crowned at age 6** following his father's murder → Civil war (Imperial Sandora vs Kingdom of Basil) since
+- **Royaume divisé** : Kingdom of Basil (nord, Albert) vs Imperial Sandora (sud, Doel)
+- **Moon Gem** = trésor national de Serdio, **sealed inside Albert's body** (royal heir tradition)
+
+### Joining party / Dragoon Spirit acquisition
+
+- Rencontré pour la première fois à **[Bale](../locations/Bale.md)** (capital de Basil, nord de Serdio) dans le throne room de **Indels Castle** (Chapter 1, Disc 1).
+- Capturé par Sandora pendant l'absence du party (Bale tombe en surprise attack) → emprisonné à **Hellena**.
+- Sauvé par le party à Hellena. **Hooded Man = Lloyd** extrait le **Moon Gem** du corps d'Albert. **Lavitz transforms en Dragoon, attaque Lloyd, mortellement blessé par Dragon Buster**. Lavitz meurt dans les bras de Dart.
+- **Jade Dragoon Spirit choose Albert** comme next master (à la fin de CD 1).
 - Acquisition canon = pattern `inherited_from_predecessor` — Albert récupère :
   - Le Dragoon Spirit Jade
   - L'**état complet d'apprentissage** de Lavitz : additions débloquées + niveau de chaque, stats AT/DF/MAT/MDF, XP cumulé, DLV
 - En Damia mode Story : substitution canonique (cf. [SCOPE §7.1](../../SCOPE.md#71-mode-story--fidélité-maximale-tlod)).
 - En Damia mode Survival : Albert et Lavitz sont des **skins du Jade Dragoon archetype** (cf. [README skins](./README.md#skins-survival-mode)).
 
-> _Lore narratif détaillé — section "Story" du wiki LoD non développée ici, à compléter quand on traitera quests/cutscenes._
+### Story arcs par chapter (canon)
+
+> Beats narratifs résumés. Détail complet dans [`_sources/fandom-albert.md`](./_sources/fandom-albert.md). À orchestrer dans `quests/` futurs.
+
+| Chapter                    | Key beats Albert                                                                                                                                                                                                                                                                                                                                            |
+| -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Ch.1 — Serdian War**     | Throne room Bale, Hellena captivity, Lavitz death + Spirit transfer, decides to **postpone royal duties** and live as Dragoon, Doel boss fight Black Castle (avenger arc)                                                                                                                                                                                   |
+| **Ch.2 — Platinum Shadow** | Fletz visits (Claire Bridge stats nerd moment), **romance Princess Emille** (Twin Castle), Queen Fury (friendship Kongol), Phantom Ship (Black Monster realization), Lloyd confrontation Undersea Cavern, **Emille promises to wait**                                                                                                                       |
+| **Ch.3 — Fate & Soul**     | Deningrad church + **Mille Seseau National Library nerdy moment**, Forbidden Land (Wingly ruins), Mountain of Mortal Dragon, **Lloyd defeated** Tower of Flanvel                                                                                                                                                                                            |
+| **Ch.4 — Moon & Fate**     | Death Frontier intervention (Miranda vs Rose), Ulara, **[Aglis](../locations/Aglis.md) test of courage** (puts world before kingdom), Zenebatos, Mayfil (**Lavitz spirit encounter + final goodbye**), Moon That Never Sets (alternate Bale, **Doel rematch** + victory speech), Final Battle, **Epilogue : Wedding with Emille** in Bale (returns as king) |
+
+### Relations clés
+
+- **Lavitz** — close friend, knight, predecessor. Albert hérite tout de lui. Lavitz mort à Hellena ; spirit rencontré again à Mayfil pour final farewell.
+- **Doel (uncle)** — meurtrier du père Carlo. Defeated twice (Black Castle Disc 1 + alternate Bale Disc 4). Albert apprend que Carlo trustait Doel → tragedy could have been avoided if they'd worked together.
+- **Princess Emille** — love interest (real Emille after the imposter Lenus arc). Wedding in epilogue.
+- **Lloyd** — killer of Lavitz. Albert's nemesis arc through Discs 2-3 until defeat at Tower of Flanvel.
+- **Minister Noish** — political right hand at Bale.
+- **Kongol** — friendship developed Queen Fury (Albert teaches Kongol "friends = walking same road").
 
 ## Combat
 
@@ -116,6 +168,50 @@ Identiques à Lavitz (archetype partagé). Détail dans [`combat/additions.md`](
 
 **Twister Glaive** (Wind) — partagée Lavitz/Albert (cf. [`combat/elements.md`](../combat/elements.md#armes-élémentales-physical)).
 
+### Weapons progression (canon, 7 weapons)
+
+Albert wields a **spear** (taught by Lavitz). Progression canon :
+
+| Weapon             | Stat | Buy  | Sell | Location                                | Effect                   |
+| ------------------ | ---- | ---- | ---- | --------------------------------------- | ------------------------ |
+| Spear              | 4    | N/A  | 10   | Initial / Hellena Prison (2nd) / Merman | —                        |
+| Lance              | 19   | 100G | 50   | The Seventh Fort / Lohan                | —                        |
+| **Twister Glaive** | 28   | 140G | 70   | Kazas                                   | **Wind elemental**       |
+| Glaive             | 37   | 250G | 125  | Queen Fury                              | —                        |
+| Spear of Terror    | 45   | 300G | 150  | Deningrad                               | **Chance to cause Fear** |
+| Partisan           | 56   | 400G | 200  | Vellweb                                 | —                        |
+| Halberd            | 65   | 500G | 250  | Moon / Zackwell                         | —                        |
+
+→ À documenter dans `items/equipment.md` (à créer) avec tous les characters' weapons.
+
+### Gameplay analysis (canon)
+
+Per fandom :
+
+- **High HP**, strong **physical offense + defense**
+- **Subpar speed** (40, second lowest)
+- **Second worst Magical Attack + Magical Defense** du cast → vulnérable aux sorts ennemis (marginally MDF mieux que Kongol mais slightly less HP)
+- **Highest damage outputs** avec Gust of Wind Dance + Flower Storm parmi le cast
+- **Additions précoces** (notamment Rod Typhoon + Gust of Wind Dance) → Final Addition theoretically achievable in CD 1 avec grinding
+- **Rose Storm** cité parmi les meilleurs Dragoon Magic spells du jeu (half damage reduction 3 turns)
+
+**Role-type** : tank physical / DPS spear, weak magical defense.
+
+### Dragoon Magic details + clarification STR%
+
+| Spell        | DLV | MP  | Target       | Effect (fandom)                                             | Multiplier canon (Wulves) |
+| ------------ | --- | --- | ------------ | ----------------------------------------------------------- | ------------------------- |
+| Wing Blaster | 1   | 20  | All enemies  | Wind, **STR 25%**                                           | **100**                   |
+| Rose Storm   | 2   | 20  | All allies   | **Halves damage 3 turns** (Power Up modifier, cf. Albert §) | —                         |
+| Gaspless     | 3   | 30  | Single enemy | Wind, STR 75% (in-game shows 100% — **typo canon**)         | **300**                   |
+| Jade Dragon  | 5   | 80  | All enemies  | Wind, **STR 75%**                                           | **300**                   |
+
+> ⚠️ **STR % in-game ≠ damage Multiplier réel** (clarif fandom) :
+>
+> - Le **STR %** affiché dans le menu status est probablement un indicateur UI relatif (compare spells au sein d'un Dragoon)
+> - Le **Multiplier** utilisé par la formule canon est dans Wulves doc ([`combat/damage-formula.md`](../combat/damage-formula.md))
+> - Distinction importante pour code Damia : **ne pas confondre les deux**. UI peut afficher STR % canon-style, mais le calcul utilise Multiplier.
+
 ## Vision Damia
 
 ### Story mode
@@ -151,5 +247,10 @@ Identiques à Lavitz (archetype partagé). Détail dans [`combat/additions.md`](
 
 - **Confirmer "Lavitz=Albert exactly"** côté stats : la table Lavitz canon wiki doit être identique. À vérifier quand on ingère Lavitz page.
 - **Rose Storm 3 turns** — comment porter en real-time Damia ? Timer (3 × N secondes ?) ou X attaques reçues ? À trancher au moment du status effects design.
-- **Voice line par avatar** — décision design : on map des voice clips par avatar (Blossom/Rose Storm) ou on accepte une voice line unique par addition (simplification) ?
-- **Transition Lavitz → Albert** mode Story : moment exact dans la trame, cutscene, état préservé/transféré. À couvrir avec quests/lore docs.
+- **Voice line par avatar** — décision design : on map des voice clips par avatar (Blossom/Rose Storm) ou on accepte une voice line unique par addition (simplification) ? Fandom clarifie : Lavitz/Albert utilisent leur **favorite flower** (Rose vs Blossom). JP version unifie "Cherry Blossom Blizzard".
+- **Transition Lavitz → Albert** mode Story : moment exact = fin de CD 1 à Hellena post-Lloyd. Cutscene Spirit transfer to draft.
+- **Eye color divergence** : wiki LoD "golden eyes" vs fandom "blue eyes" — à vérifier tier 1 (screenshot in-game ou Discord communauté).
+- **STR % vs Multiplier in-game** — clarifier dans UI Damia si on affiche STR % canon-style ou le Multiplier directement. Décision design.
+- **Wedding epilogue** — porter ou non en Damia mode Story ? Cutscene narratif end-game.
+- **Doel rematch alternate dimension** (Moon That Never Sets) — gameplay mécanique unique (Albert solo boss fight ?). Design à acter.
+- **Lavitz spirit encounter Mayfil** — story beat majeur (Lavitz possessed, demonic device, self-impale). À orchestrer en cutscene + boss fight (Zackwell).

@@ -1,13 +1,13 @@
 # Damia
 
-> **Boss canon Disc 4 à Vellweb** — **une des 7 anciens Dragoons** servant Emperor Diaz pendant la Dragon Campaign. **Blue-Sea Dragoon** (élément Water) dont **Meru héritera le Spirit**.
+> **Boss canon Disc 4 à Vellweb** — **une des 7 anciens Dragoons** servant Emperor Diaz pendant la Dragon Campaign. **Blue-Sea Dragoon** (élément Water) dont **Meru héritera le Spirit**. Personnage **féminin**, **half Human / half Mermaid**, **15 ans** (la plus jeune des Dragoons canon), **147cm**, **first to die** pendant la Dragon Campaign, trained personally by Emperor Diaz.
 >
-> 🎯 **Importance projet** : Damia est la **namesake de ce projet** (nom du fan-game). Personnage emblématique pour ce développement.
+> 🎯 **Importance projet** : Damia est la **namesake de ce projet** (nom du fan-game). Personnage emblématique pour ce développement. **Backstory tragique** (bullied pour son heritage mi-mermaid, fear of loneliness) + **lien émotionnel fort avec Rose** (Rose promet "to join her someday" post-defeat).
 >
 > **Sources canon** :
 >
 > - 🥈 [`_sources/lod-wiki-damia.md`](./_sources/lod-wiki-damia.md) — wiki LoD (stats, immunities, abilities table, counter group)
-> - 🥉 fandom (à ingérer)
+> - 🥉 [`_sources/fandom-damia.md`](./_sources/fandom-damia.md) — fandom (identity reveal, backstory bullying, scène Vellweb Rose, Meru archetype confirmation, Guidebook trivia)
 
 ## Statut
 
@@ -15,16 +15,21 @@
 
 ## Profil
 
-| Attribut          | Valeur                                                                                        |
-| ----------------- | --------------------------------------------------------------------------------------------- |
-| Type              | Boss canon (**un des 4 anciens Dragoons morts** pendant Dragon Campaign — souls à Vellweb)    |
-| Archetype Dragoon | **Blue-Sea Dragon** (Water) — Meru's predecessor                                              |
-| Élément           | **Water** (cf. [`../combat/elements.md`](../combat/elements.md))                              |
-| Location canon    | **Vellweb (submap 499)** — cf. [`../locations/Vellweb.md`](../locations/Vellweb.md) (à créer) |
-| Encounter         | **Scripted** (0% escape)                                                                      |
-| Counter group     | **28** (all opportunities)                                                                    |
-| Disc              | Disc 4 (Chapter 4: Moon & Fate)                                                               |
-| Counters Adds     | **Yes**                                                                                       |
+| Attribut          | Valeur                                                                                                                                                    |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Type              | Boss canon (**un des 4 anciens Dragoons morts** pendant Dragon Campaign — souls à Vellweb)                                                                |
+| Archetype Dragoon | **Blue-Sea Dragon** (Water) — Meru's predecessor                                                                                                          |
+| Élément           | **Water** (cf. [`../combat/elements.md`](../combat/elements.md))                                                                                          |
+| Location canon    | **Vellweb (submap 499)** — son propre **tower** à Vellweb                                                                                                 |
+| Encounter         | **Scripted** (0% escape)                                                                                                                                  |
+| Counter group     | **28** (all opportunities)                                                                                                                                |
+| Disc              | Disc 4 (Chapter 4: Moon & Fate ; fandom indique "Chapter 4: Fate & Soul" — divergence chapitre name)                                                      |
+| Counters Adds     | **Yes**                                                                                                                                                   |
+| **Identity**      | **Female**, **15 ans** (Dragon Campaign), **147cm (4'10")** — Official Guidebook                                                                          |
+| **Race**          | **Half Human / Half Mermaid** — **seul personnage canon avec mixed-racial background**                                                                    |
+| **Training**      | **Personally trained by Emperor Diaz** (Official Guidebook)                                                                                               |
+| **Death**         | **Première des Dragoons originaux à mourir** en combat (Guidebook) ; **n'apparaît pas dans flashback Rose Disc 2** (contraste avec Belzac qui y apparaît) |
+| **Trait notable** | **Youngest Dragoon canon** ; harness Dragoon power _grâce_ à son heritage mi-mermaid (texte fandom)                                                       |
 
 ## Stats canon
 
@@ -33,6 +38,15 @@
 | HP    | AT  | DF  | A-AV | SPD | MAT | MDF | M-AV |
 | ----- | --- | --- | ---- | --- | --- | --- | ---- |
 | 9,000 | 116 | 100 | 0%   | 60  | 116 | 200 | 0%   |
+
+> ⚠️ **Divergences stats wiki LoD 🥈 vs fandom 🥉** :
+>
+> - **HP** : wiki 9,000 / fandom 9,500 (US/EU) / fandom 14,000 (JP) — JP version plus tanky (pattern Belzac également)
+> - **AT** : wiki 116 / fandom 130
+> - **MAT** : wiki 116 / fandom 130
+> - **SPD** : wiki 60 / fandom 70
+> - **DF/MDF** identiques (100/200)
+>   → **Wiki LoD prime** (🥈 > 🥉). À reconfirmer tier 1 si possible. JP version peut expliquer l'écart HP.
 
 > Comparaison avec [Belzac](./Belzac.md) :
 >
@@ -134,22 +148,45 @@ Counter formula canon : `floor{floor[floor{floor[(AT² × 250 / DF)] / 100} × T
 
 - Damia = **une des 7 Dragon incarnations** servant Emperor Diaz pendant la Dragon Campaign (~11k ans avant les événements du jeu)
 - Spécifiquement : Damia = **Blue-Sea Dragoon** (Water)
+- **Personally trained by Emperor Diaz** (Official Guidebook canon trivia)
+- **Première des Dragoons originaux à mourir** au combat (Guidebook). Notable : ne figure **pas** dans le flashback Rose de la final clash (contraste avec Belzac qui y apparaît)
 - Mort pendant la Dragon Campaign (4 anciens Dragoons morts : Belzac, Damia, Syuveil, Kanzas → souls gathered à **Vellweb**)
 - Après sa mort, le **Blue-Sea Dragoon Spirit** reste jusqu'à ce que **Meru** en hérite (Disc 2 canon, après Phantom Ship arc)
 
+### Identity & backstory canon
+
+- **Half Human / Half Mermaid** — **seul personnage canon avec mixed-racial background** dans tout TLoD
+- **15 ans** au moment de la Dragon Campaign → **youngest Dragoon**
+- **147cm (4'10")** — petite stature cohérente avec age 15
+- **Bullied / avoided** pendant son enfance à cause de son heritage mixte
+- Cette enfance traumatique a créé une **profonde fear of loneliness**
+- Texte canon implique : son heritage mi-mermaid lui permet d'**harness le Dragoon power** (lien Water element + Mermaid)
+- Lien lore : **Mermaids = race canon TLoD** (à documenter, possible lien Tiberoa / Undersea Cavern Lenus arc Disc 2)
+
 ### Rencontre Vellweb (Chapter 4 — Disc 4)
 
-(Pattern présumé identique à [Belzac](./Belzac.md#rencontre-vellweb-chapter-4--disc-4) — à compléter via fandom/ingestion future)
+Le party retourne à Vellweb pour libérer les âmes des 4 anciens Dragoons morts. Damia apparaît dans **sa propre tower** (Vellweb a 1 tower par ancien Dragoon ?).
 
-- Party retourne à Vellweb pour libérer les âmes des 4 anciens Dragoons morts
-- Damia apparaît comme spectre / âme manifestée
-- Force le party à combattre
-- Upon defeat : âme freed → goes to Mayfil
+**Scène émotionnelle canon** :
+
+1. Reveal identity : half Human/half Mermaid, 15 ans
+2. **Damia pleads à Rose de ne pas la laisser seule** (fear of loneliness traumatique)
+3. **Rose quote canon** : _"There is nobody who bullies you like in the past anymore. We won't let them."_
+4. **Rose shows regret** quand elle doit forcer Damia au combat ("she must go somewhere else")
+5. Boss fight
+6. Upon defeat : Rose assure **"they will meet again"** ; Damia **sense la présence de ses amis** (les autres Dragoons morts ?)
+7. **Soul freed** → disparaît → **goes to Mayfil** (city of dead)
+8. **Rose promet "to join her someday"** — foreshadowing fin de Rose canon (suicide / sacrifice Disc 4 ?)
+
+→ Scène la **plus émotionnelle des 4 boss Vellweb** : Rose tutélaire envers Damia comme une grande sœur. **Contrasté avec Belzac** (frenzy denial, mistake Dart for Zieg).
 
 ### Lien Meru (successor canon)
 
-- Meru = **Wingly** (cf. canon TLoD) qui reçoit le **Blue-Sea Dragoon Spirit** en Disc 2
+- Meru = **Wingly** qui reçoit le **Blue-Sea Dragoon Spirit** en Disc 2 (Phantom Ship arc)
 - Notable : Meru = **Wingly** mais hérite d'un **anti-Wingly Dragoon Spirit** historique → tension narrative canon
+- **Dragoon Addition de Damia = same as Meru's** (canon fandom confirmation Archetype mécanique)
+- **Sorts Damia = sorts Meru DLV 1-3** : Freezing Ring, Diamond Dust, Blue-Sea Dragon
+- **Rainbow Breath** (DLV 4-5 Meru) = **non-utilisé par Damia** → suggère que Damia n'avait pas atteint DLV max (cohérent age 15 = peu d'expérience) OU que Rainbow Breath est une innovation Meru
 - À documenter `party-members/Meru.md` (à créer)
 
 ## Vision Damia (le code, vs Damia le boss !)
@@ -157,12 +194,21 @@ Counter formula canon : `floor{floor[floor{floor[(AT² × 250 / DF)] / 100} × T
 ### Mode Story
 
 - Boss fight Vellweb (Disc 4) — fidèle canon
-- **Pré-combat** : cutscene (à découvrir via fandom) — pattern similaire Belzac probable (frenzy / denial / forced fight)
+- **Pré-combat cinematic émotionnel** :
+  - Découverte de Damia dans **sa tower**
+  - Reveal **half Human / half Mermaid, 15 ans**
+  - Damia plead à Rose de ne pas la laisser seule
+  - Rose quote canon "There is nobody who bullies you..."
+  - Rose regret de devoir forcer le combat
 - **Trait Patterned Retaliate** = cycle 3 abilities. **Damia = profile mage** (Freezing Ring + Diamond Dust = double water spells, Blue-sea Dragon ultimate)
 - **Scripted encounter** (0% escape)
 - **Drop 100%** : Blue Sea Stone
 - **Status immunity total** (8 statuts)
-- **Post-defeat** : âme freed → Mayfil (pattern Belzac)
+- **Post-defeat cinematic** :
+  - Rose : "we will meet again"
+  - Damia sense ses amis (autres Dragoons morts)
+  - Soul freed → Mayfil
+  - **Rose** : promesse "to join her someday" (foreshadowing fin Rose)
 - **Strategy hint canon** :
   - **DF 100 = faible défense physique** → spam physical additions efficace
   - **MDF 200 = haute résistance magique** → éviter spell-only strats
@@ -173,7 +219,21 @@ Counter formula canon : `floor{floor[floor{floor[(AT² × 250 / DF)] / 100} × T
 
 - Le projet **Damia** porte le nom de ce boss/ancien Dragoon
 - **Boss fight de référence** à soigner particulièrement en implémentation (cinematic, audio, design visuel)
+- **Identité visuelle** : jeune fille mi-mermaid, **147cm**, palette Water/Blue-Sea, **tower architecturale** spécifique (chaque ancien Dragoon Vellweb a sa tower ?)
+- **Concept art canon existant** (fandom Gallery) → référence directe à exploiter
+- Backstory tragique = **résonance émotionnelle forte** ; possibilité d'integrer la scène Rose-Damia comme **moment clé Disc 4** pour Mode Story
 - Possible signature visuelle Damia (le code) reprenant l'identité Water/Blue-Sea de la boss (motifs water, blue palette UI, etc.)
+
+### Adaptation Damia Archetype confirmé
+
+Confirmation canon **Dragoon Addition de Damia = same as Meru's** → cohérent avec **pattern Archetype + Avatar** (cf. [VISION §6.6](../../VISION.md) — Lavitz/Albert/Greham/Syuveil identiques en mécanique).
+
+→ **Blue-Sea Dragon Archetype** :
+
+- Avatars Story : **Damia** (Dragon Campaign) → **Meru** (game time)
+- Avatars Survival skin : à imaginer (variantes de Meru/Damia ?)
+- Mécanique partagée : addition unique (à confirmer "Cool Boogie" canon Meru ?), sorts Freezing Ring/Diamond Dust/Blue-Sea Dragon
+- Distinction Damia/Meru : Damia ne maîtrise pas Rainbow Breath (cf. lore canon)
 
 ### Mode Survival
 
@@ -209,13 +269,19 @@ Counter formula canon : `floor{floor[floor{floor[(AT² × 250 / DF)] / 100} × T
 
 ## Questions ouvertes
 
-- **Damia vivante ou esprit ?** — Présumé esprit (pattern Belzac confirmé). À reconfirmer fandom.
-- **Blue Sea Stone** — item canon (drop 100%). Effet exact ? Trigger Dragoon Spirit Meru ? Probable lien narratif fort. À documenter `items/`.
+- ✅ **Damia vivante ou esprit ?** — **RÉSOLU** : esprit. Damia "first to die" pendant Dragon Campaign canon. Soul manifestée à Vellweb tower.
+- ✅ **Identity humaine canon** — **RÉSOLU** : **female**, **half Human / half Mermaid**, **15 ans**, **147cm**. Seul perso mixed-racial canon.
+- ✅ **Comment exactement Damia meurt** — **PARTIELLEMENT** : Guidebook indique "first to die in battle" mais pas d'autre détail. **Notable** : absente du flashback Rose Disc 2 (contraste avec Belzac qui y figure). Suggère mort très précoce dans la Dragon Campaign, avant les events que Rose se rappelle.
+- **Blue Sea Stone** — item canon (drop 100%). Effet exact ? Trigger Dragoon Spirit Meru ? Probable lien narratif fort. À documenter `items/spirit-stones.md`.
 - **Cycle Patterned Retaliate confirmation** — wiki dit Diamond Dust → D-attack → Blue-sea Dragon. Confirmer trigger % (probable identique Belzac).
-- **Identity humaine canon** — Damia était-elle humaine ? Wingly ? Race ? Genre ? Le nom suggère féminin (Damia = nom grec féminin). À confirmer fandom + tier 1.
-- **Lore Damia personnage** — backstory, nation d'origine, lien Emperor Diaz / Dragon Campaign ? Pattern Belzac (royal family Gloriano) → Damia royal d'autre nation ? À documenter.
-- **Cutscene Disc 2 / Disc 4** — Damia apparaît-elle dans flashbacks Rose (Lidiera) comme Belzac ? À confirmer fandom.
-- **Comment exactement Damia meurt** — Virage attack ? Super Virage ? Autre cause ? Pattern Belzac avait une contradiction canon à résoudre.
-- **Lien Meru-Damia** — moment exact du transfer Blue-Sea Spirit canon → Meru. Probable Phantom Ship arc Disc 2 ou plus tôt.
-- **Profile mage canon** vs Belzac physical-tank : suggère un design intentionnel pour la **diversité des 4 boss Vellweb** (tank Earth / mage Water / ? Wind Syuveil / ? Thunder Kanzas). À explorer.
-- **Personnage féminin Vellweb** ? — Si Damia = féminine, c'est la **1ère ancienne Dragoon féminine confirmée à Vellweb** (Belzac, Syuveil, Kanzas + Rose vivante / Shirley spirit Shrine). Lien Sacred Sisters Mille Seseau ? Non probable (Sacred Sisters Disc 3, Damia Dragon Campaign 11k ans).
+- **Lore Mermaids canon** — race **Mermaid** confirmée par Damia heritage. Lien possible avec **Lenus / Tiberoa / Undersea Cavern** arc Disc 2 ? Mermaids = sous-groupe Wingly ou race séparée ? À documenter `lore/races.md` (à créer).
+- **Lore nation d'origine Damia** — non spécifié. Côtière ? Mer ? Cohérent half-mermaid. Possible Tiberoa (côte ouest) ou autre nation maritime. À investiguer tier 1.
+- **Lien Emperor Diaz personally trained** — relation maître-disciple. Diaz = Emperor sous lequel les Dragoons servent. Cohérent paternalisme vs Damia jeune fille. À documenter `lore/emperor-diaz.md`.
+- **Lien Meru-Damia** — moment exact du transfer Blue-Sea Spirit canon → Meru. Probable Phantom Ship arc Disc 2 (Lenus boss → Meru).
+- **Rose-Damia émotional bond** — Rose grande-sœur tutélaire envers Damia. Rose promet "to join her someday" → foreshadowing direct fin Rose (sacrifice Disc 4 canon ?). À documenter `party-members/Rose.md` (à créer).
+- **Damia tower architectural detail** — "her tower" à Vellweb. Pattern : Vellweb = 4 towers (1 par ancien Dragoon mort) ? À confirmer via ingestion Vellweb location.
+- **Profile mage canon** vs Belzac physical-tank : suggère un design intentionnel pour la **diversité des 4 boss Vellweb** (tank Earth Belzac / mage Water Damia / ? Wind Syuveil / ? Thunder Kanzas). À explorer.
+- **Rainbow Breath origin** — Meru's DLV4-5 spell que Damia n'utilise pas canon. Spell innovation Meru (Wingly) ? Spell que Damia n'a jamais maîtrisé (mort trop jeune) ? Important pour data-model Dragoon spells per-avatar.
+- **Stats divergence US/EU vs JP** (HP 9k/9.5k/14k) — JP version Damia plus tanky. Pattern récurrent canon (Belzac aussi). Quelle version cible pour Damia ? Probable wiki LoD = US/EU.
+- **Lore Sacred Sisters / Damia** — Rose appelle Sacred Sisters de Mille Seseau "girls". Pas de lien direct apparent (timeline 11k ans), mais femme dragoon = thème récurrent. Non probable.
+- **Concept art canon** (fandom gallery) — à exploiter pour design visuel Damia. Note : pas hébergé chez nous (droits) mais référence externe.

@@ -236,6 +236,42 @@
 
 - [ ] **Damia backstory lore** — nation d'origine, lien Emperor Diaz, circonstances de la mort pendant Dragon Campaign. Pattern Belzac (royal Gloriano, mort vs Virage protégeant Shirley) → Damia probable rôle similaire à découvrir. À ingérer fandom.
 
+### Bosses (Damia fandom — identity reveal half-Mermaid 15 ans + scène Vellweb émotionnelle)
+
+- [ ] **Identity canon Damia consignée** : female, half Human / half Mermaid, 15 ans, 147cm, personally trained by Emperor Diaz, first to die canon. À refléter dans design visuel + cinematic. Source: [`features/bosses/Damia.md`](features/bosses/Damia.md) §Profil identity.
+
+- [ ] **Race Mermaid lore canon** — confirmation race **Mermaid** dans TLoD via Damia heritage. Lien possible Tiberoa / Lenus / Undersea Cavern Disc 2 (à investiguer). À documenter `lore/races.md` (à créer) — Wingly / Giganto / Human / Mermaid / autres. Damia = **seul personnage canon mixed-racial** confirmé.
+
+- [ ] **Scène Vellweb Rose-Damia émotionnelle** — pré-fight + post-defeat cinematic. Beats canon :
+  1. Découverte Damia dans sa tower
+  2. Reveal identity mi-mermaid
+  3. Damia pleads "don't leave me alone"
+  4. Rose quote "There is nobody who bullies you like in the past anymore. We won't let them."
+  5. Rose regret forcing battle
+  6. Boss fight
+  7. Post-defeat : Rose "we will meet again", Damia senses friends presence
+  8. Soul freed → Mayfil
+  9. Rose promet "to join her someday" (foreshadowing fin Rose canon)
+     → Plus émotionnelle des 4 boss Vellweb. À orchestrer carefully (priorité haute namesake).
+
+- [ ] **Foreshadowing Rose end** — promesse "to join her someday" à Damia = direct setup fin Rose Disc 4 (sacrifice/suicide canon ?). À investiguer + documenter `party-members/Rose.md` + `lore/rose-arc.md` (à créer).
+
+- [ ] **Dragoon Addition = same as Meru's** (canon confirmation Archetype mécanique) — Confirme [VISION §6.6](VISION.md) pattern Archetype + Avatar. Blue-Sea Dragon Archetype = Damia + Meru (Story canon) + skins Survival à imaginer. À refléter `party-members/Meru.md` + data-model Archetype.
+
+- [ ] **Sorts Damia canon = Meru DLV 1-3 (sans Rainbow Breath)** — Freezing Ring, Diamond Dust, Blue-Sea Dragon. Damia n'utilise pas Rainbow Breath (DLV 4-5 Meru). Implications data-model :
+  - Soit `DragoonAvatar.spellsUnlocked: SpellId[]` (Damia subset Meru)
+  - Soit `DragoonAvatar.maxDLV: number` (Damia max DLV 3, Meru max DLV 5)
+  - Soit Rainbow Breath = innovation Meru not in original Damia kit
+    → À trancher avec design Dragoons. Source: Damia.md §Lien Meru.
+
+- [ ] **Damia tower architecture Vellweb** — Vellweb = 1 tower par ancien Dragoon mort ? 4 towers (Belzac+Damia+Syuveil+Kanzas) ? À confirmer via ingestion `locations/Vellweb.md`. Pattern visual cohérent : chaque tower = identity de son ancien Dragoon (Damia = water/blue/mermaid motifs).
+
+- [ ] **Stats divergence US/EU vs JP Damia** — wiki LoD 9k HP vs fandom 9.5k US/EU vs fandom 14k JP. Pattern récurrent (Belzac aussi). Cible Damia (le code) probable US/EU. À trancher.
+
+- [ ] **Damia absente flashback Rose Disc 2** — canonical "doesn't appear in Rose's flashback of the final clash". Coherent avec "first to die" Guidebook. Mort très précoce Dragon Campaign. Implication narrative : Damia = première loss Rose, plus traumatique, raison du bond émotionnel fort. À refléter dans `lore/dragon-campaign.md`.
+
+- [ ] **Concept art canon Damia** (fandom gallery) — référence visuelle externe. Ne pas héberger (droits). Pointer dans `features/bosses/Damia.md` pour artistic direction Damia (le code).
+
 ### Bosses (premier boss documenté — Belzac)
 
 - [ ] **Statut "Petrify" identifié** — 8ᵉ statut canon (extension de 7 vu via Bale items). Liste finale 8 statuts : Fear, Confusion, Bewitchment, Dispiriting, Poison, Stun, Arm-Blocking, **Petrify**. À documenter dans `combat/status-effects.md`. Source: [`features/bosses/Belzac.md`](features/bosses/Belzac.md).

@@ -42,13 +42,14 @@ Ordre alphabétique. Découpage canon TLoD (4 discs, monde Endiness complet).
 
 ### Disc 3
 
-| Location                    | Type        | Statut profil |
-| --------------------------- | ----------- | ------------- |
-| Evergreen Forest            | Forest      | ⚪ à spec     |
-| Forbidden Land              | Wilderness  | ⚪ à spec     |
-| Tower of Flanvel            | Tower       | ⚪ à spec     |
-| Valley of Corrupted Gravity | Dungeon     | ⚪ à spec     |
-| Zenebatos                   | Wingly city | ⚪ à spec     |
+| Location                    | Type                                      | Statut profil |
+| --------------------------- | ----------------------------------------- | ------------- |
+| **Deningrad**               | **Capital Mille Seseau + Crystal Palace** | 🟡 draft      |
+| Evergreen Forest            | Forest                                    | ⚪ à spec     |
+| Forbidden Land              | Wilderness                                | ⚪ à spec     |
+| Tower of Flanvel            | Tower                                     | ⚪ à spec     |
+| Valley of Corrupted Gravity | Dungeon                                   | ⚪ à spec     |
+| Zenebatos                   | Wingly city                               | ⚪ à spec     |
 
 > Disc 3/4 boundary clarif : Aglis = Disc 4 confirmé par fandom + arc narratif "Chapter 4: Moon and Fate". Séquence canonique Rouge→Aglis→Zenebatos est bien Disc 4.
 

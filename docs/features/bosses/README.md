@@ -39,10 +39,11 @@ Liste à compléter au fil. Ordre alphabétique par section.
 
 ### Disc 3
 
-| Boss          | Élément | Location         | Statut profil |
-| ------------- | ------- | ---------------- | ------------- |
-| Lloyd         | ?       | Tower of Flanvel | ⚪ à spec     |
-| _(et autres)_ | —       | —                | —             |
+| Boss              | Élément                                              | Location                                                       | Statut profil |
+| ----------------- | ---------------------------------------------------- | -------------------------------------------------------------- | ------------- |
+| **Divine Dragon** | Non-Elemental tag (sorts utilisent regular elements) | **Attaque Deningrad** (event) + boss fight Disc 3/4 final      | ⚪ à spec     |
+| Lloyd             | ?                                                    | Tower of Flanvel (boss) + **Deningrad** (kidnap Theresa event) | ⚪ à spec     |
+| _(et autres)_     | —                                                    | —                                                              | —             |
 
 ### Disc 4
 

@@ -677,6 +677,59 @@
 
 - [ ] **8/8 status immunity dès Disc 1** — confirmé : tous bosses canon = status immune total, pas progression par Disc. Pattern stable. Important data-model `Boss.statusImmunity` = full default.
 
+### Bosses (Emperor Doel fandom + Dark Doel — Lloyd advisor + Diaz reborn + 2 swords mechanic)
+
+- [ ] **Lloyd = advisor Doel canon Disc 1** — Lloyd avant Disc 3 (kidnap Theresa Tower of Flanvel) était **advisor Doel** + **instilled "demonic word"** Doel → wrathful turn. Lore foundational : Lloyd antagoniste arc Disc 1→3. À documenter `bosses/Lloyd.md` (à créer) + `lore/lloyd-arc.md`.
+
+- [ ] **Emperor Diaz reborn canon Disc 1 reveal** — Doel quote canon : "All is ordered by the reborn Emperor Diaz. Lloyd is a mere pawn." Diaz mort Dragon Campaign 11k ans → reborn / possessed Disc 1. Mastermind canon de tout l'arc. À documenter `lore/emperor-diaz.md` (à créer). Reveal majeur Disc 1 qui setup Disc 2-4.
+
+- [ ] **Empress Karina canon name** (vs wiki LoD "Katrina") — fandom prime probable (canon name spelling). Statue Black Castle. À reconfirmer tier 1.
+
+- [ ] **Father Faza NPC Black Castle** — raconte canon "humane side Doel" + Karina statue lore. À documenter `npcs/father-faza.md` (à créer).
+
+- [ ] **Popo + New Serdio Party Kazas** — civil movement helps party access Black Castle Disc 1. À documenter `npcs/popo.md` + `lore/new-serdio-party.md`.
+
+- [ ] **Doel personality canon enrichie** — visionary "all species from Divine Tree are equal" → motivation Kongol joining. Post-Lloyd : wrathful/merciless. Father Faza quote : "Strength and frailty. Fondness and Cruelness." Pattern character tragique compelling.
+
+- [ ] **Tragic family canon reveal Disc 4 Albert trial Moon** — Carlo (Albert's father) **trusted Doel** + admitted "Doel was most likely to take throne". Civil war Serdio = misunderstanding tragique. À orchestrer cinematic Mode Story très important.
+
+- [ ] **Doel quote canon catchphrase** : "I will do anything to conquer Serdio even if I have to sell my soul to the devil." À utiliser pour intro Doel character UI.
+
+- [ ] **Dark Doel canon Battle in the Moon (Albert individual trial)** :
+  - HP 1,500 (US/EU) / 2,500 (JP), AT 75, DF 120, MAT 90, MDF 120, SPD 50
+  - 6,000 EXP, 0 Gold, no drops, Can Counterattack: Yes
+  - **Cannot attack Doel before 2 swords defeated** :
+    - **Shadow Blade** (white sword, entity séparée)
+    - **Light Sword** (black/red sharp, entity séparée)
+  - **Albert sans Dragoon form** (canon trial rule)
+  - Post-swords-defeated : **Lightning Cape** ability unlocked (4 bolts from cape)
+    → Nouveau pattern boss canon : **"Components must be destroyed first"**. Data-model `Boss.requiresComponentsDefeated: EntityId[]`. Réutilisable. Source: [`features/bosses/Emperor Doel.md`](features/bosses/Emperor Doel.md) §Dark Doel.
+
+- [ ] **Aglis trials canon Disc 4** — confirmation : trial of Kongol = Doel apparition (accuses Kongol). Pattern : trials of courage Aglis = past antagonists/lessons. À documenter `locations/Aglis.md` enrichissement + `quests/disc4-aglis-trials.md`.
+
+- [ ] **Moon That Never Sets individual trials canon** — chaque party member a son trial (Albert vs Doel, autres TBD). Pattern dungeon Disc 4 final. À documenter `locations/Moon (That Never Sets).md` (à créer).
+
+- [ ] **Doel abilities renaming divergences canon** — wiki LoD vs fandom :
+  - Multi-slash Slam (wiki) = Double Sword (fandom)
+  - Spirit Bullet (wiki) = Scream Bullet (fandom)
+  - Thunder Slash (wiki) = Judgement Storm (fandom, with detailed sword toss + electrical storm sequence)
+  - Thunder Beam (wiki) ≈ Charge Burst (fandom)
+  - Spark Net + Thunderbolt (wiki) ≈ Random Thunder (fandom, during Barrier)
+    → À harmoniser data-model Damia. Préférer canon-most-descriptive names (fandom plus visuel).
+
+- [ ] **Doel Barrier mécanique trigger DIVERGENCE canon majeure** :
+  - Wiki LoD : **HP < 50%** trigger
+  - Fandom : **"unchanging amount of time"** trigger (timer-based, pas damage-based)
+  - Implication game balance : si timer-based, burst damage rapide peut éviter Barrier ; si HP-based, inevitable
+  - Wiki LoD : Barrier dure **4 turns** / Fandom : **3 turns**
+    → À reconfirmer tier 1 (Discord). Important balance design. Source: Doel.md.
+
+- [ ] **Therapy Ring + Spirit Ring items canon** (fandom Doel strategy tips) — useful pendant Barrier downtime. NEW items canon à documenter `items/accessories.md` (à créer).
+
+- [ ] **Doel "wields 2 swords" canon visual** — Emperor form animation = 2 swords (Double Sword, Scream Bullet stab + throw both). À refléter design Damia (le code) sprite/animation.
+
+- [ ] **Dragoon Spirit "ascending after death" canon visual** (fandom gallery) — Doel's DS ascends post-defeat. Pattern visual transfer Spirit cinematic. À orchestrer Damia (le code). Probable réutilisable autres bosses canon (Lavitz death → Spirit transfer Albert).
+
 ### Locations + Story / Lore (Divine Tree fandom — reveal mechanism + Caterpillar 3-phases + Coolon dies)
 
 - [ ] **CORRECTION canon Caterpillar = 3 phases sequential** (pas 3 mobs simultanés) — Caterpillar → Pupa → Imago, cycle de vie insectoid. Stats par phase :

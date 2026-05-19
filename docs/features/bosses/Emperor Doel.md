@@ -1,11 +1,11 @@
 # Emperor Doel
 
-> **Antagoniste principal Disc 1** — Emperor of **Imperial Sandora** (région sud Serdio). **Tué son frère Carlo** (père d'Albert) pour rise to power → guerre civile Serdio (Bale-Basil vs Sandora-Doel). **Violet Dragoon** (Thunder element). **Boss à 2 phases canon** : Emperor Doel (humain, 600 HP) → **Dragoon Doel** transformation (1,800 HP). **8/8 status immunity** (pattern boss canon). Reward defeat : **Violet Dragoon Spirit** canon → **Haschel** héritage.
+> **Antagoniste principal Disc 1** — Emperor of **Imperial Sandora** (région sud Serdio, capital Kazas). **Then-Prince Doel a tué son frère King Carlo 20 ans pre-game** pour rise to power → guerre civile Serdio (Bale-Basil vs Sandora-Doel). **Violet Dragoon** (Thunder element). **Visionary canon** : "all species from Divine Tree are equal" → motivation Kongol joined. **Boss à 2 phases canon** : Emperor Doel (humain, 2 swords) → **Dragoon Doel** transformation. **Dark Doel canon** = rematch Disc 4 Moon trials (Albert individual trial). **Lloyd = advisor Doel canon** + **Emperor Diaz reborn** = mastermind (Doel = mere pawn). **Reward defeat Disc 1** : Violet Dragoon Spirit → futur Haschel héritage. **Empress Karina** = late wife canon (statue Black Castle).
 >
 > **Sources canon** :
 >
-> - 🥈 [`_sources/lod-wiki-doel.md`](./_sources/lod-wiki-doel.md) — wiki LoD (stats 2 forms, immunities, abilities, Thunder Barrier mechanic, family lore)
-> - 🥉 fandom (à ingérer)
+> - 🥈 [`_sources/lod-wiki-doel.md`](./_sources/lod-wiki-doel.md) — wiki LoD (stats 2 forms, immunities, abilities, Thunder Barrier mechanic, family lore minimal)
+> - 🥉 [`_sources/fandom-doel.md`](./_sources/fandom-doel.md) — fandom (backstory pre-game 20 ans, Serdian War details, Lloyd advisor + Diaz reborn agenda, personality enrichie visionary→wrathful, Empress Karina canon name + Father Faza NPC, **Dark Doel canon Battle in the Moon** (Shadow Blade + Light Sword, Lightning Cape), abilities renaming canon, divergences trigger Barrier)
 
 ## Statut
 
@@ -13,25 +13,32 @@
 
 ## Profil
 
-| Attribut          | Valeur                                                                                                                                                                  |
-| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Type              | Boss canon Disc 1 final (antagoniste principal Serdian War)                                                                                                             |
-| Archetype Dragoon | **Violet Dragon** (Thunder) — Haschel's predecessor (DS reward post-defeat)                                                                                             |
-| Élément           | **Thunder** (cf. [`../combat/elements.md`](../combat/elements.md))                                                                                                      |
-| Location canon    | **Black Castle, Kazas (submap 660)** — cf. [`../locations/Kazas.md`](../locations/Kazas.md)                                                                             |
-| Encounter         | **Scripted** (0% escape, formation 390)                                                                                                                                 |
-| Counter group     | **28** (Emperor form) / **0** (Dragoon form)                                                                                                                            |
-| Disc              | Disc 1 (Chapter 1: Serdian War — final boss arc)                                                                                                                        |
-| Nation            | **Imperial Sandora** (région sud Serdio, capital Kazas)                                                                                                                 |
-| Famille canon     | **Frère : Carlo** (Albert's father, **tué par Doel** pour rise to power) ; **Femme : Katrina** (morte war, cause inconnue) ; **Neveu : Albert** (heir Bale-Basil age 6) |
-| Trait notable     | Boss à **2 phases** sequential (Emperor humain → Dragoon Doel transformation) — pattern canon réutilisable                                                              |
-| Reward defeat     | **Violet Dragoon Spirit** (Thunder) — canon Haschel héritage future                                                                                                     |
+| Attribut          | Valeur                                                                                                                                                                                                                                                                                                                                                             |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Type              | Boss canon Disc 1 final (antagoniste principal Serdian War)                                                                                                                                                                                                                                                                                                        |
+| Archetype Dragoon | **Violet Dragon** (Thunder) — Haschel's predecessor (DS reward post-defeat)                                                                                                                                                                                                                                                                                        |
+| Élément           | **Thunder** (cf. [`../combat/elements.md`](../combat/elements.md))                                                                                                                                                                                                                                                                                                 |
+| Location canon    | **Black Castle, Kazas (submap 660)** — cf. [`../locations/Kazas.md`](../locations/Kazas.md)                                                                                                                                                                                                                                                                        |
+| Encounter         | **Scripted** (0% escape, formation 390)                                                                                                                                                                                                                                                                                                                            |
+| Counter group     | **28** (Emperor form) / **0** (Dragoon form)                                                                                                                                                                                                                                                                                                                       |
+| Disc              | Disc 1 (Chapter 1: Serdian War — final boss arc)                                                                                                                                                                                                                                                                                                                   |
+| Nation            | **Imperial Sandora** (région sud Serdio, capital Kazas)                                                                                                                                                                                                                                                                                                            |
+| Famille canon     | **Frère : King Carlo** (Albert's father, **tué par then-Prince Doel 20 ans pre-game** pour rise to power) ; **Femme : Empress Karina** ⚠️ (fandom canon name, wiki LoD "Katrina" probable typo — morte war, cause inconnue, statue Black Castle) ; **Neveu : Albert** (heir Bale-Basil age 6 lors couronnement, "only royal whose spouse is named" — Trivia canon) |
+| Trait notable     | Boss à **2 phases** sequential (Emperor humain → Dragoon Doel transformation) — pattern canon réutilisable                                                                                                                                                                                                                                                         |
+| Reward defeat     | **Violet Dragoon Spirit** (Thunder) — canon Haschel héritage future                                                                                                                                                                                                                                                                                                |
 
-## Stats canon — Phase 1 : Emperor Doel (humain)
+## Stats canon — Phase 1 : Emperor Doel (humain, **wields 2 swords**)
 
 | HP  | AT  | DF  | A-AV | SPD | MAT | MDF | M-AV |
 | --- | --- | --- | ---- | --- | --- | --- | ---- |
 | 600 | 30  | 100 | 0%   | 55  | 30  | 100 | 0%   |
+
+> ⚠️ **Divergences wiki LoD vs fandom** :
+>
+> - **HP** : wiki 600 / fandom 800 US/EU 1000 JP → fandom plus généreux
+> - **AT/MAT** : wiki 30 / fandom 36
+> - **XP/Gold** : wiki 3,000/200 sur phase 1 / fandom **0/0** sur phase 1 (yield délégué Dragoon form ?)
+>   → Wiki LoD prime (🥈 > 🥉) mais possible que fandom = post-patch updated. À reconfirmer tier 1.
 
 > Stats équilibrés AT/MAT 30 = profil "balanced fighter" Disc 1. Faible HP (600) vs Disc 4 bosses (Belzac 16k, Damia 9k) — cohérent power curve Disc 1.
 
@@ -51,12 +58,14 @@
 
 > **Drops "Nothing"** car le **Violet Dragoon Spirit** est obtenu en **reward scripted** (pas drop combat). Yield EXP/Gold donné dès phase 1 (Dragoon Doel phase 2 = 0/0).
 
-### Abilities (Emperor Doel)
+### Abilities (Emperor Doel — wields 2 swords canon)
 
-| Action           | Target | Damage           | Attack Multiplier | Conditions     |
-| ---------------- | ------ | ---------------- | ----------------- | -------------- |
-| Multi-slash Slam | Single | 1× Physical      | **1.0**           | Retaliate only |
-| Spirit Bullet    | Single | 1× Thunder magic | **1.0**           | —              |
+| Action (wiki LoD) | Nom alternatif fandom | Target | Damage           | Attack Multiplier | Conditions     | Description fandom                                                              |
+| ----------------- | --------------------- | ------ | ---------------- | ----------------- | -------------- | ------------------------------------------------------------------------------- |
+| Multi-slash Slam  | **Double Sword**      | Single | 1× Physical      | **1.0**           | Retaliate only | Slash 2× + **lift target off ground avec les 2 swords** + slam ground           |
+| Spirit Bullet     | **Scream Bullet**     | Single | 1× Thunder magic | **1.0**           | —              | Stab 2 swords on ground + spin glowing yellow + **throw both swords at target** |
+
+> Divergence naming canon : wiki/fandom utilisent noms différents pour mêmes abilities. **Fandom plus descriptif** (double-sword visual gameplay). À harmoniser data-model Damia.
 
 ### Traits (Emperor Doel)
 
@@ -92,16 +101,26 @@ Cohérent canon.
 
 **Dragoon Doel ne peut PAS counter** (vs Emperor Doel = group 28). Pattern : **transformation Dragoon perd counter capability** (focus magic offensif).
 
-### Abilities (Dragoon Doel)
+### Abilities (Dragoon Doel) — naming canon divergences wiki/fandom
 
-| Action              | Target | Damage               | Attack Multiplier | Conditions                                 |
-| ------------------- | ------ | -------------------- | ----------------- | ------------------------------------------ |
-| Thunder Beam        | Single | 1× Thunder magic     | **1.0**           | Disabled pendant Thunder Barrier           |
-| Thunder Slash       | Party  | 1.5× Thunder magic   | **1.5**           | —                                          |
-| **Spark Net**       | Single | **3× Thunder magic** | **3.0**           | Disabled pendant Thunder Barrier           |
-| **Thunder Barrier** | Self   | 0× damage immune     | —                 | **HP < 50%** trigger                       |
-| Dispel Barrier      | Self   | Reset state          | —                 | **Auto 4th turn après Thunder Barrier**    |
-| **Thunderbolt**     | Party  | **2× Thunder magic** | **2.0**           | **Enabled ONLY by Thunder Barrier active** |
+| Action (wiki LoD)   | Nom alternatif fandom  | Target | Damage               | Attack Multiplier | Conditions canon                                                           |
+| ------------------- | ---------------------- | ------ | -------------------- | ----------------- | -------------------------------------------------------------------------- |
+| Thunder Beam        | (subset Charge Burst)  | Single | 1× Thunder magic     | **1.0**           | Disabled pendant Thunder Barrier                                           |
+| Thunder Slash       | **Judgement Storm** ⚠️ | Party  | 1.5× Thunder magic   | **1.5**           | —                                                                          |
+| **Spark Net**       | (Random Thunder?)      | Single | **3× Thunder magic** | **3.0**           | Disabled pendant Thunder Barrier                                           |
+| **Thunder Barrier** | **Barrier**            | Self   | 0× damage immune     | —                 | **HP <50% (wiki) / unchanging time (fandom)** — divergence trigger         |
+| Dispel Barrier      | (Barrier expiry)       | Self   | Reset state          | —                 | **Auto 4 turns (wiki) / 3 turns (fandom)** — divergence duration           |
+| **Thunderbolt**     | (Random Thunder?)      | Party  | **2× Thunder magic** | **2.0**           | **Enabled ONLY by Thunder Barrier active**                                 |
+| —                   | **Charge Burst**       | Single | (Thunder magic)      | ?                 | Fandom : 2 electric waves from sword + charge → single target              |
+| —                   | **Random Thunder**     | Party  | Max-level Spark/Bolt | (high)            | **During Barrier active only** — random max-level Spark Net or Thunderbolt |
+
+> ⚠️ **Divergences canon majeures wiki LoD vs fandom** :
+>
+> - **Trigger Barrier** : wiki dit **HP < 50%** / fandom dit **"unchanging amount of time"** (timer-based, pas damage-based)
+> - **Durée Barrier** : wiki dit **4 turns** / fandom dit **3 turns**
+> - **Abilities naming** : wiki = "Thunder Beam / Slash / Spark Net" / fandom = "Charge Burst / Judgement Storm / Random Thunder"
+> - **Stratégie implication** : si timer-based (fandom), burst damage rapide peut **éviter Barrier entirely** ; si HP-based (wiki), inevitable à <50%
+>   → À reconfirmer tier 1 (Discord). Important pour data-model et game balance.
 
 > 🆕 **Mécanique "Thunder Barrier" canon avancée** (premier boss canon avec damage immunity + abilities swap) :
 >
@@ -132,12 +151,18 @@ Counter formula canon : `floor{floor[floor{floor[(AT² × 250 / DF)] / 100} × T
 
 ## Story / lore
 
-### Backstory canon Doel
+### Quote signature canon Doel
 
-- **Emperor of Imperial Sandora** (région sud Serdio, capital **Kazas**)
-- **Tué son frère Carlo** (Albert's father) pour **rise to power**
-- **Femme Katrina** morte pendant Serdian War (cause inconnue canon)
-- **Civil war Serdio** : Bale-Basil (north, Albert heir age 6) vs Sandora-Doel (south)
+> _"I will do anything to conquer Serdio even if I have to sell my soul to the devil."_
+
+### Backstory canon Doel (20 ans pre-game)
+
+- **Then-Prince Doel** murders brother **King Carlo** in attempt to seize power
+- **6-year-old Albert** crowned next king (rightful heir Serdio throne)
+- Doel **refuses to accept** → **secedes** + founds **Imperial Sandora in the South**
+- **Kingdom of Basil in the north** (Albert) vs **Imperial Sandora south** (Doel) = guerre civile
+- War **evenly matched** + **truce declared** initially
+- **Sandora gains Feyrbrand Dragon power** → balance tipped → truce broken → war re-ignited
 
 ### Home of Giganto incident canon (background story)
 
@@ -147,20 +172,96 @@ Counter formula canon : `floor{floor[floor{floor[(AT² × 250 / DF)] / 100} × T
 - Lien narratif : **Kongol fidèle à Doel** → cohérent Kongol = sub-boss Disc 1 servant Doel à Hoax + Black Castle
 - Cf. [`../party-members/`](../party-members/) Kongol entry (à créer)
 
+### Lloyd advisor + Diaz reborn agenda canon (fandom reveal)
+
+- **Lloyd = Doel's advisor canon** (avant son rôle Disc 3 kidnap Theresa)
+- **Great Commander of Sandora canon quote** : _"His Majesty Doel changed after a man called Lloyd showed up. He must have instilled something into Emperor Doel, a demonic word that ignites his desire to vanquish..."_
+- **Lloyd instilled demonic word** → Doel devient wrathful/merciless
+- **Shana kidnap** ordered by Doel **on request of Lloyd**
+- **Lloyd + Emperor Diaz agenda** : Shana kidnap est leur plan, Doel exécute
+- **Rose disbelief** : Diaz died 11k ans ago Dragon Campaign → **Diaz "reborn" canon Disc 1 reveal**
+- **Doel quote canon final fight** : _"Find the girl by the time the Moon That Never Sets waxes... All is ordered by the reborn Emperor Diaz. Lloyd is a mere pawn. Along with the Dragoons..."_
+- Pattern : Doel = pawn in larger conspiracy (Diaz mastermind canon)
+
+### Serdian War progression canon (Chapter 1)
+
+1. Sandora attacks **Seles** (Dart's home, burned by **Fruegel** + **Great Commander**) — capture Shana
+2. Attacks **Hoax** + **Seventh Fort Marshlands**
+3. Dart group → **Nest of Dragon** confront Feyrbrand
+4. Doel orders **all-out attack on Bale** (capital Basil) → practical victory
+5. **Sandoran Soldiers praise Doel** for "boldness + calculating warfare"
+6. **King Albert offers self as hostage** → imprisoned **Hellena Prison**
+7. **Albert freed** → party + Albert → **Black Castle Kazas**
+8. **Popo from New Serdio Party** (civil movement Kazas) helps access Black Castle
+9. **Kongol fight** → meet Doel face to face
+10. Albert asks "why kill father ?" → Doel : "to save Serdio of incapable ruler"
+11. Doel reveals Shana kidnap = Lloyd + Diaz agenda
+12. Combat → Doel reveals **Violet Dragoon** form
+13. Defeat → Doel returns old self → **directs Albert pursue Lloyd in Tiberoa**
+14. Albert salutes → Doel vanishes (Dragoon Spirit ascending canon gallery)
+
 ### Boss fight canon (Disc 1 final Chapter 1)
 
 - Location : **Black Castle (submap 660)** dans Kazas
 - Boss formation 390 = Emperor Doel + Dragoon Doel (2 phases scripted)
-- **Phase 1 Emperor Doel** : combat humain, 600 HP, Retaliate simple
+- **Phase 1 Emperor Doel** : combat humain wields **2 swords**, 600 HP, Retaliate simple
 - À HP 0 → **Transform** → **Dragoon Doel** (1,800 HP phase 2)
-- Phase 2 introduit **Thunder Barrier** mécanique HP<50% → 4 turns immunité
+- Phase 2 introduit **Thunder Barrier** mécanique (HP<50% wiki / time-based fandom, 4 turns wiki / 3 turns fandom)
 - Defeat → **Violet Dragoon Spirit** reward canon (futur héritage Haschel Disc 2/3)
 
-### Disc 4 rematch canon
+### Dark Doel canon — Battle in the Moon (Chapter 4 trials Albert)
 
-- **Dark Doel** = rematch alternate dimension Bale Disc 4
-- Cf. [`../bosses/README.md`](./README.md) Disc 4 entry "Dark Doel" — same character, alternate dimension Moon-related
-- À investiguer ingestion future.
+> **Confirmed canon via fandom** : Doel apparaît dans 2 trials Chapter 4 :
+>
+> 1. **Aglis trials** : trial of **Kongol** — Doel accuse Kongol siding avec ennemis, Kongol prend Doel's sword + refuse apologize + passe le test
+> 2. **Moon That Never Sets trials** : trial of **Albert** — Albert fights Doel sans Dragoon form
+
+#### Aglis Trial (Kongol) quote canon
+
+> _"Emperor Doel, Kongol got new feeling. Kongol found new friends. Intention of Emperor Doel is in Kongol. Kongol won't avoid Emperor Doel."_ — Kongol
+
+#### Moon Trial (Albert) — alternate dimension Bale castle 20 ans ago
+
+- Albert finds Doel in **castle of Bale 20 years ago** (alternate dimension)
+- Albert presses Doel sur "why killed my father"
+- Doel : **"save Serdio from incompetent leader named Carlo"** (overtaxation + disorder + corrupt ministers under Carlo)
+- Albert : "people don't desire power but peace"
+- Combat sans Dragoon form (Albert handicap canon)
+- Albert victorious
+
+#### Quote canon Albert (tragic family reveal)
+
+> _"I'm different from you and I am not alone. My friends have always been at my side during the many occasions when I was dispirited. I've overcome difficulties. When I was young, my father would often say that he didn't quite have the stature to be King. **Without Doel, he couldn't do anything.** He also said that **it is you who was most likely to take the throne. My father trusted in you.** If you had gotten together and governed the country, **this tragedy would never have happened.**"_
+
+→ **Reveal canon tragique** : Carlo lui-même croyait que Doel devait être roi + lui faisait confiance. Conflit familial = misunderstanding tragique. Doel a tué son frère qui aurait été allié.
+
+#### Dark Doel stats canon (Moon trial)
+
+| HP US/EU (JP) | AT  | DF  | MAT | MDF | SPD | A-AV | M-AV |
+| ------------- | --- | --- | --- | --- | --- | ---- | ---- |
+| 1,500 (2,500) | 75  | 120 | 90  | 120 | 50  | 0%   | 0%   |
+
+| Yield | EXP   | Gold | Drops | Counter |
+| ----- | ----- | ---- | ----- | ------- |
+| canon | 6,000 | 0    | None  | **Yes** |
+
+#### Dark Doel mécanique unique : 2 swords séparés canon
+
+- **Cannot be attacked before 2 swords defeated**
+- **Shadow Blade** (white sword) = entity séparée
+- **Light Sword** (black/red sharp blade) = entity séparée
+- Doel commence avec **Double Sword** ability (slash 2× + lift + slam)
+- Post-swords-defeated : **Lightning Cape** (4 bolts from cape) = new ability unlocked
+- Pattern boss canon nouveau : **"Components must be destroyed first"** (data-model `Boss.requiresComponentsDefeated: EntityId[]`)
+
+### Personality canon enrichie
+
+- **Originalement visionary** : "all species originating from Divine Tree are equal" — **reason Kongol joined**
+- **20 ans pre-game** : dissatisfaction avec rule Carlo → killed brother + seized throne attempt
+- **Post-Lloyd showup** : devient wrathful + merciless (Lloyd corruption canon)
+- **Statue Empress Karina** Black Castle = côté humain canon
+- **Father Faza** (NPC Black Castle) raconte canon : "Strength and frailty. Fondness and Cruelness. You must have them inside you."
+- **Final moments** : returns to old self, praises Albert, directs to Tiberoa for Lloyd
 
 ## Vision Damia
 

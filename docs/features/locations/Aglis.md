@@ -2,44 +2,67 @@
 
 > **Magical Wingly City**, ancien hub de magic research, repose au fond de la mer près des Broken Islands (adjacent à Rouge). Dungeon Disc 3/4 — exploration courte + boss Last Kraken + tests of courage party-wide.
 >
-> **Source canon** : 🥈 [`_sources/lod-wiki-aglis.md`](./_sources/lod-wiki-aglis.md)
+> **Sources canon** :
+>
+> - 🥈 [`_sources/lod-wiki-aglis.md`](./_sources/lod-wiki-aglis.md) — wiki LoD (data tables, encounters)
+> - 🥉 [`_sources/fandom-aglis.md`](./_sources/fandom-aglis.md) — fandom (lore narratif détaillé, story climax, Savan dialogue)
 
 ## Statut
 
-🟡 **draft** — données canon ingérées. Aucune impl Damia. Donjon end-game.
+🟡 **draft** — données canon ingérées de **2 sources** (wiki LoD 🥈 + fandom 🥉, cross-checked). Aucune impl Damia. Donjon end-game.
 
-> ⚠️ **Disc à confirmer** : user mentionne Disc 4. Le canon classique place Aglis Disc 3 (arc Rouge → Aglis → Zenebatos). Submap IDs et listes adjacents (#37 Rouge → #38 Aglis → #39 Zenebatos) suggèrent une séquence mid-game ; le découpage Disc 3 vs Disc 4 peut être marginal (transitions de disque pas toujours nettes en gameplay). À retrancher lors d'une passe globale Disc.
+✅ **Disc 4 confirmé** par fandom 🥉 ("CD 4") + cohérent avec arc narratif Chapter 4 "Moon and Fate".
 
 ## Profil
 
-| Attribut         | Valeur                                                                         |
-| ---------------- | ------------------------------------------------------------------------------ |
-| Type             | Dungeon Wingly (ancien hub magique)                                            |
-| Localisation     | Fond de mer, près des Broken Islands, adjacent à Rouge                         |
-| Civilisation     | Wingly (ancienne)                                                              |
-| Habitant unique  | **Savan** (lone inhabitant)                                                    |
-| Architecture     | Magical city avec **téléporteurs** + **mirror rooms** + plateformes flottantes |
-| Combat           | Random encounters (5 mob kinds) + boss **Last Kraken**                         |
-| Previous (canon) | #37 Rouge                                                                      |
-| Next (canon)     | #39 Zenebatos                                                                  |
-| Submaps wiki     | **19** + 1 unused (mirror room Rose pré-visite)                                |
+| Attribut         | Valeur                                                                                 |
+| ---------------- | -------------------------------------------------------------------------------------- |
+| Type             | Dungeon Wingly (ancien hub magique)                                                    |
+| Localisation     | Fond de mer, **Straits of Walter** (fandom), près des Broken Islands, adjacent à Rouge |
+| Civilisation     | Wingly (ancienne)                                                                      |
+| Habitant unique  | **Savan** (lone inhabitant)                                                            |
+| Architecture     | Magical city avec **téléporteurs** + **mirror rooms** + plateformes flottantes         |
+| Combat           | Random encounters (5 mob kinds) + boss **Last Kraken**                                 |
+| Previous (canon) | #37 Rouge                                                                              |
+| Next (canon)     | #39 Zenebatos                                                                          |
+| Submaps wiki     | **19** + 1 unused (mirror room Rose pré-visite)                                        |
 
 ## Story / lore
 
-Story beat majeur fin Disc 3 / début Disc 4 :
+Story beat majeur **Chapter 4: Moon and Fate** (Disc 4) :
 
-- **Approche** : Dart & co poursuivent **Zieg** (antagoniste majeur late-game) pour protéger le **Signet Sphere** d'Aglis (un des 4-5 sceaux magiques répartis dans Endiness).
-- **Arrivée** : la cité partiellement émerge depuis Rouge et révèle un chemin d'entrée.
-- **Inhabitant** : **Savan** est le seul habitant — il a passé sa vie au service de la magie et **a créé des créatures magiques** aux personnalités étranges.
-- **Quest principal** : Savan veut concevoir une **créature assez puissante pour garder le Signet** — la **Psychedelic Bomb**, arme magique de grande puissance.
-- **Mécanique clé** : la party participe aux **7 tests of courage** (un par membre) pour collecter le courage nécessaire à fabriquer la Psyche Bomb.
+- **Approche** : Dart & co observent Aglis depuis Rouge. La mer **se sépare en deux** ("invite" la party), permettant l'accès — puis **se referme**, piégeant la party à l'intérieur.
+- **Sentient creatures** : la party est accueillie par des êtres magiques sentients pacifiques, relayant les messages de **Savan**.
+- **Rencontre Savan** : Wingly ancien (immortel), survivant de la **Dragon Campaign** (~11k ans).
+- **Lore Savan (verbatim canon)** :
+  - **A survécu la Dragon Campaign**, continué l'étude magique pour reconstruire un monde Wingly
+  - S'est rendu **ageless et immortal**
+  - **4000 ans de solitude** après la chute des Winglies
+  - **Il y a 7000 ans, Rose l'a "sauvé"** — il a trouvé le sens dans le **Black Monster in the mirror** (= Rose qui tue les Moon Children pour empêcher la destruction du monde)
+  - Crée le **Moot** (= **Signet Sphere artificiel**) et la **Psychedelic Bomb**
+  - Mission : stopper **Zieg** qui continue le **"plan of the creator"** ; sceller le **Moon That Never Sets** via Moot
+- **Quest principal** : compléter Psyche Bomb via les **tests of courage** (un par character, dimensions à part avec NPCs Buckle + Lulu comme guides)
+- **Climax (au cœur d'Aglis)** :
+  - Last Kraken (créature la plus puissante de Savan) garde le Signet Sphere + Moot
+  - **Zieg manipule Last Kraken** qui devient hors-contrôle, attaque le Signet Sphere
+  - Party combat Last Kraken pour protéger le Signet
+  - **Le champ de pouvoir des Dragoons cause une réaction runaway de Moot**
+  - Savan téléporte la party hors de la salle + **verrouille la porte derrière lui**
+  - **Savan choisit la mort** ("Even if my body vanishes, my heart will remain. It will give you wings to fly the sky, to the Moon That Never Sets, where Zieg is heading.")
+- **Retour** : les créatures magiques de Savan **agonisent** (ne peuvent vivre sans lui). Elles finissent son travail et **activent le teleport vers Zenebatos**.
+
+> _Le Black Monster = Rose, qui tue les Moon Children pour empêcher leur transformation en God of Destruction. Lore central de la trame Disc 3-4._
 
 ## NPCs majeurs
 
-- **Savan** — lone Wingly inhabitant, créateur des créatures magiques
-- **Phewy** — assistant dans la research room, aide à préparer la Psyche Bomb + Moot
-- **Moot** — création de Savan, protector candidate pour le Signet
-- **Zieg** (antagoniste poursuivi, mentionné, pas combattu ici)
+- **Savan** — lone Wingly inhabitant, immortel ~11k ans, créateur des créatures magiques. Allié de Rose depuis 7k ans. **Sacrifie sa vie** au climax pour sauver la party.
+- **Phewy** — assistant dans la research room (canon wiki LoD), aide à préparer la Psyche Bomb + Moot
+- **Buckle** — magical being, guide les characters pendant les tests of courage (fandom)
+- **Lulu** — magical being, guide les characters pendant les tests of courage (fandom)
+- **Ruff** — character rencontré au point d'entrée (= même salle que le téléporteur de sortie vers Zenebatos)
+- **Moot** — création artificielle de Savan, **Signet Sphere artificiel**, vise à sceller le Moon That Never Sets
+- **Zieg** (antagoniste poursuivi ; manipule Last Kraken à distance, pas combattu ici)
+- **Magical creatures (sentient beings)** créées par Savan — meurent quand il meurt
 
 ## Services
 
@@ -83,25 +106,39 @@ Aucun.
 
 ### Minor Enemies (5 kinds, random encounters)
 
-| Enemy      | Élément | EXP | Gold | Drop              |
-| ---------- | ------- | --- | ---- | ----------------- |
-| Aqua King  | Water   | 135 | 30   | Angel's Prayer 8% |
-| Jelly      | Water   | 120 | 24   | Healing Fog 10%   |
-| Minotaur   | Earth   | 180 | 48   | Heavy Mace 2%     |
-| Scud Shark | Water   | 150 | 39   | Body Purifier 8%  |
-| Stern Fish | Water   | 165 | 54   | Frozen Jet 8%     |
+| Enemy      | Élément | HP (US/JP)  | EXP | Gold | Drop              |
+| ---------- | ------- | ----------- | --- | ---- | ----------------- |
+| Aqua King  | Water   | 640 / 800   | 135 | 30   | Angel's Prayer 8% |
+| Jelly      | Water   | 640 / 800   | 120 | 24   | Healing Fog 10%   |
+| Minotaur   | Earth   | 960 / 1,200 | 180 | 48   | Heavy Mace 2%     |
+| Scud Shark | Water   | 400 / 500   | 150 | 39   | Body Purifier 8%  |
+| Stern Fish | Water   | 935 / 1,070 | 165 | 54   | Frozen Jet 8%     |
 
-→ Note : zone à dominance **Water** (4/5 mobs). Minotaur Earth = outlier ; en canon TLoD Earth opposite Wind, donc party Lavitz/Albert/Kongol moins efficaces vs Minotaur.
+→ Note : zone à dominance **Water** (4/5 mobs). Minotaur Earth = outlier ; en canon TLoD Earth opposite Wind, donc party Lavitz/Albert moins efficaces vs Minotaur.
 
-### Boss
+**Particularités canon** :
 
-| Boss        | Élément | EXP    | Gold | Drop (100%)       |
-| ----------- | ------- | ------ | ---- | ----------------- |
-| Last Kraken | Water   | 12,000 | 300  | **Pretty Hammer** |
+- **Aglis Jelly** = tied avec **Mayfil Specter** pour la **plus haute Magic Defense** du jeu.
+- **Aqua King** = **seul Magical Attack Barrier creature non-unique** du jeu. Ability spéciale à documenter (status effects ? immunité magie ?) → cf. [`TODO.md`](../../TODO.md).
 
-→ À détailler dans `bosses/Last Kraken.md` (futur).
+### Bosses
 
-> **Note fandom-mentioned earlier** : Last Kraken canon uses **Thunder, Light AND Water attacks** (exception du general rule "monster uses own element"). Tier 1/2 confirmation needed.
+| Boss            | Élément | HP (US/JP)      | EXP    | Gold | Drop (100%)       |
+| --------------- | ------- | --------------- | ------ | ---- | ----------------- |
+| **Last Kraken** | Water   | 12,000 / 15,000 | 12,000 | 300  | **Pretty Hammer** |
+| **Cleone**      | Water   | 1,360 / 1,700   | 0      | 0    | —                 |
+
+→ Last Kraken à détailler dans `bosses/Last Kraken.md` (futur).
+
+> ⚠️ **Cleone** — listé comme boss Aglis **uniquement par fandom** 🥉, **non mentionné** par le wiki LoD 🥈. Hypothèses :
+>
+> - Possible cutscene boss (no EXP/Gold = scripted, non-fightable normalement)
+> - Possible adversaire dans une cutscene Savan/Zieg
+> - Possible nom alternatif d'une phase du combat Last Kraken
+> - Ou tout simplement oubli du wiki LoD
+>   → **À vérifier tier 1 (Discord communauté)**. Tracé dans [`TODO.md`](../../TODO.md).
+
+> **Note fandom-mentioned earlier (page Elements)** : Last Kraken canon uses **Thunder, Light AND Water attacks** (exception du general rule "monster uses own element"). Tier 1/2 confirmation needed.
 
 ### Encounter system data (canon)
 
@@ -135,9 +172,14 @@ Catégories principales :
 ### Mode Story
 
 - **Reproduire** topology canon avec téléporteurs comme mécanique de mouvement signature de la zone (cohérent ambiance Wingly magic)
-- **Mirror rooms** = scenes spéciales narratives (704 Rose pré-visite + 577 présent) — à implémenter comme cutscenes
-- **Tests of courage party-wide** = mécanique narrative unique → UI dédiée (dialogue branching avec 7 choix par character)
+- **Mirror rooms** = scenes spéciales narratives (701 Rose pré-visite + 577 présent) — à implémenter comme cutscenes
+- **Sea-splits cutscene** à l'arrivée Rouge → entrée Aglis ; **sea-closes-behind** lock l'exit jusqu'au fin du donjon
+- **Tests of courage party-wide** = mécanique narrative unique → UI dédiée (dialogue branching avec 7 choix par character), Buckle + Lulu comme guides in-dimension
+- **"Teleporter maze"** post-tests → always-go-left heuristic canon
+- **Zones avec créatures Savan = peace zones** (no random encounters) — gating mécanique flag par submap
 - **Last Kraken boss fight** + Pretty Hammer drop garanti
+- **Climax cutscene** : Last Kraken manipulé par Zieg → runaway Moot → Savan teleport-and-sacrifice
+- **Post-boss retour** : créatures Savan agonisent, activent teleport Zenebatos
 - **Save points** (2 emplacements dédiés)
 
 ### Mode Survival
@@ -172,11 +214,18 @@ Systèmes underlying spécifiques à Aglis :
 
 ## Questions ouvertes
 
-- **Disc 3 vs Disc 4** — disc d'appartenance canon à reconfirmer (user mentionne Disc 4, séquence Rouge→Aglis→Zenebatos canon Disc 3).
-- **Last Kraken multi-element** — fandom mentionne attaques Thunder/Light/Water, à confirmer tier 1.
-- **Pretty Hammer item** — équipement Kongol probable (Hammer = Kongol weapon class). À documenter dans items/equipment.md.
+- ✅ ~~**Disc 3 vs Disc 4**~~ — **résolu** par fandom : Disc 4 confirmé.
+- **Cleone** — boss additionnel listé par fandom (HP 1360/1700, 0 EXP, 0 Gold) non mentionné par wiki LoD. Hypothèses : cutscene boss, alt-name d'une phase Last Kraken, ou oubli wiki LoD. À vérifier tier 1.
+- **Last Kraken multi-element** — fandom Elements mentionne attaques Thunder/Light/Water, à confirmer tier 1.
+- **Magical Attack Barrier** (ability Aqua King) — qu'est-ce que c'est exactement ? Status immunité magie ? Reflect ? À chercher tier 1 + documenter dans `combat/status-effects.md` (à créer).
+- **Pretty Hammer item** — équipement Kongol probable (Hammer = Kongol weapon class). À documenter dans `items/equipment.md`.
 - **Téléporteur mécanique** — quelle UX en real-time iso Damia ? Touch-to-warp instant vs cutscene transition ?
-- **Tests of courage timing** — bloquant linéaire ou freeform party order ?
-- **Psyche Bomb** (sans X) vs **Psyche Bomb X** — quelles formules / BID exact pour la version "réponses imparfaites" ? À retrouver dans items canon.
+- **Tests of courage timing** — bloquant linéaire ou freeform party order ? Buckle + Lulu = guides in-dimension à concevoir.
+- **Psyche Bomb** (sans X) vs **Psyche Bomb X** — fandom confirme Psyche Bomb X = **repeat item** (use chaque combat), Psyche Bomb = single-use. BID exact pour Psyche Bomb (sans X) à retrouver — Wulves table liste Psyche Bomb X = 400, mais Psyche Bomb base ?
+- **Sea-splits cutscene** — comment porter en real-time iso ? Pre-render cutscene ou animation in-engine ?
+- **Lock-in mécanique** (sea closes behind) — flag location "cannot exit" jusqu'à boss kill. Mécanique partagée avec d'autres dungeons probable.
+- **"Teleporter maze" always-go-left** — porter le guide canon ou redesigner avec un autre cue ?
+- **Savan sacrifice cutscene** — moment narratif majeur, à scripter avec attention.
 - **Submap 581 encounter data unused** — porter pour Survival (utiliser la salle inutilisée comme arena) ?
-- **Signet Sphere lore** — gros plot device late-game, à documenter dans `lore/dragon-campaign.md` (à créer).
+- **Signet Sphere lore** — gros plot device late-game, à documenter dans `lore/dragon-campaign.md` (à créer). Lien avec **Moon Children**, **Black Monster**, **plan of the creator**.
+- **Rose's role lore** — Rose = Black Monster, tue les Moon Children. À documenter dans `party-members/Rose.md` + `lore/`.

@@ -49,7 +49,7 @@ Ordre alphabétique. Découpage canon TLoD (4 discs, monde Endiness complet).
 | Valley of Corrupted Gravity | Dungeon     | ⚪ à spec     |
 | Zenebatos                   | Wingly city | ⚪ à spec     |
 
-> Note Disc 3/4 boundary : Aglis listée Disc 4 selon user, mais séquence canonique Rouge→Aglis→Zenebatos suggère mid/late Disc 3. À reconfirmer.
+> Disc 3/4 boundary clarif : Aglis = Disc 4 confirmé par fandom + arc narratif "Chapter 4: Moon and Fate". Séquence canonique Rouge→Aglis→Zenebatos est bien Disc 4.
 
 ### Disc 4
 

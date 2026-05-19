@@ -130,6 +130,26 @@
 - [ ] **Scripted boss encounter** (0% escape) — flag par formation : Last Kraken à Aglis. Cohérent canon boss fights.
 - [ ] **Multi-element boss attacks** (Last Kraken : Thunder/Light/Water selon fandom) — confirmer tier 1 + data-model abilities multi-element par boss.
 
+- [ ] **Cleone (boss?) à Aglis** — listé par fandom 🥉 mais absent du wiki LoD 🥈. HP 1360/1700, 0 EXP/Gold (= scripted ?). À vérifier tier 1 si c'est un boss réel, une phase de Last Kraken, ou un oubli wiki. Source: [`features/locations/Aglis.md`](features/locations/Aglis.md) §Cleone.
+
+- [ ] **Magical Attack Barrier (ability)** — Aqua King d'Aglis = seul non-unique avec cette ability (fandom). Comprendre la mécanique exacte (immunité magie ? reflect ? counter ?) et documenter dans `combat/status-effects.md` (à créer). Source: Aglis.md §Particularités canon.
+
+- [ ] **Mécaniques narratives Aglis** :
+  - Sea-splits cutscene à l'entrée (Rouge → Aglis)
+  - Sea-closes-behind (location lock-in jusqu'à boss kill)
+  - Peace zones flag (créatures Savan présentes = no random encounters)
+  - Savan sacrifice cutscene (climax)
+  - Magical creatures dying post-Savan-death (activate Zenebatos teleport)
+    → À orchestrer dans `quests/disc4-aglis.md` (à créer).
+
+- [ ] **Lore central Disc 3-4** (à documenter dans `lore/` futur) :
+  - **Moon Children** (Rose tue chacun pour empêcher la transformation en God of Destruction)
+  - **Black Monster** (Rose elle-même, identité révélée Disc 4)
+  - **Plan of the creator** (motif de Zieg)
+  - **Moot** (Signet Sphere artificiel)
+  - **Moon That Never Sets** (final dungeon, à sceller via Moot)
+  - **Signet Spheres** (5 sceaux disséminés en Endiness, dont 1 à Aglis)
+
 - [x] **Albert Dmg%/SP table wiki** — ✅ **RÉSOLU** : typo wiki, Albert = Lavitz (mêmes stats / additions / SP, archetype Jade Dragoon partagé). Utiliser table Lavitz comme référence. Source: additions.md §Q7.
 
 - [ ] **Mob counter groups** — Si on implémente jamais les counters (cf. idée future), il faudra le data-model. Canon : ~140 enemies sortés en 10 groupes (1, 2, 3, 4, 9, 13, 16, 19, 23, 28). Damia mobs identifiés : Berserk Mouse=28, Goblin=28, Trent=28, Assassin Cock=19, Fruegel=28. Source: additions.md. Priorité: basse (dépend idée future Q2).

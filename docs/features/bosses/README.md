@@ -45,20 +45,20 @@ Liste à compléter au fil. Ordre alphabétique par section.
 
 ### Disc 4
 
-| Boss          | Élément             | Location                                                         | Statut profil                            |
-| ------------- | ------------------- | ---------------------------------------------------------------- | ---------------------------------------- |
-| **Belzac**    | **Earth**           | **Vellweb (502)**                                                | 🟡 draft                                 |
-| Atlow         | ?                   | Vellweb                                                          | ⚪ à spec                                |
-| Damia         | Water               | Vellweb                                                          | ⚪ à spec                                |
-| Kanzas        | ?                   | Vellweb                                                          | ⚪ à spec                                |
-| Syuveil       | Wind                | Vellweb                                                          | ⚪ à spec                                |
-| Last Kraken   | Water               | **Aglis** (cf. [`../locations/Aglis.md`](../locations/Aglis.md)) | ⚪ à spec                                |
-| Cleone        | Water (?)           | Aglis (?)                                                        | ⚪ à spec (existence à confirmer tier 1) |
-| Zackwell      | ?                   | Mayfil                                                           | ⚪ à spec                                |
-| Dark Doel     | ?                   | Moon (alternate Bale)                                            | ⚪ à spec                                |
-| Divine Dragon | (Non-Elemental tag) | various                                                          | ⚪ à spec                                |
-| Melbu Frahma  | ?                   | Moon (final boss)                                                | ⚪ à spec                                |
-| _(et autres)_ | —                   | —                                                                | —                                        |
+| Boss          | Élément                                           | Location                                                         | Statut profil                            |
+| ------------- | ------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------- |
+| **Belzac**    | **Earth** (Gold Dragoon ancient)                  | **Vellweb (502)**                                                | 🟡 draft                                 |
+| Atlow         | ? (existence à confirmer — non listé fandom)      | Vellweb                                                          | ⚪ à spec / ❓ existence                 |
+| Damia         | Water (Blue-Sea ancient)                          | Vellweb                                                          | ⚪ à spec                                |
+| Kanzas        | ? (Violet/Thunder probable, mort vs Super Virage) | Vellweb                                                          | ⚪ à spec                                |
+| Syuveil       | Wind (Jade ancient)                               | Vellweb                                                          | ⚪ à spec                                |
+| Last Kraken   | Water                                             | **Aglis** (cf. [`../locations/Aglis.md`](../locations/Aglis.md)) | ⚪ à spec                                |
+| Cleone        | Water (?)                                         | Aglis (?)                                                        | ⚪ à spec (existence à confirmer tier 1) |
+| Zackwell      | ?                                                 | Mayfil                                                           | ⚪ à spec                                |
+| Dark Doel     | ?                                                 | Moon (alternate Bale)                                            | ⚪ à spec                                |
+| Divine Dragon | (Non-Elemental tag)                               | various                                                          | ⚪ à spec                                |
+| Melbu Frahma  | ?                                                 | Moon (final boss)                                                | ⚪ à spec                                |
+| _(et autres)_ | —                                                 | —                                                                | —                                        |
 
 ### Survival bosses (mode-specific)
 
@@ -152,4 +152,4 @@ Chaque fichier suit :
 - [`combat/status-effects.md`](../combat/status-effects.md) (à créer) — 8 statuts canon
 - [`locations/`](../locations/) — boss par location
 - [`party-members/`](../party-members/) — héritage Dragoon Spirit (Belzac → Kongol, etc.)
-- `lore/dragon-campaign.md` (à créer) — 7 anciens Dragoons originaux servant Emperor Diaz
+- `lore/dragon-campaign.md` (à créer) — 7 anciens Dragoons originaux servant Emperor Diaz. Précision fandom : **4 morts pendant la Campaign** (souls à Vellweb : Belzac/Damia/Syuveil/Kanzas), Shirley morte mais spirit au Shrine, Zieg + Rose survivants

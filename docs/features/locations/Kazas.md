@@ -2,7 +2,10 @@
 
 > **Capital de l'Imperial Sandora** (sud de Serdio), Disc 1. Contient le **Black Castle** = siège du gouvernement d'Emperor Doel. Climax Disc 1 — boss fights Kongol + Doel, acquisition du **Violet Dragon Spirit** (futur Haschel).
 >
-> **Source canon** : 🥈 [`_sources/lod-wiki-kazas.md`](./_sources/lod-wiki-kazas.md)
+> **Sources canon** :
+>
+> - 🥈 [`_sources/lod-wiki-kazas.md`](./_sources/lod-wiki-kazas.md) — wiki LoD (data tables, submaps, encounters)
+> - 🥉 [`_sources/fandom-kazas.md`](./_sources/fandom-kazas.md) — fandom (nom JP, architecture détaillée Gothic/slums/power grids, Popo 3 questions canon answers, equipment stats)
 
 ## Statut
 
@@ -10,19 +13,20 @@
 
 ## Profil
 
-| Attribut         | Valeur                                                                                                   |
-| ---------------- | -------------------------------------------------------------------------------------------------------- |
-| Type             | **Capital + Castle** (Sandora) — city + Black Castle (donjon militaire)                                  |
-| Région           | Sud-ouest de Serdio (royaume rival vs Basil)                                                             |
-| Atmosphère       | Civil grief, oppression militaire, **griping rooms** (soundproof rooms — faux), New Serdio Party hideout |
-| Architecture     | **Industrial** (contraste explicite vs Bale renaissance)                                                 |
-| Landmarks        | **Black Castle** (siège Doel) ; **Empress Karina statue** ; New Serdio Party hideout                     |
-| Souverain        | **Emperor Doel** (oncle d'Albert, meurtrier de Carlo)                                                    |
-| Combat           | Mobs **Contact-type** (Black Castle) + **2 bosses scriptés** (Kongol, Doel)                              |
-| Previous (canon) | #12 Shrine of Shirley                                                                                    |
-| Next (canon)     | #14 Fletz                                                                                                |
-| Submaps          | **32** (12 Kazas + 18 Black Castle + 2 pré-visite cutscenes)                                             |
-| Disc             | Disc 1 (Chapter 1: Serdian War)                                                                          |
+| Attribut         | Valeur                                                                                                                                                                                               |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Type             | **Capital + Castle** (Sandora) — city + Black Castle (donjon militaire)                                                                                                                              |
+| Nom JP           | 帝都カザス (Teito Kazasu, "Imperial City Cazas")                                                                                                                                                     |
+| Région           | Sud-ouest de Serdio (royaume rival vs Basil)                                                                                                                                                         |
+| Atmosphère       | Civil grief, oppression militaire, **griping rooms** (soundproof rooms — faux), New Serdio Party hideout                                                                                             |
+| Architecture     | **Industrial** + **Gothic** (Black Castle palace influence). Power grids électriques sur les toits. Slums = makeshift housing en scrap wood. Buildings uniformes le long du main road, narrow alleys |
+| Landmarks        | **Black Castle** (siège Doel, Gothic palace) ; **Empress Karina statue** ; New Serdio Party hideout (fort/slums) ; bridge tightly guarded                                                            |
+| Souverain        | **Emperor Doel** (oncle d'Albert, meurtrier de Carlo)                                                                                                                                                |
+| Combat           | Mobs **Contact-type** (Black Castle) + **2 bosses scriptés** (Kongol, Doel)                                                                                                                          |
+| Previous (canon) | #12 Shrine of Shirley (wiki LoD) / Hellena Prison via Seles (fandom narrative)                                                                                                                       |
+| Next (canon)     | #14 Fletz (post-Black Castle clear)                                                                                                                                                                  |
+| Submaps          | **32** (12 Kazas + 18 Black Castle + 2 pré-visite cutscenes)                                                                                                                                         |
+| Disc             | Disc 1 (Chapter 1: Serdian War)                                                                                                                                                                      |
 
 ## Story / lore
 
@@ -30,7 +34,9 @@ Story beat majeur Disc 1 — **climax du Chapter 1 Serdian War** :
 
 ### Arrivée à Kazas (canon)
 
+- **Décision en Seles** post-Hellena : Dart, Albert et compagnie décident de confronter Doel pour finir la guerre.
 - État de **civil grief** : population sous oppression, soldiers patrol
+- **Sandora troops ne reconnaissent pas le party** comme leurs ennemis — peuvent traverser librement
 - **Mercenaires opportunistes** changent d'avis voyant la guerre tourner
 - **Griping rooms** : pièces "soundproof" (faux promis), civils complaining gouvernement
 - **Charlatan salesman** au weapon shop : faux Mysterious Adventurer prétendant avoir tué **Feyrbrand**, vend une fausse plume "weakening dragons"
@@ -38,10 +44,19 @@ Story beat majeur Disc 1 — **climax du Chapter 1 Serdian War** :
 
 ### Avant entrée Black Castle
 
-- **Popo** (New Serdio Party representative, jeune) au fortress meeting room — pose des **questions à Dart** pour vérifier
-- Albert reveals identité à Popo (cf. [`party-members/Albert.md`](../party-members/Albert.md) §Kazas)
+- Dart's group **décide CONTRE entry direct Black Castle** (force = trouble). Trouvent slum/fort area → Popo.
+- **Popo** = **a kid** (jeune leader du New Serdio Party). Civil movement aim : finir la Serdian War + supporter Sandoran people.
+- Popo croit que Dart's group sont **potential candidates** pour rejoindre New Serdio Party
+- **3 questions canon test** au fortress :
+  | # | Question (canon TBD) | **Right answer canon** |
+  | - | -------------------- | ---------------------- |
+  | 1 | _(question test attitude)_ | **"I cannot say which"** |
+  | 2 | _(question test attitude)_ | **"Take care at home"** |
+  | 3 | _(question test attitude)_ | **"To protect something"** |
+- Upon passing : Albert reveals identité (cf. [`party-members/Albert.md`](../party-members/Albert.md) §Kazas)
+- **Popo overjoyed**, raconte ses espoirs de **chercher ses parents** (orphelin de guerre lore !) quand la guerre se termine
 - **Save Point** post-questions Popo
-- **Secret passage** où Dart doit ramper (canon) pour entrer Black Castle
+- Popo guide vers **underground tunnel** dans le fort → secret caveway → climb up to Black Castle
 
 ### Black Castle exploration
 
@@ -81,7 +96,7 @@ Areas notables :
 
 - **Emperor Doel** — ruler of Sandora, oncle d'Albert, meurtrier de Carlo. Violet Dragoon. Boss canon → death + Spirit transfer.
 - **Kongol** — Giganto, bras armé de Doel à ce stade. Plus tard rejoint party (Disc 2 post-Doel défaite).
-- **Popo** — jeune représentant **New Serdio Party** (résistance anti-Sandora). Pose questions à Dart au fortress.
+- **Popo** — **a kid leader** du **New Serdio Party** (civil resistance anti-Sandora ; vise fin de la Serdian War + soutien aux Sandoran people). Pose 3 questions canon test à Dart au fortress. **Orphelin de guerre** — cherche ses parents post-war.
 - **Mr. Magi** — researcher, garde Blue Stone chest.
 - **Janitor** — garde Red Stone chest.
 - **Great Commander** (above practice center) — donne Yellow Stone.
@@ -111,14 +126,21 @@ Areas notables :
 | Dark Mist      | 10G  |
 | Fatal Blizzard | 20G  |
 
-### Weapon Shop Kazas
+### Weapon Shop Kazas (Armor/Weapon/Accessory)
 
-| Item           | Prix | Note                                                                                                                              |
-| -------------- | ---- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Heat Blade** | 150G | **Fire elemental** (Dart's elemental weapon canon — cf. [`combat/elements.md`](../combat/elements.md#armes-élémentales-physical)) |
-| Long Bow       | 150G | —                                                                                                                                 |
-| Armet          | 100G | helmet                                                                                                                            |
-| Iron Kneepiece | 100G | leg armor                                                                                                                         |
+| Item           | Prix           | Equips    | Stats                | Effect                                                                                                                                      |
+| -------------- | -------------- | --------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Heat Blade** | 150G ⚠️ ou 75G | Dart      | **18 AT**            | **Fire elemental damage** (Dart's elemental weapon canon — cf. [`../combat/elements.md`](../combat/elements.md#armes-élémentales-physical)) |
+| Long Bow       | 150G           | **Shana** | **18 AT**            | **Attack-Hit +10%**                                                                                                                         |
+| Armet          | 100G           | Males     | **7 DF, +23 MAT** ⚠️ | helmet — note inhabituelle MAT boost                                                                                                        |
+| Iron Kneepiece | 100G           | Males     | **5 DF**             | leg armor                                                                                                                                   |
+
+> ⚠️ **Divergence prix Heat Blade** : wiki LoD = 150G / fandom = 75G. À vérifier tier 1.
+
+> 🆕 **Armet** = helmet qui boost MAT +23 (fandom). Pattern atypique pour armor. À documenter dans `items/equipment.md` futur.
+> | Long Bow | 150G | — |
+> | Armet | 100G | helmet |
+> | Iron Kneepiece | 100G | leg armor |
 
 ### Secret Weapon Shop (hidden)
 

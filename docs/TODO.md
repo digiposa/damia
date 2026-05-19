@@ -587,6 +587,49 @@
 
 - [ ] **Submap coordinates xy system canon** — wiki LoD utilise xy grid (left=+x, right=-x, up=+y, down=-y). Format inhabituel (inversé). Cohérent isométrique ? À adopter pour Damia (le code) ou inverser au format conventionnel.
 
+### Locations + Story / Lore (Death Frontier fandom — narrative + farming canon)
+
+- [ ] **Power Up + Power Down items canon distincts (Repeat Items)** — clarif user : ce sont **2 items différents canon**, pas une divergence de nommage :
+  - **Power Up** = buff allié, AT/DF +X pendant **3 tours**
+  - **Power Down** = debuff ennemi, AT/DF -X pendant **3 tours**
+    → Wiki LoD dit Power Up à chest 775, fandom dit Power Down. À confirmer tier 1 capture in-game pour savoir lequel est vraiment dans le chest. Les 2 items existent dans le jeu. À documenter `items/consumables.md` (à créer) avec mécanique 3-turn duration buffs/debuffs canon. Source: [`features/locations/Death Frontier.md`](features/locations/Death Frontier.md).
+
+- [ ] **Mécanique buff/debuff 3-turn canon** — Power Up + Power Down = pattern items "temporary stat modifier" 3 turns. Data-model : `Item.effect.duration: number` (turns). En real-time Damia : conversion turns → seconds (e.g. 1 turn = 5 sec ?). Pattern réutilisable si autres items canon similaires. À investiguer items canon transverse.
+
+- [ ] **Slide treasure mechanic canon** (Death Frontier) — 5 paires chests connectées par "slide direction" (north/west/east/south) via quicksand intentionnelle. Distinct du "trapped sinkhole" (= reset to checkpoint). Data-model : `Sinkhole.intentional: boolean`, `destination?: SubmapId`. Pattern réutilisable canon.
+
+- [ ] **Collision Encounter pattern canon** = Death Frontier + Phantom Ship (Disc 2) + autres ? Mobs visibles + contact = battle, mobs respawn after battle (Cactus exception = needs screen change). Damia (le code) natif cohérent (real-time iso). À confirmer pattern transverse.
+
+- [ ] **Rose's Choker artifact canon** — Wingly magical choker stop-time 11k ans + reveal Ulara mechanism. Disc 4 reveal canon. À documenter `lore/rose-choker.md` ou `items/key-items.md`. Pattern : artifacts Wingly anciens (Dragon Block Staff, Moon Mirror, Signet Spheres, Rose Choker, etc.).
+
+- [ ] **Ulara reveal mechanism canon** — ancient Wingly construction au sol (teleport mechanism) + Rose Choker → Ulara apparaît. À orchestrer cinematic Damia (le code). Premier reveal Spring Breath Town.
+
+- [ ] **Miranda slaps Rose motivation canon** — Rose dismissive attitude post-Black Monster identity reveal → Miranda slaps pour "jeopardizing group efforts". À orchestrer `quests/disc4-death-frontier.md` (à créer). Conflit Sacred Sister vs immortelle 11k ans.
+
+- [ ] **Meru Wingly sensing capability canon** — "senses people's feelings ahead". Lore mécanique Wingly. Implication : Meru = navigation hint pour Wingly hidden locations (Forest of Winglies + Ulara). Possible gameplay UI : Meru indicator pour Wingly content. À documenter `party-members/Meru.md`.
+
+- [ ] **Lucky Jar mob canon** (world map Death Frontier ↔ Ulara) — 6 HP, **1,000 EXP**, **300 G**, drop **Moon Serenade**, **only vulnerable to Poison**. Pattern "metal slime" canon TLoD. À documenter `combat/mobs.md`. Stratégie : Mind Crush proc / Poison Needle / Scorpion drop chain.
+
+- [ ] **Rainbow Bird mob canon** (world map Death Frontier ↔ Ulara) — 4 HP, **3,000 EXP** (record canon!), 0 G, drop **Rainbow Dress** (new accessory canon), **only vulnerable to Confusion**. Best EXP/HP ratio canon. Stratégie : Mind Crush Confusion proc. À documenter `combat/mobs.md`.
+
+- [ ] **Mob damage rules canon — "Only vulnerable to status X"** — Lucky Jar (Poison) + Rainbow Bird (Confusion) = pattern "**only kill via status proc**". Data-model : `Mob.damageRules.onlyDamageWhen: StatusEffect[]` ou similar. Implication : status effects = damage source canon valide. Réutilisable ailleurs ? À investiguer.
+
+- [ ] **Rainbow Dress accessory** (Rainbow Bird drop) — nouvel accessory canon. Effet ? Lien rainbow element / luxury accessory ? À documenter `items/equipment.md`.
+
+- [ ] **Moon Serenade item** — drop Lucky Jar + chest Death Frontier paire 1. Lien lore Moon Objects ? Healing ? Attack Moon-themed ? À investiguer `items/`.
+
+- [ ] **Mob HP canon Death Frontier** : Sandworm 1440 / Spiky Beetle 480 / Canbria Dayfly 520 / Scorpion 280 / Cactus 320 (US/EU). JP +25% systématique. À reproduire `src/data/balance.ts` MOBS.
+
+- [ ] **Mob Gold divergence US/EU vs JP ~/3** — pattern canon récurrent (Belzac aussi). JP version = less gold reward systématique. Cible Damia (le code) probable US/EU. À noter `combat/canon-divergences.md`.
+
+- [ ] **Cactus respawn exception canon** — Cactus needs screen change to respawn (vs autres mobs respawn immédiat). Mécanique anti-farming spécifique. Data-model : `Mob.respawnRule: "immediate" | "screen_change"`.
+
+- [ ] **Farming canon : Death Frontier** — area officielle pour farming XP/SP/additions selon wiki LoD. Cible Miranda (souvent left behind) + Kongol DLV. Sandworm solo encounter friendly. Implication design Damia : zones de farming canon à respecter en Mode Story balance.
+
+- [ ] **Zieg shocking revelations Vellweb** — quoi exactement ? À documenter `quests/disc4-vellweb.md` (à créer). Probable : father reveal Dart + possessed by Melbu Frahma + Dragon Campaign truth.
+
+- [ ] **Spring Breath Town Ulara naming canon** — "Spring Breath" descriptor + Ulara name. Wingly hidden city pattern (cf. Forest of Winglies). À documenter `lore/wingly-cities.md` (à créer).
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

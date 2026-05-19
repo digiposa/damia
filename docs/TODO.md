@@ -760,9 +760,11 @@
 
 - [ ] **Wink double-rescue canon** (Disc 2 Donau + Disc 3 Younger Bardel) — pattern Lloyd "saviour figure" établit trust durable. Important pour Disc 3 Crystal Palace kidnap context. À refléter `lore/lloyd-arc.md` (à créer).
 
-### Locations + Story / Lore (Donau fandom — 3 visits canon + corrections relations + Queen Fury)
+### Locations + Story / Lore (Donau fandom — 3 visits canon + relations clarifiées + Queen Fury)
 
-- [ ] **CORRECTION canon Donau relations** : **Kate = Lynn's fiancée** (PAS mère), **Mayor = Lynn's father** (PAS Kate's relation). Lynn went alone convince Gehrich Gang "few days before wedding day". À refléter `npcs/donau.md` (à créer). Source: [`features/locations/Donau.md`](features/locations/Donau.md).
+- [ ] **⚠️ MÉTA leçon ingestion** : éviter les déductions/suppositions hors-canon dans les notes synthèse. Exemple bug self-introduit : ingestion wiki Donau initial avait ajouté "(Lynn's mother probable)" sur Kate alors que wiki LoD ne précisait **pas** la relation. Fandom a ensuite révélé Kate = Lynn's fiancée. **Pattern à éviter** : si la source n'indique pas X, ne pas l'inférer dans la doc — marquer "relation non précisée" plutôt que deviner. À documenter dans `meta/ingestion-rules.md` (à créer) ou README features.
+
+- [ ] **Relations canon Donau (clarifiées par fandom)** : **Kate = Lynn's fiancée**, **Mayor = Lynn's father**. Lynn went alone convince Gehrich Gang "few days before wedding day". (Wiki LoD ne précisait pas les relations, fandom seul source canon ici). À refléter `npcs/donau.md` (à créer). Source: [`features/locations/Donau.md`](features/locations/Donau.md).
 
 - [ ] **Donau localisation canon Tiberoa** — Donau dans **nord de Tiberoa** (fandom prime). Tiberoa = kingdom canon avec Fletz capital + King Zior + Twin Castle. À documenter `lore/tiberoa.md` (à créer) + `locations/Fletz.md` (à créer).
 

@@ -5,7 +5,7 @@
 > **Sources canon** :
 >
 > - 🥈 [`_sources/lod-wiki-donau.md`](./_sources/lod-wiki-donau.md) — wiki LoD (services / shops / submaps / collectibles)
-> - 🥉 [`_sources/fandom-donau.md`](./_sources/fandom-donau.md) — fandom (région Tiberoa, 3 visits canon, **Kate = Lynn's fiancée** (pas mère), **Mayor = Lynn's father**, Gehrich Gang context, Meru introduction full, King Zior permission gate, Queen Fury boarding Third Visit + Commodore Puler + Kayla, Mr. Pelpee bar Lohan DS hint, Mille Seseau knights chasing Lloyd, Twin Castle bedroom dialogue trigger)
+> - 🥉 [`_sources/fandom-donau.md`](./_sources/fandom-donau.md) — fandom (région Tiberoa, 3 visits canon, relations canon précisées : **Kate = Lynn's fiancée** + **Mayor = Lynn's father** (relations non précisées par wiki LoD), Gehrich Gang context, Meru introduction full, King Zior permission gate, Queen Fury boarding Third Visit + Commodore Puler + Kayla, Mr. Pelpee bar Lohan DS hint, Mille Seseau knights chasing Lloyd, Twin Castle bedroom dialogue trigger)
 
 ## Statut
 
@@ -39,7 +39,7 @@ Story beat majeur Disc 2 (Chapter 2 Platinum Shadow). **3 visits canon** (First 
 
 1. **Cutscene Wink/Lloyd** (submap 240) : flashback "from before" — **Wink (Sacred Sister Mille Seseau) cornered by bandits** → **rescued by Lloyd** → thanks + introduces herself → **Lloyd shows no interest**, gives only his name, disappears
 2. Party arrive Donau — **timid girl mistakes them for bandits** ("dirty clothing")
-3. **Kate's house** (submap 243) : **Kate = Lynn's fiancée** (PAS mère — correction critique !) ; Lynn went alone "few days before their wedding day" pour convince Gehrich Gang to leave town ; left a letter, hasn't returned ; Kate begs party save Lynn
+3. **Kate's house** (submap 243) : **Kate = Lynn's fiancée** (canon fandom, relation non précisée par wiki LoD) ; Lynn went alone "few days before their wedding day" pour convince Gehrich Gang to leave town ; left a letter, hasn't returned ; Kate begs party save Lynn
 4. **Mayor's house** (submap 248, upper floor west, stairs left) : **Mayor = Lynn's father** ; party shows Lynn's letter → mayor tells **Gehrich Gang come from area beyond Valley of Corrupted Gravity**
 5. **Meet Meru** (submap 250) : **platinum-haired girl chases bandits** → wants join party (rescue Lynn quest) → heroes skeptical → **Dart accepts (Meru serious)** → Meru tells about **King Zior permission required** for Valley of Corrupted Gravity
 6. Party heads to **Fletz** (capital Tiberoa, King Zior) — **NOT Valley directly**
@@ -94,7 +94,7 @@ Story beat majeur Disc 2 (Chapter 2 Platinum Shadow). **3 visits canon** (First 
 
 ### NPCs canon (corrigés)
 
-- **Kate** — **Lynn's fiancée** (PAS mère), throws bouquet wedding ceremony
+- **Kate** — **Lynn's fiancée** (canon fandom), throws bouquet wedding ceremony
 - **Lynn** — Kate's fiancé, kidnapped par Gehrich Gang, rescued at Home of Gigantos
 - **Mayor** — **Lynn's father** (PAS Kate's relation), Letter delivery destination
 - **Mayor's butler** — Letter intermediary canon (wiki LoD)
@@ -225,7 +225,7 @@ Story beat majeur Disc 2 (Chapter 2 Platinum Shadow). **3 visits canon** (First 
 ## Questions ouvertes
 
 - ✅ **Meru recruitment mechanism** — **RÉSOLU** : "joins regardless of Dart's answer" canon. Submap 250 close-up scripted. Mandatory party member Disc 2.
-- ✅ **Kate-Lynn relation** — **RÉSOLU** : **Kate = Lynn's fiancée** (PAS mère). Mayor = Lynn's father. Wedding canon Second Visit.
+- ✅ **Kate-Lynn relation** — **RÉSOLU** : **Kate = Lynn's fiancée** + Mayor = Lynn's father (canon fandom — wiki LoD ne précisait pas les relations, j'avais incorrectement supposé "Lynn's mother probable" lors de l'ingestion wiki). Wedding canon Second Visit.
 - ✅ **Lloyd Disc 2 motivation** — confirmation foreshadowing : Lloyd "no interest" → calculated long con. Mille Seseau knights chasing Lloyd (canon antagoniste connu).
 - ✅ **Dialogue choice location canon** — **RÉSOLU** : **Twin Castle bedroom après first banquet** (Fletz castle). À documenter `quests/disc2-fletz-banquet.md` (à créer).
 - ✅ **First "0 chests" pattern** — confirmé peaceful city + focus narratif (Lynn rescue). Pattern peaceful = pas all locations need chests.

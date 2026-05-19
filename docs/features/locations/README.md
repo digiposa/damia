@@ -29,16 +29,17 @@ Ordre alphabétique. Découpage canon TLoD (4 discs, monde Endiness complet).
 
 ### Disc 2
 
-| Location                  | Type       | Statut profil |
-| ------------------------- | ---------- | ------------- |
-| Barrens                   | Wilderness | ⚪ à spec     |
-| Home of Gigantos          | Settlement | ⚪ à spec     |
-| Kashua Glacier            | Glacier    | ⚪ à spec     |
-| Mountain of Mortal Dragon | Dungeon    | ⚪ à spec     |
-| Phantom Ship              | Ship       | ⚪ à spec     |
-| Queen Fury                | Ship       | ⚪ à spec     |
-| Snowfield                 | Wilderness | ⚪ à spec     |
-| Undersea Cavern           | Dungeon    | ⚪ à spec     |
+| Location                  | Type                                       | Statut profil |
+| ------------------------- | ------------------------------------------ | ------------- |
+| Barrens                   | Wilderness                                 | ⚪ à spec     |
+| **Donau**                 | **Flower City (peaceful, 0 chests canon)** | 🟡 draft      |
+| Home of Gigantos          | Settlement                                 | ⚪ à spec     |
+| Kashua Glacier            | Glacier                                    | ⚪ à spec     |
+| Mountain of Mortal Dragon | Dungeon                                    | ⚪ à spec     |
+| Phantom Ship              | Ship                                       | ⚪ à spec     |
+| Queen Fury                | Ship                                       | ⚪ à spec     |
+| Snowfield                 | Wilderness                                 | ⚪ à spec     |
+| Undersea Cavern           | Dungeon                                    | ⚪ à spec     |
 
 ### Disc 3
 

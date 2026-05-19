@@ -730,6 +730,36 @@
 
 - [ ] **Dragoon Spirit "ascending after death" canon visual** (fandom gallery) — Doel's DS ascends post-defeat. Pattern visual transfer Spirit cinematic. À orchestrer Damia (le code). Probable réutilisable autres bosses canon (Lavitz death → Spirit transfer Albert).
 
+### Locations + Story / Lore (Donau Disc 2 Flower City — Meru recruit + Lloyd-Wink long con + 0 chests canon)
+
+- [ ] **Lloyd saves Wink à Donau Disc 2 canon** (submap 240) — **long con narrative canon** : Lloyd manipule Wink trust depuis Disc 2 (peace city Donau) → renforce Disc 3 Younger Bardel rescue → exploite trust Crystal Palace pour kidnap Theresa. **Foreshadowing arc Lloyd 2 discs** = villain compétent. Pattern à orchestrer cinematic Mode Story + reference Disc 3 Deningrad arc. Source: [`features/locations/Donau.md`](features/locations/Donau.md) §Lloyd-Wink long con.
+
+- [ ] **Meru recruitment canon Donau** (submap 250 close-up "party meets Meru") — Disc 2 party member recruit. Mécanique exacte à confirmer fandom. Cinematic Damia (le code) à orchestrer.
+
+- [ ] **Pattern "Conditional goods acquisition" canon Donau** — Kate's Bouquet 3-way outcome :
+  - Action icon press → Shana grabs (Dart pushes)
+  - No action + Dart "agreed Meru beautiful wedding dress" earlier → Meru grabs (rejoices "next bride")
+  - No action + disagreed → Haschel grabs (apologizes "pure reflex")
+    → Pattern dialogue choice → outcome canon. Data-model `DialogueChoice.consequences: GameStateChange[]`. Tracking dialogue history requis Damia (le code). Source: Donau.md.
+
+- [ ] **Pattern "Goods double-acquisition with name change" canon** — Letter from Lynn pickup 2 fois (Kate 1st → Mayor's house 2nd post-delivery), display différent. Data-model `Good.acquisitions: { trigger, displayName }[]`. Niche pattern mais à supporter.
+
+- [ ] **First "0 chests" location canon Donau** — pattern intentionnel "peaceful city safe no loot". Cohérent narrative focus vs gameplay reward. Data-model : pas tous les locations need chests. Pattern réutilisable (Ulara probable similar Disc 4).
+
+- [ ] **Return-only event pattern canon** (Kate's Bouquet) — accessible **uniquement si return Donau post-Lynn rescue** (skip si Fletz direct). Story flag mécanique. Data-model `Event.accessibilityCondition: { afterFlag, beforeFlag, locationReturn: boolean }`. Pattern Damia (le code).
+
+- [ ] **Rave Twister item canon NEW** — 20G Item Shop Donau. Type probable attack item (Wind ?) à investiguer. À documenter `items/consumables.md` (à créer).
+
+- [ ] **Silver Vest + Tiara items canon Donau weapon shop** — 150G chacun, characters cibles probables (Tiara feminine Shana/Meru/Rose ; Silver Vest body armor Dart/Lavitz/Haschel ?). À documenter `items/equipment.md`.
+
+- [ ] **Lynn rescue quest canon Disc 2** — Donau → Valley of Corrupted Gravity (#17 next location). Kate (mère probable) → Letter from Lynn → Mayor's butler delivery → rescue Lynn. À orchestrer `quests/disc2-donau-lynn.md` (à créer).
+
+- [ ] **Wedding Kate ceremony canon** (submap 259) — return-only post-rescue. Cinematic bouquet throw + 3-way outcome. Possible mini Vision Damia "Survival arena festif" décor.
+
+- [ ] **NPCs Donau canon** : Kate (gives Letter, throws bouquet), Lynn (kidnapped), Mayor + Mayor's butler (Letter delivery), Wink (rescued by Lloyd here Disc 2 pré-Sacred Sister reveal). À documenter `npcs/donau.md` (à créer).
+
+- [ ] **Wink double-rescue canon** (Disc 2 Donau + Disc 3 Younger Bardel) — pattern Lloyd "saviour figure" établit trust durable. Important pour Disc 3 Crystal Palace kidnap context. À refléter `lore/lloyd-arc.md` (à créer).
+
 ### Locations + Story / Lore (Divine Tree fandom — reveal mechanism + Caterpillar 3-phases + Coolon dies)
 
 - [ ] **CORRECTION canon Caterpillar = 3 phases sequential** (pas 3 mobs simultanés) — Caterpillar → Pupa → Imago, cycle de vie insectoid. Stats par phase :

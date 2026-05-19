@@ -51,7 +51,7 @@ Liste à compléter au fil. Ordre alphabétique par section.
 | ------------- | ------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------- |
 | **Belzac**    | **Earth** (Gold Dragoon ancient)                  | **Vellweb (502)**                                                | 🟡 draft                                 |
 | Atlow         | ? (existence à confirmer — non listé fandom)      | Vellweb                                                          | ⚪ à spec / ❓ existence                 |
-| Damia         | Water (Blue-Sea ancient)                          | Vellweb                                                          | ⚪ à spec                                |
+| **Damia**     | **Water** (Blue-Sea ancient)                      | **Vellweb (499)**                                                | 🟡 draft                                 |
 | Kanzas        | ? (Violet/Thunder probable, mort vs Super Virage) | Vellweb                                                          | ⚪ à spec                                |
 | Syuveil       | Wind (Jade ancient)                               | Vellweb                                                          | ⚪ à spec                                |
 | Last Kraken   | Water                                             | **Aglis** (cf. [`../locations/Aglis.md`](../locations/Aglis.md)) | ⚪ à spec                                |

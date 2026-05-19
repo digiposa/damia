@@ -170,6 +170,54 @@
 
 - [ ] **Dragoon Addition max inputs divergence** — Wulves dit 5 (Kongol 4), fandom dit 4 général. Hypothèse : "4 inputs après strike initial" = 5 presses totales. À vérifier tier 1 (Discord). Académique pour Damia (Q1 = auto-complete + Dragoon form = splash AoE différent du canon Dragoon Addition). Source: additions.md §Dragoon Additions.
 
+### Party-members / Dart (protagoniste canon, base implémentation party)
+
+- [ ] **Stats Lv 1-60 Dart canon** — table complète à reproduire dans `src/data/balance.ts` PARTY_MEMBERS. AT/DF/MAT/MDF convergent vers 150 à Lv 60, HP 30→7500. SPD 50 constant, A-Hit/M-Hit 100%, A-AV/M-AV 0%. Source: [`features/party-members/Dart.md`](features/party-members/Dart.md) §Stats canon.
+
+- [ ] **7 additions Dart canon** : Double Slash / Volcano / Burning Rush / Crush Dance / **Madness Hero (204 SP highest)** / Moon Strike / **Blazing Dynamo (450% ultimate, unlock via 80× chaque addition précédente)**. Damage% Maxed + SP Maxed canon respectés. Source: Dart.md §Additions.
+
+- [ ] **Blazing Dynamo unlock mechanic** — 80 uses de chacune des 6 additions précédentes (= 480 uses total). Data-model : `Addition.unlockRequirement: { type: "level"|"mastery", value: number | AdditionPerformanceMap }`. Cohérent canon. Source: Dart.md.
+
+- [ ] **DLV thresholds canon partagés** — Dart : 1200/6000/12000/20000 SP DLV 1→5. **Identiques Albert** (Jade). Hypothèse : **shared canon entre tous Dragoons**. Si confirmé, simplification `DragoonSystem.SP_THRESHOLDS: [1200, 6000, 12000, 20000]` global. À confirmer Meru/Rose/Haschel/etc.
+
+- [ ] **2 Dragoon Spirits canon Dart** — Red-Eye + Divine Dragon. Seul perso canon avec 2 DS. Mécanique data-model :
+  - `Character.dragoonSpirits: { current: DSId, unlocked: DSId[] }` ?
+  - Switching dynamique entre Red-Eye et Divine Dragon canon ou auto-override ?
+  - Divine Dragon DS auto sets DLV 5 (power spike majeur)
+  - Divine Dragon stats override : AT 340% (vs Red-Eye 170%), DF/MAT/MDF unchanged 250%/170%/250%
+    → Damia (le code) doit gérer cette dualité avec **cohérence narrative + UI**. Priorité: **haute** (acquisition Disc 3-4 = endgame).
+
+- [ ] **Bug canon Status menu Divine Dragon DS** — affiche stats Red-Eye au lieu de Divine Dragon. **NE PAS reproduire** en Damia (afficher bonnes stats). Source: Dart.md.
+
+- [ ] **Spells Red Dragon DS canon (4)** : Flame Shot (200 mult, single, 10 MP, DLV 1) / Explosion (100 mult, all, 20 MP, DLV 2) / Final Burst (300 mult, single, 30 MP, DLV 3) / Red-Eye Dragon (300 mult, all, 80 MP, DLV 5). Notable : pas de spell DLV 4 (pattern canon).
+
+- [ ] **Spells Divine Dragon DS canon (2)** : Divine DG Ball (400 mult, all, 50 MP, **Non-Elemental**) / Divine DG Cannon (600 mult, single, 50 MP, **Non-Elemental**). Multipliers les plus hauts du jeu. Cohérent avec **Divine Dragon boss** qui utilise les mêmes abilities pour attaquer Deningrad. Cross-ref `bosses/Divine Dragon.md` (à créer).
+
+- [ ] **Multiplier vs STR% canon** — wiki LoD clarif : Multiplier = formula damage variable, STR% display = unreliable. Damia (le code) :
+  - Stocker Multiplier en data
+  - Choix UI : afficher STR % canon-style OU Multiplier directement ? À trancher (déjà flagged Albert.md).
+    Source: Dart.md §Spells canon.
+
+- [ ] **Animation states Dart canon** :
+  - **Idle field** : cross arms + tap foot (signature)
+  - **Dispirited (combat)** : arms to each side, sword hanging downward
+  - **Red HP (combat)** : down on one knee, sword angled to ground behind
+    → À reproduire en sprite/animation iso Damia. Identité visuelle.
+
+- [ ] **Madness Hero 100% damage vs 250% Volcano/Crush Dance** — design canon trade-off : Madness Hero focus SP generation (204 SP) au détriment damage. Pattern "SP battery addition". À documenter `combat/additions.md`.
+
+- [ ] **Cannot be removed flag Dart** — `PartyMemberDefinition.cannotBeRemoved: boolean`. Dart toujours en active party canon. UI : team picker grise Dart slot. Story circumstances peuvent override.
+
+- [ ] **Voice Artist John Butterfield** — VA EN canon. Possible référence pour casting Damia (le code) si voice over fan-content. Hors-canon mais noter.
+
+- [ ] **Beta Dart + beta sword model** — easter egg dev PSX (orange armor Hellena flee + différent hilt Divine Dragon transform). Ne pas reproduire. Possible mention `trivia/easter-eggs.md` (à créer).
+
+- [ ] **PlayStation All-Stars Battle Royale DLC canceled** — Dart character planned (Mike Edwards 3D model fait). Trivia uniquement, pas d'impact code. Hors-canon mais cool.
+
+- [ ] **Zieg Feld reveal Dart's father Disc 4** — orchestration narrative à documenter `quests/disc4-vellweb.md` (à créer). Implication gameplay : Zieg = Red-Eye Archetype avatar (skin ?) ou boss séparé ? À investiguer.
+
+- [ ] **5-year backstory Dart pre-game** — quête vengeance parents, hors-screen. Possible flashback/cinematic Damia (le code) ? Hors-scope MVP probable.
+
 ### Party-members / Albert spécifique (de la fandom complement)
 
 - [ ] **STR % vs Multiplier UI** — Clarifier : le STR % affiché in-game canon n'est pas le damage multiplier réel (clarif fandom). Décider en Damia : afficher STR % canon-style dans UI menu spell OU afficher directement le Multiplier ? Cohérence pour le joueur. Source: [`features/party-members/Albert.md`](features/party-members/Albert.md).

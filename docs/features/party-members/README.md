@@ -8,17 +8,17 @@
 
 Ordre alphabétique. Acquisition narrative (Story) vs unlock méta-progression (Survival) — cf. [SCOPE §7](../../SCOPE.md#7-modes-de-jeu).
 
-| Character  | Élément  | Archetype Dragoon   | Disc rejoint (Story)   | Statut profil |
-| ---------- | -------- | ------------------- | ---------------------- | ------------- |
-| **Albert** | Wind     | Jade Dragon         | Disc 2 (hérite Lavitz) | 🟡 draft      |
-| Dart       | Fire     | Red-Eye Dragon      | Disc 1                 | ⚪ à spec     |
-| Haschel    | Thunder  | Violet Dragon       | Disc 1/2               | ⚪ à spec     |
-| Kongol     | Earth    | Gold Dragon         | Disc 2                 | ⚪ à spec     |
-| Lavitz     | Wind     | Jade Dragon         | Disc 1                 | ⚪ à spec     |
-| Meru       | Water    | Blue-Sea Dragon     | Disc 2                 | ⚪ à spec     |
-| Miranda    | Light    | White-Silver Dragon | Disc 3 (hérite Shana)  | ⚪ à spec     |
-| Rose       | Darkness | Darkness Dragon     | Disc 1 (Hoax)          | ⚪ à spec     |
-| Shana      | Light    | White-Silver Dragon | Disc 1                 | ⚪ à spec     |
+| Character  | Élément  | Archetype Dragoon                        | Disc rejoint (Story)   | Statut profil |
+| ---------- | -------- | ---------------------------------------- | ---------------------- | ------------- |
+| **Albert** | Wind     | Jade Dragon                              | Disc 2 (hérite Lavitz) | 🟡 draft      |
+| **Dart**   | Fire     | **Red-Eye + Divine Dragon** (2 DS canon) | Disc 1                 | 🟡 draft      |
+| Haschel    | Thunder  | Violet Dragon                            | Disc 1/2               | ⚪ à spec     |
+| Kongol     | Earth    | Gold Dragon                              | Disc 2                 | ⚪ à spec     |
+| Lavitz     | Wind     | Jade Dragon                              | Disc 1                 | ⚪ à spec     |
+| Meru       | Water    | Blue-Sea Dragon                          | Disc 2                 | ⚪ à spec     |
+| Miranda    | Light    | White-Silver Dragon                      | Disc 3 (hérite Shana)  | ⚪ à spec     |
+| Rose       | Darkness | Darkness Dragon                          | Disc 1 (Hoax)          | ⚪ à spec     |
+| Shana      | Light    | White-Silver Dragon                      | Disc 1                 | ⚪ à spec     |
 
 Légende : ⚪ à spec — 🟡 draft — 🟢 validé — 🔵 implémenté
 

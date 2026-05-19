@@ -19,7 +19,7 @@ Documentation par thématique de gameplay. Chaque feature couvre :
 | `combat/`                                     | 🟡 en cours | Additions, auto-attack, defense, damage formula, AI |
 | `magic-system/`                               | ⚪ planifié | Sorts non-Dragoon, MP, éléments                     |
 | `items/`                                      | ⚪ planifié | Équipement, consommables, key items                 |
-| `locations/`                                  | ⚪ planifié | Donjons, villes, world map                          |
+| [`locations/`](./locations/README.md)         | 🟡 en cours | Donjons, villes, world map                          |
 | `quests/`                                     | ⚪ planifié | Story beats, side quests                            |
 
 ## Convention

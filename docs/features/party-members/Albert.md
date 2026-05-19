@@ -30,7 +30,7 @@ Tall, slender, **golden eyes**, hair pulled into a **loose ponytail**. Style nob
 
 ## Story / lore (canon)
 
-- Rencontré pour la première fois à **Bale** (capitale du royaume de Serdio).
+- Rencontré pour la première fois à **[Bale](../locations/Bale.md)** (capitale du royaume de Basil, nord de Serdio) dans le throne room de **Indels Castle**.
 - Hérite du **Jade Dragoon Spirit** à la mort de Lavitz (Disc 2).
 - Acquisition canon = pattern `inherited_from_predecessor` — Albert récupère :
   - Le Dragoon Spirit Jade

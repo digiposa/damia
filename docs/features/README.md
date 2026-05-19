@@ -15,7 +15,7 @@ Documentation par thématique de gameplay. Chaque feature couvre :
 | --------------------------------------------- | ----------- | --------------------------------------------------- |
 | [`dragoons/`](./dragoons/README.md)           | 🟡 en cours | Dragoons : obtention, transformation, stats, magic  |
 | [`party-members/`](./party-members/README.md) | 🟡 en cours | Profils characters au-delà du Dragoon               |
-| `bosses/`                                     | ⚪ planifié | Encounters bosses (canon + adaptation Damia)        |
+| [`bosses/`](./bosses/README.md)               | 🟡 en cours | Encounters bosses (canon + adaptation Damia)        |
 | `combat/`                                     | 🟡 en cours | Additions, auto-attack, defense, damage formula, AI |
 | `magic-system/`                               | ⚪ planifié | Sorts non-Dragoon, MP, éléments                     |
 | `items/`                                      | ⚪ planifié | Équipement, consommables, key items                 |

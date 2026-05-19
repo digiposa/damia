@@ -1,0 +1,155 @@
+# Bosses
+
+> Boss encounters TLoD — du **Mode Story** (boss scénarisés canon) et **Mode Survival** (boss-spawn rules).
+>
+> Cf. [SCOPE §7](../../SCOPE.md#7-modes-de-jeu) pour la distinction Story / Survival.
+
+## Statut par boss
+
+Liste à compléter au fil. Ordre alphabétique par section.
+
+### Disc 1
+
+| Boss             | Élément | Location                | Statut profil |
+| ---------------- | ------- | ----------------------- | ------------- |
+| Drake the Bandit | ?       | Shrine of Shirley       | ⚪ à spec     |
+| Feyrbrand        | Wind    | Marshlands / various    | ⚪ à spec     |
+| Fruegel (1st)    | Earth   | Hellena Prison          | ⚪ à spec     |
+| Greham           | Wind    | Hoax                    | ⚪ à spec     |
+| Jiango           | ?       | Black Castle            | ⚪ à spec     |
+| Kongol (boss)    | Earth   | Hoax / Black Castle     | ⚪ à spec     |
+| Mappi            | ?       | Barrens / Gehrich fight | ⚪ à spec     |
+| Sandora Elite    | ?       | Hoax                    | ⚪ à spec     |
+| _(et autres)_    | —       | —                       | —             |
+
+### Disc 2
+
+| Boss                    | Élément  | Location                  | Statut profil |
+| ----------------------- | -------- | ------------------------- | ------------- |
+| Caterpillar             | ?        | various                   | ⚪ à spec     |
+| Fruegel (2nd)           | Earth    | Hellena (2nd)             | ⚪ à spec     |
+| Gehrich                 | ?        | Barrens                   | ⚪ à spec     |
+| Ghost Commander         | Darkness | Phantom Ship              | ⚪ à spec     |
+| Lenus                   | ?        | Tiberoa / Prison Island   | ⚪ à spec     |
+| Polter Armor/Helm/Sword | ?        | Phantom Ship              | ⚪ à spec     |
+| Regole (Dragon Spirit)  | ?        | Mountain of Mortal Dragon | ⚪ à spec     |
+| Virage (various)        | ?        | various                   | ⚪ à spec     |
+| _(et autres)_           | —        | —                         | —             |
+
+### Disc 3
+
+| Boss          | Élément | Location         | Statut profil |
+| ------------- | ------- | ---------------- | ------------- |
+| Lloyd         | ?       | Tower of Flanvel | ⚪ à spec     |
+| _(et autres)_ | —       | —                | —             |
+
+### Disc 4
+
+| Boss          | Élément             | Location                                                         | Statut profil                            |
+| ------------- | ------------------- | ---------------------------------------------------------------- | ---------------------------------------- |
+| **Belzac**    | **Earth**           | **Vellweb (502)**                                                | 🟡 draft                                 |
+| Atlow         | ?                   | Vellweb                                                          | ⚪ à spec                                |
+| Damia         | Water               | Vellweb                                                          | ⚪ à spec                                |
+| Kanzas        | ?                   | Vellweb                                                          | ⚪ à spec                                |
+| Syuveil       | Wind                | Vellweb                                                          | ⚪ à spec                                |
+| Last Kraken   | Water               | **Aglis** (cf. [`../locations/Aglis.md`](../locations/Aglis.md)) | ⚪ à spec                                |
+| Cleone        | Water (?)           | Aglis (?)                                                        | ⚪ à spec (existence à confirmer tier 1) |
+| Zackwell      | ?                   | Mayfil                                                           | ⚪ à spec                                |
+| Dark Doel     | ?                   | Moon (alternate Bale)                                            | ⚪ à spec                                |
+| Divine Dragon | (Non-Elemental tag) | various                                                          | ⚪ à spec                                |
+| Melbu Frahma  | ?                   | Moon (final boss)                                                | ⚪ à spec                                |
+| _(et autres)_ | —                   | —                                                                | —                                        |
+
+### Survival bosses (mode-specific)
+
+À définir lors du design Mode Survival. Probable réinterprétation de bosses Story + bosses originaux.
+
+Légende : ⚪ à spec — 🟡 draft — 🟢 validé — 🔵 implémenté
+
+## Patterns canon TLoD bosses (transverses)
+
+Identifiés au fil des ingestions :
+
+### Stats & immunités
+
+- Bosses ont des **HP très élevées** (Belzac 16k, Last Kraken 12k, Fruegel ~120-150 selon visite)
+- Bosses sont **immunisés à tous les statuts** (8 statuts canon : Petrify, Bewitch, Arm Block, Dispirit, Confuse, Fear, Poison, Stun)
+- A-AV / M-AV = 0% par défaut (mais cf. boss spécifiques pour exceptions)
+
+### Counter groups
+
+La plupart des bosses sont **group 28** (toutes opportunities d'addition counter). Cf. [`combat/additions.md`](../combat/additions.md) §Groupes de counters.
+
+### Attack Multiplier per ability
+
+Boss abilities ont chacune un **Attack Multiplier** caché (canon Wulves) appliqué à la formule de base :
+
+- D-attack physique standard = **1×**
+- Spells de leur élément = **1.5×** (Grand Stream Belzac)
+- Boss-special spells = **2×** ou **3×** (Meteor Strike, Golden Dragon)
+  → Important pour [`combat/damage-formula.md`](../combat/damage-formula.md) (à wirer dans code Damia).
+
+### Boss AI patterns (Traits passives)
+
+Bosses ont souvent des **passives** modifying battle mechanics :
+
+- **Retaliate** : ignore turn order quand triggered (e.g. Belzac trigger on being attacked)
+- **Patterned Retaliate** : cycle d'abilities (e.g. Belzac : Meteor Strike → D-attack → Golden Dragon → repeat)
+- **Scripted encounters** : 0% escape rate sur boss fights canon
+
+### Loot canon
+
+- **100% drop** sur boss = pattern fréquent (e.g. Belzac → Golden Stone, Last Kraken → Pretty Hammer)
+- EXP boss >> EXP minor mob (Belzac 6k, Last Kraken 12k vs ~150 par minor)
+
+## Convention par fichier boss
+
+Chaque fichier suit :
+
+```markdown
+# {Boss Name}
+
+## Profil
+
+{element, location, encounter type, lore link}
+
+## Stats canon
+
+{HP/AT/DF/MAT/MDF/SPD/A-AV/M-AV + immunités}
+
+## Yield
+
+{EXP, Gold, Drops}
+
+## Abilities & Traits
+
+{abilities table + passive patterns}
+
+## Counter opportunities
+
+{group + specific additions}
+
+## Story / lore
+
+{narrative beats, links to characters/locations}
+
+## Vision Damia
+
+{adaptation real-time, Story vs Survival}
+
+## Liens code & doc
+
+{src/data/bosses/..., cross-refs}
+
+## Questions ouvertes
+```
+
+## Liens transverses
+
+- [`combat/damage-formula.md`](../combat/damage-formula.md) — formules + Attack Multiplier per ability
+- [`combat/elements.md`](../combat/elements.md) — élément de chaque boss
+- [`combat/additions.md`](../combat/additions.md) — counter groups + opportunities
+- [`combat/status-effects.md`](../combat/status-effects.md) (à créer) — 8 statuts canon
+- [`locations/`](../locations/) — boss par location
+- [`party-members/`](../party-members/) — héritage Dragoon Spirit (Belzac → Kongol, etc.)
+- `lore/dragon-campaign.md` (à créer) — 7 anciens Dragoons originaux servant Emperor Diaz

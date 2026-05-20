@@ -862,6 +862,87 @@
   - Possible dedicated cinematic flashback majeur Disc 4 endgame
   - À orchestrer `quests/disc4-vellweb-mausoleum.md` (à créer) + `quests/disc4-kadessa-flashback.md` (à créer)
 
+### Dragoons mechanics master (wiki Dragoon — wielders + ranks + SP + DLV + spells)
+
+- [ ] **Dragoon Ranks canon (Official Guidebook)** — 7 ranks par eye count : Rank 1 (7-eye Divine Dragon) / Rank 2 "God Dragon" (6-eye 7 elemental DS) / Rank 3 (5-eye Michael) / Rank 4 "Ultimate Dragon" (4-eye Regole) / Rank 5 "Dragon King" (3-eye Feyrbrand) / Rank 6 (2-eye unknown) / Rank 7 (1-eye Pseudo Dragons = minor mobs). À documenter data-model + cross-ref dragons.md. Source: [`features/dragoons/mechanics.md`](features/dragoons/mechanics.md).
+
+- [ ] **DS acquisition canon mécanique** : Goods, story progression only. **Exception** : **Gold Dragon DS purchasable Lohan after defeating Gehrich** (cohérent Mr. Pelpee hint). Data-model `Item.acquisition: "story" | "shop" | "boss_drop"`.
+
+- [ ] **Spirit Points (SP) mécanique canon complète** :
+  - 100 SP fills meter once
+  - Each DLV adds +100 SP capacity (max DLV 5 = 500 SP)
+  - Transforming drains 100 SP/turn → de-transform at 0
+  - SP levels = remaining Dragoon turns
+  - **Stored SP non-multiple 100 lost at transform** (180→100)
+  - **SP accumulates beyond max for DLV progression** (no transform required to level up)
+  - Sources canon : Additions / Shana+Miranda hits / Spirit Potion 100 / Recovery Ball 100 random / Spirit Ring +20/turn passive / Equipment (magic-damage SP grants : Knight Helm/Giganto Helm/Jeweled Crown/Soul Headband/Robe/Ruby Ring + physical-damage : Sparkle Dress/Master's Vest/Giganto Armor/Saint Armor + SP+ Fairy Sword/Pretty Hammer/Energy Girdle/Wargod's Sash)
+    → Master data-model SP system. À implémenter Damia (le code).
+
+- [ ] **DLV canon mécanique** :
+  - Start DLV 1, max DLV 5
+  - Stats AT/DF/MAT/MDF multiplier per DLV
+  - +1 spell per DLV sauf DLV 4 (no new spell pattern canon)
+  - **Kongol exception** : skip DLV 2 spell unlock (3 spells total au lieu de 4)
+  - Hidden SP threshold per character pour DLV up
+    → Data-model `DragoonWielder.spellUnlockOverrides`. Cohérent VISION §6 Damia.
+
+- [ ] **Transformation canon** : cannot de-transform sauf SP 0 ou HP 0 ; disable Item/Defend/Escape ; enable D'Attack + Magic commands.
+
+- [ ] **D'Attack input system canon** : Spirit Meter compass + light rotation, X-time presses, up to 5 strikes (Kongol max 4). **Cohérent décision Damia Q1 auto-complete additions** — à trancher si D'Attack même règle ou inputs préservés en real-time.
+
+- [ ] **D'Attack input output table canon** : 1→100, 2→110, 3→130, 4→160, 5→200. Diminishing returns pattern. Data-model `DAttackInputOutput: Map<inputs, output>`.
+
+- [ ] **D'Attack damage formula canon Non-Archers** : `floor[floor{floor[round{floor[floor{Output * DRGNAT% / 100} * AT / 100] * (LV + 5) * 5 / DF} * Target Fear * Power] * Field} * Element]`. À wirer Damia (le code).
+
+- [ ] **D'Attack damage formula canon Archers (Shana/Miranda)** : simpler (no inputs polynomial). À implémenter.
+
+- [ ] **DRGNAT% / DRGNMAT% per character canon** — values Status menu Dragoon column. À retrouver per character via ingestion pages (Albert.md déjà, Dart.md déjà, autres à compléter).
+
+- [ ] **Magic spell damage formula canon** : `floor{floor[floor{floor[floor{floor[(MAT * DRGNMAT% /100)] * (LV + 5) * 5 / MDF} * Multiplier / 100] * Target Fear * Power} * Field] * Element}`. Multiplier canon (not STR%).
+
+- [ ] **STR% vs Multiplier UI canon** — STR% display unreliable (errors), Multiplier authoritative. Damia : store Multiplier, UI possible STR% style mais use Multiplier canon.
+
+- [ ] **26 Dragoon spells canon** (master table mechanics.md) :
+  - Dart Red-Eye (4 spells Fire) + Dart Divine DS (2 spells Non-Elemental)
+  - Lavitz/Albert Jade (4 Wind, Blossom Storm/Rose Storm naming variant canon)
+  - Rose Dark (4 Darkness, Demon's Gate **100% Instant Death** canon, Astral Drain heal-share)
+  - Shana/Miranda White-Silver (4 Light+heal/revive utility)
+  - Haschel Violet (4 Thunder single-target, Thunder Kid 100% Stun)
+  - Meru Blue-Sea (4 Water+heal, Rainbow Breath cure status + heal 50%)
+  - Kongol Gold (**3 Earth AoE only** — Kongol exception DLV 2 skip)
+    → À implémenter `dragoons/magic.md` (à créer) + data canon. Source: mechanics.md §Magic.
+
+- [ ] **Demon's Gate 100% Instant Death canon** (Rose DLV 3) — spell unique canon. Boss probable immune (status immunity 8/8 — mais Instant Death distinct ? À clarifier).
+
+- [ ] **Blossom Storm/Rose Storm canon mécanique** — Power Up state buff allies 3 turns, persists death, applies revive. **No stack with Power Up item** canon. **Rare attacks ignore Power Up calculations** (Rare Monster Rare Attack + Ghost Commander Haunting Bolt bypass). À documenter combat/status-effects.md.
+
+- [ ] **Special Battle Command canon mécanique** :
+  - All 3 party SP max + none in Dragoon form → "Special" available
+  - All party transforms simultaneously
+  - Background → Dragoon Space (instigator's element)
+  - Instigator D'attacks auto-complete (bypass spirit meter)
+  - **Field +50% same element / -50% opposite element** in Dragoon Space
+  - **Dragon-named spells (Red-Eye Dragon, Jade Dragon, etc.) IGNORE Field** despite Dragoon Space graphics
+    → Data-model `DragoonSpell.ignoresField: boolean` flag. Source: mechanics.md §Special.
+
+- [ ] **H.R. Giger influence canon** — Dragoon art style. **Miranda's torso armor in Dragoon form** = grotesque remnant. À refléter design Damia (le code) Dragoon transformation cinematics + Miranda design accent.
+
+- [ ] **Dragoon flight speed canon** — 1,200 km/h (sound barrier just). **Some teleport** ability. Lore + possible mécanique Mode Survival.
+
+- [ ] **Backwash distort nature canon** — Dragon-Virage clashes residue distort nature for 1000s years post-Dragon Campaign. World map Damia : zones still affected ? Implications design Disc 1-4 environnement.
+
+- [ ] **Dragoon Spirit eye-merge mécanique** déjà documenté dragons.md/dragon-campaign.md — cohérent canon mechanics.md confirme.
+
+- [ ] **"Sometimes powers differ between two wielders of same DS" canon** — implication Lavitz vs Albert (Jade) ou Shana vs Miranda (White-Silver) avec subtle differences. À investiguer ingestion party-members futures.
+
+- [ ] **Items canon SP-related** à documenter `items/` (à créer) :
+  - Spirit Potion (consumable 100 SP)
+  - Recovery Ball (consumable random 100 SP)
+  - Spirit Ring (accessory +20 SP/turn passive)
+  - SP+ équipements : Fairy Sword, Pretty Hammer, Energy Girdle, Wargod's Sash
+  - Magic-damage SP grants : Knight Helm, Giganto Helm, Jeweled Crown, Soul Headband, Robe, Ruby Ring
+  - Physical-damage SP grants : Sparkle Dress, Master's Vest, Giganto Armor, Saint Armor
+
 ### Dragon Campaign fandom complement — narrative depth + new NPCs/items canon
 
 - [ ] **3 Cutscenes canon FMV Dragon Campaign** :

@@ -1,8 +1,13 @@
 # Dragoon Mechanics (wielders)
 
-> **Master canon mechanics page** — couvre **Dragoon wielders + Ranks + Spirit Points + Dragoon Level + Transformation + D'Attack + Magic + Special Battle Command**. Complete spells list pour 8 Dragoons canon. **Dragoon Ranks 1-7 canon** (Official Guidebook) avec eye count. Foundational mécanique TLoD pour Damia (le code).
+> **Master canon mechanics page** — couvre **Dragoon wielders + Ranks + Spirit Points + Dragoon Level + Transformation + D'Attack + Magic + Special Battle Command**. Complete spells list pour 8 Dragoons canon. **Dragoon Ranks 1-7 canon** (Official Guidebook) avec eye count. **DLV SP thresholds par character canon** (Meru/Kongol 2,000 DLV 3 outliers). **8 Dragoon Elements + Colors canon** (Darkness=Indigo, Divine=Grey). **Dragoons immune to Status Ailments canon**. **Anti-Dragoon boss mechanics canon** (Lloyd Dragon Buster, Grand Jewel/Melbu 4th/Divine Dragon Block Staff debuff). Foundational mécanique TLoD pour Damia (le code).
 >
-> **Source canon** : 🥈 [`_sources/lod-wiki-dragoon.md`](./_sources/lod-wiki-dragoon.md)
+> **Rose quote canon foundational** : _"When Dragoons meet, blood will flow and as they leave, time does slow."_
+>
+> **Sources canon** :
+>
+> - 🥈 [`_sources/lod-wiki-dragoon.md`](./_sources/lod-wiki-dragoon.md) — wiki LoD (mechanics master, Ranks, spells, formulas)
+> - 🥉 [`_sources/fandom-dragoon.md`](./_sources/fandom-dragoon.md) — fandom (Rose quote canon, DLV SP thresholds par character, Elements+Colors table, Dispirit prevents SP, Dart DS-loss Gehrich gang, Spirit Potion sources, anti-Dragoon boss mécaniques, Kongol Special +25% canon, Meru fastest DLV strategy, unique DS variations Greham/Doel/Lenus, Unnamed 7-eye fate unknown)
 
 ## Statut
 
@@ -121,6 +126,31 @@
 - → **Never necessary to actually transform to level up DLV**
 - Implication Damia : `Character.totalSpEarned` separate from `Character.currentSp` (DLV progression independent of transformation usage)
 
+### 🆕 Dispirit status prevents SP gain canon (fandom)
+
+- **Dispirit status effect → SP gain IMPOSSIBLE** until cured
+- **3 cures canon** :
+  1. **Become Dragoon** (if enough SP avant being dispirited)
+  2. **Mind Purifier** item
+  3. **Clinic visit**
+- Implication tactique canon : Dispirit = grave threat to Dragoon-build characters
+- Data-model Damia : `Status.dispirit.preventsSpGain = true`
+
+### 🆕 Spirit Potion sources canon (fandom)
+
+- **Drop 8% canon** : **Icicle Ball, Will-O-Wisp, Mermaid, Sandworm** (4 mobs canon)
+- **Arena minigames Lohan** : won OR indirectly bought (**200G for 20 tickets**) → canon Arena economy
+- **00PARTS Unique Monster** = **100% Spirit Potion drop** ⚠️ NEW canon (Unique Monster pattern)
+- À documenter `items/consumables.md` (à créer) + `bosses/00PARTS.md` (à créer ?)
+
+### 🆕 DS Goods + SP tracking canon (Dart Gehrich gang case)
+
+- **Dart MP+SP zero quand DS in Gehrich gang's hands** canon
+- **DLV + total SP accumulated preserved** (save editor confirmed) — pas reset
+- **Pas d'accumulation SP pendant DS-loss period** canon
+- Implication : **DS presence in Goods = trigger for SP tracking** canon
+- Data-model Damia : `Character.spTracking.enabled = (DS in Goods)` — tracking starts when DS obtained, pauses if DS lost
+
 ---
 
 ## Dragoon Level (DLV) canon
@@ -133,6 +163,8 @@
 - **Kongol exception** : no new spell at **DLV 2** (3 spells total only au lieu de 4)
 - DLV threshold = **hidden accumulated SP threshold** per character
 - Stats + spells viewable from **"Status" menu System Screen**
+- **MP scaling canon (fandom)** : **MP minimum 20 at DLV 1, maximum 100 at DLV 5** (linear scaling) — same pour tous les Dragoons
+- **SP bars visual canon** : bar 1 = blue, bar 2 = turquoise, bar 3 = yellow, bar 4 = orange, bar 5 = red (cumulative)
 
 ### Spell unlock timing canon
 
@@ -143,6 +175,40 @@
 | 3     | New spell                                                                                           |
 | **4** | **NO new spell** (canon — pour all chars)                                                           |
 | 5     | New spell (DLV 5 = signature dragon-named Spell, e.g. Red-Eye Dragon, Jade Dragon, Blue Sea Dragon) |
+
+### 🆕 DLV SP thresholds per character canon (fandom)
+
+⚠️ **TABLE CRITIQUE** — chaque character a un threshold SP **différent** pour DLV up (vs assumption uniform pre-fandom) :
+
+| Character         | Lv 1 → Lv 2  | Lv 2 → Lv 3    | Lv 3 → Lv 4 | Lv 4 → Lv 5 |
+| ----------------- | ------------ | -------------- | ----------- | ----------- |
+| **Dart**          | **1,200** ⚠️ | 6,000          | 12,000      | 20,000      |
+| **Lavitz/Albert** | 1,000        | 6,000          | 12,000      | 20,000      |
+| **Shana/Miranda** | 1,000        | 6,000          | 12,000      | 20,000      |
+| **Rose**          | **1,200** ⚠️ | 6,000          | 12,000      | 20,000      |
+| **Haschel**       | 1,000        | 6,000          | 12,000      | 20,000      |
+| **Meru**          | 1,000        | **2,000** ⚠️🆕 | 12,000      | 20,000      |
+| **Kongol**        | 1,000        | **2,000** ⚠️🆕 | 12,000      | 20,000      |
+
+> 🆕 **Outliers canon majeurs** :
+>
+> - **Dart + Rose = 1,200 SP DLV 2** (higher threshold, +20% vs autres) → cohérent canon avec rôle leader-Dragoons
+> - **Meru + Kongol = 2,000 SP DLV 3** (vs 6,000 autres = **3× faster**) — **rebalance Disc 2 catch-up canon** pour party members joining late
+> - **DLV 4 + 5 = 12,000 / 20,000 SP** uniform pour tous
+
+> Implication data-model Damia : `DragoonWielder.dlvThresholds: [number, number, number, number]` per character (pas global).
+
+### MP canon (Magic Points)
+
+| DLV | MP minimum canon | MP maximum canon |
+| --- | ---------------- | ---------------- |
+| 1   | **20**           | 20               |
+| 2   | ?                | ?                |
+| 3   | ?                | ?                |
+| 4   | ?                | ?                |
+| 5   | **100**          | 100              |
+
+> Linear scaling canon (probable 20/40/60/80/100 par DLV). À reconfirmer per character.
 
 ---
 
@@ -156,10 +222,36 @@
 - **Disabled commands in Dragoon form** :
   - Item
   - Defend
-  - Escape
+  - Escape (cannot run away canon)
 - **New commands available** :
   - **D'Attack**
   - **Magic**
+
+### 🆕 Dragoons immune to Status Ailments canon
+
+- **Dragoons immune to all 8 Status Ailments** in Dragoon form canon
+- **Transformation cures existing status** : si afflicted normal form → transform Dragoon = removes
+- **Implication tactique** : Dragoon Transformation = **replacement Body/Mind Purifiers** canon
+- Pattern Damia (le code) : `DragoonForm.statusImmunity = true` + cure on transform
+
+### DS recognition mécanique canon
+
+- DS = **crystallized colored stone** canon
+- When obtaining new wielder : **stone glows brightly + levitates toward owner** canon
+- Wielder **"recognized by the Spirit"** (DS chooses canon — cf. Nest of Dragon Greham→Lavitz)
+- Implication visual Damia : DS pickup cinematic glow+levitation pattern (cohérent Jade DS Nest of Dragon)
+
+### Animation toggle canon
+
+- **Transformation animations toggleable between short and long in Menu** canon ⚠️ NEW
+- UX option player choose canon
+- Pattern Damia (le code) : Settings UI `Animations.length: "short" | "long"`
+
+### 🆕 Drawback Dragoon form canon
+
+- **Fighting Dragoon form** : **normal EXP** mais **no SP gain + no Addition level up** (Additions tracked only in normal form attacks)
+- → **Trade-off Dragoon use vs DLV/Addition progression**
+- → Pattern : optimal play = transform when needed only, normal form for grinding
 
 ---
 
@@ -212,6 +304,61 @@ floor[floor{floor[round{floor[floor{Output * DRGNAT% / 100} * AT / 100] * (LV + 
 > **Cross-ref** : [`../combat/damage-formula.md`](../combat/damage-formula.md) (formulas master) + [`../combat/elements.md`](../combat/elements.md) (Element + Field).
 
 ---
+
+## 🆕 Dragoon Elements + Colors canon (fandom)
+
+Table canon complète **8 Dragoons** :
+
+| Dragoon                  | Color canon   | Element        | Opposing canon         |
+| ------------------------ | ------------- | -------------- | ---------------------- |
+| **Red-Eyed Dragoon**     | Red           | Fire           | Water                  |
+| **Jade Dragoon**         | Green         | Wind           | Earth                  |
+| **White Silver Dragoon** | White Silver  | Light          | Dark                   |
+| **Darkness Dragoon**     | **Indigo** ⚠️ | Dark           | Light                  |
+| **Violet Dragoon**       | Violet        | Thunder        | **— (no opposing)** ⚠️ |
+| **Blue Sea Dragoon**     | Blue          | Water          | Fire                   |
+| **Golden Dragoon**       | Gold          | Earth          | Wind                   |
+| **Divine Dragoon**       | **Grey** ⚠️   | **No Element** | **— (no opposing)** ⚠️ |
+
+> 🆕 **Réveils canon majeurs** :
+>
+> - **Darkness Dragoon = Indigo color** (vs typical "Black/Dark") — important UI design Damia
+> - **Divine Dragoon = Grey color** — neutral Non-Elemental
+> - **Thunder + No Element NO opposing canon** ✅ confirme [`../combat/elements.md`](../combat/elements.md) (3 pairs opposing : Fire↔Water, Wind↔Earth, Light↔Dark ; Thunder + Non-Elemental standalone)
+
+### Dragoon Spirit eye count canon (fandom enrichi)
+
+- **All 8 in-game DS = 6-eye (Rank 2 "God Dragon")** sauf **Divine DS = 7-eye (Rank 1)**
+- **Eye count reflected on Dragoon headbands** canon visual design ⚠️ (some discrepancies between in-game art and FMVs)
+- **Pseudo Dragons** (lowest rank 1-eye) = canon Moon That Never Sets minor mobs
+- **Two top-rank 7-eye Dragons canon** : Divine Dragon + **unnamed Dragon fate unknown** (cohérent dragons.md "Unnamed Dragon fought Divine Dragon, defeated")
+- **"Eyes are dragged together" form DS** canon — fandom precise expression (vs wiki "merge into singular gem")
+- **Must be claimed right away or power expires** canon = mécanique "harvest at moment of death" wiki confirmed
+
+### Variations per wielder canon (Trivia fandom enrichi)
+
+🆕 **DS hosts identique élément mais variations canon** (specialties + weapons-of-choice) :
+
+| Dragoon Spirit       | Host canon Disc 1-4   | Weapon canon      | Variation spell canon                                 |
+| -------------------- | --------------------- | ----------------- | ----------------------------------------------------- |
+| **Jade Dragoon**     | Lavitz/Albert (party) | Spear             | Standard Wing Blaster/Rose Storm                      |
+| **Jade Dragoon**     | Greham (boss Disc 1)  | (à confirmer)     | **"Dragon Crucification"** ⚠️ NEW spell variant canon |
+| **Violet Dragoon**   | Haschel (party)       | Knuckles          | Standard Atomic Mind/Thunder Kid                      |
+| **Violet Dragoon**   | Doel (boss Disc 1)    | **Two swords** ⚠️ | **"Judgment Storm"** ⚠️ NEW spell variant canon       |
+| **Blue Sea Dragoon** | Meru (party)          | Hammer            | Standard Freezing Ring/Rainbow Breath                 |
+| **Blue Sea Dragoon** | Lenus (boss Disc 2)   | **Chakrams** ⚠️   | **"Pillar Break"** ⚠️ NEW spell variant canon         |
+
+> 🆕 **Pattern canon "same DS, different wielder, unique variations"** — implications data-model :
+>
+> ```ts
+> DragoonWielder {
+>   archetypeId: ArchetypeId;
+>   weaponClass: WeaponClass; // Spear, Knuckles, Hammer, Sword, Chakram, etc.
+>   spellOverrides?: Map<SpellSlot, SpellId>; // boss variants
+> }
+> ```
+>
+> "Original Seven Dragoons coincidentally same weapon and fighting style as Dart's group" canon — Lavitz/Syuveil = Spear, Haschel/Kanzas = Knuckles, Meru/Damia = Hammer, etc.
 
 ## Magic canon (Dragoon Magic)
 
@@ -356,6 +503,53 @@ DragoonSpell {
   ignoresField?: boolean; // true pour dragon-named spells
 }
 ```
+
+### 🆕 Kongol Special canon bonus (fandom)
+
+- **Kongol Special transforms his Dragoon Attack from 4-hit to 5-hit** canon
+- → **+25% damage bonus** unique à Kongol Special
+- Pattern data-model : `DragoonWielder.specialBonus?: { kongolFiveHit: true }` ou similaire override
+
+---
+
+## 🆕 Anti-Dragoon Boss Mechanics canon (fandom)
+
+Mécaniques spéciales canon utilisées par certains bosses pour neutraliser/diminuer les Dragoons :
+
+### 1. Lloyd 2nd fight — Dragon Buster 1-shot kill canon
+
+- **Dragon Buster** = ancient Wingly anti-Dragon weapon (cf. dragons.md/dragon-campaign.md)
+- **Used by Lloyd in his 2nd fight** canon → **kills a Dragoon in single strike**
+- **Talisman canon item** : protect up to **2 characters** from Dragon Buster attack ⚠️ NEW item canon
+- **Tactical canon** : 2 protected → Lloyd attacks invulnerable Dragoons → fight much easier
+- Implications data-model : `BossAbility.instantKillDragoonForm?: boolean` + `Item.dragoonProtection?: number` (Talisman = 2 chars)
+
+### 2. Grand Jewel — Dragon Block Staff debuff canon
+
+- **Grand Jewel boss** guards/wields the **Dragon Block Staff**
+- → **Weakens Dragoon below base form** when used
+- **Magic still works** : Healing Spells, Albert's Rose Storm fonctionnent normalement
+- **Boss won't use Dragon Block Staff if player only uses 1 Dragoon turn** — conditional AI canon
+- Implications data-model : `BossAbility.dragoonDebuff?: { trigger: "use_dragoon_form_turns", threshold: number }`
+
+### 3. Melbu Frahma 4th form — similar reduce Dragoon canon
+
+- **Final boss form 4 canon** : similar Dragoon power reduction ability
+- Pattern boss endgame canon
+
+### 4. Divine Dragon fight — Dragon Block Staff self-debuff canon
+
+- **Party uses Dragon Block Staff** vs Divine Dragon (recovered Forest of Winglies Disc 3)
+- → **Weakens own Dragoon forms in process** canon
+- **Rose Storm + Miranda healing unaffected** canon (cohérent Lavitz/Albert Blossom Storm + White-Silver heal)
+
+> Pattern canon : **Healing Magic + Shield Magic immune to Dragoon debuffs** = important data-model rule. Damia (le code) : `Spell.bypassesDragoonDebuff = true` for healing/shield categories.
+
+### Implications design Damia
+
+- **Tactical depth** : Dragon Buster + Dragon Block Staff = boss-specific counters
+- **Talisman item** = anti-Dragon Buster gear (2-character slot canon)
+- **Healing/shield magic bypass canon** = preserve core utility even debuffed
 
 ---
 

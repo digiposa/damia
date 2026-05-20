@@ -862,6 +862,73 @@
   - Possible dedicated cinematic flashback majeur Disc 4 endgame
   - À orchestrer `quests/disc4-vellweb-mausoleum.md` (à créer) + `quests/disc4-kadessa-flashback.md` (à créer)
 
+### Dragoons mechanics fandom complement — DLV thresholds par char + Elements/Colors + boss anti-Dragoon mécaniques
+
+- [ ] **🆕 DLV SP thresholds canon TABLE per character** — Critical data-model :
+  - Dart + Rose : **1,200 SP DLV 2** (higher canon)
+  - Lavitz/Albert + Shana/Miranda + Haschel : 1,000 SP DLV 2 / 6,000 DLV 3 / 12,000 DLV 4 / 20,000 DLV 5
+  - **Meru + Kongol = 2,000 SP DLV 3** (3× faster — Disc 2 catch-up canon)
+    → Data-model `DragoonWielder.dlvThresholds: number[]` per character. Source: [`features/dragoons/mechanics.md`](features/dragoons/mechanics.md) §DLV thresholds per character.
+
+- [ ] **MP scaling DLV canon** — Min 20 (DLV 1) / Max 100 (DLV 5). Linear progression probable (20/40/60/80/100). À reconfirmer per character.
+
+- [ ] **🆕 Dragoon Elements + Colors canon table** :
+  - Darkness Dragoon = **Indigo color** (vs typical Black/Dark) ⚠️
+  - Divine Dragoon = **Grey color** ⚠️
+  - **Thunder + No Element NO opposing canon** (vs typical 4 elemental pairs)
+    → Confirme [`combat/elements.md`](features/combat/elements.md) : 3 opposing pairs (Fire↔Water, Wind↔Earth, Light↔Dark) + 2 standalone (Thunder + Non-Elemental). À refléter UI Damia color palette.
+
+- [ ] **🆕 Dragoons immune to Status Ailments canon** — Transform cures + immunity during Dragoon form. Replacement Body/Mind Purifiers. Data-model : `DragoonForm.statusImmunity = true` + `onTransform: cureAllStatus()`.
+
+- [ ] **🆕 Dispirit prevents SP gain canon** — Dispirit status = SP gain impossible. 3 cures : transform (if enough SP pre-dispirit) + Mind Purifier + Clinic. À refléter `combat/status-effects.md` (à créer).
+
+- [ ] **🆕 DS Goods + SP tracking canon (Dart Gehrich case)** — DS in Goods = trigger SP tracking. Pas d'accumulation pendant DS-loss period. Total SP preserved. Data-model `Character.spTracking.enabled = (DS_in_Goods)`.
+
+- [ ] **🆕 Spirit Potion sources canon** :
+  - Drop 8% : **Icicle Ball, Will-O-Wisp, Mermaid, Sandworm** (4 mobs canon)
+  - **Arena Lohan** : 20 tickets = 200G = 1 Spirit Potion (won OR bought)
+  - **00PARTS Unique Monster = 100% drop** ⚠️ NEW Unique Monster canon
+    → À documenter `items/consumables.md` (à créer) + `bosses/00PARTS.md` (à créer ?).
+
+- [ ] **🆕 Animation toggle Dragoon transformation canon** — Menu option short/long. UX setting. À implémenter Damia (le code) Settings UI.
+
+- [ ] **🆕 DS recognition cinematic canon** — stone glows + levitates to new owner. Visual pattern Damia (le code) DS pickup cinematic.
+
+- [ ] **🆕 Eye count reflected on Dragoon headbands canon** — visual design Damia (le code) sprite Dragoon headband. Some discrepancies in-game art vs FMVs.
+
+- [ ] **🆕 Unique DS variations per wielder canon** (specialties + weapons-of-choice) :
+  - Greham (Jade DS boss) : "**Dragon Crucification**" spell variant + (weapon à confirmer)
+  - Doel (Violet DS boss) : "**Judgment Storm**" spell variant + **two swords** (vs Haschel knuckles)
+  - Lenus (Blue Sea DS boss) : "**Pillar Break**" spell variant + **chakrams** (vs Meru hammer)
+    → Pattern data-model `DragoonWielder.spellOverrides + weaponClass`. "Original Seven Dragoons coincidentally same weapon/style as Dart's group" canon.
+
+- [ ] **🆕 Anti-Dragoon Boss Mechanics canon** :
+  - **Lloyd 2nd fight Dragon Buster** = 1-shot kill Dragoon. **Talisman item** protect 2 chars ⚠️ NEW item canon
+  - **Grand Jewel** wields Dragon Block Staff → weakens Dragoon ; conditional AI (1 Dragoon turn → no use)
+  - **Melbu Frahma 4th form** : similar reduce Dragoon power
+  - **Divine Dragon fight** : party uses Dragon Block Staff → self-debuff Dragoon ; Rose Storm + Miranda heal unaffected
+    → Pattern canon : **Healing/Shield magic bypass Dragoon debuff** rule. Data-model `Spell.bypassesDragoonDebuff = true`. À documenter `bosses/Lloyd.md` + `bosses/Grand Jewel.md` (à créer) + `bosses/Melbu Frahma.md` (à créer).
+
+- [ ] **🆕 Talisman canon item** — protect 2 characters from Dragon Buster attack (Lloyd 2nd fight). À documenter `items/accessories.md` (à créer).
+
+- [ ] **🆕 Kongol Special +25% canon bonus** — Special transformation upgrade Kongol Dragoon Attack from 4-hit to 5-hit = +25% damage unique. À refléter Kongol-specific data-model override.
+
+- [ ] **🆕 Drawback Dragoon form canon** — fighting in Dragoon form = **no SP gain + no Addition level up** (only normal EXP). Trade-off design canon. À refléter Damia balance.
+
+- [ ] **🆕 Unnamed 7-eye Dragon "fate unknown" canon confirme** — second top-rank 7-eye Dragon mentioned canon. Cohérent dragons.md "Unnamed Dragon fought Divine Dragon, defeated". À documenter `lore/unnamed-dragon.md` (à créer).
+
+- [ ] **🆕 393 Spirit Potions max DLV all chars canon** — 78,600G (Lohan Arena). Balance economy curve canon Disc 2 farming.
+
+- [ ] **🆕 Bandit's Ring +20 Speed canon** ⚠️ NEW item — Kongol speedup canon. À documenter `items/accessories.md` + Bandit's Shoes (canon, déjà mentioné Death Frontier chest).
+
+- [ ] **🆕 Spirit Ring vs Wargod's Sash break-even canon** — 40 SP per addition cutoff. Strategic equip choice canon. À refléter Damia equip recommendations / equipment guide.
+
+- [ ] **8 Dragoon spells with special effects canon (fandom count)** — 3 Shana/Miranda + 1 Lavitz/Albert (Rose Storm) + 3 Rose + 1 Meru = 8 canon. Validates list mechanics.md.
+
+- [ ] **Rose quote canon foundational** : "When Dragoons meet, blood will flow and as they leave, time does slow." — à utiliser cinematic intro/title Mode Story.
+
+- [ ] **DS = "Knight of the Dragon who is chosen by fate to rule over Dragons"** canon Rose definition. À utiliser dialogue/codex.
+
 ### Dragoons mechanics master (wiki Dragoon — wielders + ranks + SP + DLV + spells)
 
 - [ ] **Dragoon Ranks canon (Official Guidebook)** — 7 ranks par eye count : Rank 1 (7-eye Divine Dragon) / Rank 2 "God Dragon" (6-eye 7 elemental DS) / Rank 3 (5-eye Michael) / Rank 4 "Ultimate Dragon" (4-eye Regole) / Rank 5 "Dragon King" (3-eye Feyrbrand) / Rank 6 (2-eye unknown) / Rank 7 (1-eye Pseudo Dragons = minor mobs). À documenter data-model + cross-ref dragons.md. Source: [`features/dragoons/mechanics.md`](features/dragoons/mechanics.md).

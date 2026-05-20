@@ -6,10 +6,11 @@
 >
 > - 🥈 [`_sources/lod-wiki-equipment.md`](./_sources/lod-wiki-equipment.md) — wiki LoD (tables complètes weapons/headwear/body armor/footwear/accessories + acquisition)
 > - 🥉 [`_sources/fandom-weapons.md`](./_sources/fandom-weapons.md) — fandom Weapons (46 total weapons confirmé + sell prices + tactical commentary + Unique Monsters 1-damage cap mechanic)
+> - 🥉 [`_sources/fandom-armor.md`](./_sources/fandom-armor.md) — fandom Armor (53 armor pieces total + canon name "Dragon Armor" pas "Dragoon Armor" + Fort Magrad chest location + Angel Robe + Holy Ankh 45-49% revive chance + Faust boss canon référencé)
 
 ## Statut
 
-🟡 **Draft post-ingestion wiki LoD + fandom weapons** — fandom armor + accessories à ingérer ensuite. Discord cadors restant à consulter pour formules exactes (gain stats par level, etc.). Décisions Damia à trancher.
+🟡 **Draft post-ingestion wiki LoD + fandom weapons + fandom armor** — fandom accessories à ingérer. Discord cadors restant à consulter pour formules exactes (gain stats par level, etc.). Décisions Damia à trancher.
 
 ## 1. Système canon (récap haut niveau)
 
@@ -105,7 +106,52 @@
 | **Character-locked headwear**                  | Soul Headband (Haschel), Giganto Helm (Kongol), Rose's Hairband (Rose)                                                                                |
 | **Restricted to Dragoon "magic-type"**         | Jeweled Crown (Shana, Miranda, Meru) — pattern caster Women                                                                                           |
 
-⚠️ **Legend Casque** = item 10,000G top-tier "All" — halves magic damage + +127 MDF + +50 MAT + +50 M-AV.
+⚠️ **Legend Casque** = item 10,000G top-tier "All" — halves magic damage + +127 MDF + +50 MAT + +50 M-AV. **Canon : "considered crucial item to defeat Faust"** (Mayfil Disc 3 boss).
+
+### Cross-check fandom Armor (Headwear + Body Armor + Boots)
+
+**Confirmations utiles** :
+
+- **53 armor pieces total canon** (5+5+4 headwear + 8+6+4+10+1 body armor + 4+4+1 boots = ~52, count master pour validation)
+- **Sallet "+10 A-HIT" canon description** : "Increases hit rate of physical attacks by 10%"
+- **Sallet + Tiara utiles vs Unique Monsters** (difficiles à hit) — cohérent Unique Monsters 1-damage cap mais accuracy importe
+- **Knight Helm "Dart, Lavitz/Albert and Kongol only"** ⚠️ fandom inclut Kongol — wiki LoD ne mentionne pas Kongol. À vérifier (probable inclusion Kongol canon)
+- **Dragon Helm "after Faust" canon** : Tower of Flanvel chest accessible **après défaite Faust** boss Mayfil/Tower
+- **Magical Hat "after Faust"** : même condition story-gated post-Faust
+- **Dragon Helm + Physical Ring effects additive** canon : +50% max HP (Dragon Helm) + +50% max HP (Physical Ring) = +100% max HP cumulé probable
+- **Faust = boss Tower of Flanvel canon ?** À investiguer — fandom écrit "Tower of Flanvel (after Faust)" implique Faust IS in/near Tower
+- **Magical Avoidance > Physical Avoidance late-game** canon : enemies utilisent mostly magic attacks late game
+- **"Silver Embroidered Vest" larger character limit gain message canon** : nom alternatif Silver Vest quand obtenu chest Hellena (limite caractères UI augmentée)
+
+**NEW canon mechanics fandom-only** :
+
+- ⚠️ **DG Armor canon name = "Dragon Armor" PAS "Dragoon Armor"** : Silver DG Armor chest Divine Tree gain message = **"White Silver Dragon Armor"**. Golden DG Armor chest Moon = **"Golden Dragon Armor"**. Speculation : armures appartiennent aux **dragons** des Dragoons (Miranda = "Dragoon of the White-Silver Dragon", Kongol = "Dragoon of the Gold[en] Dragon"). → **Adopter naming canon "Dragon Armor"** dans Damia.
+- ⚠️ **Angel Robe revive chance 45-49%** (estimate fandom) ⚠️ vs wiki LoD "+40%" canon. Idem **Holy Ankh 45-49%** vs wiki "+40%". DIVERGENCE %.
+- ⚠️ **Angel Robe + Holy Ankh disk swap bug rumored** : "rumored that sometimes after swapping disks, they both must be re-equipped or only one of the two will affect the revival chance". À ignorer dans Damia (single-build, pas de "swap disks").
+- ⚠️ **Faust boss canon = "crucial item Legend Casque to defeat"** — combat anti-Faust requires top-tier magic defense.
+
+**Divergences nommage / stats vs wiki LoD** :
+
+| Item / Stat                         | Wiki LoD                             | Fandom                                          | Notes                                                                                                  |
+| ----------------------------------- | ------------------------------------ | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| **Jeweled Crown MAT**               | +42 MAT                              | **+24 MAT**                                     | ⚠️ DIVERGENCE major — wiki tier 2 prévaut probable (+42)                                               |
+| **Jeweled Crown Lenus drop rate**   | 50%                                  | **100%**                                        | ⚠️ DIVERGENCE drop % — wiki tier 2 prévaut probable (50%)                                              |
+| **Silver Vest MDF**                 | +27 MDF                              | **+17 MDF**                                     | ⚠️ DIVERGENCE — wiki tier 2 prévaut probable (+27)                                                     |
+| **Angel Robe stats**                | +10 DF / +20 MDF / +5 A-AV / +5 M-AV | **0 / 0 / 0 / 0**                               | ⚠️ DIVERGENCE — fandom dit zéros, wiki dit stats. Wiki probable (cohérent autres armures)              |
+| **Giganto Armor MDF**               | +26 MDF                              | +25 MDF                                         | Minor (1 point divergence)                                                                             |
+| **Angel Robe + Holy Ankh revive %** | +40% chacun → 80% cumul              | **45-49%** chacun (estimate) → quasi 100% cumul | ⚠️ DIVERGENCE — wiki tier 2 chiffre exact 40 prévaut probable                                          |
+| **Knight Helm restriction**         | Dart, Lavitz, Albert                 | **Dart, Lavitz/Albert AND Kongol**              | ⚠️ DIVERGENCE — fandom inclut Kongol, à vérifier in-game                                               |
+| **Armor of Yore location**          | Chest: Snowfield                     | **Fort Magrad**                                 | Probable : Fort Magrad chest **dans** Snowfield (cohérent canon Diaz Fort Magrad declaration Gloriano) |
+| **Warrior Dress effect**            | (silent)                             | **"Defense +5%"**                               | ⚠️ NEW effect description fandom — à vérifier wiki tier 2                                              |
+| **Warrior Dress location**          | Chest: Barrens / Shop: Phantom Ship  | **Barrens, Queen Fury**                         | Queen Fury vs Phantom Ship — divergence ship récurrente (cf. weapons)                                  |
+| **Rainbow Dress drop enemy**        | "Rainbow Dress (10%)"                | **"Rainbow Bird (2%)"**                         | ⚠️ DIVERGENCE — enemy name + drop rate                                                                 |
+| **Magician Bogy / Bogey**           | "Bogy"                               | **"Bogey"**                                     | Orthographe variant — Bogy (wiki) prévaut probable                                                     |
+| **Breast Plate / Breastplate**      | "Breast Plate" (deux mots)           | **"Breastplate"** (un mot)                      | Orthographe variant                                                                                    |
+| **Gold DG / Golden DG Armor**       | "Gold DG Armor"                      | **"Golden DG Armor"** / "Golden Dragon Armor"   | Naming variant — fandom utilise "Golden" cohérent canon "Dragoon of the Golden Dragon"                 |
+| **Rose's Hairband effect**          | "Prevents Instant Death"             | **"Avoid Can't Combat"**                        | "Can't Combat" = TLoD terminology pour Instant Death (in-game wording)                                 |
+| **Disciple Vest A-AV**              | +10 A-AV                             | **0 A-AV**                                      | ⚠️ DIVERGENCE — wiki tier 2 prévaut probable (+10 A-AV)                                                |
+
+⚠️ Pattern divergence canon : **fandom omet souvent A-AV / M-AV values** sur body armor (zero values là où wiki tier 2 a non-zero). Adopter wiki tier 2 master ground truth.
 
 ## 4. Body Armor — DF + MDF principal + élémental DG armors
 

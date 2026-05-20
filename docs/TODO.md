@@ -1457,6 +1457,56 @@
 
 - [ ] **🆕 Forest of Winglies = Wingly Forest synonyme canon** — Variations naming. Adopter "Forest of Winglies" canonical Damia (cohérent wiki LoD master). Source: fandom-weapons.md §Meru.
 
+### Items / Armor fandom complement — 53 armor pieces + "Dragon Armor" canon name + Fort Magrad + Faust boss + divergences stats
+
+- [ ] **🆕 53 armor pieces total canon** — Fandom count master pour validation base de données. À vérifier exhaustivement vs wiki tier 2 (~5+5+4 headwear + 8+6+4+10+1 body + 4+4+1 boots ≈ 52). Source: [`features/items/_sources/fandom-armor.md`](features/items/_sources/fandom-armor.md).
+
+- [ ] **🆕 "Dragon Armor" canon name (PAS "Dragoon Armor") ⚠️ MAJEUR** — Silver DG Armor chest Divine Tree gain message canon = **"White Silver Dragon Armor"**. Golden DG Armor chest Moon canon = **"Golden Dragon Armor"**. Les armures appartiennent aux DRAGONS des Dragoons, pas aux Dragoons eux-mêmes. À refléter naming Damia : adopter "Dragon Armor" comme canonical (e.g. `RedDragonArmor`, `JadeDragonArmor`, etc.) avec alias DG. À documenter `dragoons/dragons.md` + `items/equipment.md`. Source: fandom-armor.md §Trivia.
+
+- [ ] **🆕 Fort Magrad = Armor of Yore chest location canon** — Confirme Fort Magrad **playable canon location Gloriano** (cohérent canon "Diaz Fort Magrad declaration"). Chest Armor of Yore IN Fort Magrad (probable sub-area Snowfield ou region séparée). À documenter `locations/Fort Magrad.md` (à créer). Source: fandom-armor.md §Male Armor Dart/Lavitz/Albert.
+
+- [ ] **🆕 Faust boss canon mécanique = Tower of Flanvel area ?** — Fandom dit "Dragon Helm: Mountain of Mortal Dragon, Tower of Flanvel (**after Faust**)" + "Magical Hat: Magician Bogey (2%), Aglis, Tower of Flanvel (**after Faust**)". Implication : 2 chests Tower of Flanvel **gated derrière Faust boss défaite**. Faust boss canon = Mayfil (Death City) OU Tower of Flanvel ? À vérifier. Probable : Faust = Mayfil boss + chest spawn Tower of Flanvel after. À documenter `bosses/Magician Faust.md` (à créer). Source: fandom-armor.md §Headwear.
+
+- [ ] **🆕 Legend Casque "crucial item to defeat Faust" canon** — Mecca anti-Faust 10,000G top-tier magic defense. À noter `bosses/Magician Faust.md` (à créer) gear pre-requirement. Source: fandom-armor.md §Headwear guidance.
+
+- [ ] **🆕 Dragon Helm + Physical Ring additive +50% +50% = +100% max HP canon** — Combo stack additive explicite fandom. À implémenter stacking logic `maxHpModifiers: [...]` accumulant. Source: fandom-armor.md §Headwear guidance.
+
+- [ ] **🆕 Angel Robe revive chance divergence 40% vs 45-49% ⚠️** — Wiki LoD : "+40%". Fandom : "estimated between 45-49%". DIVERGENCE — wiki tier 2 chiffre exact prévaut. Adopter 40% canon Damia. À noter `combat/canon-divergences.md` (à créer). Source: fandom-armor.md §Armor guidance.
+
+- [ ] **🆕 Holy Ankh revive chance 40% vs 45-49% ⚠️** — Idem divergence Angel Robe — wiki tier 2 40% prévaut.
+
+- [ ] **🆕 Angel Robe + Holy Ankh disk-swap bug rumored canon** — Fandom mentionne bug rumored disque swap. Pas applicable Damia (single-build sans disk swap mécanique). Ignorer. Source: fandom-armor.md §Armor guidance.
+
+- [ ] **🆕 Knight Helm restriction "Kongol included" divergence ⚠️** — Wiki LoD : Dart, Lavitz, Albert. Fandom : Dart, Lavitz/Albert AND Kongol. À vérifier in-game si Kongol peut équiper Knight Helm. Probable : fandom correct (Kongol partage souvent armor "Dart-Lavitz" male). À investiguer. Source: fandom-armor.md §Male Headwear footnote.
+
+- [ ] **🆕 Jeweled Crown MAT divergence wiki +42 vs fandom +24 ⚠️** — Wiki tier 2 prévaut probable. Adopter +42 MAT. Source: fandom-armor.md vs wiki-equipment.md.
+
+- [ ] **🆕 Jeweled Crown Lenus drop rate divergence 50% vs 100% ⚠️** — Wiki tier 2 50% prévaut probable. Source: idem.
+
+- [ ] **🆕 Silver Vest MDF divergence wiki +27 vs fandom +17 ⚠️** — Wiki tier 2 prévaut probable. Adopter +27 MDF. Source: idem.
+
+- [ ] **🆕 Angel Robe stats divergence ⚠️** — Wiki LoD : +10 DF / +20 MDF / +5 A-AV / +5 M-AV. Fandom : tous 0. Wiki tier 2 prévaut probable (cohérent autres armures female). Source: idem.
+
+- [ ] **🆕 Disciple Vest A-AV divergence wiki +10 vs fandom 0 ⚠️** — Wiki tier 2 prévaut probable (+10 A-AV). Pattern fandom omet A-AV/M-AV values systématiquement. Source: idem.
+
+- [ ] **🆕 Rainbow Dress drop enemy divergence "Rainbow Dress (10%)" vs "Rainbow Bird (2%)" ⚠️** — Wiki dit drop from enemy named "Rainbow Dress" 10% (mob name = item name pattern). Fandom dit "Rainbow Bird" 2%. Hypothèse : Rainbow Bird = enemy canon, wiki erreur typo / autre nom canon ? À vérifier in-game ou Discord. Source: idem.
+
+- [ ] **🆕 Warrior Dress "+5% Defense" effect canon fandom** — Wiki silent sur cet effet. À vérifier source tier 2 (wiki canon stats column ne mentionne pas +5% defense). Possible erreur fandom OU mécanique wiki manquée. Source: fandom-armor.md §Haschel.
+
+- [ ] **🆕 Rose's Hairband "Can't Combat" TLoD terminology canon** — Fandom utilise "Can't Combat" = in-game wording pour "Instant Death" + ?. À documenter terminology canon dans `combat/status-effects.md` (à créer). Source: fandom-armor.md §Female Headwear.
+
+- [ ] **🆕 "Silver Embroidered Vest" naming canon larger UI** — Silver Vest in chest Hellena affiche **"Silver Embroidered Vest"** dans la barre de gain avec character limit augmenté. À utiliser pour i18n Damia (full name display). Source: fandom-armor.md §Female Armor footnote.
+
+- [ ] **🆕 "Magician Bogey" vs "Magician Bogy" orthographe ⚠️** — Wiki "Bogy" (court), fandom "Bogey" (long). Wiki tier 2 prévaut. Adopter "Magician Bogy" canon Damia.
+
+- [ ] **🆕 "Breast Plate" vs "Breastplate" orthographe ⚠️** — Wiki "Breast Plate" 2 mots, fandom "Breastplate" 1 mot. Wiki tier 2 prévaut probable. Adopter "Breast Plate" canon.
+
+- [ ] **🆕 "Gold DG Armor" vs "Golden DG Armor" naming ⚠️** — Wiki "Gold DG Armor", fandom "Golden DG Armor" / "Golden Dragon Armor". Cohérent "Dragoon of the Golden Dragon" canon Kongol → adopter **"Golden"** canon Damia (cohérent naming Dragon Armor).
+
+- [ ] **🆕 Magical Avoidance > Physical Avoidance late-game canon** — Design canon : enemies utilisent mostly magic attacks late game (Disc 3-4) → M-AV more valuable que A-AV. Pattern à respecter pour balance Damia late-game enemies. Source: fandom-armor.md §Boots guidance.
+
+- [ ] **🆕 Sallet + Tiara accuracy useful vs Unique Monsters canon** — Pattern accuracy importe vs Unique Monsters même si AT capped à 1 damage. Cohérent Long Bow / Virulent Arrow utiles vs Unique Monsters. Source: fandom-armor.md §Male/Female Headwear guidance.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

@@ -1715,6 +1715,45 @@
 
 - [ ] **🆕 "first dragon seen in game" canon symbolic placement** — Feyrbrand = premier dragon visuel TLoD, introduction "creatures of Soa" lore. À refléter Damia : importance design level (cinematic reveal Feyrbrand premier moment crash boss-introduction). Source: identity canon.
 
+### Bosses / Lore (Feyrbrand fandom — "Green-Tusked Dragon" canon name + 3 encounters (Disc 1 cold open + Nest of Dragon + Mayfil Disc 4 spirit) + Slime Shot color→status mapping + blind canon + Servi Slambert + first vassal Dragon TLoD)
+
+- [ ] **🆕 "Feyrbrand the Green-Tusked Dragon" moniker canon ⭐** — 緑牙竜フェルブランド (Ryokugaryū Feruburando) JP/EN canon name. À refléter `bosses/Feyrbrand.md` + i18n EN/FR. Source: [`features/bosses/_sources/fandom-feyrbrand.md`](features/bosses/_sources/fandom-feyrbrand.md).
+
+- [ ] **🆕 "First of several vassal Dragons" canon pattern ⭐ MAJEUR** — Feyrbrand premier d'une série de **vassal Dragons** TLoD (Damia, Regole, Divine Dragon, Mortal Dragon, etc.). Pattern canon "vassal Dragon" à documenter `dragoons/dragons.md` §Vassal Dragons. Source: idem.
+
+- [ ] **🆕 Feyrbrand Cold Open Disc 1 = first Dart-Rose meet canon ⭐ MAJEUR** — Feyrbrand attaque Dart dans forêt près Seles, Dart chassé deeper, **Rose saves Dart** (premier rencontre canon Dart-Rose, avant Hellena Prison Lavitz). À documenter `quests/disc1-cold-open.md` (à créer) + `party-members/Rose.md` (à créer) intro. Source: idem.
+
+- [ ] **🆕 Feyrbrand Disc 4 Mayfil spirit return optional boss ⭐ MAJEUR canon** — Feyrbrand's soul re-encounter Death City Mayfil. Stats spirit ×16 HP (8,000 US / 10,000 JP) / ×5+ AT (100) / ×6+ MAT (80). Rose canon explanation : "had too much pride as a Dragon for having been defeated by humans". À documenter `quests/disc4-mayfil-dragon-spirits.md` (à créer). À investiguer si autres dragon spirits canon Mayfil (Damia, Regole, etc. ?). Source: fandom-feyrbrand.md §Chapter 4.
+
+- [ ] **🆕 Slime Shot color → status mapping canon ⭐** — Vs wiki "random" : Green slime = **Poison**, White slime = **Stun**, Blue slime = **Fear**. Pattern boss "color tell" canon → player anticipate via animation color. À implémenter dans Feyrbrand AI : 3 ability variants distincts, pas 1 random. À noter `combat/boss-tells.md` (à créer). Source: idem.
+
+- [ ] **🆕 Feyrbrand BLIND canon trait (unused Rose line) ⚠️** — Unused script line Disc 1 : Rose suggests Feyrbrand est aveugle, explique pourquoi ne détecte pas Dart+Rose cachés derrière rock. Canon trait dragon **présent script mais non-déclamé in-game**. Pour Damia : potentiel cinematic intro restaurer ce line ? À noter `quests/disc1-cold-open.md`. Source: fandom-feyrbrand.md §Trivia.
+
+- [ ] **🆕 Servi Slambert canon full name** — Lavitz' père : "Servi Slambert" canon (vs simple "Servi" prior docs). À refléter `party-members/Lavitz.md` + `party-members/Albert.md` (à créer) + `bosses/Greham.md` (à créer) backstory. Source: fandom-feyrbrand.md §Second Encounter.
+
+- [ ] **🆕 Strategy canon "defeat Feyrbrand BEFORE Greham" tactical** — Pattern joined encounter : Feyrbrand = damage dealer + status, Greham = secondary threat. À refléter Boss AI gameplay design canon (player priority order). Source: fandom-feyrbrand.md §Battle at Nest of Dragon.
+
+- [ ] **🆕 Imperial Sandora vassal Dragon canon Serdian War context** — Feyrbrand utilisé par Imperial Sandora vs Kingdom of Basil → contrôle Dragon = "balance of power broken" → Emperor Doel aggressive escalation canon. À refléter `lore/serdian-war.md` (à créer) + `bosses/Emperor Doel.md` motivations. Source: fandom-feyrbrand.md §Chapter 1.
+
+- [ ] **🆕 Imperial Sandora connection canon linguistic (kanji 竜 ryū/ryō)** — Japanese 竜 (ryū "dragon") double-reading "ryō" = "imperial" → Green-Tusked Dragon ↔ Imperial Sandora. Pattern canon naming linguistic. À noter `lore/canon-naming.md` (à créer) Japanese subtleties. Source: fandom-feyrbrand.md §Trivia 2.
+
+- [ ] **🆕 Stats divergences wiki vs fandom Feyrbrand ⚠️** :
+  - AT : wiki 18 vs fandom **21** (wiki tier 2 prévaut probable)
+  - MAT : wiki 12 vs fandom **14** (wiki tier 2 prévaut probable)
+    → À vérifier in-game Discord cadors. Adopter wiki canon. Source: comparaison sources.
+
+- [ ] **🆕 US/JP HP divergence Feyrbrand canon** — Disc 1 : 480 US / 600 JP. Disc 4 spirit : 8,000 US / 10,000 JP. Pattern systématique JP +25% HP (cohérent Evergreen Forest, Kamuy). Adopter US canon Damia. Source: fandom-feyrbrand.md tables.
+
+- [ ] **🆕 Feyrbrand EXP/Gold pooled with Greham canon** — Total joined encounter : 1,200 EXP + 100 Gold pour les 2. Wiki disait "0 direct" car Feyrbrand seul = 0, mais pool joined = 1,200. À implémenter reward aggregation logic. Source: fandom-feyrbrand.md vs wiki yield.
+
+- [ ] **🆕 Down Burst Wind elemental Repeat Item canon** — Drop 100% Feyrbrand both encounters (Disc 1 + Disc 4 spirit). Probable item utility Wind-elemental (offensive Repeat Item ?). À documenter `items/consumables.md` (à créer). Source: idem.
+
+- [ ] **🆕 Ability names canon officiels fandom** — "Tusk Attack" + "Slime Shot" + "Attack Power Up" = noms canon officiels (vs wiki ~community approximations "~Mandible Strike" / "~Status Slime"). Adopter fandom canon. Source: fandom-feyrbrand.md §Battle at Nest of Dragon.
+
+- [ ] **🆕 Attack Power Up trigger précisé canon** — "He **only uses it when he is hit with any magic based attack**" → confirme trigger Retaliate = magic damage (any type). Lift ambiguïté wiki "targeted by magic". À refléter Boss AI : trigger = damage type magic (vs targeting). Source: idem.
+
+- [ ] **🆕 Pellet + Meteor Fall Earth items canon mentionnés** — Wind-weak Feyrbrand → Earth attacking items ×1.5 damage. Pellet + Meteor Fall = canon Earth Repeat Items. À documenter `items/consumables.md` (à créer) elemental items list. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

@@ -5,19 +5,27 @@
 > **Sources** :
 >
 > - 🥈 [`_sources/lod-wiki-feyrbrand.md`](./_sources/lod-wiki-feyrbrand.md) — wiki LoD (stats + status immunity + abilities + Retaliate passive + Attacking power up stacking)
+> - 🥉 [`_sources/fandom-feyrbrand.md`](./_sources/fandom-feyrbrand.md) — fandom (Feyrbrand "Green-Tusked Dragon" canon name + first vassal Dragon TLoD + game opening encounter Dart-Rose meet + Mayfil Disc 4 spirit return optional boss + Slime Shot color→status mapping canon + Feyrbrand blind canon trivia + Servi Slambert canon full name + US/JP HP divergence)
 
 ## Statut
 
-🟡 **Draft post-ingestion wiki LoD** — fandom à ingérer pour cross-check + lore Feyrbrand-Greham bond + Disc 1 narrative arc.
+🟡 **Draft post-ingestion wiki LoD + fandom** — lore Feyrbrand-Greham + Disc 1 narrative arc + Disc 4 Mayfil spirit canon documenté.
 
 ## Identity canon
 
+- **Nom canon complet** : **Feyrbrand the Green-Tusked Dragon** (緑牙竜フェルブランド, _Ryokugaryū Feruburando_) — moniker canon JP/EN
 - **Espèce** : Dragon Wind canon (Jade Dragon Tribe)
+- **"First of several vassal Dragons"** canon — pattern dragons-vassaux (Feyrbrand + Regole + Divine Dragon + Mortal Dragon + Damia + Kanzas-related etc.)
 - **Lien Dragoon** : Source du **Jade Dragoon Spirit** canon (Wind Dragoon = Lavitz/Albert)
-- **Rider canon Disc 1** : **Greham**, ex-compagnon Servi (Lavitz' father) qui le trahit pour devenir Wind Dragoon
-- **Encounter unique** : Nest of Dragon Disc 1 scripted boss + 0% escape (combat obligatoire story)
-- **Mort canon** : tué par Lavitz/party → spirit becomes Lavitz Jade Dragoon Spirit canon (Eye merge mécanique)
-- **Pattern symbolique** : **premier dragon TLoD vu en jeu** → introduction visuelle "creatures of Soa" lore foundation
+- **Rider canon Disc 1** : **Greham**, ex-compagnon Lavitz' père **Servi Slambert** (canon full name), defector Basil → Sandora
+- **Connection Imperial Sandora canon linguistic** : kanji 竜 (ryū) double meaning "ryō" = "imperial" → Green-Tusked Dragon ↔ Imperial Sandora
+- **Vassal during Serdian War** : utilisé par Imperial Sandora vs Kingdom of Basil → contrôle dragon = balance of power broken → Emperor Doel aggressive
+- **2 encounters canon Disc 1 + 1 spirit encounter Disc 4** :
+  - Disc 1 cold open : Feyrbrand attaque Dart forêt + Rose first meet
+  - Disc 1 Nest of Dragon : boss joined avec Greham
+  - **Disc 4 Mayfil : Feyrbrand's spirit optional boss canon** ⭐ pride keeps him bound
+- **Pattern symbolique** : **premier dragon TLoD vu en jeu** → introduction visuelle "creatures of Soa" + premier reveal "Rose"
+- **Connue pour son poison** (canon descriptor)
 
 ## Stats canon
 
@@ -89,9 +97,48 @@
 
 ## Story beats canon
 
-- Premier "**big dragon**" visuel TLoD canon — pattern reveal "Dragons exist, dangerous"
-- Greham + Feyrbrand = **antagonist pair Disc 1** : Greham humain + dragon mount → after defeat, **Greham's body falls + Lavitz inherits Jade Dragoon Spirit** (eye merge canon)
-- Précurseur narratif : montre **bond Dragoon-Dragon canon** (cf. [`dragoons/dragons.md`](../dragoons/dragons.md))
+### Encounter #1 — Cold open Disc 1 (Forest near Seles) ⭐ first Dart-Rose meet
+
+1. Dart dans forêt près Seles, entend cavaliers
+2. Confronte 2 Sandora Soldiers
+3. **Feyrbrand appears + chases Dart deeper into forest**
+4. ⭐ **Rose saves Dart** — first canon meet Dart-Rose
+5. Rose : "tu viens d'être attaqué par un Dragon" + "je ne comprends pas pourquoi ils auraient besoin d'un Dragon pour détruire un village"
+6. Dart : "le village est ma ville natale" → court vers Seles (destruction setup)
+
+### Encounter #2 — Nest of Dragon Disc 1 (déjà documenté)
+
+- Premier "**big dragon**" visuel boss fight TLoD canon
+- Greham + Feyrbrand = **antagonist pair Disc 1** joined encounter
+- After defeat : **Greham's body falls + Lavitz inherits Jade Dragoon Spirit** (eye merge canon)
+
+### Encounter #3 — Mayfil "Death City" Disc 4 (optional boss spirit) ⭐ MAJEUR canon
+
+- **Feyrbrand's soul** still in world canon
+- **Rose explains** : "had too much pride as a Dragon for having been defeated by humans, unable to die and to find peace"
+- **Defeating spirit one more time → attachment severed → soul freed** canon
+- Pattern Disc 4 Mayfil : multiple Dragoons spirits bound by pride (à investiguer s'autres dragons spirits canon Mayfil)
+
+### Stats spirit canon Disc 4 (vs Disc 1)
+
+| Stat | Disc 1 (Nest of Dragon)   | Disc 4 (Mayfil Spirit)          |
+| ---- | ------------------------- | ------------------------------- |
+| HP   | 480 (US) / 600 (JP)       | **8,000 (US) / 10,000 (JP)** ⭐ |
+| AT   | 21 (fandom) / 18 (wiki)   | **100**                         |
+| DF   | 100                       | 100                             |
+| MAT  | 14 (fandom) / 12 (wiki)   | **80**                          |
+| MDF  | 80                        | 80                              |
+| SPD  | 50                        | **60**                          |
+| EXP  | 0 direct / 1,200 w/Greham | **4,000**                       |
+| Gold | 0 direct / 100 w/Greham   | **200**                         |
+
+→ Pattern scaling Disc 4 boss canon : ×16-17 HP / ×5-6 AT/MAT vs Disc 1 base.
+
+## Précurseur narratif canon
+
+- Montre **bond Dragoon-Dragon canon** (cf. [`dragoons/dragons.md`](../dragoons/dragons.md))
+- **Dragon pride canon** : refuse mort si défait par humans (Disc 4 spirit return)
+- **Vassal Dragon pattern canon** : Feyrbrand = "first of several" → Damia/Regole/Divine Dragon/Mortal Dragon all vassal
 
 ## Vision Damia (implémentation)
 
@@ -132,6 +179,47 @@
 - **"targeted by magic" = quoi exactement ?** Dragoon Magic ? Spells ? Magical items (Burn Out / Spark etc.) ? À investiguer Discord cadors. Probable : tout magic damage type.
 - **Counters Additions: No** : implique d'autres bosses canon SONT counter-able via specific Addition patterns. À investiguer mécanique "Counter Opportunities" canon Damia.
 - **Attacking power up : decay au fil du combat ?** Probable non (permanent buff). Si Feyrbrand stacks 10×, atteint 2× damage permanent ?
+
+## Cross-check fandom (compléments + divergences)
+
+**Confirmations utiles fandom** :
+
+- ⭐ **"Feyrbrand the Green-Tusked Dragon"** moniker canon JP/EN (緑牙竜フェルブランド)
+- ⭐ **"First of several vassal Dragons"** canon — pattern dragons-vassaux explicite
+- **Feyrbrand = Wind weak to Earth canon confirmé** : Pellet + Meteor Fall attacking items Earth → 1.5× damage. Cohérent `combat/elements.md` Wind↔Earth opposing pair canon.
+- **Servi Slambert canon full name** Lavitz' father (à refléter `party-members/Lavitz.md` à créer)
+- **Stratégie canon : "défait Feyrbrand BEFORE Greham"** — Feyrbrand HP modéré + dégâts physiques + status ailments = priorité tactical
+- **Imperial Sandora vassal dragon canon** explicite (Serdian War context)
+- **EXP/Gold pooled with Greham** : confirmé wiki disait 0/0 direct → 1,200 XP + 100 Gold via Greham canon
+
+**NEW canon fandom-only ⭐ MAJEUR** :
+
+- ⭐ **Mayfil Disc 4 spirit return canon optional boss** — Feyrbrand re-encounter spirit form Death City Mayfil. Stats spirit ×16+ HP scaling.
+- ⭐ **Rose's canon explanation pride spirit** : "had too much pride as a Dragon for having been defeated by humans, unable to die and to find peace" → defeated spirit Disc 4 = severed soul liberation pattern.
+- ⭐ **Slime Shot color → status mapping canon** (vs wiki "random") :
+  - **Green slime → Poison**
+  - **White slime → Stun**
+  - **Blue slime → Fear**
+    → Pattern boss "color tell" canon : player peut anticiper status via animation color.
+- ⭐ **Feyrbrand BLIND canon (unused Rose line)** — unused script line Rose Disc 1 cold open : Feyrbrand est aveugle, explique pourquoi ne détecte pas Dart+Rose cachés derrière simple rock. **Canon trait dragon** déclassé du dialogue final mais présent script.
+- ⭐ **"Magic = double-edged sword" Attack Power Up trigger précisé** : "He **only uses it when he is hit with any magic based attack**" → confirme trigger Retaliate = magic damage (vs ambiguïté wiki "targeted by magic")
+- **Connection Imperial Sandora canon linguistic** : kanji 竜 (ryū) ↔ "ryō" = "imperial" (Green-Tusked Dragon ↔ Imperial Sandora)
+- ⚠️ **Cold open Disc 1 first dragon TLoD encounter = first Dart-Rose meet canon** (avant Hellena Prison Lavitz)
+
+**Divergences stats wiki tier 2 vs fandom** :
+
+| Stat                    | Wiki LoD                                                    | Fandom                                                  | Notes                                                                         |
+| ----------------------- | ----------------------------------------------------------- | ------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| **AT**                  | 18                                                          | **21**                                                  | ⚠️ DIVERGENCE — wiki tier 2 prévaut probable (18)                             |
+| **MAT**                 | 12                                                          | **14**                                                  | ⚠️ DIVERGENCE — wiki tier 2 prévaut probable (12)                             |
+| **HP JP**               | (silent)                                                    | 600                                                     | Fandom canon JP version +25% HP                                               |
+| **HP spirit Mayfil JP** | (silent)                                                    | 10,000                                                  | Fandom canon JP version +25% HP spirit                                        |
+| **EXP direct**          | 0                                                           | 0 (1,200 w/ Greham)                                     | Wiki dit 0 direct, fandom clarifie pool avec Greham total                     |
+| **Gold direct**         | 0                                                           | 0 (100 w/ Greham)                                       | Idem                                                                          |
+| **Ability names**       | "~Mandible Strike" / "~Status Slime" / "Attacking power up" | **"Tusk Attack" / "Slime Shot" / "Attack Power Up"**    | Fandom donne les **noms canon officiels** (vs ~community approximations wiki) |
+| **Slime Shot mechanic** | "100% Fear/Poison/Stun random"                              | **Color-based : Green=Poison / White=Stun / Blue=Fear** | Fandom précise mapping color → status canon (vs wiki random simplification)   |
+
+→ **Wiki tier 2 prévaut pour stats numériques** (AT 18, MAT 12). **Fandom prévaut pour names + color-status mapping** (plus précis canon in-game).
 
 ## Liens transverses
 

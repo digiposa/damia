@@ -1790,6 +1790,53 @@
 
 - [ ] **🆕 Heat Blade Dart vs Fire Bird = same element resist** — Dart equip Heat Blade (Fire elemental) vs Fire Bird (Fire) = **0.5× resist canon** (same element). Pattern : switch back to non-elemental weapon (Bastard Sword) pour cette fight. À noter `items/equipment.md` Dart weapon switching strategy. Source: cross-ref combat/elements.md.
 
+### Bosses / Lore (Fire Bird fandom — JP name Rokkuhāken + Rose's lore tease + Dabas NPC + Wounded Virage prequel + Battle of Hoax + ability names officiels)
+
+- [ ] **🆕 Fire Bird JP name "ロックハーケン" (Rokkuhāken) "rock piton" canon ⚠️** — Divergence localisation majeure EN/JP : EN "Fire Bird" (Phoenix-like) vs JP "rock piton" (rock climbing tool, métaphore complètement différente). À investiguer rationale localisation Western. À documenter `lore/canon-naming.md` (à créer) Japanese subtleties. Source: [`features/bosses/_sources/fandom-fire-bird.md`](features/bosses/_sources/fandom-fire-bird.md).
+
+- [ ] **🆕 Rose's "first hand knowledge of Fire Bird" canon lore tease ⭐ MAJEUR** — Visit Volcano Villude Disc 1, Rose recognizes Fire Bird "as if she has first hand knowledge of it, or as if it were a legend of the past". **11k ans Dragoon lore foreshadowing canon avant Disc 2/3 reveal Rose**. À refléter `party-members/Rose.md` (à créer) character arc + `quests/disc1-rose-foreshadowing.md` (à créer). Source: fandom-fire-bird.md §Story.
+
+- [ ] **🆕 Dabas travelling merchant canon NPC** — Rescued par party in Volcano Villude after Wounded Virage. Possible recurring merchant NPC TLoD (Dabas pattern). À documenter `npcs/Dabas.md` (à créer) + appearances multiple locations à investiguer. Source: idem.
+
+- [ ] **🆕 Wounded Virage boss prequel canon Volcano Villude ⚠️ NEW boss** — Pre-Fire Bird boss canon Volcano Villude. **Wounded Virage** = boss canon distinct (vs Complete Virage / Virages standard). À documenter `bosses/Wounded Virage.md` (à créer). Pattern canon **2 bosses consecutive same location** (advisable save between). Source: idem.
+
+- [ ] **🆕 Phoenix resemblance canon Fire Bird ⭐** — "Fire Bird resembles the legendary bird Phoenix" → visual lore Phoenix mythology canon. À refléter `bosses/Fire Bird.md` design + lore reference. Source: fandom-fire-bird.md §Trivia.
+
+- [ ] **🆕 Battle of Hoax canon event Disc 1** — Mentioned fandom : "after the Battle of Hoax". Major story event Disc 1 (probable cinematic siege Hoax village ?). À documenter `quests/disc1-battle-of-hoax.md` (à créer). Cohérent worldmap Hoax (Serdio centre-est, nord). Source: idem.
+
+- [ ] **🆕 Soldier of Hoax warning Fire Bird canon NPC** — Après Battle of Hoax, un soldat warns Dart group of Fire Bird in Volcano Villude → setup canon next event. Pattern "NPC foreshadowing boss". À noter `locations/Hoax.md` (à créer). Source: idem.
+
+- [ ] **🆕 HP color states canon UI : blue / yellow / red ⭐** — Pattern canon TLoD : HP visualization 3 zones colors. Probable mapping : blue (>60%) / yellow (30-60%) / red (<30%). Affecte boss AI triggers (Dive Bomb red-only, Presto Fire blue/yellow only). À implémenter `HpState = 'blue' | 'yellow' | 'red'` + boss AI conditions. Source: fandom-fire-bird.md §Attacks.
+
+- [ ] **🆕 Fire Bird ability names officiels canon ⭐** — Fandom donne noms canon vs wiki ~community :
+  - **Volcanic Peck** (= wiki ~Bind and Peck)
+  - **Presto Fire** (= wiki ~Fiery Wing Beat ? probable, HP blue/yellow)
+  - **Summon** (= wiki ~Call Volcano Balls)
+  - **Dive Bomb** (= wiki ~Molten Dive ? probable, HP red only)
+  - **Fire Quake** ⚠️ mentioned comparative ("Peck and Fire Quake") non détaillé → possible ability supplémentaire canon non catalogué wiki
+    → Adopter fandom canon names dans Damia. À investiguer Fire Quake exact behavior. Source: idem.
+
+- [ ] **🆕 Volcano Ball HP divergence wiki 8 vs fandom 50 ⚠️ MAJEUR** — Factor 6× divergence. Wiki tier 2 prévaut probable (8 = très fragile one-shot Disc 1). À vérifier in-game ou Discord cadors. Source: comparaison sources.
+
+- [ ] **🆕 Fire Bird stats divergence wiki vs fandom ⚠️** :
+  - P. Attack : wiki 13 vs fandom 15
+  - M. Attack : wiki 16 vs fandom 19
+    → Wiki tier 2 prévaut probable. Source: idem.
+
+- [ ] **🆕 US/JP HP divergence Fire Bird canon** — 640 US / 800 JP (+25%). Pattern systématique JP +25% (cohérent Feyrbrand, Kamuy, Evergreen Forest). Adopter US canon Damia. Source: fandom-fire-bird.md table.
+
+- [ ] **🆕 "Red-Eye Stone" vs "Red-Eyed Stone" orthographe ⚠️** — Wiki "Red-Eye Stone" / fandom "Red-Eyed Stone". À vérifier in-game canon spelling. Wiki tier 2 prévaut probable. Source: idem.
+
+- [ ] **🆕 "Can Counterattack: Yes" fandom vs "Counters Additions: No" wiki ⚠️ conceptual divergence** — Wiki dit Counter Opportunities = 0 (pas counter Addition mechanism) mais fandom dit "Can Counterattack: Yes" (Retaliate canon term ?). Probable : Retaliate (wiki) = Counterattack (fandom) nomenclature divergente. **Counters Additions** = specific Addition counter mechanism distinct du Retaliate général. À clarifier nomenclature canon `combat/boss-passives.md` (à créer). Source: idem.
+
+- [ ] **🆕 Spear Frosts Repeat Item canon Water/Frost element Bale ⭐** — Magic Attack Item canon : **Spear Frosts** (probable Water-elemental projectile attack), **bought at Bale**, **used by Rose or Shana** (women bows + daggers ?). Confirme Fire weak to Water via Repeat Items canon. À documenter `items/consumables.md` (à créer) Spear Frosts entry + Bale shop. Source: fandom-fire-bird.md §Strategy.
+
+- [ ] **🆕 "Progressively stronger attacks as health gets lower" canon general pattern bosses ⭐** — Pattern canon TLoD master : bosses utilisent ability escalation HP-based. À documenter `combat/boss-ai.md` (à créer) general escalation pattern + appliquer à tous bosses. Source: idem.
+
+- [ ] **🆕 Lavitz low MDF profile canon explicit** — "Lavitz has low Magical Defense" → confirme stat profile Lavitz (knight = high physical, low magical). À refléter `party-members/Lavitz.md` (à créer) stat profile canon. Source: idem.
+
+- [ ] **🆕 Fire Quake ability canon — investigation needed ⚠️** — Mentioned indirectly "Peck and Fire Quake" comparative dans description Dive Bomb. Possible ability canon distincte Fire Bird non détaillée fandom. Pas dans wiki tier 2 listing. À investiguer Discord cadors / Prima Strategy Guide. Source: fandom-fire-bird.md §Attacks Dive Bomb.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

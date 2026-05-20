@@ -5,10 +5,11 @@
 > **Sources** :
 >
 > - 🥈 [`_sources/lod-wiki-fire-bird.md`](./_sources/lod-wiki-fire-bird.md) — wiki LoD (stats + 3 retaliations sequential + Volcano Ball boss extra + HP 61% threshold phase swap + Instigate Erupt max 3/4 damage)
+> - 🥉 [`_sources/fandom-fire-bird.md`](./_sources/fandom-fire-bird.md) — fandom (JP name Rokkuhāken "rock piton" + Rose's first hand knowledge canon tease + Dabas merchant rescued + Wounded Virage prequel boss + Phoenix resemblance + ability names officiels Volcanic Peck/Presto Fire/Summon/Dive Bomb/Fire Quake + HP color states blue/yellow/red + Volcano Ball HP 50 vs wiki 8 divergence)
 
 ## Statut
 
-🟡 **Draft post-ingestion wiki LoD** — fandom à ingérer pour cross-check + lore Fire Bird Volcano Villude + Disc 1 narrative arc.
+🟡 **Draft post-ingestion wiki LoD + fandom** — Story Chapter 1 arc canon documenté + Wounded Virage prequel boss canon + Dabas NPC merchant.
 
 ## Identity canon
 
@@ -123,12 +124,69 @@ Cycle: (1st) → (2nd) → (3rd) → (1st) → ...
 - Fire Bird = Fire weak to Water → utiliser Meru/Shana water magic OU Sparkle Arrow (Light counters Fire) — à confirmer
 - Heat Blade Dart = SAME element Fire → 0.5× resist par Fire Bird probable. Switch back to Bastard Sword ou non-elemental
 
-## Story beats canon
+## Story beats canon — Chapter 1 The Serdian War (fandom enrichi)
 
-- Boss canon Volcano Villude Disc 1 (probable mid-Disc 1, après Hellena Prison)
-- Drop Red-Eye Stone preparing canon Disc 4 Zieg Feld counter
+### Sequence canon Volcano Villude
 
-À documenter via fandom ingestion future.
+1. **Entry Volcano Villude** : party voit Fire Bird "in the distance" — air rougâtre haze + tension reveal
+2. ⭐ **Rose's first hand knowledge canon tease** : "recognizes the creature, **as if she has first hand knowledge of it, or as if it were a legend of the past**" → 11k ans lore tease canon (avant reveal Rose Disc 2/3)
+3. Fire Bird recognizes group → flies in → party escape par volcanic haze + caverns lava
+4. **Wounded Virage boss** (first boss Villude) — combat #1 ⚠️ NEW canon (Wounded Virage = boss precedent)
+5. **Dabas merchant travelling rescued** ⚠️ NEW NPC canon
+6. Exit volcano → **Fire Bird ambush** (boss #2 consecutive même location) — Fire Bird invoque fire spirits + spray fire/magma
+7. Combat Fire Bird → defeat → Red-Eye Stone drop
+
+⭐ **2 bosses consecutive Volcano Villude canon** : pattern unique TLoD Disc 1.
+
+### Phoenix resemblance + JP name canon
+
+- **Fire Bird resembles Phoenix** (legendary bird canon visual)
+- **JP name** : ロックハーケン (_Rokkuhāken_) = "**rock piton**" (rock climbing tool) ⚠️ divergence EN/JP completely different metaphor (EN "Fire Bird" vs JP "rock piton"). À investiguer rationale localisation.
+
+### Lore canon tease "known creature in Serdio"
+
+- ⚠️ **Soldier of Hoax warning canon** : après **Battle of Hoax** (event canon Disc 1), un soldat warn Dart group : "beware of Fire Bird in Volcano Villude". Confirme Fire Bird = **legendary local creature Serdio canon**.
+
+## Cross-check fandom (compléments + divergences)
+
+**Confirmations utiles fandom** :
+
+- **Fire Bird location Volcano Villude** confirmé
+- **Fire weakness counter canon** : Magical Attack Items effective, particulièrement **Spear Frosts** (Water/Frost Repeat Item, bought Bale) → cohérent Fire↔Water opposing pair
+- **Dart Fire element = "easier fight, takes less damage from some attacks"** → confirme **same-element resist 0.5×** canon (Dart Red Dragoon + Fire weapon vs Fire enemy)
+- **Lavitz low MDF profile canon** explicit : "Fire Dive and Volcano Ball Summon serious damage to Lavitz low Magical Defense"
+- **HP progressive escalation canon general pattern bosses** : "uses progressively stronger attacks as health gets lower" → pattern bosses canon master (multi-phase implicit)
+- **2 bosses consecutive Volcano Villude** confirmé (Wounded Virage + Fire Bird) + save game advice canon
+
+**NEW canon fandom-only** ⭐ :
+
+- ⭐ **JP name ロックハーケン (Rokkuhāken)** = "rock piton" — localisation divergence majeure EN/JP
+- ⭐ **Rose's first hand knowledge tease** : 11k ans lore foreshadowing canon
+- ⭐ **Dabas merchant travelling canon NPC** rescued Volcano Villude
+- ⭐ **Wounded Virage boss canon precedent** Volcano Villude (boss #1 avant Fire Bird boss #2)
+- ⭐ **Phoenix resemblance canon** visual lore
+- ⭐ **Battle of Hoax canon event** + Hoax soldier warns Fire Bird canon
+- ⭐ **HP color states canon** : blue (high) / yellow (mid) / red (low) — UI state mapping canon
+- ⭐ **Ability names officiels canon** : **Volcanic Peck** / **Presto Fire** / **Summon** / **Dive Bomb** / **Fire Quake** (mentioned indirectly comparative "Peck and Fire Quake")
+- **Dive Bomb HP red only canon** : low HP exclusive attack (≤25% probable)
+- **Presto Fire blue OR yellow HP canon** : phase swap implicite (mid HP)
+- **Summon "1-2 times max especially when red HP" canon** : limited usage canon
+
+**Divergences stats wiki vs fandom** :
+
+| Item / Stat             | Wiki LoD                                                                                    | Fandom                                                                          | Notes                                                                                                                                                                                                           |
+| ----------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Fire Bird P. Attack** | 13                                                                                          | **15**                                                                          | ⚠️ DIVERGENCE — wiki tier 2 prévaut probable (13)                                                                                                                                                               |
+| **Fire Bird M. Attack** | 16                                                                                          | **19**                                                                          | ⚠️ DIVERGENCE — wiki tier 2 prévaut probable (16)                                                                                                                                                               |
+| **Fire Bird HP JP**     | (silent)                                                                                    | 800                                                                             | Fandom canon JP +25% pattern systématique                                                                                                                                                                       |
+| **Volcano Ball HP**     | **8**                                                                                       | **50**                                                                          | ⚠️ DIVERGENCE MAJEURE — facteur 6×. À investiguer Discord. Wiki tier 2 prévaut probable (8)                                                                                                                     |
+| **Drop name**           | "Red-Eye Stone"                                                                             | "Red-Eyed Stone"                                                                | Orthographe variant (wiki tier 2 prévaut "Red-Eye Stone")                                                                                                                                                       |
+| **Can Counterattack**   | "No" (Counters Additions ?)                                                                 | **"Yes"**                                                                       | ⚠️ DIVERGENCE conceptuelle. **Possible** : Retaliate (wiki) = Counterattack (fandom canon term) — wiki Counter Opportunities = 0 mais Retaliate = counter mechanism different ? À clarifier nomenclature canon. |
+| **Ability names**       | "~Bind and Peck / ~Fiery Wing Beat / ~Molten Dive / ~Call Volcano Balls / ~Instigate Erupt" | **"Volcanic Peck / Presto Fire / Dive Bomb / Summon / (Fire Quake mentioned)"** | Fandom donne **noms canon officiels** (vs ~community wiki). Adopter fandom canon.                                                                                                                               |
+| **HP threshold**        | "HP > 61% / HP < 61%" exact                                                                 | **"blue / yellow / red"** colors                                                | Fandom = visual UI states (3 zones), wiki = exact 61%. Possible mapping : blue=high / yellow=mid / red=low.                                                                                                     |
+
+→ **Wiki tier 2 prévaut pour stats numériques** + thresholds exacts.
+→ **Fandom prévaut pour names canon + UI color states + lore narrative**.
 
 ## Vision Damia (implémentation)
 

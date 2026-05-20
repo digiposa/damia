@@ -1355,6 +1355,72 @@
 
 - [ ] **Spring Breath Town Ulara naming canon** — "Spring Breath" descriptor + Ulara name. Wingly hidden city pattern (cf. Forest of Winglies). À documenter `lore/wingly-cities.md` (à créer).
 
+### Items / Equipment (master canon TLoD — 5 slots, 7 weapon classes, 7 DG armors elemental)
+
+- [ ] **🆕 Data-model `Equipment`** — Définir types canon : `slot ∈ {weapon, headwear, body_armor, footwear, accessory}` + `restrictions` (character[], gender, custom). Probablement `src/data/equipment.ts`. Source: [`features/items/equipment.md`](features/items/equipment.md). Priorité: **haute** (préréquis combat).
+
+- [ ] **🆕 Data-model effets équipement modulaires** — Séparer `stats: { AT, DF, MAT, MDF, A_HIT, M_HIT, A_AV, M_AV, SPD }`, `passives: { onTurnStart, onPhysicalDamageTaken, onMagicalDamageTaken, onDeath, statusPrevention[], elementalReduction{element: factor} }`, `weaponEffect: { type: 'addition_element' | 'attack_element' | 'addition_sp_bonus' | 'status_proc' | 'aoe_physical' | 'hp_scaling' | 'self_damage', payload }`. Source: equipment.md §7. Priorité: **haute**.
+
+- [ ] **🆕 7 weapons classes character-locked canon** — Dart=sword, Lavitz/Albert=spear (lance/glaive/halberd), Shana/Miranda=bow, Rose=dagger/rapier, Haschel=fist/knuckle, Meru=hammer/mace, Kongol=axe. Conserver restrictions strictes canon. À modéliser dans `src/data/weapons/` par character. Source: equipment.md §2.
+
+- [ ] **🆕 7 Dragoon (DG) armors elemental immunity** — Red (Fire/Dart), Jade (Wind/Lavitz-Albert), Silver (Light/Shana-Miranda), Dark (Darkness/Rose), Blue (Water/Meru), Violet (Thunder/Haschel), Gold (Earth/Kongol). **Effet canon = reduces elemental magic damage TO 0** (pas -50% / -75% mais 0). À implémenter slot-based passive. Source: equipment.md §4.
+
+- [ ] **🆕 7 elemental damage reduction stones canon -50% magic** — Red-Eye (Fire/Fire Bird drop), Silver (Light/Shirley), Jade (Wind/Syuveil), Blue Sea (Water/**Damia** ⭐ project namesake), Violet (Thunder/Kanzas), Golden (Earth/Belzac), Darkness (Darkness/Kamuy). **Pattern canon : drops 100% des bosses Dragoon Dragon Campaign** = legacy story design. Source: equipment.md §6. Priorité: **moyenne** (post-bosses).
+
+- [ ] **🆕 Status prevention accessories canon** (8 single + 1 ALL) — Poison Guard / Active Ring (Dispiriting) / Panic Guard (Confusion) / Stun Guard / Bravery Amulet (Fear) / Magic Ego Bell (Bewitchment) / Protector (Arm-Blocking) / Talisman (Instant Death) / Destone Amulet (Petrification) / **Rainbow Earring** (ALL — Martel 40 Stardust). Status prevention = passive `statusPrevention[]` sur Accessory. Source: equipment.md §6.
+
+- [ ] **🆕 Wargod Calling / Ultimate Wargod auto-Additions canon** — Wargod Calling = auto mais dmg/SP halved + no Addition level-up (1000G Lohan/Fletz, Rouge chest, Kongol Black Castle 30%). Ultimate Wargod = auto full power (10,000G Lohan, Phantom Ship mini-game). Restriction canon : **not Shana/Miranda** (elles n'ont pas d'Additions). Source: equipment.md §6.
+
+- [ ] **🆕 Soul Eater Dart trade-off canon** — +75 AT mais -10% max HP/turn auto. Pattern unique "self-damage" canon. Drop Polter Sword 100% (boss?) / Loner Knight 2% (mob?). Décision Damia : conserver tel quel ou rééquilibrer ? Source: equipment.md §2 Dart table + §7 décisions.
+
+- [ ] **🆕 Detonate Arrow AoE canon — UNIQUE weapon AoE physical** — Seul weapon canon attacks all enemies simultaneously (Shana/Miranda, +50 AT, Chest Moon That Never Sets). Préserver unicité du pattern. Source: equipment.md §2 + §7.
+
+- [ ] **🆕 Destroyer Mace Haschel HP scaling canon** — ×1.5 damage si HP ≤50%, ×2 si ≤25%. Pattern "berserker" risk/reward. À implémenter via `weaponEffect: { type: 'hp_scaling', thresholds: [{ hpPct: 50, mult: 1.5 }, { hpPct: 25, mult: 2 }] }`. Source: equipment.md §2.
+
+- [ ] **🆕 Dragon Buster Rose story reward +100 AT canon** — Acquisition unique "Story: Moon That Never Sets" (pas shop, pas drop). À gérer comme cinematic story reward + flag inventory. Source: equipment.md §2.
+
+- [ ] **🆕 Halberd drop 50% Lavitz's Spirit canon** — Drop boss Disc 2 Phantom Ship (Lavitz spirit fight). Acquisition narrative-locked. À documenter dans `bosses/Lavitz Spirit.md` (à créer) + Phantom Ship dungeon. Source: equipment.md §2.
+
+- [ ] **🆕 Indora's Axe drop 100% Indora canon** — Kongol's ultimate axe via Indora boss (Wingly Forest). À documenter `bosses/Indora.md` (à créer). Source: equipment.md §2.
+
+- [ ] **🆕 Plate Mail drop 30% Greham canon** — Greham boss Nest of Dragon Disc 1 drop. Cohérent canon Wind Dragoon antagoniste Lavitz. À cross-référer `bosses/Greham.md` (à créer) + `locations/Nest of Dragon.md`. Source: equipment.md §4.
+
+- [ ] **🆕 Jeweled Crown drop 50% Lenus canon** — Lenus boss Undersea Cavern Disc 2 drop. Cohérent canon assassin half-Wingly. À cross-référer `bosses/Lenus.md` (à créer) + Undersea Cavern. Source: equipment.md §3.
+
+- [ ] **🆕 Phantom Shield drop 100% Magician Faust canon** — Mayfil Disc 3 boss reward. Best damage reduction accessory canon (-50% all damage). À cross-référer `bosses/Magician Faust.md` (à créer) + Mayfil. Source: equipment.md §6.
+
+- [ ] **🆕 Dragon Shield drop 20% Divine Dragon canon** — Divine Dragon Disc 3 boss reward. Best physical reduction accessory (-50% phys). Drop rate 20% = farming incentive. À cross-référer `bosses/Divine Dragon.md` (à créer) + Mountain of Mortal Dragon. Source: equipment.md §6.
+
+- [ ] **🆕 Armor of Legend / Legend Casque 10,000G shop top-tier canon** — Deningrad shop (Armor of Legend +127 DF -50% phys damage) + Lohan shop (Legend Casque +127 MDF -50% magic damage). Pattern "all-character endgame defense". Source: equipment.md §3 + §4.
+
+- [ ] **🆕 Magical Hat / Dragon Helm canon +50% max stat** — Magical Hat = +50% max MP (Drop Magician Bogy 2% + Chests Aglis/Tower of Flanvel). Dragon Helm = +50% max HP (Chest Mountain of Mortal Dragon + Tower of Flanvel). À implémenter passive `maxStatBoost: { stat: 'MP'|'HP', pct: 50 }`. Source: equipment.md §3.
+
+- [ ] **🆕 Angel Robe / Holy Ahnk revive 40% half HP stacking** — Both items grant 40% revive chance, **stack additively → 80% combined**. Pattern unique stacking canon explicite. À implémenter passive `onDeath: { revive: { chance, healPct } }` + règle additive stacking. Source: equipment.md §4 + §6.
+
+- [ ] **🆕 Sparkle Arrow canon "Attacks deal Light" ⚠️ divergence** — Tous autres weapons elemental disent "Additions deal" — Sparkle Arrow seul dit "Attacks deal". Vérifier source tier 1 (Discord/Wulves) : Shana n'a pas d'Additions canon, donc Light proc s'applique-t-il sur attack physique normale ? Source: equipment.md §2. Priorité: **moyenne** (édge case Shana mechanics).
+
+- [ ] **🆕 Thunder Fist + Special command bonus damage canon** — Wiki dit "Although the Thunder element has no opposite, the Thunder Fist can still apply bonus damage to Haschel's D-attack when he initiates Special." → confirme Thunder = standalone element + interaction Special command bonus. À cross-référer `combat/elements.md` (Thunder pas d'opposite) + `dragoons/mechanics.md` (Special command bonus damage interaction). Source: equipment.md §2.
+
+- [ ] **🆕 Martel Stardust rewards canon 4 items 10/20/30/40** — Physical Ring (10 stardust, +50% max HP), Amulet (20, +100% max MP), Wargod's Sash (30, +50% SP from Additions), **Rainbow Earring** (40, prevents ALL ailments). Total 100 stardust mais collect 50 max canon ? À vérifier source. À implémenter quest `quests/stardust-collection.md` (à créer). Source: equipment.md §6.
+
+- [ ] **🆕 "Holy Ankh" vs "Holy Ahnk" orthographe divergente wiki ⚠️** — Same wiki page écrit BOTH spellings (Body Armor table dit "Angel Robe stacks with Holy Ahnk" mais Accessory table dit "\*Holy Ankh"). À choisir canonical spelling Damia. Probablement "Holy Ankh" (égyptien original) ou "Holy Ahnk" (TLoD legacy ?). Source: equipment.md §4/§6.
+
+- [ ] **🆕 Inventaire cap 255 items canon** — Limite hardcoded TLoD. Décision Damia : conserver cap pour authenticité OU augmenter pour QoL ? Source: equipment.md §1.
+
+- [ ] **🆕 No equipment change in battle canon** — Restriction TLoD = équipement figé pendant battle. Décision Damia : conserver pour respect canon + cohérence stratégique. Source: equipment.md §1.
+
+- [ ] **🆕 Lion Fur Kongol initial unique canon** — +46 DF / +20 MDF dès le départ — stats massifs pour un initial equip. Pattern "Kongol tank différencié". À refléter `party-members/Kongol.md` (à créer). Source: equipment.md §4.
+
+- [ ] **🆕 Armor of Yore "men + Kongol" restriction canon** — Snowfield chest, prevents Poison/Stun/Arm-Blocking. **Restriction "Dart, Lavitz, Albert, Kongol"** (i.e. all men). Pattern restriction "men+Kongol" rare. Source: equipment.md §4.
+
+- [ ] **🆕 Shop distribution par disc/location canon** — Distribution complète des prix shop par ville (Bale/Lohan/Fletz/Furni/Donau/Fueno/Kazas/Deningrad/Phantom Ship/Vellweb/Kashua Glacier/Ulara/Forest of Winglies/Zenebatos/Rouge/Moon That Never Sets). À tabuler dans `locations/` shops sub-pages. Source: equipment.md tables.
+
+- [ ] **🆕 Albert hérite Jade DG Armor de Lavitz canon** — Pattern story "Lavitz mort Disc 1 → Albert Wind Dragoon successor → hérite équipement et DG Armor". 7 DG armors mais 8 wielders potentiels (Lavitz+Albert se partagent). À documenter `dragoons/wind.md` (à créer) + `party-members/Albert.md`. Source: equipment.md §4.
+
+- [ ] **🆕 Mode Survival équipement canon ?** — Cf. [SCOPE §7](SCOPE.md#7-modes-de-jeu) Survival : a-t-il les 5 slots ou simplifié style roguelite (random drops + upgrades) ? À trancher pour `survival/equipment.md` (à créer). Source: equipment.md §7.
+
+- [ ] **🆕 Repeat Items vs Equipment separation** — Equipment = 5 slots permanents. Repeat Items = consommables / Multi (ex Power Up/Down). Documentation Items canon à splitter clairement. À créer `items/consumables.md` + `items/key-items.md`. Source: equipment.md §1 + Donau Power Up/Down doc précédente.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

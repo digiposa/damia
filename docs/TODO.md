@@ -1837,6 +1837,42 @@
 
 - [ ] **🆕 Fire Quake ability canon — investigation needed ⚠️** — Mentioned indirectly "Peck and Fire Quake" comparative dans description Dive Bomb. Possible ability canon distincte Fire Bird non détaillée fandom. Pas dans wiki tier 2 listing. À investiguer Discord cadors / Prima Strategy Guide. Source: fandom-fire-bird.md §Attacks Dive Bomb.
 
+### Mobs (Air Combat — premier mob documenté + pattern canon mobs vs bosses)
+
+- [ ] **🆕 Catégorie `mobs/` créée canon** — Per-mob detailed pages (vs locations per-zone listings). Pattern documentation : stats + AI HP-conditional + status immunity 4✔/4✗ + encounters + drops. À documenter incrementally (les ~75 mobs canon TLoD). Source: [`features/mobs/README.md`](features/mobs/README.md).
+
+- [ ] **🆕 Pattern canon mobs vs bosses status immunity ⭐ MAJEUR** — Bosses : **all 8 status immune** / Mobs : **4 immune (Petrify/Bewitch/Arm Block/Dispirit)** + **4 vulnerable (Confuse/Fear/Poison/Stun)**. Pattern design canon TLoD : bosses absolument résistants vs mobs partiellement résistants. À implémenter `EnemyType = 'boss' | 'mob' | 'unique_monster'` + `statusImmunity` mapping selon type. Source: idem.
+
+- [ ] **🆕 Pattern AI canon mobs HP-conditional + chance-weighted ⭐** — "Minor enemies act on their turn based primarily on their current HP. Additional criteria, if any, is annotated on the table. Minor enemies have an equal chance to perform any eligible action unless otherwise indicated." À implémenter `MobAI { abilities: [{ hpRange, chance, action }] }` data structure. Source: idem.
+
+- [ ] **🆕 Air Combat canon data-model** — Wind, HP 1,080, AT 93, DF 160, MAT 76, MDF 120, SPD 50, A-AV 5%, M-AV 0%. Mob Disc 4 Moon That Never Sets. À implémenter `mobs/air-combat.ts` data. Source: [`features/mobs/_sources/lod-wiki-air-combat.md`](features/mobs/_sources/lod-wiki-air-combat.md).
+
+- [ ] **🆕 Air Combat 3 abilities HP-conditional canon** :
+  - ~Razor Tail : Any HP, 75% chance, 1× phys single
+  - Charging Spirit : HP > 25%, 25% chance, self-buff "preps Razor Tail OR All-out Attack! next turn"
+  - All-out Attack! : HP ≤ 25%, 25% chance, **3× phys single** ⚠️ low-HP berserker
+    Source: idem.
+
+- [ ] **🆕 All-out Attack! 3× damage low HP berserker pattern canon ⭐** — Pattern canon mob "wounded more dangerous" : 3× physical damage multiplier disponible HP ≤ 25%. Distinct des bosses (HP-conditional phase swap, pas damage ×3 escalation). À implémenter pattern dans data-model + mob AI. Source: idem.
+
+- [ ] **🆕 Charging Spirit self-buff "prepares next turn" canon ⚠️** — Self-buff sans damage immediate, prepare specific ability next turn. Pattern unique vs Attacking power up (Feyrbrand stacking) ou direct attacks. À implémenter `selfBuff.primesNextTurn: AbilityRef`. **Possible bug** : Charging Spirit HP > 25% prépare All-out Attack! (HP ≤ 25% required) — ambiguïté. À investiguer. Source: idem.
+
+- [ ] **🆕 Air Combat = recolor Wyvern canon visual asset reuse ⚠️** — Pattern canon TLoD : asset reuse + recolor. Wyvern original = mob Mountain of Mortal Dragon, Air Combat = recolor Disc 4 Moon. À documenter `mobs/Wyvern.md` (à créer) + asset-sharing pattern dans `mobs/README.md`. Source: lod-wiki-air-combat.md §Trivia.
+
+- [ ] **🆕 Air Combat "incapable of dealing magic damage" malgré MAT 76 ⭐ MAJEUR** — Pattern design canon "stat unused" : MAT 76 = vestigial/cosmetic stat, **0 magic abilities canon**. Implications :
+  - Spiritual Ring / Robe / magic defense gear inutile vs Air Combat
+  - Question : combien d'autres mobs canon ont MAT > 0 mais 0 magic abilities ?
+    À documenter `mobs/README.md` pattern + investigation systematic.
+    Source: idem.
+
+- [ ] **🆕 Air Combat encounters Moon That Never Sets canon (Disc 4 endgame)** — Submaps 615, 616, 617, 618. Formations canon : Air Combat solo (35%/35%/10%) + Air Combat+Swift Dragon (10%/20%/35%). 2 unused formations (283, 288). Pattern "unused content cut" canon. À documenter `locations/Moon That Never Sets.md` (à créer). Source: idem.
+
+- [ ] **🆕 Swift Dragon mob canon Moon That Never Sets** — Encounter partner de Air Combat formation 314. Pattern joined mob fights canon. À documenter `mobs/Swift Dragon.md` (à créer). Source: idem.
+
+- [ ] **🆕 A-AV 5% Air Combat canon** — Minor evasion stat (5% chance miss). Pattern : mobs ont parfois petite A-AV (vs bosses 0%). À noter `mobs/README.md` pattern. Source: idem.
+
+- [ ] **🆕 Drop rate 8% Repeat Item pattern mobs canon** — Air Combat drop Down Burst 8% (cohérent avec Evergreen Forest mobs all 8% drops). À investiguer : 8% = uniform mob drop rate canon ? Source: idem + cross-ref Evergreen Forest mobs.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

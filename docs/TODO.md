@@ -1507,6 +1507,50 @@
 
 - [ ] **🆕 Sallet + Tiara accuracy useful vs Unique Monsters canon** — Pattern accuracy importe vs Unique Monsters même si AT capped à 1 damage. Cohérent Long Bow / Virulent Arrow utiles vs Unique Monsters. Source: fandom-armor.md §Male/Female Headwear guidance.
 
+### Items / Accessories fandom complement — 49 accessories total + Therapy/Spirit/Mage Ring NOT in Dragoon form + Zieg=Fire + Virages=Light + Can't Combat status
+
+- [ ] **🆕 49 accessories total canon** confirmé via fandom. À utiliser comme count master pour exhaustivité base de données. Source: [`features/items/_sources/fandom-accessories.md`](features/items/_sources/fandom-accessories.md).
+
+- [ ] **🆕 Therapy Ring + Spirit Ring + Mage Ring DO NOT WORK in Dragoon form ⚠️ MAJEUR** — Canon fandom : "Therapy Ring, Spirit Ring and Mage Ring do not work when a character is in the Dragoon form." À implémenter via flag `passiveEffect.disabledInDragoonForm: boolean` (ou équivalent state-conditional). Impact gameplay : choix Dragoon form trade-off vs accessory passive regen. Affecte 3 accessories regen-per-turn. Source: fandom-accessories.md §Recovering. Priorité: **haute** (système Dragoon-state interaction).
+
+- [ ] **🆕 "Can't Combat" disputed status ailment canon** ⚠️ — Fandom : "It is disputable whether 'Can't Combat' is an actual Status Ailment". Wiki LoD utilise "Instant Death" pour Talisman. Hypothèse : "Can't Combat" = catégorie distincte (le character ne peut plus agir mais n'est pas mort), OU synonym in-game pour Instant Death. **Talisman prévient Can't Combat**. À documenter `combat/status-effects.md` (à créer) avec section dédiée "Can't Combat vs Instant Death : distinction canon ?". Source: fandom-accessories.md §Protective.
+
+- [ ] **🆕 Talisman useful vs 4 bosses Can't Combat canon** : Complete Virage, Mappi, Polter Armor, Kubila. À noter `bosses/Complete Virage.md`, `bosses/Mappi.md`, `bosses/Polter Armor.md`, `bosses/Kubila.md` (à créer). **Polter Armor** ⚠️ confirme fandom nom Soul Eater drop divergence (wiki dit "Polter Sword", fandom dit "Polter Armor" cohérent ici). Probable Polter Armor = correct canon. Source: fandom-accessories.md §Protective + fandom-weapons.md §Dart.
+
+- [ ] **🆕 Zieg Feld Disc 4 = Fire element / Red Dragoon canon ⚠️ MAJEUR** — Fandom : "Zieg Feld on Disc 4, against whom the Red-Eye Stone (obtained from Firebird on Disc 1) should be used". Confirme Zieg = Red-Eye Dragoon originel (Dart's father, ancien Dragon Campaign 11k ans pre-game, possessed by Melbu Frahma Disc 4). À documenter `bosses/Zieg.md` (à créer) + `dragoons/dragons.md` (Red-Eye Dragoon lineage Zieg → Dart) + `dragoons/fire.md` (à créer). Source: fandom-accessories.md §Element Stones.
+
+- [ ] **🆕 Virages laser attacks = Light element canon ⚠️ MAJEUR** — "all Virages, as their laser attacks are of the Light Element". Silver Stone useful counter vs all Virages. Cohérent canon Virage = 108ème espèce hostile vs Soa-création (Virage Light = anti-Wingly-tradition ?). À documenter `bosses/Virage.md` (à créer) + `combat/elements.md` (mob Virages = Light). Source: fandom-accessories.md §Element Stones.
+
+- [ ] **🆕 Wargod's Sash break-even point ≈ 40 SP canon** — Math : 40 × 1.5 = 60 = 40 + 20 (Spirit Ring formula). Pattern : Addition < 40 SP base → Spirit Ring +20/turn supérieur, Addition > 40 SP base → Wargod's Sash +50% supérieur. À documenter `dragoons/mechanics.md` §SP optimization. Source: fandom-accessories.md §Other.
+
+- [ ] **🆕 Fletz Jewellery Shop 4 accessories dédiés canon** : Platinum Collar (MP/physical) + Sapphire Pin (MP/magical) + Ruby Ring (SP/magical) + Emerald Earring (SP/physical). Pattern "Jewellery Shop" canon Fletz spécifique. À refléter `locations/Fletz.md` shop dedicated logic. Source: fandom-accessories.md §Recovering.
+
+- [ ] **🆕 Platinum Collar + Emerald Earring "superior" canon** vs Sapphire Pin/Ruby Ring : "Generally, characters are hit much more often with physical damage than with magical damage, and SP are usually easier to collect than MP" → balance hierarchy. À considérer pour Damia balance Mode Story. Source: idem.
+
+- [ ] **🆕 Holy Ankh 45-49% estimate fandom vs wiki 40% ⚠️** déjà flaggé Armor cross-check. Wiki tier 2 prévaut → adopter 40% canon Damia.
+
+- [ ] **🆕 00PARTS + Red Bird = Unique Monsters Gold farming canon** — "farming Unique Monsters such as 00PARTS and the Red Bird" pour Gold. 00PARTS = boss/mob canon name (lieu/spawn ?). À documenter `bosses/00PARTS.md` (à créer) + `bosses/Red Bird.md` (à créer) + `combat/unique-monsters.md` (à créer). Source: fandom-accessories.md §General.
+
+- [ ] **🆕 Ultimate Wargod "unrewarding item" canon analysis** — Fandom analyse 10,000G + Phantom Ship mini-game cost vs reward "easier or more relaxed battles" only → conserver mécanique mais flagger comme low-value strategic choice. Source: fandom-accessories.md §Additions.
+
+- [ ] **🆕 Wargod Calling "Half Damage and SP, Does not increase addition level"** confirmé fandom in-game description. Pattern : auto-Addition mode = trade-off complet (dmg/SP/leveling). Source: idem.
+
+- [ ] **🆕 "Emerald Ring" vs "Emerald Earring" naming divergence ⚠️** — Wiki LoD = "Emerald Ring", fandom = "Emerald Earring". À choisir canonical Damia. Cohérent avec "Ruby Ring" / "Platinum Collar" / "Sapphire Pin" (variety jewellery), "Earring" est aussi plausible (cohérent "Rainbow Earring"). À vérifier in-game (probable Earring = canon affiché). Source: fandom-accessories.md vs wiki-equipment.md.
+
+- [ ] **🆕 "Firebird" vs "Fire Bird" orthographe divergence ⚠️** — Wiki "Fire Bird" 2 mots, fandom "Firebird" 1 mot. Cf. enemy dropping Red-Eye Stone. À vérifier in-game.
+
+- [ ] **🆕 Magic Ego Bell + Stun Guard shops Queen Fury addition canon** — Fandom ajoute Queen Fury comme shop pour Magic Ego Bell + Stun Guard. Cohérent pattern weapons divergence Queen Fury (ship Disc 2) vs Phantom Ship (Disc 3) : possible que les 2 shops ships proposent les mêmes accessories (Queen Fury Disc 2 ≠ Phantom Ship Disc 3). À investiguer in-game. Source: fandom-accessories.md table.
+
+- [ ] **🆕 Dancer's Ring location "Kadessa" fandom probable confusion canon ⚠️** — Wiki Dancer's **Ring** = Chest Snowfield + Tower of Flanvel + Puck drop. Wiki Dancer's **Shoes** = Chest Kadessa + Cute Cat drop. Fandom met Kadessa dans Dancer's Ring → probable confusion noms similaires. Adopter wiki canonical (Dancer's Ring PAS dans Kadessa). Source: fandom-accessories.md table vs wiki-equipment.md.
+
+- [ ] **🆕 Spirit Cloak "Fire Spirit (I) + Fire Spirit (II)" wiki vs Fire Spirit fandom canon** — Wiki granulaire 2 mobs canon ("Fire Spirit (I)" 10% + "Fire Spirit (II)" 2%). Fandom simplifie 1 enemy. Wiki tier 2 prévaut probable. À documenter `mobs/Fire Spirit I.md` + `mobs/Fire Spirit II.md` (à créer). Source: idem.
+
+- [ ] **🆕 Stardust progression Martel = 100 Stardust max canon** confirmé fandom (4 items × 10/20/30/40 = 100 cumulé). Corrige TODO précédent "50 max ?". Source: fandom-accessories.md §Improving.
+
+- [ ] **🆕 Knight Shield drops "Fruegel" 100% (boss) + Flabby Troll 2% + Dragon Soldier 2%** wiki canon (fandom moins exhaustif). Fruegel = boss Hellena Prison canon (à documenter `bosses/Fruegel.md` à créer). Source: wiki-equipment.md.
+
+- [ ] **🆕 In-game descriptions canon i18n master** — Fandom liste les "In-game Description" texts canon pour chaque accessory ("Avoids the abnormal status X", "Raises Y", "When Z damaged, ..."). À utiliser comme source i18n EN canonical Damia. Source: fandom-accessories.md entire table.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

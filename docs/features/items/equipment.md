@@ -7,10 +7,11 @@
 > - 🥈 [`_sources/lod-wiki-equipment.md`](./_sources/lod-wiki-equipment.md) — wiki LoD (tables complètes weapons/headwear/body armor/footwear/accessories + acquisition)
 > - 🥉 [`_sources/fandom-weapons.md`](./_sources/fandom-weapons.md) — fandom Weapons (46 total weapons confirmé + sell prices + tactical commentary + Unique Monsters 1-damage cap mechanic)
 > - 🥉 [`_sources/fandom-armor.md`](./_sources/fandom-armor.md) — fandom Armor (53 armor pieces total + canon name "Dragon Armor" pas "Dragoon Armor" + Fort Magrad chest location + Angel Robe + Holy Ankh 45-49% revive chance + Faust boss canon référencé)
+> - 🥉 [`_sources/fandom-accessories.md`](./_sources/fandom-accessories.md) — fandom Accessories (49 accessories total + Therapy/Spirit/Mage Ring **NOT working in Dragoon form** + Zieg Feld=Fire element Disc 4 + Virages=Light element + Wargod's Sash break-even 40 SP + 4 Fletz Jewellery Shop accessories canon)
 
 ## Statut
 
-🟡 **Draft post-ingestion wiki LoD + fandom weapons + fandom armor** — fandom accessories à ingérer. Discord cadors restant à consulter pour formules exactes (gain stats par level, etc.). Décisions Damia à trancher.
+🟡 **Draft post-ingestion wiki LoD + fandom weapons + fandom armor + fandom accessories** — Discord cadors restant à consulter pour formules exactes (gain stats par level, etc.). Décisions Damia à trancher.
 
 ## 1. Système canon (récap haut niveau)
 
@@ -244,6 +245,43 @@ Tous **drop 100% des bosses Dragoon** (boss originaux Dragon Campaign 11k ans pr
 | Rainbow Earring | 40            | Prevents ALL status ailments ⚠️ broken |
 
 → **Cumulé = 100 Stardust** (mais canon collect 50 max ?). À vérifier source canon.
+
+### Cross-check fandom Accessories
+
+**Confirmations utiles** :
+
+- **49 accessories total canon** confirmé fandom (count master)
+- **In-game descriptions canon i18n** : chaque accessory a une description courte canon ("Avoids the abnormal status X", "Raises Y", "When Z damaged, ...") — utile pour i18n Damia
+- **Therapy Ring / Spirit Ring / Mage Ring 10% HP/MP + 20 SP per turn confirmé**
+- **Wargod's Sash break-even ≈ 40 SP** canon : addition < 40 SP → Spirit Ring +20/turn better, addition > 40 SP → Wargod's Sash +50% better. Math : 40 × 1.5 = 60 = 40 + 20 (Spirit Ring formula). Pattern à utiliser pour optimization Damia
+- **Fletz Jewellery Shop = 4 accessories canon dédiés** (Platinum Collar physical→MP, Sapphire Pin magic→MP, Ruby Ring magic→SP, Emerald Earring physical→SP). À refléter `locations/Fletz.md` shop dedicated. Pattern "Jewellery Shop" canon Fletz spécifique.
+- **00PARTS Red Bird = Gold farming Unique Monsters canon** : noted dans gear cost recovery. À documenter `combat/unique-monsters.md` (à créer) + `bosses/00PARTS.md` (à créer) + `bosses/Red Bird.md` (à créer).
+- **Stardust progression Martel = 4 items à 10/20/30/40 = 100 Stardust max** confirmé fandom (donc collect 100 max canon, pas 50)
+
+**NEW canon mechanics fandom-only** ⚠️ **CRITIQUES** :
+
+- ⚠️ **Therapy Ring / Spirit Ring / Mage Ring NE FONCTIONNENT PAS en Dragoon form** ⚠️ MAJEUR canon mechanic : "Therapy Ring, Spirit Ring and Mage Ring do not work when a character is in the Dragoon form." → à implémenter logique `passiveEffect.disabledInDragoonForm: boolean` pour ces 3 accessories
+- ⚠️ **"Can't Combat" disputed status ailment canon** : fandom indique "It is disputable whether 'Can't Combat' is an actual Status Ailment" → wiki dit "Instant Death", fandom suggère c'est une catégorie séparée. **Talisman** prévient Can't Combat. À documenter `combat/status-effects.md` (à créer) : Can't Combat ≠ Instant Death possiblement.
+- ⚠️ **Talisman "particularly useful vs Complete Virage, Mappi, Polter Armor, Kubila"** bosses canon — 4 bosses utilisant Can't Combat / Instant Death effects. À noter `bosses/Complete Virage.md`, `bosses/Mappi.md`, `bosses/Polter Armor.md`, `bosses/Kubila.md` (à créer).
+- ⚠️ **Zieg Feld Disc 4 = Fire element canon** ⚠️ MAJEUR : "Zieg Feld on Disc 4, against whom the Red-Eye Stone (obtained from Firebird on Disc 1) should be used". Confirme Zieg = Red Dragoon (cohérent canon Dart's father + Red-Eye Dragoon originel Dragon Campaign 11k ans pre-game).
+- ⚠️ **Virages laser attacks = Light element canon** : "all Virages, as their laser attacks are of the Light Element" → Virage bosses canon multiple + Silver Stone useful counter.
+- ⚠️ **Faust drops Phantom Shield** canon (déjà dans wiki, confirmé fandom)
+- ⚠️ **Holy Ankh 45-49% revive chance fandom estimate** vs wiki 40% (déjà flaggé Armor cross-check)
+
+**Divergences nommage / locations vs wiki LoD** :
+
+| Item / Element                     | Wiki LoD                                                       | Fandom                                                                    | Notes                                                                                            |
+| ---------------------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| **Emerald Ring / Emerald Earring** | **"Emerald Ring"**                                             | **"Emerald Earring"**                                                     | ⚠️ DIVERGENCE naming — wiki "Ring", fandom "Earring". À choisir canonical (probable wiki "Ring") |
+| **Bandit's Ring location**         | "Home of Giganto" / Drake the Bandit 30% / Gangster 2%         | "Drake the Bandit (30%), Home of Gigantos, Gangster (2%)"                 | "Home of Giganto" vs "Home of Gigantos" — minor orthographe (singular vs plural)                 |
+| **Knight Shield drop Fruegel**     | Drop: Fruegel (100%) + Flabby Troll (2%) + Dragon Soldier (2%) | Drop: Fruegel + Flabby Troll (2%) sans rate Fruegel + sans Dragon Soldier | Wiki plus exhaustif drops                                                                        |
+| **Magic Ego Bell shops**           | Fletz, Phantom Ship + Chest Mayfil                             | Fletz, Mayfil, Phantom Ship, **Queen Fury**                               | ⚠️ Fandom ajoute Queen Fury (cohérent pattern Phantom Ship ↔ Queen Fury ship divergence)         |
+| **Stun Guard shops**               | Bale, Fletz, Phantom Ship + Chest Marshland, Mayfil            | Bale, Fletz, Marshlands, Mayfil, Phantom Ship, **Queen Fury**             | Idem Queen Fury ajouté                                                                           |
+| **Dancer's Ring locations**        | Chest: Snowfield + Tower of Flanvel + Puck 2% drop             | **Kadessa**, Puck (2%), Snowfield, Tower of Flanvel                       | ⚠️ Fandom ajoute Kadessa (confusion possible avec Dancer's **Shoes** qui = Kadessa wiki)         |
+| **Red-Eye Stone enemy**            | "Fire Bird"                                                    | **"Firebird"**                                                            | Orthographe variant — un mot vs deux mots                                                        |
+| **Power Wrist drop**               | "Kongol (Hoax) (100%)" + shop Lohan/Fletz                      | "Fletz, Lohan, Kongol (Hoax)"                                             | Cohérent (sans rate fandom)                                                                      |
+| **Wargod Calling Kongol drop**     | Kongol (Black Castle) 30%                                      | Kongol (Black Castle) (30%) confirmé                                      | OK                                                                                               |
+| **Spirit Cloak Fire Spirit**       | Fire Spirit (I) 10% + Fire Spirit (II) 2%                      | Fire Spirit (10%)                                                         | Wiki plus granulaire (2 enemies différents)                                                      |
 
 ## 7. Vision Damia (implémentation)
 

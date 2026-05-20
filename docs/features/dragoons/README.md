@@ -22,15 +22,16 @@ Légende : ⚪ à spec — 🟡 draft — 🟢 validé — 🔵 implémenté
 
 Les fichiers ci-dessous sont créés au fil de la couverture (création paresseuse).
 
-| Aspect                                          | Fichier              | Statut             |
-| ----------------------------------------------- | -------------------- | ------------------ |
-| Obtention (event chains, conditions, locations) | `obtention.md`       | ⚪ pas encore créé |
-| Stats (HP/MP/attaques par Dragoon)              | `stats.md`           | ⚪ pas encore créé |
-| Transformations (mécanique, jauge MP, durée)    | `transformations.md` | ⚪ pas encore créé |
-| Additions Dragoon (combos)                      | `additions.md`       | ⚪ pas encore créé |
-| Magic Dragoon (sorts par élément)               | `magic.md`           | ⚪ pas encore créé |
-| Progression (DLV, level up)                     | `progression.md`     | ⚪ pas encore créé |
-| Lore (Dragon Campaign, Winglies, history)       | `lore.md`            | ⚪ pas encore créé |
+| Aspect                                          | Fichier              | Statut                     |
+| ----------------------------------------------- | -------------------- | -------------------------- |
+| **Dragons (créatures)**                         | **`dragons.md`**     | **🟡 draft (wiki ingéré)** |
+| Obtention (event chains, conditions, locations) | `obtention.md`       | ⚪ pas encore créé         |
+| Stats (HP/MP/attaques par Dragoon)              | `stats.md`           | ⚪ pas encore créé         |
+| Transformations (mécanique, jauge MP, durée)    | `transformations.md` | ⚪ pas encore créé         |
+| Additions Dragoon (combos)                      | `additions.md`       | ⚪ pas encore créé         |
+| Magic Dragoon (sorts par élément)               | `magic.md`           | ⚪ pas encore créé         |
+| Progression (DLV, level up)                     | `progression.md`     | ⚪ pas encore créé         |
+| Lore (Dragon Campaign, Winglies, history)       | `lore.md`            | ⚪ pas encore créé         |
 
 ## Patterns transverses
 

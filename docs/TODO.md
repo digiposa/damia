@@ -760,6 +760,32 @@
 
 - [ ] **Wink double-rescue canon** (Disc 2 Donau + Disc 3 Younger Bardel) — pattern Lloyd "saviour figure" établit trust durable. Important pour Disc 3 Crystal Palace kidnap context. À refléter `lore/lloyd-arc.md` (à créer).
 
+### Dragons (créatures canon, lore foundational TLoD)
+
+- [ ] **Data-model Dragon canon** — `Dragon { id, name, element, eyes: 1-7, status: alive|dead|spirit, location?, owner?: DragoonId }`. 7 anciens 6-eye + 1 Unnamed 7-eye + Michael 5-eye Darkness + Divine Dragon (king) + 3 vivants present + 1 carcass Black Castle = ~13 Dragons documentés canon. Source: [`features/dragoons/dragons.md`](features/dragoons/dragons.md).
+
+- [ ] **Dragoon command rule canon** — `canCommand(dragoon, dragon) = sameElement && spirit.eyes > dragon.eyes`. Element match + Spirit's source Dragon had MORE eyes que target. Exemple canon : Rose 6-eye Darkness DS → command Michael 5-eye Darkness ✅. À implémenter `dragoons/command-rule.md` (à créer).
+
+- [ ] **Hierarchy eye count canon (1-7 + Divine king)** — 6-eye = elite Dragon Campaign tier (7 anciens élémentaux), 7-eye = top tier (Unnamed), Divine Dragon = king (eye count unspecified, super-tier). Lesser Dragons (1-3) existent canon mais non documentés. À refléter design Damia (le code) — visual Dragon model 6 eyes = standard, 7 = special.
+
+- [ ] **Red-Eyed Dragon "eyes actually green" canon** — design détail canon : nom "Red-Eyed" mais les yeux sont **GREEN**. Important pour design visual Damia (le code) — ne pas confondre nom et apparence.
+
+- [ ] **Michael — Rose's vassal Dragon canon** — Darkness 5-eye Dragon, fought Wingly + Virage Dragon Campaign. Lore character à documenter `dragoons/lore/michael.md` ou `bosses/Michael.md` (à créer si apparaît in-game).
+
+- [ ] **Unnamed 7-eye Dragon canon** — fight contre Divine Dragon, defeated. Lore-only probable. À investiguer canon source supplémentaire.
+
+- [ ] **Deceased Dragon Black Castle Kazas canon** — Dragon mort harvested for magical energy. Cohérent Doel magical research canon. Possible source Sandora power. Implication lore : Sandora exploite Dragon mort = canon mécanique Dragoon Spirit potentielle ? À investiguer + cross-ref [Kazas.md](features/locations/Kazas.md) + [Emperor Doel.md](features/bosses/Emperor Doel.md).
+
+- [ ] **Magical Gem vs Dragoon Spirit Stone naming canon** — wiki Dragons dit "magical gem" (drop Dragon mort), Vellweb anciens drop "Spirit Stone" (Golden Stone, Blue Sea Stone). **Même item canon ou distinction** ? À clarifier `dragoons/obtention.md` (à créer).
+
+- [ ] **Timeline divergence canon** — wiki Dragons "~11,682 ans ago" vs autres pages "11,000 ans". Probable approximations canon — reconcilier `lore/timeline.md` (à créer) ou `dragoons/dragons.md`.
+
+- [ ] **Pattern 7 anciens Dragoons élémentaux 6-eye** — tous les 6 anciens Dragon Campaign Dragons sont 6-eye (coïncidence canon ou design intentionnel ?). 7th : **Red-Eyed Dragon → Zieg Feld** (Dart's father, Disc 4 reveal canon). Implication : **Zieg = 7ème ancien Dragoon canon** (cohérent Dragon Campaign 7 Dragoons folklore Ute).
+
+- [ ] **Dragons "many can fly" canon** — pas tous. Implication design Damia : Dragons mobiles (Feyrbrand forest moving), boss aériens (Divine Dragon flies), Dragons terrestriaux peut-être (Regole sea).
+
+- [ ] **3 vivants Dragons present canon : Feyrbrand + Regole + Divine Dragon** — bosses canon, à documenter chacun (`bosses/Feyrbrand.md`, `bosses/Regole.md`, `bosses/Divine Dragon.md`). Stats + abilities + drops à compléter via ingestion bosses pages.
+
 ### Locations + Story / Lore (Donau fandom — 3 visits canon + relations clarifiées + Queen Fury)
 
 - [ ] **⚠️ MÉTA leçon ingestion** : éviter les déductions/suppositions hors-canon dans les notes synthèse. Exemple bug self-introduit : ingestion wiki Donau initial avait ajouté "(Lynn's mother probable)" sur Kate alors que wiki LoD ne précisait **pas** la relation. Fandom a ensuite révélé Kate = Lynn's fiancée. **Pattern à éviter** : si la source n'indique pas X, ne pas l'inférer dans la doc — marquer "relation non précisée" plutôt que deviner. À documenter dans `meta/ingestion-rules.md` (à créer) ou README features.

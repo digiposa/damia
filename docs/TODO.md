@@ -1754,6 +1754,42 @@
 
 - [ ] **🆕 Pellet + Meteor Fall Earth items canon mentionnés** — Wind-weak Feyrbrand → Earth attacking items ×1.5 damage. Pellet + Meteor Fall = canon Earth Repeat Items. À documenter `items/consumables.md` (à créer) elemental items list. Source: idem.
 
+### Bosses / Mechanics (Fire Bird — boss Disc 1 Volcano Villude, source Red-Eye Stone + Sequential Retaliation 3-cycle + Volcano Ball Boss Extra + HP 61% phase swap)
+
+- [ ] **🆕 Fire Bird canon data-model** — Fire, HP 640, AT 13, DF 80, MAT 16, MDF 80, SPD 45, A-AV/M-AV 0%. Boss Volcano Villude Disc 1. À implémenter `bosses/fire-bird.ts` data. Source: [`features/bosses/_sources/lod-wiki-fire-bird.md`](features/bosses/_sources/lod-wiki-fire-bird.md). Priorité: **moyenne**.
+
+- [ ] **🆕 Fire Bird source canon Red-Eye Stone 100% drop ⭐** — Confirmé pattern "7 stones elemental from canon bosses". Red-Eye Stone = Fire damage reduction -50% magic. Stratégie canon : récupérer Disc 1 pour Disc 4 Zieg Feld counter. Source: idem + [`items/equipment.md`](features/items/equipment.md).
+
+- [ ] **🆕 Sequential Retaliation 3-cycle pattern canon ⭐ MAJEUR NEW vs Feyrbrand** — Vs Feyrbrand single Retaliate type, Fire Bird a **3 retaliates cycliques (1st → 2nd → 3rd → repeat)**. À implémenter `BossPassive { sequence: [action1, action2, action3], sequenceIndex, advance: () => index = (index+1) % 3 }`. Pattern boss tactical canon "setup-payoff" multi-stage. Source: idem.
+
+- [ ] **🆕 Retaliate trigger by Addition (vs magic) canon ⚠️ NEW pattern diversity** — Feyrbrand trigger = magic damage. Fire Bird trigger = **"targeted by Addition"**. Pattern : boss design diversity = différentes player actions triggers. À implémenter trigger type generic enum `RetaliateTrigger = 'magic' | 'addition' | 'physical' | 'hp_threshold'`. Source: idem.
+
+- [ ] **🆕 "Has a chance to trigger" probabilistic Retaliate ⚠️** — Fire Bird Retaliates ne se trigger **pas systématiquement** (chance %). À investiguer % exact Discord cadors. Pattern : boss Retaliate avec chance probabiliste (vs Feyrbrand deterministic ?). Source: idem.
+
+- [ ] **🆕 Final Blow passive canon ⭐** — "The battle ends when Fire Bird's HP reaches 0". Pattern boss canon : "main boss = victory trigger" — extras (Volcano Balls) auto-disparaissent. À implémenter `BossPassive { onMainBossKilled: 'endBattle', extrasAutoRemove: true }`. Source: idem.
+
+- [ ] **🆕 HP 61% threshold phase swap canon ⭐ NEW** — Fire Bird : HP > 61% utilise Fiery Wing Beat (physical party 0.5×), HP < 61% utilise Molten Dive (Fire magic party 0.5×). À implémenter `Ability.conditions.hpPctMin/hpPctMax`. **61% exact** threshold canon (vs ronde 50%/25%). Source: idem.
+
+- [ ] **🆕 Volcano Ball "Boss Extra" canon ⭐ NEW pattern "summons"** — Boss Extra entities canon : Fire Bird summon ×4 Volcano Balls (HP 8 fragile, AT 12, MDF 100). 0 EXP / 0 Gold / no drops. À implémenter `BossExtra { spawnedBy: 'Fire Bird Call Volcano Balls', count: 4, entity: VolcanoBallStats }`. Pattern canon TLoD : main boss + extras summons distinct mécanique. À documenter `combat/boss-extras.md` (à créer). Source: idem.
+
+- [ ] **🆕 Instigate Erupt "max 3/4 damage" canon ⚠️** — Force all 4 Volcano Balls to Erupt mais **only 3 actually deal damage** (1 fail systématique). Pattern "imperfect AoE" canon. Déterministe ou random ? À investiguer. À implémenter `Ability { erupt: { totalTargets: 4, maxDamageHits: 3 } }`. Source: idem.
+
+- [ ] **🆕 Volcano Ball stats canon** — HP 8 (très fragile, one-shot Disc 1 typical), AT 12, DF 80, MAT 12, MDF 100, SPD 45, A-AV/M-AV 0%. Status immune ALL 8 (cohérent boss pattern). Drop Nothing. Pattern "fragile extras one-shot kill window". Source: idem.
+
+- [ ] **🆕 ~Bind and Peck canon ability** — Single target 1× phys, basic attack Fire Bird. Sans condition. Source: idem.
+
+- [ ] **🆕 ~Fiery Wing Beat canon ability** — Party 0.5× physical AoE, HP > 61% phase. Source: idem.
+
+- [ ] **🆕 ~Molten Dive canon ability** — Party 0.5× Fire magic AoE, HP < 61% phase. Source: idem.
+
+- [ ] **🆕 ~Erupt Volcano Ball ability** — Single target 1× physical. **Only triggered via Fire Bird's Instigate Erupt** (pas autonomous). Pattern "extra controlled by main". Source: idem.
+
+- [ ] **🆕 Volcano Villude location canon Disc 1** — Volcan Serdio (cohérent worldmap Serdio centre-sud). Boss Fire Bird scripted (submap 121). À documenter `locations/Volcano Villude.md` (à créer) + cross-reference Sapphire Pin chest Volcano Villude (cf. equipment.md). Source: idem.
+
+- [ ] **🆕 Strategy canon Fire Bird : Addition spam exploit cycle** — Sequential Retaliation déterministic cycle → player peut **exploiter cycle 1→2→3** : forcer Retaliate (1st) HP swap → forcer (2nd) Volcano Balls summoning → kill Balls avant (3rd) Instigate Erupt → repeat. Pattern gameplay intéressant à documenter `combat/boss-strategies.md` (à créer). Source: idem.
+
+- [ ] **🆕 Heat Blade Dart vs Fire Bird = same element resist** — Dart equip Heat Blade (Fire elemental) vs Fire Bird (Fire) = **0.5× resist canon** (same element). Pattern : switch back to non-elemental weapon (Bastard Sword) pour cette fight. À noter `items/equipment.md` Dart weapon switching strategy. Source: cross-ref combat/elements.md.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

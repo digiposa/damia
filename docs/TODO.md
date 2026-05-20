@@ -862,6 +862,67 @@
   - Possible dedicated cinematic flashback majeur Disc 4 endgame
   - À orchestrer `quests/disc4-vellweb-mausoleum.md` (à créer) + `quests/disc4-kadessa-flashback.md` (à créer)
 
+### Dragon Campaign fandom complement — narrative depth + new NPCs/items canon
+
+- [ ] **3 Cutscenes canon FMV Dragon Campaign** :
+  - **Cutscene 3** : Minister Noish Bale Disc 1 (Legend of the Dragoons)
+  - **Cutscene 6** : Rose's Memory Lidiera Disc 2 (final battle Kadessa flashback)
+  - **Cutscene 8** : Librarian Ute Deningrad Disc 3 (history détaillée)
+    → Pattern progressive story reveal Disc 1→2→3. À orchestrer fidèle Mode Story Damia. Source: [`features/dragoons/dragon-campaign.md`](features/dragoons/dragon-campaign.md).
+
+- [ ] **Diaz canon "Holy Emperor of Gloriano"** + supplies DS to Greham/Doel/Lenus canon — distributing 3 villain DS canon Disc 1-2 (setup antagoniste pour final Disc 4 reveal). À documenter `lore/emperor-diaz.md` (à créer).
+
+- [ ] **3 Divine Moon Objects canon post-war** distributed Serdio/Tiberoa/Mille Seseau royalties as Wingly peace offering :
+  - **Moon Mirror** (Mille Seseau, Tower of Flanvel sealed, Theresa key Disc 3) — confirmed canon
+  - **Serdio object** — à identifier (probable Basil royals)
+  - **Tiberoa object** — à identifier (King Zior royals Fletz)
+    → Humans **unaware of nature of power** canon. Implication : Moon Objects = setup pour Moon Child cycle ? Lien Charle Frahma Ulara reveal Disc 4. À documenter `lore/moon-objects.md` (à créer).
+
+- [ ] **Zieg+Rose love story canon Dragon Campaign** — Rose **fiancée de Zieg** canon, fell in love during Campaign. **Rose failed hold on to Zieg final battle** (trauma — refuse let go Dart Lidiera Disc 2 Phantom Ship). Cohérent narrative arc Rose Disc 2. À documenter `party-members/Rose.md` + cinematic Mode Story.
+
+- [ ] **Belzac+Shirley fondness canon** — Belzac had particular fondness for Shirley → died protecting her Kadessa Virage. Cohérent narrative tragique Belzac.md.
+
+- [ ] **Shirley canon enrichi** :
+  - **Convinced Kanzas to join Dragoons** (Kanzas bloodthirsty reputation)
+  - **Spirit Shrine of Shirley Serdio** + **Dragoni plant grows** canon
+  - **Tests Dart/Rose/Lavitz worthiness** Disc 1 (Shrine of Shirley arc, save Shana)
+  - **Meets group Vellweb** post-trials — **fixed original Dragoons' souls Vellweb away from Death City Mayfil** → released to heaven
+  - À documenter `bosses/Shirley.md` (à créer) + `locations/Shrine of Shirley.md` (à créer).
+
+- [ ] **Kanzas bloodthirsty canon** — Shirley convinced him join Dragoons (contrast personality). À refléter dans `bosses/Kanzas.md` (à créer).
+
+- [ ] **Syuveil canon "afraid of Mayfil"** — soul stayed Endiness post-death. **Does not appear FMV Disc 2 Rose Memory**. À documenter `bosses/Syuveil.md` (à créer).
+
+- [ ] **Damia canon mermaid heritage clarifié** — **daughter of human + mermaid** (vs "half-Mermaid" autres pages). 15 ans Dragon Campaign début. Outcast most of life. **Afraid alone → soul stayed Endiness** (cohérent fandom Damia Rose "pleads not leave alone"). À refléter dans Damia.md.
+
+- [ ] **Charle Frahma canon NPC** — Rose's friend canon, **gave the Choker** (11k ans stop-time mechanism). Famille name "Frahma" = lien Melbu Frahma ? Sister/relative possible. À documenter `lore/charle-frahma.md` (à créer) + lien Ulara Signet Sphere reveal Disc 4.
+
+- [ ] **Faust canon NEW NPC** — **Possibly most powerful Wingly ever** + Melbu's **2nd in command** + **Commander of Tower of Flanvel** + apparition same-power ability + **Vanishing Stone safeguard** created by Melbu against him. Possible boss canon Tower of Flanvel Disc 3 ? À documenter `bosses/Faust.md` (à créer).
+
+- [ ] **Vanishing Stone canon item** — Melbu Frahma created against Faust. Statut present inconnu. Possible item Disc 3-4 Tower of Flanvel arc. À documenter `items/key-items.md` (à créer).
+
+- [ ] **Spear Shooter canon Vellweb weapon** — Liberation Army weapon to **shoot down Wingly cities** (5 floating cities + Flanvel). Visible Vellweb background canon (fandom gallery). À documenter `locations/Vellweb.md` (à créer) + `lore/spear-shooter.md`.
+
+- [ ] **5/7 Dragoons died canon precise** — survivants : Rose (immortelle) + Zieg (petrified). Morts canon : Belzac + Shirley + Kanzas (Kadessa) + Damia (first) + Syuveil. 4 souls Vellweb (fixed by Shirley away from Mayfil) + Shirley Shrine separate.
+
+- [ ] **Zieg post-petrification narrative canon** :
+  - Spell **wore off 11k ans plus tard**
+  - **Married Claire Feld** + son **Dart born**
+  - **Black Monster attack Neet 18 ans pre-game** :
+    - Zieg takes them outside + **returns into village helping villagers**
+    - **Never seen again by Dart**
+    - Claire follows → also never seen again
+  - **Dramatic return Disc 4** canon (possessed by Melbu essence)
+    → À orchestrer cinematic Damia Mode Story Disc 4 endgame + cohérent Dart backstory `party-members/Dart.md`.
+
+- [ ] **Virage mysterious connection to Shana canon** — fandom dit "show mysterious connection". Lien Disc 3-4 reveal (Shana = Moon Child donc Virage related ?). À investiguer `bosses/Virage.md` (à créer) + `lore/moon-child-cycle.md`.
+
+- [ ] **Death City Mayfil canon** — Shirley fixed souls **away from Mayfil**, vers heaven instead. Implique Mayfil = destination naturelle souls = lieu purgatoire / underworld canon. Pattern Damia (le code) : Mayfil = lieu Disc 4 souls travel before "true death". À documenter `locations/Mayfil.md` (à créer).
+
+- [ ] **Quotes canon Minister Noish + Ute** — à utiliser pour scripts Mode Story Damia (Cutscene 3 Bale + Cutscene 8 Deningrad). Foundational lore narration verbatim canon.
+
+- [ ] **Pattern lore : "Frahma" surname canon** — Melbu Frahma (dictator) + Charle Frahma (Rose's friend). Famille canon Wingly ? Relatives ? À investiguer.
+
 ### Dragons fandom complement — Lenus/Greham Dragoons canon + Michael Black Burst + Dragon weapons
 
 - [ ] **REVEAL canon majeur — Lenus = Blue Sea Dragoon** (pas juste un boss !) — Lenus était une Dragoon Water Disc 2 canon (Regole = son vassal). Implication : **Lenus aurait pu être party member alternate**. Conflict avec Meru's Blue Sea Spirit inheritance Disc 2 post-Phantom Ship arc à reconcilier. À documenter `bosses/Lenus.md` (à créer) + corrections `party-members/Meru.md`. Source: [`features/dragoons/dragons.md`](features/dragoons/dragons.md) §Lenus.

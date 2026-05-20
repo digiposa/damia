@@ -1,8 +1,11 @@
 # Dragon Campaign
 
-> **War foundational TLoD** — légendaire conflit ~**11,000 ans pré-game** entre **Humans + species opprimées** vs **Winglies dictateurs**. **Diaz humain** rallies rebellion → declare war **Fort Magrad** → **Vellweb capital oppressed** + **Liberation Army training**. **Découverte canon Dragoon Spirit mechanism** : Dragon eyes merge into singular gem on death → harnessable. Conflit conduit aux **5 floating Wingly cities + Flanvel floating fortress** → final battle **Kadessa** (Wingly capital). **Final battle canon** : Kanzas self-sacrifice vs Super Virage, Michael (Rose's vassal) aerial Virage killer, **Zieg vs Melbu Frahma duel** (Dragoon form vs Crystal Sphere + Dragon Buster) → mutual fatal blow → **Melbu petrifies Zieg + embeds essence in Red-Eye DS** → both fall + Kadessa crumbles + Crystal Sphere broken → **Moon Child cycle starts**. **Belzac + Shirley tragic death scene** (Virage impale Belzac, Shirley arrow). **Victory for oppressed, great cost**.
+> **War foundational TLoD** — légendaire conflit ~**11,000 ans pré-game** entre **Humans + species opprimées** vs **Winglies dictateurs**. **Diaz Holy Emperor of Gloriano** rallies rebellion → declare war **Fort Magrad** → **Vellweb capital oppressed** + **Liberation Army training** + **Spear Shooter weapon vs Wingly cities**. **Découverte canon Dragoon Spirit mechanism** : Dragon eyes merge into singular gem on death → harnessable. Conflit conduit aux **5 floating Wingly cities + Flanvel floating fortress** → final battle **Kadessa** (Wingly capital). **Final battle canon** : Kanzas self-sacrifice vs Super Virage, Michael (Rose's vassal) aerial Virage killer, **Zieg vs Melbu Frahma duel** (Dragoon form vs Crystal Sphere + Dragon Buster) → Zieg dodge + impale Melbu through heart → Melbu petrification spell on Zieg → both plunge into depths + Crystal Sphere broken → **Moon Child cycle starts**. **Belzac + Shirley tragic death scene** (Virage impale Belzac protecting Shirley + Shirley arrow vs Virage laser). **5 of 7 Dragoons died** (survivants : Rose immortelle + Zieg petrified). **Post-war canon** : **3 Divine Moon Objects** distributed Serdio/Tiberoa/Mille Seseau royalties + 11k ans peace + petrification wore off → Zieg married Claire Feld → Dart born → Neet Black Monster attack → Zieg+Claire return village, never seen again by Dart.
 >
-> **Source canon** : 🥈 [`_sources/lod-wiki-dragon-campaign.md`](./_sources/lod-wiki-dragon-campaign.md)
+> **Sources canon** :
+>
+> - 🥈 [`_sources/lod-wiki-dragon-campaign.md`](./_sources/lod-wiki-dragon-campaign.md) — wiki LoD (events + mécanique DS eye-merge + scène finale Kadessa détaillée)
+> - 🥉 [`_sources/fandom-dragon-campaign.md`](./_sources/fandom-dragon-campaign.md) — fandom (Minister Noish + Ute quotes canon, 3 Cutscenes IDs, Diaz "Holy Emperor of Gloriano", Zieg+Rose love canon, Charle Frahma = Rose's friend gave Choker, Belzac+Shirley fondness, Shirley fixed souls Vellweb away from Mayfil, Kanzas bloodthirsty + Shirley convinced him, Syuveil+Damia afraid Mayfil/alone → souls stayed Endiness, Diaz supplies DS Greham/Doel/Lenus canon, Zieg post-petrification 11k ans + Claire Feld + Dart + Neet attack, Faust NPC Vanishing Stone, Spear Shooter Vellweb weapon, Virage Shana mysterious connection, 3 Divine Moon Objects, 5/7 Dragoons died canon)
 
 ## Statut
 
@@ -10,16 +13,18 @@
 
 ## Profil
 
-| Attribut            | Valeur                                                                                                          |
-| ------------------- | --------------------------------------------------------------------------------------------------------------- |
-| Type                | **War canon foundational** — Humans + oppressed species vs Winglies                                             |
-| Timing canon        | **~11,000 ans pré-game** (cf. Divine Tree Cycle reveal)                                                         |
-| Leader humain       | **Diaz** (human canon, before "Emperor" / before reborn via Crystal Sphere) → rallies + war declaration         |
-| Lieu déclaration    | **Fort Magrad** (Diaz speech canon)                                                                             |
-| Capital oppressed   | **Vellweb** (Liberation Army training base canon)                                                               |
-| Capital Wingly      | **Kadessa** (final battle target + coliseum oppression)                                                         |
-| Cibles guerre canon | **5 floating Wingly cities + Flanvel** (floating mobile fortress)                                               |
-| Outcome             | **Victory humans + oppressed**, **great cost** (Belzac/Damia/Syuveil/Kanzas dead, Zieg petrified, Shirley dead) |
+| Attribut            | Valeur                                                                                                                                                                                |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Type                | **War canon foundational** — Humans + oppressed species vs Winglies                                                                                                                   |
+| Timing canon        | **~11,000 ans pré-game** (cf. Divine Tree Cycle reveal)                                                                                                                               |
+| Leader humain       | **Emperor Diaz** — **"Holy Emperor of Gloriano"** canon (fandom) → rallies + war declaration → reborn antagoniste post-Crystal Sphere broken                                          |
+| Lieu déclaration    | **Fort Magrad** (Diaz speech canon)                                                                                                                                                   |
+| Capital oppressed   | **Vellweb** (Liberation Army training base canon + **Spear Shooter weapon** vs Wingly cities)                                                                                         |
+| Capital Wingly      | **Kadessa** (final battle target + coliseum oppression)                                                                                                                               |
+| Cibles guerre canon | **5 floating Wingly cities + Flanvel** (floating mobile fortress, commanded by Faust)                                                                                                 |
+| Dragoons Liberation | **7 canon** : Zieg (Fire/Red-Eye) + Rose (Darkness) + Belzac (Earth/Gold) + Shirley (Light/White-Silver) + Kanzas (Thunder/Violet) + Syuveil (Wind/Jade) + Damia (Water/Blue-Sea)     |
+| Outcome             | **Victory humans + oppressed**, **5 of 7 Dragoons died** canon (Belzac/Shirley/Kanzas Kadessa, Damia first, Syuveil ?) — **survivants** : Rose (immortelle Choker) + Zieg (petrified) |
+| Post-war canon      | **3 Divine Moon Objects** distributed Serdio/Tiberoa/Mille Seseau royalties + **11k ans peace** + **Diaz returned/reborn** Disc 1 (Doel/Lenus/Greham receive DS from him)             |
 
 ## History canon
 
@@ -123,38 +128,95 @@
 ### Résultat
 
 - **Victory for humans + all oppressed species** canon
-- **At great cost** :
-  - **4 anciens Dragoons morts** : Belzac (Gold), Damia (Blue-Sea), Syuveil (Jade), Kanzas (Violet) → souls à Vellweb
-  - **Shirley dead** (mais Spirit à Shrine of Shirley séparé)
-  - **Zieg "dead"** (petrified, soul embedded Red-Eye DS, Melbu's essence inside)
-  - **Rose survives immortelle** (Choker mechanic)
-  - **Diaz "dies"** mais reborn 11,000 ans plus tard canon (cf. Disc 1 Greham reveal + Doel "received power from reborn Diaz")
+- **5 of 7 original Dragoons died** canon (fandom précis) :
+  - **4 souls à Vellweb** : Belzac (Gold), Damia (Blue-Sea), Syuveil (Jade), Kanzas (Violet) — **fixed by Shirley away from Mayfil**
+  - **Shirley dead** (mais Spirit à Shrine of Shirley séparé, Dragoni plant grows)
+  - **Notable** : Damia + Syuveil **soul stayed on Endiness** (Damia afraid alone, Syuveil afraid Mayfil) — pas à Mayfil mais Vellweb tower spirits
+- **Survivants canon** :
+  - **Rose survives immortelle** (Choker Charle Frahma)
+  - **Zieg "dead"** (petrified curse, soul embedded Red-Eye DS, Melbu's essence inside) — **petrification wore off 11k ans plus tard** → mariage Claire Feld + fils Dart
+- **Diaz "dies"** mais **reborn/returned 11,000 ans plus tard** canon (supplies DS à Greham/Doel/Lenus — révélé Greham Disc 1)
 - Winglies unseated → **Human Age begins** canon
 - Cycle Moon Child started (compensation tragique)
+
+### Post-war canon (11k ans peace)
+
+#### 3 Divine Moon Objects canon
+
+**Winglies surrendered after Melbu Frahma's death** → as **sign of peace**, gave Humans **3 Divine Moon Objects** distributed aux **royalties des 3 human kingdoms** :
+
+| Kingdom          | Divine Moon Object canon                         | Statut Disc 1-4                                               |
+| ---------------- | ------------------------------------------------ | ------------------------------------------------------------- |
+| **Serdio**       | (object à identifier — Moon Gem ? Moon Dagger ?) | Probable Basil royals canon (Albert family ?)                 |
+| **Tiberoa**      | (à identifier)                                   | King Zior royals canon (Fletz)                                |
+| **Mille Seseau** | **Moon Mirror** canon (sealed Tower of Flanvel)  | Theresa = key, kidnapped Disc 3 par Lloyd (cf. Deningrad arc) |
+
+> 🆕 **Humans unaware of nature of Moon Objects power** canon. Implication : la "paix" Wingly = piège / setup pour Moon Child cycle ? À investiguer Disc 4 reveal Charle Frahma Ulara.
+
+#### Spear Shooter canon Vellweb
+
+- **Vellweb image canon (fandom gallery)** : "Vellweb, the ancient capital of the humans, with the **Spear Shooter, a weapon to shoot down Wingly cities**, in the background"
+- 🆕 **Spear Shooter** = weapon canon Liberation Army pour **shoot down floating Wingly cities** (5 floating cities + Flanvel)
+- Implications : Mécanique pour briser les 5 floating Wingly cities → fall canon
+- À documenter `lore/spear-shooter.md` (à créer) ou `items/key-items.md`
+
+#### Zieg post-petrification narrative canon
+
+1. **Spell eventually wore off** (~11k ans après Dragon Campaign)
+2. **Zieg married Claire Feld**
+3. **Son Dart born**
+4. **Black Monster attack Neet** (18 ans pre-game canon, cf. Dart fandom)
+5. Zieg **takes them outside** + **returns into village to help other villagers**
+6. **Never seen again by Dart** (left behind)
+7. **Claire follows husband back into village** → also never seen again by Dart
+8. **Dramatic return Disc 4** canon (Zieg possessed by Melbu Frahma's essence in DS = mecanique reveal)
+
+#### Diaz "returned" canon
+
+- Pre-Chapter 1 : **Emperor Doel takes orders from resurged Emperor Diaz** canon → re-igniting Serdian War
+- **Rose denies Diaz alive each time** (canon canon — Rose was witness 11k ans ago death)
+- Diaz canon **supplies Dragoon Spirits** to :
+  - **Greham** (Jade Dragoon canon Nest of Dragon Disc 1)
+  - **Emperor Doel** (Violet Dragoon canon Black Castle Disc 1)
+  - **Lenus** (Blue Sea Dragoon canon Tiberoa Disc 2)
+- Implication majeure : **Diaz canon antagoniste actif Disc 1-2** distribuant DS to enemies → setup pour Disc 4 reveal final boss
+
+## Cutscenes canon FMV Dragon Campaign
+
+Le canon TLoD expose la Dragon Campaign via **3 cinematics in-game** :
+
+| Cutscene #     | Lieu / locuteur                       | Disc   | Contenu canon                                                                                                           |
+| -------------- | ------------------------------------- | ------ | ----------------------------------------------------------------------------------------------------------------------- |
+| **Cutscene 3** | **Minister Noish (Bale castle)**      | Disc 1 | "Legend of the Dragoons" — exposition générale (wind = Diaz, 7 Dragoons, Human Age)                                     |
+| **Cutscene 6** | **Rose's Memory (Lidiera)**           | Disc 2 | Final battle Kadessa flashback — détaille Kanzas/Michael/Zieg/Belzac/Shirley deaths ; **Damia + Syuveil absents** canon |
+| **Cutscene 8** | **Librarian Ute (Deningrad Library)** | Disc 3 | History détaillée Dragon Campaign — Saint Imperial Gloriano scorched + Human Age + Moon That Never Sets 11k ans         |
+
+> 🆕 **Pattern canon : Story progressive reveal** Dragon Campaign via 3 cutscenes Disc 1 → 2 → 3, **chacune ajoute des informations**. Le joueur découvre l'histoire en couches narratives. À orchestrer fidèle en Damia (le code) Mode Story.
 
 ## Personnages canon Dragon Campaign
 
 ### Liberation Army leaders
 
-| Personnage  | Élément                                | Rôle Dragon Campaign                                        | Statut post-war                                                                                   |
-| ----------- | -------------------------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| **Diaz**    | (humain à l'époque)                    | Leader rebellion + war declarator + Liberation Army founder | "Mort" Kadessa → **reborn canon Disc 1-4** (Emperor Diaz reborn antagoniste)                      |
-| **Zieg**    | Fire (Red-Eye Dragoon)                 | Final fight vs Melbu Frahma                                 | **Petrified + Melbu essence embedded Red-Eye DS** → Dart hérite DS → Zieg possessed reveal Disc 4 |
-| **Rose**    | Darkness (Dark Dragoon)                | Combat with vassal Michael                                  | **Survives immortelle** (Choker 11k ans) — Black Monster role canon                               |
-| **Shirley** | Light (White-Silver Dragoon)           | Archer canon (magical arrow Virage)                         | **Dies Kadessa** (Virage attack) → Spirit Shrine of Shirley                                       |
-| **Belzac**  | Earth (Gold Dragoon)                   | Holds column up for Shirley protection                      | **Dies Kadessa** (Virage impale) → soul Vellweb                                                   |
-| **Damia**   | Water (Blue Sea Dragoon)               | First to die canon (cf. Damia.md, pre-Kadessa probable)     | **Dies Dragon Campaign** (first canon) → soul Vellweb                                             |
-| **Syuveil** | Wind (Jade Dragoon)                    | (à investiguer rôle exact)                                  | **Dies Dragon Campaign** → soul Vellweb                                                           |
-| **Kanzas**  | Thunder (Violet Dragoon)               | **Self-sacrifice vs Super Virage** Kadessa final battle     | **Dies Kadessa** (self-sacrifice) → soul Vellweb                                                  |
-| **Michael** | Darkness (5-eye Dragon, Rose's vassal) | Aerial Virage killer + special laser                        | Survives Dragon Campaign → centuries plus tard savage → killed by Rose                            |
+| Personnage  | Élément                                              | Rôle Dragon Campaign                                                                                                                          | Statut post-war                                                                                                                                                                                                                                   |
+| ----------- | ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Diaz**    | (humain)                                             | **"Holy Emperor of Gloriano"** canon — Leader rebellion + war declarator Fort Magrad                                                          | **"Mort" Kadessa** → **reborn/returned canon Disc 1-4** (**supplies DS to Greham, Doel, Lenus** — Rose denies each time)                                                                                                                          |
+| **Zieg**    | Fire (Red-Eye Dragoon)                               | **Among leaders Human army** + **Fell in love with Rose** canon + Final fight Melbu Frahma (dodge Dragon Buster + impale Melbu through heart) | **Petrified by Melbu's curse** → **11k ans later spell wore off** → **married Claire Feld** → **son Dart** → **Black Monster attack Neet → returned village helping villagers, never seen again by Dart** → Dramatic return Disc 4                |
+| **Rose**    | Darkness (Dark Dragoon)                              | **Fiancée of Zieg Feld** canon ; witnessed all compatriot deaths Kadessa ; **failed to hold on to Zieg** (trauma)                             | **Survives immortelle** via **Choker given by Charle Frahma** (friend canon) — Black Monster role canon ; joins Dart's party Disc 1 (test fight)                                                                                                  |
+| **Shirley** | Light (White-Silver Dragoon)                         | Archer canon (magical arrow Virage Kadessa) ; **convinced Kanzas to join Dragoons**                                                           | **Spirit Shrine of Shirley Serdio** (**Dragoni plant** grows canon) ; **tests Dart/Rose/Lavitz** worthiness DS Disc 1 (save Shana) ; **meets group Vellweb** — **fixed Dragoons' souls Vellweb away from Death City Mayfil** → released to heaven |
+| **Belzac**  | Earth (Gold Dragoon)                                 | Holds column up Kadessa for Shirley protection ; **particular fondness for Shirley** canon                                                    | **Dies Kadessa** (Virage impale entire chest) → soul Vellweb tower                                                                                                                                                                                |
+| **Damia**   | Water (Blue Sea Dragoon)                             | **Daughter human + mermaid**, 15 ans Dragon Campaign début, mermaid heritage outcast                                                          | **First to die canon** ; **soul stayed Endiness** (afraid being left alone again) ; **does not appear FMV Disc 2 Rose Memory** ; Vellweb tower spirit                                                                                             |
+| **Syuveil** | Wind (Jade Dragoon)                                  | (à investiguer rôle exact)                                                                                                                    | **Dies Dragon Campaign** → **soul stayed Endiness** (**afraid of what he saw at Mayfil**) ; **does not appear FMV Disc 2 Rose Memory**                                                                                                            |
+| **Kanzas**  | Thunder (Violet Dragoon)                             | **Bloodthirsty reputation canon** ; **Self-sacrifice vs Super Virage** Kadessa                                                                | **Dies Kadessa** (self-destruct) → soul Vellweb tower                                                                                                                                                                                             |
+| **Michael** | Darkness (5-eye "Black Burst Dragon", Rose's vassal) | Aerial Virage killer + special laser mass-elimination                                                                                         | Survives Dragon Campaign → centuries plus tard savage → killed by Rose                                                                                                                                                                            |
 
 ### Antagonistes canon
 
-| Personnage                | Rôle                                                                 | Statut post-war                                                                                 |
-| ------------------------- | -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| **Melbu Frahma**          | Wingly dictator, wields Crystal Sphere + Dragon Buster               | **Fatal blow par Zieg** mais petrifies Zieg + embeds essence Red-Eye DS = soul survives there ! |
-| **Winglies (population)** | Dominant species opprimante                                          | Defeated → **Human Age begins** ; reste qui survivent canon (Meru, Charle Frahma, etc.)         |
-| **Virage**                | 108th species, Winglies-manipulated (Crystal Sphere + spawn at will) | Continue exister, encountered as bosses Disc 1-2-4                                              |
+| Personnage                | Rôle                                                                                                       | Statut post-war                                                                                                                                                                                                      |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Melbu Frahma**          | Wingly dictator great civilization, wields Crystal Sphere + Dragon Buster                                  | **Fatal blow par Zieg** (impaled through heart) mais **petrifies Zieg via curse** (last-ditch) + embeds essence Red-Eye DS = soul survives there !                                                                   |
+| **Faust** ⚠️ NEW canon    | **Possibly most powerful Wingly ever** + Melbu's **second in command** + **Commander of Tower of Flanvel** | Could make **apparition of himself equally powerful** ; Melbu feared/mistrusted him → created **"Vanishing Stone"** as safeguard. À documenter `bosses/Faust.md` (à créer) — boss potentiel Disc 3 Tower of Flanvel. |
+| **Winglies (population)** | Dominant species opprimante (107th fruit Divine Tree)                                                      | Defeated → **Human Age begins** ; reste qui survivent canon (Meru, Charle Frahma, Faust ?, etc.)                                                                                                                     |
+| **Virage**                | 108th species, Winglies-manipulated (Crystal Sphere + spawn at will)                                       | Continue exister, encountered as bosses Disc 1-2-4 + **mysterious connection to Shana** canon                                                                                                                        |
 
 ## Lieux canon Dragon Campaign
 
@@ -168,13 +230,16 @@
 
 ## Items / artifacts canon Dragon Campaign
 
-| Item                   | Origine                                             | Owner canon Dragon Campaign | Statut present                                                              |
-| ---------------------- | --------------------------------------------------- | --------------------------- | --------------------------------------------------------------------------- |
-| **Crystal Sphere**     | Wingly creation (108th fruit Virage Embryo harness) | Melbu Frahma                | **Broken** during Zieg-Melbu fight → released 108th soul → Moon Child cycle |
-| **Dragon Buster**      | Wingly anti-Dragon ethereal sword                   | **Melbu Frahma canon** ⚠️   | Inconnu post-Kadessa fall — survives ? Inherited ? À investiguer            |
-| **Dragon Block Staff** | Wingly anti-Dragon staff (reduce power)             | (probable Wingly army)      | **Forest of Winglies Disc 3** (recovered by party for Divine Dragon)        |
-| **7 Dragoon Spirits**  | Dragons morts canon                                 | 7 anciens Dragoons          | Inherited current Dragoons Disc 1-4 (Dart/Lavitz/Albert/etc.)               |
-| **Rose's Choker**      | Wingly magical (?) — stop-time                      | Rose                        | Still wielded by Rose (immortelle 11k ans, reveal Ulara canon)              |
+| Item                       | Origine                                                                                            | Owner canon Dragon Campaign                          | Statut present                                                                        |
+| -------------------------- | -------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| **Crystal Sphere**         | Wingly creation (108th fruit Virage Embryo harness)                                                | Melbu Frahma                                         | **Broken** during Zieg-Melbu fight → released 108th soul → Moon Child cycle           |
+| **Dragon Buster**          | Wingly anti-Dragon ethereal sword                                                                  | **Melbu Frahma canon** ⚠️                            | Inconnu post-Kadessa fall — survives ? Inherited ? À investiguer                      |
+| **Dragon Block Staff**     | Wingly anti-Dragon staff (reduce power)                                                            | (probable Wingly army)                               | **Forest of Winglies Disc 3** (recovered by party for Divine Dragon)                  |
+| **7 Dragoon Spirits**      | Dragons morts canon                                                                                | 7 anciens Dragoons                                   | Inherited current Dragoons Disc 1-4 (Dart/Lavitz/Albert/etc.)                         |
+| **Rose's Choker**          | **Charle Frahma gift** canon (Wingly friend Rose) — stop-time mechanism                            | Rose                                                 | Still wielded by Rose (immortelle 11k ans, reveal Ulara canon)                        |
+| **Vanishing Stone** ⚠️ NEW | **Created by Melbu Frahma** as safeguard against **Faust** (most powerful Wingly + 2nd in command) | Melbu Frahma                                         | Statut present inconnu — possible item Disc 3 Tower of Flanvel arc ?                  |
+| **Spear Shooter** ⚠️ NEW   | Liberation Army Vellweb weapon **to shoot down Wingly cities** (5 floating cities + Flanvel)       | Vellweb / Diaz's army                                | **Vellweb background canon** (visible image gallery) — vestige Disc 4 ?               |
+| **3 Divine Moon Objects**  | Wingly post-war peace offering                                                                     | Serdio + Tiberoa + Mille Seseau royalties (one each) | **Moon Mirror** Mille Seseau (Tower of Flanvel sealed Disc 3) + 2 autres à identifier |
 
 ## Vision Damia
 

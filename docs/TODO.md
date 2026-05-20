@@ -1689,6 +1689,32 @@
 
 - [ ] **🆕 Unique Monsters give EXP "under certain conditions" canon** — Fandom : "certain unique monsters" give EXP. Cohérent Unique Monsters 1-damage cap + specific reward conditions. À documenter `combat/unique-monsters.md` (à créer) EXP rules. Source: fandom-experience.md intro.
 
+### Bosses / Mechanics (Feyrbrand — premier dragon TLoD + Retaliate passive + Attacking power up stacking + Status Slime 100% canon)
+
+- [ ] **🆕 Feyrbrand canon data-model** — Wind, HP 480, AT 18, DF 100, MAT 12, MDF 80, SPD 50, A-AV/M-AV 0%. Premier dragon TLoD canon. Source de Jade Dragoon Spirit (Lavitz). À implémenter `bosses/feyrbrand.ts` data. Source: [`features/bosses/_sources/lod-wiki-feyrbrand.md`](features/bosses/_sources/lod-wiki-feyrbrand.md). Priorité: **moyenne**.
+
+- [ ] **🆕 Status immunity ALL 8 pattern boss canon** — Feyrbrand immune Petrify/Bewitch/Arm Block/Dispirit/Confuse/Fear/Poison/Stun = **pattern canon master tous bosses**. À implémenter `Boss.statusImmunity: StatusAilment[]` (probablement all par défaut). Source: idem.
+
+- [ ] **🆕 Retaliate passive canon ⭐ MAJEUR pattern** — "Triggered when targeted by magic → Ignore turn order + use Attacking power up (self-buff)". À implémenter `BossPassive { trigger: 'on_magic_targeted', action, ignoreTurnOrder: true }`. Pattern : magic spam = boss adapte sa puissance. Source: idem.
+
+- [ ] **🆕 Attacking power up canon — ADDITIVE STACKING** ⭐ — 1.1× / 1.2× / 1.3× / etc (additive +0.1 per use). À implémenter `Buff { type: 'damage_multiplier', stacking: 'additive', delta: 0.1 }`. Distinction additive vs multiplicative cruciale. Source: idem.
+
+- [ ] **🆕 ~Status Slime 100% Fear/Poison/Stun (random) canon** — Ability boss canon : 100% chance proc l'un des 3 status aléatoirement, **réduit par A-AV target**. Pattern "guaranteed but evadable". À investiguer formule exacte canon A-AV → status proc reduction. À implémenter `Ability { target: 'single', dmg: 1, statusProc: { chance: 1.0, statuses: ['Fear','Poison','Stun'], pickRandom: true, mitigatedByAAV: true } }`. Source: idem.
+
+- [ ] **🆕 "Counters Additions: No" canon ⚠️** — Feyrbrand n'a PAS de counter mechanism. Implique **certains autres bosses canon ONT** counter mechanism. À investiguer "Counter Opportunities" data-model pour tous les bosses. Source: idem.
+
+- [ ] **🆕 Feyrbrand + Greham = joined encounter scripted canon** — Submap 136 Nest of Dragon, escape 0%, encounter scripted (393). EXP/Gold du Feyrbrand = 0/0 → rewards aggregated sur Greham seul. Pattern canon "boss+rider" 1 fight = 2 enemies. À implémenter encounter type. Source: idem + Nest of Dragon doc.
+
+- [ ] **🆕 Down Burst Repeat Item drop 100% Feyrbrand canon** — NEW canon item. À documenter `items/consumables.md` (à créer) — Down Burst probable Wind-elemental utility item. Source: idem.
+
+- [ ] **🆕 Feyrbrand = source Jade Dragoon Spirit canon** — Confirmé canon : Feyrbrand mort → eyes merge → Jade Dragoon Spirit récupéré par Lavitz. Pattern Eye merge canon = `dragoons/mechanics.md` §Eye merge. À cross-référer `dragoons/dragons.md` Jade Dragon Tribe lineage. Source: idem.
+
+- [ ] **🆕 "Targeted by magic" trigger canon — clarification needed ⚠️** — Retaliate trigger : Dragoon Magic ? Spells ? Magical items (Burn Out/Spark Net) ? À investiguer Discord cadors. Probable = tout magic damage type. À documenter `combat/boss-passives.md` (à créer). Source: idem.
+
+- [ ] **🆕 Attacking power up — décay or permanent ?** — Probable permanent self-buff (pas de duration). Si Feyrbrand stacks 10× via 10 magic spells → 2× damage permanent jusqu'à end of fight. Pattern conserver tel quel. Source: idem.
+
+- [ ] **🆕 "first dragon seen in game" canon symbolic placement** — Feyrbrand = premier dragon visuel TLoD, introduction "creatures of Soa" lore. À refléter Damia : importance design level (cinematic reveal Feyrbrand premier moment crash boss-introduction). Source: identity canon.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

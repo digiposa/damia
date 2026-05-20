@@ -1,8 +1,11 @@
 # Nest of Dragon
 
-> **Dungeon Disc 1** dans **mountains of south Serdio**, post-Volcano Villude → pré-Lohan. **Forest contaminated by Dragon's poison** (Feyrbrand poison canon). **2 bosses canon** : **Greham (Jade Dragoon)** + **Feyrbrand (Wind Dragon vassal)** combat scripted ensemble. **Acquisition canon : Jade Dragon DS** → Lavitz first transformation Dragoon. **Spring rest free + full restore + cure ALL status**. **Life Water good** (interact spring + Water Bottle).
+> **Dungeon Disc 1** dans **mountains of south Serdio**, post-Volcano Villude → pré-Lohan. **JP name 竜の巣 (Ryū no Su, "Dragon's Lair")**. **Forest contaminated by Dragon's poison** (Feyrbrand poison canon). **2 bosses canon** : **Greham (Jade Dragoon, former Second Knighthood of Basil, killed Lavitz' father Servi)** + **Feyrbrand (Wind Dragon vassal)** combat scripted ensemble. **Acquisition canon : Jade Dragon DS** → Lavitz first transformation Dragoon. **Spring rest free + full restore + cure ALL status**. **Life Water good** (interact spring + Water Bottle from Lohan). **Return trip canon vers Shrine of Shirley** (purify mutated plant blocking road). **Shana collapses post-fight** (poison exposure) → rush Lohan cure. **Diaz reborn revealed already Disc 1** (Greham canon quote about Doel).
 >
-> **Source canon** : 🥈 [`_sources/lod-wiki-nest-of-dragon.md`](./_sources/lod-wiki-nest-of-dragon.md)
+> **Sources canon** :
+>
+> - 🥈 [`_sources/lod-wiki-nest-of-dragon.md`](./_sources/lod-wiki-nest-of-dragon.md) — wiki LoD (services / chests / submaps / bosses stats)
+> - 🥉 [`_sources/fandom-nest-of-dragon.md`](./_sources/fandom-nest-of-dragon.md) — fandom (JP name, Greham canon lore Servi/Second Knighthood Basil, Shana poison collapse, Diaz reveal Disc 1, return trip Shrine of Shirley pure water bottle purify mutated plant, mob HP canon, Plate Mail rare drop confirm)
 
 ## Statut
 
@@ -17,7 +20,8 @@
 | Disc              | Disc 1 (Chapter 1: Serdian War)                                                                                          |
 | Combat            | Random Encounters + **2 bosses scripted** (Greham + Feyrbrand)                                                           |
 | Previous (canon)  | #9 Volcano Villude                                                                                                       |
-| Next (canon)      | #11 Lohan                                                                                                                |
+| Next (canon)      | #11 Lohan (Shana cure)                                                                                                   |
+| Return trip canon | **Shrine of Shirley** (post-Lohan, Water Bottle bought Lohan → pure water Spring → purify mutated plant road)            |
 | Submaps           | **9** (6 area + 1 overlook + 2 close-up cutscenes)                                                                       |
 | Save points       | **1** (upper area, just before boss fight)                                                                               |
 | Rest              | **Spring (free)** — full HP+MP + **cure ALL status** (pattern "ultimate rest" canon Disc 1)                              |
@@ -47,12 +51,36 @@ Story beat majeur Disc 1 (Chapter 1 Serdian War). **Quête : confronter Feyrbran
 ### Lavitz-Greham canon (Lavitz first Dragoon moment)
 
 - **Greham = Jade Dragoon canon** (cf. [`../dragoons/dragons.md`](../dragoons/dragons.md))
-- **Lavitz talking with Greham** (submap 656) = moment narratif Disc 1 important :
-  - Probable reveal lore : Greham un ancien knight Basil → Sandora defection ?
-  - Greham wields Jade DS → confronts Lavitz canon (knight Basil vs ancien knight Basil défector ?)
-- Defeat → **Greham dies + Jade Dragon DS transfers automatically à Lavitz**
+- **Greham canon lore complet (fandom reveal)** :
+  - **Former head of the Second Knighthood of the Kingdom of Basil** ⚠️ rang militaire élevé Basil canon
+  - **Turned treacherous many years ago** → defected (probable vers Sandora)
+  - **Killed Lavitz' father Servi** (canon !) — Servi = nom canon père Lavitz
+  - Lavitz **vows to revenge his father** au Nest of Dragon
+- **Greham transforme en Jade Dragoon + summons Feyrbrand** (boss double scripted)
+- **Rose quote canon (avant Feyrbrand appear)** : _"It shouldn't be a surprise. Only the Dragoons can manipulate Dragons. Behind the Dragon, there should be..."_
+- **Reveal canon Diaz Disc 1** (Greham, pré-fight) : **"Emperor Doel received his power and intelligence from Emperor Diaz"** → **Rose entire disbelief** (Diaz died 11k ans ago)
+  - 🆕 **Pattern reveal Diaz reborn déjà à Disc 1 mid** (avant Black Castle final reveal). Fil rouge antagoniste cohérent.
+- **Post-defeat canon** : **Greham praises Lavitz** for "strength of his father" + **shows regret about his betrayal** → dies
+- **Jade Dragon DS chooses Lavitz** as new master (vs "auto-add" wiki — fandom dit "chooses" canon language)
 - **Lavitz first Dragoon transformation** = unlocked here Disc 1 canon
-- Pattern Archetype Jade : **Syuveil (Vellweb ancien) → Greham (Hoax-Nest) → Lavitz (Disc 1) → Albert (Disc 2 post-Lavitz death)** = 4 wielders canon (cf. dragons.md)
+- Pattern Archetype Jade : **Syuveil (Vellweb ancien) → Greham (Nest of Dragon) → Lavitz (Disc 1 post-defeat) → Albert (Disc 2 post-Lavitz death)** = 4 wielders canon (cf. dragons.md)
+- **Pattern DS "chooses" wielder** canon — mécanique narrative (vs simple drop). Implications data-model : `DragoonSpirit.chooseWielder(party): CharacterId` selon affinité/lore.
+
+### Shana poison collapse canon
+
+- Shana **sickened by Dragon's poison environment** en entrant → requires break + continues
+- Post-Greham/Feyrbrand fight : **Shana collapses** (poison exposure too long)
+- Party **rush to Lohan** to find **cure for Shana**
+- Pattern : **environment-based party member status** canon (poison atmosphere → Shana vulnerability)
+- À documenter `combat/status-effects.md` (à créer) — exposure-time status mechanic
+
+### Return trip canon — Shrine of Shirley access
+
+- Post-Lohan (cure obtained) → **return Nest of Dragon** one more time
+- **Buy Water Bottle in Lohan** → fill avec **pure water Spring** → **Life Water** good obtained
+- Use Life Water to **purify mutated plant blocking road to Shrine of Shirley**
+- 🆕 **Pattern "mutated plant gate canon"** : world map roads blocked by environmental obstacle, removable via context item. Réutilisable design Damia (le code).
+- Shrine of Shirley = next quest destination (Shana rests there, cf. fandom gallery)
 
 ### Feyrbrand canon (vassal Wind Dragon)
 
@@ -83,10 +111,10 @@ Aucun (dungeon naturel hostile).
 
 ### Goods (2)
 
-| Good               | Acquisition mechanic                                                                                                                                      |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Jade Dragon DS** | **Automatic add to inventory post-defeat Greham + Feyrbrand**. Enables Lavitz transform Dragoon. **Première DS canon obtenue par party member non-Dart**. |
-| **Life Water**     | Interact with **Spring** + **Water Bottle in inventory**. Pattern : context-dependent good acquisition.                                                   |
+| Good               | Acquisition mechanic                                                                                                                                                                                                                                               |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Jade Dragon DS** | **Automatic add to inventory post-defeat Greham + Feyrbrand**. Enables Lavitz transform Dragoon. **Première DS canon obtenue par party member non-Dart**.                                                                                                          |
+| **Life Water**     | Interact with **Spring** + **Water Bottle in inventory** (Water Bottle acheté à **Lohan** post-Shana cure, return trip canon). Pattern : context-dependent good acquisition cross-location. Usage canon : purify mutated plant blocking road to Shrine of Shirley. |
 
 > 🆕 **Pattern canon "DS auto-add post-boss defeat"** : Jade Dragon DS = précédent canonique. Cohérent canon : **defeating Dragoon → DS becomes available to party**. À refléter Damia (le code) `Boss.onDefeat.grants: ItemId[]`.
 
@@ -114,13 +142,17 @@ Aucun.
 
 ### Minor Enemies (5 — theme nature corrupted)
 
-| Mob                | Élément  | EXP | Gold | Drop (%)             |
-| ------------------ | -------- | --- | ---- | -------------------- |
-| **Mandrake**       | Water    | 15  | 9    | Sun Rhapsody 8%      |
-| **Run Fast**       | Thunder  | 16  | 12   | Body Purifier 10%    |
-| **Lizard Man**     | Earth    | 18  | 15   | **Beast Fang 2%** 🆕 |
-| **Man Eating Bud** | Darkness | 20  | 24   | Angel's Prayer 8%    |
-| **Tricky Bat**     | Wind     | 12  | 6    | Mind Purifier 8%     |
+| Mob                | Élément  | HP US/EU (JP) | EXP | Gold US/EU (JP) | Drop (%)                                                        |
+| ------------------ | -------- | ------------- | --- | --------------- | --------------------------------------------------------------- |
+| **Mandrake**       | Water    | 99 (120)      | 15  | 9 (3)           | Sun Rhapsody 8%                                                 |
+| **Run Fast**       | Thunder  | 66 (80)       | 16  | 12 (4)          | Body Purifier 10%                                               |
+| **Lizard Man**     | Earth    | 40 (50)       | 18  | 15 (5)          | **Beast Fang 2%** 🆕                                            |
+| **Man Eating Bud** | Darkness | 132 (160)     | 20  | 24 (8)          | Angel's Prayer 8% + **Plate Mail (possible alternate drop)** ⚠️ |
+| **Tricky Bat**     | Wind     | 33 (40)       | 12  | 6 (2)           | Mind Purifier 8%                                                |
+
+> ⚠️ **Plate Mail = possible alternate drop Man Eating Bud** (fandom "reports vary"). Probable rare. Main source = Greham 30%. À confirmer tier 1.
+
+> Pattern récurrent canon : **JP HP +25% / Gold ~/3** (cohérent autres locations).
 
 > Notable :
 >
@@ -209,8 +241,10 @@ Formations (54-59, 50-53) = 10 groupes mixed. Formation **393** = boss scripted 
 
 ## Questions ouvertes
 
-- **Greham backstory canon** — ancien knight Basil défector vers Sandora ? Why Lavitz "talks with" Greham ? Tension narrative.
-- **"Shana runs off" submap 131** — pourquoi ? Story event ? Threat Feyrbrand poison ? Lured ?
+- ✅ **Greham backstory canon** — **RÉSOLU fandom** : **former head Second Knighthood of Basil**, turned treacherous, **killed Lavitz' father Servi**. Lavitz revenge motivation à Nest of Dragon.
+- ✅ **"Shana runs off" submap 131** — **RÉSOLU fandom** : **Shana sickened by Dragon's poison atmosphere** → requires break. Post-fight, **Shana collapses** (poison too long) → rush Lohan cure.
+- ✅ **Return trip Shrine of Shirley** — **RÉSOLU fandom** : Water Bottle Lohan + pure water Spring → Life Water → purify mutated plant blocking road Shrine of Shirley.
+- ✅ **DS "auto-add" vs "chooses" canon language** — **CLARIFIÉ fandom** : DS **chooses wielder** (narrative canon), pas simple auto-add. Implications data-model affinity.
 - **Down Burst item** — Wind attack item probable (Feyrbrand drop 100%). Mécanique exacte ? À documenter `items/consumables.md`.
 - **Beast Fang item** — drop Lizard Man 2%. Type ? Physical attack item ? Material crafting ?
 - **Plate Mail** vs Chain Mail Disc 1 — 2 armors disponibles ici. Stats/effects ? À investiguer items page.

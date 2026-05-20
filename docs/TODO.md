@@ -760,6 +760,32 @@
 
 - [ ] **Wink double-rescue canon** (Disc 2 Donau + Disc 3 Younger Bardel) — pattern Lloyd "saviour figure" établit trust durable. Important pour Disc 3 Crystal Palace kidnap context. À refléter `lore/lloyd-arc.md` (à créer).
 
+### Locations + Bosses (Nest of Dragon fandom — Greham canon backstory + Servi + Diaz reveal Disc 1)
+
+- [ ] **Greham canon lore complet** — former head **Second Knighthood of Kingdom of Basil**, turned treacherous, **killed Lavitz' father Servi** (canon Servi = nom père Lavitz). Lavitz revenge motivation Disc 1. **Greham post-defeat regret + praises Lavitz** for father strength. À documenter `bosses/Greham.md` (à créer) + `npcs/servi.md` (Lavitz' father). Source: [`features/locations/Nest of Dragon.md`](features/locations/Nest of Dragon.md).
+
+- [ ] **Servi = Lavitz' father canon** — killed by Greham many years ago. NPC lore canon. À documenter `npcs/servi.md` (à créer) + crosslink `party-members/Lavitz.md` backstory.
+
+- [ ] **Second Knighthood of Basil canon** — Greham = former head. Implique structure militaire Basil canon (multiple knighthoods). À documenter `lore/serdia.md` (à créer) ou `lore/basil-knighthood.md`.
+
+- [ ] **Diaz reveal Disc 1 (Nest of Dragon canon)** — Greham révèle pré-fight : Doel reçoit power+intelligence d'Emperor Diaz. Rose disbelief (Diaz mort 11k ans). Confirme **fil rouge antagoniste Diaz reborn déjà à Disc 1 mid** (avant Black Castle final reveal). Pattern Cohérence narrative à orchestrer Mode Story.
+
+- [ ] **Shana poison collapse canon Disc 1** — exposure-time status mechanic à Nest of Dragon. Shana sickened → requires break → post-fight collapses → Lohan cure quest. Pattern : **environment-based party status** canon (à documenter `combat/status-effects.md` + `quests/disc1-nest-shana-poison.md`).
+
+- [ ] **Return trip Shrine of Shirley canon** — Water Bottle (Lohan shop) + pure water (Nest Spring) = **Life Water** → purify **mutated plant blocking road** vers Shrine of Shirley. Pattern **environmental gate item** canon. Data-model `MapNode.gate: { type: "obstacle", removableBy: ItemId }`.
+
+- [ ] **DS "chooses wielder" canon language** — Jade DS **chooses** Lavitz (vs simple auto-add). Implications narrative + data-model : DragoonSpirit affinity selection. Pas juste mécanique inventory. À refléter `dragoons/obtention.md` (à créer).
+
+- [ ] **Plate Mail possible alternate drop Man Eating Bud** (canon fandom "reports vary") — main source Greham 30%, alternate Man Eating Bud ?. À reconfirmer tier 1.
+
+- [ ] **Mob HP canon Nest of Dragon** : Lizard Man 40, Mandrake 99, Tricky Bat 33, Run Fast 66, Man Eating Bud 132 (US/EU). JP +25%. Pattern récurrent. À reproduire `src/data/balance.ts` MOBS.
+
+- [ ] **Strange umbrella-like plants touch mechanic canon** — gameplay puzzle Nest of Dragon (touch plant → "wall" plants disappear → progress). Pattern interactable plant mechanic. À refléter design Damia (le code).
+
+- [ ] **2-floor dungeon canon Nest of Dragon** — climb plants up/down. Pattern vertical traversal canon. Réutilisable.
+
+- [ ] **JP name Nest of Dragon** : 竜の巣 (Ryū no Su) = "Dragon's Nest" ou "Dragon's Lair". Translation flexible.
+
 ### Locations + Bosses (Nest of Dragon Disc 1 — Greham+Feyrbrand + Jade DS Lavitz unlock)
 
 - [ ] **Boss Greham canon (Jade Dragoon)** — Wind, 1,200 XP, 100G, drop Plate Mail 30%. Cf. dragons.md §Greham reveal. Lavitz-Greham close-up cutscene submap 656 → moment narratif Disc 1 majeur. À documenter `bosses/Greham.md` (à créer).

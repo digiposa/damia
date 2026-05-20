@@ -5,10 +5,11 @@
 > **Sources** :
 >
 > - 🥈 [`_sources/lod-wiki-equipment.md`](./_sources/lod-wiki-equipment.md) — wiki LoD (tables complètes weapons/headwear/body armor/footwear/accessories + acquisition)
+> - 🥉 [`_sources/fandom-weapons.md`](./_sources/fandom-weapons.md) — fandom Weapons (46 total weapons confirmé + sell prices + tactical commentary + Unique Monsters 1-damage cap mechanic)
 
 ## Statut
 
-🟡 **Draft post-ingestion wiki LoD** — fandom à ingérer pour cross-check, Discord cadors restant à consulter pour formules exactes (gain stats par level, etc.). Décisions Damia à trancher.
+🟡 **Draft post-ingestion wiki LoD + fandom weapons** — fandom armor + accessories à ingérer ensuite. Discord cadors restant à consulter pour formules exactes (gain stats par level, etc.). Décisions Damia à trancher.
 
 ## 1. Système canon (récap haut niveau)
 
@@ -61,6 +62,36 @@
 ⚠️ Note canon Thunder Fist : "Although the Thunder element has no opposite, the Thunder Fist can still apply bonus damage to Haschel's D-attack when he initiates Special." → confirmes **Thunder = standalone element sans pair opposite** mais **interaction Special command bonus damage** existe quand même.
 
 ⚠️ Divergence canon Sparkle Arrow : seul weapon "Light" canon disant "Attacks deal" plutôt que "Additions deal" → **possible Light proc même sur attaque normale Shana (qui n'a pas d'Addition canon)** car Shana attaque par physical arrow auto sans system Addition. À vérifier sur fandom + Discord.
+
+### Cross-check fandom (compléments + divergences vs wiki LoD)
+
+**Confirmations utiles** :
+
+- **46 weapons total** canon confirmé fandom (count master)
+- **Meru et Kongol n'ont PAS de weapon élémental** canon explicite fandom (cohérent : Meru=Blue Sea Dragoon mais aucun "Water elemental weapon" canon, Kongol=Golden Dragoon mais aucun "Earth elemental weapon" canon) → **divergence design intentionnelle** : seuls Dart/Lavitz-Albert/Shana-Miranda/Rose/Haschel ont des weapons elemental
+- **Sell prices canon** : approximativement 50% du buy price (e.g. Heat Blade 150G buy / 75G sell, Bastard Sword 60G / 30G)
+- **Pretty Hammer + Wargod's Sash + Cool Boogie Addition Level 5 = 495 SP** canon optimal SP grind setup Meru
+- **Heat Blade "deals double damage to Lenus, Regole, Undersea Cavern + Kashua Glacier Windigo"** ⚠️ fandom dit "double" (×2) mais wiki LoD dit ×1.5 — **divergence ×1.5 vs ×2 déjà résolue** dans [`combat/elements.md`](../combat/elements.md) au profit wiki ×1.5
+
+**NEW canon mechanics fandom-only** :
+
+- ⚠️ **Unique Monsters take 1 damage cap** canon : "the AT stat does not matter against these monsters, as they will always take 1 damage when hit" → mécanique boss/mob spéciale
+- ⚠️ **Destroyer Mace = SEUL weapon canon permettant de dépasser 1 damage cap sur Unique Monsters** via HP scaling — exception unique
+- **Detonate Arrow ≈ Detonate Rock Attack Item** canon : pattern AoE physical identique mais weapon vs consumable
+- **Therapy Ring neutralise Soul Eater self-damage** canon : combo synergy explicite (Soul Eater -10% HP/turn + Therapy Ring +10% HP/turn = neutre net)
+
+**Divergences nommage / acquisition vs wiki LoD** :
+
+| Item / Element                                        | Wiki LoD             | Fandom                                         | Notes                                                                                       |
+| ----------------------------------------------------- | -------------------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| **Pretty Hammer SP gain**                             | "+50% more SP"       | **"generates double SP"** (100% more)          | ⚠️ DIVERGENCE 50% vs 100% — wiki tier 2 prévaut probable                                    |
+| **Mind Crush chest location**                         | "Kadessa"            | **"Forbidden Land"**                           | Synonymes canon (Kadessa = The Forbidden Land)                                              |
+| **Lance chest location**                              | "Marshland"          | **"The Seventh Fort"**                         | À vérifier si même lieu ou divergence réelle (Seventh Fort = fort dans Marshland ?)         |
+| **Glaive shop location**                              | "Phantom Ship"       | **"Queen Fury"**                               | ⚠️ DIVERGENCE — 2 ships différents canon (Queen Fury Disc 2 cruise vs Phantom Ship haunted) |
+| **Beast Fang shop location**                          | "Phantom Ship"       | **"Black Castle, Queen Fury"**                 | Black Castle = Kazas (synonyme) + Queen Fury divergence ship                                |
+| **Soul Eater 100% drop enemy**                        | "Polter Sword"       | **"Polter Armor"**                             | ⚠️ DIVERGENCE nom enemy — Polter Sword vs Polter Armor                                      |
+| **War Hammer location**                               | "Forest of Winglies" | **"Wingly Forest"**                            | Synonymes canon                                                                             |
+| **Twister Glaive double damage canon vs Grand Jewel** | (silent)             | **"Grand Jewel earth element, double damage"** | ⚠️ Confirmes Grand Jewel = Earth element + Wind ×1.5/×2 vs Earth                            |
 
 ## 3. Headwear — split Men/Women + character + All
 

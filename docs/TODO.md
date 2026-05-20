@@ -1421,6 +1421,42 @@
 
 - [ ] **🆕 Repeat Items vs Equipment separation** — Equipment = 5 slots permanents. Repeat Items = consommables / Multi (ex Power Up/Down). Documentation Items canon à splitter clairement. À créer `items/consumables.md` + `items/key-items.md`. Source: equipment.md §1 + Donau Power Up/Down doc précédente.
 
+### Items / Equipment fandom complement — 46 weapons confirmé + Unique Monsters 1-cap + divergences locations/drops
+
+- [ ] **🆕 46 weapons total canon confirmé** — Fandom donne le count master. Utile pour validation exhaustive base de données équipement Damia (count cohérent : 8 Dart + 7 Lavitz-Albert + 7 Shana-Miranda + 7 Rose + 6 Haschel + 6 Meru + 5 Kongol = 46). Source: [`features/items/_sources/fandom-weapons.md`](features/items/_sources/fandom-weapons.md).
+
+- [ ] **🆕 Unique Monsters 1-damage cap canon ⚠️ mécanique mob spéciale** — "the AT stat does not matter against these monsters, as they will always take 1 damage when hit". À implémenter via flag `Mob.uniqueMonster: boolean` + override damage formula → forcer dmg = 1 (sauf exception Destroyer Mace HP scaling qui bypass). Lucky Jar mentionné comme exemple Unique Monster. À documenter `combat/unique-monsters.md` (à créer). Source: fandom-weapons.md §Shana/Miranda + §Haschel. Priorité: **moyenne** (impact bosses spéciaux).
+
+- [ ] **🆕 Destroyer Mace exception canon = SEUL weapon dépassant 1-damage cap** — HP scaling permet bypass Unique Monsters cap. Pattern unique design. À refléter logique combat. Source: fandom-weapons.md §Haschel.
+
+- [ ] **🆕 Meru + Kongol pas de weapons elemental canon explicite** — Fandom confirme : "Meru has no Elemental Weapon" + "Kongol has no Elemental Weapon". Cohérent : Pretty Hammer = SP-only utility, pas Water elemental. Indora's Axe = Instant Death proc, pas Earth elemental. **Design canon intentionnel** : 5 elemental weapons sur 7 wielders. À refléter `combat/elements.md` + `items/equipment.md`. Source: fandom-weapons.md §Meru + §Kongol.
+
+- [ ] **🆕 Sell prices canon ≈ 50% buy price** — Pattern systématique fandom (Heat Blade 150G buy → 75G sell, Bastard Sword 60G → 30G, etc.). À implémenter formule `sellPrice = floor(buyPrice / 2)` pour shop sell logic. Exceptions story-locked weapons : Soul Eater (no buy / 225 sell), Pretty Hammer (no buy / 200 sell), Brass Knuckle (no buy / 175 sell), Indora's Axe (no buy / 250 sell), Demon Stiletto (no buy / 80 sell), Dragon Buster (no buy / no sell), Detonate Arrow (no buy / no sell). Source: fandom-weapons.md tables.
+
+- [ ] **🆕 Therapy Ring neutralise Soul Eater self-damage combo canon** — Soul Eater = -10% HP/turn / Therapy Ring = +10% HP/turn → net 0%. Combo synergy explicite à documenter `items/equipment.md` §Combos. Source: fandom-weapons.md §Dart.
+
+- [ ] **🆕 Pretty Hammer + Wargod's Sash + Cool Boogie L5 = 495 SP canon optimal grind** — Setup canon Meru best SP gain per Addition. À documenter `dragoons/mechanics.md` §SP grinding + `party-members/Meru.md` (à créer). Source: fandom-weapons.md §Meru.
+
+- [ ] **🆕 Detonate Arrow ≈ Detonate Rock Attack Item canon** — Pattern AoE physical identique. À documenter parallèle dans `items/consumables.md` (à créer) + `items/equipment.md`. Source: fandom-weapons.md §Shana/Miranda.
+
+- [ ] **🆕 Heat Blade ×2 vs Lenus/Regole/Windigo/Undersea Cavern/Kashua Glacier enemies canon** — Fandom dit "double damage" mais wiki LoD ×1.5 — divergence ×1.5/×2 déjà résolue au profit wiki (confirmé Discord). Conserver ×1.5 mais documenter exemples enemies cibles (Lenus Water, Regole Water, Undersea Cavern dwellers Water, Windigo? Kashua Glacier Ice?). Source: fandom-weapons.md §Dart.
+
+- [ ] **🆕 Twister Glaive ×1.5 vs Grand Jewel (Earth element) canon** — Confirme Grand Jewel = Earth element + Wind weapon counter pattern. À documenter `bosses/Grand Jewel.md` (à créer) + element matchups dans `combat/elements.md`. Source: fandom-weapons.md §Lavitz/Albert.
+
+- [ ] **🆕 Sparkle Arrow ×1.5 vs Phantom Ship Dark element enemies canon** — Confirme Phantom Ship dungeon = mostly Dark enemies + Light Sparkle Arrow ×1.5. Refléter `locations/Phantom Ship.md` (à créer). Source: fandom-weapons.md §Shana/Miranda.
+
+- [ ] **🆕 Pretty Hammer SP gain divergence wiki/fandom ⚠️** — Wiki LoD : "+50% more SP". Fandom : "generates double SP" (i.e. +100% more, ×2). DIVERGENCE source tier 2 vs tier 3 — **adopter wiki +50%** (cohérent avec Fairy Sword + Arrow of Force qui sont aussi +50%). À noter `combat/canon-divergences.md` (à créer). Source: fandom-weapons.md §Meru vs wiki-equipment §Meru.
+
+- [ ] **🆕 "Polter Sword" vs "Polter Armor" enemy name divergence ⚠️** — Wiki LoD : Soul Eater drop 100% from **"Polter Sword"**. Fandom : drop 100% from **"Polter Armor"**. Le boss/mob dropant Soul Eater (Dart's ultimate sword) — quel nom canon réel ? Probable Polter Sword (cohérent thématique sword drop). À cross-checker via Discord. À noter `combat/canon-divergences.md`. Source: fandom-weapons.md §Dart vs wiki-equipment §Dart.
+
+- [ ] **🆕 "Queen Fury" vs "Phantom Ship" shop divergence ⚠️** — Fandom dit Glaive shop = **Queen Fury**, Beast Fang shop = **Black Castle + Queen Fury**. Wiki LoD dit pour les deux **"Phantom Ship"**. Queen Fury (Disc 2 cruise ship Tiberoa-Mille Seseau) ≠ Phantom Ship (haunted ship). 2 ships différents canon. **Probable explication** : weapons disponibles Queen Fury Disc 2 (avant Phantom Ship Disc 3) — wiki utilise "Phantom Ship" comme erreur ? OU il y a 2 occasions d'acheter (Queen Fury Disc 2, Phantom Ship Disc 3) ? À vérifier in-game. À noter `combat/canon-divergences.md`. Source: fandom-weapons.md §Lavitz vs wiki.
+
+- [ ] **🆕 Lance chest "Marshland" vs "The Seventh Fort" canon ⚠️** — Wiki = Chest Marshland. Fandom = "The Seventh Fort, Lohan". "The Seventh Fort" = fort spécifique dans Marshland canon (cohérent narrative TLoD : fort militaire défensif Serdio south) OU divergence ? À vérifier `locations/Marshland.md` (à créer) + `locations/The Seventh Fort.md` (à créer). Source: fandom-weapons.md §Lavitz vs wiki.
+
+- [ ] **🆕 Kadessa = The Forbidden Land synonyme canon confirmé** — Mind Crush chest fandom dit "Forbidden Land", wiki dit "Kadessa". Confirme synonymie déjà notée dans worldmap observations. Source: fandom-weapons.md §Dart.
+
+- [ ] **🆕 Forest of Winglies = Wingly Forest synonyme canon** — Variations naming. Adopter "Forest of Winglies" canonical Damia (cohérent wiki LoD master). Source: fandom-weapons.md §Meru.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

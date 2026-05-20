@@ -862,6 +862,36 @@
   - Possible dedicated cinematic flashback majeur Disc 4 endgame
   - À orchestrer `quests/disc4-vellweb-mausoleum.md` (à créer) + `quests/disc4-kadessa-flashback.md` (à créer)
 
+### World Map official artwork — corrections positions + Barrier Station NEW location
+
+- [ ] **🆕 Barrier Station canon NEW location** — Visible map officielle Endiness, position Tiberoa entre Fletz et Valley of Corrupted Gravity. **Non documenté wiki/fandom Endiness pages**. À investiguer canon usage (poste-frontière ? checkpoint ? Disc 2 location ?). À documenter `locations/Barrier Station.md` (à créer). Source: [`features/world-map/_sources/official-worldmap-observations.md`](features/world-map/_sources/official-worldmap-observations.md).
+
+- [ ] **🆕 CORRECTION position Zenebatos canon** — Position confirmée map officielle = **extrême NORD GLORIANO** (pas Mille Seseau / vague comme documenté précédemment). Pattern : **Zenebatos + Vellweb + Snowfield + Tower of Flanvel + Kashua Glacier = locations Gloriano**. À refléter `locations/Zenebatos.md` (à créer).
+
+- [ ] **🆕 CORRECTION position Kadessa canon** — Position confirmée map = **extrême NORD-EST Mille Seseau** (cohérent "Divine Dragon flies above"). Forbidden Land = ruines visibles map officielle. À documenter `locations/Kadessa.md` / `locations/Forbidden Land.md`.
+
+- [ ] **🆕 Position Furni canon précisée** — Sud Mille Seseau côte ouest Illisa Bay (Water City). À refléter `locations/Furni.md` (à créer).
+
+- [ ] **🆕 Position Mayfil canon précisée** — Centre nord, entre Mille Seseau et Death Frontier (Death City). À documenter `locations/Mayfil.md` (à créer).
+
+- [ ] **🆕 Position Aglis canon précisée** — Île sud-ouest, Broken Islands area (cohérent "underwater near Rouge" canon). À refléter `locations/Aglis.md`.
+
+- [ ] **🆕 Divergence orthographique canon "Nest of Dragon(s)"** — Map officielle dit **"Nest of Dragons"** (pluriel), wiki/fandom disent "Nest of Dragon" (singulier). À noter `combat/canon-divergences.md` (à créer).
+
+- [ ] **Pattern géographique master canon validé via map officielle** — 4 régions + Broken Islands + Death Frontier + Mayfil entre regions. À utiliser comme master reference Damia (le code) world map design.
+
+- [ ] **Queen Fury route ship visible canon** — Trajet Aglis/Rouge ↔ Fletz Tiberoa (cohérent canon Aquaria Coral Reef trajet). À refléter `world-map/sea-routes.md` (à créer).
+
+- [ ] **Wingly cities mapping canon complete via map officielle** :
+  - **Zenebatos** = NORD Gloriano
+  - **Aglis** = sud-ouest Broken Islands area (underwater)
+  - **Kadessa (Forbidden Land)** = NE Mille Seseau (ruins)
+  - **Mayfil** = centre nord (between Mille Seseau and Death Frontier)
+  - **Tower of Flanvel** = Kashua Glacier (between Gloriano & Mille Seseau)
+  - **Forest of Winglies** = NE Mille Seseau (cohérent fandom)
+  - **Ulara** = sud Death Frontier (Spring Breath Town hidden)
+    → **7 Wingly locations canon mappés** (cohérent canon "5 floating cities + Flanvel mobile fortress" Dragon Campaign + hidden post-war).
+
 ### World Map fandom complement — oceans nommés + locations canon par region + new NPCs/lore
 
 - [ ] **🆕 6 oceans/seas canon nommés** : Aquaria Coral Reef (sud) + Straits of Walter (ouest, sépare mainland des Broken Islands) + Rudra Bay (nord-ouest, sépare Death Frontier) + Fourtos Ocean (nord-ouest + nord) + Straits of Merzis (nord-est Mille Seseau) + Illisa Bay (centre, entre 3 countries + Suncrest+Prison Islands). À documenter `world-map/oceans-seas.md` (à créer). Source: [`features/world-map/endiness.md`](features/world-map/endiness.md).

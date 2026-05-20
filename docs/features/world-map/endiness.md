@@ -6,6 +6,7 @@
 >
 > - 🥈 [`_sources/lod-wiki-endiness.md`](./_sources/lod-wiki-endiness.md) — wiki LoD (continent overview + 4 regions + 6 east lands master)
 > - 🥉 [`_sources/fandom-endiness.md`](./_sources/fandom-endiness.md) — fandom (oceans nommés détaillés + ~35 locations canon par region + Charle Frahma sister Melbu + Vellweb 7 towers + Lapto Zenebatos + Princesses Emille/Lisa + Rouge School Martial Arts + statistic 1M habitants + Fletz writer mistake)
+> - 🥈 [`_sources/official-worldmap-observations.md`](./_sources/official-worldmap-observations.md) — **Official map artwork observations** (positions exactes canon, **Barrier Station NEW location**, corrections Zenebatos/Kadessa/Furni positions)
 
 ## Statut
 
@@ -130,9 +131,9 @@ Notable canon :
 - **Shrine of Shirley** : **Dragoni Plant grows only here** canon
 - **Kazas Black Castle** : **purple flames power elevators + pulleys** canon
 
-#### **Tiberoa** (Disc 2, 9 locations)
+#### **Tiberoa** (Disc 2, 10 locations canon — incl. Barrier Station NEW)
 
-Fletz + Barrens + Donau + Valley of Corrupted Gravity + Home of Gigantos + Lidiera + Undersea Cavern + Prison Island + Fueno
+Fletz + Barrens + Donau + Valley of Corrupted Gravity + Home of Gigantos + Lidiera + Undersea Cavern + Prison Island + Fueno + **Barrier Station** ⚠️ NEW (visible map officielle, non documenté wiki/fandom Endiness pages — à investiguer)
 
 Notable canon :
 
@@ -149,7 +150,7 @@ Notable canon :
 
 Notable canon :
 
-- **Furni "Water City"** ⚠️ NEW canon : town directly at ocean + boat rides through water channels + **temperate climate** (vs rest cold)
+- **Furni "Water City"** ⚠️ NEW canon : **position canon (map) : sud Mille Seseau côte ouest Illisa Bay**. Town directly at ocean + boat rides through water channels + **temperate climate** (vs rest cold)
 - **Deningrad Crystal Palace** = former Wingly city remains
 - **Neet** : tragic Black Monster attack 18 ans pre-game (Dart's birthplace)
 - **Forest of Winglies** : surviving Winglies fled here, **closed self-sufficient society**, peaceful anonymous existence apart from humans
@@ -174,13 +175,13 @@ Notable canon :
 
 #### **5 Ancient Wingly Cities** canon
 
-| Wingly City          | Nom alternatif canon                     | Statut present                                                                                                                                                                         |
-| -------------------- | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Kadessa**          | **The Forbidden Land** ⚠️ NEW name canon | **Ruines now** — political+military center ancient Wingly empire. **Probable ruins lie in Mille Seseau** (Divine Dragon flies above)                                                   |
-| **Tower of Flanvel** | (Wingly tower)                           | **Half-buried Kashua Glacier**. **Fortress + giant mobile war machine** capable flying. Faust = Commander. Disabled by Spear Shooter Vellweb canon                                     |
-| **Aglis**            | **"Magic City"**                         | Flying city now sunken under sea. **Magic seals out ocean** → vast **bubble of air** beneath water. Wingly society **studied magical powers** entire city                              |
-| **Zenebatos**        | **"Law City"**                           | Wingly city for **laws creation/revision/enforcement** + trials + executions. **Lapto robots** ⚠️ NEW canon run city. **Partially functional 11k ans plus tard** (Lapto still working) |
-| **Mayfil**           | **"Death City"**                         | Souls gathering when dying. **Gate to hell** canon supposedly. Demons location (Zackwell/Menon/Selebus half-Demon)                                                                     |
+| Wingly City          | Nom alternatif canon                     | Statut present                                                                                                                                                                                                         |
+| -------------------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Kadessa**          | **The Forbidden Land** ⚠️ NEW name canon | **Position canon (map official)** : **extrême NORD-EST Mille Seseau** ⚠️ CONFIRMÉ. Ruines now, political+military center ancient Wingly empire (Divine Dragon flies above confirme)                                    |
+| **Tower of Flanvel** | (Wingly tower)                           | **Position canon (map)** : émerge Kashua Glacier (entre Gloriano et Mille Seseau). **Fortress + giant mobile war machine** flying. Faust = Commander. Disabled by Spear Shooter Vellweb                                |
+| **Aglis**            | **"Magic City"**                         | **Position canon (map)** : île sud-ouest, Broken Islands area. Flying city now sunken under sea. **Magic seals out ocean** → vast **bubble of air** beneath water. Magical studies center                              |
+| **Zenebatos**        | **"Law City"**                           | **Position canon (map)** : **extrême NORD GLORIANO** ⚠️ CORRECTION (pas Mille Seseau). Laws creation/revision/enforcement + trials + executions. **Lapto robots** ⚠️ NEW canon, partially functional 11k ans plus tard |
+| **Mayfil**           | **"Death City"**                         | **Position canon (map)** : centre nord, entre Mille Seseau et Death Frontier. Souls gathering when dying, gate to hell canon. Demons location (Zackwell/Menon/Selebus half-Demon)                                      |
 
 #### **Broken Islands** (1 location visited)
 

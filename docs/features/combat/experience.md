@@ -5,10 +5,11 @@
 > **Sources** :
 >
 > - 🥈 [`_sources/lod-wiki-experience.md`](./_sources/lod-wiki-experience.md) — wiki LoD (EXP distribution active/inactive/survivors + tables thresholds canon par character × 60 levels + level cap + speed runner trivia)
+> - 🥉 [`_sources/fandom-experience.md`](./_sources/fandom-experience.md) — fandom (Additions level-gated canon + recruitment levels canon par character + DLV SP thresholds canon Table Dragoon Level 2-5 + divergences typos)
 
 ## Statut
 
-🟡 **Draft post-ingestion wiki LoD** — fandom à ingérer pour cross-check + complément narrative/tactical. Discord cadors restant à consulter pour formules stats gain par level (HP/AT/DF/MAT/MDF growth rates).
+🟡 **Draft post-ingestion wiki LoD + fandom** — Discord cadors restant à consulter pour formules stats gain par level (HP/AT/DF/MAT/MDF growth rates).
 
 ## 1. Système canon haut niveau
 
@@ -68,6 +69,60 @@ Order croissant difficulté (EXP requis at L60) :
 
 - L4 : Dart 102 / Lavitz/Albert 110 / Shana/Miranda 100 / Rose 104 / Haschel 103 / Meru 103 / Kongol 104
 - Variance early ≈ 10 EXP only → **flat early progression** canon
+
+### Cross-check fandom (compléments + divergences)
+
+**Confirmations utiles** :
+
+- ⭐ **MAJEUR : EXP level = ONLY requirement for new Additions** canon — "Experience levels are the only requirement for characters to receive new Additions, except for their Master Level addition." → Pattern canon Additions = level-gated unlocks per-character. À cross-référer `combat/additions.md` (chaque Addition débloquée par level threshold spécifique).
+- **Master Level addition exception** : different requirement (probable Addition use counter / mastery). À investiguer.
+- **Unique Monsters give EXP under specific conditions** confirmé fandom ("certain unique monsters")
+
+### Recruitment levels canon (fandom NEW info via "-" dashes table)
+
+| Character         | First level  | Disc / Story context                       |
+| ----------------- | ------------ | ------------------------------------------ |
+| **Dart**          | L2 (initial) | Hometown Seles intro Disc 1                |
+| **Lavitz/Albert** | L4           | Hellena Prison Disc 1                      |
+| **Shana/Miranda** | L5           | Post-Hellena Disc 1                        |
+| **Rose**          | L9           | Marshland Disc 1                           |
+| **Haschel**       | L14          | Lohan Disc 1                               |
+| **Meru**          | L18          | Donau Disc 2                               |
+| **Kongol**        | L20          | Black Castle Kazas Disc 1 (rejoint Disc 2) |
+
+→ Pattern canon : ordering matches story timeline party power curve. **Adopter ces levels comme baseline recruitment Damia**.
+
+### Dragoon Level (DLV) — SP thresholds canon ⭐ MAJEUR fandom-only
+
+| DLV | SP Requirement            | Characters                                         |
+| --- | ------------------------- | -------------------------------------------------- |
+| 2   | **1000 SP**               | Haschel / Lavitz / Albert / Shana / Miranda / Meru |
+| 2   | **1200 SP** (penalty)     | **Dart and Rose** (Fire/Dark Dragoons)             |
+| 2   | **2000 SP** (max penalty) | **Kongol** (Golden/Giganto Dragoon)                |
+| 3   | **6000 SP** all           |
+| 4   | **12000 SP** all          |
+| 5   | **20000 SP** all          |
+
+⚠️ **Divergence DLV 2 par character canon** :
+
+- 6 characters baseline = 1,000 SP
+- Dart + Rose penalty = 1,200 SP (+20%)
+- Kongol max penalty = 2,000 SP (+100%)
+
+DLV 3-5 = uniform pour tous les Dragoons. Pattern canon : "DLV 2 = hardest divergence balance, DLV 3+ = équitable".
+
+À cross-référer [`dragoons/mechanics.md`](../dragoons/mechanics.md) §SP/DLV (potentially déjà documenté via Discord DLV thresholds canon).
+
+### Divergences thresholds wiki vs fandom (probable typos)
+
+| Level / Character | Wiki LoD | Fandom  | Diff    | Notes                         |
+| ----------------- | -------- | ------- | ------- | ----------------------------- |
+| **L19 Dart**      | 10,974   | 10,947  | 27 EXP  | Typo probable une des sources |
+| **L33 Rose**      | 58,821   | 58,321  | 500 EXP | Typo probable                 |
+| **L51 Dart**      | 215,302  | 215,303 | 1 EXP   | Probable typo arrondi         |
+| **L52 Meru**      | 233,990  | 233,490 | 500 EXP | Typo probable                 |
+
+→ **Wiki tier 2 prévaut probable** (cohérent monotonie courbe + cross-référence Prima Strategy Guide / CCajes Character FAQ). Adopter valeurs wiki canon.
 
 ## 3. Vision Damia (implémentation)
 

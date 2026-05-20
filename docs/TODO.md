@@ -1653,6 +1653,42 @@
 
 - [ ] **🆕 Recruitment level baseline canon** — Quel niveau de départ pour chaque character à son recrutement ? Wiki silent. Probable : Dart commence L1, autres rejoignent à level "matching party average" canon. À investiguer + documenter `party-members/`. Source: gap dans wiki.
 
+### Combat / Experience fandom complement — Additions level-gated + recruitment levels canon + DLV SP thresholds canon
+
+- [ ] **🆕 Additions level-gated UNLOCK canon ⚠️ MAJEUR** — "Experience levels are the only requirement for characters to receive new Additions, except for their Master Level addition." → Pattern : chaque Addition débloquée par level threshold spécifique. À cross-référer `combat/additions.md` (déjà documenté) + investiguer exact level → Addition mappings canon. Master Level addition = exception (probable canon usage counter / mastery). Source: [`features/combat/_sources/fandom-experience.md`](features/combat/_sources/fandom-experience.md). Priorité: **haute**.
+
+- [ ] **🆕 Recruitment levels canon par character (via fandom "-" dashes)** — Dart L2 / Lavitz-Albert L4 / Shana-Miranda L5 / Rose L9 / Haschel L14 / Meru L18 / Kongol L20. Pattern canon recrutement story-timeline. À implémenter dans data-model `RecruitmentTimeline` + balance Mode Story (each character apparaît au level minimum canon). Source: fandom-experience.md table dashes. Priorité: **moyenne**.
+
+- [ ] **🆕 DLV SP thresholds canon ⭐ MAJEUR** — Table Dragoon Level requirements :
+  - DLV 2 = **1000 SP** (Haschel/Lavitz/Albert/Shana/Miranda/Meru)
+  - DLV 2 = **1200 SP** penalty (Dart/Rose)
+  - DLV 2 = **2000 SP** max penalty (Kongol)
+  - DLV 3 = 6000 SP all
+  - DLV 4 = 12000 SP all
+  - DLV 5 = 20000 SP all
+    → Adopter ces values comme canonical Damia. À cross-référer `dragoons/mechanics.md` (potentiellement déjà documenté Discord). Source: fandom-experience.md §Dragoon Level.
+
+- [ ] **🆕 DLV 2 penalty Dart+Rose canon (1200 SP)** — Pourquoi Dart et Rose seulement ? Hypothèse : Fire (Dart) + Dark (Rose) = éléments "principaux/iconiques" Disc 1 → balance penalty pour éviter early Dragoon spam. À documenter `dragoons/mechanics.md`. Source: idem.
+
+- [ ] **🆕 DLV 2 penalty Kongol canon (2000 SP) max ⚠️** — Kongol = +100% penalty vs baseline. Cohérent avec late-game character + Golden/Giganto Dragoon rarity canon. À documenter `party-members/Kongol.md` (à créer) + `dragoons/golden.md` (à créer). Source: idem.
+
+- [ ] **🆕 Master Level addition exception canon ⚠️** — Wiki dit "Master Level addition" pour chaque character. Quel requirement exact ? Probable : Addition use count atteint cap (mastery via repetition). À investiguer Discord + `combat/additions.md`. Source: fandom-experience.md mécanique generale.
+
+- [ ] **🆕 Petrification = 0 EXP wiki only ⚠️ divergence** — Wiki tier 2 inclut Petrification dans "knocked out". Fandom omet → simplification. Wiki tier 2 prévaut. Adopter Petrification = 0 EXP canon Damia. Source: comparaison sources.
+
+- [ ] **🆕 Divergences thresholds wiki vs fandom probables typos ⚠️** :
+  - L19 Dart : wiki 10,974 vs fandom 10,947 (27 EXP diff)
+  - L33 Rose : wiki 58,821 vs fandom 58,321 (500 EXP diff)
+  - L51 Dart : wiki 215,302 vs fandom 215,303 (1 EXP diff)
+  - L52 Meru : wiki 233,990 vs fandom 233,490 (500 EXP diff)
+    → Wiki tier 2 prévaut probable (cohérent monotonie + cross-référence Prima Strategy Guide via fandom refs). Adopter wiki canon. Source: comparaison sources.
+
+- [ ] **🆕 Sources cross-references fandom canon** — Prima's Official Strategy Guide + thelegendofdragoon.net + CCajes Character FAQ (gamefaqs). À récupérer pour validation tertiary indépendante. Source: fandom-experience.md §References.
+
+- [ ] **🆕 "Training Spot" canon page reference fandom** — Mentionné pour grinding spots. Implique TLoD a des **Training Spot canon definits**. À investiguer fandom Training Spot page + intégrer dans `combat/training-spots.md` (à créer) ou `locations/farming-zones.md` (à créer). Source: fandom-experience.md intro.
+
+- [ ] **🆕 Unique Monsters give EXP "under certain conditions" canon** — Fandom : "certain unique monsters" give EXP. Cohérent Unique Monsters 1-damage cap + specific reward conditions. À documenter `combat/unique-monsters.md` (à créer) EXP rules. Source: fandom-experience.md intro.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

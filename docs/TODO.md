@@ -760,6 +760,37 @@
 
 - [ ] **Wink double-rescue canon** (Disc 2 Donau + Disc 3 Younger Bardel) — pattern Lloyd "saviour figure" établit trust durable. Important pour Disc 3 Crystal Palace kidnap context. À refléter `lore/lloyd-arc.md` (à créer).
 
+### Locations + Bosses (Nest of Dragon Disc 1 — Greham+Feyrbrand + Jade DS Lavitz unlock)
+
+- [ ] **Boss Greham canon (Jade Dragoon)** — Wind, 1,200 XP, 100G, drop Plate Mail 30%. Cf. dragons.md §Greham reveal. Lavitz-Greham close-up cutscene submap 656 → moment narratif Disc 1 majeur. À documenter `bosses/Greham.md` (à créer).
+
+- [ ] **Boss Feyrbrand canon (Wind Dragon vassal Greham)** — Wind, 0 XP/0G (yield via Greham), drop **Down Burst 100%**. Praying mantis shape, green body + tusks "Green-Tusked Dragon". Source du Sandora power tip war canon. À documenter `bosses/Feyrbrand.md` (à créer).
+
+- [ ] **Jade Dragon DS auto-add post-defeat canon** — Lavitz first Dragoon transformation Disc 1 trigger. Data-model `Boss.onDefeat.grants: ItemId[]`. Pattern : defeating Dragoon → DS transferred to party. Source: [`features/locations/Nest of Dragon.md`](features/locations/Nest of Dragon.md).
+
+- [ ] **Pattern "Ultimate Rest" canon** — Spring Nest of Dragon (free + full HP+MP + cure ALL status) = même mécanique que Cave Water Death Frontier + Water Divine Tree. Pattern "sacred location rest" gratuit Disc 1/3/4. Data-model `RestArea.tier: "basic" | "ultimate"`.
+
+- [ ] **Life Water good canon** — context-dependent acquisition (Water Bottle in inventory + interact Spring). Pattern conditional good. Où obtenir Water Bottle Disc 1 ? À investiguer.
+
+- [ ] **Items nouveaux Nest of Dragon canon** :
+  - **Down Burst** (Feyrbrand drop 100%) — probable Wind attack item canon
+  - **Beast Fang** (Lizard Man drop 2%) — type ? Physical attack ? Material ?
+  - **Plate Mail** (Greham drop 30%) — armor canon Disc 1
+  - **Chain Mail** (chest) — armor canon Disc 1
+    → À documenter `items/` (à créer).
+
+- [ ] **Bravery Amulet early Disc 1 canon** — anti-Fear accessory disponible chest Nest of Dragon. Confirme pattern : accessory chains accessible early dungeons + late shops (Bale 300G + Deningrad 300G). À documenter `items/accessories.md`.
+
+- [ ] **Boss double encounter scripted canon (formation 393)** — Greham + Feyrbrand fight ensemble. Pattern "multi-boss encounter" data-model. Mécanique : sequential phases ou simultaneous ? À reconfirmer. Premier multi-boss canon Disc 1.
+
+- [ ] **"Shana runs off" submap 131 canon** — story beat narrative à orchestrer. Possible Feyrbrand poison threat ? Lured ? À investiguer canon fandom.
+
+- [ ] **Greham backstory canon** — ancien knight Basil défector vers Sandora probable (Lavitz "talks" canon submap 656). À documenter `bosses/Greham.md` story.
+
+- [ ] **Forest poisoning visual canon** — Feyrbrand's presence warps environment. Effet ambient Damia (le code) : couleurs malsaines, particules, plantes corrompues. Pattern réutilisable autres Dragon territories.
+
+- [ ] **Web pit + vine climb traversal canon** — mini-puzzle exploration Nest of Dragon. Pattern Damia gameplay : interactable web/vine objects, fall mechanics.
+
 ### Dragons fandom complement — Lenus/Greham Dragoons canon + Michael Black Burst + Dragon weapons
 
 - [ ] **REVEAL canon majeur — Lenus = Blue Sea Dragoon** (pas juste un boss !) — Lenus était une Dragoon Water Disc 2 canon (Regole = son vassal). Implication : **Lenus aurait pu être party member alternate**. Conflict avec Meru's Blue Sea Spirit inheritance Disc 2 post-Phantom Ship arc à reconcilier. À documenter `bosses/Lenus.md` (à créer) + corrections `party-members/Meru.md`. Source: [`features/dragoons/dragons.md`](features/dragoons/dragons.md) §Lenus.

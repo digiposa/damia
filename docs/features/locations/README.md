@@ -10,22 +10,22 @@ Ordre alphabétique. Découpage canon TLoD (4 discs, monde Endiness complet).
 
 ### Disc 1
 
-| Location          | Type                           | Statut profil |
-| ----------------- | ------------------------------ | ------------- |
-| **Bale**          | Capital                        | 🟡 draft      |
-| Black Castle      | Castle/Boss                    | ⚪ à spec     |
-| Forest of Seles   | Village + forest               | ⚪ à spec     |
-| Hellena Prison    | Prison                         | ⚪ à spec     |
-| Hoax              | Fortress                       | ⚪ à spec     |
-| **Kazas**         | Capital Sandora + Black Castle | 🟡 draft      |
-| Limestone Cave    | Cave                           | ⚪ à spec     |
-| Lohan             | City                           | ⚪ à spec     |
-| Marshlands        | Wilderness                     | ⚪ à spec     |
-| Nest of Dragon    | Dungeon                        | ⚪ à spec     |
-| Prairie           | Wilderness                     | ⚪ à spec     |
-| Seles             | Village                        | ⚪ à spec     |
-| Shrine of Shirley | Sacred ruin                    | ⚪ à spec     |
-| Volcano Villude   | Volcano                        | ⚪ à spec     |
+| Location           | Type                                                  | Statut profil |
+| ------------------ | ----------------------------------------------------- | ------------- |
+| **Bale**           | Capital                                               | 🟡 draft      |
+| Black Castle       | Castle/Boss                                           | ⚪ à spec     |
+| Forest of Seles    | Village + forest                                      | ⚪ à spec     |
+| Hellena Prison     | Prison                                                | ⚪ à spec     |
+| Hoax               | Fortress                                              | ⚪ à spec     |
+| **Kazas**          | Capital Sandora + Black Castle                        | 🟡 draft      |
+| Limestone Cave     | Cave                                                  | ⚪ à spec     |
+| Lohan              | City                                                  | ⚪ à spec     |
+| Marshlands         | Wilderness                                            | ⚪ à spec     |
+| **Nest of Dragon** | **Dungeon (Greham+Feyrbrand bosses, Jade DS unlock)** | 🟡 draft      |
+| Prairie            | Wilderness                                            | ⚪ à spec     |
+| Seles              | Village                                               | ⚪ à spec     |
+| Shrine of Shirley  | Sacred ruin                                           | ⚪ à spec     |
+| Volcano Villude    | Volcano                                               | ⚪ à spec     |
 
 ### Disc 2
 

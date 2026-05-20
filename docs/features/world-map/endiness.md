@@ -1,8 +1,11 @@
 # Endiness (continent canon TLoD)
 
-> **Continent canon TLoD** dans le **Tesfer Realm** ⚠️ NEW (le "monde" englobant). **Peninsula anchored east**, bordé par **Fourtos Ocean** + **Aquaria Coral Reef**. **6 lands far east unexplored canon** (Azeel/Ediroso/Losta/Nissel/Seilnder/Vidalio). **4 régions territories canon present** : Serdio + Tiberoa + Mille Seseau + Gloriano (partiel = Death Frontier). **Broken Islands** au sud (canon ripped Dragon Campaign). **Planet name never given canon**.
+> **Continent canon TLoD** dans le **Tesfer Realm** ⚠️ NEW (le "monde" englobant). **Peninsula anchored east**, bordé par **6 oceans/seas nommés canon** (Fourtos Ocean + Aquaria Coral Reef + Rudra Bay + Straits of Walter + Straits of Merzis + Illisa Bay). **6 lands far east unexplored canon** (Azeel/Edinoro/Losta + Seilnder/Nissel/Lidalio). **3 major countries + Death Frontier + Gloriano + Broken Islands canon**. **5 Ancient Wingly Cities canon** (Kadessa/Forbidden Land + Tower of Flanvel + Aglis + Zenebatos + Mayfil). **Tiberoa royals : King Zior + Princesses Emille + Lisa**. **Charle Frahma = sister Melbu Frahma** ⚠️ NEW canon. **Vellweb 7 towers (1 per Dragoon)** canon. **Spear Shooter Vellweb disabled Tower of Flanvel** canon. **Population ~1M canon, 22,000 named Claire**. **Planet name never given canon**. **Lidalio (fandom) / Vidalio (wiki) + Edinoro (fandom) / Ediroso (wiki)** = divergences canon noms.
 >
-> **Source canon** : 🥈 [`_sources/lod-wiki-endiness.md`](./_sources/lod-wiki-endiness.md)
+> **Sources canon** :
+>
+> - 🥈 [`_sources/lod-wiki-endiness.md`](./_sources/lod-wiki-endiness.md) — wiki LoD (continent overview + 4 regions + 6 east lands master)
+> - 🥉 [`_sources/fandom-endiness.md`](./_sources/fandom-endiness.md) — fandom (oceans nommés détaillés + ~35 locations canon par region + Charle Frahma sister Melbu + Vellweb 7 towers + Lapto Zenebatos + Princesses Emille/Lisa + Rouge School Martial Arts + statistic 1M habitants + Fletz writer mistake)
 
 ## Statut
 
@@ -55,23 +58,53 @@
 
 ## Géographie canon Endiness
 
-### Eaux canon
+### Eaux canon (6 nommés fandom)
 
-- **Fourtos Ocean** ⚠️ NEW canon — surround Endiness W/S/N
-- **Aquaria Coral Reef** ⚠️ NEW canon — bordure marine
-- Implications Mode Story Damia : navigation ship (Queen Fury, Phantom Ship) ; design Aglis underwater (cohérent Coral Reef ?)
+| Ocean / Sea / Bay            | Position canon                                                                                                        |
+| ---------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| **Aquaria Coral Reef**       | Sud mainland (transitioned Fletz → Rouge)                                                                             |
+| **Straits of Walter** ⚠️ NEW | Ouest, séparent mainland Endiness des Broken Islands                                                                  |
+| **Rudra Bay** ⚠️ NEW         | Nord des Straits of Walter, ouest du Death Frontier                                                                   |
+| **Fourtos Ocean**            | Nord-ouest + nord, grand sea border                                                                                   |
+| **Straits of Merzis** ⚠️ NEW | Nord-est de Mille Seseau                                                                                              |
+| **Illisa Bay** ⚠️ NEW        | Sud des Straits of Merzis, large ocean region bordant les 3 countries + **Suncrest Island + Prison Island au centre** |
+
+> 🆕 **Aquaria Coral Reef = trajet canon Fletz → Rouge** (Disc 2 sea travel southern ocean).
+
+> ⚠️ **Géographical contradiction canon documenté** : **Lenus s'échappe de Chamber of the Sun Twin Castle Fletz → ocean** → King Zior conclut "Illisa Bay" alors que Fletz = sud Aquaria Coral Reef, Illisa Bay = nord opposite. Writer's mistake canon (pas reachable Aquaria → Illisa sans contourner continent entier).
 
 ### Continents adjacent
 
 - **Endiness anchored east to other land(s)** canon — peninsula structure
-- **6 lands far east unexplored canon** :
-  - **Azeel**
-  - **Ediroso**
-  - **Losta**
-  - **Nissel**
-  - **Seilnder**
-  - **Vidalio**
-    → Visible on world map only, **no story content canon** Disc 1-4. Hooks pour future DLC/expansion ou Mode Survival arènes "lands of the east".
+
+#### **Eastern region** (south-east, Dart's pre-game travel destination canon)
+
+> Fandom : "**possibly the region where Dart had traveled to before returning to his home**"
+> Cheat code confirms : dotted path east of Seles canon = Dart's pre-game journey area
+
+- **Nissel** : plains canon
+- **Seilnder** : passage between mountains canon
+- **Lidalio** ⚠️ (fandom) / **Vidalio** (wiki LoD) : mountain region presumably — **divergence canon orthographique**
+
+#### **Northeastern region** (mountain chain into oceans east of Straits of Merzis)
+
+- **Azeel** : outermost mountain region canon
+- **Edinoro** ⚠️ (fandom) / **Ediroso** (wiki LoD) : another mountain region — **divergence canon orthographique**
+- **Losta** : plains between Azeel + Edinoro canon
+
+> **None of east/northeast regions visited in-game**. Hooks pour DLC/expansion ou Mode Survival exclusive arènes Damia (le code).
+
+#### **Larger peninsula sud unnamed canon** ⚠️ NEW
+
+- **South of Death Frontier**, large peninsula visible map mais **non visité in-game + no name on official map** canon (fandom)
+- Hook supplémentaire pour content futur Damia
+
+#### Dart's pre-game journey canon hints
+
+- World map : **dotted path east of Seles** canon
+- Cheat code exit Seles east = places player on dotted path
+- Path ends arbitrary point, no enterable area
+- → **Dart 5-year journey = explored east** canon implication
 
 ### Territories canon (Present Day)
 
@@ -84,13 +117,84 @@
 | **Death Frontier** (Gloriano south) | Disc 4      | Désert scorched canon — Lucky Jar / Rainbow Bird mobs + Cactus/Sandworm etc.            | Désert (post-Dragon Campaign)     |
 | **Broken Islands**                  | ?           | Large island ripped Dragon Campaign canon                                               | Damaged / fragmented              |
 
-### Locations canon de note (île + ailleurs)
+### Locations canon master par region (fandom complet)
 
-- **Suncrest Island** : Regole sea Dragon territory canon (cf. dragons.md)
+#### **Serdio** (Disc 1, 13 locations)
+
+Seles + Forest + Prairie + Limestone Cave + Bale + Hoax + Marshland + Volcano Villude + Nest of Dragon + Lohan + Shrine of Shirley + Hellena Prison + Kazas
+
+Notable canon :
+
+- **Limestone Cave** : path Bale infested **serpent Urobolus** canon
+- **Lohan** : Hero Competition canon (strongest adventurer Endiness)
+- **Shrine of Shirley** : **Dragoni Plant grows only here** canon
+- **Kazas Black Castle** : **purple flames power elevators + pulleys** canon
+
+#### **Tiberoa** (Disc 2, 9 locations)
+
+Fletz + Barrens + Donau + Valley of Corrupted Gravity + Home of Gigantos + Lidiera + Undersea Cavern + Prison Island + Fueno
+
+Notable canon :
+
+- **Tiberoa royals canon** : **King Zior + Princesses Emille + Lisa** ⚠️ NEW canon
+- **Tiberoa people** : **dark skin + astronomy/astrology** canon
+- **Fletz Twin Castle** = royal residence (architecture astronomy symbols)
+- **Home of Gigantos** = ancient Giganto homeland (Kongol's people) → bandits hideout now
+- **Lidiera + Undersea Cavern** = islands Illisa Bay (cf. Rose flashback Cutscene 6)
+- **Fueno** = **healing hot spring baths** + Queen Fury port (Suncrest Island)
+
+#### **Mille Seseau** (Disc 3, 7 locations)
+
+**Furni** ⚠️ NEW + Evergreen Forest + Deningrad + Neet + Forest of Winglies + Mountain of Mortal Dragon + Kashua Glacier
+
+Notable canon :
+
+- **Furni "Water City"** ⚠️ NEW canon : town directly at ocean + boat rides through water channels + **temperate climate** (vs rest cold)
+- **Deningrad Crystal Palace** = former Wingly city remains
+- **Neet** : tragic Black Monster attack 18 ans pre-game (Dart's birthplace)
+- **Forest of Winglies** : surviving Winglies fled here, **closed self-sufficient society**, peaceful anonymous existence apart from humans
+- **Mountain of Mortal Dragon** : volcano + **Divine Dragon sealed** + **many dragons still live here** canon
+- **Kashua Glacier** : separates Mille Seseau from Gloriano + **Tower of Flanvel buried** below
+
+#### **Gloriano** (Disc 4 partial, 3 locations)
+
+Snowfield + Fort Magrad + Vellweb
+
+Notable canon :
+
+- **Gloriano = "desolate snow desert under everlasting ice"** canon (vs Death Frontier desert south)
+- **Vellweb** = **ancient capital of humans Gloriano** + **7 tall towers center, each dedicated to one of original 7 Dragoons** ⚠️ NEW canon design
+- **Spear Shooter Vellweb** = weapon canon **disabled Tower of Flanvel Faust's tower** canon
+
+#### **Death Frontier** (Disc 4, 1 inhabited location)
+
+- **Ulara** = "**Spring Breath Town**" canon, Wingly resort modern days
+- **Charle Frahma resides Ulara** = **sister of ancient Wingly dictator Melbu Frahma** canon ⚠️ NEW relationship reveal !
+- **Not visible to travellers without magic** canon (revealed by Rose's Choker)
+
+#### **5 Ancient Wingly Cities** canon
+
+| Wingly City          | Nom alternatif canon                     | Statut present                                                                                                                                                                         |
+| -------------------- | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Kadessa**          | **The Forbidden Land** ⚠️ NEW name canon | **Ruines now** — political+military center ancient Wingly empire. **Probable ruins lie in Mille Seseau** (Divine Dragon flies above)                                                   |
+| **Tower of Flanvel** | (Wingly tower)                           | **Half-buried Kashua Glacier**. **Fortress + giant mobile war machine** capable flying. Faust = Commander. Disabled by Spear Shooter Vellweb canon                                     |
+| **Aglis**            | **"Magic City"**                         | Flying city now sunken under sea. **Magic seals out ocean** → vast **bubble of air** beneath water. Wingly society **studied magical powers** entire city                              |
+| **Zenebatos**        | **"Law City"**                           | Wingly city for **laws creation/revision/enforcement** + trials + executions. **Lapto robots** ⚠️ NEW canon run city. **Partially functional 11k ans plus tard** (Lapto still working) |
+| **Mayfil**           | **"Death City"**                         | Souls gathering when dying. **Gate to hell** canon supposedly. Demons location (Zackwell/Menon/Selebus half-Demon)                                                                     |
+
+#### **Broken Islands** (1 location visited)
+
+- **Rouge** (eastern Broken Islands) — fishing village + **Rouge School of Martial Arts** ⚠️ NEW canon (probable Haschel link !)
+- Other islands : presumably thin population
+
+#### **Locations canon de note (île + ailleurs)**
+
+- **Suncrest Island** : **Regole sea Dragon territory** canon + **Fueno town**
 - **Prison Island** : Lenus arc Disc 2 canon (cf. Donau Queen Fury route)
 - **Mountain of Mortal Dragon** : Divine Dragon sealed canon (Disc 2-3)
 - **Phantom Ship** : Disc 2 sea encounter canon
 - **Moon That Never Sets** : final dungeon Disc 4, suspended sky canon (108th fruit flesh)
+- **Divine Tree** : visited finals Disc 4, **exact location NOT revealed** canon (mystère)
 
 ## Lore canon distincts
 
@@ -134,6 +238,35 @@
 - **6 lands east** : visible map nodes inaccessible canon (greyed out / future content)
 - **Lore codex** : Endiness + Tesfer Realm + planet unknown
 - **Regions Disc-progression** : Story flow Disc 1→2→3→4 = region-locked progression canon
+
+## 🆕 Statistic canon Endiness population (fandom)
+
+> **Royal Personnel Authority of Serdio canon** (Fletz Albert quote) :
+>
+> - **~1,000,000 people total Endiness**
+> - **~550,000 women**
+> - **~22,000 named "Claire"** (~4% women)
+
+### Implications populations cities canon
+
+- **Large cities canon** : Bale, Kazas, Fletz, Deningrad (~100k+ chacune si urbanization 50%)
+- **Medium canon** : Lohan, Donau, Fueno, Furni
+- **Small canon** : Seles, Hoax, Lidiera
+- **Not counting Wingly cities/villages** (Forest of Winglies + Aglis + Ulara + Zenebatos + Rouge ?)
+- Pattern : in-game cities appear much smaller than 100k → wiki theories :
+  1. Cities/locations larger off-screen
+  2. Many more cities exist non-marked map
+  3. Number arbitrary writer's choice
+
+> Implication Damia (le code) : if reproducing canon scale → consider abstracted population (Mode Story narrative scale vs literal sprite scale).
+
+## 🆕 Trivia canon (fandom)
+
+- **"Endines" misspelled** in Bale bookstore content canon ⚠️ typo in-game canon
+- **Geographic Fletz/Illisa Bay contradiction** writer's mistake canon (Lenus escape Chamber of Sun south → King Zior says Illisa Bay north — impossible géography)
+- **Eastern Tribe attacking Serdio** : false alert Albert Aglis CD4 trial canon (test courage set priorities)
+- **Rose tells Syuveil eastern lands story** Vellweb Disc 4 : "life doesn't have beginning or end, revolves like circle" canon
+- **Dart's pre-game journey east of Serdio** confirmed via dotted path + cheat code
 
 ## Liens code & doc
 

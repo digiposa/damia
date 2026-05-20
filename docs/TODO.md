@@ -862,6 +862,49 @@
   - Possible dedicated cinematic flashback majeur Disc 4 endgame
   - À orchestrer `quests/disc4-vellweb-mausoleum.md` (à créer) + `quests/disc4-kadessa-flashback.md` (à créer)
 
+### World Map fandom complement — oceans nommés + locations canon par region + new NPCs/lore
+
+- [ ] **🆕 6 oceans/seas canon nommés** : Aquaria Coral Reef (sud) + Straits of Walter (ouest, sépare mainland des Broken Islands) + Rudra Bay (nord-ouest, sépare Death Frontier) + Fourtos Ocean (nord-ouest + nord) + Straits of Merzis (nord-est Mille Seseau) + Illisa Bay (centre, entre 3 countries + Suncrest+Prison Islands). À documenter `world-map/oceans-seas.md` (à créer). Source: [`features/world-map/endiness.md`](features/world-map/endiness.md).
+
+- [ ] **🆕 Divergences canon noms east lands** : Edinoro (fandom) / Ediroso (wiki LoD) + Lidalio (fandom) / Vidalio (wiki LoD). À reconfirmer tier 1.
+
+- [ ] **🆕 Tiberoa royals canon enrichi** : **King Zior + Princesses Emille + Lisa**. Tiberoa people canon : **dark skin + astronomy + astrology** culture. Twin Castle Fletz = symbols astronomy. À documenter `lore/tiberoa.md` (à créer) + `npcs/king-zior.md` + `npcs/princess-emille.md` + `npcs/princess-lisa.md`.
+
+- [ ] **🆕 Furni "Water City" canon** Mille Seseau — town directly at ocean + boat rides through water channels + **temperate climate** (vs rest Mille Seseau cold). À documenter `locations/Furni.md` (à créer).
+
+- [ ] **🆕 Charle Frahma canon = sister of Melbu Frahma** ⚠️ MAJOR REVEAL — confirme pattern Frahma surname canon. Sister of dictator + Rose's friend (gave Choker) + resides Ulara. À documenter `lore/charle-frahma.md` (à créer) + `npcs/charle-frahma.md`. **Frahma family = Wingly dictator dynasty** canon.
+
+- [ ] **🆕 Vellweb 7 towers canon design** — each tower dedicated to one of original 7 Dragoons. À refléter `locations/Vellweb.md` (à créer) — Damia (le code) Vellweb visual design 7 towers (cohérent souls Vellweb canon).
+
+- [ ] **🆕 Spear Shooter disabled Tower of Flanvel canon** — weapon Liberation Army Vellweb confirms canon. À documenter `lore/spear-shooter.md` (à créer) + `bosses/Faust.md` + `locations/Tower of Flanvel.md`.
+
+- [ ] **🆕 Zenebatos "Law City" canon + Lapto robots** ⚠️ NEW — Wingly society laws creation/revision/enforcement + trials/executions. Lapto robots still functional 11k ans plus tard. Pattern data-model Damia : `Zenebatos.activities = ["lawmaking", "trials", "executions"]` + Lapto = automated NPCs. À documenter `locations/Zenebatos.md` (à créer).
+
+- [ ] **🆕 Aglis "bubble of air underwater" canon** — magic seals out ocean, cityscape in vast bubble. **Entire city devoted to studying magical powers** canon. À enrichir `locations/Aglis.md`.
+
+- [ ] **🆕 Kadessa "Forbidden Land" canon name** — ancient capital ruins now = Forbidden Land. **Probable located in Mille Seseau** (Divine Dragon flies above canon). À documenter `locations/Kadessa.md` ou `locations/Forbidden Land.md` (à créer). Divergence naming canon : Kadessa = past, Forbidden Land = present ruins.
+
+- [ ] **🆕 Mayfil "Death City" canon + gate to hell** — souls gathering destination canon. Demons location (Zackwell/Menon/Selebus). À documenter `locations/Mayfil.md` (à créer).
+
+- [ ] **🆕 Rouge School of Martial Arts canon** ⚠️ NEW — origine Rouge village Broken Islands. **Probable Haschel link** (canon martial artist). À documenter `locations/Rouge.md` (à créer) + investiguer Haschel backstory.
+
+- [ ] **🆕 Mountain of Mortal Dragon canon** = "volcano north Mille Seseau" + Divine Dragon sealed + **many dragons still live** canon. À documenter `locations/Mountain of Mortal Dragon.md` (à créer).
+
+- [ ] **🆕 Limestone Cave serpent Urobolus canon** — boss possible Disc 1. Path Bale infested. À documenter `bosses/Urobolus.md` (à créer) + `locations/Limestone Cave.md`.
+
+- [ ] **🆕 Lohan Hero Competition canon** — strongest adventurer Endiness contest event. À documenter `quests/disc1-lohan-hero-competition.md` (à créer).
+
+- [ ] **🆕 Larger peninsula south Death Frontier unnamed canon** ⚠️ — visible map, non-visité, no name. Hook supplémentaire DLC/expansion Damia.
+
+- [ ] **🆕 Statistic canon ~1M habitants Endiness** — Royal Personnel Authority Serdio (Fletz Albert quote). 550k women, 22k Claire. À utiliser pour balance scale lore Damia (le code). Pattern dialogue Fletz "Dart-Haschel possible relation Claire mother/daughter same name".
+
+- [ ] **🆕 Trivia canon Endiness** :
+  - "Endines" typo bookstore Bale canon
+  - Geographic Fletz/Illisa Bay contradiction writer's mistake canon
+  - Eastern Tribe false alert Albert Aglis trial canon
+  - Rose tells Syuveil "eastern lands circle of life" Vellweb canon
+  - Dart pre-game journey east confirmed (dotted path + cheat code)
+
 ### World Map / Lore (Endiness foundational map TLoD)
 
 - [ ] **🆕 Tesfer Realm canon** — encompassing "world" wrapper. Cosmological lore ? Lien spiritual/physical planes ? À investiguer + documenter `lore/tesfer-realm.md` (à créer).

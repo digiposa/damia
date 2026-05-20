@@ -862,6 +862,34 @@
   - Possible dedicated cinematic flashback majeur Disc 4 endgame
   - À orchestrer `quests/disc4-vellweb-mausoleum.md` (à créer) + `quests/disc4-kadessa-flashback.md` (à créer)
 
+### World Map / Lore (Endiness foundational map TLoD)
+
+- [ ] **🆕 Tesfer Realm canon** — encompassing "world" wrapper. Cosmological lore ? Lien spiritual/physical planes ? À investiguer + documenter `lore/tesfer-realm.md` (à créer).
+
+- [ ] **🆕 Planet name canon mystère** — never given canon trivia. Design choice ou future reveal ? À noter `lore/cosmology.md`.
+
+- [ ] **🆕 Fourtos Ocean + Aquaria Coral Reef canon water bodies** — bordent Endiness W/S/N. Ship routes (Queen Fury Donau-Fueno + Donau-Furni). Aquaria Coral Reef = where Aglis underwater hidden ? À documenter `world-map/oceans.md` (à créer).
+
+- [ ] **🆕 6 lands far east unexplored canon** : **Azeel, Ediroso, Losta, Nissel, Seilnder, Vidalio**. Visible world map only, no story content Disc 1-4. Hooks pour DLC/expansion ou Mode Survival exclusive arènes Damia. À documenter `world-map/east-lands.md` (à créer).
+
+- [ ] **🆕 Endiness = peninsula anchored east canon** — implications geography. Continent structure pour world map Damia rendering.
+
+- [ ] **🆕 4 territories canon present** : Serdio + Tiberoa + Mille Seseau + Gloriano (partial = Death Frontier south + ruins north). À refléter world-map data-model. Source: [`features/world-map/endiness.md`](features/world-map/endiness.md).
+
+- [ ] **🆕 Broken Islands canon** — large island south ripped apart Dragon Campaign. Visited Disc 4 ? Exploration possible ? À documenter `locations/Broken Islands.md` (à créer).
+
+- [ ] **🆕 Gloriano vs Death Frontier canon distinction** — Gloriano north retains ruins (Vellweb probable + Fort Magrad probable), Death Frontier south = désert scorched only. À cartographier précisément. Cohérent Death Frontier ex-Gloriano canon.
+
+- [ ] **🆕 Winglies hiding canon (post-war magic)** — confirme : Aglis (underwater) + Ulara (Spring Breath revealed Rose Choker) + Forest of Winglies + Zenebatos = **4 Wingly cities canon hidden**. 5ème ? Cohérent 5 floating cities Dragon Campaign canon ?
+
+- [ ] **🆕 Winglies suspended 108th species birth canon** — détail précis Endiness wiki. Cohérent Crystal Sphere harness Virage Embryo. Foundational lore lien Divine Tree + Dragon Campaign.
+
+- [ ] **🆕 Some Winglies wished equality canon** — pas tous Winglies oppresseurs. Possible alliés Liberation Army ? Cohérent Meru Wingly party member + Charle Frahma + Faust (cohérent ?). À nuancer `dragoons/dragon-campaign.md` + investiguer.
+
+- [ ] **3 Divine Moon Objects canon** — 2 à identifier (Serdio Basil + Tiberoa King Zior). Moon Mirror Mille Seseau confirmed. À documenter `lore/moon-objects.md` (à créer).
+
+- [ ] **Creation features/world-map/ category** — nouvelle catégorie wiki ingéré. À enrichir au fil locations canon. Cf. README.md update.
+
 ### Dragoons mechanics fandom complement — DLV thresholds par char + Elements/Colors + boss anti-Dragoon mécaniques
 
 - [ ] **🆕 DLV SP thresholds canon TABLE per character** — Critical data-model :

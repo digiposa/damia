@@ -5,10 +5,11 @@
 > **Sources** :
 >
 > - 🥈 [`_sources/lod-wiki-evergreen-forest.md`](./_sources/lod-wiki-evergreen-forest.md) — wiki LoD (services + 4 chests + 5 mobs + Kamuy boss + 8 sub-areas map)
+> - 🥉 [`_sources/fandom-evergreen-forest.md`](./_sources/fandom-evergreen-forest.md) — fandom (4 visits canon Chapter 3 + Meru reveal Wingly + Lloyd Dragon Buster + Moon Mirror plot + Queen Theresa abducted + Sacred Sister Wink saved + Younger Bardel self-destruct + Shana White-Silver heals Kamuy + Fa speaks again + US/JP HP divergences)
 
 ## Statut
 
-🟡 **Draft post-ingestion wiki LoD** — fandom à ingérer pour cross-check + narrative arc (Lloyd saves Wink + Rose leaps + Teo NPC).
+🟡 **Draft post-ingestion wiki LoD + fandom** — story arc Chapter 3 quasi-complet documenté, restant à investiguer (Sacred Sisters lore + Bardel Brothers Winglies + Moon Mirror artifact).
 
 ## Identity canon
 
@@ -81,17 +82,88 @@ Pattern élémental forêt canon : **Wind + Earth + Darkness** (3 éléments). P
 - ⭐ **Teo NPC** (sub-area 4) : personnage rencontré sur hill — rôle narratif à documenter (probable garde / villageois / chemin info ?). À investiguer fandom
 - ⭐ **Lloyd saves Wink** (sub-area 8) : cinematic flashback canon — **Lloyd protéger Wink** (la fiancée de Lynn ? cf. [Donau](./Donau.md)). Probable cinematic Disc 2 cf. quete Wink. À investiguer chronologie precise (Wink est Princesse Disc 2 mais peut-être revue Disc 3?). Sub-area 8 = "Ravine but when Lloyd saves Wink" implique réutilisation environnement pour cinematic différente.
 
-## Connexions géographiques canon
+## Connexions géographiques canon (fandom enrichi)
 
 ```
 Furni (#24) → Evergreen Forest (#25) → Deningrad (#26)
                   ↓
-                  Mountain of Mortal Dragon (guard-blocked)
+                  Mountain of Mortal Dragon (guard-blocked first, open later)
                   ↓
-                  Forest of Winglies (barrier-gated)
+                  Forest of Winglies (Meru-gated portal)
+                  ↓
+                  Kashua Glacier (sud) ⚠️ fandom NEW
+                  ↓
+                  Neet (est, hometown Dart) — Stardust pickup 5e passage
 ```
 
-→ Hub central Mille Seseau : 3 sorties (Deningrad capital / Mountain Divine Dragon / Forest of Winglies).
+→ Hub central Mille Seseau : **5 sorties** canon fandom (vs 3 wiki tier 2) — Deningrad capital / Mountain Divine Dragon / Forest of Winglies / Kashua Glacier / Neet.
+
+### Layout canon fandom (5 zones)
+
+- **Southern Area** : entrée Furni + Save Point + 2 chests (Destone Amulet east + Body Purifier west)
+- **Central Area** : Teo+Kamuy first meeting (escape)
+- **Eastern Area** : path Neet (upper) + Destone Amulet chest (lower)
+- **Western Area** : Deningrad south + Kashua Glacier south + Mountain of Mortal Dragon west + Kamuy hiding place north
+- **Northern Area** : dead-end → Meru portal Forest of Winglies (reveal Disc 3)
+
+## Story arc canon Chapter 3 (4 visits)
+
+### Visit 1 — Furni → Deningrad (sidequest Kamuy + Meru/Rose departure)
+
+1. **Furni Mayor demande Dart de trouver Teo + tuer Kamuy** (wolf creature, ex-pet de Teo, devenu wild)
+2. Teo trouvé indemne dans forêt
+3. **Warriors mercenaires** arrivent pour capturer Teo
+4. **Kamuy (large beast)** sauve Teo, escape, **Teo asks Kamuy be left alone : "Fa was attacked by another creature"** ⚠️
+5. **Bulgus mercenaire** tente d'attaquer Kamuy, thrown aside
+6. **Kamuy boss fight** → Kamuy fatally wounded
+7. ⭐ **Shana utilise Dragoon Spirit of the White-Silver Dragon healing powers** pour sauver Kamuy → **transforme Kamuy en wolf cub docile harmless** ⚠️ NEW canon Shana Dragoon healing
+8. **Resident Knight Harris** ramène Teo + Kamuy à Furni
+9. **Rose saute par-dessus cliff** → errands → rejoin later
+10. **Meru tente de partir discrètement** → "I need to see my family again" ⚠️ NEW Wingly identity hint (avant reveal)
+11. Dart sans Meru/Rose → Deningrad
+
+**Reward post-Kamuy** : 500G du Harris + Fa NPC Furni regagne parole canon.
+
+### Visit 2 — Forest of Winglies portal (Meru reveal Wingly)
+
+1. Group reunit Deningrad cherche **Dragon Block Staff** (canon artifact pour fight Divine Dragon)
+2. Rose suppose Meru sait location
+3. ⭐ **Meru reveal canon "she too is a Wingly"** dans northern Evergreen Forest dead end ⚠️ MAJEUR reveal
+4. Meru **opens portal Forest of Winglies, grants permanent passage** ⚠️ MAJEUR
+
+### Visit 3 — Deningrad → Mountain of Mortal Dragon (post-Divine Dragon destruction)
+
+1. **Dragon Block Staff trouvé Forbidden Land** (Kadessa)
+2. **Trop tard pour empêcher destruction Deningrad par Divine Dragon** canon (cinematic destruction)
+3. Path Mountain of Mortal Dragon **désormais ouvert** (guard Mille Seseau parti après destruction)
+
+### Visit 4 — Mountain of Mortal Dragon → Deningrad (Lloyd Bardel encounter)
+
+1. ⭐ **Lloyd croise Evergreen Forest** coincidemment au moment où **Younger Bardel Brother attaque Sacred Sister Wink + soldats escortant** ⚠️ MAJEUR
+2. ⭐ **Lloyd saves Wink** : fends off spells Bardel Wingly + **strikes him with the Dragon Buster** ⚠️ CANON Dragon Buster (Lloyd's weapon avant Rose)
+3. **Younger Bardel self-destructs** final attempt take Lloyd avec lui → **Lloyd seulement lightly injured** canon
+4. Wink remercie Lloyd → Lloyd utilise trust pour **kidnap Queen Theresa** Deningrad pour **Moon Mirror = Divine Moon Object Mille Seseau** ⚠️ MAJEUR plot point
+5. Dart group trouve soldat survivor → annonce **Queen Theresa kidnappée** à Miranda → **Miranda furieuse** → rush Deningrad
+
+→ Pattern canon "Lloyd long con" : il sauve Wink (montre bonté) pour **gagner trust** + **infiltrer Deningrad** + voler Moon Mirror.
+
+## Mobs HP US/JP divergences canon (fandom)
+
+| Mob           | HP US     | HP JP     | Gold US | Gold JP |
+| ------------- | --------- | --------- | ------- | ------- |
+| Flying Rat    | 260       | 300       | 24      | 8       |
+| Forest Runner | 360       | 450       | 30      | 10      |
+| Wounded Bear  | 560       | 700       | 96 / 60 | 20      |
+| Dark Elf      | 450       | 500       | 36      | 12      |
+| Moss Dresser  | 300       | 400       | 18      | 6       |
+| **Kamuy**     | **4,800** | **6,000** | 0       | 0       |
+
+→ Pattern canon US/JP : version JP plus dure (+HP, +difficulté) mais Gold drop diminué. Pour Damia : adopter **valeurs US comme canonical** (cohérent localisation TLoD original Western public).
+
+## Trivia canon (fandom)
+
+- ⭐ **MAJEUR : "Monsters and animals of Evergreen Forest acting savage because of the decaying seal on the Divine Dragon"** (Winglies dixit). → Explication canon savage mobs + Kamuy. Pattern lore : Divine Dragon seal failing → impact zone Mille Seseau (savage wildlife).
+- ⭐ **Optional Kamuy post-Miranda joining** : Miranda peut prendre le rôle de Shana (post-disc 3 switch) — **"Miranda saves Kamuy with reason 'what Shana would do'"** ⚠️ Miranda character arc compassion (récupère humanité via mémoire Shana).
 
 ## Vision Damia (implémentation)
 

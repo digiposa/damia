@@ -1575,6 +1575,52 @@
 
 - [ ] **🆕 Mob drop rate Evergreen Forest 8% uniformly canon** — Tous les 5 mobs drop à 8% (Angel's Prayer / Recovery Ball / Attack Ball / Depetrifier / Healing Fog). Pattern canon "uniform mob drop rate 8% Mille Seseau forest". À refléter design Damia balance drops. Source: idem.
 
+### Locations + Story / Lore (Evergreen Forest fandom — 4 visits Chapter 3 + Meru Wingly reveal + Lloyd Dragon Buster + Moon Mirror plot + Queen Theresa kidnap)
+
+- [ ] **🆕 4 visits Evergreen Forest canon Chapter 3 (Disc 3)** + 5e optionnel Neet Stardust — pattern canon "pass-through area" multiples visites. À refléter game flow Disc 3 structure (Furni → Deningrad → FoW → Deningrad → Mountain → Deningrad). Source: [`features/locations/_sources/fandom-evergreen-forest.md`](features/locations/_sources/fandom-evergreen-forest.md).
+
+- [ ] **🆕 Meru reveal Wingly canon dans Evergreen Forest northern dead end** ⚠️ MAJEUR — Visit 2 cinematic Meru ouvre portal Forest of Winglies + reveal she's Wingly. Cohérent canon "Many surviving Winglies fled to Forest of Winglies". À documenter `party-members/Meru.md` (à créer) reveal scene + `quests/disc3-meru-wingly-reveal.md` (à créer). Source: fandom-evergreen-forest.md §Second Visit.
+
+- [ ] **🆕 Lloyd uses Dragon Buster canon vs Younger Bardel** ⚠️ MAJEUR Dragon Buster lineage — Visit 4 cinematic Lloyd kills Younger Bardel avec Dragon Buster. Confirme Dragon Buster = **Lloyd's signature weapon canon avant Rose** (Rose obtains après killing Lloyd Disc 4 final). À refléter `items/equipment.md` Dragon Buster acquisition story (Rose obtient "Story: Moon" canon = post-Lloyd defeat). Source: fandom-evergreen-forest.md §Fourth Visit.
+
+- [ ] **🆕 Moon Mirror = Divine Moon Object of Mille Seseau canon ⚠️ MAJEUR plot point** — Lloyd kidnap Queen Theresa Deningrad pour obtenir Moon Mirror. Cohérent canon 3 Moon Objects (Tiberoa Moon Dagger / Mille Seseau Moon Mirror / Serdio Moon Gem?). À documenter `quests/disc3-moon-mirror-quest.md` (à créer) + `items/moon-objects.md` (à créer). Source: fandom-evergreen-forest.md §Fourth Visit.
+
+- [ ] **🆕 Sacred Sister Wink + Younger Bardel Brother canon** ⚠️ NEW characters — Wink = Sacred Sister Mille Seseau (cohérent 5 Sacred Sisters lore Deningrad). Bardel Brothers = Winglies servant Lloyd. **Younger Bardel self-destruct technique canon** Wingly suicide attack. À documenter `npcs/Wink Sacred Sister.md` (à créer + cross-référer Donau Wink Princess Tiberoa — possible NOM IDENTIQUE DIFFÉRENTE PERSONNE ou même Wink ? À investiguer) + `bosses/Younger Bardel.md` + `bosses/Elder Bardel.md` (à créer). Source: fandom-evergreen-forest.md §Fourth Visit.
+
+- [ ] **🆕 ⚠️ Wink Sacred Sister vs Wink Princess Tiberoa NOMS IDENTIQUES** — Disc 2 Donau Wink = Lynn's fiancée Princess Tiberoa. Disc 3 Evergreen Wink = Sacred Sister Mille Seseau attaquée par Younger Bardel + sauvée par Lloyd. **Même personne ?** Improbable géographiquement (Tiberoa ≠ Mille Seseau). Probable **2 NPCs différents avec même nom canon**, ou Wink Princess Tiberoa devenue Sacred Sister Mille Seseau ? À investiguer fandom Wink page. Source: comparaison Donau doc + fandom-evergreen-forest.md.
+
+- [ ] **🆕 Lloyd "long con" pattern canon** — Lloyd sauve Wink (montre bonté) pour gagner trust → infiltrer Deningrad → kidnap Queen Theresa → voler Moon Mirror. Pattern manipulation canon Lloyd = master strategist. À documenter `bosses/Lloyd.md` (à créer) personality + `quests/disc3-lloyd-long-con.md` (à créer). Source: fandom-evergreen-forest.md §Fourth Visit.
+
+- [ ] **🆕 Queen Theresa Mille Seseau kidnap canon Disc 3** — Reine de Mille Seseau kidnappée par Lloyd → Miranda furieuse (Miranda = Sacred Sister + Dragoon White-Silver post-Shana switch). À documenter `npcs/Queen Theresa.md` (à créer) + `quests/disc3-queen-theresa-kidnap.md`. Source: idem.
+
+- [ ] **🆕 Shana Dragoon Spirit White-Silver Dragon healing power canon** — Shana utilise healing capacity Dragoon Spirit pour sauver Kamuy + turn him into wolf cub harmless. Pattern unique White-Silver Dragoon = **healer/restorer canon** (cohérent "Shana = Dragoon support magic"). À documenter `dragoons/light.md` (à créer) + `dragoons/dragons.md` (Dragon White-Silver healing capacity). Source: fandom-evergreen-forest.md §First Visit.
+
+- [ ] **🆕 Kamuy "savage because Divine Dragon seal decaying" canon ⚠️ MAJEUR lore** — Trivia fandom : "Monsters and animals of Evergreen Forest acting savage because of the decaying seal on the Divine Dragon" (Winglies dixit). **Explication canon des mobs sauvages + Kamuy** = effet zone Divine Dragon seal failure. Pattern : Divine Dragon seal Mountain of Mortal Dragon corrompt → wildlife savage Mille Seseau zones limitrophes. À documenter `dragoons/divine-dragon.md` (à créer) seal mechanic + `world-map/endiness.md` Mille Seseau impact. Source: fandom-evergreen-forest.md §Trivia.
+
+- [ ] **🆕 Miranda saves Kamuy "what Shana would do" canon Disc 4 ?** — Optional battle Kamuy après Miranda joining → Miranda prend rôle Shana (post-switch Disc 3). Reflète **Miranda character arc compassion via mémoire Shana** canon. À documenter `party-members/Miranda.md` (à créer) character arc + `dragoons/miranda-shana-switch.md` (à créer). Source: fandom-evergreen-forest.md §Trivia.
+
+- [ ] **🆕 Resident Knight Harris canon NPC name** — Harris = name Resident Knight Furni (commande Kamuy quest + reward 500G). À documenter `npcs/Harris.md` (à créer) + `locations/Furni.md` (à créer). Source: fandom-evergreen-forest.md §First Visit.
+
+- [ ] **🆕 Bulgus mercenaire canon NPC** — Mercenary attaque Kamuy Visit 1 + thrown aside. À documenter `npcs/Bulgus.md` (à créer). Source: idem.
+
+- [ ] **🆕 Fa NPC Furni canon "lost speech ability"** — Fa = NPC Furni qui a perdu la parole (probable trauma Kamuy/Black Monster attack) → regagne après Kamuy quest. À documenter `locations/Furni.md` (à créer) Fa NPC + `quests/disc3-kamuy-teo-quest.md` (à créer) reward. Source: fandom-evergreen-forest.md §First Visit gameplay.
+
+- [ ] **🆕 Teo NPC backstory canon** — Garçon Furni, ancien owner de Kamuy (wolf creature). Teo aime Kamuy, demande pardon vie. À documenter `npcs/Teo.md` (à créer). Source: fandom-evergreen-forest.md §First Visit.
+
+- [ ] **🆕 Serfius model used canon NPC reference** — Mercenary bloquant east path (vers Neet) = "using the model of Serfius". Serfius = NPC canon (déjà existant ? À investiguer). Pattern reuse 3D models TLoD. Source: fandom-evergreen-forest.md §First Visit gameplay.
+
+- [ ] **🆕 5 connexions canon Evergreen Forest** — Fandom corrige wiki tier 2 : 5 sorties au lieu de 3 (Furni / Deningrad / Forest of Winglies / Mountain of Mortal Dragon / **Kashua Glacier** ⚠️ NEW + **Neet** ⚠️ NEW). Confirme worldmap official observations Mille Seseau hub central. Source: fandom-evergreen-forest.md §Geography.
+
+- [ ] **🆕 Small lake near rotten tree stump canon geography** — Petit lac caché dans Evergreen Forest. À refléter level design Damia map. Source: idem.
+
+- [ ] **🆕 US vs JP HP/Gold divergence canon** — JP version : +HP mobs/boss + -Gold drop. Kamuy 4,800 HP US vs 6,000 JP. **Adopter US comme canonical Damia** (cohérent original localisation Western). À documenter `combat/canon-divergences.md` (à créer) section "US vs JP balance differences". Source: fandom-evergreen-forest.md §Monsters.
+
+- [ ] **🆕 3 chests fandom vs 4 chests wiki divergence ⚠️** — Wiki LoD liste 4 chests (Destone Amulet + Body Purifier + Depetrifier + Mind Purifier). Fandom liste 3 chests (Mind Purifier omis). Wiki tier 2 plus exhaustif probable. À vérifier in-game. Source: comparaison sources.
+
+- [ ] **🆕 Dragon Block Staff canon artifact Disc 3** — Trouvé dans Forbidden Land (Kadessa). Utilité : permettre fight vs Divine Dragon. À documenter `items/key-items.md` (à créer) + `quests/disc3-dragon-block-staff.md` (à créer). Source: fandom-evergreen-forest.md §Second Visit + §Third Visit.
+
+- [ ] **🆕 Destruction Deningrad par Divine Dragon canon Disc 3 cinematic ⚠️** — Pattern story : Dart group trop tard pour empêcher = traumatic event canon. À documenter `quests/disc3-deningrad-destruction.md` (à créer) + `locations/Deningrad.md` (mise à jour post-destruction state). Source: fandom-evergreen-forest.md §Third Visit.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

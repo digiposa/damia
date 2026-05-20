@@ -817,6 +817,51 @@
 
 - [ ] **Web pit + vine climb traversal canon** — mini-puzzle exploration Nest of Dragon. Pattern Damia gameplay : interactable web/vine objects, fall mechanics.
 
+### Dragon Campaign — foundational war lore TLoD
+
+- [ ] **Eye-merge mécanique Dragoon Spirit canon (Dragon Campaign reveal)** — Quand Dragon meurt, **eyes (1-7) merge into singular gem** = DS canon. **Harvested at moment of death** uniquement. Wielder doit "**tame the beast within**". Implication data-model : `DragonSpirit.eyesMerged: number` (cohérent hierarchy eye count). Visual canon : DS = représentation visuelle des eyes Dragon. Source: [`features/dragoons/dragon-campaign.md`](features/dragoons/dragon-campaign.md).
+
+- [ ] **Diaz canon humain originel** (Liberation Army leader) — pas Emperor à l'époque. Speech war declaration **Fort Magrad** canon. Reborn antagoniste reveal Disc 1+4. À documenter `lore/emperor-diaz.md` (à créer) avec lifecycle complet (human → leader → "die" Kadessa → reborn 11k ans plus tard).
+
+- [ ] **Vellweb canon "capital of the oppressed"** Dragon Campaign — base Liberation Army training. **Évolution canon vers mausoleum** present (4 anciens Dragoons souls). À documenter `locations/Vellweb.md` (à créer) avec dual lore (Dragon Campaign + present mausoleum).
+
+- [ ] **Kadessa canon Wingly capital** — coliseum oppression + final battle Dragon Campaign + Crystal Sphere broken site. **Crumbled** end Dragon Campaign. À documenter `locations/Kadessa.md` (à créer). Vestige Disc 4 possible ?
+
+- [ ] **Fort Magrad canon** — Diaz speech war declaration site. À investiguer existence in-game (Disc 4 possible vestige ?). À documenter `locations/Fort Magrad.md` (à créer) si confirmé.
+
+- [ ] **5 floating Wingly cities canon** — cibles guerre Dragon Campaign. 4 connues (Forest of Winglies, Aglis underwater, Ulara hidden Spring Breath Town, Zenebatos). **5ème** = Kadessa probable (Wingly capital) OU autre ? À investiguer.
+
+- [ ] **Flanvel floating mobile fortress canon** — cible Dragon Campaign. **Tower of Flanvel Disc 3** = vestige canon (Kashua Glacier). Cohérent narrative. À documenter `locations/Tower of Flanvel.md` enrichi.
+
+- [ ] **Zieg-Melbu Frahma duel canon final battle Kadessa** — Dragoon form vs Crystal Sphere + Dragon Buster. **Zieg fatal blow** → Melbu **petrifies Zieg + embeds essence Red-Eye DS** (last-ditch survival). Both fall. Implications data-model : Red-Eye DS contient **Zieg soul + Melbu essence** canon → cohérent Zieg possessed Disc 4 reveal. À orchestrer cinematic Mode Story Disc 4 endgame + `bosses/Melbu Frahma.md` (à créer).
+
+- [ ] **Dragon Buster wielded by Melbu Frahma canon** — Wingly anti-Dragon ethereal sword utilisé par dictator Melbu. Post-Kadessa fate ? Item survives ? Lost ? À investiguer `items/key-items.md` (à créer).
+
+- [ ] **Crystal Sphere broken canon → Moon Child cycle start** — précision narrative : la **rupture Crystal Sphere durant Zieg-Melbu fight** = mécanique exacte lance le **cycle 108 ans Moon Child** (cohérent Divine Tree canon). Foundational. À orchestrer cinematic Mode Story Disc 4.
+
+- [ ] **Kanzas self-sacrifice canon vs Super Virage** Kadessa — confirme self-destruct/sacrifice mécanique canon. À documenter `bosses/Kanzas.md` (à créer) + élément (Violet/Thunder confirmé Vellweb).
+
+- [ ] **Michael (Rose's vassal) Dragon Campaign role canon** — aerial Virage killer + **special laser** mass-elimination. Asset majeur final battle. Cohérent canon Black Burst Dragon Darkness 5-eye + later savage / killed by Rose. À documenter `lore/michael.md` (à créer).
+
+- [ ] **Belzac + Shirley death scene canon Kadessa** — Belzac holds column up via Dragoon power+will (Virage impaled chest), Shirley arrow vs Virage charging laser, both die. **Reconcilie contradictions Belzac death** (cf. Belzac.md questions ouvertes). Cohérent narrative complète.
+
+- [ ] **Liberation Army canon** — armée rebellion Diaz-led. Members 7 Dragoons + Diaz + autres. À documenter `lore/liberation-army.md` (à créer).
+
+- [ ] **Coliseum within Kadessa canon** — site oppression species forced fight. Tragique. Cinematic Mode Story possible (Cutscene 8 Library Ute mention possible).
+
+- [ ] **Virage spawn at will mechanism Winglies** — comment Winglies spawn Virage hors Crystal Sphere ? Magical tech ? Implications canon Virage origin. À investiguer.
+
+- [ ] **Super Virage canon** — plus puissant que regular Virage. Kanzas self-sacrifice required. Possible boss Disc 2/3. Stats canon ? À investiguer.
+
+- [ ] **Diaz reborn mécanique canon** — mort Kadessa (presumed) → reborn 11k ans plus tard. Comment ? Possessed via Moon Child cycle ? Crystal Sphere broken mécanique ? À investiguer Disc 4 reveal + `lore/emperor-diaz.md`.
+
+- [ ] **Cinematic Dragon Campaign Mode Story Damia (le code)** — backstory foundational à présenter via :
+  - Cutscene 8 Library Ute (Deningrad Disc 3)
+  - Vellweb anciens Dragoons visits (Disc 4)
+  - Ulara Charle Frahma Signet Spheres reveal (Disc 4)
+  - Possible dedicated cinematic flashback majeur Disc 4 endgame
+  - À orchestrer `quests/disc4-vellweb-mausoleum.md` (à créer) + `quests/disc4-kadessa-flashback.md` (à créer)
+
 ### Dragons fandom complement — Lenus/Greham Dragoons canon + Michael Black Burst + Dragon weapons
 
 - [ ] **REVEAL canon majeur — Lenus = Blue Sea Dragoon** (pas juste un boss !) — Lenus était une Dragoon Water Disc 2 canon (Regole = son vassal). Implication : **Lenus aurait pu être party member alternate**. Conflict avec Meru's Blue Sea Spirit inheritance Disc 2 post-Phantom Ship arc à reconcilier. À documenter `bosses/Lenus.md` (à créer) + corrections `party-members/Meru.md`. Source: [`features/dragoons/dragons.md`](features/dragoons/dragons.md) §Lenus.

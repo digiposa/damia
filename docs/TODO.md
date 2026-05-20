@@ -1621,6 +1621,38 @@
 
 - [ ] **🆕 Destruction Deningrad par Divine Dragon canon Disc 3 cinematic ⚠️** — Pattern story : Dart group trop tard pour empêcher = traumatic event canon. À documenter `quests/disc3-deningrad-destruction.md` (à créer) + `locations/Deningrad.md` (mise à jour post-destruction state). Source: fandom-evergreen-forest.md §Third Visit.
 
+### Combat / Experience / Leveling (master canon — cap 60 + per-character XP curves + survivor-only + Petrification penalty)
+
+- [ ] **🆕 Level cap 60 canon master** — post-L60 no more level up, stats final. À implémenter `level: clamp(currentLevel, 1, 60)` + soft cap (gain XP au-delà = lost). Source: [`features/combat/_sources/lod-wiki-experience.md`](features/combat/_sources/lod-wiki-experience.md). Priorité: **haute**.
+
+- [ ] **🆕 7 per-character XP thresholds canon (60 levels = 420 data points)** — Dart=easiest, Rose=hardest. À implémenter `THRESHOLDS: Record<Character, number[]>` data-table. Order canon L60 : Dart 382,000 < Haschel 385,820 < Meru 386,584 < Lavitz/Albert 387,730 < Kongol 388,494 < Shana/Miranda 389,640 < Rose 390,786. Source: [`features/combat/experience.md`](features/combat/experience.md). Priorité: **haute**.
+
+- [ ] **🆕 Rose XP penalty curve canon (hardest at L60 = +8,786 EXP vs Dart)** — Cohérent character lore "11k ans Dragoon Black Monster". À refléter `party-members/Rose.md` (à créer) + balance Mode Story. Source: idem.
+
+- [ ] **🆕 EXP distribution survivors-only canon** — Active survivors split EXP evenly + fallen (0 HP / Petrified end of fight) get 0 + Inactive get 50% (rounded down) of survivor share. À implémenter `awardExp(survivors, fallen, inactive, totalExp)` avec integer division + lost remainder tracking. Priorité: **haute**.
+
+- [ ] **🆕 Petrification = 0 EXP gain canon ⚠️ status interaction** — Membre actif Petrified à fin de combat → 0 XP gain (comme dead). À refléter `combat/status-effects.md` (à créer) + tag specific EXP penalty. Source: lod-wiki-experience.md §Distribution.
+
+- [ ] **🆕 "Fewer survivors = more total party EXP" exploit pattern canon** — Single survivor + N inactive = jusqu'à 3× total party XP (vs 3 survivors + 1 inactive = 1.16×). Pattern speed runner exploit canon. À conserver tel quel design Damia (player choice trade-off). À documenter `combat/experience.md` §1 pattern. Source: idem.
+
+- [ ] **🆕 Speed runner trivia canon "funnel EXP to Shana/Miranda"** — Pattern : laisser 2 actifs mourir → 1 survivant Shana/Miranda → over-leveling Dragoon précoce. À noter design intentionnel TLoD (player agency). Source: idem.
+
+- [ ] **🆕 Inactive members rounded down 50% canon** — Pattern `floor(active_share / 2)`. Affecte balance Damia : si party rotation autorisée, les inactifs accumulent XP plus lentement → encourage rotation pour égaliser levels. Source: idem.
+
+- [ ] **🆕 Stats per-level growth formules canon (HP/AT/DF/MAT/MDF)** — Wiki tier 2 silent sur formules exactes growth rates per level. À investiguer Discord Wulves/Dedspawn ou fandom complement. Probable : courbes per-character distinctes (Kongol = high HP/AT growth tank, Shana/Meru = high MAT growth caster, etc.). Source: gap dans wiki.
+
+- [ ] **🆕 L2 baseline divergence canon** — Dart/Rose/Haschel/Meru/Kongol = 20 EXP / Shana/Miranda = 30 EXP / **Lavitz/Albert = 35 EXP** (max). Pattern : Lavitz/Albert plus difficile early game. Cohérent avec Lavitz/Albert = Knight discipline canon. Source: lod-wiki-experience.md table.
+
+- [ ] **🆕 EXP curve quasi-flat early L2-L10 canon** — Variance entre characters ≤ 36 EXP à L10. Divergence croît avec level (à L60 = +8,786 max diff). Pattern "balanced early game, character-specific late game". Source: idem.
+
+- [ ] **🆕 Integer division lost EXP canon** — Pattern "100 EXP / 3 = 33+33+33+1 lost" → tracking `lostExp` analytics utile pour balance verification. Source: lod-wiki-experience.md example.
+
+- [ ] **🆕 Survival Mode XP system adaptation** — Cf. [SCOPE §7.2](SCOPE.md#72-mode-survival--fun-first) Survival : per-run XP vs persistent ? Si Vampire-Survivors-like, probable per-run. Si Classic Mode Survival, probable persistent. À trancher. Source: vision design Damia.
+
+- [ ] **🆕 Lavitz → Albert XP transfer canon ?** — Lavitz mort Disc 1, Albert prend over Wind Dragoon. **Albert hérite-t-il du level/XP de Lavitz ?** Wiki dit "Lavitz/Albert" même thresholds → probable : Albert apparaît avec level proche/identique Lavitz à sa mort canon. À vérifier in-game + Discord. À documenter `party-members/Albert.md` recrutement state. Source: comparaison wiki tables.
+
+- [ ] **🆕 Recruitment level baseline canon** — Quel niveau de départ pour chaque character à son recrutement ? Wiki silent. Probable : Dart commence L1, autres rejoignent à level "matching party average" canon. À investiguer + documenter `party-members/`. Source: gap dans wiki.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

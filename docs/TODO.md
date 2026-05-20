@@ -1551,6 +1551,30 @@
 
 - [ ] **🆕 In-game descriptions canon i18n master** — Fandom liste les "In-game Description" texts canon pour chaque accessory ("Avoids the abnormal status X", "Raises Y", "When Z damaged, ..."). À utiliser comme source i18n EN canonical Damia. Source: fandom-accessories.md entire table.
 
+### Locations + Bosses + Story / Lore (Evergreen Forest Disc 3 Mille Seseau central + Kamuy Darkness Stone source)
+
+- [ ] **🆕 Evergreen Forest = location canon #25** (entre Furni #24 et Deningrad #26) — Forêt centrale Mille Seseau passage Disc 3 vers Mountain of Mortal Dragon + Forest of Winglies (barrier-gated). À refléter `world-map/endiness.md` map officielle position confirmée. Source: [`features/locations/_sources/lod-wiki-evergreen-forest.md`](features/locations/_sources/lod-wiki-evergreen-forest.md) + [`features/locations/Evergreen Forest.md`](features/locations/Evergreen%20Forest.md).
+
+- [ ] **🆕 Kamuy boss canon Non-Elemental → Darkness Stone 100% drop** ⚠️ pattern intriguant — Boss Non-Elemental drop le stone Darkness. Pas un ancient Dragoon (vs pattern Shirley/Syuveil/Damia/Kanzas/Belzac/Zieg-Firebird = stones par Dragoons). Kamuy = entité distincte, possiblement esprit gardien forêt corrompu, OU boss "déguisé" canon. À documenter `bosses/Kamuy.md` (à créer). 8,000 EXP / 0 Gold canon. Source: lod-wiki-evergreen-forest.md.
+
+- [ ] **🆕 "Path to Mountain of Mortal Dragon under constant guard" canon** — Guard NPC bloque accès à Mountain (Divine Dragon seal protection). Pattern story-gated progression Disc 3. À documenter game flow Disc 3 + `locations/Mountain of Mortal Dragon.md` (à créer). Source: idem.
+
+- [ ] **🆕 4 chests anti-status pattern canon** : Destone Amulet (Petrification) + Body Purifier + Depetrifier (cure Petrification) + Mind Purifier (cure Confusion/Bewitchment) = focus préparation status ailments Disc 3+. Cohérent avec design canon "préparer joueur aux bosses Disc 3-4 statuses". Source: idem.
+
+- [ ] **🆕 5 mobs Evergreen Forest canon — pattern Wind+Earth+Darkness 3 éléments forêt** : Flying Rat (Wind, 64 EXP) + Forest Runner (Wind, 88 EXP) + Wounded Bear (Earth, 96 EXP) + Dark Elf (Darkness, 80 EXP) + Moss Dresser (Earth, 72 EXP). Pas de Fire/Water → biome "forêt humide tempérée" canon. À refléter `mobs/Flying Rat.md` + `mobs/Forest Runner.md` + `mobs/Wounded Bear.md` + `mobs/Dark Elf.md` + `mobs/Moss Dresser.md` (à créer). Source: idem.
+
+- [ ] **🆕 Rose leaps over ravine canon (sub-area 3) ⚠️ character beat** — Animation/cutscene canon démontrant capacités athlétiques Rose (cohérent Black Monster strength 11k ans + Dragoon agility). À refléter `party-members/Rose.md` (à créer) + cinematic potentielle. Source: idem.
+
+- [ ] **🆕 Teo NPC canon (sub-area 4 hill rencontre)** — Personnage rencontré + Depetrifier chest reward associated. Rôle narratif à investiguer (probable garde forestier / villageois Mille Seseau / informant ?). À documenter `npcs/Teo.md` (à créer) + dialogue Evergreen Forest. Source: idem.
+
+- [ ] **🆕 Lloyd saves Wink cinematic canon (sub-area 8 "Ravine but when")** ⚠️ — Sub-area 8 = réutilisation environnement ravin pour **cinematic Lloyd protégeant Wink**. Quel disc / quand ? Wink = Princesse Tiberoa Disc 2 (cf. [Donau](features/locations/Donau.md)). Probable flashback Disc 2 OU revisite Disc 3 ? À investiguer fandom + game flow timeline Lloyd-Wink. À documenter `quests/disc?-lloyd-wink-cinematic.md` (à créer). Source: idem.
+
+- [ ] **🆕 Barrier Evergreen Forest → Forest of Winglies canon** — Sub-area 7 = "Barrier leading to Forest of Winglies" : gateway géographique magique Wingly hidden city. À refléter `locations/Forest of Winglies.md` (à créer) entry conditions. Source: idem.
+
+- [ ] **🆕 Encounter rate Evergreen Forest 10-14 canon + escape 30%** — Pattern canon : zone passage 10 standard / 14 ravine area + 30% escape. Pour Damia balance Mode Story → respecter ces rates pour authenticity. Sub-area 6 Kamuy = scripted 0% escape pour boss fight. Source: idem.
+
+- [ ] **🆕 Mob drop rate Evergreen Forest 8% uniformly canon** — Tous les 5 mobs drop à 8% (Angel's Prayer / Recovery Ball / Attack Ball / Depetrifier / Healing Fog). Pattern canon "uniform mob drop rate 8% Mille Seseau forest". À refléter design Damia balance drops. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

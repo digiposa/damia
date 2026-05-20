@@ -1,8 +1,11 @@
 # Dragons (créatures)
 
-> **Foundational lore TLoD** : les Dragons sont les **créatures** (distinctes des **Dragoons** = wielders humains de Dragoon Spirits). **105ème fruit du Divine Tree** (cf. [`locations/Divine Tree.md`](../locations/Divine Tree.md)), importance grew **~11,682 ans ago**. **Hiérarchie canon** : élément + **eye count 1-7** (plus d'yeux = plus de pouvoir + commande sur lower-eye). **Dragoon Spirit = magical gem laissé par Dragon mort**, mécanique Dragoon power source. **Dragoons can command Dragons** : even element + Spirit's Dragon had MORE eyes que target. **Thought extinct** present, **3 vivants canon** (Feyrbrand, Regole, Divine Dragon).
+> **Foundational lore TLoD** : les Dragons sont les **créatures** (distinctes des **Dragoons** = wielders humains de Dragoon Spirits). **105ème fruit du Divine Tree** (cf. [`locations/Divine Tree.md`](../locations/Divine Tree.md)). **2nd most powerful species canon** parmi les 107 species "given life" (1st implicite = Virage Embryo). **Soa balance canon** : reduced Dragon intelligence → controlled by Human wisdom. **Hiérarchie canon** : élément + **eye count 1-7** (plus d'yeux = plus de pouvoir). **Dragoon Spirit = crystalloid gem** (manifested by Dragon death soul, canon Rose sacrificed Darkness Dragon + Divine Dragon death). **Dragoons can command Dragons** : sameElement + Spirit's Dragon eyes > target. **Wingly anti-Dragon weapons canon** : Dragon Buster (sword) + Dragon Block Staff (reduce power). **Dragon Campaign canon** : 7 Dragoons sent par Emperor Diaz, fierce battles vs Virages manipulated by Winglies. **3 vivants present canon** (Feyrbrand vassal Greham / Regole vassal Lenus / Divine Dragon king solo). **Michael "Black Burst Dragon" canon** (born from sacrificed Darkness, killed by Rose post-savage).
 >
-> **Source canon** : 🥈 [`_sources/lod-wiki-dragons.md`](./_sources/lod-wiki-dragons.md)
+> **Sources canon** :
+>
+> - 🥈 [`_sources/lod-wiki-dragons.md`](./_sources/lod-wiki-dragons.md) — wiki LoD (hierarchy + eye count + command rule + lists)
+> - 🥉 [`_sources/fandom-dragons.md`](./_sources/fandom-dragons.md) — fandom (Albert quote Mille Seseau Library, Soa balance, anti-Dragon Wingly weapons, Dragoon Spirit manifestation, **Lenus = Blue Sea Dragoon canon**, **Greham = Jade Dragoon canon**, Michael "Black Burst" + killed by Rose, Divine Dragon 7 wings + sealed Mountain of Mortal Dragon, descriptions visuelles 7 Dragon Spirit Dragons DLV 5 summon, Black Castle "purple flame Dragon" speculation)
 
 ## Statut
 
@@ -26,8 +29,41 @@
 - Dragons existent depuis l'**aurore du monde** (105th fruit Divine Tree)
 - **~11,682 ans ago** : importance grew dramatically
 - **Winglies subjugaient nombreuses species** incluant **humans + Dragons**
+- **Soa balance canon** (fandom) : Soa a **réduit l'intelligence des Dragons** pour qu'ils soient **contrôlés par les Humans avec leur sagesse** — design intentionnel deity (lien lore Soa créateur)
 - Dragons → **bloody uprising** contre oppression Wingly
-- **Humans discover Dragoon Spirit mechanic** : Dragon mort laisse **magical gem** → harnessable → power "**forever afterward**" (Dragoon = permanent power) → rival Wingly magic capabilities
+- **Humans gained ability to use Dragons as living weapons** → origine probable du nom "Dragon Campaign"
+- **Humans discover Dragoon Spirit mechanic** : Dragon mort laisse **crystalloid gem (Dragoon Spirit)** → harnessable → power permanent → rival Wingly magic capabilities
+
+### Albert quote canon (Mille Seseau National Library, Disc 3)
+
+> _"Dragons are the second most powerful species of all 107 creatures given life by the Divine Tree. Their attacks and life power overwhelm others, however, the creator Soa created a balance by reducing the dragon's intelligence. Therefore, they were to be controlled by Humans with their wisdom. During the Dragon Campaign 11,000 years ago, they had fierce battles against Virages manipulated by Winglies and couldn't avoid being annihilated."_
+
+→ **Implications canon majeures** :
+
+- **107 species "given life"** (vs 108 fruits Divine Tree) = **108ème fruit Virage non encore born** (cohérent Divine Tree canon — Virage suspended Moon)
+- **Dragons = 2nd most powerful species** canon (1st implicite = **Virage Embryo** par trivia)
+- **Albert canon** (trivia) note que le book est **wrong** : Dragons not annihilated, group encounters living ones
+- **Virages manipulated by Winglies** canon Dragon Campaign
+
+### Anti-Dragon Wingly weapons canon
+
+2 items créés par Winglies en opposition au pouvoir Dragon humain :
+
+| Item                   | Type            | Effet                                | Statut canon                                                                                          |
+| ---------------------- | --------------- | ------------------------------------ | ----------------------------------------------------------------------------------------------------- |
+| **Dragon Buster**      | Ethereal sword  | **Designed to kill Dragons**         | Lore canon — usage in-game ?                                                                          |
+| **Dragon Block Staff** | Elaborate staff | **Reduce Dragons' formidable power** | Quest Disc 3 canon — récupéré Forest of Winglies → utilisé Mountain of Mortal Dragon vs Divine Dragon |
+
+→ **Dragon Block Staff** = item canon already documented (cf. [Deningrad.md](../locations/Deningrad.md) §Story + quest Forest of Winglies Disc 3). **Dragon Buster** = nouveau lore item canon, possible weapon in-game ou key item. À documenter `items/key-items.md` (à créer).
+
+### Dragoon Spirit manifestation canon (mystery + 2 cas explicités)
+
+- **Mécanique exacte never fully explained** in-game
+- **Chapter 3 + 4 events** révèlent : **Dragon's death → soul manifests as Dragoon Spirit**
+- **Cas 1 canon** : **Divine Dragon's death** → soul + power transferred into its Dragoon Spirit (cf. Dart Divine Dragoon DS Disc 4)
+- **Cas 2 canon** : **Rose flashback** — elle **sacrifices Darkness Dragon** to obtain its DS (canon Disc 4)
+- 🆕 **Seul Dragon vu sacrificé pour DS canon** = Darkness Dragon (Rose)
+- **Spéculation immortal vs mortal** : DS Dragons = immortels (live on in Spirit), autres = mortels (cf. nom "Mountain of Mortal Dragon")
 
 ### Dragon Campaign (war canon)
 
@@ -82,18 +118,91 @@
 
 ### Dragons vivants present (game era)
 
-| Dragon            | Élément                   | Location canon                                                     | Boss Disc | Lore                                                                                                                                              |
-| ----------------- | ------------------------- | ------------------------------------------------------------------ | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Feyrbrand**     | Wind probable             | **Serdio forest** (used by Sandora military advantage vs Basil)    | Disc 1    | Boss canon Nest of Dragon arc, Greham wielder. Cohérent Sandora power tip war.                                                                    |
-| **Regole**        | Water probable            | **Undersea Cavern** (home), terrorise villages **Suncrest Island** | Disc 2    | Boss canon Mountain of Mortal Dragon arc.                                                                                                         |
-| **Divine Dragon** | Non-Elemental (canon tag) | Sealed by Winglies → broke free, attaque **Deningrad**             | Disc 3    | "King of Dragons" canon. Attaque event canon (Divine DG Ball + Cannon). Spirits accordés à Dart Disc 4 (cf. [Dart.md](../party-members/Dart.md)). |
+| Dragon            | Élément                   | Vassal of (Dragoon)             | Shape canon (fandom)                                                                           | Location canon                                                                                                                                                           | Boss Disc | Lore                                                                                                                                                                     |
+| ----------------- | ------------------------- | ------------------------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Feyrbrand**     | **Wind** canon            | **Greham (Jade Dragoon)** ⚠️    | Praying mantis, **green body + giant tusks** ("Green-Tusked Dragon" canon)                     | **Serdio forest** (Sandora military advantage vs Basil)                                                                                                                  | Disc 1    | Tipped balance Serdian War → re-ignition. Boss Nest of Dragon arc. Cf. Greham = Jade Dragoon canon (cohérent ancien Syuveil → ?).                                        |
+| **Regole**        | **Water** canon           | **Lenus (Blue Sea Dragoon)** ⚠️ | Giant sea-serpent                                                                              | **Undersea Cavern** (home), terrorise villages **Suncrest Island**                                                                                                       | Disc 2    | Vassal de Lenus = **Blue Sea Dragoon canon** (Lenus est elle-même une Dragoon !) — distinct du Meru Blue Sea héritage post-Phantom Ship. À investiguer Lenus arc Disc 2. |
+| **Divine Dragon** | Non-Elemental (canon tag) | **None (fought solo)** ⚠️       | "Normal dragon" shape + **multiple eyes head** + **largest eye lower jaw** + **7 wings canon** | Sealed inside **Mountain of Mortal Dragon** (pas Winglies seal directe — fandom dit "before being sealed Mountain of Mortal Dragon") → broke free, attaque **Deningrad** | Disc 3    | **King + strongest Dragon + possibly mightiest lifeform ever** canon. **Fought Winglies on his own** sans allying Humans (unique). Spirits → Dart Disc 4.                |
 
-### Deceased Dragon (carcass canon)
+> 🆕 **Reveals fandom critiques** :
+>
+> - **Lenus = Blue Sea Dragoon canon** (pas juste un boss !) — Lenus était la Dragoon Water originale Disc 2 (avant Meru ?). Implication majeure : **Lenus aurait pu être un party member alternate**. Cf. probable conflict narrative avec Meru's Blue Sea Spirit inheritance. À documenter `bosses/Lenus.md` (à créer) + corrections `party-members/Meru.md`.
+> - **Greham = Jade Dragoon canon** (cf. ancien Vellweb Syuveil = original Jade Dragoon → Greham hérite → Lavitz hérite Disc 1 post-Hoax boss fight → Albert hérite Disc 2 post-Lavitz death). **Lavitz/Albert/Greham/Syuveil = même archetype Jade canon** (cohérent VISION §6.6).
+> - **Divine Dragon = 7 wings canon** + multiple eyes (largest lower jaw). Possible "eye count = 7+" cohérent "king of Dragons" hierarchy.
+> - **Divine Dragon fought Winglies SOLO** — distinct des autres Dragons qui alliés Humans. Cohérent "king" canon + sealed Mountain of Mortal Dragon (pas Crystal Sphere/Signet Sphere comme le 108th).
 
-- **Black Castle Kazas** : Dragon carcass harvested for **magical energy**
+### Michael — Black Burst Dragon canon (5-eye Darkness, Rose's vassal tragic)
+
+- **Canon name** : **"Black Burst Dragon"**
+- **Origine** : **Born from sacrificed Darkness Dragon** by Rose canon (Rose sacrificed the OG Darkness Dragon → obtained DS → Michael born from this sacrifice/regeneration ?)
+- **Named by Rose** as newborn Dragon
+- **Fought Dragon Campaign** vs Winglies + Virage
+- **Shape canon** : **pterodactyl**
+- **5 eyes** (cf. hierarchy canon — Rose 6-eye DS commande Michael 5-eye) ✅
+- **Tragic end canon** : **Over the centuries, became savage + uncontrollable** → **attacked Rose** → **Rose had to kill him**
+- Implication lore : **Rose perdu son Dragon vassal** au fil des siècles. Pattern "imm immortelle perd ses compagnons".
+- À documenter `bosses/Michael.md` (à créer) si in-game appearance, sinon `lore/michael.md`.
+
+### Dragons of the Dragoon Spirits — DLV 5 summon canon
+
+Quand un playable character atteint **Dragoon Level 5**, il peut **invoquer le Dragon de son Dragoon Spirit** pour une **mighty attack**. Le Dragon **manifests physically**.
+
+| Dragon                  | Élément  | Master originel canon           | Shape canon (fandom)                           | DLV 5 attack canon                                                                  |
+| ----------------------- | -------- | ------------------------------- | ---------------------------------------------- | ----------------------------------------------------------------------------------- |
+| **Red-Eyed Dragon**     | Fire     | **Zieg Feld**                   | **Missile warhead, 6 eyes**                    | Charge enemy + **explode like real missile** on impact                              |
+| **Jade Dragon**         | Wind     | **Syuveil** (Vellweb)           | **Giant whale, 4 wings/fins + cannon on head** | Fire cannon → **giant gust of wind**                                                |
+| **Violet Dragon**       | Thunder  | **Kanzas** (Vellweb)            | **Giant stag beetle + giant pincers/claws**    | **Electric tackle + massive discharge**                                             |
+| **Dark Dragon**         | Darkness | (sacrificed by Rose)            | **Asymmetric body, space shuttle shape**       | **Absorbs opponents into darkness** + charges through + **light trace eliminating** |
+| **White-Silver Dragon** | Light    | **Shirley** (Shrine of Shirley) | **Spaceship shape**                            | Descends from sky + **fires laser judgment** + **heals entire party**               |
+| **Blue Sea Dragon**     | Water    | **Damia** (Vellweb)             | **Giant flying fish**                          | **Freezes ground** + charges from below + **tidal waves** + **whirlpool swallow**   |
+| **Golden Dragon**       | Earth    | **Belzac** (Vellweb)            | **Giant armadillo + cannon right side**        | **Sucks into quicksand** + **blow cannon into sky**                                 |
+
+> 🆕 **Confirmations canon majeures** :
+>
+> - **Red-Eyed master = Zieg Feld** ✅ (cohérent Dart héritage Disc 1 + Zieg reveal Disc 4)
+> - **Jade master = Syuveil** ✅ (cohérent Vellweb ancien Dragoon)
+> - **Violet master = Kanzas** ✅ (cohérent Vellweb ancien Dragoon → Doel inherit → Haschel)
+> - **White-Silver master = Shirley** ✅ (cohérent Shrine of Shirley canon → Shana → Miranda)
+> - **Blue Sea master = Damia** ✅ (cohérent Vellweb ancienne Dragoon mi-mermaid → Meru)
+> - **Golden master = Belzac** ✅ (cohérent Vellweb ancien Dragoon → Kongol)
+> - **Darkness master = ??? + sacrificed by Rose** — Pattern unique : Rose **sacrificed the original Darkness Dragon** pour obtenir le DS (vs autres = mort naturelle/combat). Implication : Rose **n'était pas la Dragoon Darkness originelle** ? Ou elle a sacrificed le Dragon pour devenir Dragoon ? À investiguer Rose lore Disc 4 reveal.
+>
+> **Designs canon = "creatures + tech hybrid"** : missile warhead, spaceship, space shuttle, cannon, etc. = **aesthetic mécanique-magique TLoD signature** (cohérent Wingly tech + Dragon biology fusion). Pattern visual à respecter pour Damia (le code) Dragoons DLV 5 summon visuals.
+
+### Deceased Dragon (carcass canon) — "Purple Flame Dragon" canon
+
+- **Black Castle Kazas basement** : Dragon **corpse suspended in air** + harvested for **magical energy**
+- **Canon image caption fandom** : "**The ominous 'purple flame Dragon' in the Black Castle**"
 - Cohérent canon : **Doel orders elaborate magical research Black Castle** (cf. [Emperor Doel.md](../bosses/Emperor Doel.md) §Personality)
-- Implication lore : **Sandora exploite Dragon mort** pour magical research = source potentielle des Dragoon Spirits Disc 1 ? Ou autre artifact ?
-- À investiguer ingestion ultérieure.
+- **Magical Researchers** Black Castle canon : speak of "including a Dragon into their research to obtain their magic" (Dart surprised)
+- **Speculations canon fandom** (à investiguer) :
+  1. **Doel sacrificed his Dragon for magical research** — argument : colour match magic oil powering lifts + all other Dragoons can summon/control au moins 1 Dragon (sauf Doel ? À reconcilier avec Doel = Violet/Thunder Dragoon → Violet Dragon vivant ailleurs ? Ou Doel sacrificed son vassal Dragon ?)
+  2. **Corpse = slain Feyrbrand** — autre théorie unconfirmed
+- À documenter [`../locations/Kazas.md`](../locations/Kazas.md) §Magical Research + investiguer canon
+
+### Dragons mineurs canon (9 minor mob types)
+
+Encounters comme **regular enemies** à **Mountain of Mortal Dragon** + **Marshlands** + ailleurs :
+
+- **Sea Dragon**
+- **Dragonfly**
+- **Baby Dragon**
+- **Beastie Dragon**
+- **Mega Sea Dragon**
+- **Wyvern**
+- **Swift Dragon**
+- **Air Combat**
+- **Triceratops**
+
+→ Pattern : Dragons "**lesser**" (1-3 eyes probable) existent canon comme regular mobs. Cohérent hierarchy 1-7 eyes. À documenter `combat/mobs.md` ou per-location encounter pages (Marshlands, Mountain of Mortal Dragon).
+
+### Dragon Campaign canon (war contexte)
+
+- **7 Dragoons sent out by Emperor Diaz** canon (Vellweb 4 dead + Shirley Shrine + Rose immortal + Zieg = 7)
+- **Spearheaded liberation war vs Winglies**
+- Dragons + Humans + autres species opprimées vs Winglies oppresseurs
+- **Fierce battles vs Virages manipulated by Winglies** (canon Albert quote)
+- Issue : Wingly age fell → **Human Age** débute (cf. [Divine Tree.md](../locations/Divine Tree.md) §Cycle)
 
 ---
 

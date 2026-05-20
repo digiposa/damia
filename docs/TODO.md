@@ -760,6 +760,53 @@
 
 - [ ] **Wink double-rescue canon** (Disc 2 Donau + Disc 3 Younger Bardel) — pattern Lloyd "saviour figure" établit trust durable. Important pour Disc 3 Crystal Palace kidnap context. À refléter `lore/lloyd-arc.md` (à créer).
 
+### Dragons fandom complement — Lenus/Greham Dragoons canon + Michael Black Burst + Dragon weapons
+
+- [ ] **REVEAL canon majeur — Lenus = Blue Sea Dragoon** (pas juste un boss !) — Lenus était une Dragoon Water Disc 2 canon (Regole = son vassal). Implication : **Lenus aurait pu être party member alternate**. Conflict avec Meru's Blue Sea Spirit inheritance Disc 2 post-Phantom Ship arc à reconcilier. À documenter `bosses/Lenus.md` (à créer) + corrections `party-members/Meru.md`. Source: [`features/dragoons/dragons.md`](features/dragoons/dragons.md) §Lenus.
+
+- [ ] **REVEAL canon — Greham = Jade Dragoon canon** (Feyrbrand = son vassal Dragon). Cohérent pattern Jade Dragon archetype canon : **Syuveil (Vellweb ancien) → Greham (Hoax) → Lavitz (Disc 1 post-Hoax fight) → Albert (Disc 2 post-Lavitz death)**. 4 wielders Jade Dragoon canon = pattern Archetype + Avatar (cohérent VISION §6.6). À documenter `bosses/Greham.md` (à créer) + enrichir `dragoons/README.md` Jade Dragon archetype.
+
+- [ ] **Albert quote canon (Mille Seseau National Library)** — book about Dragons claiming "couldn't avoid being annihilated" — wrong (Dart trivia note). Quote canon foundational : Dragons = **2nd most powerful species of 107 created by Divine Tree** (1st implicite = Virage Embryo). **Soa reduced Dragon intelligence intentionally** pour balance → controlled by Humans. Quest scene Disc 3 Library. À orchestrer Mode Story `quests/disc3-deningrad-library.md` (à créer).
+
+- [ ] **108 vs 107 species canon reconcilier** — Divine Tree dit 108 fruits. Fandom dit "107 creatures given life". Implique **108ème fruit Virage non encore born** (sealed Moon) → seulement 107 species "given life" actuellement. À clarifier `lore/108-species.md`.
+
+- [ ] **Anti-Dragon Wingly weapons canon** :
+  - **Dragon Buster** = ethereal sword designed to kill Dragons (canon, usage in-game ?)
+  - **Dragon Block Staff** = reduces Dragon power (canon, recovered Forest of Winglies Disc 3 quest, used vs Divine Dragon Mountain of Mortal Dragon)
+    → À documenter `items/key-items.md` (à créer). Dragon Buster = nouveau item lore canon à investiguer existence in-game.
+
+- [ ] **Michael "Black Burst Dragon" canon** — Rose's vassal Dragon (Darkness 5-eye). Born from **sacrificed Darkness Dragon** by Rose (canon Disc 4 flashback). **Eventually became savage + uncontrollable** → **attacked Rose** → **Rose killed him** canon. Tragic immortal lose pattern. À documenter `lore/michael.md` ou `bosses/Michael.md` (si in-game). Shape canon : pterodactyl.
+
+- [ ] **Divine Dragon canon enrichi** : 7 wings, multiple eyes head (**largest at lower jaw**), sealed inside **Mountain of Mortal Dragon** (pas Crystal/Signet Sphere). **Fought Winglies on his own** sans allying Humans (unique parmi Dragons). À documenter `bosses/Divine Dragon.md` (à créer).
+
+- [ ] **Dragoon Spirit manifestation canon** — mécanique exacte never fully explained. 2 cas in-game canon :
+  1. **Divine Dragon death** → soul transferred into Spirit
+  2. **Rose sacrificed Darkness Dragon** → obtained Spirit
+     → Suggère : **Dragon mort = soul → manifest as DS**. Pattern à refléter `dragoons/obtention.md` (à créer).
+
+- [ ] **Spéculation immortal vs mortal Dragons canon** — DS Dragons = immortels (live on in Spirit), autres = mortels (cf. nom "Mountain of Mortal Dragon" canon). À investiguer + reflect lore.
+
+- [ ] **Darkness Dragon = only Dragon sacrificed canon** — Rose seule à avoir sacrificed her Dragon pour DS (vs autres = mort naturelle / combat). **Pattern unique darkness/Rose** ? Lien Black Monster lore Rose ?
+
+- [ ] **Black Castle "Purple Flame Dragon" speculation canon** — corpse suspended in basement, magical research. 2 theories canon :
+  - Doel sacrificed his Dragon for magical research (color match magic oil lifts, Doel can't summon Violet Dragon ?)
+  - Corpse = slain Feyrbrand (post-Greham defeat ?)
+    → À investiguer + documenter `locations/Kazas.md` §Magical Research enrichi.
+
+- [ ] **9 minor Dragon mob types canon** : Sea Dragon, Dragonfly, Baby Dragon, Beastie Dragon, Mega Sea Dragon, Wyvern, Swift Dragon, Air Combat, Triceratops. Encountered Mountain of Mortal Dragon + Marshlands. Implique **Dragons 1-3 eyes existent comme regular mobs** (lesser Dragons hierarchy). À documenter `combat/mobs.md` (à créer) + per-location encounters.
+
+- [ ] **Dragons of Dragoon Spirits — DLV 5 summon visuals canon** :
+  - Red-Eyed : missile warhead 6 eyes → charge + explode
+  - Jade : whale 4 wings + cannon → giant gust
+  - Violet : stag beetle pincers → electric tackle discharge
+  - Dark Dragon : asymmetric space shuttle → absorb darkness + light trace
+  - White-Silver : spaceship → laser judgment + heal party
+  - Blue Sea : flying fish → freeze ground + tidal waves + whirlpool
+  - Golden : armadillo + cannon → quicksand + cannon sky
+    → **Aesthetic "creature + tech hybrid" canon TLoD signature** : missile/spaceship/cannon visuels. À respecter pour design Damia (le code) DLV 5 summon attacks. Cf. `dragoons/magic.md` (à créer).
+
+- [ ] **7 Dragoons sent par Emperor Diaz canon Dragon Campaign** — confirme 7 anciens Dragoons : Belzac (Gold/Earth) + Damia (Blue Sea/Water) + Syuveil (Jade/Wind) + Kanzas (Violet/Thunder) + Shirley (White-Silver/Light) + Rose (Darkness) + Zieg (Red-Eyed/Fire) = 7. À documenter `lore/dragon-campaign.md`.
+
 ### Dragons (créatures canon, lore foundational TLoD)
 
 - [ ] **Data-model Dragon canon** — `Dragon { id, name, element, eyes: 1-7, status: alive|dead|spirit, location?, owner?: DragoonId }`. 7 anciens 6-eye + 1 Unnamed 7-eye + Michael 5-eye Darkness + Divine Dragon (king) + 3 vivants present + 1 carcass Black Castle = ~13 Dragons documentés canon. Source: [`features/dragoons/dragons.md`](features/dragoons/dragons.md).

@@ -2460,6 +2460,35 @@
 
 - [ ] **🆕 Escape rate 40% Home of Gigantos canon** — Pattern location-specific escape rate (vs 30% standard / 90% Forest Disc 1 / location-tier-correlated). À documenter `combat/escape-mechanic.md` (à créer) — per-location escape rates canon. Source: idem.
 
+### Mobs / Berserker fandom complement — Butcher Knives canon + Energy Girdle armor classification + Rock Fireflies free replenish + Mappi/Gehrich bosses
+
+- [ ] **🆕 Berserker appearance canon "humanoid two large cleavers + wounded legs/arms + gold boots/pauldrons/bracers + blue chest plate" ⭐** — Visual design canon précisé (vs wiki silent). À refléter sprites/visual Damia. Source: [`features/mobs/_sources/fandom-berserker.md`](features/mobs/_sources/fandom-berserker.md).
+
+- [ ] **🆕 Butcher Knives canon name officiel (vs wiki ~Multi Slash community) ⭐** — Adopter fandom canon ability > 25% phase. Source: idem.
+
+- [ ] **🆕 "Spams All Out Attack in critical health" canon clarification HP ≤ 25% behavior ⭐** — Fandom précise All Out Attack predominant phase 3 (vs Menacing rare). Wiki ambiguous "Menacing OR All-out Attack" → fandom dit "spams" = high frequency. À refléter AI data-model `phase3.weights: { menacing: 0.2, allOutAttack: 0.8 }` probable. Source: idem.
+
+- [ ] **🆕 All Out Attack damage canon précisé 250-500 dégâts party ⚠️** — High finisher damage. À balancing Damia : Berserker All Out Attack 3× phys = 250-500 vs party HP Disc 2 (~500-700) = potentially KO turn. Source: idem.
+
+- [ ] **🆕 Encounter rate Common canon Berserker** — Pattern encounter rate variability multi-mob (cohérent Beastie Dragon Common / Air Combat Uncommon). Source: idem.
+
+- [ ] ⚠️ **🆕 Energy Girdle classification canon armor vs accessory ⭐ MAJEUR** — Fandom Berserker "body armor Haschel-only" + "greater than most armors Disc 3" classification. Existing docs Damia (`dragoons/mechanics.md`, TODO 1046/1110) classifient SP+ "accessory". À reconcilier `items/equipment.md` Energy Girdle entry : armor body slot Haschel-only OR accessory SP+ ? Hypothesis : possible Energy Girdle = armor slot avec effet SP+ (cohérent Sparkle Dress armor avec SP+ effet pattern). Décision impact data-model `Equipment.slot` + SP+ effect routing. Source: idem.
+
+- [ ] **🆕 ~30+ minutes farming Energy Girdle canon time** — Vs ~45min Total Vanishing / ~15min Angel's Prayer. Pattern farming time per drop rate. Source: idem.
+
+- [ ] **🆕 Rock Fireflies free resource replenish NEW canon Home of Gigantos ⭐ MAJEUR** — Home of Gigantos feature unique : NPCs/objects "Rock Fireflies" replenish party resources (HP/MP/SP probable) sans coût. Pattern farming-area design canon. À documenter `npcs/Rock Fireflies.md` (à créer) + cross-référer `locations/Home of Gigantos.md` (à créer). Implémenter Damia : interactable NPCs zone-specific free resource refill. Source: idem.
+
+- [ ] **🆕 Mappi + Gehrich = bosses Home of Gigantos Disc 2 canon ⭐** — Fandom révèle 2 bosses Home of Gigantos area : Mappi (à documenter `bosses/Mappi.md` à créer) + Gehrich (`bosses/Gehrich.md` à créer). Pattern boss duo area finale (cohérent Hero Competition rounds multiple bosses). Cross-référer Donau quest line Gehrich Gang. Source: idem.
+
+- [ ] **🆕 Stats divergences Berserker wiki vs fandom ⚠️** :
+  - P. Attack : wiki 40 vs fandom **55** (+37% — probable JP values)
+  - M. Attack : wiki 32 vs fandom **36** (+12%)
+  - HP JP : 500 (+25% pattern)
+  - Gold JP : 5 (÷3 pattern)
+    → Wiki tier 2 US prévaut canonical Damia. Source: comparaison.
+
+- [ ] **🆕 Sachets drop Piggy Home of Gigantos canon** — Co-drop Home of Gigantos farm area (Energy Girdle Berserker 2% + Bandit's Ring Gangster 2% + Sachets Piggy %). À documenter `items/consumables.md` (à créer) Sachet entry. Cross-référer `mobs/Piggy.md` (à créer) drop canon. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

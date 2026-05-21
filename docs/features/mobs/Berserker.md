@@ -11,10 +11,11 @@
 > **Sources** :
 >
 > - 🥈 [`_sources/lod-wiki-berserker.md`](./_sources/lod-wiki-berserker.md) — wiki LoD (stats glass cannon + Status Immunity 6✔/2✗ Confuse+Fear immune + AI 3-phase Charging Spirit Menacing/All-out Attack + Energy Girdle 2% drop + Contact arrows encounter NEW + 28 Counter)
+> - 🥉 [`_sources/fandom-berserker.md`](./_sources/fandom-berserker.md) — fandom (appearance "humanoid two cleavers gold/blue armor" + **Butcher Knives canon name** vs ~Multi Slash + **"Spams All Out Attack critical health" clarification** + ⭐ **Energy Girdle = body armor Haschel-only canon clarification** vs SP+ accessory existing docs + Rock Fireflies free resource replenish NEW + Bandit's Ring/Sachets co-drops + Mappi/Gehrich bosses Disc 2 area + Disc 2 Monsters confirmed)
 
 ## Statut
 
-🟡 **Draft post-ingestion wiki LoD** — fandom à ingérer pour cross-check si page existe.
+🟢 **Canon documenté wiki + fandom** — Energy Girdle armor vs accessory classification à reconcilier.
 
 ## Identity canon
 
@@ -203,6 +204,56 @@ Pattern **NEW** mob 6 immune / 2 vulnerable :
 - **Multi Slash > 25% other 25% chance canon unknown** : 75% Multi Slash + 25% = ??? (Charging Spirit ? OR transitional ?). À investiguer.
 - **Pattern "berserk" mob Fear immune systematic** : Berserker + Berserk Mouse both Fear immune → other "berserk" mobs ? À cross-check alphabetical mobs ingestion.
 - **"Contact (arrows)" encounter mechanic implementation Damia** : event-trigger map zones OR random spawn variant ? À decide.
+- ⚠️ **Energy Girdle classification canon armor vs accessory** : fandom "body armor Haschel-only" vs existing docs Damia "SP+ accessory" — à reconcilier `items/equipment.md` Energy Girdle entry.
+
+## Cross-check fandom (compléments + divergences)
+
+**Confirmations utiles fandom** :
+
+- **Element Darkness + Home of Gigantos location** confirmé
+- **HP 400 (US/EU) + DF 30 + MDF 50 + SPD 60** match
+- **Energy Girdle 2% drop** confirmé
+- **Counter Yes** confirmé
+- **Confuse + Fear immune** confirmé (cohérent wiki 6✔/2✗ NEW pattern)
+- **Charging Spirit + All Out Attack + Menacing canon names** confirmés
+- **Battle formations 4** : solo / + Crafty Thief / + Piggy / ×2 + Piggy (cohérent wiki tier 2)
+- **Disc 2 Monsters category** ✅
+
+**NEW canon fandom-only** ⭐ :
+
+- ⭐ **Appearance canon "humanoid two large cleavers + wounded legs/arms + gold boots/pauldrons/bracers + blue chest plate"** — visual design canon précisé (vs wiki silent)
+- ⭐ **Butcher Knives canon name officiel** (vs wiki ~Multi Slash community) — adopter fandom canon > 25% phase ability
+- ⭐ **"Spams All Out Attack in critical health" canon clarification** — HP ≤ 25% = All Out Attack predominant (vs Menacing rare). Précise wiki ambiguous "Menacing OR All-out Attack" dual choice
+- ⭐ **All Out Attack damage canon précisé 250-500 dégâts** party characters
+- ⭐ **Encounter rate Common** canon
+- ⭐ **Energy Girdle = body armor Haschel-only canon clarification ⭐ MAJEUR** :
+  - Body armor classification (vs SP+ accessory existing docs Damia) — à reconcilier `items/equipment.md`
+  - "Greater than most armors Disc 3" stat tier high canon
+  - ~30+ minutes farming canon Home of Gigantos
+- ⭐ **Bandit's Ring drop Gangster 2%** confirmation Home of Gigantos farm area (cohérent existing docs)
+- ⭐ **Sachets drop Piggy** Home of Gigantos area
+- ⭐ **Rock Fireflies free resource replenish NEW canon ⭐ MAJEUR** — Home of Gigantos feature unique : NPC/object replenish party resources (HP/MP/SP) sans coût. Pattern farming-area design canon
+- ⭐ **Mappi + Gehrich = bosses Home of Gigantos Disc 2** canon — à documenter `bosses/Mappi.md` + `bosses/Gehrich.md` (à créer)
+- ⭐ **Strategy canon : physical > magic** (MDF > DF) recommended — burst kill turn 1 priority
+
+**Divergences stats wiki vs fandom** :
+
+| Stat                              | Wiki LoD                                     | Fandom                      | Notes                                                          |
+| --------------------------------- | -------------------------------------------- | --------------------------- | -------------------------------------------------------------- |
+| **HP US/EU**                      | 400                                          | 400                         | Match                                                          |
+| **HP JP**                         | (silent)                                     | **500**                     | Fandom canon JP +25% pattern systématique                      |
+| **P. Attack**                     | 40                                           | **55**                      | ⚠️ DIVERGENCE +37% (fandom probable JP values OR fandom typo)  |
+| **M. Attack**                     | 32                                           | **36**                      | ⚠️ DIVERGENCE +12%                                             |
+| **DF / MDF**                      | 30/50                                        | 30/50                       | Match                                                          |
+| **SPD**                           | 60                                           | 60                          | Match                                                          |
+| **Gold US**                       | 15                                           | 15                          | Match                                                          |
+| **Gold JP**                       | (silent)                                     | **5**                       | Fandom canon JP ÷3 pattern systématique                        |
+| **~Multi Slash / Butcher Knives** | ~Multi Slash                                 | **Butcher Knives**          | Fandom canon name officiel — adopter                           |
+| **Energy Girdle classification**  | (drop only)                                  | **body armor Haschel-only** | Fandom clarification — à reconcilier vs existing SP+ accessory |
+| **HP ≤ 25% behavior**             | Menacing OR All-out Attack! (equal probable) | **"Spams All Out Attack"**  | Fandom clarification : All Out Attack predominant              |
+
+→ **Wiki tier 2 prévaut pour stats numériques** (HP US/EU, AT, MAT, DF, MDF, SPD).
+→ **Fandom prévaut pour names canon officiels** (Butcher Knives) + appearance + Energy Girdle armor classification + "spams All Out Attack" clarification + Rock Fireflies free replenish + Mappi/Gehrich bosses identification.
 
 ## Liens transverses
 
@@ -214,6 +265,8 @@ Pattern **NEW** mob 6 immune / 2 vulnerable :
 - [`Berserk Mouse.md`](./Berserk Mouse.md) — pattern "berserk" Fear immune cross-mob
 - [`Air Combat.md`](./Air Combat.md) — pattern Charging Spirit + All-out Attack! 3× phys récurrent
 - [`../bosses/Gehrich.md`](../bosses/Gehrich.md) (à créer) — boss Gehrich Gang leader Disc 2
+- [`../bosses/Mappi.md`](../bosses/Mappi.md) (à créer) — boss Home of Gigantos partner Gehrich Disc 2 (fandom NEW canon)
+- [`../npcs/Rock Fireflies.md`](../npcs/Rock Fireflies.md) (à créer) — NPC Home of Gigantos free resource replenish (fandom NEW canon)
 - [`../combat/elements.md`](../combat/elements.md) — Darkness weak Light + element tagging
 - [`../combat/status-effects.md`](../combat/status-effects.md) (à créer) — per-mob immunity 6✔/2✗ NEW (Berserker Confuse+Fear immune)
 - [`../combat/encounter-mechanics.md`](../combat/encounter-mechanics.md) (à créer) — Contact (arrows) NEW encounter type canon

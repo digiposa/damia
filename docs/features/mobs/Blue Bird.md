@@ -15,10 +15,11 @@
 > **Sources** :
 >
 > - 🥈 [`_sources/lod-wiki-blue-bird.md`](./_sources/lod-wiki-blue-bird.md) — wiki LoD (Rare Monster category NEW + Water + Stats SPD 120 + A-AV 50% + Status all 8 ✔ + Damage Mitigation + Magical Immunity + Rare Attack 10% Max HP + Run away! + World Map roads Disc 2 + Escape 100%)
+> - 🥉 [`_sources/fandom-blue-bird.md`](./_sources/fandom-blue-bird.md) — fandom (⚠️ **terminology divergence "Unique Monster" umbrella** vs wiki "Rare Monster" granular + ⚠️ stats divergences DF/MDF/SPD 0 vs wiki 100/100/120 + HP 4 vs 5 + **generic strategy canon Unique Monsters NEW** : Magical Stone of Signet + Speed Down + Speed Up + Wargod's Amulet + Sallet + Long Bow accuracy + Dancer's Shoes + Bandit's Shoes speed)
 
 ## Statut
 
-🟡 **Draft post-ingestion wiki LoD** — fandom à ingérer pour cross-check si page existe.
+🟢 **Canon documenté wiki + fandom** — terminology divergence Rare vs Unique Monster notée.
 
 ## Identity canon — NEW category Rare Monster ⭐
 
@@ -239,6 +240,46 @@ Pattern **NEW** Rare Monster all 8 immune :
 - **Rare Monster EXP scaling canon** : Blue Bird 1k EXP baseline, Rainbow Bird 3k EXP (cohérent locations Death Frontier doc) — pattern EXP increment per-Rare ? À investiguer.
 - **Attacker Fear behavior post-Damage Mitigation** : if attacker Feared, modifier ×½ applies after damage→1 → final 0 damage ? OR special case ? À clarifier wrapper logic.
 - **Counter Rare Monster mechanic canon** : Counter 28 listed, but Counter Yes requires HP threshold or damage check ? Rare Monster Counter triggers same as Mob ? À investiguer.
+- ⚠️ **Terminology Rare Monster vs Unique Monster canon Damia** : Wiki tier 2 distingue Rare Monster (Birds Counter 28) vs Unique Monster (Jars Counter 16). Fandom umbrella "Unique Monster" inclut Birds + Jars. Damia adopter wiki granular. À documenter `combat/rare-monsters.md` (à créer) terminology canon.
+- **Magical Stone of Signet canon item** : fandom-only NEW reference — quel effet ? Time Stop ? Speed Down ? À investiguer items canon.
+- **Speed Down + Speed Up canon spells/abilities** : fandom mention — quels sorts canon ? Repeat Items SPD-related ? Dragoon Magic ? À investiguer.
+- **Wargod's Amulet canon accessory** : fandom NEW reference (vs Wargod's Sash existing) — accessory accuracy bonus ? À investiguer items.
+- **Dancer's Shoes + Bandit's Shoes canon SPD items** : fandom NEW references — slot armor/accessory + SPD effect ? À investiguer items.
+
+## Cross-check fandom (compléments + divergences)
+
+**Confirmations utiles fandom** :
+
+- **Water element + Location near Home of Giganto Disc 2** confirmé
+- **HP 5 (table) + EXP 1000 + Gold 0 + Drops None** confirmé (table fandom)
+- **10% target Max HP damage** Rare Attack formula confirmé
+- **Physical attacks → 1 damage** Damage Mitigation confirmé
+- **Magical attacks → unaffected** Magical Immunity confirmé
+- **High evasion** confirme wiki A-AV 50%
+- **Primary road : Home of Gigantos ↔ Valley of Corrupted Gravity** + secondary Barrens ↔ Valley of Corrupted Gravity — cohérent wiki
+
+**NEW canon fandom-only** ⭐ :
+
+- ⭐ **Magical Stone of Signet** = generic strategy item Unique Monsters NEW canon — à investiguer effect (Time Stop probable)
+- ⭐ **Speed Down + Speed Up** = generic strategy spells/abilities NEW canon — SPD manipulation strategy multi-Unique-Monster
+- ⭐ **Wargod's Amulet** = NEW accessory canon (distinct Wargod's Sash) — accuracy bonus probable
+- ⭐ **Sallet + Long Bow accuracy items** confirmés (cohérent existing TODO 1508 Sallet + Tiara accuracy Unique Monsters)
+- ⭐ **Dancer's Shoes + Bandit's Shoes** = NEW SPD boots items canon — à investiguer slot + effect
+- ⭐ **Strategy canon générique Unique Monster** pattern : Magical Stone of Signet + SPD manipulation + accuracy boost — à documenter `combat/rare-monsters.md` Strategy generic section
+
+**Divergences wiki vs fandom** :
+
+| Stat                  | Wiki LoD         | Fandom             | Notes                                                                                                                        |
+| --------------------- | ---------------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------------- |
+| **HP (table)**        | 5                | 5                  | Match table                                                                                                                  |
+| **HP (prose Battle)** | 5                | **4**              | ⚠️ Internal contradiction fandom (table 5 vs prose 4) — Wiki tier 2 5 prévaut canonical                                      |
+| **P. Defense**        | **100**          | **0** ⚠️           | ⚠️ MASSIVE DIVERGENCE — fandom probable display error JP null OR irrelevant given Damage Mitigation passive. Wiki prévaut    |
+| **M. Defense**        | **100**          | **0** ⚠️           | ⚠️ idem                                                                                                                      |
+| **Speed**             | **120**          | **0** ⚠️           | ⚠️ MASSIVE DIVERGENCE — fandom contradicte sa propre strategy "high speed helps overcome Blue Bird". Wiki prévaut 120        |
+| **Category**          | **Rare Monster** | **Unique Monster** | ⚠️ TERMINOLOGY DIVERGENCE — fandom umbrella "Unique Monster" inclut Birds + Jars ; wiki granular distingue. Damia adopt wiki |
+
+→ **Wiki tier 2 prévaut pour stats numériques + category granular** (Rare Monster Birds Counter 28 distinct Unique Monster Jars Counter 16).
+→ **Fandom prévaut pour strategy generic canon + items references** (Magical Stone of Signet + Speed Down/Up + Wargod's Amulet + Dancer's/Bandit's Shoes).
 
 ## Liens transverses
 

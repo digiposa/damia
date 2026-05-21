@@ -2519,6 +2519,29 @@
 
 - [ ] **🆕 Player strategy canon vs Rare Monster** — Standard weapons : 5 hits HP 5 (Run away! 25%/turn race) / Destroyer Mace Haschel bypass cap. Spells/magic useless (Magical Immunity → 0). Status useless (all 8 ✔ immune). À documenter `combat/rare-monsters.md` strategy section. Source: idem.
 
+### Mobs / Blue Bird fandom complement — Unique Monster umbrella terminology + generic strategy canon NEW items (Magical Stone of Signet + Speed Down/Up + Wargod's Amulet + Dancer's/Bandit's Shoes)
+
+- [ ] ⚠️ **🆕 Terminology divergence Rare Monster vs Unique Monster ⭐ MAJEUR** — Wiki tier 2 distingue **Rare Monster** (5 Birds Counter 28) vs **Unique Monster** Jars (Counter 16). Fandom utilise **"Unique Monster"** umbrella inclusif (Birds + Jars + autres). Damia adopt **wiki granular** : `MonsterCategory = 'rare-monster' | 'unique-monster-jar'` distincts. Pattern terminology canon à fixer `combat/rare-monsters.md` (à créer) + `combat/unique-monsters.md` (à créer) — 2 docs distincts catégories. Source: [`features/mobs/_sources/fandom-blue-bird.md`](features/mobs/_sources/fandom-blue-bird.md).
+
+- [ ] **🆕 Stats divergences MASSIVES wiki vs fandom Blue Bird ⚠️** :
+  - DF : wiki **100** vs fandom **0** (massive — fandom probable display error JP null OR irrelevant via Damage Mitigation)
+  - MDF : wiki **100** vs fandom **0** (idem)
+  - SPD : wiki **120** vs fandom **0** (massive — fandom contradicte propre strategy "high speed helps overcome Blue Bird")
+  - HP (prose) : wiki 5 vs fandom prose 4 (internal contradiction fandom table 5 vs prose 4)
+    → Wiki tier 2 prévaut canonical Damia (DF 100 / MDF 100 / SPD 120 / HP 5). Source: comparaison.
+
+- [ ] **🆕 Magical Stone of Signet canon item NEW ⭐** — Fandom NEW reference : "generic strategy for defeating Unique Monsters" key item. Effect canon unknown (Time Stop probable OR SPD debuff ?). À investiguer items canon Damia. Possible lien Signet Sphere / Magical Stone (cohérent Divine Tree Signet Sphere lore). À documenter `items/key-items.md` (à créer) Magical Stone of Signet entry. Source: idem.
+
+- [ ] **🆕 Speed Down + Speed Up canon spells/abilities NEW ⭐** — Fandom mention generic strategy Unique Monsters : Speed Down (debuff target SPD) + Speed Up (buff party SPD). Pattern SPD manipulation canon multi-Unique-Monster. À investiguer : Repeat Items SPD-related ? Dragoon Magic ? Status effects ? À documenter `combat/status-effects.md` (à créer) Speed Down/Up entries. Source: idem.
+
+- [ ] **🆕 Wargod's Amulet canon accessory NEW ⭐** — Distinct Wargod's Sash + Wargod's Calling (SP+ existing). Wargod's Amulet = accuracy bonus accessory probable (cohérent Unique Monster strategy "high accuracy"). À investiguer `items/equipment.md` accessory canon catalog complète. Source: idem.
+
+- [ ] **🆕 Dancer's Shoes + Bandit's Shoes canon SPD boots NEW ⭐** — Fandom mention SPD-boost items vs Unique Monsters. À investiguer slot (armor/accessory ?) + SPD effect canon. À documenter `items/equipment.md` Boots category. Source: idem.
+
+- [ ] **🆕 Generic strategy canon Unique/Rare Monster pattern ⭐** — Magical Stone of Signet + Speed Down + Speed Up + accuracy items (Wargod's Amulet + Sallet + Long Bow) + SPD boots (Dancer's/Bandit's Shoes). Pattern strategy réutilisable multi-Unique-Monster (Birds + Jars). À documenter `combat/rare-monsters.md` + `combat/unique-monsters.md` Strategy generic sections. Source: idem.
+
+- [ ] **🆕 Blue Bird location précisification fandom** — Primary spawn road : Home of Gigantos ↔ Valley of Corrupted Gravity / Secondary rare/seldom : Barrens ↔ Valley of Corrupted Gravity. Cohérent wiki "Valley of Corrupted Gravity → Home of Giganto most common". À refléter spawn rates per-road. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

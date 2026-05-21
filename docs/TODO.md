@@ -2125,6 +2125,33 @@
   - Barrens ↔ Intersection
     → À documenter `world-map/tiberoa-roads.md` (à créer) + `world-map/endiness.md` enrichissement. Source: idem.
 
+### Mobs / Arrow Shooter fandom complement — centaur tiger appearance + Muscle Fist canon + Detonate Arrow naming + Body Purifier + Fueno shop Bemusing Arrow
+
+- [ ] **🆕 Arrow Shooter appearance canon centaur tiger ⭐** — "Centaur with lower body of a tiger" + strap chest + bow + quiver + helmet. Visual design canon unique : tiger-centaur archer. À refléter visual design Damia. Source: [`features/mobs/_sources/fandom-arrow-shooter.md`](features/mobs/_sources/fandom-arrow-shooter.md).
+
+- [ ] **🆕 Muscle Fist canon name officiel (vs wiki ~Punch) ⭐** — Adopter fandom canon dans Damia. Cohérent pattern fandom donne noms officiels (vs wiki ~community approximations). Source: idem.
+
+- [ ] **🆕 "Detonate Arrow" naming canon (vs wiki "Detonating Arrow") ⚠️** — Fandom dit "Detonate Arrow" cohérent avec weapon Shana/Miranda "Detonate Arrow" + Repeat Item "Detonate Rock". Pattern "Detonate family" naming uniform. Adopter fandom canonical "Detonate Arrow" Damia. À corriger dans Arrow Shooter docs + Aqua King refs. Source: idem.
+
+- [ ] **🆕 Body Purifier Repeat Item canon (Poison cure) ⭐** — Fandom strategy : "keep some Body Purifiers" vs Arrow Shooter Poison Arrow. Implique Body Purifier = canon Poison-status cure Repeat Item. À documenter `items/consumables.md` (à créer) Body Purifier entry (cohérent avec Body Purifier chest Evergreen Forest canon). Source: idem.
+
+- [ ] **🆕 Bemusing Arrow buyable Fueno Disc 2 canon** — Confirme weapon disponible shop Fueno (cohérent equipment.md Bemusing Arrow shop Fueno 250G canon). Pattern : 2% drop OR purchase later canon design. Source: idem.
+
+- [ ] **🆕 "4 hours away from Fueno when Arrow Shooter encountered" canon timing ⭐** — Implication player timeline Disc 2 : Arrow Shooter Barrens = ~4h before Fueno shop. Pattern timing canon Disc 2 progression. À noter `world-map/disc2-progression.md` (à créer). Source: idem.
+
+- [ ] **🆕 "Second screen Barrens" matters for farming canon ⚠️** — Implique Barrens a **multiple screens/submaps avec encounter rates différentes**. À investiguer Barrens detailed map canon (probable submaps 231 vs 232 vs 233 différents farming efficiency). À documenter `locations/Barrens.md` (à créer). Source: idem.
+
+- [ ] **🆕 Detonate Arrow weapon "very end of final disc near final encounter" canon** — Confirme equipment.md acquisition Detonate Arrow weapon Shana/Miranda = Chest Moon That Never Sets pre-final boss. Source: idem.
+
+- [ ] **🆕 Stats divergences Arrow Shooter wiki vs fandom ⚠️** :
+  - HP : wiki 168 vs fandom **176** (US) / **210** (JP)
+  - P. Attack : wiki 33 vs fandom **37** (+12%)
+  - M. Attack : wiki 33 vs fandom **37** (+12%)
+  - Gold JP : 8 (÷3 pattern)
+    → Wiki tier 2 US prévaut canonical. JP HP +25% pattern systématique. Source: comparaison.
+
+- [ ] **🆕 AI phase order canon divergence wiki vs fandom ⚠️** — Wiki : Phase 2 = Poison Arrow OR Thunder Arrow random ≤50%>25% / Phase 3 = Detonate ≤25%. Fandom : Poison Arrow d'abord → Thunder Arrow when "health halved" → Detonate Arrow when "critical". Probable réconciliation : Thunder Arrow chance ↑ progressivement avec HP lower. À investiguer Discord cadors. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

@@ -7,6 +7,7 @@
 > **Sources** :
 >
 > - 🥈 [`_sources/lod-wiki-arrow-shooter.md`](./_sources/lod-wiki-arrow-shooter.md) — wiki LoD (stats + 9 Counter Opportunities + Poison/Thunder Arrow A-AV/M-AV mitigation + Detonating Arrow Non-Elemental AoE + 3-phase HP AI)
+> - 🥉 [`_sources/fandom-arrow-shooter.md`](./_sources/fandom-arrow-shooter.md) — fandom (appearance centaur tiger canon + Muscle Fist canon name vs wiki ~Punch + "Detonate Arrow" naming canon vs wiki "Detonating Arrow" + Fueno shop Bemusing Arrow purchase canon + Bemusing Arrow farming ~1h + "second screen Barrens" canon matters)
 
 ## Statut
 
@@ -138,6 +139,45 @@ Pattern mob standard : 4 immune (Petrify/Bewitch/Arm Block/Dispirit) / 4 vulnera
 
 - **40% escape rate** (vs 30% standard random encounters / 0% scripted boss)
 - Pattern canon "World Map roads + Barrens = 40% escape" ? À investiguer autres roads mobs.
+
+## Cross-check fandom (compléments + divergences)
+
+**Confirmations utiles fandom** :
+
+- **Earth element + Barrens location** confirmé
+- **Drop Bemusing Arrow 2%** confirmé + farming time **~1h average** canon
+- **Bemusing Arrow buyable Fueno** Disc 2 — "4 hours or more away" canon implication player encounter timeline
+- **Detonate Arrow same effect as Detonate Rock Attack Item** confirmé "Detonate family" Non-Elemental AoE pattern
+- **Detonate Arrow weapon Shana/Miranda end-of-Disc-4 reward** canon : "very end of the final disc near the final encounter" (cohérent equipment.md Chest Moon That Never Sets)
+- **Frilled Lizard partner** confirmé
+- **3 of 4 attacks are arrows canon** : Muscle Fist + 3 arrow types
+
+**NEW canon fandom-only** ⭐ :
+
+- ⭐ **Appearance Arrow Shooter canon** : **centaur with lower body of a tiger** + strap chest + bow + quiver + helmet → tiger-centaur archer visual design
+- ⭐ **Muscle Fist canon name officiel** (vs wiki ~Punch community approximation) — adopter fandom canon
+- ⭐ **"Second screen Barrens" matters for farming canon** — implique Barrens a multiple screens, encounter rate varies. À investiguer Barrens map detailed canon.
+- **Body Purifiers canon counter Poison Arrow** — Repeat Item canon Poison cure (status purifier). À documenter `items/consumables.md` (à créer) Body Purifier entry.
+- **"4 hours or more before Fueno shop access"** canon — implication game timing Arrow Shooter encounter vs Fueno arrival.
+
+**Divergences stats wiki vs fandom** :
+
+| Stat                                  | Wiki LoD                                              | Fandom                                                              | Notes                                                                                                                                                                                                 |
+| ------------------------------------- | ----------------------------------------------------- | ------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **HP US/EU**                          | 168                                                   | **176**                                                             | ⚠️ DIVERGENCE — wiki tier 2 prévaut probable (168)                                                                                                                                                    |
+| **HP JP**                             | (silent)                                              | 210                                                                 | Fandom canon JP +25% (cohérent pattern systématique)                                                                                                                                                  |
+| **P. Attack**                         | 33                                                    | **37**                                                              | ⚠️ DIVERGENCE — wiki tier 2 prévaut probable (33)                                                                                                                                                     |
+| **M. Attack**                         | 33                                                    | **37**                                                              | ⚠️ DIVERGENCE — wiki tier 2 prévaut probable                                                                                                                                                          |
+| **DF / MDF**                          | 100/100                                               | 100/100                                                             | Match                                                                                                                                                                                                 |
+| **SPD**                               | 60                                                    | 60                                                                  | Match                                                                                                                                                                                                 |
+| **Gold JP**                           | (silent)                                              | 8                                                                   | Fandom canon JP ÷3                                                                                                                                                                                    |
+| **Detonate Arrow / Detonating Arrow** | "Detonating Arrow"                                    | **"Detonate Arrow"**                                                | ⚠️ NAMING DIVERGENCE — fandom cohérent avec weapon Shana/Miranda "Detonate Arrow" canon. **Adopter fandom "Detonate Arrow"** canonical (cohérent Detonate Rock / Detonate Arrow weapon nomenclature). |
+| **~Punch / Muscle Fist**              | ~Punch (community)                                    | **Muscle Fist**                                                     | Fandom canon name officiel — adopter.                                                                                                                                                                 |
+| **AI Phase 2 abilities**              | Poison Arrow OR Thunder Arrow (equal chance ≤50%>25%) | "in order Poison arrow → Thunder arrow → Detonate arrow" sequential | ⚠️ Pattern divergence : wiki suggère random parallel, fandom suggère sequential progression. Probable réconciliation : Thunder Arrow chance ↑ avec HP lower (à investiguer).                          |
+
+→ **Wiki tier 2 prévaut pour stats numériques** (HP 168, AT/MAT 33).
+→ **Fandom prévaut pour names canon** (Muscle Fist, Detonate Arrow).
+→ **Appearance fandom canon** retained.
 
 ## Trivia / Gallery / References
 

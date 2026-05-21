@@ -2189,6 +2189,27 @@
 
 - [ ] **🆕 "Blades affixed to feet" Assassin Cock visual canon** — Pattern visual design rooster anthropomorphique avec lames pieds. À refléter design Damia. Source: idem.
 
+### Mobs / Assassin Cock fandom complement — Feet Sickle/Sound Wave canon names + appearance purple + DIRECTION recolor INVERSE wiki
+
+- [ ] **🆕 Assassin Cock JP name アサシンコック (Asashin Kokku) canon ⭐** — Direct katakana translit (pattern simple translit canon, vs Fire Bird "Rokkuhāken" rock piton métaphore distinct). À refléter i18n. Source: [`features/mobs/_sources/fandom-assassin-cock.md`](features/mobs/_sources/fandom-assassin-cock.md).
+
+- [ ] **🆕 Feet Sickle + Sound Wave canon names officiels (vs wiki ~Talon Kick / ~Cry) ⭐** — Adopter fandom canon. Sound Wave "multi-target attack" confirme Party AoE pattern Cry. Source: idem.
+
+- [ ] **🆕 Assassin Cock appearance "purple bird with large claws" canon** — Visual design canon précisé (vs wiki silent appearance). À refléter design Damia. Source: idem.
+
+- [ ] **🆕 DIRECTION RECOLOR INVERSE canon ⚠️ MAJEUR divergence wiki vs fandom** — Fandom : **Fowl Fighter = recolored version OF Assassin Cock** (Assassin Cock = original asset canon). Wiki tier 2 : Assassin Cock = recolor OF Fowl Fighter (inverse). **Réconciliation timing-wise** : Assassin Cock = first regular mob TLoD encountered (Forest Disc 1 pre-Hellena), donc original asset created premier probable → **fandom direction prévaut probable**. À investiguer Discord cadors. Pattern revisé asset reuse canon TLoD : original first → recolor later. Source: comparaison.
+
+- [ ] **🆕 "Assassin Cock high speed first strike" canon ⭐** — Fandom strategy : "high speed will often allow it to have the first strike". Confirme SPD vs party Disc 1 starting (Dart SPD ~30 initial probable). Pattern early mob "fast threat" canon. Source: idem.
+
+- [ ] **🆕 Stats divergences Assassin Cock wiki vs fandom ⚠️** :
+  - HP JP : fandom 4 (+33% vs US 3) — pattern early stats minimal variance distinct du +25% standard
+  - M. Attack : wiki 2 vs fandom **3** — wiki tier 2 prévaut probable
+  - SPD : wiki 45 vs fandom **50** — fandom cohérent avec "first strike" canon commentary → investiguer
+  - Gold JP : 2 (÷3 pattern systématique)
+    → Wiki tier 2 US prévaut canonical Damia. Source: idem.
+
+- [ ] **🆕 Trent + Assassin Cock formation omission fandom ⚠️** — Wiki tier 2 a formation 5 = Trent + Assassin Cock (submap 5, 625 35% each). Fandom liste seulement 4 formations (omission Trent). Wiki tier 2 prévaut probable. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

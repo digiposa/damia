@@ -7,6 +7,7 @@
 > **Sources** :
 >
 > - 🥈 [`_sources/lod-wiki-assassin-cock.md`](./_sources/lod-wiki-assassin-cock.md) — wiki LoD (stats minimal HP 3 + 19 Counter Opportunities + 2 abilities HP-split + Escape 90% + Sandora trained hypothesis)
+> - 🥉 [`_sources/fandom-assassin-cock.md`](./_sources/fandom-assassin-cock.md) — fandom (JP name アサシンコック Asashin Kokku + ability names canon Feet Sickle / Sound Wave + appearance purple bird large claws + DIRECTION recolor INVERSE wiki "Fowl Fighter = recolored version OF Assassin Cock")
 
 ## Statut
 
@@ -129,6 +130,42 @@ Pattern mob standard : 4 immune (Petrify/Bewitch/Arm Block/Dispirit) / 4 vulnera
 - **90% escape rate** = pattern early Disc 1 mobs canon "easy to flee" design
 - Player learning curve : initial combats facilement évitable
 - Comparison : 30% standard / 40% Tiberoa roads / 0% scripted boss
+
+## Cross-check fandom (compléments + divergences)
+
+**Confirmations utiles fandom** :
+
+- **Wind element + Forest location** confirmé
+- **Healing Potion 10% drop** confirmé
+- **Counter Yes** confirmé
+- **High speed first strike** canon : "Assassin Cock's high speed will often allow it to have the first strike" (SPD canon high vs party Disc 1)
+- **4 formations** : solo / ×2 / + Goblin / + Berserk Mouse (cohérent wiki sauf Trent oversight)
+
+**NEW canon fandom-only** ⭐ :
+
+- ⭐ **JP name アサシンコック (Asashin Kokku)** — direct katakana translit (vs Fire Bird Rokkuhāken "rock piton" / Feyrbrand 緑牙竜 "Green-Tusked Dragon" — pattern Assassin Cock = simple translit nom EN)
+- ⭐ **Feet Sickle canon name officiel** (vs wiki ~Talon Kick community approximation)
+- ⭐ **Sound Wave canon name officiel** (vs wiki ~Cry) + "multi-target attack" confirme Party AoE pattern
+- ⭐ **Appearance canon "purple bird with large claws"** — visual design canon précisé (vs wiki silent appearance)
+- ⚠️ **DIRECTION RECOLOR INVERSE canon** : fandom dit **Fowl Fighter = recolored version OF Assassin Cock** → implique **Assassin Cock = original / Fowl Fighter = recolored variant** canon. Wiki tier 2 dit l'inverse (Assassin Cock = recolor OF Fowl Fighter). **Divergence direction recolor** à reconcilier. Adopter fandom direction probable (Assassin Cock first mob TLoD timing-wise → original asset created premier).
+
+**Divergences stats wiki vs fandom** :
+
+| Stat                        | Wiki LoD                              | Fandom                                              | Notes                                                                                              |
+| --------------------------- | ------------------------------------- | --------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| **HP US/EU**                | 3                                     | 3                                                   | Match                                                                                              |
+| **HP JP**                   | (silent)                              | 4                                                   | Fandom canon JP +33% (vs +25% pattern systématique — possible variant scaling early stats minimal) |
+| **P. Attack**               | 2                                     | 2                                                   | Match                                                                                              |
+| **M. Attack**               | 2                                     | **3**                                               | ⚠️ DIVERGENCE — wiki tier 2 prévaut probable (2)                                                   |
+| **SPD**                     | 45                                    | **50**                                              | ⚠️ DIVERGENCE — fandom cohérent avec "high speed first strike" canon commentary. À investiguer.    |
+| **Gold US**                 | 6                                     | 6                                                   | Match                                                                                              |
+| **Gold JP**                 | (silent)                              | 2                                                   | Fandom canon JP ÷3 (cohérent pattern systématique)                                                 |
+| **Recolor direction**       | Assassin Cock recolor OF Fowl Fighter | **Fowl Fighter recolored version OF Assassin Cock** | ⚠️ DIVERGENCE inverse — fandom direction probable (timing-wise Assassin Cock encountered first)    |
+| **Trent partner formation** | Trent+Assassin Cock formation 5       | (absent)                                            | Fandom omission probable (wiki tier 2 prévaut)                                                     |
+| **Ability names**           | ~Talon Kick / ~Cry                    | **Feet Sickle / Sound Wave**                        | Fandom canon names officiels — adopter                                                             |
+
+→ **Wiki tier 2 prévaut pour stats numériques** + Trent formation.
+→ **Fandom prévaut pour names canon officiels** + appearance + direction recolor.
 
 ## Trivia canon ⭐
 

@@ -2353,6 +2353,20 @@
 
 - [ ] **🆕 Basilisk "highest HP Flanvel Tower mob" canon** — "Health second to none here" fandom commentary. Pattern boss-tier mob Tower of Flanvel canon. Source: idem.
 
+### Mobs / Beastie Dragon (Wind Mountain of Mortal Dragon Disc 3 — Mist abilities + Total Vanishing Repeat Item canon reconciliation)
+
+- [ ] **🆕 Beastie Dragon canon data-model** — Wind, HP 336, AT 66, DF 130 (high), MAT 42, MDF 90, SPD 50, A-AV/M-AV 0%. Mob Mountain of Mortal Dragon Disc 3. À implémenter `mobs/beastie-dragon.ts`. Source: [`features/mobs/_sources/lod-wiki-beastie-dragon.md`](features/mobs/_sources/lod-wiki-beastie-dragon.md).
+
+- [ ] **🆕 Total Vanishing = Repeat Item canon ⭐ MAJEUR reconciliation** — Beastie Dragon drops Total Vanishing 8% → confirme **Repeat Item Erase-type** (NOT Dragoon Magic comme hypothesis Basilisk). Reconcilie : Basilisk "immune to Erase effect" = immune to Repeat Item Erase mechanics. À documenter `items/consumables.md` (à créer) Total Vanishing entry + `combat/erase-mechanic.md` (à créer). Source: idem.
+
+- [ ] **🆕 Mist-based abilities canon ⭐** — Black Mist (Non-Elemental + 50% Fear) + Sweet Mist (Non-Elemental + 50% Bewitchment). Pattern thematic Wind-related mist. M-AV mitigation. **50% proc rate** (lower vs 100% pattern Arrow Shooter/Baby Dragon/Basilisk). Source: idem.
+
+- [ ] **🆕 Deadly Spider mob canon NEW partner Mountain of Mortal Dragon** — Formation 157 partner Beastie Dragon. À documenter `mobs/Deadly Spider.md` (à créer). Source: idem.
+
+- [ ] **🆕 Directional road Mountain → Evergreen Forest canon récurrent** — Same pattern Baby Dragon canon : Mountain → Evergreen Forest only, PAS Evergreen → Mountain. Pattern systematic road encounter canon Mountain mobs Disc 3. Source: idem.
+
+- [ ] **🆕 50% status proc rate pattern canon** — Beastie Dragon lower proc rate (50%) vs other mobs canon 100% pattern (Arrow Shooter/Baby Dragon/Basilisk). Pattern variability proc rates canon — à documenter `combat/status-effects.md` (à créer) proc rates per mob. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

@@ -5,10 +5,11 @@
 > **Sources** :
 >
 > - 🥈 [`_sources/lod-wiki-air-combat.md`](./_sources/lod-wiki-air-combat.md) — wiki LoD (stats + 3 abilities HP-conditional + recolor Wyvern + no-magic trivia)
+> - 🥉 [`_sources/fandom-air-combat.md`](./_sources/fandom-air-combat.md) — fandom (Wyvern classification canon + "stronger cousin to monster of same name" 2 Air Combats canon ? + light blue eyes unique trait + Charging Spirit 50% next turn All-out Attack + Down Burst "most potent wind spell item" Triceratops/Divine Tree counter + JP +25% HP / -67% Gold)
 
 ## Statut
 
-🟡 **Draft post-ingestion wiki LoD** — fandom à ingérer pour cross-check si page existe.
+🟡 **Draft post-ingestion wiki LoD + fandom** — divergences stats wiki vs fandom flaggées, à investiguer Discord cadors.
 
 ## Identity canon
 
@@ -164,11 +165,56 @@
 - **MAT 76 vestigial stat ?** Damia : conserver tel quel OR utiliser pour magic damage ? Probable preserve canon authenticity.
 - **Wyvern recolor sharing** : Damia partage assets ou model distinct ?
 
+## Cross-check fandom (compléments + divergences)
+
+**Confirmations utiles fandom** :
+
+- **Wind weak Earth canon confirmed** — "to maximize magical potency, use **earth-element spell items**, to hit at its elemental weakness for bonus damage"
+- **Down Burst Wind Repeat Item canon** : "**most potent wind-element spell item**", useful vs **Triceratops** + **Divine Tree mobs** (Earth-element targets canon)
+- **Encounter rate "Uncommon"** confirmé
+- **All-out Attack spam low HP** confirmé pattern : "spams All-out Attack more frequently the lower its health decreases"
+- **High physical defense canon confirmed** (DF 160)
+- **Air Combat = only Wind-element mob Moon That Never Sets** canon (unique Wind there)
+
+**NEW canon fandom-only** ⭐ :
+
+- ⭐ **Air Combat = Wyvern type canon classification** : "type of dragon, more specifically a Wyvern" — vs wiki "recolor of Wyvern" (différent : same model, OR fandom confirme actual Wyvern species)
+- ⭐ **"Much stronger cousin to a monster of the same name"** ⚠️ MAJEUR — implique **2 mobs canon avec nom "Air Combat"** (Wyvern original Mountain of Mortal Dragon = "monster of same name" ? OR Air Combat Disc 3 vs Disc 4 ? À investiguer.
+- ⭐ **"The Everlasting Moon" = nom alternatif Moon That Never Sets** ⚠️ NEW canon location name variant
+- ⭐ **Light blue eyes canon unique trait** : "one of the few monsters in the game without red eyes" — pattern lore "red-eye monsters" canon (≠ Dragoon "red-eye Dragon" Dart). À investiguer canon "red eyes mobs" pattern.
+- ⭐ **Appearance détaillée canon** : wings green/grey (×3 spikes tail tip + spikes top each wing + massive talons + spiky head), body brown
+- ⭐ **Charging Spirit "50% chance All-out Attack next turn"** canon (fandom précise vs wiki vague "Razor Tail OR All-out Attack")
+- ⭐ **Triceratops mob canon** + **Divine Tree Earth-element mobs canon** mentioned — targets Wind counter weapons
+- **Down Burst farming time canon "~10 minutes average"**
+- **JP Gold ÷3 canon** (33 US → 11 JP) — JP harsher reward pattern + +25% HP
+
+**Divergences stats wiki vs fandom** :
+
+| Stat                      | Wiki LoD                                          | Fandom                                          | Notes                                                                                                                                                                                               |
+| ------------------------- | ------------------------------------------------- | ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **P. Attack**             | 93                                                | **105**                                         | ⚠️ DIVERGENCE — fandom = wiki × 1.125 (probable JP values fandom)                                                                                                                                   |
+| **M. Attack**             | 76                                                | **86**                                          | ⚠️ DIVERGENCE — fandom = wiki × 1.13 (probable JP values fandom)                                                                                                                                    |
+| **HP US/EU**              | 1,080                                             | 1,080                                           | Match                                                                                                                                                                                               |
+| **HP JP**                 | (silent)                                          | 1,350                                           | Fandom canon JP +25%                                                                                                                                                                                |
+| **Gold US/EU**            | 33                                                | 33                                              | Match                                                                                                                                                                                               |
+| **Gold JP**               | (silent)                                          | 11                                              | Fandom canon JP ÷3 (-67%)                                                                                                                                                                           |
+| **A-AV**                  | **5%**                                            | **120%**                                        | ⚠️ DIVERGENCE MAJEURE — wiki 5% évasion vs fandom 120% évasion. **Wiki tier 2 prévaut probable** (5% raisonnable). Fandom 120 = probable typo OR différent référentiel (× 1.20 = +20% multiplier?). |
+| **Sharp Edge damage**     | "1× phys" (wiki)                                  | "medium physical damage" (fandom)               | Probable même value, descriptions différentes                                                                                                                                                       |
+| **All-out Attack damage** | "3× phys" (wiki)                                  | "massive physical damage" (fandom)              | Probable même value                                                                                                                                                                                 |
+| **Ability names canon**   | "~Razor Tail / Charging Spirit / All-out Attack!" | "Sharp Edge / Charging Spirit / All-out Attack" | Fandom canon names : **Sharp Edge** (vs wiki ~Razor Tail) — adopter fandom canon                                                                                                                    |
+| **Counterattack**         | "No" (Counters Additions ?)                       | **"Yes"**                                       | ⚠️ Recurring nomenclature divergence Retaliate vs Counter Addition                                                                                                                                  |
+
+→ **Wiki tier 2 prévaut pour stats numériques** (P/M Attack, A-AV).
+→ **Fandom prévaut pour ability names canon officiels** (Sharp Edge confirmé).
+→ **JP values divergences** documentées séparément US vs JP.
+
 ## Liens transverses
 
 - [`README.md`](./README.md) — pattern général mobs canon
-- [`../locations/Moon That Never Sets.md`](../locations/Moon That Never Sets.md) (à créer) — encounters canon
-- [`Wyvern.md`](./Wyvern.md) (à créer) — model original Mountain of Mortal Dragon
+- [`../locations/Moon That Never Sets.md`](../locations/Moon That Never Sets.md) (à créer) — encounters canon, alt name "The Everlasting Moon"
+- [`Wyvern.md`](./Wyvern.md) (à créer) — "cousin" canon Mountain of Mortal Dragon
+- [`Triceratops.md`](./Triceratops.md) (à créer) — Earth mob counter Down Burst Wind canon
+- [`Swift Dragon.md`](./Swift Dragon.md) (à créer) — encounter formation partner
 - [`../combat/elements.md`](../combat/elements.md) — Wind weak Earth
 - [`../bosses/Feyrbrand.md`](../bosses/Feyrbrand.md) — Wind dragon canon comparison
 

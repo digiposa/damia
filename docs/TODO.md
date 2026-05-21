@@ -1873,6 +1873,45 @@
 
 - [ ] **🆕 Drop rate 8% Repeat Item pattern mobs canon** — Air Combat drop Down Burst 8% (cohérent avec Evergreen Forest mobs all 8% drops). À investiguer : 8% = uniform mob drop rate canon ? Source: idem + cross-ref Evergreen Forest mobs.
 
+### Mobs / Air Combat fandom complement — Wyvern classification + "stronger cousin same name" + Light blue eyes unique + Charging Spirit 50% + Down Burst Triceratops/Divine Tree counter + divergences stats
+
+- [ ] **🆕 Air Combat = Wyvern type classification canon ⭐** — Fandom : "type of dragon, more specifically a Wyvern". Vs wiki "recolor of Wyvern" — fandom classification taxonomique vs wiki visual asset note. À documenter `mobs/Wyvern.md` (à créer) + species classification canon TLoD. Source: [`features/mobs/_sources/fandom-air-combat.md`](features/mobs/_sources/fandom-air-combat.md).
+
+- [ ] **🆕 "Stronger cousin to monster of same name" canon ⚠️ MAJEUR** — Fandom : Air Combat = "much stronger cousin to a monster of the same name". Implique : **2 mobs canon avec nom "Air Combat"** OU Wyvern original = "monster of same name" species (Air Combat = late-game Wyvern variant). À investiguer mob "Air Combat" Disc 1-3 OR Wyvern relationship canon. Source: idem.
+
+- [ ] **🆕 "The Everlasting Moon" = nom alternatif Moon That Never Sets canon ⚠️ NEW** — Location alt name canon. À refléter `locations/Moon That Never Sets.md` (à créer) + i18n. Source: idem.
+
+- [ ] **🆕 Light blue eyes canon Air Combat unique trait ⭐ "without red eyes"** — Pattern lore canon TLoD : **majority mobs have red eyes** (cohérent avec "red-eye Dragon" Dragoon Dart). Air Combat = **"one of the few monsters without red eyes"** canon. À investiguer pattern "red eyes" canon mobs systematic. À documenter `mobs/README.md` red-eyes pattern. Source: idem.
+
+- [ ] **🆕 Air Combat appearance détaillée canon** — Wings green/grey large + body brown + light blue eyes + spikes wings + 3 large tail spikes + massive talons + spiky head. À refléter visual design Damia. Source: idem.
+
+- [ ] **🆕 Charging Spirit "50% next turn All-out Attack" canon précisé ⚠️** — Wiki vague ("Razor Tail OR All-out Attack! next turn"), fandom précis "50% chance All-out Attack next turn". Adopter fandom canon : `Charging Spirit { primesNextTurn: { sharpEdge: 0.5, allOutAttack: 0.5 } }`. Source: idem.
+
+- [ ] **🆕 Sharp Edge canon name officiel (vs wiki ~Razor Tail) ⭐** — Fandom donne nom officiel "Sharp Edge". Adopter fandom canon dans Damia (~Razor Tail = community approximation wiki). Source: idem.
+
+- [ ] **🆕 Down Burst "most potent wind-element spell item" canon descriptor** — Down Burst = top-tier Wind Repeat Item canon. Useful vs **Triceratops** + **Divine Tree mobs Earth-element**. À documenter `items/consumables.md` (à créer) Down Burst entry top-tier rank Wind. Source: idem.
+
+- [ ] **🆕 Triceratops mob Earth-element canon ⚠️ NEW** — Mob canon mentioned fandom Air Combat strategy. Pattern : Wind counters Earth mobs. À documenter `mobs/Triceratops.md` (à créer). Source: idem.
+
+- [ ] **🆕 Divine Tree mobs Earth-element pattern canon ⭐** — "Most monsters on The Divine Tree" Earth element → Wind counters. À refléter `locations/Divine Tree.md` mobs elemental biome pattern. Source: idem.
+
+- [ ] **🆕 Down Burst farming time "~10 minutes average" canon** — Drop 8% × ~5 encounters/min ≈ 10 min average. Pattern farming efficiency canon. À utiliser pour balance Damia Mode Survival drop rates. Source: idem.
+
+- [ ] **🆕 Stats divergences Air Combat wiki vs fandom ⚠️** :
+  - P. Attack : wiki 93 vs fandom **105** (wiki × 1.125 — probable fandom = JP values)
+  - M. Attack : wiki 76 vs fandom **86** (wiki × 1.13)
+    → Pattern : fandom values potentiellement JP version stats canon ? À investiguer si fandom = JP / wiki = US/EU. Adopter wiki US tier 2 canon Damia. Source: comparaison sources.
+
+- [ ] **🆕 A-AV divergence wiki 5% vs fandom 120 ⚠️ MAJEUR** — Wiki 5% (raisonnable), fandom 120 (suspicious — 120% impossible OR différent référentiel). Probable typo fandom. Wiki tier 2 prévaut. Source: idem.
+
+- [ ] **🆕 JP version Gold ÷3 canon Air Combat (33 US → 11 JP)** — Pattern JP harsher reward (vs +25% HP). Confirmé Air Combat. À documenter `combat/canon-divergences.md` US vs JP balance pattern + investiguer si autres mobs JP Gold reduction systematic. Source: idem.
+
+- [ ] **🆕 JP HP Air Combat +25% canon (1080 → 1350)** — Pattern systématique JP +25% HP (cohérent autres bosses/mobs). Adopter US canon. Source: idem.
+
+- [ ] **🆕 Air Combat "only Wind-element mob Moon That Never Sets" canon** — Pattern : Moon That Never Sets = endgame area, Air Combat = unique Wind mob there. Implique autres mobs Moon = autres éléments. À cross-référer `locations/Moon That Never Sets.md` (à créer) elemental biome distribution. Source: idem.
+
+- [ ] **🆕 Swift Dragon partner formation 314 — mob Earth probable ⚠️** — Swift Dragon = Air Combat encounter partner. Si Moon That Never Sets variety, Swift Dragon = Earth or other element ? À documenter `mobs/Swift Dragon.md` (à créer). Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

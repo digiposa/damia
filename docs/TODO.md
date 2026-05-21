@@ -2489,6 +2489,36 @@
 
 - [ ] **🆕 Sachets drop Piggy Home of Gigantos canon** — Co-drop Home of Gigantos farm area (Energy Girdle Berserker 2% + Bandit's Ring Gangster 2% + Sachets Piggy %). À documenter `items/consumables.md` (à créer) Sachet entry. Cross-référer `mobs/Piggy.md` (à créer) drop canon. Source: idem.
 
+### Mobs / Blue Bird Rare Monster Water Disc 2 — NEW CATEGORY canon + Damage Mitigation + Magical Immunity + Rare Attack 10% Max HP + Run away! + 5 Rare Birds template AI shared
+
+- [ ] **🆕 ⭐ NEW CATEGORY "Rare Monster" canon MAJEUR** — Classification distincte de Minor Enemy / Boss / Unique Monster Jars. **5 Rare Monsters Counter 28 confirmé canon** : Blue Bird + OOPARTS + Rainbow Bird + Red Bird + Yellow Bird (cohérent existing `combat/_sources/lod-wiki-additions.md:154`). Implémenter classification `MonsterCategory = 'minor-enemy' | 'rare-monster' | 'unique-monster-jar' | 'boss'`. À documenter `combat/rare-monsters.md` (à créer) — full Rare Monster canon doc. Source: [`features/mobs/_sources/lod-wiki-blue-bird.md`](features/mobs/_sources/lod-wiki-blue-bird.md).
+
+- [ ] **🆕 Blue Bird canon data-model** — **Water** element Rare Monster, HP **5**, AT **0**, DF 100, MAT **0**, MDF 100, **SPD 120 ⭐ highest seen**, **A-AV 50% ⭐ NEW first non-0**, M-AV 0%. World Map roads Disc 2. EXP 1000 / Gold 0 / Drops Nothing (EXP-only reward design). À implémenter `mobs/blue-bird.ts`. Source: idem.
+
+- [ ] **🆕 Status Immunity all 8 ✔ boss-tier canon Rare Monster ⭐** — Vs Mob 4/4 (Assassin Cock) ou 5/3 (Berserk Mouse) ou 6/2 (Berserker). Cohérent Rare Monster = "no status proc possible" canon design. À refléter `combat/status-effects.md` per-category immunity tiers (Mob deviations 4-6 immune / Rare Monster 8 immune / Boss 8 immune). Source: idem.
+
+- [ ] **🆕 Rare Monster Damage Mitigation passive canon ⭐ MAJEUR** — Physical damage forced to 1. Exceptions canon : **Attacker Fear** (×½ applies after) + **Destroyer Mace** (Haschel HP-scaling weapon bypass cap). Cohérent existing `combat/damage-formula.md` §11 "Rare Monster Mitigation forcée à 1" + TODO 1430 "Destroyer Mace = SEUL weapon dépassant cap". Implémenter `RareMonsterPassives.damageMitigation: { physicalCap: 1; exceptions: ['attackerFear', 'destroyerMace'] }`. Source: idem.
+
+- [ ] **🆕 Rare Monster Magical Immunity passive canon ⭐ MAJEUR** — Magical damage forced to 0. Pas d'exception canon. Spells / Dragoon Magic / Repeat Items magic-type = INEFFICACE Rare Monsters. Implémenter `RareMonsterPassives.magicalImmunity: { magicalCap: 0 }`. À refléter `combat/damage-formula.md` Rare Monster magic immunity rule. Source: idem.
+
+- [ ] **🆕 Rare Attack formula canon ⭐ MAJEUR** — 10% target Max HP physical damage, **bypasses stats like defense**, **only Guarding + Target Fear modifiers apply**. Cohérent existing `combat/damage-formula.md` §10 "Rare Monster Basic = Max HP / 10" + wrapper "Rare Monster Mitigation | Target Fear, Power, Field, Element, Guard" inapplicables list. Implémenter ability shared multi-Rare-Monster. Source: idem.
+
+- [ ] **🆕 Run away! Rare Monster canon récurrent multi-mob ⭐** — Pattern same Berserk Mouse Run away! canon : self-removal, no EXP/gold/item. Blue Bird 25% rate explicit (vs Berserk Mouse silent rate). Yellow Bird 50% rate comparison. Pattern AI template shared 5 Rare Birds canon. Data-model `RareMonsterAI { rareAttackChance, runAwayChance }`. Source: idem.
+
+- [ ] **🆕 Pattern AI template shared 5 Rare Birds canon ⭐** — (B) = Blue Bird 75/25, (YR) = Yellow Rare = Yellow Bird 50/50 probable. Likely Red Bird + Rainbow Bird + OOPARTS share template with varying rates. À investiguer per-monster ingestion alphabetical. Source: idem.
+
+- [ ] **🆕 EXP-only reward design canon Rare Monster** — Blue Bird 1000 EXP / 0 Gold / Nothing drop = pattern "metal slime" TLoD. Catch incentive massive EXP reward. Vs Lucky Jar (Unique Monster Jar Counter 16) = 1000 EXP + 300 Gold + Moon Serenade drop (different category). À documenter `combat/rare-monsters.md` reward design pattern. Source: idem.
+
+- [ ] **🆕 SPD 120 ⭐ highest seen + A-AV 50% ⭐ NEW first non-0** — Blue Bird stats canon : pattern Rare Monster fast + evasive. Tagging visual `MobStats.spd` cap probable 120 ? À investiguer alphabetical. Source: idem.
+
+- [ ] **🆕 World Map road exclusive canon Rare Monster** — Blue Bird no submap encounters, only World Map roads Disc 2 (Barrens → Valley of Corrupted Gravity / Valley of Corrupted Gravity → Home of Giganto). Pattern Rare Monster spawn rules canon — exclude location interior, World Map exclusive. À implémenter `MonsterSpawnRules.locationType: 'submap' | 'world-map-road' | 'both'`. Source: idem.
+
+- [ ] **🆕 Escape rate 100% canon Rare Monster** — Player can ALWAYS escape Blue Bird (vs 30% standard / 90% Forest / 40% Home of Gigantos). Pattern Rare Monster = "player choice catch OR escape" canon design. Implémenter escape rate 100% Rare Monsters. Source: idem.
+
+- [ ] **🆕 Counter 28 universal transverse Mob/Boss/Rare Monster ⭐ confirmé** — Blue Bird Rare Monster Disc 2 = same Berserker mob = same Aqua King boss = 28-tier monster canon. Pattern Counter Opportunities 28 NOT category-correlated (mob vs boss vs rare) NI disc-correlated. Per user instruction : feature non-implémentée Damia, factual mention only. Source: idem.
+
+- [ ] **🆕 Player strategy canon vs Rare Monster** — Standard weapons : 5 hits HP 5 (Run away! 25%/turn race) / Destroyer Mace Haschel bypass cap. Spells/magic useless (Magical Immunity → 0). Status useless (all 8 ✔ immune). À documenter `combat/rare-monsters.md` strategy section. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

@@ -1912,9 +1912,9 @@
 
 - [ ] **🆕 Swift Dragon partner formation 314 — mob Earth probable ⚠️** — Swift Dragon = Air Combat encounter partner. Si Moon That Never Sets variety, Swift Dragon = Earth or other element ? À documenter `mobs/Swift Dragon.md` (à créer). Source: idem.
 
-### Mobs / Aqua King (Water Aglis Disc 2 — premier Counter Additions table canon + Magical Attack Barrier rare + retail bug "0 damage")
+### Mobs / Aqua King (Water Aglis Disc 4 — premier Counter Additions table canon + Magical Attack Barrier rare + retail bug "0 damage")
 
-- [ ] **🆕 Aqua King canon data-model** — Water, HP 640, AT 67, DF 120, MAT 65, MDF **160** (high anti-magic), SPD 70, A-AV/M-AV 0%. Mob Disc 2 Aglis. À implémenter `mobs/aqua-king.ts`. Source: [`features/mobs/_sources/lod-wiki-aqua-king.md`](features/mobs/_sources/lod-wiki-aqua-king.md). Priorité: **moyenne**.
+- [ ] **🆕 Aqua King canon data-model** — Water, HP 640, AT 67, DF 120, MAT 65, MDF **160** (high anti-magic), SPD 70, A-AV/M-AV 0%. Mob **Disc 4 Aglis** (Magic City endgame Wingly hidden). À implémenter `mobs/aqua-king.ts`. Source: [`features/mobs/_sources/lod-wiki-aqua-king.md`](features/mobs/_sources/lod-wiki-aqua-king.md). Priorité: **moyenne**.
 
 - [ ] **🆕 Counterattack Opportunities table canon ⭐ MAJEUR NEW mécanique** — Premier mob documenté avec table complète Counter Additions (28 opportunities). Pattern : Addition player button presses spécifiques déclenchent counter du mob. À implémenter `CounterOpportunity { user, addition, buttonPresses: number[] }` + `MobCounterTable`. À documenter master pattern `combat/counter-additions.md` (à créer). Source: idem.
 
@@ -1929,7 +1929,7 @@
 
 - [ ] **🆕 Counter Opportunities Shana/Miranda absentes canon confirmé** — Pattern "no Additions Shana/Miranda" confirmé encore (cf. Wargod Calling/Ultimate Wargod restriction). Source: idem.
 
-- [ ] **🆕 Counter Opportunities Kongol absent ⚠️** — Aqua King Disc 2 Aglis. Kongol = recrutement Disc 2 Black Castle (L20 canon). Aqua King encounter = pre-Kongol probable OR Kongol Additions sans counter listed canon ? À investiguer. Source: idem.
+- [ ] **🆕 Counter Opportunities Kongol absent ⚠️** — Aqua King Disc 4 Aglis. Kongol disponible Disc 2+ (recrutement Black Castle Kazas L20 canon), donc pas une question de timing. **Probable Kongol Additions sans counter listées canon OR oversight wiki** — à investiguer. Source: idem.
 
 - [ ] **🆕 Magical Attack Barrier rare ability canon ⭐ "1 of 2 enemies"** — Aqua King + **Treasure Jar** (between Lidiera & Fueno) = only 2 enemies game capable Magical Attack Barrier. Reduces magical damage to 0 until next turn. Pattern canon ultra-rare. À documenter `combat/boss-abilities.md` (à créer) + `mobs/Treasure Jar.md` (à créer). Source: idem.
 
@@ -1948,7 +1948,7 @@
 
 - [ ] **🆕 Aqua King = Merman recolor canon (Marshland Disc 1)** — Pattern visual reuse. À documenter `mobs/Merman.md` (à créer) Marshland Disc 1 + cross-ref recolor pattern Air Combat/Wyvern. Source: idem trivia.
 
-- [ ] **🆕 Aqua King encounters Aglis Disc 2 canon** — Submaps 570-582, 712. Formations : solo (234) + Aqua King+Minotaur (236) + Scud Shark+Aqua King (238). À documenter `locations/Aglis.md` (à enrichir) + `mobs/Minotaur.md` + `mobs/Scud Shark.md` (à créer). Source: idem.
+- [ ] **🆕 Aqua King encounters Aglis Disc 4 canon** — Submaps 570-582, 712. Formations : solo (234) + Aqua King+Minotaur (236) + Scud Shark+Aqua King (238). À documenter `locations/Aglis.md` (à enrichir) + `mobs/Minotaur.md` + `mobs/Scud Shark.md` (à créer). Source: idem.
 
 - [ ] **🆕 Treasure Jar mob canon location "between Lidiera and Fueno"** ⭐ — Disc 2 Tiberoa area mob. Magical Attack Barrier rare. À documenter `mobs/Treasure Jar.md` (à créer) + cross-reference locations canon (Lidiera island Tiberoa, Fueno port). Source: idem trivia.
 
@@ -1998,7 +1998,7 @@
 
 - [ ] **🆕 JP version Aqua King canon** — HP 800 (+25%) / Gold 10 (÷3) — pattern systématique JP. Source: fandom-aqua-king.md table.
 
-- [ ] **🆕 "Disc 4 Monsters" categorization fandom Aqua King ⚠️ probable error** — Aglis = Disc 2 canon (Meru recruit Donau Disc 2). Fandom tags "Disc 4 Monsters". Probable error fandom OR Aglis revisitable Disc 4 ? À investiguer. Source: idem.
+- [x] **✅ "Disc 4 Monsters" categorization fandom Aqua King CONFIRMÉ CORRECT** — Aglis = **Disc 4** canon (endgame Magic City Wingly hidden, accessed post-Forest of Winglies portal Meru reveal Disc 3). Doc Damia initiale erronée "Disc 2" corrigée 2026-05-20. Source: user clarification.
 
 ### À décider / explorer
 

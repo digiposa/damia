@@ -1,11 +1,11 @@
-# Aqua King — Mob Water Aglis (Disc 2) — Counter Additions canon
+# Aqua King — Mob Water Aglis (Disc 4) — Counter Additions canon
 
 > **Premier mob documenté avec Counterattack Opportunities table complète (28)** + Magical Attack Barrier rare ability + **retail bug "0 damage abilities" rendant le mob trivial**.
 >
 > **Sources** :
 >
 > - 🥈 [`_sources/lod-wiki-aqua-king.md`](./_sources/lod-wiki-aqua-king.md) — wiki LoD (stats + 28 counter opportunities + Magical Attack Barrier + Trident Stab bug retail)
-> - 🥉 [`_sources/fandom-aqua-king.md`](./_sources/fandom-aqua-king.md) — fandom ("Magic City Aglis" canon name + "much more defensive cousin to Merman" + yellow eyes canon + Stab "never used" confirmed + cannot have both Barriers simultaneous + Power Up = DF/MDF/AT/MAT all 4 stats + Spider Urchin mob canon mentioned + Speed 70 vs Kongol/Albert pattern + Angel's Prayer 30 gold shop + ~15min farm + Disc 4 categorization probable error)
+> - 🥉 [`_sources/fandom-aqua-king.md`](./_sources/fandom-aqua-king.md) — fandom ("Magic City Aglis" canon name + "much more defensive cousin to Merman" + yellow eyes canon + Stab "never used" confirmed + cannot have both Barriers simultaneous + Power Up = DF/MDF/AT/MAT all 4 stats + Spider Urchin mob canon mentioned + Speed 70 vs Kongol/Albert pattern + Angel's Prayer 30 gold shop + ~15min farm)
 
 ## Statut
 
@@ -15,8 +15,8 @@
 
 - **Espèce** : Water creature aquatic (Merman recolor canon visual)
 - **Element** : Water
-- **Location canon** : **Aglis** (Wingly underwater city Disc 2) — submaps 570-582, 712
-- **Disc** : Disc 2 (Aglis = Wingly city sub-Reef, post-Donau)
+- **Location canon** : **The Magic City, Aglis** (Wingly hidden city) — submaps 570-582, 712
+- **Disc** : **Disc 4** (Aglis = endgame Wingly Magic City accessed post-Forest of Winglies portal Disc 3)
 - **Pattern symbolique** : **Premier mob canon avec Counter Additions explicite** + **mob bugged retail "trivial encounter"** ⚠️
 
 ## Stats canon
@@ -32,7 +32,7 @@
 | A-AV | 0%             |
 | M-AV | 0%             |
 
-→ Pattern mob Disc 2 : MDF 160 = très haut (anti-magic profile) cohérent avec **Magical Attack Barrier** rare ability.
+→ Pattern mob Disc 4 endgame : MDF 160 = très haut (anti-magic profile) cohérent avec **Magical Attack Barrier** rare ability.
 
 ## Status Immunity canon
 
@@ -72,7 +72,7 @@ Pattern mob standard : 4 immune (Petrify/Bewitch/Arm Block/Dispirit) / 4 vulnera
 
 - **Distribution par wielder** : Dart 5 / **Lavitz 9 (max)** / Rose 5 / Meru 5 / Haschel 2 / Albert 2
 - **Shana / Miranda absentes** : confirme **no Additions canon** (cohérent equipment.md restrictions Wargod Calling/Ultimate Wargod)
-- **Kongol absent** ⚠️ : Aqua King = Aglis Disc 2 (Meru recruit Donau Disc 2) — Kongol pas encore disponible canon ? OR Kongol additions différentes pas listées ?
+- **Kongol absent** ⚠️ : Aqua King = Aglis Disc 4 — Kongol disponible Disc 2+ canon donc pas une question de timing. **Probable Kongol Additions sans counter listées canon OR oversight wiki**. À investiguer.
 - **Lavitz Flower Storm = 5 button presses** counter (max single Addition) → Addition complexe high-tier
 - **Rose Demon's Dance = 4 button presses** (presses 3-6)
 - **Pattern** : "press 2" extrêmement commun (8 occurrences) → **second press = vulnerability moment fréquent canon**
@@ -102,7 +102,7 @@ Pattern mob standard : 4 immune (Petrify/Bewitch/Arm Block/Dispirit) / 4 vulnera
 
 ### Magical Attack Barrier canon ⭐ RARE
 
-⚠️ **Aqua King + Treasure Jar = only 2 enemies in entire game capable of Magical Attack Barrier**. Pattern canon ultra-rare ability. **Treasure Jar location canon** : encountered between Lidiera and Fueno (Disc 2 Tiberoa area, à investiguer).
+⚠️ **Aqua King + Treasure Jar = only 2 enemies in entire game capable of Magical Attack Barrier**. Pattern canon ultra-rare ability. **Treasure Jar location canon** : encountered between **Lidiera and Fueno** (Disc 2 Tiberoa area canon Queen Fury route).
 
 ### Power up self-buff canon
 
@@ -122,7 +122,7 @@ Pattern mob standard : 4 immune (Petrify/Bewitch/Arm Block/Dispirit) / 4 vulnera
 
 ## Encounters canon
 
-### Aglis (Disc 2, Wingly underwater city)
+### Aglis (Disc 4 — The Magic City, Wingly hidden)
 
 - **Aqua King solo** (formation 234) : submaps 574 (10%), 582 (10%)
 - **Aqua King + Minotaur** (formation 236) : submaps 570 (20%), 571 (35%), 573 (35%), 578 (20%), 579 (35%)
@@ -142,8 +142,8 @@ Pattern mob standard : 4 immune (Petrify/Bewitch/Arm Block/Dispirit) / 4 vulnera
 
 ### 2 enemies Magical Attack Barrier canon ⭐ RARE
 
-- **Aqua King** (Aglis Disc 2)
-- **Treasure Jar** (between Lidiera and Fueno) — Disc 2 Tiberoa area
+- **Aqua King** (Aglis Disc 4)
+- **Treasure Jar** (between Lidiera and Fueno) — Disc 2 Tiberoa area (Queen Fury route)
 - À cross-référer `mobs/Treasure Jar.md` (à créer)
 
 ### Bug canon retail "0 damage Aqua King" ⚠️
@@ -240,7 +240,7 @@ Pattern mob standard : 4 immune (Petrify/Bewitch/Arm Block/Dispirit) / 4 vulnera
 - ⭐ **Aqua King "best Addition grind target" canon** — Pattern farming Addition canon : Aqua King = safe environment Phys Barrier most often used → spam Additions sans damage taken. Pattern à documenter `combat/addition-grinding.md` (à créer). Source: idem.
 - ⭐ **Angel's Prayer 30 gold shop item canon ⚠️** — Healing item canon, purchased 30 gold (probable Bale/Lohan shops). À documenter `items/consumables.md` (à créer) Angel's Prayer entry. **Counter-productive farming** vs shop purchase. Source: idem.
 - **Down Burst farming ~15 min average** canon
-- ⚠️ **"Disc 4 Monsters" categorization fandom** — probable error (Aglis = Disc 2 canon, première visite). À vérifier si Aglis revisitable Disc 4 OR fandom erreur tag. Source: idem.
+- ✅ **"Disc 4 Monsters" categorization fandom confirmé CORRECT** — Aglis = Disc 4 canon (endgame Wingly Magic City accessed post-Forest of Winglies Disc 3 portal). Initial doc Damia erronée "Disc 2" corrigée. Source: idem.
 
 **Divergences stats wiki vs fandom** :
 
@@ -260,7 +260,7 @@ Pattern mob standard : 4 immune (Petrify/Bewitch/Arm Block/Dispirit) / 4 vulnera
 ## Liens transverses
 
 - [`README.md`](./README.md) — pattern général mobs canon
-- [`../locations/Aglis.md`](../locations/Aglis.md) — Wingly **"Magic City"** Disc 2
+- [`../locations/Aglis.md`](../locations/Aglis.md) — Wingly **"Magic City"** Disc 4
 - [`Merman.md`](./Merman.md) (à créer) — model original Marshland Disc 1
 - [`Minotaur.md`](./Minotaur.md) (à créer) — encounter partner Aglis
 - [`Scud Shark.md`](./Scud Shark.md) (à créer) — encounter partner Aglis

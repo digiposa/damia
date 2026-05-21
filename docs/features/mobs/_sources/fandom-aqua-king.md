@@ -70,4 +70,4 @@ Upon defeat, this monster may drop the healing item **Angel's Prayer with a rare
 
 ## Categories
 
-- **Disc 4 Monsters** ⚠️ probable error fandom — Aglis = Disc 2 canon (à investiguer)
+- **Disc 4 Monsters** ✅ correct canon — Aglis = endgame Wingly Magic City Disc 4 (accessed via Forest of Winglies portal opened Disc 3)

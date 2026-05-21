@@ -2264,6 +2264,26 @@
 
 - [ ] **🆕 Lloyd "young flame" canon nickname Dart ⭐** — Tournament results title "Dart, the 'young flame'" = nickname canon Dart (pre-Dragoon reveal Disc 1). Cohérent Fire Dragoon Dart identity. À refléter `party-members/Dart.md` (à créer/enrichir) nickname canon. Source: idem.
 
+### Mobs / Baby Dragon (Thunder Mountain of Mortal Dragon Disc 3 — Dragon emotion abilities + Swift Dragon recolor + Mind Purifier drop)
+
+- [ ] **🆕 Baby Dragon canon data-model** — Thunder, HP 240, AT 50, DF **140** (high), MAT 50, MDF 80, SPD 60. Mob Mountain of Mortal Dragon Disc 3 + road Mountain → Evergreen Forest (directional). À implémenter `mobs/baby-dragon.ts`. Source: [`features/mobs/_sources/lod-wiki-baby-dragon.md`](features/mobs/_sources/lod-wiki-baby-dragon.md).
+
+- [ ] **🆕 "Dragon emotion" abilities pattern canon ⭐ NEW** — 3-phase HP escalation : ~Tail (>50%) / **Anger of Dragon** (1× Fire magic, 50-25%) / **Sorrow of Dragon** (Non-Elemental + 100% Dispiriting M-AV mitigated, ≤25%) / **Cry of Dragon** (Non-Elemental + 100% Fear M-AV mitigated, ≤25%). Pattern unique canon "dragon emotion" naming. Source: idem.
+
+- [ ] **🆕 Anger of Dragon Fire ability from Thunder mob canon ⚠️ exception** — Baby Dragon = Thunder element mais utilise Fire ability. Pattern "mob element ≠ ability element" canon (cohérent Arrow Shooter Earth utilise Detonate Arrow Non-Elemental). Possibly lore : "dragon emotion-element associative" (anger = fire). À investiguer. Source: idem.
+
+- [ ] **🆕 Sorrow/Cry of Dragon panic phase ≤25% canon** — Both Non-Elemental magic + 100% status proc (Dispiriting / Fear). M-AV mitigation (pattern magic status proc → M-AV cohérent Arrow Shooter Thunder Arrow). À implémenter "panic phase" boss/mob pattern. Source: idem.
+
+- [ ] **🆕 Baby Dragon = Swift Dragon recolor canon ⭐** — Recolor of Swift Dragon (Moon That Never Sets Disc 4). Pattern asset reuse multi-disc (cohérent Air Combat = Wyvern recolor Mountain → Moon). Possible lore "Swift Dragon = adult version Baby Dragon" canon. À documenter `mobs/Swift Dragon.md` (à créer). Source: idem.
+
+- [ ] **🆕 Mountain of Mortal Dragon → Evergreen Forest directional road canon ⚠️** — Baby Dragon spawn road **Mountain → Evergreen Forest** UNIQUEMENT, **PAS Evergreen → Mountain** direction. Pattern road encounter directional restriction canon. À refléter `world-map/road-encounters.md` (à créer). Source: idem.
+
+- [ ] **🆕 Mind Purifier Repeat Item drop 8% canon** — Cohérent Mind Purifier chest Evergreen Forest canon. Anti-Confusion/Bewitchment cure. À documenter `items/consumables.md` (à créer) Mind Purifier entry. Source: idem.
+
+- [ ] **🆕 Mountain of Mortal Dragon submaps canon (413-427)** — Mountain Divine Dragon seal location Disc 3. À documenter `locations/Mountain of Mortal Dragon.md` (à créer) avec submaps map canon. Source: idem.
+
+- [ ] **🆕 Baby Dragon ×3 formation canon** — Encounter formation 159 = 3 Baby Dragons simultanés. Pattern multi-mob same species canon. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

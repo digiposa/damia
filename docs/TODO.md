@@ -1912,6 +1912,63 @@
 
 - [ ] **🆕 Swift Dragon partner formation 314 — mob Earth probable ⚠️** — Swift Dragon = Air Combat encounter partner. Si Moon That Never Sets variety, Swift Dragon = Earth or other element ? À documenter `mobs/Swift Dragon.md` (à créer). Source: idem.
 
+### Mobs / Aqua King (Water Aglis Disc 2 — premier Counter Additions table canon + Magical Attack Barrier rare + retail bug "0 damage")
+
+- [ ] **🆕 Aqua King canon data-model** — Water, HP 640, AT 67, DF 120, MAT 65, MDF **160** (high anti-magic), SPD 70, A-AV/M-AV 0%. Mob Disc 2 Aglis. À implémenter `mobs/aqua-king.ts`. Source: [`features/mobs/_sources/lod-wiki-aqua-king.md`](features/mobs/_sources/lod-wiki-aqua-king.md). Priorité: **moyenne**.
+
+- [ ] **🆕 Counterattack Opportunities table canon ⭐ MAJEUR NEW mécanique** — Premier mob documenté avec table complète Counter Additions (28 opportunities). Pattern : Addition player button presses spécifiques déclenchent counter du mob. À implémenter `CounterOpportunity { user, addition, buttonPresses: number[] }` + `MobCounterTable`. À documenter master pattern `combat/counter-additions.md` (à créer). Source: idem.
+
+- [ ] **🆕 28 Counter Opportunities distribution canon Aqua King** :
+  - Dart 5 (Volcano [2] / Crush Dance [2,3] / Moon Strike [2,3])
+  - Lavitz 9 (Rod Typhoon [2,3] / Gust of Wind Dance [2,5] / Flower Storm [2,3,4,5,6])
+  - Rose 5 (Hard Blade [2] / Demon's Dance [3,4,5,6])
+  - Meru 5 (Cool Boogie [2,3] / Cat's Cradle [3,4] / Perky Step [2])
+  - Haschel 2 (Summon 4 Gods [2] / Hex Hammer [2])
+  - Albert 2 (Gust of Wind Dance [2] / Flower Storm [2])
+    Pattern : **press 2 dominant** (8 occurrences) = "second-press vulnerability moment". Source: idem.
+
+- [ ] **🆕 Counter Opportunities Shana/Miranda absentes canon confirmé** — Pattern "no Additions Shana/Miranda" confirmé encore (cf. Wargod Calling/Ultimate Wargod restriction). Source: idem.
+
+- [ ] **🆕 Counter Opportunities Kongol absent ⚠️** — Aqua King Disc 2 Aglis. Kongol = recrutement Disc 2 Black Castle (L20 canon). Aqua King encounter = pre-Kongol probable OR Kongol Additions sans counter listed canon ? À investiguer. Source: idem.
+
+- [ ] **🆕 Magical Attack Barrier rare ability canon ⭐ "1 of 2 enemies"** — Aqua King + **Treasure Jar** (between Lidiera & Fueno) = only 2 enemies game capable Magical Attack Barrier. Reduces magical damage to 0 until next turn. Pattern canon ultra-rare. À documenter `combat/boss-abilities.md` (à créer) + `mobs/Treasure Jar.md` (à créer). Source: idem.
+
+- [ ] **🆕 Physical Attack Barrier canon Aqua King** — Reduces physical damage to **0** until next turn. Pattern temporary immunity. 50% chance HP > 50%. À implémenter `Buff { immunityType: 'physical', duration: 1 }`. Source: idem.
+
+- [ ] **🆕 Power up self-buff +50%/-50% × 3 turns canon** — Disponible Any HP 25% chance. **+50% damage dealt + -50% damage received** for **3 turns**. Pattern différent Feyrbrand Attacking power up (additive). À implémenter `Buff { type: 'dual_damage_modifier', dealtMult: 1.5, receivedMult: 0.5, duration: 3 }`. Source: idem.
+
+- [ ] **🆕 Trident Stab BUGGED retail canon ⚠️ MAJEUR** — "Bugged in retail so Aqua King simply does nothing when selecting this action". 75% HP ≤ 50% action devrait infliger 1× phys, but **does nothing canon**. Conséquence : **Aqua King has 0 damage-dealing abilities en retail PS1**. Damia : preserve bug authenticity OR fix balance ? À documenter `combat/canon-bugs.md` (à créer). Source: idem.
+
+- [ ] **🆕 Aqua King "trivial encounter due to bug" canon** — Observation canon : Power Down (3 turns debuff) wears off before Aqua King takes 3 turns → mob attaque rarement. À noter `combat/canon-bugs.md` retail observable patterns. Source: idem.
+
+- [ ] **🆕 Aqua King AI HP-split offense/defense canon** :
+  - HP > 50% = **100% defense** (Phys Barrier 50% / Mag Barrier 25% / Power up 25%) = **0% offense**
+  - HP ≤ 50% = 75% Trident Stab (BUG = nothing) / 25% Power up
+    Pattern unique : mob never attacks HP > 50% canon ! Mais bug rend même HP ≤ 50% non-aggressive. Source: idem.
+
+- [ ] **🆕 Aqua King = Merman recolor canon (Marshland Disc 1)** — Pattern visual reuse. À documenter `mobs/Merman.md` (à créer) Marshland Disc 1 + cross-ref recolor pattern Air Combat/Wyvern. Source: idem trivia.
+
+- [ ] **🆕 Aqua King encounters Aglis Disc 2 canon** — Submaps 570-582, 712. Formations : solo (234) + Aqua King+Minotaur (236) + Scud Shark+Aqua King (238). À documenter `locations/Aglis.md` (à enrichir) + `mobs/Minotaur.md` + `mobs/Scud Shark.md` (à créer). Source: idem.
+
+- [ ] **🆕 Treasure Jar mob canon location "between Lidiera and Fueno"** ⭐ — Disc 2 Tiberoa area mob. Magical Attack Barrier rare. À documenter `mobs/Treasure Jar.md` (à créer) + cross-reference locations canon (Lidiera island Tiberoa, Fueno port). Source: idem trivia.
+
+- [ ] **🆕 Counter mechanism unanswered questions ⚠️** :
+  - Counter par button press OR counter total fin Addition ?
+  - Damage du counter Aqua King ?
+  - Mob skips own turn quand counter ?
+  - Player peut "skip" certains button presses pour éviter counter ?
+    À investiguer Discord cadors + `combat/counter-additions.md` (à créer). Source: gap dans wiki.
+
+- [ ] **🆕 "Press 2 dominant" pattern canon Counter Opportunities ⭐** — 8 occurrences "press 2" sur 15 abilities. Implique : **second button press = vulnerability frequency canon**. À investiguer si pattern systématique tous mobs counter OR Aqua King-spécifique. Source: comptage table.
+
+- [ ] **🆕 Lavitz Flower Storm "5 button presses counter" max canon** — Addition complexe Lavitz late-game (5 hits). Pattern Addition = boss-counter-prone (more presses = more counter risk). À documenter `combat/additions.md` Flower Storm details. Source: idem.
+
+- [ ] **🆕 Rose Demon's Dance "presses 3-6" 4-counter canon** — Pattern : Rose Addition mid-tier 4 counter presses (3 through 6). À documenter Rose's Demon's Dance Addition details. Source: idem.
+
+- [ ] **🆕 Cool Boogie Meru "presses 2, 3" canon** — Confirme Cool Boogie = Addition Meru (déjà mentionné canon equipment.md Pretty Hammer + Wargod's Sash + Cool Boogie L5 = 495 SP optimal grind). Source: idem.
+
+- [ ] **🆕 Status applicables vs Aqua King canon** — Confuse / Fear / Poison / Stun applicables. Status weapons effective vs Aqua King : Mind Crush (Dart), Bemusing Arrow (Shana), Spear of Terror (Lavitz), Virulent Arrow (Shana), Beast Fang (Haschel). Source: status immunity standard mob pattern.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

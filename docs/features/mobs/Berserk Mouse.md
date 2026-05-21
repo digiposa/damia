@@ -9,10 +9,11 @@
 > **Sources** :
 >
 > - 🥈 [`_sources/lod-wiki-berserk-mouse.md`](./_sources/lod-wiki-berserk-mouse.md) — wiki LoD (stats minimal HP 2 + Darkness element + Status Immunity DEVIATES Fear ✔ + AI 3-phase + "Run away!" canon + Counter 28 + Forest Disc 1 encounters)
+> - 🥉 [`_sources/fandom-berserk-mouse.md`](./_sources/fandom-berserk-mouse.md) — fandom (JP name バーサクマウス + appearance "grey rat red eyes large ears" canon + **Plague Rat = recolor stronger variant** NEW + Nibble/Chisel/Escape canon names + **Trent partner formation NEW** + ⚠️ A-AV 0% vs 120% divergence anomaly)
 
 ## Statut
 
-🟡 **Draft post-ingestion wiki LoD** — fandom à ingérer pour cross-check si page existe.
+🟢 **Canon documenté wiki + fandom** — divergences notées.
 
 ## Identity canon
 
@@ -184,10 +185,62 @@ Pattern **NEW** mob 5 immune / 3 vulnerable :
 
 ### Questions ouvertes
 
-- **Run away! trigger conditions canon** : HP threshold ? turn-random ? player damage threshold ? À investiguer fandom + Discord.
+- **Run away! / Escape trigger conditions canon** : HP threshold ? turn-random ? player damage threshold ? À investiguer Discord/Wulves.
 - **Other mobs Run away! pattern canon** : existe-t-il d'autres mobs avec self-escape ? À investiguer mobs ingestion alphabetical.
 - **Fear immune canon other "berserk/aggressive" mobs** : pattern systematic ? À cross-check.
 - **HP 2 = TLoD lowest mob** : confirmer alphabetical mobs ingestion future.
+- ⚠️ **A-AV 120% fandom claim** : anomalous claim impossible mécaniquement OU stat caché ? Wiki tier 2 0% prévaut canonical. À investiguer Discord source tier 1.
+- **Trent + Berserk Mouse formation canon** : fandom NEW partner — wiki tier 2 silent. À confirmer Submap encounter table complète.
+
+## Cross-check fandom (compléments + divergences)
+
+**Confirmations utiles fandom** :
+
+- **Darkness element + Forest location** confirmé
+- **HP 2 (US/EU)** confirmé
+- **DF 80 / MDF 120** match
+- **Healing Potion 10% drop** confirmé
+- **Counter Yes** confirmé
+- **Fear + Stun immune** confirmé (cohérent wiki Status Immunity table)
+- **Chisel canon name** confirmé "bites multiple times slightly more damage" cohérent 2× phys ≤ 50%
+- **Disc 1 Monsters category** ✅
+
+**NEW canon fandom-only** ⭐ :
+
+- ⭐ **JP name バーサクマウス (Bāsaku mausu)** — direct katakana translit "Berserk Mouse"
+- ⭐ **Appearance canon "grey colored rat with red eyes and large ears"** — visual design canon précisé (vs wiki silent)
+- ⭐ **Plague Rat = recolor stronger variant Berserk Mouse canon NEW** ⭐ MAJEUR — pattern recolor mob canon (cohérent Fowl Fighter/Assassin Cock pattern Sandora birds, Wyvern/Air Combat) — à documenter `mobs/Plague Rat.md` (à créer)
+- ⭐ **Nibble canon name officiel** (vs wiki ~Bite community) — adopter fandom canon > 50%
+- ⭐ **Escape canon name officiel** (vs wiki "Run away!" descriptive) — adopter fandom canon. Mob self-removal mechanic confirmed
+- ⭐ **Berserk Mouse + Trent formation NEW canon** — wiki tier 2 absent. Pattern partner mobs Forest étendu (vs wiki seulement Assassin Cock + ×2 + solo)
+
+**Divergences stats wiki vs fandom** :
+
+| Stat                        | Wiki LoD             | Fandom                              | Notes                                                                                                |
+| --------------------------- | -------------------- | ----------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| **HP US/EU**                | 2                    | 2                                   | Match                                                                                                |
+| **HP JP**                   | (silent)             | **4**                               | Fandom canon JP +100% (vs +25% usual — pattern extrême sur stats minimaux)                           |
+| **P. Attack**               | 1                    | **2**                               | ⚠️ DIVERGENCE +100% (fandom probable JP values OR fandom typo)                                       |
+| **M. Attack**               | 1                    | **2**                               | ⚠️ DIVERGENCE +100% (idem)                                                                           |
+| **DF / MDF**                | 80/120               | 80/120                              | Match                                                                                                |
+| **SPD**                     | 45                   | **50**                              | ⚠️ DIVERGENCE +11% (cohérent Assassin Cock même divergence 45/50)                                    |
+| **A-AV**                    | **0%**               | **120%** ⚠️⚠️                       | ⚠️ MAJEUR DIVERGENCE — 120% impossible mécaniquement. Wiki tier 2 0% prévaut. À investiguer Discord. |
+| **Gold US**                 | 3                    | 3                                   | Match                                                                                                |
+| **Gold JP**                 | (silent)             | 1                                   | Fandom canon JP ÷3 pattern systématique                                                              |
+| **~Bite / Nibble**          | ~Bite                | **Nibble**                          | Fandom canon name officiel — adopter                                                                 |
+| **Run away! / Escape**      | Run away!            | **Escape**                          | Fandom canon name officiel — adopter                                                                 |
+| **Chisel partial-canon**    | Chisel (named ≤ 50%) | Chisel (described "multiple bites") | Match canon name. Phrasing différent.                                                                |
+| **Trent partner formation** | (absent)             | **Berserk Mouse + Trent**           | Fandom NEW partner formation — wiki tier 2 silent.                                                   |
+
+→ **Wiki tier 2 prévaut pour stats numériques** (HP/AT/MAT/SPD/A-AV/Status Immunity).
+→ **Fandom prévaut pour names canon officiels** (Nibble/Escape) + appearance + Plague Rat recolor + Trent partner formation.
+
+## Plague Rat — recolor variant canon NEW ⭐
+
+- **Plague Rat = "slightly stronger different color version of Berserk Mouse"** canon fandom
+- Pattern recolor mob canon (cohérent autres recolor TLoD)
+- À documenter `mobs/Plague Rat.md` (à créer) — stronger variant Berserk Mouse Disc ? (à investiguer location canon Plague Rat)
+- Implication design : **mob progression linéaire variants colors** = pattern TLoD canon systematic
 
 ## Liens transverses
 
@@ -196,7 +249,8 @@ Pattern **NEW** mob 5 immune / 3 vulnerable :
 - [`../locations/Seles.md`](../locations/Seles.md) (à créer) — Dart's hometown Disc 1
 - [`Assassin Cock.md`](./Assassin Cock.md) — formation 6 partner Forest Disc 1
 - [`Goblin.md`](./Goblin.md) (à créer) — Forest partner mob
-- [`Trent.md`](./Trent.md) (à créer) — Forest partner mob
+- [`Trent.md`](./Trent.md) (à créer) — Forest partner mob (fandom NEW formation Berserk Mouse + Trent)
+- [`Plague Rat.md`](./Plague Rat.md) (à créer) — recolor stronger variant Berserk Mouse canon NEW
 - [`../combat/elements.md`](../combat/elements.md) — Darkness weak Light + element tagging mob Damia
 - [`../combat/status-effects.md`](../combat/status-effects.md) (à créer) — per-mob immunity deviations canon (Berserk Mouse Fear ✔ NEW)
 - [`../combat/additions.md`](../combat/additions.md) — Counter Opportunities tier mapping (28 universal multi-disc confirmé)

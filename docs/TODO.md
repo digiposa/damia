@@ -2410,6 +2410,30 @@
 
 - [ ] **🆕 Darkness Disc 1 Forest canon rare** — Vs Wind Assassin Cock / Fire Goblin / Earth Trent partners Forest. Pattern element diversification Forest mobs canon. Cross-référer TODO existing "Tagging élémental des mobs Damia : Berserk Mouse=Darkness" — confirme wiki tier 2. Source: idem.
 
+### Mobs / Berserk Mouse fandom complement — Plague Rat recolor NEW + Nibble/Escape canon + Trent partner formation NEW
+
+- [ ] **🆕 Berserk Mouse JP name バーサクマウス (Bāsaku mausu) direct translit** — Source: [`features/mobs/_sources/fandom-berserk-mouse.md`](features/mobs/_sources/fandom-berserk-mouse.md).
+
+- [ ] **🆕 Berserk Mouse appearance canon "grey rat red eyes large ears" ⭐** — Visual design canon précisé. À refléter sprites/visual Damia. Source: idem.
+
+- [ ] **🆕 Plague Rat = recolor stronger variant Berserk Mouse canon NEW ⭐ MAJEUR** — Pattern recolor mob canon (cohérent Fowl Fighter/Assassin Cock Sandora birds + Wyvern/Air Combat). À documenter `mobs/Plague Rat.md` (à créer) — stronger variant Berserk Mouse, location/Disc à investiguer. Implémenter pattern visual recolor systematic Damia. Source: idem.
+
+- [ ] **🆕 Nibble canon name officiel (vs wiki ~Bite community) ⭐** — Adopter fandom canon > 50% phase ability. Source: idem.
+
+- [ ] **🆕 Escape canon name officiel (vs wiki "Run away!" descriptive) ⭐** — Adopter fandom canon mob self-removal ability. "Flees the battle" confirme self-removal mechanic. Source: idem.
+
+- [ ] **🆕 Berserk Mouse + Trent formation NEW canon ⭐** — Wiki tier 2 silent. Pattern partner mobs Forest étendu (3 partners canon : Assassin Cock + Trent + ×2). À investiguer wiki tier 2 formation ID + submap pour cette formation. Source: idem.
+
+- [ ] **🆕 Stats divergences Berserk Mouse wiki vs fandom ⚠️** :
+  - P. Attack : wiki 1 vs fandom **2** (+100% — probable JP values OR fandom typo)
+  - M. Attack : wiki 1 vs fandom **2** (+100%)
+  - SPD : wiki 45 vs fandom **50** (+11% — cohérent Assassin Cock même divergence)
+  - HP JP : 4 (+100% vs +25% usual — pattern extrême sur stats minimaux)
+  - Gold JP : 1 (÷3 pattern)
+    → Wiki tier 2 US prévaut canonical Damia. Source: comparaison.
+
+- [ ] ⚠️ **🆕 A-AV 0% (wiki) vs 120% (fandom) ANOMALY MAJEURE** — Fandom claim "Berserk Mouse can sometimes avoid attacks with 120% A-AV" mécaniquement impossible (>100% A-AV = near-immune attacks). Wiki tier 2 0% prévaut canonical Damia. Hypothesis : fandom typo / confusion M-DEF 120 / stat caché spécial ? À investiguer Discord/Wulves source tier 1. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

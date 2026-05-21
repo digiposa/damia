@@ -2390,6 +2390,26 @@
   - Gold JP : 11 (÷3 pattern)
     → Wiki tier 2 US prévaut canonical Damia. Source: comparaison.
 
+### Mobs / Berserk Mouse (Darkness Forest Disc 1 — HP 2 lowest TLoD + Run away! NEW canon + Fear immune NEW)
+
+- [ ] **🆕 Berserk Mouse canon data-model** — **Darkness** element, **HP 2** ⭐ lowest TLoD probable, AT 1, DF 80, MAT 1, MDF 120, SPD 45, A-AV/M-AV 0%. Mob Forest near Seles Disc 1 partner Assassin Cock. À implémenter `mobs/berserk-mouse.ts`. Source: [`features/mobs/_sources/lod-wiki-berserk-mouse.md`](features/mobs/_sources/lod-wiki-berserk-mouse.md).
+
+- [ ] **🆕 "Run away!" ability NEW canon ⭐ MAJEUR** — Self-target ability removes mob from combat **NO EXP/gold/item awarded**. Pattern thematic "mouse flees". Trigger conditions canon unknown (HP threshold ? turn-random ?). À investiguer fandom + Discord. Implémenter mob self-escape mechanic Damia : data-model `MobSelfRemoval { trigger, rewardNone: true }`. À documenter `combat/mob-ai.md` (à créer) Run away! pattern. Source: idem.
+
+- [ ] **🆕 Status Immunity DEVIATES pattern 5✔/3✗ canon Berserk Mouse ⭐** — Fear ✔ immune NEW (vs standard mob 4✔/4✗ Fear vulnerable). Cohérent thematic "berserk fearless aggressive". À cross-check autres "berserk/aggressive" mobs Fear immune pattern. À documenter `combat/status-effects.md` (à créer) per-mob immunity table canon (NOT universal 4/4). Source: idem.
+
+- [ ] **🆕 HP 2 = lowest mob TLoD probable canon ⭐** — Vs Assassin Cock HP 3 / autres mobs Disc 1. Pattern "intro-tier minimal stats" — first mob designs canon. À confirmer alphabetical ingestion future. Source: idem.
+
+- [ ] **🆕 3-phase AI canon Berserk Mouse** — Bite > 50% (1× phys) / Chisel ≤ 50% (2× phys) / Run away! self-removal. Pattern AI 3-phase NEW (vs standard 2-phase HP-split). Data-model `MobAI3Phase` extension `MobAI2Phase`. Source: idem.
+
+- [ ] **🆕 Chisel canon name officiel partial-canon** — Wiki name ≤ 50% Chisel (vs ~Bite community > 50%). Pattern partial-canon naming (named for one phase, community-approximated for autre). À clarifier fandom. Source: idem.
+
+- [ ] **🆕 Counter Opportunities 28 universal multi-disc confirmé ⭐** — Berserk Mouse Disc 1 = 28 (same Aqua King/Archangel Disc 4 + Atlow Disc 1 boss). Confirme **Counter 28 = standard universal tier high-density toutes-discs canon** (NOT disc-correlated). Pattern per-enemy assignment canon. Per user instruction : feature non-implémentée Damia, factual mention only. Source: idem.
+
+- [ ] **🆕 Submap 624 dominant Berserk Mouse hotspot canon** — 3 formations sur 3 incluent submap 624 (vs autres submaps 6/7/625 less frequent). Pattern submap mob-specific hotspot canon — à exploiter map design Damia (per-mob density). Source: idem.
+
+- [ ] **🆕 Darkness Disc 1 Forest canon rare** — Vs Wind Assassin Cock / Fire Goblin / Earth Trent partners Forest. Pattern element diversification Forest mobs canon. Cross-référer TODO existing "Tagging élémental des mobs Damia : Berserk Mouse=Darkness" — confirme wiki tier 2. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

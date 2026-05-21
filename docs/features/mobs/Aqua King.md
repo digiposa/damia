@@ -16,7 +16,7 @@
 - **Espèce** : Water creature aquatic (Merman recolor canon visual)
 - **Element** : Water
 - **Location canon** : **The Magic City, Aglis** (Wingly hidden city) — submaps 570-582, 712
-- **Disc** : **Disc 4** (Aglis = endgame Wingly Magic City accessed post-Forest of Winglies portal Disc 3)
+- **Disc** : **Disc 4** (Aglis = endgame Wingly Magic City, accédée depuis **Rouge** (Broken Islands) — la mer se sépare en deux pour inviter la party, puis se referme piégeant à l'intérieur)
 - **Pattern symbolique** : **Premier mob canon avec Counter Additions explicite** + **mob bugged retail "trivial encounter"** ⚠️
 
 ## Stats canon
@@ -240,7 +240,7 @@ Pattern mob standard : 4 immune (Petrify/Bewitch/Arm Block/Dispirit) / 4 vulnera
 - ⭐ **Aqua King "best Addition grind target" canon** — Pattern farming Addition canon : Aqua King = safe environment Phys Barrier most often used → spam Additions sans damage taken. Pattern à documenter `combat/addition-grinding.md` (à créer). Source: idem.
 - ⭐ **Angel's Prayer 30 gold shop item canon ⚠️** — Healing item canon, purchased 30 gold (probable Bale/Lohan shops). À documenter `items/consumables.md` (à créer) Angel's Prayer entry. **Counter-productive farming** vs shop purchase. Source: idem.
 - **Down Burst farming ~15 min average** canon
-- ✅ **"Disc 4 Monsters" categorization fandom confirmé CORRECT** — Aglis = Disc 4 canon (endgame Wingly Magic City accessed post-Forest of Winglies Disc 3 portal). Initial doc Damia erronée "Disc 2" corrigée. Source: idem.
+- ✅ **"Disc 4 Monsters" categorization fandom confirmé CORRECT** — Aglis = Disc 4 canon (endgame Wingly Magic City accédée depuis **Rouge** dans les Broken Islands, mer se sépare en deux). Forest of Winglies = location distincte Mille Seseau Disc 3 (≠ Aglis). Initial doc Damia erronée "Disc 2" corrigée. Source: idem.
 
 **Divergences stats wiki vs fandom** :
 

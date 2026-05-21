@@ -1998,7 +1998,7 @@
 
 - [ ] **🆕 JP version Aqua King canon** — HP 800 (+25%) / Gold 10 (÷3) — pattern systématique JP. Source: fandom-aqua-king.md table.
 
-- [x] **✅ "Disc 4 Monsters" categorization fandom Aqua King CONFIRMÉ CORRECT** — Aglis = **Disc 4** canon (endgame Magic City Wingly hidden, accessed post-Forest of Winglies portal Meru reveal Disc 3). Doc Damia initiale erronée "Disc 2" corrigée 2026-05-20. Source: user clarification.
+- [x] **✅ "Disc 4 Monsters" categorization fandom Aqua King CONFIRMÉ CORRECT** — Aglis = **Disc 4** canon (endgame Magic City Wingly hidden, accédée depuis **Rouge** dans les Broken Islands — la mer se sépare en deux pour inviter la party, puis se referme piégeant à l'intérieur). Forest of Winglies = location Mille Seseau Disc 3 (≠ Aglis, 2 Wingly cities distinctes). Doc Damia initiale erronée "Disc 2 via Donau Meru" + "Disc 4 via Forest of Winglies" corrigées 2026-05-20. Source: user clarification + `locations/Aglis.md` (déjà correct).
 
 ### À décider / explorer
 

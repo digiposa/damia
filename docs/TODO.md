@@ -2210,6 +2210,26 @@
 
 - [ ] **🆕 Trent + Assassin Cock formation omission fandom ⚠️** — Wiki tier 2 a formation 5 = Trent + Assassin Cock (submap 5, 625 35% each). Fandom liste seulement 4 formations (omission Trent). Wiki tier 2 prévaut probable. Source: idem.
 
+### Bosses / Atlow (Darkness Hero Competition Lohan Disc 1 — Scripted Shot first-turn + 5-sense-blocker after 4 Keen Shots + HP recovers self-heal + poison-coated arrows lore)
+
+- [ ] **🆕 Atlow canon data-model** — Darkness, HP 266, AT 16, DF 80, MAT 16, MDF 100, SPD 55, A-AV/M-AV 0%. Boss Hero Competition Lohan Disc 1 submap 638. À implémenter `bosses/atlow.ts`. Source: [`features/bosses/_sources/lod-wiki-atlow.md`](features/bosses/_sources/lod-wiki-atlow.md). Priorité: **moyenne**.
+
+- [ ] **🆕 Scripted Shot first-turn trait canon ⭐ NEW pattern** — "At the start of combat, ignore turn order and use Keen Shot". Pattern boss "first-turn scripted opener" (distinct des Retaliate triggered actions). À implémenter `BossPassive { trigger: 'on_battle_start', action, ignoreTurnOrder: true }`. Source: idem.
+
+- [ ] **🆕 5-sense-blocker!! count-based trigger canon ⭐ NEW pattern** — "After the fourth use of Keen Shot, ignore turn order and use 5-sense-blocker. Single use." 3× phys + 100% Fear (A-AV reduces). À implémenter `Ability { triggerAfterUseCount: { name: 'KeenShot', count: 4 }, singleUse: true, ignoreTurnOrder: true }`. Pattern lore "5-sense-blocker" = poison-coated arrow overwhelm senses canon. Source: idem.
+
+- [ ] **🆕 HP recovers self-heal 30% (79 HP) HP<30% canon ⭐** — Boss self-heal pattern : 30% max HP restored quand HP < 30%. Math : 30% × 266 = 79.8 ≈ 79 (integer division canon). À implémenter `Ability { target: 'self', hpRecoveryPct: 0.3, condition: { hpBelow: 0.3 } }`. Source: idem.
+
+- [ ] **🆕 Hero Competition Lohan canon tournament Disc 1 ⭐** — Event canon Lohan trade city. Atlow = champion participant. Structure tournament (rounds, autres participants ?) à investiguer fandom + game. À documenter `quests/disc1-hero-competition.md` (à créer) + `locations/Lohan.md` (à créer/enrichir). Source: idem.
+
+- [ ] **🆕 Atlow poison-coated arrows disqualification canon ⭐** — Pattern lore tournament rules : Atlow coats arrows poison → disqualifié si Dart perd. **"Likely the cause of the Fear status effect"** = poison induce Fear visual canon. Implication : **Dart can lose AND still progress story** (Atlow disqualifié soit par défaite player soit par cheating detection). À documenter `quests/disc1-hero-competition.md` (à créer). Source: idem.
+
+- [ ] **🆕 Atlow character canon stats** — **33 ans / 179 cm (5'7")**. NEW character canon stats. À refléter design Damia visual + i18n character bio. Source: idem.
+
+- [ ] **🆕 Atlow model reused Kamuy hunt mercenary canon** — "A mercenary joining the hunt for Kamuy re-uses Atlow's model" → asset reuse pattern Disc 3 Evergreen Forest (probable Bulgus OR autre mercenary canon). Cohérent visual reuse TLoD. Source: idem.
+
+- [ ] **🆕 Pattern "first-turn Scripted action" canon** — Atlow Scripted Shot = nouveau type boss passive distinct du Retaliate. À documenter `combat/boss-passives.md` (à créer) types of triggers : on_battle_start / on_magic_targeted / on_addition_targeted / on_hp_threshold / etc. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

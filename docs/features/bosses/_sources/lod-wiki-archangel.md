@@ -3,7 +3,7 @@
 > **Source** : [legendofdragoon.org wiki — Archangel](https://legendofdragoon.org/)
 > **Fiabilité** : 🥈 **tier 2** (wiki interne communauté Damia/Wulves)
 > **Sauvegardé le** : 2026-05-20.
-> **Usage** : référence canon Boss Archangel (Light, Moon That Never Sets Disc 4 endgame). Mécanique unique **Final Verdict** : battle ends after Talk used for the last time (dialogue-ending fight, NOT HP=0). Meru-targeted boss (heals Meru + talks to Meru). **Counter Opportunities table identique à Aqua King (28)** = probable pattern universel canon.
+> **Usage** : référence canon Boss Archangel (Light, Moon That Never Sets Disc 4 endgame). Mécanique unique **Final Verdict** : battle ends after Talk used for the last time (dialogue-ending fight, NOT HP=0). Meru-targeted boss (heals Meru + talks to Meru). **Counter Opportunities table identique à Aqua King (28)** — hypothesis "universel" INVALIDÉE par Arrow Shooter (9), pattern per-enemy canon possiblement tier-based.
 
 ---
 

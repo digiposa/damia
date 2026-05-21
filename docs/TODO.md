@@ -2092,6 +2092,39 @@
 
 - [ ] **🆕 "Bridge disappears + teleported alone" cutscene pattern canon** — Disc 4 Moon solo combats canon : approach floating castle → bridge removed → solo teleport. À implémenter cutscene canon pattern `cinematics/disc4-moon-solo.md` (à créer). Source: idem.
 
+### Mobs / Arrow Shooter (Earth Barrens Disc 2 Tiberoa — Counter Opportunities (9) ≠ Aqua King/Archangel (28) INVALIDE hypothesis universal + source Bemusing Arrow weapon drop + 3-phase HP AI)
+
+- [ ] **🆕 Arrow Shooter canon data-model** — Earth, HP 168, AT 33, DF 100, MAT 33, MDF 100, SPD 60, A-AV/M-AV 0%. Mob Barrens Disc 2 Tiberoa + World Map roads. À implémenter `mobs/arrow-shooter.ts`. Source: [`features/mobs/_sources/lod-wiki-arrow-shooter.md`](features/mobs/_sources/lod-wiki-arrow-shooter.md). Priorité: **moyenne**.
+
+- [ ] **🆕 Counter Opportunities (9) Arrow Shooter ⚠️ INVALIDE hypothesis universal canon ⭐ MAJEUR** — Pattern revised : Counter Opportunities = **per-enemy specific** canon (vs précédente hypothesis universal 28). Distribution Arrow Shooter : Dart 3 / Lavitz 2 / Rose 2 / Meru 1 / Albert 1 / Haschel 0 / Shana/Miranda/Kongol 0. **Aqua King + Archangel (28 même table)** = possible **tier "high counter density"** canon distinct d'Arrow Shooter "mid counter density" (9). À investiguer mapping complet per-enemy. Source: idem.
+
+- [ ] **🆕 Bemusing Arrow weapon drop 2% canon ⚠️ pattern rate weapons** — Drop rate **2%** (vs standard mob Repeat Item 8%). Pattern canon **weapon drops = lower rate** ? À investiguer systematic autres weapon drops mobs canon. Source: idem.
+
+- [ ] **🆕 Arrow Shooter AI 3-phase HP canon ⭐** :
+  - HP > 50% : ~Punch (1× phys basic)
+  - HP ≤ 50%, > 25% : **Poison Arrow** (1.5× phys + 100% Poison, A-AV mitigation) OU **Thunder Arrow** (1.5× phys + 100% Stun, M-AV mitigation)
+  - HP ≤ 25% : **Detonating Arrow** (Party 0.5× Non-Elemental magic AoE)
+    Pattern canon mob mid-tier 3-phase escalation. Source: idem.
+
+- [ ] **🆕 Status proc mitigation type canon (A-AV vs M-AV) ⭐** — Poison Arrow physical damage + Poison proc → **A-AV** mitigation. Thunder Arrow physical damage + Stun proc → **M-AV** mitigation. Implique : **mitigation type depends on ability nature, NOT damage type**. Probable : Thunder Arrow = "physical damage with Thunder element" → M-AV. À implémenter `StatusProc { mitigatedBy: 'A-AV' | 'M-AV' }`. À documenter `combat/status-effects.md` (à créer) mitigation patterns. Source: idem.
+
+- [ ] **🆕 Detonating Arrow Non-Elemental AoE party canon ⚠️** — Earth mob utilise **Non-Elemental** magic ability = exception canon. Pattern : ability element ≠ mob element. Cohérent **"Detonate family" canon** (Detonating Arrow = Arrow Shooter / Detonate Rock = Attack Item / Detonate Arrow = Shana/Miranda weapon). Probable : "Detonate" family = Non-Elemental AoE systematic. Source: idem.
+
+- [ ] **🆕 World Map roads encounters canon Arrow Shooter** — 4 roads canon : Barrens→Intersection, Barrens→Donau, Barrens→Valley of Corrupted Gravity, Valley→Home of Giganto. Pattern Tiberoa roads canon. À documenter `world-map/road-encounters.md` (à créer). Source: idem.
+
+- [ ] **🆕 Escape rate 40% Arrow Shooter canon ⚠️** — Vs 30% standard random encounters. Pattern : World Map roads + Barrens canon = **40% escape rate**. À investiguer autres roads mobs canon si systematic. Source: idem.
+
+- [ ] **🆕 Frilled Lizard mob canon NEW Barrens partner** — Encounter formation 86 partner Arrow Shooter. À documenter `mobs/Frilled Lizard.md` (à créer). Source: idem.
+
+- [ ] **🆕 Barrens Tiberoa Disc 2 submaps 231-233 canon** — Desert location Disc 2 (entre Donau et Valley of Corrupted Gravity probable). À documenter `locations/Barrens.md` (à créer). Source: idem + cross-ref Warrior Dress equipment chest Barrens canon.
+
+- [ ] **🆕 Tiberoa road network canon Disc 2** :
+  - Barrens ↔ Donau (north Tiberoa)
+  - Barrens ↔ Valley of Corrupted Gravity
+  - Valley of Corrupted Gravity ↔ Home of Giganto
+  - Barrens ↔ Intersection
+    → À documenter `world-map/tiberoa-roads.md` (à créer) + `world-map/endiness.md` enrichissement. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

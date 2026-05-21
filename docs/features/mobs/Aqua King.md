@@ -83,6 +83,8 @@ Pattern mob standard : 4 immune (Petrify/Bewitch/Arm Block/Dispirit) / 4 vulnera
 
 ⚠️ **À investiguer** : Counter = active une fois ou par button press ? Damage du counter ? Mob skips own turn quand counter ?
 
+⚠️ **Hypothesis "universal Counter table" INVALIDÉE par Arrow Shooter (9 ≠ 28)** — pattern per-enemy specific. Aqua King + Archangel partagent table 28 = possible **tier "high counter density"** canon.
+
 ## Abilities canon
 
 > Minor enemies HP-conditional + chance-weighted.

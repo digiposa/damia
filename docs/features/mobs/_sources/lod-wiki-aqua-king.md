@@ -3,7 +3,7 @@
 > **Source** : [legendofdragoon.org wiki — Aqua King](https://legendofdragoon.org/)
 > **Fiabilité** : 🥈 **tier 2** (wiki interne communauté Damia/Wulves)
 > **Sauvegardé le** : 2026-05-20.
-> **Usage** : référence canon Minor Enemy Aqua King (Water, Aglis Disc 4). Premier mob documenté avec **Counterattack Opportunities table canon explicite (28 opportunities)** + Magical Attack Barrier rare ability + retail bug "0 damage-dealing abilities".
+> **Usage** : référence canon Minor Enemy Aqua King (Water, Aglis Disc 4). Premier mob documenté avec **Counterattack Opportunities table canon explicite (28 opportunities — partagée avec Archangel boss, distincte d'Arrow Shooter 9)** + Magical Attack Barrier rare ability + retail bug "0 damage-dealing abilities".
 
 ---
 

@@ -2305,6 +2305,29 @@
   - Gold JP : 9 (÷3 pattern)
     → Wiki tier 2 US prévaut canonical. Source: idem.
 
+### Mobs / Basilisk (Earth Flanvel Tower Disc 3 — Instant Death Immunity passive NEW + Petrifying Glare 100% + Depetrifier in-character drop)
+
+- [ ] **🆕 Basilisk canon data-model** — Earth, HP 656, AT 86, DF 100, MAT 86, MDF 100, SPD 50, A-AV/M-AV 0%. Mob Flanvel Tower Disc 3. À implémenter `mobs/basilisk.ts`. Source: [`features/mobs/_sources/lod-wiki-basilisk.md`](features/mobs/_sources/lod-wiki-basilisk.md).
+
+- [ ] **🆕 Instant Death Immunity passive trait canon ⭐ NEW** — "Anything which inflicts Instant Death misses". Pattern thematic "stone creature immune to death" canon. Affecte : Gladius / Brass Knuckle / Indora's Axe (Instant Death procs miss vs Basilisk). À implémenter `MobPassive { immuneToInstantDeath: true }`. À investiguer autres mobs canon avec immunity. Source: idem.
+
+- [ ] **🆕 Petrifying Glare 100% Petrification canon thematic ⭐** — Status-only ability (no damage) Petrification 100% (M-AV mitigates). Pattern mythological basilisk gaze + status-only ability rare canon. HP ≤ 25% phase only. Source: idem.
+
+- [ ] **🆕 Depetrifier in-character drop canon ⭐** — Basilisk's own ability = Petrification → drop cure = Depetrifier (cohérent lore design "mob drops antidote to its ability"). Pattern à noter `items/consumables.md` (à créer) Depetrifier entry + thematic drops canon. Source: idem.
+
+- [ ] **🆕 Charging Spirit pattern récurrent canon multi-mob** — Same pattern Air Combat (self-buff HP > 25%, prepares specific ability next turn). À implémenter pattern réutilisable mob AI. Source: idem.
+
+- [ ] **🆕 Flanvel Tower mob encounters canon Disc 3** — Submaps 449, 451 (used formations). Cohérent equipment.md chests Tower of Flanvel after Faust. À documenter `locations/Flanvel Tower.md` (à créer). Source: idem.
+
+- [ ] **🆕 5/7 unused formations Flanvel Tower canon ⚠️ content cut** — Basilisk solo + partners Rocky Turtle / Mr. Bone / Unicorn + Madman variant. Pattern content cut massif. À investiguer raison cut intended. Source: idem.
+
+- [ ] **🆕 4 NEW mobs canon mentioned Flanvel Tower** :
+  - **Madman** (formation 175 USED, submap 449)
+  - **Rocky Turtle** (formations unused 205, 208)
+  - **Mr. Bone** (formation unused 207)
+  - **Unicorn** (formation unused 208)
+    → À documenter `mobs/Madman.md`, `mobs/Rocky Turtle.md`, `mobs/Mr. Bone.md`, `mobs/Unicorn.md` (à créer). Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

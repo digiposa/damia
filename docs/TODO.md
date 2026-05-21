@@ -2152,6 +2152,43 @@
 
 - [ ] **🆕 AI phase order canon divergence wiki vs fandom ⚠️** — Wiki : Phase 2 = Poison Arrow OR Thunder Arrow random ≤50%>25% / Phase 3 = Detonate ≤25%. Fandom : Poison Arrow d'abord → Thunder Arrow when "health halved" → Detonate Arrow when "critical". Probable réconciliation : Thunder Arrow chance ↑ progressivement avec HP lower. À investiguer Discord cadors. Source: idem.
 
+### Mobs / Assassin Cock (Wind Forest Seles Disc 1 earliest mob — Counter Opportunities (19) new tier + escape 90% + Sandora-trained birds hypothesis + Fowl Fighter recolor)
+
+- [ ] **🆕 Assassin Cock canon data-model ⭐ first regular mob TLoD** — Wind, HP **3**, AT 2, DF 100, MAT 2, MDF 120, SPD 45, A-AV/M-AV 0%. Mob Forest near Seles Disc 1 + 4 World Map roads Serdio. Stats minimal "tutorial intro" canon. À implémenter `mobs/assassin-cock.ts`. Source: [`features/mobs/_sources/lod-wiki-assassin-cock.md`](features/mobs/_sources/lod-wiki-assassin-cock.md).
+
+- [ ] **🆕 Counter Opportunities tier 19 mid-density canon ⭐ NEW tier** — Vs Arrow Shooter 9 (low) / Aqua King-Archangel 28 (high) / no-counter 0 (Air Combat/Feyrbrand/Fire Bird). Pattern canon : **possiblement 4 tiers fixés (0/9/19/28)** Counter Opportunities. À investiguer mapping complet enemies canon. Source: idem.
+
+- [ ] **🆕 Pattern Rose Demon's Dance counter presses corrélé au tier ⭐ HYPOTHESIS** :
+  - Arrow Shooter tier 9 : Rose Demon's Dance (4, 5) = 2 presses
+  - Assassin Cock tier 19 : Rose Demon's Dance (4, 5, 6) = 3 presses
+  - Aqua King/Archangel tier 28 : Rose Demon's Dance (3, 4, 5, 6) = 4 presses
+    → Pattern : **Rose Demon's Dance counter count corrélé directement au tier counter density canon**. Possible règle canon (tier × Rose presses). À investiguer autres Additions per-tier mapping. Source: comparaison Counter tables.
+
+- [ ] **🆕 Escape rate 90% canon early Disc 1 ⚠️ MAJEUR** — Pattern Forest Seles Disc 1 mobs = **easy to flee** (vs 30% standard / 40% Tiberoa roads / 0% scripted). Design canon "tutorial accessibility". À documenter `combat/escape-rates.md` (à créer) tier mapping (0%/30%/40%/90%). Source: idem.
+
+- [ ] **🆕 Talon Kick 2× damage canon early mob ⭐** — Pattern "high damage despite low HP" canon. Rare early mob 2× phys ability. Compensation HP 3 minimal. Source: idem.
+
+- [ ] **🆕 Cry Non-Elemental Party AoE canon ⭐** — Pattern "low HP panic AoE" cohérent avec Detonate family (Arrow Shooter Detonating Arrow Non-Elemental AoE). Hypothesis : **AoE finisher Non-Elemental = pattern systématique mobs low HP** canon. À investiguer. Source: idem.
+
+- [ ] **🆕 Drop rate 10% Healing Potion canon ⚠️** — Vs standard 8% Repeat Item / 2% weapon. Pattern early mob = drop rate ↑ canon ? À investiguer other early Disc 1 mobs drop rates. Source: idem.
+
+- [ ] **🆕 Sandora-trained birds species hypothesis canon ⭐ MAJEUR** — Assassin Cock + Fowl Fighter (Hellena Prison) = **same species canon, distinguished only by training type Sandora**. Pattern lore Sandora military bird training program. Cohérent Fire Bird "Imperial Sandora vassal" canon. À documenter `lore/sandora-military.md` (à créer). Source: idem.
+
+- [ ] **🆕 Fowl Fighter mob canon Hellena Prison NEW ⭐** — Original mob Hellena Prison (Disc 1, Dart's escape arc). Assassin Cock = recolor. À documenter `mobs/Fowl Fighter.md` (à créer). Source: idem.
+
+- [ ] **🆕 Goblin / Trent / Berserk Mouse mobs canon Forest Seles ⭐ NEW** — Partners encounter Assassin Cock formations 4/5/6. À documenter `mobs/Goblin.md`, `mobs/Trent.md`, `mobs/Berserk Mouse.md` (à créer). Source: idem.
+
+- [ ] **🆕 Forest near Seles location canon Disc 1 ⭐** — Starting area post-Seles destruction. Submaps 5, 6, 7, 624, 625. À documenter `locations/Forest.md` (à créer). Source: idem.
+
+- [ ] **🆕 Serdio roads Disc 1 canon network** :
+  - Seles ↔ Forest
+  - Forest ↔ Intersection
+  - Forest Intersection ↔ Hellena Prison Intersection
+  - Hellena Prison ↔ Intersection
+    → 4 roads network Serdio Disc 1. À documenter `world-map/serdio-roads-disc1.md` (à créer). Source: idem.
+
+- [ ] **🆕 "Blades affixed to feet" Assassin Cock visual canon** — Pattern visual design rooster anthropomorphique avec lames pieds. À refléter design Damia. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

@@ -2434,6 +2434,32 @@
 
 - [ ] ⚠️ **🆕 A-AV 0% (wiki) vs 120% (fandom) ANOMALY MAJEURE** — Fandom claim "Berserk Mouse can sometimes avoid attacks with 120% A-AV" mécaniquement impossible (>100% A-AV = near-immune attacks). Wiki tier 2 0% prévaut canonical Damia. Hypothesis : fandom typo / confusion M-DEF 120 / stat caché spécial ? À investiguer Discord/Wulves source tier 1. Source: idem.
 
+### Mobs / Berserker (Darkness Home of Gigantos Disc 2 — Gehrich Gang + glass cannon + Charging Spirit telegraph + Menacing 100% Fear NEW + Energy Girdle drop + Contact arrows encounter NEW)
+
+- [ ] **🆕 Berserker canon data-model** — **Darkness** element, HP 400, AT 40, DF **30** (low), MAT 32, MDF **50** (low), SPD 60, A-AV/M-AV 0%. Mob Gehrich Gang Home of Gigantos Disc 2. Glass cannon profile (high HP + low DF/MDF + high SPD). À implémenter `mobs/berserker.ts`. Source: [`features/mobs/_sources/lod-wiki-berserker.md`](features/mobs/_sources/lod-wiki-berserker.md).
+
+- [ ] **🆕 Status Immunity 6✔/2✗ NEW canon pattern ⭐** — Berserker Confuse + Fear ✔ immune NEW (vs Berserk Mouse 5✔/3✗ Fear only). Cohérent thematic "berserker single-minded fearless rage focus". Pattern per-mob deviations canon — wiki standard 4✔/4✗ NOT universel. À documenter `combat/status-effects.md` per-mob immunity matrix. Source: idem.
+
+- [ ] **🆕 Pattern "berserk" mob Fear immune canon systematic ?** — Berserker + Berserk Mouse both Fear immune confirmed. À cross-check alphabetical mobs ingestion future si "berserk-themed" mobs partagent Fear immunity systematic. Source: idem.
+
+- [ ] **🆕 Menacing 100% Fear single canon NEW ⭐** — Berserker ≤ 25% HP ability : 100% Fear proc single-target (vs Beastie Dragon Black Mist 50% Fear). Pattern Fear-inflict ability canon. Target M-AV mitigates. Implication player : **Bravery Amulet equip critical HP ≤ 25% phase**. À implémenter ability `menacing`. Source: idem.
+
+- [ ] **🆕 All-out Attack! 3× phys canon récurrent multi-mob** — Berserker + Air Combat share **same ability "All-out Attack!" 3× physical damage** ≤ 25% phase. Pattern shared cross-mob ability canon. Data-model ability référence partagée. Source: idem.
+
+- [ ] **🆕 Charging Spirit telegraph pattern canon récurrent multi-mob ⭐ MAJEUR** — Berserker + Air Combat share **same Charging Spirit self-buff mechanic** preparing next-turn high-damage ability. Pattern AI "wounded mob more dangerous" canon systematic. Implémenter data-model `MobAI3PhaseCharging` réutilisable + `selfBuff.primesNextTurn: AbilityRef`. Player strategy : Stun/Poison Berserker during Charging Spirit turn. Source: idem.
+
+- [ ] **🆕 Charging Spirit HP threshold canon ambiguous Berserker ⚠️** — Wiki dit "25%" exact threshold (NOT range > 25%). Pattern différent Air Combat ("> 25%, 25% chance"). À clarifier fandom + Discord : Berserker Charging Spirit @ HP = 25% exact OR HP > 25% probabilistic ? Source: idem.
+
+- [ ] **🆕 Energy Girdle 2% drop canon Berserker Home of Gigantos Disc 2 ⭐** — Source canon SP+ accessory farming. À refléter `items/equipment.md` Energy Girdle source (Berserker 2% Home of Gigantos Disc 2). Pattern accessory drop rate 2% (vs 8% item / 10% early-mob). Source: idem.
+
+- [ ] **🆕 "Contact (arrows)" encounter mechanic NEW canon ⭐ MAJEUR** — Berserker Home of Gigantos submap 261 + 262 + 263 + 264 encounters triggered par contact with arrows (vs Random Encounter standard). Pattern NEW encounter type : event-trigger vs Random spawn. Cohérent thematic Gehrich Gang arrow traps hideout. À documenter `combat/encounter-mechanics.md` (à créer) — Contact-type encounters canon. Implémenter Damia : event triggers map zones vs random spawns. Data-model `EncounterMechanic = 'random' | 'contact-arrows' | 'contact-other'`. Source: idem.
+
+- [ ] **🆕 Berserker location-locked Home of Gigantos canon** — No World Map road encounters (vs Berserk Mouse 4 roads / Beastie Dragon Mountain → Evergreen road). Pattern location-locked Disc 2 Gehrich Gang faction mob. Source: idem.
+
+- [ ] **🆕 Gehrich Gang faction mob canon ⭐** — Berserker + Piggy + Crafty Thief = Gehrich Gang members canon (cohérent Donau quest line Lynn rescue). À documenter `lore/factions.md` (à créer) — Gehrich Gang faction roster + Berserker/Piggy/Crafty Thief mobs. Cross-référer `bosses/Gehrich.md` (à créer) boss leader Disc 2. Source: idem.
+
+- [ ] **🆕 Escape rate 40% Home of Gigantos canon** — Pattern location-specific escape rate (vs 30% standard / 90% Forest Disc 1 / location-tier-correlated). À documenter `combat/escape-mechanic.md` (à créer) — per-location escape rates canon. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

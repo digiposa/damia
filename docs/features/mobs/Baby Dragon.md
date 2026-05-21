@@ -5,6 +5,7 @@
 > **Sources** :
 >
 > - 🥈 [`_sources/lod-wiki-baby-dragon.md`](./_sources/lod-wiki-baby-dragon.md) — wiki LoD (stats + 3-phase HP AI + Dragon emotion abilities + Swift Dragon recolor + directional road encounter Mountain → Evergreen Forest only)
+> - 🥉 [`_sources/fandom-baby-dragon.md`](./_sources/fandom-baby-dragon.md) — fandom (JP name ベビードラゴン Bebīdoragon + appearance short green dragons two legs yellow armored stomach + Dragon Tail canon name + Mind Purifier 20 gold shop standard + "attack-all spells preferable groups of 3" strategy)
 
 ## Statut
 
@@ -142,6 +143,40 @@ Counters Additions: **Yes** (28 pattern standard — non-implémenté Damia).
 - [`Air Combat.md`](./Air Combat.md) — Wyvern recolor pattern parallel Moon mob
 - [`../combat/elements.md`](../combat/elements.md) — Thunder + Fire + Non-Elemental
 - [`../items/equipment.md`](../items/equipment.md) — Mind Purifier / Bravery Amulet / Active Ring
+
+## Cross-check fandom (compléments + divergences)
+
+**Confirmations utiles fandom** :
+
+- **Thunder element + Mountain of Mortal Dragon location** confirmé
+- **Mind Purifier drop 8%** confirmé + **shop price canon 20 gold "anywhere"** ⭐ NEW
+- **No elemental weakness Thunder** explicit canon
+- **Pattern groups of 3** confirme formation ×3 (recommandation strategy attack-all spells)
+- **Fear / Dispirit status canon** confirmed (Sorrow → Dispirit / Cry → Fear)
+- **Counter Yes** confirmed
+
+**NEW canon fandom-only** ⭐ :
+
+- ⭐ **JP name ベビードラゴン (Bebīdoragon)** — direct translit (pattern simple canon comme Assassin Cock vs Feyrbrand metaphor)
+- ⭐ **Appearance canon** : **short green dragons + 2 legs + very short wings + tail + spikey head + yellow armored stomach** — visual design canon
+- ⭐ **Dragon Tail canon name officiel** (vs wiki ~Tail) — adopter fandom
+- ⭐ **Mind Purifier shop price 20 gold canon** ⚠️ NEW — purchasable "anywhere" canon. Pattern : status purifiers cheap. À documenter `items/consumables.md` (à créer) Mind Purifier entry.
+
+**Divergences stats wiki vs fandom** :
+
+| Stat                  | Wiki LoD          | Fandom                          | Notes                                                   |
+| --------------------- | ----------------- | ------------------------------- | ------------------------------------------------------- |
+| **HP US/EU**          | 240               | 240                             | Match                                                   |
+| **HP JP**             | (silent)          | 300                             | Fandom canon JP +25% pattern systématique               |
+| **P. Attack**         | 50                | **56**                          | ⚠️ DIVERGENCE +12% (fandom probable JP values pattern)  |
+| **M. Attack**         | 50                | **56**                          | ⚠️ DIVERGENCE +12%                                      |
+| **DF / MDF**          | 140/80            | 140/80                          | Match                                                   |
+| **SPD**               | 60                | 60                              | Match                                                   |
+| **Gold JP**           | (silent)          | 9                               | Fandom canon JP ÷3 pattern                              |
+| **Evade probability** | A-AV/M-AV 0%      | "evades with given probability" | ⚠️ DIVERGENCE — wiki tier 2 prévaut (0% evade) probable |
+| **Dragon Tail name**  | ~Tail (community) | **Dragon Tail**                 | Fandom canon name officiel — adopter                    |
+
+→ Wiki tier 2 US prévaut pour stats numériques. Fandom prévaut pour names canon + appearance.
 
 ## Gaps / TODO
 

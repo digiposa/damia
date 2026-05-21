@@ -2284,6 +2284,27 @@
 
 - [ ] **🆕 Baby Dragon ×3 formation canon** — Encounter formation 159 = 3 Baby Dragons simultanés. Pattern multi-mob same species canon. Source: idem.
 
+### Mobs / Baby Dragon fandom complement — JP name + appearance + Dragon Tail canon name + Mind Purifier 20 gold shop
+
+- [ ] **🆕 Baby Dragon JP name ベビードラゴン (Bebīdoragon) direct translit** — pattern simple. Source: [`features/mobs/_sources/fandom-baby-dragon.md`](features/mobs/_sources/fandom-baby-dragon.md).
+
+- [ ] **🆕 Baby Dragon appearance canon ⭐** — Short green dragons + 2 legs + very short wings + tail + spikey head + yellow armored stomach. À refléter visual design Damia. Source: idem.
+
+- [ ] **🆕 Dragon Tail canon name officiel (vs wiki ~Tail)** — Adopter fandom canon. Source: idem.
+
+- [ ] **🆕 Mind Purifier shop price 20 gold canon ⚠️ NEW** — Purchasable "anywhere" canon. Pattern status purifiers cheap. À documenter `items/consumables.md` (à créer) Mind Purifier 20G entry. Source: idem.
+
+- [ ] **🆕 "Attack-all spells preferable groups of 3" strategy canon** — Baby Dragon × 3 formations canon → AoE magic optimal. Source: idem.
+
+- [ ] **🆕 Baby Dragon evade probability fandom canon ⚠️ divergence** — Fandom : "evades with given probability". Wiki tier 2 : A-AV/M-AV 0%. Wiki tier 2 prévaut probable (0% evade). Source: comparaison.
+
+- [ ] **🆕 Stats divergences Baby Dragon wiki vs fandom ⚠️** :
+  - P. Attack : wiki 50 vs fandom **56** (+12%)
+  - M. Attack : wiki 50 vs fandom **56** (+12%)
+  - HP JP : 300 (+25% pattern)
+  - Gold JP : 9 (÷3 pattern)
+    → Wiki tier 2 US prévaut canonical. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

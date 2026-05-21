@@ -5,6 +5,7 @@
 > **Sources** :
 >
 > - 🥈 [`_sources/lod-wiki-atlow.md`](./_sources/lod-wiki-atlow.md) — wiki LoD (stats + Scripted Shot first-turn trait + 5-sense-blocker after 4 Keen Shots + HP recovers 30% < 30% HP + Hero Competition story + character stats 33yo/179cm + model reused mercenary Kamuy hunt)
+> - 🥉 [`_sources/fandom-hero-competition.md`](./_sources/fandom-hero-competition.md) — fandom Hero Competition master page (appearance détaillée + 5-sense-blocker visual canon "3 apples + arrow pierce + 5 hexagons explode" + "came 2nd place previous tournament" + healing items on self + HP stats 270 US / 333 JP)
 
 ## Statut
 
@@ -21,6 +22,10 @@
 - **Motivation canon** : "Joined Hero Competition **purely to show off his power**, did not care about the prize money"
 - **Disqualification trait canon** : **Coats arrows in poison** → disqualifié si Dart perd. Probable cause Fear status effect (poison-induced visual)
 - **Model reuse canon** : "**A mercenary joining the hunt for Kamuy re-uses Atlow's model**" — pattern asset reuse Disc 3 Evergreen Forest (Bulgus / Harris mercenaries probable)
+- **Came 2nd place previous tournament canon** ⭐ (fandom) — Atlow = veteran tournament fighter
+- **Appearance canon détaillée** (fandom) : **reddish-brown hair + bare-chested + metal plate legs + spikes knees + brown tattered cape + matching gloves + longbow**
+- **5-sense-blocker visual canon** (fandom) : **throws 3 apples in air + spins + arrow pierces all 3 + strikes Dart in the heart** → 5 hexagons appear on head/arms/knees + explode blue light → Fear status
+- **Targeting reticle canon** : Atlow's normal aim outlined **light blue hexagons** on opponent's points
 
 ## Stats canon
 

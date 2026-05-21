@@ -2230,6 +2230,40 @@
 
 - [ ] **🆕 Pattern "first-turn Scripted action" canon** — Atlow Scripted Shot = nouveau type boss passive distinct du Retaliate. À documenter `combat/boss-passives.md` (à créer) types of triggers : on_battle_start / on_magic_targeted / on_addition_targeted / on_hp_threshold / etc. Source: idem.
 
+### Bosses / Hero Competition Lohan Disc 1 — Tournament 5 rounds + 5 contestants canon (Gorgaga / Serfius / Danton / Atlow / Lloyd)
+
+- [ ] **🆕 Hero Competition Lohan Disc 1 canon tournament structure ⭐** — 5 rounds, 32 warriors total (perfect bracket 2^5), hosted by **Ginger empresario**, Lohan Commercial City Serdio Disc 1. Dart participe + Haschel 3e place (defeated by Lloyd semi-finals). À documenter `quests/disc1-hero-competition.md` (créé) + `locations/Lohan.md` (à créer/enrichir). Source: [`features/bosses/_sources/fandom-hero-competition.md`](features/bosses/_sources/fandom-hero-competition.md).
+
+- [ ] **🆕 "Dart advance every round even if loses" mechanic canon ⭐ MAJEUR** — Pattern systematic 4 rounds : Gorgaga (poison + cold-blood attempt = rules DQ) / Serfius (chronic illness flare) / Danton (heavy armor fall) / Atlow (poison arrows DQ). Pattern design canon "story-protected progression" tournament. À implémenter pattern boss outcome alternative paths Damia Mode Story. Source: idem.
+
+- [ ] **🆕 Lloyd Final Round UNWINNABLE canon ⭐ MAJEUR** — Lloyd = invincible canon Disc 1 final (magic items no effect + evades all attacks + 3-slash counter → Dart unable to continue). Scripted defeat canon. HP 6,000 US / 8,500 JP. Cryptic dialogue prophecy "You will become stronger". À documenter `bosses/Lloyd.md` (créé) + `quests/disc1-hero-competition.md` final scripted scene. Source: idem.
+
+- [ ] **🆕 Lloyd main antagonist canon TLoD Disc 1-4 ⭐** — Wingly platinum-haired swordsman, Phantom Swordsmanship + after-images + 6-strike combo "inhumanly fast". Dragon Buster = Lloyd's signature weapon (Rose inherits Disc 4 post-defeat canon). Long con pattern : Hero Competition intro → Disc 2 long con → Disc 3 Wink trust → Queen Theresa kidnap → Moon Mirror → endgame Disc 4. À documenter `bosses/Lloyd.md` (créé). Source: idem.
+
+- [ ] **🆕 Ginger empresario NPC canon Lohan ⭐ NEW** — Host Hero Competition Lohan. Quote canon "I guarantee you will die". Announces tournament results. À documenter `npcs/Ginger.md` (à créer). Source: idem.
+
+- [ ] **🆕 Attendant waiting room NPC canon ⭐ NEW** — Waiting room NPC Hero Competition. Donne insight opponents + motivates Dart + **becomes fan of Dart** character arc canon. À documenter `npcs/Attendant.md` (à créer). Source: idem.
+
+- [ ] **🆕 Lavitz ineligible canon "soldiers can't join" Hero Competition ⚠️ rule** — Pattern canon rules tournament : soldiers ineligible. À refléter `party-members/Lavitz.md` (à créer) + tournament canon rules. Source: idem.
+
+- [ ] **🆕 Haschel competing canon Hero Competition Lohan Disc 1 ⭐** — Haschel = participant tournament, defeated by Lloyd semi-finals, 3rd place final. Pattern recruitment context Disc 1 Lohan canon. Pre-Atlow encounter context. À refléter `party-members/Haschel.md` (à créer) recruitment Lohan story. Source: idem.
+
+- [ ] **🆕 Gorgaga boss canon (Round 1 Earth)** — HP 200, axe wielder, "Winning is winning" no honor canon, Poison Needle opener cheat. JP name ゴルガガ. À documenter `bosses/Gorgaga.md` (créé). Source: idem.
+
+- [ ] **🆕 Serfius boss canon (Round 2 Fire knight)** — HP 250, longsword + plate mail + winged helmet red plume, **HP 50% phase swap "true power" DEF/ATK doubled + jumping 2-hit combo**, "quite famous" canon, **model reused Evergreen Forest Disc 3 mercenary**. JP name セルフィス. À documenter `bosses/Serfius.md` (créé). Source: idem.
+
+- [ ] **🆕 Danton boss canon (Round 3 Earth heavy armor)** — HP 240 US / 300 JP, **black mallet + chain mail cape + red helmet white spike**, MAT 10 low (physical-only), **mallet drop trap "Make my day kiddo, bring it!" counter grab+punch combo** unique canon, **low HP all-out 2-strike → Dart HP 1**. JP name ダンドン. À documenter `bosses/Danton.md` (créé). Source: idem.
+
+- [ ] **🆕 Atlow canon stats refined fandom** — HP **270 US / 333 JP** (fandom vs wiki 266) — adopter wiki tier 2 canonical 266. Appearance canon : reddish-brown hair + bare-chested + plate legs + spike knees + tattered cape + longbow. **5-sense-blocker visual canon** : 3 apples + arrow pierces + 5 hexagons explode head/arms/knees. **Targeting reticle canon** : light blue hexagons. **2nd place previous tournament** canon. À enrichir [`bosses/Atlow.md`](features/bosses/Atlow.md) (déjà fait). Source: idem.
+
+- [ ] **🆕 Hero Competition results canon** — 1st Lloyd / 2nd Dart "young flame" / 3rd Haschel "master of Rouge Art" — pas de prize handed out canon. À documenter `quests/disc1-hero-competition.md` (créé). Source: idem.
+
+- [ ] **🆕 Hero Competition models reused Furni Disc 3 Kamuy hunt canon ⭐** — "Most warriors models appear again Disc 3 in Furni to battle and kill Kamuy" — pattern asset reuse canon multi-disc. Cohérent Atlow trivia + Serfius cross-ref Evergreen Forest. À refléter `locations/Furni.md` (à créer) + `locations/Evergreen Forest.md` Kamuy hunt mercenaries. Source: idem trivia.
+
+- [ ] **🆕 Save-over glitch Lloyd soft-lock canon retail bug ⚠️** — "If save-over glitch transforms Dart Dragoon form Final = soft-lock when Lloyd counterattack". Pattern retail bug canon (cohérent Aqua King Trident Stab / Archangel Healing Flower overflow). À documenter `combat/canon-bugs.md` (à créer). Source: idem trivia.
+
+- [ ] **🆕 Lloyd "young flame" canon nickname Dart ⭐** — Tournament results title "Dart, the 'young flame'" = nickname canon Dart (pre-Dragoon reveal Disc 1). Cohérent Fire Dragoon Dart identity. À refléter `party-members/Dart.md` (à créer/enrichir) nickname canon. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

@@ -2043,6 +2043,55 @@
 
 - [ ] **🆕 A-AV 5% / M-AV 5% boss endgame canon** — Vs majorité bosses 0% evasion. Pattern : boss endgame Disc 4 = evasion notable. À investiguer autres bosses Disc 4 evasion stats. Source: idem.
 
+### Bosses / Archangel fandom complement — Wingly deity invented god (PAS Charle Frahma) + Meru solo fight + no Dragoon form Moon solo combats + 107 species + Ancestor Blano + Buddhist Mara
+
+- [ ] **🆕 Archangel = Wingly deity "invented god" canon ⭐ MAJEUR identity révélée** — PAS Charle Frahma (hypothèse précédente écartée). Archangel = **deity worshipped by Winglies Forest of Winglies** (PAS toutes les Winglies — Ulara n'a pas de traces). **Vision/test illusoire**, PAS entity réel — Meru reveal canon : "You are not real! You are an invented god so they can justify themselves". À refléter `bosses/Archangel.md` identity + `lore/wingly-religion.md` (à créer). Source: [`features/bosses/_sources/fandom-archangel.md`](features/bosses/_sources/fandom-archangel.md).
+
+- [ ] **🆕 Meru solo fight Archangel canon ⚠️** — Bridge to floating castle disappears, **Meru teleported alone**. Pas full party. À implémenter `SoloCombatConstraints { onlyCharacter: 'Meru', forbidsDragoonForm: true }`. Source: idem.
+
+- [ ] **🆕 "No Dragoon form Moon solo combats" pattern canon ⭐ MAJEUR** — "As with all the Moon solo combats, the Dragoon form cannot be used". Implique : **pattern systematic Moon That Never Sets solo combats canon** (combien autres ? À investiguer per character). À documenter `locations/Moon That Never Sets.md` (à créer) solo combats pattern + `combat/dragoon-restrictions.md` (à créer). Source: idem.
+
+- [ ] **🆕 Other Moon solo combats utilisent "right/wrong answer choice" canon ⚠️ NEW pattern** — Fandom : "in contrast to other battles in the Moon That Never Sets, it is not necessary to choose between a correct and wrong answer". Implique **autres Moon solo combats canon utilisent dialogue answer choice victory** (vs Archangel "fight through"). Quels personnages ? Quels mécaniques ? À investiguer canon Moon solo combats catalog. Source: idem.
+
+- [ ] **🆕 Appearance Archangel canon 4 wings 6 arms + 6 items wielded** — "Angel with four feathered wings and six arms" wielding **book + staff + shield + sword + black flower + horn**. Visual design canon. Cohérent ability "Wingly Army" horn = Buddhist Mara reference. À refléter visual design Damia. Source: idem.
+
+- [ ] **🆕 Ancestor Blano canon NPC Forest of Winglies ⭐** — Wingly leader Forest of Winglies. Disc 3 : decides Wingly-Human cooperation vs Divine Dragon. À documenter `npcs/Ancestor Blano.md` (à créer) + `locations/Forest of Winglies.md` (à créer). Source: idem.
+
+- [ ] **🆕 Statue Archangel Disc 3 Forest of Winglies canon** — Meru introduit Dart au statue Archangel dans Wingly shops room. Meru quote canon : "It's the Archangel! It's the guardian god of the Winglies! [...] I dunno. I've never been protected. Maybe, I just don't know though." → foreshadowing rejection Disc 4. À documenter `locations/Forest of Winglies.md` (à créer). Source: idem.
+
+- [ ] **🆕 107 species Divine Tree canon ⚠️ DIVERGENCE vs précédent 108 species ⭐** — Archangel claim canon : "of the **107 species** created from fruits of the Divine Tree, over half are extinct". Ma précédente doc disait **108 species** (Winglies=107th, Virage=108th). À reconcilier : 107 (sans Winglies créateurs) + 108 total avec Virage suspended ? À documenter `lore/108-species.md` ou `lore/107-species.md` (à créer) clarification canon. Source: idem.
+
+- [ ] **🆕 Wingly extermination history canon ⭐ MAJEUR** — Archangel claim : "of 107 species created, **over half are extinct**, a trend ended by the Winglies". Meru counter canon : "**many of those were exterminated by the Winglies themselves**". Archangel reply : "they were meant to become extinct from the beginning". Pattern lore canon Wingly supremacy historique génocide species. À documenter `lore/wingly-history.md` (à créer) + `lore/108-species.md` extinct species canon. Source: idem.
+
+- [ ] **🆕 Meru "love humans" ideology canon ⭐** — Quote canon Meru : "I love Humans! I adore Dart, Shana and the others! This is real!! Get of out my sight!! I love Humans." Pattern character arc canon Meru = **Wingly mais rejette Wingly supremacy via humans love**. À refléter `party-members/Meru.md` (à créer) character arc Disc 4 climax. Source: idem.
+
+- [ ] **🆕 Wingly Army = Buddhist Mara reference canon ⭐** — Special summoning attack = reference Buddhist legend **Mara** (demon heading fiend army from elephant **Girimekhala** attempting prevent **Gautama** meditation/enlightenment). Pattern lore symbolisme TLoD references mythologique. À documenter `lore/mythological-references.md` (à créer). Source: fandom-archangel.md §Trivia.
+
+- [ ] **🆕 "Archangel Wingly identity uncertain" canon ⚠️** — "It is unknown whether the Archangel is a Wingly himself or not". Comparison **Melbu Frahma "little similarity to regular Winglies"** canon. Pattern : **certains Wingly figures pas typical Wingly canon** (Archangel, Melbu Frahma). À investiguer lore canon. Source: idem.
+
+- [ ] **🆕 Archangel worship limited Forest of Winglies canon ⚠️** — "In Ulara, the other living Wingly city shown in the game, no traces of the Archangel can be found". Implique **religion Wingly NOT uniform canon** — Forest of Winglies specific cult vs Ulara secular ?. À documenter `lore/wingly-religion.md` (à créer). Source: idem.
+
+- [ ] **🆕 Stats divergences Archangel wiki vs fandom ⚠️** :
+  - HP : wiki 3,000 / fandom **3,200 US** / **4,000 JP** (+33%)
+  - P. Attack : wiki 53 / fandom **60** (×1.13)
+  - M. Attack : wiki 76 / fandom **86** (×1.13)
+    → Wiki tier 2 US prévaut canonical. JP HP +33% pattern. Source: comparaison.
+
+- [ ] **🆕 Ability names mapping wiki vs fandom Archangel canon** :
+  - ~Sword Bash → **Manju Dagger** (fandom canon name)
+  - ~Blow Trumpet → **Wingly Army** (fandom canon name + Buddhist Mara reference)
+  - ~Healing Flower → **Flower Gift** (1350 HP exact value fandom)
+  - ~Healing Scripture → **Healing Gift**
+  - Spark Net + Flash Hall + Trans Light + Spectral Flash → **"Heaven Spell"** (composite fandom)
+  - ~Talk → not in fandom (mécanique unique wiki)
+    → Adopter fandom canon names + wiki tier 2 mechanics specifics. Source: comparaison.
+
+- [ ] **🆕 Flower Gift heals 1350 HP exact canon** — Vs wiki "30% Meru HP recovery". Si exact = 1350 HP, Meru max HP probable ~4500 (30% = 1350 match). Calibration canon Meru HP late-game. À investiguer Meru max HP canon Disc 4. Source: idem.
+
+- [ ] **🆕 Healing Fog Repeat Item canon counter Wingly Army HP→1** — Strategy fandom : "quickly countered by using a healing fog or similar item". Healing Fog = Repeat Item canon Wind/healing-related (cohérent forest theme). À documenter `items/consumables.md` (à créer) Healing Fog entry. Source: idem.
+
+- [ ] **🆕 "Bridge disappears + teleported alone" cutscene pattern canon** — Disc 4 Moon solo combats canon : approach floating castle → bridge removed → solo teleport. À implémenter cutscene canon pattern `cinematics/disc4-moon-solo.md` (à créer). Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

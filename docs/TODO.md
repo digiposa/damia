@@ -2328,6 +2328,31 @@
   - **Unicorn** (formation unused 208)
     → À documenter `mobs/Madman.md`, `mobs/Rocky Turtle.md`, `mobs/Mr. Bone.md`, `mobs/Unicorn.md` (à créer). Source: idem.
 
+### Mobs / Basilisk fandom complement — "Tower of Flanvel" canon + Erase mechanic precise + Total Vanishing/Demon's Gate Dragoon Magic NEW + Feyrbrand resemblance
+
+- [ ] **🆕 "Tower of Flanvel" canon location name** (vs wiki "Flanvel Tower" variant) — adopter canonical "Tower of Flanvel" (cohérent equipment.md). Source: [`features/mobs/_sources/fandom-basilisk.md`](features/mobs/_sources/fandom-basilisk.md).
+
+- [ ] **🆕 "Erase effect" mechanic canon precise ⭐ MAJEUR** — Basilisk immune to 3 categories : Can't Combat Weapons (Gladius/Brass Knuckle/Indora's Axe Instant Death) + **Total Vanishing** + **Demon's Gate**. Pattern unifié "Erase = remove from battle" canon. À documenter `combat/erase-mechanic.md` (à créer) + status-effects.md Erase effect entry. Source: idem.
+
+- [ ] **🆕 Total Vanishing Dragoon Magic NEW canon ⭐** — Ability mentionned ability Erase-type. Probable Dragoon Magic instant-removal mob. À investiguer + documenter `dragoons/magic.md` (à créer) + identifier which Dragoon (Rose Darkness probable). Source: idem.
+
+- [ ] **🆕 Demon's Gate Dragoon Magic NEW canon ⭐** — Ability Erase-type. Probable Dragoon Magic. À investiguer + documenter `dragoons/magic.md` + identifier Dragoon. Source: idem.
+
+- [ ] **🆕 Basilisk appearance "arthropod-like draconic similar Feyrbrand" canon ⚠️** — Visual asset reuse OR species lineage canon (Wind dragon Feyrbrand → Earth Basilisk arthropod variant). Pattern lore "dragon species variants" canon. À investiguer + cross-référer `dragoons/dragons.md`. Source: idem.
+
+- [ ] **🆕 Munch canon name officiel (vs wiki ~Triple Bite) ⭐** — Adopter fandom canon dans Damia. Source: idem.
+
+- [ ] **🆕 Stats divergences Basilisk wiki vs fandom ⚠️** :
+  - HP : wiki **656** vs fandom **715** US / **820** JP (+9% / +25%)
+  - P. Attack : wiki 86 vs fandom **97** (+13%)
+  - M. Attack : wiki 86 vs fandom **97** (+13%)
+  - Gold JP : 17 (÷3 pattern)
+    → Wiki tier 2 US prévaut canonical Damia. HP 656 canonical. Source: comparaison.
+
+- [ ] **🆕 Disc 4 Monsters fandom Basilisk ⚠️ vs Disc 3 wiki context** — Fandom catégorise Disc 4. Wiki context Tower of Flanvel canon Disc 3 (Faust Mayfil Disc 3 + chests Tower of Flanvel "after Faust"). **Tower of Flanvel revisitable Disc 4 ?** OR fandom error. À investiguer canon game flow Tower of Flanvel disc timeline. Source: idem.
+
+- [ ] **🆕 Basilisk "highest HP Flanvel Tower mob" canon** — "Health second to none here" fandom commentary. Pattern boss-tier mob Tower of Flanvel canon. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

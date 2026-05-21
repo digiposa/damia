@@ -5,6 +5,7 @@
 > **Sources** :
 >
 > - 🥈 [`_sources/lod-wiki-basilisk.md`](./_sources/lod-wiki-basilisk.md) — wiki LoD (stats + Instant Death Immunity passive + 3-phase HP AI + Petrifying Glare 100% Petrification + 5 unused formations content cut)
+> - 🥉 [`_sources/fandom-basilisk.md`](./_sources/fandom-basilisk.md) — fandom ("Tower of Flanvel" canon name vs wiki Flanvel Tower + Erase mechanic precise (Can't Combat Weapons + **Total Vanishing** + **Demon's Gate** Dragoon Magic NEW) + appearance "arthropod-like similar to Feyrbrand" + Munch canon name vs wiki ~Triple Bite + Disc 4 Monsters category)
 
 ## Statut
 
@@ -162,6 +163,49 @@ Counters Additions: **Yes** (28 pattern standard — non-implémenté Damia).
 - [`../combat/elements.md`](../combat/elements.md) — Earth weak Wind
 - [`../combat/status-effects.md`](../combat/status-effects.md) (à créer) — Petrification mechanic canon
 - [`../items/equipment.md`](../items/equipment.md) — Destone Amulet (Petrification prevention) + Depetrifier (cure)
+
+## Cross-check fandom (compléments + divergences)
+
+**Confirmations utiles fandom** :
+
+- **Earth element + Tower of Flanvel location** confirmé
+- **Depetrifier 8% drop** confirmé
+- **Petrifying Glare ability** confirmé (status canon proc Petrification)
+- **Counter Yes** confirmé
+- **Madman partner formation** confirmé
+- **High defence Basilisk equal Madman + high HP** : pattern boss-tier mob
+- **Strategy "kill Basilisk first" if with Madman** : tactical canon
+- **Counter Madman + Basilisk** = main USED formation Flanvel Tower
+
+**NEW canon fandom-only** ⭐ :
+
+- ⭐ **"Tower of Flanvel" canon name officiel** (vs wiki "Flanvel Tower" minor naming variant)
+- ⭐ **"Erase effect" mechanic canon precise** ⚠️ MAJEUR : Basilisk immune to **3 categories** :
+  - **Can't Combat Weapons** (Gladius / Brass Knuckle / Indora's Axe — Instant Death proc weapons)
+  - **Total Vanishing** ⚠️ Dragoon Magic ability canon NEW
+  - **Demon's Gate** ⚠️ Dragoon Magic ability canon NEW
+    → Pattern unifié "Erase = remove from battle" canon. À investiguer `dragoons/magic.md` (à créer) Total Vanishing + Demon's Gate Dragoon Magic.
+- ⭐ **Appearance "arthropod-like draconic similar Feyrbrand" canon** — visual asset reuse OR species lineage (Wind dragon Feyrbrand → Earth Basilisk arthropod variant ?)
+- ⭐ **Munch canon name officiel** (vs wiki ~Triple Bite community approximation)
+- ⭐ **"Attack" separate ability listed fandom** — possible distinct basic vs Munch special
+- **High HP "second to none" Flanvel Tower** : Basilisk = highest HP mob Flanvel Tower canon
+
+**Divergences stats wiki vs fandom** :
+
+| Stat                     | Wiki LoD                      | Fandom                 | Notes                                                                                                           |
+| ------------------------ | ----------------------------- | ---------------------- | --------------------------------------------------------------------------------------------------------------- |
+| **HP US/EU**             | 656                           | **715**                | ⚠️ DIVERGENCE significatif (+9% fandom)                                                                         |
+| **HP JP**                | (silent)                      | 820                    | Fandom canon JP +15% vs US 715 (pattern slightly different)                                                     |
+| **P. Attack**            | 86                            | **97**                 | ⚠️ DIVERGENCE +13%                                                                                              |
+| **M. Attack**            | 86                            | **97**                 | ⚠️ DIVERGENCE +13%                                                                                              |
+| **DF / MDF**             | 100/100                       | 100/100                | Match                                                                                                           |
+| **SPD**                  | 50                            | 50                     | Match                                                                                                           |
+| **Gold JP**              | (silent)                      | 17                     | Fandom canon JP ÷3                                                                                              |
+| **Location name**        | "Flanvel Tower"               | **"Tower of Flanvel"** | Naming variant — Tower of Flanvel canonical probable (cohérent equipment.md)                                    |
+| **~Triple Bite / Munch** | ~Triple Bite (community)      | **Munch**              | Fandom canon name officiel — adopter                                                                            |
+| **Disc category**        | (Disc 3 context Faust Mayfil) | **Disc 4 Monsters**    | ⚠️ DIVERGENCE — fandom catégorise Disc 4. Tower of Flanvel revisitable Disc 4 ? OR fandom error. À investiguer. |
+
+→ Wiki tier 2 US prévaut pour stats numériques (HP 656). Fandom prévaut pour names canon + appearance + Erase mechanic precise.
 
 ## Gaps / TODO
 

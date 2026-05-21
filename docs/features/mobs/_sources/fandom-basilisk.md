@@ -34,8 +34,8 @@ Basilisk is an **Earth-element based monster** of which appears within **The Tow
 ⚠️ **NEW canon "Erase effect" mechanic precise** :
 
 - **Can't Combat Weapons** : Gladius / Brass Knuckle / Indora's Axe (Instant Death proc weapons)
-- **Total Vanishing** : Dragoon Magic ability canon NEW
-- **Demon's Gate** : Dragoon Magic ability canon NEW
+- **Total Vanishing** : Attack Item canon one-shot (kills minor enemy direct, NOT Repeat Item)
+- **Demon's Gate** : Attack Item canon one-shot (kills minor enemy direct, NOT Repeat Item)
   → Basilisk **immune** à tous "Erase" effects canon (instant kill mechanics).
 
 ## Appearance

@@ -1746,7 +1746,7 @@
 
 - [ ] **🆕 Feyrbrand EXP/Gold pooled with Greham canon** — Total joined encounter : 1,200 EXP + 100 Gold pour les 2. Wiki disait "0 direct" car Feyrbrand seul = 0, mais pool joined = 1,200. À implémenter reward aggregation logic. Source: fandom-feyrbrand.md vs wiki yield.
 
-- [ ] **🆕 Down Burst Wind elemental Repeat Item canon** — Drop 100% Feyrbrand both encounters (Disc 1 + Disc 4 spirit). Probable item utility Wind-elemental (offensive Repeat Item ?). À documenter `items/consumables.md` (à créer). Source: idem.
+- [ ] **🆕 Down Burst Wind elemental Attack Item canon one-shot (kills minor enemy direct, NOT Repeat Item)** — Drop 100% Feyrbrand both encounters (Disc 1 + Disc 4 spirit). Probable item utility Wind-elemental (offensive Repeat Item ?). À documenter `items/consumables.md` (à créer). Source: idem.
 
 - [ ] **🆕 Ability names canon officiels fandom** — "Tusk Attack" + "Slime Shot" + "Attack Power Up" = noms canon officiels (vs wiki ~community approximations "~Mandible Strike" / "~Status Slime"). Adopter fandom canon. Source: fandom-feyrbrand.md §Battle at Nest of Dragon.
 
@@ -1829,7 +1829,7 @@
 
 - [ ] **🆕 "Can Counterattack: Yes" fandom vs "Counters Additions: No" wiki ⚠️ conceptual divergence** — Wiki dit Counter Opportunities = 0 (pas counter Addition mechanism) mais fandom dit "Can Counterattack: Yes" (Retaliate canon term ?). Probable : Retaliate (wiki) = Counterattack (fandom) nomenclature divergente. **Counters Additions** = specific Addition counter mechanism distinct du Retaliate général. À clarifier nomenclature canon `combat/boss-passives.md` (à créer). Source: idem.
 
-- [ ] **🆕 Spear Frosts Repeat Item canon Water/Frost element Bale ⭐** — Magic Attack Item canon : **Spear Frosts** (probable Water-elemental projectile attack), **bought at Bale**, **used by Rose or Shana** (women bows + daggers ?). Confirme Fire weak to Water via Repeat Items canon. À documenter `items/consumables.md` (à créer) Spear Frosts entry + Bale shop. Source: fandom-fire-bird.md §Strategy.
+- [ ] **🆕 Spear Frosts Attack Item canon one-shot (kills minor enemy direct, NOT Repeat Item) Water/Frost element Bale ⭐** — Magic Attack Item canon : **Spear Frosts** (probable Water-elemental projectile attack), **bought at Bale**, **used by Rose or Shana** (women bows + daggers ?). Confirme Fire weak to Water via Repeat Items canon. À documenter `items/consumables.md` (à créer) Spear Frosts entry + Bale shop. Source: fandom-fire-bird.md §Strategy.
 
 - [ ] **🆕 "Progressively stronger attacks as health gets lower" canon general pattern bosses ⭐** — Pattern canon TLoD master : bosses utilisent ability escalation HP-based. À documenter `combat/boss-ai.md` (à créer) general escalation pattern + appliquer à tous bosses. Source: idem.
 
@@ -1889,7 +1889,7 @@
 
 - [ ] **🆕 Sharp Edge canon name officiel (vs wiki ~Razor Tail) ⭐** — Fandom donne nom officiel "Sharp Edge". Adopter fandom canon dans Damia (~Razor Tail = community approximation wiki). Source: idem.
 
-- [ ] **🆕 Down Burst "most potent wind-element spell item" canon descriptor** — Down Burst = top-tier Wind Repeat Item canon. Useful vs **Triceratops** + **Divine Tree mobs Earth-element**. À documenter `items/consumables.md` (à créer) Down Burst entry top-tier rank Wind. Source: idem.
+- [ ] **🆕 Down Burst "most potent wind-element spell item" canon descriptor** — Down Burst = top-tier Wind Attack Item canon one-shot (kills minor enemy direct, NOT Repeat Item). Useful vs **Triceratops** + **Divine Tree mobs Earth-element**. À documenter `items/consumables.md` (à créer) Down Burst entry top-tier rank Wind. Source: idem.
 
 - [ ] **🆕 Triceratops mob Earth-element canon ⚠️ NEW** — Mob canon mentioned fandom Air Combat strategy. Pattern : Wind counters Earth mobs. À documenter `mobs/Triceratops.md` (à créer). Source: idem.
 
@@ -2088,7 +2088,7 @@
 
 - [ ] **🆕 Flower Gift heals 1350 HP exact canon** — Vs wiki "30% Meru HP recovery". Si exact = 1350 HP, Meru max HP probable ~4500 (30% = 1350 match). Calibration canon Meru HP late-game. À investiguer Meru max HP canon Disc 4. Source: idem.
 
-- [ ] **🆕 Healing Fog Repeat Item canon counter Wingly Army HP→1** — Strategy fandom : "quickly countered by using a healing fog or similar item". Healing Fog = Repeat Item canon Wind/healing-related (cohérent forest theme). À documenter `items/consumables.md` (à créer) Healing Fog entry. Source: idem.
+- [ ] **🆕 Healing Fog Attack Item canon one-shot (kills minor enemy direct, NOT Repeat Item) counter Wingly Army HP→1** — Strategy fandom : "quickly countered by using a healing fog or similar item". Healing Fog = Attack Item canon one-shot (kills minor enemy direct, NOT Repeat Item) Wind/healing-related (cohérent forest theme). À documenter `items/consumables.md` (à créer) Healing Fog entry. Source: idem.
 
 - [ ] **🆕 "Bridge disappears + teleported alone" cutscene pattern canon** — Disc 4 Moon solo combats canon : approach floating castle → bridge removed → solo teleport. À implémenter cutscene canon pattern `cinematics/disc4-moon-solo.md` (à créer). Source: idem.
 
@@ -2133,7 +2133,7 @@
 
 - [ ] **🆕 "Detonate Arrow" naming canon (vs wiki "Detonating Arrow") ⚠️** — Fandom dit "Detonate Arrow" cohérent avec weapon Shana/Miranda "Detonate Arrow" + Repeat Item "Detonate Rock". Pattern "Detonate family" naming uniform. Adopter fandom canonical "Detonate Arrow" Damia. À corriger dans Arrow Shooter docs + Aqua King refs. Source: idem.
 
-- [ ] **🆕 Body Purifier Repeat Item canon (Poison cure) ⭐** — Fandom strategy : "keep some Body Purifiers" vs Arrow Shooter Poison Arrow. Implique Body Purifier = canon Poison-status cure Repeat Item. À documenter `items/consumables.md` (à créer) Body Purifier entry (cohérent avec Body Purifier chest Evergreen Forest canon). Source: idem.
+- [ ] **🆕 Body Purifier Attack Item canon one-shot (kills minor enemy direct, NOT Repeat Item) (Poison cure) ⭐** — Fandom strategy : "keep some Body Purifiers" vs Arrow Shooter Poison Arrow. Implique Body Purifier = canon Poison-status cure Repeat Item. À documenter `items/consumables.md` (à créer) Body Purifier entry (cohérent avec Body Purifier chest Evergreen Forest canon). Source: idem.
 
 - [ ] **🆕 Bemusing Arrow buyable Fueno Disc 2 canon** — Confirme weapon disponible shop Fueno (cohérent equipment.md Bemusing Arrow shop Fueno 250G canon). Pattern : 2% drop OR purchase later canon design. Source: idem.
 
@@ -2353,11 +2353,11 @@
 
 - [ ] **🆕 Basilisk "highest HP Flanvel Tower mob" canon** — "Health second to none here" fandom commentary. Pattern boss-tier mob Tower of Flanvel canon. Source: idem.
 
-### Mobs / Beastie Dragon (Wind Mountain of Mortal Dragon Disc 3 — Mist abilities + Total Vanishing Repeat Item canon reconciliation)
+### Mobs / Beastie Dragon (Wind Mountain of Mortal Dragon Disc 3 — Mist abilities + Total Vanishing Attack Item canon one-shot (kills minor enemy direct, NOT Repeat Item) reconciliation)
 
 - [ ] **🆕 Beastie Dragon canon data-model** — Wind, HP 336, AT 66, DF 130 (high), MAT 42, MDF 90, SPD 50, A-AV/M-AV 0%. Mob Mountain of Mortal Dragon Disc 3. À implémenter `mobs/beastie-dragon.ts`. Source: [`features/mobs/_sources/lod-wiki-beastie-dragon.md`](features/mobs/_sources/lod-wiki-beastie-dragon.md).
 
-- [ ] **🆕 Total Vanishing = Repeat Item canon ⭐ MAJEUR reconciliation** — Beastie Dragon drops Total Vanishing 8% → confirme **Repeat Item Erase-type** (NOT Dragoon Magic comme hypothesis Basilisk). Reconcilie : Basilisk "immune to Erase effect" = immune to Repeat Item Erase mechanics. À documenter `items/consumables.md` (à créer) Total Vanishing entry + `combat/erase-mechanic.md` (à créer). Source: idem.
+- [ ] **🆕 Total Vanishing = Attack Item one-shot canon ⭐ MAJEUR clarification user** — Beastie Dragon drops Total Vanishing 8%. **Attack Item canon : tue un mob mineur direct (one-shot)** — NON repeatable (use unique consommable). Distincts des Repeat Items (Healing Potion etc. réutilisables). Reconcilie : Basilisk "immune to Erase effect" = immune à one-shot Attack Items Erase. Demon's Gate probable pattern same. À documenter `items/consumables.md` (à créer) Total Vanishing entry + `combat/erase-mechanic.md` (à créer). Source: user clarification + idem.
 
 - [ ] **🆕 Mist-based abilities canon ⭐** — Black Mist (Non-Elemental + 50% Fear) + Sweet Mist (Non-Elemental + 50% Bewitchment). Pattern thematic Wind-related mist. M-AV mitigation. **50% proc rate** (lower vs 100% pattern Arrow Shooter/Baby Dragon/Basilisk). Source: idem.
 

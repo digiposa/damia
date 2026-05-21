@@ -182,8 +182,8 @@ Counters Additions: **Yes** (28 pattern standard — non-implémenté Damia).
 - ⭐ **"Tower of Flanvel" canon name officiel** (vs wiki "Flanvel Tower" minor naming variant)
 - ⭐ **"Erase effect" mechanic canon precise** ⚠️ MAJEUR : Basilisk immune to **3 categories** :
   - **Can't Combat Weapons** (Gladius / Brass Knuckle / Indora's Axe — Instant Death proc weapons)
-  - **Total Vanishing** ⚠️ Dragoon Magic ability canon NEW
-  - **Demon's Gate** ⚠️ Dragoon Magic ability canon NEW
+  - **Total Vanishing** ⚠️ Attack Item canon one-shot (kills minor enemy direct, NOT Repeat Item) — drops Beastie Dragon 8% confirmed
+  - **Demon's Gate** ⚠️ Attack Item canon one-shot (kills minor enemy direct, NOT Repeat Item) — drops Beastie Dragon 8% confirmed
     → Pattern unifié "Erase = remove from battle" canon. À investiguer `dragoons/magic.md` (à créer) Total Vanishing + Demon's Gate Dragoon Magic.
 - ⭐ **Appearance "arthropod-like draconic similar Feyrbrand" canon** — visual asset reuse OR species lineage (Wind dragon Feyrbrand → Earth Basilisk arthropod variant ?)
 - ⭐ **Munch canon name officiel** (vs wiki ~Triple Bite community approximation)

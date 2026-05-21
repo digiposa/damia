@@ -3,7 +3,7 @@
 > **Source** : [legendofdragoon.org wiki — Beastie Dragon](https://legendofdragoon.org/)
 > **Fiabilité** : 🥈 **tier 2** (wiki interne communauté Damia/Wulves)
 > **Sauvegardé le** : 2026-05-20.
-> **Usage** : référence canon Minor Enemy Beastie Dragon (Wind, Mountain of Mortal Dragon Disc 3). ⭐ **Drop Total Vanishing 8%** = confirme **Total Vanishing = Repeat Item canon** (reconcilie Basilisk hypothesis "Dragoon Magic"). Mist-based abilities Black Mist (Fear) + Sweet Mist (Bewitchment).
+> **Usage** : référence canon Minor Enemy Beastie Dragon (Wind, Mountain of Mortal Dragon Disc 3). ⭐ **Drop Total Vanishing 8%** = confirme **Total Vanishing = Attack Item canon one-shot (kills minor enemy direct, NOT Repeat Item)** (reconcilie Basilisk hypothesis "Dragoon Magic"). Mist-based abilities Black Mist (Fear) + Sweet Mist (Bewitchment).
 
 ---
 
@@ -34,7 +34,7 @@
 | --- | ---- | ------------------ |
 | 110 | 33   | Total Vanishing 8% |
 
-⚠️ **Drop Total Vanishing 8%** ⭐ MAJEUR — confirme **Total Vanishing = Repeat Item canon** (vs hypothesis Basilisk fandom "Dragoon Magic"). Probable Item Erase-type instant-removal mob.
+⚠️ **Drop Total Vanishing 8%** ⭐ MAJEUR — confirme **Total Vanishing = Attack Item canon one-shot (kills minor enemy direct, NOT Repeat Item)** (vs hypothesis Basilisk fandom "Dragoon Magic"). Probable Item Erase-type instant-removal mob.
 
 ## Counter Opportunities
 

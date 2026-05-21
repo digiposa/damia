@@ -2,7 +2,7 @@
 
 > **Minor enemy Wind canon Disc 3** : Mountain of Mortal Dragon mob, **Mist-based abilities canon** (Black Mist Fear + Sweet Mist Bewitchment 50% proc).
 >
-> ⭐ **Drop Total Vanishing 8%** ⚠️ MAJEUR — confirme **Total Vanishing = Repeat Item canon** Erase-type (reconcilie hypothesis Basilisk).
+> ⭐ **Drop Total Vanishing 8%** ⚠️ MAJEUR — confirme **Total Vanishing = Attack Item canon (one-shot, kills minor enemy direct, NOT Repeat Item)** Erase-type (reconcilie hypothesis Basilisk).
 >
 > **Sources** :
 >
@@ -18,7 +18,7 @@
 - **Element** : Wind
 - **Location canon** : **Mountain of Mortal Dragon** (Disc 3, Divine Dragon seal location) — submaps 413-427
 - **Disc** : Disc 3
-- **Drop canon symbolique** : **Total Vanishing 8%** ⚠️ Repeat Item Erase-type canon (cohérent Basilisk "immune Erase Total Vanishing")
+- **Drop canon symbolique** : **Total Vanishing 8%** ⚠️ Attack Item one-shot Erase-type canon (cohérent Basilisk "immune Erase Total Vanishing")
 - **Pattern symbolique** : **Mist-based abilities** canon (Black Mist + Sweet Mist) — Wind-related thematic mist
 
 ## Stats canon
@@ -43,19 +43,19 @@ Pattern mob standard : 4 immune (Petrify/Bewitch/Arm Block/Dispirit) / 4 vulnera
 ## Yield canon
 
 - **EXP : 110 / Gold : 33**
-- **Drop : Total Vanishing 8%** ⭐ MAJEUR Repeat Item canon Erase-type
+- **Drop : Total Vanishing 8%** ⭐ MAJEUR Attack Item canon (one-shot, kills minor enemy direct, NOT Repeat Item) Erase-type
 
 ## ⭐ Total Vanishing canon reconciliation ⚠️ MAJEUR
 
-**Beastie Dragon drops Total Vanishing 8%** → confirme **Total Vanishing = Repeat Item canon** (NOT Dragoon Magic comme hypothèse Basilisk).
+**Beastie Dragon drops Total Vanishing 8%** → confirme **Total Vanishing = Attack Item canon (one-shot, kills minor enemy direct, NOT Repeat Item)** (NOT Dragoon Magic comme hypothèse Basilisk).
 
 Cross-reference Basilisk : "immune to Erase effect of Can't Combat Weapons, **Total Vanishing** and Demon's Gate" → re-interprétation :
 
 - **Can't Combat Weapons** = weapons category (Gladius/Brass Knuckle/Indora's Axe)
-- **Total Vanishing** = Repeat Item canon (drops mobs canon Beastie Dragon)
-- **Demon's Gate** = Repeat Item canon probable (à confirmer via autres mobs drops)
+- **Total Vanishing** = Attack Item canon (one-shot, kills minor enemy direct, NOT Repeat Item) (drops mobs canon Beastie Dragon)
+- **Demon's Gate** = Attack Item canon (one-shot, kills minor enemy direct, NOT Repeat Item) probable (à confirmer via autres mobs drops)
 
-→ Pattern canon **Erase Repeat Items category** : Total Vanishing + Demon's Gate (probable) — items utilités "remove enemy from battle" canon. **Basilisk + similar mobs immune** à Erase effects.
+→ Pattern canon **Erase Attack Items category** : Total Vanishing + Demon's Gate (probable) — **one-shot Attack Items canon** (kill minor enemy direct, NOT repeatable). **Basilisk + similar mobs immune** à Erase effects.
 
 ## Counter Opportunities
 
@@ -125,12 +125,12 @@ Counters Additions: **Yes** (28 pattern standard — non-implémenté Damia).
 1. **Stats canon exacts** : HP 336 / AT 66 / DF 130 / MAT 42 / MDF 90 / SPD 50
 2. **2-phase HP AI Mist** : ~Flying Kick > 50% / Black Mist OR Sweet Mist ≤ 50%
 3. **50% status proc canon** : pattern lower rate vs 100% standards
-4. **Total Vanishing 8% drop canon** : confirme Repeat Item Erase-type
+4. **Total Vanishing 8% drop canon** : confirme Attack Item one-shot Erase-type
 5. **Directional road encounter** : Mountain → Evergreen only canon (cohérent Baby Dragon)
 
 ### Questions ouvertes
 
-- **Demon's Gate Repeat Item canon ?** — Basilisk immune. Drop d'autres mobs ? À investiguer.
+- **Demon's Gate Attack Item canon (one-shot, kills minor enemy direct, NOT Repeat Item) ?** — Basilisk immune. Drop d'autres mobs ? À investiguer.
 - **Total Vanishing / Demon's Gate mechanic** : "Erase" exact behavior ? Instant kill ? Remove from battle ? À investiguer fandom + Discord.
 - **Deadly Spider mob canon Mountain of Mortal Dragon** — à documenter.
 
@@ -143,7 +143,7 @@ Counters Additions: **Yes** (28 pattern standard — non-implémenté Damia).
 - [`Deadly Spider.md`](./Deadly Spider.md) (à créer) — encounter partner Mountain
 - [`Basilisk.md`](./Basilisk.md) — immune to Erase effect of Total Vanishing canon (reconciliation)
 - [`../combat/elements.md`](../combat/elements.md) — Wind weak Earth + Non-Elemental
-- [`../items/consumables.md`](../items/consumables.md) (à créer) — **Total Vanishing** Repeat Item Erase-type
+- [`../items/consumables.md`](../items/consumables.md) (à créer) — **Total Vanishing** Attack Item one-shot Erase-type
 - [`../combat/erase-mechanic.md`](../combat/erase-mechanic.md) (à créer) — Erase canon mechanic (Total Vanishing + Demon's Gate + Can't Combat weapons)
 
 ## Gaps / TODO

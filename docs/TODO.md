@@ -2000,6 +2000,49 @@
 
 - [x] **✅ "Disc 4 Monsters" categorization fandom Aqua King CONFIRMÉ CORRECT** — Aglis = **Disc 4** canon (endgame Magic City Wingly hidden, accédée depuis **Rouge** dans les Broken Islands — la mer se sépare en deux pour inviter la party, puis se referme piégeant à l'intérieur). Forest of Winglies = location Mille Seseau Disc 3 (≠ Aglis, 2 Wingly cities distinctes). Doc Damia initiale erronée "Disc 2 via Donau Meru" + "Disc 4 via Forest of Winglies" corrigées 2026-05-20. Source: user clarification + `locations/Aglis.md` (déjà correct).
 
+### Bosses / Archangel (Light boss Disc 4 Moon That Never Sets — Final Verdict dialogue mechanic + Meru-targeted + 28 Counter table identique Aqua King)
+
+- [ ] **🆕 Archangel canon data-model** — Light, HP 3,000, AT 53, DF 80, MAT 76, MDF 160, SPD 50, A-AV 5%, M-AV 5%. Boss Disc 4 endgame Moon That Never Sets submap 729. À implémenter `bosses/archangel.ts`. Source: [`features/bosses/_sources/lod-wiki-archangel.md`](features/bosses/_sources/lod-wiki-archangel.md). Priorité: **moyenne**.
+
+- [ ] **🆕 Final Verdict victory condition canon ⭐ MAJEUR UNIQUE TLoD** — "Battle ends after Talk is used for the last time". Pattern unique : **battle ends via dialogue Talk usage final** (PAS HP=0). Archangel utilise 4 Talks (HP <75% / <60% / <35% / <5%) → 4ème Talk déclenche fin. À implémenter `BossVictoryCondition = { type: 'dialogue_complete', maxTalks: 4, hpThresholds: [0.75, 0.60, 0.35, 0.05] }`. À documenter `combat/boss-victory-conditions.md` (à créer). Source: idem.
+
+- [ ] **🆕 28 Counter Opportunities IDENTIQUE Aqua King ⭐ HYPOTHÈSE pattern UNIVERSEL canon** — Archangel + Aqua King partagent **exactement le même tableau 28 opportunities**. Hypothèse : Counter Opportunities = **table UNIVERSEL canon pour tous enemies avec `Counters Additions: Yes`**. À investiguer : autres bosses/mobs canon avec Counter Additions → confirmation hypothesis pattern universel ? À implémenter `UNIVERSAL_COUNTER_TABLE: CounterOpportunity[]` shared data. Source: comparaison Aqua King + Archangel.
+
+- [ ] **🆕 Meru-targeted boss canon ⭐ MAJEUR** — Archangel **heals Meru** (Healing Flower 30% / Healing Scripture 100% si HP ≤ 31%) + **talks to Meru** (4 talks dialogue) → connection lore Meru-Wingly endgame. Pattern boss "personal connection" canon. À documenter `party-members/Meru.md` (à créer) Disc 4 lore arc + investigation identité Archangel. Source: idem.
+
+- [ ] **🆕 Archangel identity hypothèse canon ⚠️** — Possible identités : **Charle Frahma** (Wingly elder canon Ulara reveal) OR Meru's mother / Wingly ancestor / spirit form. À investiguer fandom Archangel + lore Disc 4 Moon. À documenter `npcs/Charle Frahma.md` (à créer) + cross-référer. Source: spéculation lore.
+
+- [ ] **🆕 Blow Trumpet "reduce target HP to 1 + grant turn out of order, cannot be dodged" canon ⭐ UNIQUE** — Pattern boss ability unique :
+  - Reduce target HP to 1 (near-kill scaling)
+  - Grant target turn out of order (compensatory mechanic)
+  - **Cannot be dodged** (A-AV/M-AV irrelevant)
+  - Used **once at HP < 75%** AND **once at HP < 35%** = 2 utilisations
+    À implémenter `Ability { setTargetHpTo: 1, grantsExtraTurn: true, cannotDodge: true, onlyUsedOnce: true, hpThresholds: [0.75, 0.35] }`. Source: idem.
+
+- [ ] **🆕 Healing Flower visual bug overflow canon ⚠️** — "Should recovery exceed Meru's max HP, displays correct number but actually recovers 0 HP". Retail bug pattern (cohérent Aqua King Trident Stab bug). À documenter `combat/canon-bugs.md` (à créer) Healing Flower overflow entry. Damia : preserve OR fix ? Source: idem.
+
+- [ ] **🆕 4 Talk thresholds canon HP <75% / <60% / <35% / <5%** — Pattern boss dialogue progression : 4 talks à 4 HP thresholds spécifiques. Cohérent boss canon "story-driven phase swap". À implémenter `Ability { hpThresholds: [0.75, 0.60, 0.35, 0.05], onlyUsedOnce: true }`. Source: idem.
+
+- [ ] **🆕 Healing Flower / Healing Scripture mutual exclusion canon** — Aqua King pattern "cannot have both Barriers simultaneous" → Archangel pattern similaire : Healing Flower OR Healing Scripture (alternative, not both). À implémenter `MutuallyExclusive { abilities: [HealingFlower, HealingScripture] }`. Source: idem.
+
+- [ ] **🆕 "Healing the enemy party member" canon rare pattern ⚠️** — Boss heals player character (Meru spécifiquement) = pattern rare canon. Possible exploit : keep Meru HP low to waste Archangel turns healing. À investiguer si pattern intended OR unintended canon. Source: idem.
+
+- [ ] **🆕 Archangel abilities damage canon** :
+  - ~Sword Bash : 1× phys single
+  - **Spark Net** : 1.2× Thunder magic single (official name)
+  - **Flash Hall** : 3× Thunder magic AoE party ⚠️
+  - **Trans Light** : 1.5× Light magic single
+  - **Spectral Flash** : 3× Light magic AoE party ⚠️
+    → 3× AoE party damage = high party-wipe potential canon endgame. Source: idem.
+
+- [ ] **🆕 Spark Net + Flash Hall + Trans Light + Spectral Flash = canon ability names officiels (pas ~)** — Vs ~Sword Bash / ~Healing Flower / ~Healing Scripture / ~Blow Trumpet / ~Talk community-named. Pattern : magic abilities = canon official names / physical = community ~names. À noter `combat/ability-naming.md` (à créer). Source: idem.
+
+- [ ] **🆕 Drop Nothing canon Archangel** — Boss story-endgame, pas de loot direct (vs Fire Bird Red-Eye Stone 100% / Feyrbrand Down Burst 100%). Cohérent : Final Verdict = story conclusion, pas defeat traditional. Source: idem.
+
+- [ ] **🆕 EXP 6000 / Gold 0 Archangel canon** — High EXP yield (cohérent boss endgame) + 0 Gold (story-boss pattern). Source: idem.
+
+- [ ] **🆕 A-AV 5% / M-AV 5% boss endgame canon** — Vs majorité bosses 0% evasion. Pattern : boss endgame Disc 4 = evasion notable. À investiguer autres bosses Disc 4 evasion stats. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

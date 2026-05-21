@@ -2367,6 +2367,29 @@
 
 - [ ] **🆕 50% status proc rate pattern canon** — Beastie Dragon lower proc rate (50%) vs other mobs canon 100% pattern (Arrow Shooter/Baby Dragon/Basilisk). Pattern variability proc rates canon — à documenter `combat/status-effects.md` (à créer) proc rates per mob. Source: idem.
 
+### Mobs / Beastie Dragon fandom complement — velociraptor toxic-breathing + Bounce canon + Total Vanishing one-shot confirme
+
+- [ ] **🆕 Beastie Dragon JP name ビースティドラゴン (Bīsutidoragon) direct translit** — Source: [`features/mobs/_sources/fandom-beastie-dragon.md`](features/mobs/_sources/fandom-beastie-dragon.md).
+
+- [ ] **🆕 Beastie Dragon appearance canon "velociraptor-like toxic-breathing dragon" ⭐** — 2 hind legs + small arms balance + wings functional pair limbs (4-limb design) + toxic-breathing thematic explique Mist abilities. À refléter visual design Damia. Source: idem.
+
+- [ ] **🆕 Bounce canon name officiel (vs wiki ~Flying Kick) ⭐** — Adopter fandom canon. Source: idem.
+
+- [ ] **🆕 Total Vanishing "destroys individual minor enemies instantly" canon confirme Attack Item one-shot ⭐** — Confirme user clarification : Total Vanishing = Attack Item one-shot, kills mob mineur direct, single-use. À refléter `items/consumables.md` (à créer) Total Vanishing entry. Source: idem.
+
+- [ ] **🆕 "Saboteur team role" canon Beastie Dragon** — Pattern role mob : inflige status while others damage. Pattern enemy team composition canon design. Source: idem.
+
+- [ ] **🆕 Encounter rate Common canon Beastie Dragon** — Vs Uncommon Air Combat / Aqua King. Pattern encounter rate variability canon. Source: idem.
+
+- [ ] **🆕 ~45 min farming Total Vanishing canon** — Pattern farming time Attack Item drop (vs ~10min Down Burst Air Combat / ~15min Angel's Prayer Aqua King). Plus long car Attack Item one-shot rare. Source: idem.
+
+- [ ] **🆕 Stats divergences Beastie Dragon wiki vs fandom ⚠️** :
+  - P. Attack : wiki 66 vs fandom **80** (+21%)
+  - M. Attack : wiki 42 vs fandom **48** (+14%)
+  - HP JP : 420 (+25% pattern)
+  - Gold JP : 11 (÷3 pattern)
+    → Wiki tier 2 US prévaut canonical Damia. Source: comparaison.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

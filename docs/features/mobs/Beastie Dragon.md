@@ -7,6 +7,7 @@
 > **Sources** :
 >
 > - 🥈 [`_sources/lod-wiki-beastie-dragon.md`](./_sources/lod-wiki-beastie-dragon.md) — wiki LoD (stats + 2-phase HP AI + Black/Sweet Mist 50% proc + Total Vanishing drop)
+> - 🥉 [`_sources/fandom-beastie-dragon.md`](./_sources/fandom-beastie-dragon.md) — fandom (JP name ビースティドラゴン + appearance "velociraptor-like toxic-breathing dragon" canon + Bounce canon name + Total Vanishing "destroys minor enemies instantly" confirme Attack Item one-shot + Encounter rate Common + ~45min farming + Disc 3 Monsters confirmed)
 
 ## Statut
 
@@ -145,6 +146,42 @@ Counters Additions: **Yes** (28 pattern standard — non-implémenté Damia).
 - [`../combat/elements.md`](../combat/elements.md) — Wind weak Earth + Non-Elemental
 - [`../items/consumables.md`](../items/consumables.md) (à créer) — **Total Vanishing** Attack Item one-shot Erase-type
 - [`../combat/erase-mechanic.md`](../combat/erase-mechanic.md) (à créer) — Erase canon mechanic (Total Vanishing + Demon's Gate + Can't Combat weapons)
+
+## Cross-check fandom (compléments + divergences)
+
+**Confirmations utiles fandom** :
+
+- **Wind element + Mountain of Mortal Dragon location** confirmé
+- **Total Vanishing 8% drop** confirmé + **"destroys individual minor enemies instantly"** canon description ⭐ confirme **Attack Item one-shot canon** (user clarification)
+- **Wind weak Earth** confirmé : "earth element spell items effective"
+- **Black Mist / Sweet Mist** ability canon names confirmed (status proc)
+- **Deadly Spider partner** formation confirmé
+- **Counter Yes** confirmé
+
+**NEW canon fandom-only** ⭐ :
+
+- ⭐ **JP name ビースティドラゴン (Bīsutidoragon)** — direct translit "Beasty Dragon"
+- ⭐ **Appearance canon "velociraptor-like toxic-breathing dragon"** : 2 hind legs + small arms balance + **wings functional pair limbs** (4-limb design) + **toxic-breathing** thematic explique Mist abilities
+- ⭐ **Bounce canon name officiel** (vs wiki ~Flying Kick community)
+- ⭐ **"Saboteur team role"** canon : pattern role mob — inflige status while others damage
+- ⭐ **Encounter rate Common** canon (vs Uncommon other mobs like Air Combat)
+- ⭐ **~45 minutes farming average** Total Vanishing canon
+- ⭐ **Disc 3 Monsters category** confirmed (vs Basilisk fandom "Disc 4" — per-mob fandom variability)
+
+**Divergences stats wiki vs fandom** :
+
+| Stat                      | Wiki LoD                 | Fandom     | Notes                                          |
+| ------------------------- | ------------------------ | ---------- | ---------------------------------------------- |
+| **HP US/EU**              | 336                      | 336        | Match                                          |
+| **HP JP**                 | (silent)                 | 420        | Fandom canon JP +25% pattern systématique      |
+| **P. Attack**             | 66                       | **80**     | ⚠️ DIVERGENCE +21% (fandom probable JP values) |
+| **M. Attack**             | 42                       | **48**     | ⚠️ DIVERGENCE +14%                             |
+| **DF / MDF**              | 130/90                   | 130/90     | Match                                          |
+| **SPD**                   | 50                       | 50         | Match                                          |
+| **Gold JP**               | (silent)                 | 11         | Fandom canon JP ÷3 pattern                     |
+| **~Flying Kick / Bounce** | ~Flying Kick (community) | **Bounce** | Fandom canon name officiel — adopter           |
+
+→ Wiki tier 2 US prévaut pour stats. Fandom prévaut pour names canon + appearance + Total Vanishing clarification.
 
 ## Gaps / TODO
 

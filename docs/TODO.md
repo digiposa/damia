@@ -1969,6 +1969,37 @@
 
 - [ ] **🆕 Status applicables vs Aqua King canon** — Confuse / Fear / Poison / Stun applicables. Status weapons effective vs Aqua King : Mind Crush (Dart), Bemusing Arrow (Shana), Spear of Terror (Lavitz), Virulent Arrow (Shana), Beast Fang (Haschel). Source: status immunity standard mob pattern.
 
+### Mobs / Aqua King fandom complement — "Magic City Aglis" + yellow eyes + cannot have both Barriers simultaneous + Spider Urchin mob + grind Additions canon
+
+- [ ] **🆕 "Magic City, Aglis" canon name ⭐** — Aglis = **"The Magic City"** canon descriptor. À refléter `locations/Aglis.md` (Wingly Magic City canon name complete). Source: [`features/mobs/_sources/fandom-aqua-king.md`](features/mobs/_sources/fandom-aqua-king.md).
+
+- [ ] **🆕 Aqua King yellow eyes canon trait ⭐** — Vs Air Combat **light blue eyes** + majorité mobs **red eyes**. Pattern lore canon "eye colors mobs" : yellow / blue / red distinct canon. À investiguer pattern systematic + documenter `mobs/README.md` eye-colors lore. Source: idem.
+
+- [ ] **🆕 "Cannot have both Barriers active simultaneously" constraint canon ⭐** — Player peut exploiter : si Phys Barrier active, switch to magic damage next turn (Magic Barrier sera utilisé tour suivant). À implémenter `MutuallyExclusive { abilities: [PhysicalBarrier, MagicalBarrier] }` constraint. Source: idem.
+
+- [ ] **🆕 Power Up canon effect divergence wiki vs fandom ⚠️** — Wiki : "+50% damage dealt + -50% damage received × 3 turns" (damage-multiplier model). Fandom : "DF + MDF + AT + MAT boost × 3 turns" (stat-based model). Probable même effect réel, descriptions différentes. À investiguer Discord cadors. Adopter wiki tier 2 damage-multiplier canon probable. Source: comparaison.
+
+- [ ] **🆕 Spider Urchin mob canon Aglis ⚠️ NEW** — Fandom mentioned other Aglis mob "Spider Urchin could still attack back". À documenter `mobs/Spider Urchin.md` (à créer). Source: fandom-aqua-king.md §Battle.
+
+- [ ] **🆕 Aqua King = "best Addition grind target" canon ⭐** — Pattern farming : Aqua King bug = safe environment Phys Barrier most often → spam Additions sans damage taken. À documenter `combat/addition-grinding.md` (à créer) + cross-ref Aqua King utilité farming canon. Source: idem.
+
+- [ ] **🆕 Speed 70 Aqua King vs Kongol/Albert pattern canon** — Aqua King SPD 70 = mid-high. Kongol + Albert = **low SPD profil canon**. Pour out-speed Aqua King = équiper **Bandit's Shoes (+20 SPD) + Bandit's Ring (+20 SPD)** = +40 SPD boost canon strategy. À refléter `party-members/Kongol.md` + `party-members/Albert.md` low SPD stat profiles. Source: idem.
+
+- [ ] **🆕 Angel's Prayer shop item 30 gold canon ⚠️** — Healing item canon, **purchased 30 gold** (probable Bale/Lohan shops). Counter-productive farming Aqua King vs direct shop purchase. À documenter `items/consumables.md` (à créer) Angel's Prayer entry + shop locations canon. Source: idem.
+
+- [ ] **🆕 Aqua King farming time ~15 min canon** — Drop Angel's Prayer 8% × encounter rate Aglis = ~15 min average. Pattern farming efficiency canon (vs Air Combat ~10 min). Source: idem.
+
+- [ ] **🆕 Aqua King appearance détaillée canon** — Merfolk wielding trident + several fins + gills body + yellow eyes + **red skin** + **silver underbelly + silver fins**. À refléter visual design Damia. Source: fandom-aqua-king.md §Appearance.
+
+- [ ] **🆕 Stats divergences Aqua King wiki vs fandom ⚠️** :
+  - P. Attack : wiki 67 vs fandom **76** (×1.13 — probable JP values fandom pattern systématique)
+  - M. Attack : wiki 65 vs fandom **73** (×1.12)
+    → Wiki tier 2 US prévaut probable. Pattern : fandom values = JP values systematic à investiguer. Source: comparaison.
+
+- [ ] **🆕 JP version Aqua King canon** — HP 800 (+25%) / Gold 10 (÷3) — pattern systématique JP. Source: fandom-aqua-king.md table.
+
+- [ ] **🆕 "Disc 4 Monsters" categorization fandom Aqua King ⚠️ probable error** — Aglis = Disc 2 canon (Meru recruit Donau Disc 2). Fandom tags "Disc 4 Monsters". Probable error fandom OR Aglis revisitable Disc 4 ? À investiguer. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

@@ -5,10 +5,11 @@
 > **Sources** :
 >
 > - 🥈 [`_sources/lod-wiki-aqua-king.md`](./_sources/lod-wiki-aqua-king.md) — wiki LoD (stats + 28 counter opportunities + Magical Attack Barrier + Trident Stab bug retail)
+> - 🥉 [`_sources/fandom-aqua-king.md`](./_sources/fandom-aqua-king.md) — fandom ("Magic City Aglis" canon name + "much more defensive cousin to Merman" + yellow eyes canon + Stab "never used" confirmed + cannot have both Barriers simultaneous + Power Up = DF/MDF/AT/MAT all 4 stats + Spider Urchin mob canon mentioned + Speed 70 vs Kongol/Albert pattern + Angel's Prayer 30 gold shop + ~15min farm + Disc 4 categorization probable error)
 
 ## Statut
 
-🟡 **Draft post-ingestion wiki LoD** — fandom à ingérer pour cross-check + lore Aqua King.
+🟡 **Draft post-ingestion wiki LoD + fandom** — bug retail "0 damage" confirmé par fandom + canon traits enriched.
 
 ## Identity canon
 
@@ -217,16 +218,57 @@ Pattern mob standard : 4 immune (Petrify/Bewitch/Arm Block/Dispirit) / 4 vulnera
 - **Counter mechanism timing** : counter par button press OR counter total fin Addition ?
 - **Counter damage** : quel damage Aqua King counter ?
 
+## Cross-check fandom (compléments + divergences)
+
+**Confirmations utiles fandom** :
+
+- ⭐ **"Magic City, Aglis" canon name** — Aglis = "The Magic City" canon descriptor (cohérent worldmap canon "Magic City" Wingly)
+- ⭐ **Trident Stab "never used" canon confirmed** — Fandom : "**although it has a move called Stab, it will never use that**" → confirme bug retail wiki tier 2
+- ⭐ **Aqua King = "much more defensive cousin to Merman"** confirmé (vs wiki "recolor of Merman")
+- **Power Up duration 3 turns** confirmé
+- **Encounter rate "Uncommon"** confirmé
+- **3 formations** : solo / + Scud Shark / + Minotaur (cohérent wiki)
+
+**NEW canon fandom-only** ⭐ :
+
+- ⭐ **Yellow eyes canon Aqua King ⚠️** — Vs Air Combat **light blue eyes** + majorité mobs **red eyes** canon. Pattern lore "eye colors mobs" canon : yellow (Aqua King) + blue (Air Combat) + red (majorité) = colors distinct canon. À investiguer systématic.
+- ⭐ **Appearance détaillée canon** : merfolk wielding trident + several fins + gills body + yellow eyes + red skin + silver underbelly + silver fins
+- ⭐ **"Cannot have both Barriers active simultaneously" constraint canon** — Player peut exploiter : si Phys Barrier active, switch to magic damage (Magic Barrier sera utilisé tour suivant). À implémenter `MutuallyExclusive { abilities: [PhysicalBarrier, MagicalBarrier] }`.
+- ⭐ **Power Up = DF/MDF/AT/MAT all 4 stats canon** — Fandom précise : DF + MDF + AT + MAT boost (vs wiki "damage dealt + received" multiplier). **Probable même effect réel** mais descriptions différentes — fandom décrit stat-based, wiki décrit damage-multiplier-based. Pour Damia : adopter wiki tier 2 canon (damage-multiplier) OU implémenter stat-based selon investigation Discord.
+- ⭐ **Spider Urchin mob canon Aglis ⚠️ NEW** — Fandom mentioned "even some such as Spider Urchin could still attack back" → other Aglis mob canon. À documenter `mobs/Spider Urchin.md` (à créer).
+- ⭐ **Speed 70 vs Kongol/Albert canon pattern** — Aqua King SPD 70 = mid-high. Kongol + Albert low SPD profil canon (cohérent stat profiles late-game characters). Pour out-speed Aqua King = équiper **Bandit's Shoes + Bandit's Ring (+20 SPD each)**. À refléter `party-members/Kongol.md` + `party-members/Albert.md` stat profiles. Source: idem.
+- ⭐ **Aqua King "best Addition grind target" canon** — Pattern farming Addition canon : Aqua King = safe environment Phys Barrier most often used → spam Additions sans damage taken. Pattern à documenter `combat/addition-grinding.md` (à créer). Source: idem.
+- ⭐ **Angel's Prayer 30 gold shop item canon ⚠️** — Healing item canon, purchased 30 gold (probable Bale/Lohan shops). À documenter `items/consumables.md` (à créer) Angel's Prayer entry. **Counter-productive farming** vs shop purchase. Source: idem.
+- **Down Burst farming ~15 min average** canon
+- ⚠️ **"Disc 4 Monsters" categorization fandom** — probable error (Aglis = Disc 2 canon, première visite). À vérifier si Aglis revisitable Disc 4 OR fandom erreur tag. Source: idem.
+
+**Divergences stats wiki vs fandom** :
+
+| Stat                | Wiki LoD                                             | Fandom                          | Notes                                                                                                                           |
+| ------------------- | ---------------------------------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| **P. Attack**       | 67                                                   | **76**                          | ⚠️ DIVERGENCE — fandom = wiki × 1.13 (probable fandom = JP values pattern systématique)                                         |
+| **M. Attack**       | 65                                                   | **73**                          | ⚠️ DIVERGENCE — fandom = wiki × 1.12                                                                                            |
+| **HP US/EU**        | 640                                                  | 640                             | Match                                                                                                                           |
+| **HP JP**           | (silent)                                             | 800                             | Fandom canon JP +25% (cohérent pattern systématique)                                                                            |
+| **Gold US/EU**      | 30                                                   | 30                              | Match                                                                                                                           |
+| **Gold JP**         | (silent)                                             | 10                              | Fandom canon JP ÷3 (cohérent pattern Air Combat)                                                                                |
+| **Power Up effect** | "+50% damage dealt + -50% damage received × 3 turns" | "DF + MDF + AT + MAT × 3 turns" | ⚠️ Description différente. Probable même mécanique mais nomenclature ≠. Wiki tier 2 prévaut probable (damage-multiplier model). |
+
+→ **Wiki tier 2 prévaut pour stats numériques** (P/M Attack 67/65 US canon).
+→ **Fandom prévaut pour traits canon visuels** (yellow eyes, appearance) + canon constraint "cannot have both Barriers simultaneous" + farming details.
+
 ## Liens transverses
 
 - [`README.md`](./README.md) — pattern général mobs canon
-- [`../locations/Aglis.md`](../locations/Aglis.md) — Wingly underwater city Disc 2
+- [`../locations/Aglis.md`](../locations/Aglis.md) — Wingly **"Magic City"** Disc 2
 - [`Merman.md`](./Merman.md) (à créer) — model original Marshland Disc 1
 - [`Minotaur.md`](./Minotaur.md) (à créer) — encounter partner Aglis
 - [`Scud Shark.md`](./Scud Shark.md) (à créer) — encounter partner Aglis
+- [`Spider Urchin.md`](./Spider Urchin.md) (à créer) — autre mob Aglis canon (fandom)
 - [`Treasure Jar.md`](./Treasure Jar.md) (à créer) — 2nd mob avec Magical Attack Barrier canon
 - [`../combat/elements.md`](../combat/elements.md) — Water weak Fire
 - [`../combat/additions.md`](../combat/additions.md) — 28 Counter Opportunities = première référence détaillée mécanique counter
+- [`../items/equipment.md`](../items/equipment.md) — Bandit's Shoes + Bandit's Ring SPD +20 each pour out-speed Aqua King
 
 ## Gaps / TODO
 

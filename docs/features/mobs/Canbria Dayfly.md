@@ -17,10 +17,11 @@
 > **Sources** :
 >
 > - 🥈 [`_sources/lod-wiki-canbria-dayfly.md`](./_sources/lod-wiki-canbria-dayfly.md) — wiki LoD (Wind Death Frontier Disc 4 + A-AV 10% NEW first Minor + Status 5/3 Poison immune NEW + Counter 0 + Spinning Gale 1.5× Wind magic + Body Purifier 8% NEW + 37 submaps coverage + Scorpion partner NEW + Cambrian mistranslation trivia)
+> - 🥉 [`_sources/fandom-canbria-dayfly.md`](./_sources/fandom-canbria-dayfly.md) — fandom (⭐ appearance "colossal day fly massive insect, 3 pairs wings + large stinger, long curled snout, red eyes, dark grey skin, red dotted abdomen" MAJEUR + "Only wind + strongest mob Death Frontier" canon + Bug bite canon name + ⭐ **Body Purifier = "effect item" canon NEW MAJEUR** taxonomy étendue + purchasable 20 gold canon + Poison cure confirmed + ~5 min farming + HP JP 650 / Gold JP 10 + Very common encounter + ⚠️ Counter Yes (fandom) vs No (wiki) divergence)
 
 ## Statut
 
-🟡 **Draft post-ingestion wiki LoD** — fandom à ingérer pour cross-check si page existe.
+🟢 **Canon documenté wiki + fandom** — Damia adopt JP stats (HP 650 / Gold 10).
 
 ## Identity canon
 
@@ -30,18 +31,19 @@
 - **Disc** : Disc 4 (Death Frontier desert)
 - **Pattern symbolique** : ⭐ **A-AV 10% first Minor non-0 canon** + ⭐ **Poison immune NEW** + ⭐ **Counter 0** + ⭐ **Cambrian mistranslation** thematic
 
-## Stats canon ⚠️ Damia adopt JP (à confirmer fandom)
+## Stats canon ⚠️ Damia adopt JP ⭐
 
-| Stat | Value (US)     | Damia canon                           | Notes                              |
-| ---- | -------------- | ------------------------------------- | ---------------------------------- |
-| HP   | 520            | JP probable ~650 (+25%) — à confirmer | Fallback US 520 si fandom silent   |
-| AT   | 58             | 58                                    |                                    |
-| DF   | 100            | 100                                   |                                    |
-| MAT  | **76**         | 76                                    | MAT > AT (rare pattern)            |
-| MDF  | **140** high   | 140                                   | MDF anti-magic high                |
-| SPD  | 70             | 70                                    |                                    |
-| A-AV | **10%** ⭐ NEW | 10%                                   | First Minor Enemy A-AV non-0 canon |
-| M-AV | 0%             | 0%                                    |                                    |
+| Stat | Wiki US        | Fandom US | **Damia (JP)**                             | Notes                              |
+| ---- | -------------- | --------- | ------------------------------------------ | ---------------------------------- |
+| HP   | 520            | 520       | **650** ✓ JP confirmed fandom +25% pattern |                                    |
+| AT   | 58             | **65**    | **65** (fandom higher, possible JP)        |                                    |
+| DF   | 100            | 100       | **100**                                    |                                    |
+| MAT  | **76**         | **86**    | **86** (fandom higher, MAT > AT pattern)   | MAT > AT (rare pattern)            |
+| MDF  | **140** high   | 140       | **140**                                    | MDF anti-magic high                |
+| SPD  | 70             | 70        | **70**                                     |                                    |
+| A-AV | **10%** ⭐ NEW | 10%       | **10%**                                    | First Minor Enemy A-AV non-0 canon |
+| M-AV | 0%             | 0%        | **0%**                                     |                                    |
+| Gold | 30             | 30        | **10** ✓ JP confirmed fandom ÷3 pattern    |                                    |
 
 → Pattern "magic-focused tank" Wind insect canon ⭐ : HP 520 + DF 100 mod + **MDF 140 high** + MAT 76 > AT 58 = mob favorise physical player + magic offensive. Pattern Wind insect canon "Spinning Gale offensive".
 
@@ -210,6 +212,61 @@ Pattern **NEW** mob 5 immune / 3 vulnerable :
 - [`../combat/additions.md`](../combat/additions.md) — Counter Opportunities tier 0 mapping
 - [`../combat/damage-formula.md`](../combat/damage-formula.md) — Attack Multiplier 1.5× Spinning Gale + A-AV 10% applies Minor canon
 - [`../items/consumables.md`](../items/consumables.md) (à créer) — Body Purifier + Mind Purifier Healing Items canon
+
+## Cross-check fandom (compléments + divergences)
+
+**Confirmations utiles fandom** :
+
+- **Wind + Death Frontier location** confirmé
+- **HP US 520 / JP 650** ✓ confirme JP +25% pattern (Damia adopt 650)
+- **Gold US 30 / JP 10** ✓ confirme JP ÷3 pattern (Damia adopt 10)
+- **DF 100 / MDF 140 / SPD 70 / A-AV 10%** match
+- **Body Purifier 8% drop** confirmé
+- **Cactus ×2 unique partner Scorpion formation** confirmé
+- **Very common encounter rate** canon
+- **Poison immune** confirmé (cohérent wiki 5/3 NEW pattern)
+- **A-AV 10% "evade attacks with given probability"** confirmé
+
+**NEW canon fandom-only** ⭐ :
+
+- ⭐ **Appearance canon MAJEUR** :
+  - "Colossal day fly" massive insect (larger than 2 individuals)
+  - Dark grey skin + red dotted abdomen lateral pattern
+  - 3 pairs wings : 2 thorax + 1 lower abdomen + **large stinger**
+  - Long curled snout (bite mechanism)
+  - Red eyes (standard TLoD)
+  - Pattern thematic "primordial Cambrian-era massive insect" cohérent trivia
+- ⭐ **"Only wind-element + strongest mob Death Frontier"** canon — Death Frontier ecosystem mostly Earth, Canbria Dayfly unique Wind + top tier
+- ⭐ **Bug bite canon name officiel** (= wiki ~Bite community) — adopter fandom canon
+- ⭐ **"Spinning Gale = spell item" fandom phrasing** ⚠️ — narrative loose phrasing OR literal Spell Item canon ? Wiki tier 2 prévaut "ability" classification. À investiguer.
+- ⭐ **"Persistence derived from defence"** canon (DF/MDF high resilience)
+- ⭐ **Body Purifier = "effect item" canon NEW ⭐ MAJEUR** :
+  - "Effect Item" classification distinct **"Spell Item"** (Attack Ball) + **"Healing Item"** (Recovery Ball)
+  - Pattern items canon taxonomy étendue 4 categories : Healing / Spell / Effect / Attack Items + Repeat Items umbrella
+  - Body Purifier = cure Poison status confirmed
+- ⭐ **Body Purifier purchasable 20 gold all shops canon** — pattern Effect Items purchasable canon (vs Spell Items Attack Ball drop-only)
+- ⭐ **~5 minutes farming Body Purifier** canon (Very common encounter)
+
+**Divergences wiki vs fandom** :
+
+| Stat / Aspect                    | Wiki LoD                | Fandom                    | Notes                                                           |
+| -------------------------------- | ----------------------- | ------------------------- | --------------------------------------------------------------- |
+| **HP US/EU**                     | 520                     | 520                       | Match                                                           |
+| **HP JP**                        | (silent)                | **650**                   | Fandom canon JP +25% pattern — Damia adopt 650                  |
+| **P. Attack**                    | 58                      | **65**                    | ⚠️ DIVERGENCE +12% (fandom probable JP closer)                  |
+| **M. Attack**                    | 76                      | **86**                    | ⚠️ DIVERGENCE +13% (idem)                                       |
+| **DF / MDF**                     | 100/140                 | 100/140                   | Match                                                           |
+| **SPD / A-AV**                   | 70 / 10%                | 70 / —                    | A-AV 10% wiki / fandom narrative "evade" confirms               |
+| **Gold US**                      | 30                      | 30                        | Match                                                           |
+| **Gold JP**                      | (silent)                | **10**                    | Fandom canon JP ÷3 pattern — Damia adopt 10                     |
+| **~Bite / Bug bite**             | ~Bite                   | **Bug bite**              | Fandom canon name officiel — adopter                            |
+| **Counter Yes / No**             | **No** Counter 0        | **Yes** ⚠️                | ⚠️ MAJOR DIVERGENCE — Wiki tier 2 prévaut Counter 0 canon Damia |
+| **Spinning Gale classification** | ability magic 1.5× Wind | "spell item" narrative ⚠️ | Wiki ability classification prévaut                             |
+| **Body Purifier classification** | (drop only)             | **"effect item"**         | Fandom NEW canon classification ⭐ taxonomy étendue             |
+
+→ **Damia adopt JP stats** (HP 650 / Gold 10) ✓ confirmé fandom.
+→ **Fandom canon names** (Bug bite) + **appearance** + **Body Purifier "effect item" classification** prévalent.
+→ **Wiki tier 2 prévaut** : Counter 0 + Spinning Gale ability classification + A-AV 10% explicit stat.
 
 ## Gaps / TODO
 

@@ -2818,6 +2818,39 @@
 
 - [ ] ⭐ **🆕 Trivia "Cambrian" mistranslation canon NEW ⭐** — Wiki trivia : correct name = **Cambrian** (geological period ~500 million years ago Earth). "Canbria" = JP→EN mistranslation probable. À décider naming canon Damia : adopt canonical "Cambrian Dayfly" OR conserve community-translated "Canbria Dayfly" wiki standard. Pattern thematic "primordial insect creature" Death Frontier desert canon. Source: idem.
 
+### Mobs / Canbria Dayfly fandom complement — Appearance massive insect 3 pairs wings stinger + "Only wind + strongest mob" Death Frontier + Bug bite canon + Body Purifier "effect item" taxonomy NEW + JP stats confirmés
+
+- [ ] **🆕 Canbria Dayfly appearance canon MAJEUR ⭐** — "Colossal day fly massive insect, larger than 2 individuals, dark grey skin + red dotted abdomen lateral, **3 pairs wings (2 thorax + 1 abdomen) + large stinger**, long curled snout, red eyes". Pattern thematic "primordial Cambrian-era massive insect" cohérent trivia "Cambrian geological period". À refléter sprite visual Damia : insect 3-pair wings + stinger primordial. Source: [`features/mobs/_sources/fandom-canbria-dayfly.md`](features/mobs/_sources/fandom-canbria-dayfly.md).
+
+- [ ] **🆕 "Only wind-element + strongest mob Death Frontier" canon ⭐** — Canbria Dayfly = unique Wind (vs majority Earth mobs Death Frontier ecosystem) + top tier mob area. À cross-référer mobs Death Frontier (Cactus Earth + Scorpion à investiguer + autres). Source: idem.
+
+- [ ] **🆕 Bug bite canon name officiel (vs wiki ~Bite community) ⭐** — Adopter fandom canon any HP phase ability. Pattern thematic "long curled snout smack" cohérent appearance. Source: idem.
+
+- [ ] **🆕 "Persistence derived from defence" canon Canbria Dayfly** — Pattern DF 100 / MDF 140 high makes mob resilient. Pattern Disc 4 tank mob canon. Source: idem.
+
+- [ ] **🆕 "Spinning Gale = spell item" fandom phrasing ⚠️ ambiguous** — Narrative loose phrasing OR literal Spell Item canon classification ? Wiki tier 2 prévaut "ability magic 1.5× Wind" classification. À investiguer Discord/Wulves pour clarification. Source: idem.
+
+- [ ] ⚠️ **🆕 Counter divergence Canbria Dayfly wiki vs fandom MAJEUR** — Wiki tier 2 "Counters Additions? No" + Counter Opportunities (0) / Fandom "Can Counterattack: Yes". Wiki tier 2 prévaut canon Damia Counter 0. Fandom probable default "Yes" imprécis. Source: comparaison.
+
+- [ ] ⭐ **🆕 Body Purifier = "effect item" canon NEW MAJEUR — taxonomy items ⭐ étendue** — Fandom classifie Body Purifier "effect item" distinct **"spell item"** (Attack Ball Bowling) + **"healing item"** (Recovery Ball Cactus). Pattern items canon taxonomy étendue 4 categories canon :
+  - **Healing Items** : Recovery Ball + Healing Potion + Spirit Potion (restore HP/MP)
+  - **Spell Items** : Attack Ball (cast offensive spell-effect)
+  - **Effect Items** ⭐ NEW : Body Purifier (cure Poison) + Mind Purifier probable (cure Confuse) + autres Purifiers (cure status conditions)
+  - **Attack Items** : Total Vanishing + Pandemonium + Demon's Gate (one-shot Erase)
+  - **Repeat Items** : umbrella reusable consumables (Healing/Spell/Effect subsets)
+    À reconcilier `items/consumables.md` (à créer) taxonomy items 4-5 categories canon distinctes. Source: idem.
+
+- [ ] ⭐ **🆕 Body Purifier purchasable 20 gold all shops canon ⭐** — Pattern Effect Items purchasable canon distinct Spell Items Attack Ball drop-only. À documenter `items/consumables.md` (à créer) Body Purifier price 20 gold + purchasability. Pattern Effect Items canon : generally purchasable shops (vs Spell Items drop-only). Source: idem.
+
+- [ ] **🆕 ~5 minutes farming Body Purifier canon ⭐** — Cohérent Very common encounter rate Death Frontier. Pattern farming time canon. Source: idem.
+
+- [ ] **🆕 Canbria Dayfly JP stats confirmés ⭐** — HP US 520 / JP **650** (+25% pattern systematic) + Gold US 30 / JP **10** (÷3 pattern). Damia adopt JP : HP 650 / Gold 10. Cohérent décision projet adopt JP. Source: idem.
+
+- [ ] **🆕 Stats divergences Canbria Dayfly wiki vs fandom ⚠️** :
+  - P. Attack : wiki 58 vs fandom **65** (+12%) — fandom higher probable JP closer
+  - M. Attack : wiki 76 vs fandom **86** (+13%) — idem
+    → Damia adopt fandom 65/86 probable. Source: comparaison.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

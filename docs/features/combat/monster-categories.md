@@ -10,6 +10,33 @@
 
 🟢 **Canon documenté wiki tier 2** — taxonomy fixée officielle.
 
+## ⭐ Décision Damia — adopter stats JP canon ⭐
+
+**Décision projet Damia** : adopter les **stats JP canon** (vs US/EU) pour Damia. Pattern JP +25% HP / ÷3 Gold systématique = **mob/boss plus challenging** = **gameplay action plus intéressant** (cohérent vision Damia action 2D iso PixiJS).
+
+⚠️ **Décision per-mob / per-boss case-by-case** : certains ennemis garderont US si JP problématique balancing. À évaluer ingestion finale + playtest.
+
+### Impact data-model
+
+```ts
+type MonsterStats = {
+  hp: number; // JP value canon Damia (default)
+  hpUS?: number; // US/EU value reference (fallback case-by-case)
+  gold: number; // JP value canon Damia
+  goldUS?: number; // US/EU reference
+  // ... autres stats JP-prioritized
+};
+```
+
+### Pattern divergences canon JP vs US
+
+- **HP** : JP +25% systematic (Beastie Dragon US 336 / JP 420, Berserk Mouse US 2 / JP 4, Berserker US 400 / JP 500, etc.)
+- **HP extrême** : Imago US 12k / JP 20k (+67%), Melbu Frahma US 42k / JP 60k (+43%), Belzac US 18k / JP 25k (+39%)
+- **Gold** : JP ÷3 systematic (Berserk Mouse US 3 / JP 1, Berserker US 15 / JP 5)
+- **Stats AT/MAT** : occasional fandom higher (probable JP closer)
+
+→ Pattern Damia : **stats JP prioritized** = mob/boss hits harder + HP plus haut + Gold plus rare = **gameplay action plus dur + grind plus rewarding**.
+
 ## Definition canon Boss
 
 > Encountered only once through scripted events, Bosses are powerful foes immune to all status ailments and carry enough narrative weight to standout from typical enemies. While most Bosses must be defeated to progress the story, **optional Bosses** instead provide extra side stories or rewards.

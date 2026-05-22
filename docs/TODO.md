@@ -2671,6 +2671,36 @@
 
 - [ ] **🆕 Bomb Star boss MTNS Disc 4 NEW ⭐** — No Element, 1600 HP, 120 AT. À documenter `bosses/Bomb Star.md` (à créer). Source: idem.
 
+### ⭐ DÉCISION PROJET DAMIA — adopter stats JP canon (case-by-case)
+
+- [ ] ⭐ **🆕 DÉCISION CANON Damia : adopter stats JP** ⭐ MAJEUR — Pour Damia (action 2D iso PixiJS), adopter les **stats JP canon** (vs US/EU) car JP +25% HP / ÷3 Gold systematic = **gameplay action plus challenging + grind plus rewarding**. **Décision case-by-case** par ennemi : certains ennemis garderont US si JP problématique balancing. À évaluer per-mob/per-boss ingestion finale + playtest. À implémenter data-model :
+
+  ```ts
+  type MonsterStats = {
+    hp: number; // JP value canon Damia (default)
+    hpUS?: number; // US/EU value reference (fallback)
+    gold: number; // JP value canon
+    goldUS?: number; // US/EU reference
+  };
+  ```
+
+  Documenter `combat/monster-categories.md` (déjà ajusté). Source: décision user 2026-05-22.
+
+- [ ] **🆕 Validation JP stats per-mob/per-boss canon ⭐** — Procédure case-by-case : pour chaque mob/boss ingéré, valider si JP canon adopt ou US fallback. Pattern systematic JP +25% HP / ÷3 Gold à respecter par défaut. Examples cases potentiellement problématiques :
+  - **Imago JP 20k HP** vs US 12k (+67% extrême) — possible OK action gameplay
+  - **Belzac JP 25k HP** vs US 18k (+39%) — boss Optional Vellweb, JP OK probable
+  - **Melbu Frahma JP 60k HP** vs US 42k (+43%) — final boss, JP OK gameplay narrative
+  - **Faust JP 32k HP** vs US 25.6k (+25%) — JP standard pattern
+    → À valider par mob/boss ingestion alphabetical. Source: idem.
+
+- [ ] **🆕 Cross-reference docs canon Damia adopt JP stats ⭐** — Mettre à jour tous mobs/bosses docs existing avec note "Damia adopte stats JP par défaut" :
+  - `mobs/Beastie Dragon.md` : HP US 336 → **JP 420** Damia
+  - `mobs/Berserk Mouse.md` : HP US 2 → **JP 4** Damia
+  - `mobs/Berserker.md` : HP US 400 → **JP 500** Damia, Gold US 15 → **JP 5** Damia
+  - `mobs/Aqua King.md` / `mobs/Air Combat.md` / `mobs/Arrow Shooter.md` / `mobs/Assassin Cock.md` / `mobs/Baby Dragon.md` / `mobs/Basilisk.md` / `mobs/Blue Bird.md`
+  - `bosses/*.md` toutes existing docs
+    À refléter "Stats canon (JP adopté)" sections ⭐. Source: décision projet.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

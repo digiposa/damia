@@ -3036,6 +3036,32 @@
   - M. Attack : wiki 76 vs fandom **86** (+13%) idem
     → Damia adopt fandom higher probable JP closer. Source: comparaison.
 
+### Bosses / Commander (Dual-classification Boss Seles + Minor Marshland Disc 1 — Power Up boss mechanic NEW + HP recovers + Instant Death Immunity Mob passive + Attack Ball drop confirme Spell Item canon + Escape 100% Mob NEW)
+
+- [ ] ⭐ **🆕 Dual-classification Commander canon MAJEUR ⭐** — Same NPC role/title, different encounter context determines classification : **Commander (Seles) = Boss** (Counter 0, all 8 ✔, Power Up) / **Commander (Marshland) = Minor Enemy** (Counter 28, 4/4, Instant Death Immunity). Pattern unique TLoD canon NPC dual-role. À implémenter `EnemyType` per-encounter context Damia. Source: [`features/bosses/_sources/lod-wiki-commander.md`](features/bosses/_sources/lod-wiki-commander.md).
+
+- [ ] ⭐ **🆕 Power Up boss mechanic canon NEW MAJEUR ⭐** — Self-buff Auto Single-use : disables Sword Slash + enables Slash Twice + Burn Out 1.2× → 1.5× + Ignore Turn Order uses Slash Twice immediately. Trigger : Knights of Sandora defeated (story-canon). Pattern boss "ability transformation buff" canon. À implémenter `BossAbility { type: 'power-up'; disables; enables; modifies; postAction; ignoreTurnOrder }` data-model. ⚠️ Trivia : Commander's Power Up = ability enable (NOT Power modifier buff like standard Power Up canon) — pattern variants distincts canon. Source: idem.
+
+- [ ] ⭐ **🆕 HP recovers boss self-heal canon NEW ⭐** — Commander Seles : restores 30% (4) HP trigger HP < 51%. Pattern boss self-heal canon Disc 1. À implémenter `BossAbility { type: 'self-heal'; healPercent: 0.30; trigger: { hpBelow: 0.51 } }` data-model. Source: idem.
+
+- [ ] ⭐ **🆕 Instant Death Immunity Minor Enemy passive canon NEW MAJEUR ⭐** — Commander Marshland immune to Instant Death-proc (Can't Combat Weapons : Gladius / Brass Knuckle / Indora's Axe). Pattern Minor Enemy with passive canon (rare). Pattern thematic "officer rank higher tier immunity" canon. Cohérent canon Erase mechanic (Basilisk immune Total Vanishing / Demon's Gate / Can't Combat Weapons). À implémenter `MobPassive { type: 'instant-death-immunity' }` data-model. Source: idem.
+
+- [ ] ⭐ **🆕 Attack Ball 100% drop Commander Marshland confirme Spell Item canon ⭐** — Pattern Spell Item drop 100% boss-like sur Mob. Cohérent Bowling Snowfield Attack Ball drop pattern. Confirme **Attack Ball = Spell Item canon classification**. À documenter `items/consumables.md` (à créer) Attack Ball entry précis effect canon Fire/Magic ?. Source: idem.
+
+- [ ] ⭐ **🆕 Escape 100% Mob Commander Marshland canon NEW ⭐** — Minor Enemy escapable 100% (vs 30%/90% standard). Pattern thematic "scripted encounter player can flee" canon (cohérent Blue Bird Rare Monster Escape 100% pattern). À refléter spawn rules Damia canon flexible escape per-encounter. Source: idem.
+
+- [ ] **🆕 Burn Out 1.2× → 1.5× Fire-magic boss ability canon** — Boss Seles ability. Burn Out = canon name officiel (NOT ~ approximation) Fire-elemental magic 1.2× damage default → 1.5× post-Power Up. Pattern Attack Multiplier per-ability canon (cohérent `combat/damage-formula.md`). À implémenter ability `burnOut` Damia avec multiplier dynamic. **Burn Out = ability name shared with item drop canon** (cohérent pattern Spinning Gale Canbria Dayfly + autres). Source: idem.
+
+- [ ] **🆕 Stunning Hammer canon name officiel Commander Marshland ⭐** — Mob ability 100% Stun-inflict single target. M-AV reduces chance (standard mob pattern). À implémenter ability `stunningHammer` Damia. Source: idem.
+
+- [ ] **🆕 Stats divergence Commander Marshland wiki page vs wiki Bosses master ⚠️** — Page HP 128 vs Bosses master HP 132. Minor stats discrepancy à reconcilier. À investiguer Discord/Wulves source tier 1. Source: comparaison.
+
+- [ ] **🆕 Pattern boss self-modifier abilities canon ⭐** — Commander Power Up vs standard Power Up canon distinction : Power modifier buff (standard) vs ability enable (Commander variant). À documenter `combat/damage-modifiers.md` (à créer) — Power Up canon variants distincts. Pattern boss-specific mechanic variants canon. Source: idem.
+
+- [ ] **🆕 Visual canon Commander idle stance change Power Up ⭐** — Sprite/animation canon change post-Power Up. À refléter visual design Damia (idle animation transition canon). Source: idem.
+
+- [ ] **🆕 "Knights of Sandora defeated" story-canon Power Up trigger ⭐** — Boss Seles Power Up Auto trigger = when all Knights defeated party. Pattern story-canon condition trigger boss ability canon (cohérent Hero Competition + autres scripted events). À implémenter `BossCondition { type: 'allies-defeated' }` data-model. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

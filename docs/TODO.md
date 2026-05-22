@@ -3160,6 +3160,29 @@
 
 - [ ] **🆕 "Kill immediately after they steal" exploit canon Crafty Thief ⭐** — Player exploit : let Crafty Thief steal 50G → kill immediately → get Bastard Sword (30G value but stackable). Pattern thief mob exploit canon. À refléter mechanic Damia avec optional exploit availability. Source: idem.
 
+### Mobs / Crescent Bee (Wind Prairie Disc 1 — A-AV 20% NEW higher tier + Spinning Gale Spell Item drop confirme pattern canon + Recolor of Stinger canon Trivia)
+
+- [ ] **🆕 Crescent Bee canon data-model** — **Wind** element, HP 9 (JP ~11 à confirmer), AT 5, DF 100, MAT 5, MDF 100, SPD 60, **A-AV 20% ⭐ NEW higher tier**, M-AV 0%. Mob Prairie Disc 1 partners Vampire Kiwi + Mantis. À implémenter `mobs/crescent-bee.ts`. Source: [`features/mobs/_sources/lod-wiki-crescent-bee.md`](features/mobs/_sources/lod-wiki-crescent-bee.md).
+
+- [ ] ⭐ **🆕 A-AV 20% NEW higher tier canon MAJEUR ⭐** — Crescent Bee A-AV 20% (vs Crafty Thief 5%, Canbria Dayfly 10%, Blue Bird Rare Monster 50%). Pattern A-AV tier mapping étendu canon Damia : **0% / 5% / 10% / 20% / 50%**. Pattern thematic "flying bee evasive" canon. À documenter `combat/damage-formula.md` A-AV tier mapping canon. À investiguer autres entities A-AV 20% canon. Source: idem.
+
+- [ ] ⭐ **🆕 Spinning Gale Spell Item drop confirme ability + drop shared name pattern canon NEW MAJEUR ⭐⭐** — Crescent Bee drops Spinning Gale Spell Item 8%. **Spinning Gale = Spell Item canon confirmed** (cohérent ability Canbria Dayfly 1.5× Wind magic). **Pattern récurrent canon : ability name = Spell Item drop name** :
+  - **Burn Out** : ability Commander Seles + Spell Item drop Commander Seles
+  - **Spinning Gale** : ability Canbria Dayfly + Spell Item drop Crescent Bee
+    À documenter `items/consumables.md` (à créer) Spinning Gale Spell Item Wind 1.5× magic damage entry. Pattern canon "ability = item" Damia. Source: idem.
+
+- [ ] **🆕 Spinning Gale shared ability cross-mob canon ⭐** — Same canon ability Canbria Dayfly (Disc 4) + Crescent Bee (Disc 1). Pattern Wind insect shared ability canon. À implémenter ability `spinningGale` Damia référence cross-mob. À investiguer autres mobs Wind canon utilisent Spinning Gale. Source: idem.
+
+- [ ] ⭐ **🆕 Recolor of Stinger Barrens canon NEW Trivia ⭐** — Crescent Bee model = recolor of Stinger (Barrens Disc 2 mob). Pattern visual reuse mob TLoD récurrent (cohérent Assassin Cock/Fowl Fighter, Plague Rat/Berserk Mouse, Wyvern/Air Combat). À documenter `mobs/Stinger.md` (à créer) — Barrens Disc 2 mob, Crescent Bee model source canon. Source: idem.
+
+- [ ] **🆕 Vampire Kiwi + Mantis NEW mobs canon Prairie partners ⭐** — Both Prairie Disc 1 mobs canon. À documenter `mobs/Vampire Kiwi.md` + `mobs/Mantis.md` (à créer). Pattern Prairie ecosystem canon Disc 1. Source: idem.
+
+- [ ] ⭐ **🆕 Prairie 3 World Map roads hub canon Disc 1 ⭐** — Prairie = hub Disc 1 transit canon : **Prairie → Intersection** + **Prairie → Forest** + **Prairie → Limestone Cave** roads. Pattern central hub canon (cohérent post-Forest Seles area + pre-Hellena Prison). À documenter `locations/Prairie.md` (à créer) — Disc 1 hub canon + 3 connecting roads canon. Source: idem.
+
+- [ ] **🆕 Escape rate 80% Prairie Disc 1 canon ⭐** — Pattern early Disc 1 escape rate canon (vs Forest 90% / Mountain 30% / Home of Gigantos 40%). Pattern Disc 1 player learning curve canon. À documenter `combat/escape-mechanic.md` (à créer) per-location escape rates canon. Source: idem.
+
+- [ ] **🆕 ~Needle Prick canon name (community) Crescent Bee** — Wiki community approximation > 50% phase ability (1× phys). Pattern thematic "bee stinger" canon. Fandom canon name à investiguer ingestion future. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

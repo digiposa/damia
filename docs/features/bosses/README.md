@@ -8,7 +8,8 @@
 
 Référence canonique stats complète 75+ bosses Disc 1-4 :
 
-- [`_sources/lod-wiki-bosses-master-table.md`](./_sources/lod-wiki-bosses-master-table.md) — wiki LoD Bosses master page verbatim (taxonomy canon + stats Tableau complet)
+- 🥈 [`_sources/lod-wiki-bosses-master-table.md`](./_sources/lod-wiki-bosses-master-table.md) — wiki LoD Bosses master page verbatim (taxonomy canon + stats Tableau complet)
+- 🥉 [`_sources/fandom-bosses-master.md`](./_sources/fandom-bosses-master.md) — fandom Bosses master roster verbatim (95+ entries avec NEW boss entries fandom-only : Bomb Star / Cleone / Crafty Thief boss / Dark Doel 3-phase / Drake minions / Gangster boss / Ghost Knight / Guftas / Imago multi-phase / Sandora Soldier various / Scarred Super Virage Forbidden Land / Shirley 3-fight / Wounded Virage / etc. + US/JP HP divergences pattern systematic + Two types canon Minor/Major Bosses + Escape disabled canon + No respawn canon)
 
 ⭐ **Taxonomy canon officielle TLoD** (cohérent [`../combat/monster-categories.md`](../combat/monster-categories.md)) :
 

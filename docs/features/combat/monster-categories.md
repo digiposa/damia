@@ -73,10 +73,21 @@
 
 - **Encounter type** : scripted (story event OR optional side trigger)
 - **Status Immunity** : all 8 ✔ systematic (boss-tier)
+- **Escape disabled** ⭐ canon fandom — `Escape command disabled boss fights`
+- **No respawn** ⭐ canon fandom — pattern same boss in same circumstances impossible
 - **Susceptible Total Vanishing/Pandemonium** : ❌ NO (probable — Bosses immune Erase Attack Items)
 - **Narrative weight** : story-relevant entity
 - **Reward** : EXP variable (Disc 1 ~300 → Disc 4 final 0 Melbu Frahma to 20k Magician Faust Optional) + Gold + drops parfois 100% boss-locked
 - **Multi-part bosses canon** : Virage (Head/Body/Arm), Divine Dragon (Cannon/Ball), Polter (Helm/Armor/Sword), Caterpillar (forme 3-phase), Michael (+ Core)
+
+### Two types canon ⭐ MAJEUR (fandom clarification)
+
+| Type           | Caractéristique canon                                            | Examples                                                            |
+| -------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------- |
+| **Minor Boss** | Drop Gold (small amount)                                         | Fruegel Hellena Breakout (20 Gold), Sandora Elite (50), Drake (100) |
+| **Major Boss** | Big part of story line, more challenging, **lots of Experience** | Faust 20k EXP, Divine Dragon 10k EXP, Zieg Feld 20k EXP             |
+
+⚠️ **Exceptions canon** : **Hero Competition contestants + Crafty Thief = Minor Bosses sans Gold drop** (0 Gold) — pattern exception fandom.
 
 ### Required vs Optional canon
 
@@ -94,14 +105,24 @@
 
 > For enemies who appear in Boss encounters but are **neither Minor Enemies nor Bosses**, see **Boss Extras**.
 
-### Pattern hypothesis canon
+⚠️ **Terminology divergence wiki vs fandom canon** :
 
-- Pattern adds/companions appearing dans boss fights
-- Distinct des multi-part bosses (Virage pieces sont Bosses, pas Boss Extras)
-- À investiguer Discord/Wulves tier 1 — examples possibles :
-  - Adds spawned by bosses (mobs apparaissant pendant boss fight) ?
-  - Background entities boss arenas ?
-- ⚠️ **Damia TODO** : ingester `bosses/_sources/lod-wiki-boss-extras.md` page si existe wiki
+- **Wiki tier 2** : "Boss Extras" = 3ème catégorie distincte ("neither Minor Enemy nor Boss")
+- **Fandom tier 3** : "boss minions, even though they are substantially weaker than their boss, **are counted as bosses and not as regular monsters**"
+- → **Damia adopt fandom interpretation** : boss minions = subset of Bosses (simpler model). "Boss Extras" wiki = peut-être autre concept (interactable objects in boss arenas, e.g. Drake's Wire Net, Volcano Ball) — à investiguer.
+
+### Pattern boss minions canon (fandom interpretation adopted)
+
+- Boss minions = Bosses category subset, classified avec their parent boss
+- Examples canon fandom :
+  - **Drake the Bandit's Wire Net + Bursting Bomb** (Drake fight minions)
+  - **Fire Bird's Volcano Ball** (summon)
+  - **Hellena Warden (Fruegel minion)** + **Senior Warden (Fruegel fight)**
+  - **Ghost Knight** (Ghost Commander minion)
+  - **Windigo's Snow Cannon** (Windigo minion)
+  - **Melbu Frahma's Tentacle + Monster (boss summon)** (final minions)
+  - **Drake the Bandit's Wire Net + Bursting Bomb** (weapons-as-targets)
+- À investiguer wiki tier 2 page Boss Extras si existe — peut-être concept différent
 
 ## Unique Monsters (Jars) — catégorie SÉPARÉE distincte Rare Monster canon ⭐
 

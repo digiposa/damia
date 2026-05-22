@@ -2593,6 +2593,84 @@
   - **Dragoon Stones** Disc 1 (Silver/Red-Eye/Darkness) + Vellweb Disc 3 (Golden/Blue Sea/Violet/Jade)
     À refléter `items/equipment.md` boss-locked weapon/accessory sources canon. Source: idem.
 
+### Bosses / fandom master complement — NEW boss entries (Bomb Star/Cleone/Crafty Thief boss/Dark Doel 3-phase/Gangster/Ghost Knight/Guftas/Imago multi-phase/Rodriguez/Sandora Soldier/Scarred Super Virage Forbidden Land/Senior Warden/Shirley 3-fight/Wounded Virage/etc.) + Escape disabled + No respawn + Two types Minor/Major + US/JP divergences
+
+- [ ] ⭐ **🆕 Definition canon Boss fandom complement ⭐ MAJEUR** :
+  - **Escape cannot be used during boss fight** canon NEW
+  - **Bosses do not respawn** canon NEW
+  - **Same boss in same circumstances impossible** (unique encounter)
+  - Pattern enforce data-model `BossFight.escapeDisabled: true` + `Boss.spawnRules.respawnable: false`
+  - Source: [`features/bosses/_sources/fandom-bosses-master.md`](features/bosses/_sources/fandom-bosses-master.md).
+
+- [ ] ⭐ **🆕 Two types canon Bosses fandom ⭐** : **Minor Boss** (drops Gold) vs **Major Boss** (story line + lots EXP). Exceptions canon : **Hero Competition + Crafty Thief = Minor Boss sans Gold** (0 Gold). À implémenter `BossTier = 'minor' | 'major'` + flag exception. Source: idem.
+
+- [ ] ⭐ **🆕 Boss minions canon clarification fandom** : "boss minions counted as bosses, not regular monsters". Adopt fandom interpretation : Damia `MonsterCategory` boss minions = subset Boss (vs wiki "Boss Extras" 3ème catégorie). À reconcilier `combat/monster-categories.md` (déjà ajusté). Source: idem.
+
+- [ ] ⭐ **🆕 NEW boss entries fandom-only ⭐ MAJEUR** :
+  - **Bomb Star** (Moon That Never Sets, No Element, 1600 HP) — boss MTNS Disc 4 NEW
+  - **Cleone** (Aglis, Water, 1360 HP) — boss Aglis Disc 4 NEW
+  - **Crafty Thief boss** (Barrens, Dark, 320 HP) ⭐ — wiki classifie mob ; fandom = boss canon
+  - **Dark Doel 3-phase** : Dark Doel + Light Sword + Shadow Blade (Moon That Never Sets) ⭐ multi-phase NEW
+  - **Drake minions** : Wire Net (120 HP) + Bursting Bomb (70 HP) ⭐ NEW
+  - **Fire Bird (Volcano Ball)** summon minion ⭐ NEW
+  - **Gangster boss** (Home of Gigantos, Earth, 280 HP) — wiki mob ; fandom boss
+  - **Ghost Knight** (Phantom Ship, Dark, 200 HP) ⭐ minion Ghost Commander
+  - **Guftas** (Hellena Prison, Dark, 560 HP) ⭐ NEW Disc 1
+  - **Hellena Warden (Fruegel minion)** ⭐ NEW
+  - **Imago multi-phase** : Imago + (Caterpillar) + (Pupa) 3 forms canon ⭐
+  - **Melbu Frahma (Tentacle) + Monster (boss summon)** ⭐ NEW final minions
+  - **Rodriguez** (Hellena Prison, Wind, 400 HP) ⭐ NEW
+  - **Sandora Soldier ×3** : Hoax Fire + Marshlands Fire + Marshlands Water ⭐ NEW
+  - **Scarred Super Virage** (Forbidden Land = Kadessa) Head/Body/Arm ⭐ NEW canon name
+  - **Senior Warden (Fruegel fight)** ⭐ NEW Hellena Shana rescue
+  - **Shirley 3-fight** : Shirley + Lavitz + Shana ⭐ NEW canon ("essence fights")
+  - **Wounded Virage** (Volcano Villude) Head/Body/Arm — wiki "Virage" = "Wounded Virage" canon name fandom
+  - **Windigo Snow Cannon** ⭐ NEW minion Windigo
+    → À implémenter individual boss data-models + à documenter `bosses/*.md` per-boss. Source: idem.
+
+- [ ] ⭐ **🆕 "Forbidden Land" = Kadessa alternative canon name ⭐** — Fandom location name vs wiki "Kadessa". Same place — Wingly hidden city Disc 3. À refléter `locations/Kadessa.md` aliases canonical. Source: idem.
+
+- [ ] ⚠️ **🆕 "Prison Island" location canon NEW Lenus 2nd fight** — Fandom "Prison Island" vs wiki "Undersea Cavern". Possible same place different name OR multiple Lenus encounters. À investiguer Discord. Source: idem.
+
+- [ ] ⚠️ **🆕 Stats divergences MASSIVES wiki vs fandom Bosses ⭐** :
+  - Archangel : wiki 3000 HP vs fandom **3200** + AT/MAT divergences (53/76 vs 60/86)
+  - Belzac : wiki 16000 vs fandom **18000** + AT 178 vs 200
+  - Damia : wiki 9000 vs fandom **11200** + AT 116 vs 130
+  - Kanzas : wiki 12000 vs fandom **14400** + AT 134 vs 150
+  - Syuveil : wiki 10000 vs fandom **12800** + AT 152 vs 170
+  - Faust : wiki 25600 vs fandom **24000** ⚠️ rare downward + AT 125 vs 140
+  - Kongol BC : wiki 1000 vs fandom **1200** + AT 32 vs 36
+  - Imago : HP match + AT 100 vs 140 + MAT 134 vs 150 divergence
+  - Melbu Frahma : HP match + AT 107 vs 120 + MAT 80 vs 90
+  - Pattern : fandom +10-30% higher most stats (probable JP values closer). Wiki tier 2 prévaut canonical Damia.
+    Source: comparaison.
+
+- [ ] **🆕 US vs JP HP divergences pattern systematic Bosses canon ⭐** — Fandom indique stats parentheses = JP version. Pattern JP +25% systematic (cohérent mobs Beastie Dragon/Berserk Mouse pattern). Examples : Melbu Frahma 42k US / 60k JP (+43%) / Belzac 18k US / 25k JP / Imago 12k US / 20k JP (+67% extrême). À documenter `combat/jp-vs-us-stats.md` (à créer). Source: idem.
+
+- [ ] **🆕 Element terminology fandom abbreviations** — Fandom utilise "Dark" (wiki "Darkness") + "No Element" (wiki "Non-Elemental"). Damia adopt wiki canonical full names. Source: idem.
+
+- [ ] **🆕 Drake the Bandit's Wire Net + Bursting Bomb canon ⭐** — Boss minions/weapons-as-targets Drake fight. Pattern boss interactive objects targetable canon. Wire Net 120 HP / Bursting Bomb 70 HP. À documenter `bosses/Drake the Bandit.md` (à créer) avec multi-target fight. Source: idem.
+
+- [ ] **🆕 Imago multi-phase 3-form canon ⭐** — Imago (main 12k HP) + Imago (Caterpillar form 6k HP) + Imago (Pupa form 2.8k HP) — pattern transformation reverse-cycle canon Disc 4 Divine Tree. Cohérent existing Caterpillar 3-phase doc. À refléter `bosses/Caterpillar.md` (à créer) + `bosses/Imago.md`. Source: idem.
+
+- [ ] **🆕 Dark Doel 3-phase canon Moon That Never Sets Disc 4 ⭐** — Dark Doel (1500 HP) + Dark Doel (Light Sword) (1000 HP) + Dark Doel (Shadow Blade) (1000 HP). Pattern multi-form ghostly Doel canon MTNS. À documenter `bosses/Dark Doel.md` (à créer). Source: idem.
+
+- [ ] **🆕 Shirley 3-fight canon Shrine of Shirley Disc 1 ⭐** — Shirley main (640 HP) + Shirley (Lavitz) (140 HP) + Shirley (Shana) (140 HP). Pattern "Lavitz/Shana essence fights" canon — to investigate mechanic exact. À documenter `bosses/Shirley.md` (à créer). Source: idem.
+
+- [ ] **🆕 Sandora Soldier ×3 boss versions canon ⭐** — Hoax Fire (40 HP) + Marshlands Fire (55 HP) + Marshlands Water (66 HP). Pattern Sandora military boss variants canon. À cross-référer `lore/sandora-military.md` (à créer). Source: idem.
+
+- [ ] **🆕 Hellena Warden + Senior Warden boss-mob hybrid canon ⭐** — Hellena Warden (Fruegel minion) 9 HP + Senior Warden (Fruegel fight) 24 HP. Pattern minor boss-mob hybrid hellena warden NPCs. À cross-référer `mobs/Hellena Warden.md` (à créer) — existing in counter list. Source: idem.
+
+- [ ] **🆕 Rodriguez boss Hellena Prison Disc 1 ⭐** — Wind, 400 HP. Probable boss Hellena Prison rescue Shana arc. À documenter `bosses/Rodriguez.md` (à créer). Source: idem.
+
+- [ ] **🆕 Guftas boss Hellena Prison Disc 1 ⭐** — Dark, 560 HP. À documenter `bosses/Guftas.md` (à créer). Source: idem.
+
+- [ ] **🆕 Wounded Virage canon name vs wiki "Virage" Volcano Villude Disc 1 ⭐** — Fandom précise "Wounded" (cohérent thematic Volcano Villude Virage Disc 1 partially destroyed). Adopt fandom canon name. Source: idem.
+
+- [ ] **🆕 Cleone boss Aglis Disc 4 NEW ⭐** — Water, 1360 HP. À investiguer lore Aglis Disc 4 (cohérent Aglis Lenus reveal). À documenter `bosses/Cleone.md` (à créer). Source: idem.
+
+- [ ] **🆕 Bomb Star boss MTNS Disc 4 NEW ⭐** — No Element, 1600 HP, 120 AT. À documenter `bosses/Bomb Star.md` (à créer). Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

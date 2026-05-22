@@ -15,10 +15,11 @@
 > **Sources** :
 >
 > - 🥈 [`_sources/lod-wiki-cactus.md`](./_sources/lod-wiki-cactus.md) — wiki LoD (Earth Death Frontier Disc 4 + stats balanced AT=MAT/DF=MDF + Status 4/4 standard + Counter 16 Minor NEW + Recovery Ball 15% NEW item + Contact encounter + 2-phase AI ~Bite/~Thousand Needles 3× phys + Cactus ×2 unique formation)
+> - 🥉 [`_sources/fandom-cactus.md`](./_sources/fandom-cactus.md) — fandom (⭐ appearance "green spiky plants NOT rooted glide with leaves + flytrap-like maw" MAJEUR + Base Dive / Needle Burst canon names officiels + ⭐ Recovery Ball = "healing item" NEW canon (vs Attack Ball "spell item") taxonomy clarification + HP JP 400 / Gold JP 12 confirme pattern + Very common encounter + "No magical attacks/status" pure physical canon)
 
 ## Statut
 
-🟡 **Draft post-ingestion wiki LoD** — fandom à ingérer pour cross-check si page existe.
+🟢 **Canon documenté wiki + fandom** — Damia adopt JP stats (HP 400 / Gold 12).
 
 ## Identity canon
 
@@ -28,18 +29,19 @@
 - **Disc** : Disc 4 (Death Frontier Endiness center desert area)
 - **Pattern symbolique** : ⭐ **Stats symmetric balanced** + ⭐ **Counter 16 Minor NEW** + ⭐ **Contact visible mob encounter**
 
-## Stats canon ⚠️ Damia adopt JP (à confirmer fandom)
+## Stats canon ⚠️ Damia adopt JP ⭐
 
-| Stat | Value (US)      | Damia canon                           | Notes                            |
-| ---- | --------------- | ------------------------------------- | -------------------------------- |
-| HP   | 320             | JP probable ~400 (+25%) — à confirmer | Fallback US 320 si fandom silent |
-| AT   | **67**          | 67                                    | Equal MAT (rare balanced)        |
-| DF   | **150** ⚠️ high | 150                                   | DF anti-physical high            |
-| MAT  | **67**          | 67                                    | Equal AT                         |
-| MDF  | **150** ⚠️ high | 150                                   | MDF anti-magic high              |
-| SPD  | 60              | 60                                    |                                  |
-| A-AV | 0%              | 0%                                    |                                  |
-| M-AV | 0%              | 0%                                    |                                  |
+| Stat | Wiki US  | Fandom US | **Damia (JP)**                             | Notes |
+| ---- | -------- | --------- | ------------------------------------------ | ----- |
+| HP   | 320      | 320       | **400** ✓ JP confirmed fandom +25% pattern |
+| AT   | 67       | **75**    | **75** (fandom higher, possible JP)        |
+| DF   | 150 high | 150       | **150**                                    |
+| MAT  | 67       | **75**    | **75** (fandom higher, symétrique AT)      |
+| MDF  | 150 high | 150       | **150**                                    |
+| SPD  | 60       | 60        | **60**                                     |
+| A-AV | 0%       | 0%        | **0%**                                     |
+| M-AV | 0%       | 0%        | **0%**                                     |
+| Gold | 36       | 36        | **12** ✓ JP confirmed fandom ÷3 pattern    |
 
 → Pattern "balanced symmetric tank" canon ⭐ : AT=MAT=67 + DF=MDF=150 = unique pattern. Mob anti-physical AND anti-magic high défenses, offensive symétrique. Pattern Disc 4 Death Frontier mob design "tough generalist" canon (vs Beastie Dragon DF high MAT mod / Bowling DF high MDF low).
 
@@ -199,6 +201,53 @@ Pattern mob standard : 4 immune (Petrify/Bewitch/Arm Block/Dispirit) / 4 vulnera
 - [`../combat/monster-categories.md`](../combat/monster-categories.md) — Minor Enemy standard pattern
 - [`../combat/encounter-mechanics.md`](../combat/encounter-mechanics.md) (à créer) — Contact-visible-mob NEW vs Contact-arrows + Random
 - [`../items/consumables.md`](../items/consumables.md) (à créer) — Recovery Ball Spell Item entry NEW
+
+## Cross-check fandom (compléments + divergences)
+
+**Confirmations utiles fandom** :
+
+- **Earth + Death Frontier location** confirmé
+- **HP US 320 / JP 400** ✓ confirme JP +25% pattern (Damia adopt 400)
+- **Gold US 36 / JP 12** ✓ confirme JP ÷3 pattern (Damia adopt 12)
+- **DF 150 / MDF 150 / SPD 60** match
+- **Recovery Ball 15% drop** confirmé
+- **Counter Yes** confirmé
+- **Cactus ×2 unique formation** confirmé
+- **Very common encounter rate** canon
+
+**NEW canon fandom-only** ⭐ :
+
+- ⭐ **Appearance canon MAJEUR** : "green spiky plants **NOT rooted like normal cacti**, **glide with large leaves**, **biting target with flytrap-like maw**" — pattern thematic "mobile gliding flytrap cactus hybrid" canon. NOT a normal cactus (naming misleading). À refléter sprite visual Damia : plant-mob-with-leaves NOT ball-shape.
+- ⭐ **Base Dive canon name officiel** (= wiki ~Bite community) — adopter fandom. Description "hovers + hops on target" cohérent gliding appearance.
+- ⭐ **Needle Burst canon name officiel** (= wiki ~Thousand Needles community) — adopter fandom. Description "twirls + launches needles".
+- ⭐ **"No magical attacks or status ailments inflict capability"** canon — Cactus pure physical mob (MAT 75 stats but unused offensive)
+- ⭐ **"Guard effective"** strategy canon — mitigation Cactus damage
+- ⭐ **~10 minutes farming Recovery Ball** canon (cohérent Very common encounter)
+- ⭐ **Recovery Ball = "healing item" canon NEW ⭐ MAJEUR** :
+  - Classification distinct Spell Item (Attack Ball Bowling)
+  - Pattern items taxonomy étendue : Healing Items / Spell Items / Attack Items / Repeat Items umbrella
+  - À reconcilier `items/consumables.md` (à créer) taxonomy items 3-4 categories canon
+
+**Divergences wiki vs fandom** :
+
+| Stat / Aspect                        | Wiki LoD              | Fandom           | Notes                                                     |
+| ------------------------------------ | --------------------- | ---------------- | --------------------------------------------------------- |
+| **HP US/EU**                         | 320                   | 320              | Match                                                     |
+| **HP JP**                            | (silent)              | **400**          | Fandom canon JP +25% pattern systematic — Damia adopt 400 |
+| **P. Attack**                        | 67                    | **75**           | ⚠️ DIVERGENCE +12% (fandom probable JP closer)            |
+| **M. Attack**                        | 67                    | **75**           | ⚠️ DIVERGENCE +12% (symétrique)                           |
+| **DF / MDF**                         | 150/150               | 150/150          | Match                                                     |
+| **SPD**                              | 60                    | 60               | Match                                                     |
+| **Gold US**                          | 36                    | 36               | Match                                                     |
+| **Gold JP**                          | (silent)              | **12**           | Fandom canon JP ÷3 pattern — Damia adopt 12               |
+| **~Bite / Base Dive**                | ~Bite                 | **Base Dive**    | Fandom canon name officiel — adopter                      |
+| **~Thousand Needles / Needle Burst** | ~Thousand Needles     | **Needle Burst** | Fandom canon name officiel — adopter                      |
+| **Damage HP-conditional**            | 1× / 3× phys explicit | "medium" both    | ⚠️ Wiki tier 2 prévaut HP-conditional escalation canon    |
+| **Recovery Ball classification**     | (drop only)           | **healing item** | Fandom NEW canon classification distinct Spell Item       |
+
+→ **Damia adopt JP stats** (HP 400 / Gold 12) ✓ confirmé fandom.
+→ **Fandom canon names + appearance + Recovery Ball healing item classification** prévalent.
+→ **Wiki tier 2 prévaut pour AI HP-conditional damage** (1× / 3× phys explicit vs fandom narrative imprécis).
 
 ## Gaps / TODO
 

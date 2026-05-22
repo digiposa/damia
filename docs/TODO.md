@@ -2766,6 +2766,36 @@
 
 - [ ] **🆕 ~Thousand Needles canon name (community) Cactus** — Wiki ~Thousand Needles (community), pattern thematic "cactus shoots needles" — possible Final Fantasy "1000 Needles" reference. Fandom canon name à investiguer ingestion future. Source: idem.
 
+### Mobs / Cactus fandom complement — Appearance gliding flytrap canon + Base Dive/Needle Burst canon names + Recovery Ball "healing item" taxonomy clarification + JP stats confirmés
+
+- [ ] **🆕 Cactus appearance canon MAJEUR ⭐** — "Green spiky plants **NOT rooted like normal cacti**, **glide with large leaves**, **biting target with flytrap-like maw**". Pattern thematic "mobile gliding flytrap cactus hybrid" canon — Audrey II / Venus flytrap inspired probable. NOT a normal cactus (naming misleading). À refléter sprite visual Damia : plant-mob-with-leaves NOT ball-shape. Source: [`features/mobs/_sources/fandom-cactus.md`](features/mobs/_sources/fandom-cactus.md).
+
+- [ ] **🆕 Base Dive canon name officiel (vs wiki ~Bite community) Cactus ⭐** — Description "hovers + hops on target" cohérent gliding appearance. Adopter fandom canon > 50% phase. Source: idem.
+
+- [ ] **🆕 Needle Burst canon name officiel (vs wiki ~Thousand Needles community) Cactus ⭐** — Description "twirls + launches needles". Adopter fandom canon ≤ 50% phase. Source: idem.
+
+- [ ] **🆕 Cactus "No magical attacks/status ailments" pure physical canon** — Cactus MAT 75 stats but no magic offensive uses ; no status inflict capability. Pattern pure physical mob canon. Pattern à refléter mob abilities data-model. Source: idem.
+
+- [ ] **🆕 "Guard effective" strategy canon Cactus** — Mitigation Cactus damage via Guard. Cohérent Bowling "Defend Charging Spirit" pattern. À documenter `combat/strategy.md` (à créer) Guard mitigation pattern. Source: idem.
+
+- [ ] **🆕 ~10 minutes farming Recovery Ball Cactus canon** — Cohérent Very common encounter rate Death Frontier. Pattern farming time canon. Source: idem.
+
+- [ ] ⭐ **🆕 Recovery Ball = "healing item" canon NEW MAJEUR — taxonomy items clarification ⭐** — Fandom classifie Recovery Ball comme "healing item" distinct **"spell item"** Attack Ball (Bowling). Pattern items canon taxonomy étendue :
+  - **Healing Items** : Recovery Ball (heal HP) + Healing Potion + Spirit Potion + autres potions
+  - **Spell Items** : Attack Ball (cast offensive spell) + Detonating Ball ? + autres
+  - **Attack Items** : Total Vanishing + Pandemonium + Demon's Gate (one-shot Erase)
+  - **Repeat Items** : umbrella reusable consumables (Healing/Spell Items subset)
+    À reconcilier `items/consumables.md` (à créer) taxonomy items 3-4 categories canon distinctes. Source: idem.
+
+- [ ] **🆕 Cactus JP stats confirmés ⭐** — HP US 320 / JP **400** (+25% pattern systematic) + Gold US 36 / JP **12** (÷3 pattern systematic). Damia adopt JP : HP 400 / Gold 12. Cohérent décision projet adopt JP. Source: idem.
+
+- [ ] **🆕 Stats divergences Cactus wiki vs fandom ⚠️** :
+  - P. Attack : wiki 67 vs fandom **75** (+12%) — fandom higher
+  - M. Attack : wiki 67 vs fandom **75** (+12%) — symétrique AT=MAT confirmé 75
+    → Damia adopt fandom 75/75 probable (pattern fandom JP closer). Source: comparaison.
+
+- [ ] **🆕 Damage descriptions divergence wiki vs fandom Cactus ⚠️** — Wiki tier 2 explicit "1× phys / 3× phys HP-conditional" / Fandom imprécis "medium both abilities". Wiki tier 2 prévaut HP-conditional escalation canon Damia. Pattern AI 2-phase explicit damage scaling canon. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

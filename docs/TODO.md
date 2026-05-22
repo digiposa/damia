@@ -3127,6 +3127,39 @@
 
 - [ ] **🆕 Gehrich Gang faction expanded canon ⭐** — Gehrich Gang Home of Giganto members canon : Berserker + Piggy + **Crafty Thief** + **Gangster** + (Mappi cross-Barrens) + Gehrich (leader). Pattern faction roster expanding canon. À documenter `lore/gehrich-gang.md` (à créer) — faction lore canon. Source: idem.
 
+### Bosses / Crafty Thief fandom complement — JP name + GLITCH canon documented + fandom canon ability names (Quick Knife/Gimme yr' gold!/Escape) + Pellet Spell Item purchasable 10G NEW + Counter quite often + Inventory 255 cap NEW
+
+- [ ] **🆕 Crafty Thief JP name クラフティシーフ (Kurafuti Shīfu) canon ⭐** — Direct translit "Crafty Thief". Pattern thief-themed mob naming canon. Source: [`features/bosses/_sources/fandom-crafty-thief.md`](features/bosses/_sources/fandom-crafty-thief.md).
+
+- [ ] ⚠️ **🆕 GLITCH canon documenté MAJEUR ⭐⭐** — Fandom documents : "When a Crafty Thief steals 50 gold from you, you may find you do NOT in fact receive said gold back as the text would have you believe. You will instead receive a Bastard Sword". **Pattern thief mob bug-feature canon** : game text suggests "get it back" but actually gives Bastard Sword. Wiki documents as canon mechanic, fandom reveals as **glitch**. À investiguer Damia : implémenter as canon mechanic (Bastard Sword compensation canon) OR canonical bug-feature reproduction ? À documenter `combat/glitches.md` (à créer) — canonical glitches TLoD canon (Crafty Thief Bastard Sword + autres possibles). Source: idem.
+
+- [ ] ⭐ **🆕 Fandom canon ability names Crafty Thief ⭐ MAJEUR** :
+  - **Quick Knife** (= wiki ~Cut community) — adopter fandom canon
+  - **Gimme yr' gold!** (= wiki "50G Stolen!" community) — adopter fandom canon NEW MAJEUR (casual narrative-style name preserved canonical)
+  - **Escape** (= wiki "Run away!") — adopter fandom canon récurrent (cohérent Blue Bird Rare Monster Escape canon + Berserk Mouse Run away! same ability)
+    À implémenter abilities Damia avec exact names canon. Pattern narrative-style ability name canon (NOT sanitized). Source: idem.
+
+- [ ] ⭐ **🆕 Pellet = "spell item" canon classification + purchasable 10G all shops canon NEW MAJEUR ⭐** — Fandom révèle Pellet = Spell Item canon (cohérent Attack Ball Bowling + Spinning Gale Canbria Dayfly Spell Item pattern). **Cheapest Spell Item canon Damia** (vs Body Purifier 20G). "Not worth farming" — drop 8% inefficient vs shop 10G. À documenter `items/consumables.md` (à créer) Pellet entry — Spell Item 10G shop canon + effect précis à investiguer. Source: idem.
+
+- [ ] **🆕 "Counter quite often" canon Crafty Thief ⭐** — Pattern Counter 28 actively-triggered canon (vs passive Counter tier). Pattern Counter behavior variable per-mob canon. À documenter `combat/additions.md` Counter behavior per-mob trigger frequency canon. Source: idem.
+
+- [ ] ⭐ **🆕 Inventory 255 items cap canon NEW ⭐** — Game item inventory limit 255 items canon. Pattern technical canon Damia : à décider Damia conserve limit 255 OR remove for QoL canon ? À documenter `inventory/inventory-cap.md` (à créer) — canon vs QoL decision. Source: idem.
+
+- [ ] **🆕 Pattern Home of Gigantos farming canon ⭐** — 3 valuable enemies canon : Berserker (Energy Girdle) + Gangster (Bandit's Ring) + Piggy (Sachet). **Crafty Thief = least valuable** (Pellet purchasable). Pattern farming-zone strategy canon : escape Crafty Thief encounters. À refléter `locations/Home of Gigantos.md` (à créer) farming-zone canon + escape strategy canon. Source: idem.
+
+- [ ] **🆕 "Less HP and faster" Mob Home of Gigantos transition canon ⭐** — Confirme dual-classification stats variant : Boss Extras HP 320/SPD 70 → Mob HP 200/SPD 80. Pattern Boss Extras tanky → Mob faster offensive canon. Source: idem.
+
+- [ ] **🆕 "Fork between locations in the Barrens" Mappi fight canon ⭐** — Narrative location canon Disc 2 Barrens. À refléter `locations/Barrens.md` (à créer) Mappi boss fight at fork location canon. Source: idem.
+
+- [ ] **🆕 Stats divergences Crafty Thief wiki vs fandom ⚠️** :
+  - P. Attack : wiki 30 vs fandom **36** (+20%)
+  - M. Attack : wiki 27 vs fandom **31** (+15%)
+    → Pattern fandom higher recurrent (probable JP closer). Source: comparaison.
+
+- [ ] **🆕 Encounter rate Very common Crafty Thief canon** — Cohérent Disc 3-4 mobs Very common pattern. Source: idem.
+
+- [ ] **🆕 "Kill immediately after they steal" exploit canon Crafty Thief ⭐** — Player exploit : let Crafty Thief steal 50G → kill immediately → get Bastard Sword (30G value but stackable). Pattern thief mob exploit canon. À refléter mechanic Damia avec optional exploit availability. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

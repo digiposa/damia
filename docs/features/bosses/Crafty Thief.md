@@ -13,10 +13,11 @@
 > **Sources** :
 >
 > - 🥈 [`_sources/lod-wiki-crafty-thief.md`](./_sources/lod-wiki-crafty-thief.md) — wiki LoD (dual-classification Boss Extras Barrens + Minor Home of Giganto + ⭐ Boss Extras canonical 4th category confirmé + Magic Sig Stone Vulnerability passive + 50G Stolen! + Bastard Sword drop + Cut with Knife post-trigger + Run away! + A-AV 5% + Pellet 8% drop + Contact arrows Home of Giganto + Gangster partner Gehrich Gang)
+> - 🥉 [`_sources/fandom-crafty-thief.md`](./_sources/fandom-crafty-thief.md) — fandom (⭐ JP name クラフティシーフ Kurafuti Shīfu + ⚠️ **GLITCH canon documenté** Bastard Sword instead of 50G return = bug-feature canon + fandom canon ability names : **Quick Knife / Gimme yr' gold! / Escape** + **Pellet = "spell item" purchasable 10G all shops** canon NEW + "Counter quite often" canon + **Inventory 255 items cap canon NEW** + Encounter Very common + HP JP 250 / Gold JP 6 confirmed + stats divergences fandom higher AT 36/MAT 31)
 
 ## Statut
 
-🟡 **Draft post-ingestion wiki LoD** — fandom à ingérer pour cross-check si page existe.
+🟢 **Canon documenté wiki + fandom** — divergences notées (stats AT/MAT + glitch documentation).
 
 ## Identity canon
 
@@ -270,6 +271,57 @@
 - [`../items/equipment.md`](../items/equipment.md) — Bastard Sword Dart weapon canon NEW
 - [`../mobs/Berserk Mouse.md`](../mobs/Berserk Mouse.md) — Run away! canon récurrent shared
 - [`../mobs/Blue Bird.md`](../mobs/Blue Bird.md) — Run away! Rare Monster shared canon
+
+## Cross-check fandom (compléments + divergences)
+
+**Confirmations utiles fandom** :
+
+- **Darkness + Home of Gigantos + Barrens locations** confirmed
+- **HP US 200 / JP 250** ✓ confirme JP +25% pattern (Damia adopt 250)
+- **Gold US 18 / JP 6** ✓ confirme JP ÷3 pattern (Damia adopt 6)
+- **EXP 50 + Pellet 8% drop** confirmed
+- **Counter Yes** confirmed
+- **Bastard Sword post-steal drop** confirmed
+- **Disc 2 Monsters category** ✅
+- **3 formations Home of Giganto** confirmed (solo / ×3 / + Berserker) — fandom omits Crafty Thief ×2 + Gangster formation 475 wiki
+
+**NEW canon fandom-only** ⭐ MAJEUR :
+
+- ⭐ **JP name クラフティシーフ (Kurafuti Shīfu) canon** — direct translit
+- ⭐ **GLITCH canon documented MAJEUR ⭐⭐** : Game text "get it back" but actually gives Bastard Sword instead of 50G. Pattern thief mob bug-feature canon. Wiki documents as canon mechanic, fandom reveals as **glitch**. À investiguer Damia : implémenter as canon mechanic (Bastard Sword compensation) OR canonical bug-feature ?
+- ⭐ **Pellet = "spell item" canon classification NEW** + **purchasable 10G all shops canon** — cheapest Spell Item canon (vs Body Purifier 20G)
+- ⭐ **Fandom canon ability names ⭐** :
+  - **Quick Knife** (= wiki ~Cut) — adopter fandom canon
+  - **Gimme yr' gold!** (= wiki "50G Stolen!") — adopter fandom canon (casual narrative-style canon name)
+  - **Escape** (= wiki "Run away!") — adopter fandom canon récurrent
+- ⭐ **"Counter quite often" canon ⭐** — Crafty Thief Counter 28 actively-triggered canon (pattern Counter behavior variable per-mob)
+- ⭐ **Inventory 255 items cap canon NEW** — game item inventory limit
+- ⭐ **Pattern Home of Gigantos farming canon** — 3 valuable enemies (Berserker/Gangster/Piggy) vs Crafty Thief least valuable
+- ⭐ **"Encounter rate Very common" canon Crafty Thief**
+- ⭐ **"Less HP and faster" canon Mob Home of Gigantos transition canon** — confirme dual-classification stats variant
+- ⭐ **"Fork between locations in the Barrens" Mappi fight canon** — narrative location canon
+
+**Divergences wiki vs fandom** :
+
+| Stat / Aspect                     | Wiki LoD                              | Fandom                             | Notes                                                                  |
+| --------------------------------- | ------------------------------------- | ---------------------------------- | ---------------------------------------------------------------------- |
+| **HP US/EU**                      | 200                                   | 200                                | Match Mob                                                              |
+| **HP JP**                         | (silent)                              | **250**                            | Fandom canon JP +25% pattern systematic — Damia adopt 250              |
+| **P. Attack**                     | 30                                    | **36**                             | ⚠️ DIVERGENCE +20% (fandom probable JP closer)                         |
+| **M. Attack**                     | 27                                    | **31**                             | ⚠️ DIVERGENCE +15%                                                     |
+| **Gold US**                       | 18                                    | 18                                 | Match                                                                  |
+| **Gold JP**                       | (silent)                              | **6**                              | Fandom canon JP ÷3 pattern — Damia adopt 6                             |
+| **~Cut / Quick Knife**            | ~Cut                                  | **Quick Knife**                    | Fandom canon name officiel — adopter                                   |
+| **50G Stolen! / Gimme yr' gold!** | "50G Stolen!"                         | **Gimme yr' gold!**                | Fandom canon name officiel — adopter (casual narrative style)          |
+| **Run away! / Escape**            | Run away!                             | **Escape**                         | Fandom canon name officiel — adopter (cohérent Blue Bird Escape canon) |
+| **Formations**                    | 4 (incl. Crafty Thief ×2 + Gangster)  | 3 (omit Gangster)                  | Wiki tier 2 prévaut — fandom narrative imprécis                        |
+| **Bastard Sword mechanic**        | "Defeating drops Bastard Sword" canon | **"GLITCH"** documented            | ⚠️ wiki canon mechanic vs fandom glitch interpretation — à investiguer |
+| **Pellet classification**         | "drops" générique                     | **"spell item" + purchasable 10G** | Fandom NEW canon classification + price                                |
+
+→ **Damia adopt JP stats** (HP 250 / Gold 6) ✓ confirmed.
+→ **Fandom canon names** (Quick Knife / Gimme yr' gold! / Escape) prévalent.
+→ **Wiki tier 2 prévaut** : formations complete + A-AV 5% + Boss Extras Barrens passive.
+→ **Glitch documentation à reconcilier canon Damia** : pattern mechanic canon vs bug-feature canon.
 
 ## Gaps / TODO
 

@@ -1,6 +1,8 @@
-# Blue Bird — Rare Monster Water World Map Disc 2
+# Blue Bird — Minor Enemy Rare Monster (subset) Water World Map Disc 2
 
-> ⭐ **NEW CATEGORY "Rare Monster" canon ⭐ MAJEUR** : Blue Bird = first Rare Monster ingestion canon Damia (vs Minor Enemy standard). **Water element World Map roads Disc 2** Tiberoa-Mille Seseau transit (Barrens → Valley of Corrupted Gravity → Home of Giganto). **HP 5 / EXP 1000 / Gold 0 / Drops Nothing** = massive EXP-only reward design.
+> ⭐ **Rare Monster = SUBSET Minor Enemy canon wiki tier 2 ⭐ CORRECTION** : "Minor Enemies who appear in random battles but possess special resistances to damage, see Rare Monsters" — Blue Bird **IS** Minor Enemy with passives, **NOT** separate category. Cohérent wiki LoD Bosses master page taxonomy.
+>
+> ⭐ **Water element World Map roads Disc 2** Tiberoa-Mille Seseau transit (Barrens → Valley of Corrupted Gravity → Home of Giganto). **HP 5 / EXP 1000 / Gold 0 / Drops Nothing** = massive EXP-only reward design.
 >
 > ⭐ **Stats canon pattern Rare Monster** : AT 0 / MAT 0 / DF 100 / MDF 100 / **SPD 120 highest seen** / **A-AV 50% NEW first non-0**.
 >
@@ -21,13 +23,13 @@
 
 🟢 **Canon documenté wiki + fandom** — terminology divergence Rare vs Unique Monster notée.
 
-## Identity canon — NEW category Rare Monster ⭐
+## Identity canon — Minor Enemy subset Rare Monster ⭐
 
 - **Espèce** : Bird (Water-themed blue plumage canon)
-- **Category** : ⭐ **Rare Monster** ⭐ MAJEUR — NEW classification canon TLoD :
-  - Vs Minor Enemy standard (Counter 0/9/19/28)
-  - Vs Boss (major encounter)
-  - Vs Unique Monster / Jars (Counter 16, status-only kill)
+- **Category** : ⭐ **Minor Enemy / Rare Monster (subset)** ⭐ canon wiki tier 2 — Rare Monster is NOT separate category but **subset of Minor Enemy** "with special resistances to damage" canonical :
+  - Minor Enemy random battle status (Counter 28 tier high)
+  - Rare Monster subset = Damage Mitigation + Magical Immunity passives canon
+  - Distinct from Boss (scripted) + Boss Extras (in boss fights) + Unique Monster Jars (Counter 16 separate)
 - **Element** : Water
 - **Location canon** : **World Map roads Disc 2 only** (no submap encounters)
 - **Disc** : Disc 2 (Tiberoa-Mille Seseau transit roads)

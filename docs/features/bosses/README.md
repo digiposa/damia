@@ -4,6 +4,21 @@
 >
 > Cf. [SCOPE §7](../../SCOPE.md#7-modes-de-jeu) pour la distinction Story / Survival.
 
+## 📊 Master Table Bosses canon ⭐
+
+Référence canonique stats complète 75+ bosses Disc 1-4 :
+
+- [`_sources/lod-wiki-bosses-master-table.md`](./_sources/lod-wiki-bosses-master-table.md) — wiki LoD Bosses master page verbatim (taxonomy canon + stats Tableau complet)
+
+⭐ **Taxonomy canon officielle TLoD** (cohérent [`../combat/monster-categories.md`](../combat/monster-categories.md)) :
+
+- **Minor Enemy** : random battles, susceptible Total Vanishing / **Pandemonium NEW**
+- **Rare Monster** = subset Minor Enemy (Counter 28, Damage Mitigation + Magical Immunity passives)
+- **Boss** : scripted, all 8 status immune, narrative weight (required OR optional)
+- **Boss Extras** ⭐ NEW : in boss encounters, neither Minor Enemy nor Boss
+
+⚠️ **Definition canon Boss** : _"Encountered only once through scripted events, Bosses are powerful foes immune to all status ailments and carry enough narrative weight to standout from typical enemies."_
+
 ## Statut par boss
 
 Liste à compléter au fil. Ordre alphabétique par section.

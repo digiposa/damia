@@ -2542,6 +2542,57 @@
 
 - [ ] **🆕 Blue Bird location précisification fandom** — Primary spawn road : Home of Gigantos ↔ Valley of Corrupted Gravity / Secondary rare/seldom : Barrens ↔ Valley of Corrupted Gravity. Cohérent wiki "Valley of Corrupted Gravity → Home of Giganto most common". À refléter spawn rates per-road. Source: idem.
 
+### Bosses / Master Table canon TLoD — 75+ bosses Disc 1-4 + taxonomy officielle + Pandemonium NEW + Halberd revision
+
+- [ ] **🆕 ⭐ MASTER TABLE BOSSES canon Damia ⭐ MAJEUR** — 75+ bosses Disc 1-4 stats complète (HP/DF/MDF/PAV/MAV/AT/MAT/SPD/EXP/Gold/Drops/Location) ingéré canonique. À implémenter `bosses/*.ts` per-boss data-models. Source: [`features/bosses/_sources/lod-wiki-bosses-master-table.md`](features/bosses/_sources/lod-wiki-bosses-master-table.md).
+
+- [ ] **🆕 ⭐ Taxonomy canon officielle TLoD fixée ⭐ MAJEUR** — 4 catégories canon : Minor Enemy / Rare Monster (SUBSET Minor Enemy) / Boss / **Boss Extras NEW**. Implémenter `MonsterCategory = 'minor-enemy' | 'rare-monster' | 'unique-monster-jar' | 'boss' | 'boss-extras'`. Documentation complète : [`features/combat/monster-categories.md`](features/combat/monster-categories.md). Source: idem.
+
+- [ ] **🆕 ⭐ Correction Rare Monster = SUBSET Minor Enemy canon (NOT separate category)** — Wiki tier 2 confirme : "Minor Enemies who appear in random battles but possess special resistances to damage, see Rare Monsters". Adjust Blue Bird + autres Birds classification. Fandom umbrella "Unique Monster" = approximative. Source: idem.
+
+- [ ] **🆕 Boss Extras NEW category canon ⭐** — "enemies who appear in Boss encounters but are neither Minor Enemies nor Bosses". À investiguer scope canon : adds spawned ? Background entities ? Specific wiki page `bosses/_sources/lod-wiki-boss-extras.md` si existe. Source: idem.
+
+- [ ] **🆕 ⭐ Pandemonium NEW Attack Item canon ⭐ MAJEUR** — Wiki master Bosses page : "susceptible to items like Total Vanishing or Pandemonium". Pattern Pandemonium = Attack Item one-shot kills minor enemies direct, cohérent Total Vanishing canon (Demon's Gate probable même pattern). À documenter `items/consumables.md` (à créer) Pandemonium entry + cross-référer Total Vanishing / Demon's Gate Erase Attack Items canon. Source: idem.
+
+- [ ] **🆕 ⚠️ Halberd source canon REVISION** — Wiki master canon dit **Lavitz's Spirit at Mayfil (Disc 4)** drops Halberd 50% (vs existing TODO 1428 "Halberd via Lavitz Spirit Phantom Ship Disc 2"). Phantom Ship Disc 2 = Ghost Commander (Night Raid 100% drop), pas Lavitz. À reconcilier `items/equipment.md` Halberd source canonical Mayfil Disc 4. Source: idem.
+
+- [ ] **🆕 Magician Faust Optional 20,000 EXP / 10,000 Gold ⭐ MAJEUR** — Highest single-encounter Gold reward TLoD canon. Optional rematch Flanvel Tower Disc 3 (vs Apparition first fight 0 reward). Pattern Optional endgame Gold farm canon. À documenter `bosses/Magician Faust.md` (à créer) + `bosses/_sources/`. Source: idem.
+
+- [ ] **🆕 Vellweb 4 Dragoon Knights Optional bosses Disc 3 canon ⭐** — Belzac (Earth, 16k HP, 178 AT highest) / Damia (Water, 200 MDF) / Kanzas (Thunder, 10% PAV) / Syuveil (Wind, 10% PAV, 152 AT). All 6k EXP / 300 Gold / Stone drop (Golden/Blue Sea/Violet/Jade). À documenter `bosses/Belzac.md` (existing draft à compléter) + `bosses/Damia.md` (existing) + `bosses/Kanzas.md` (à créer) + `bosses/Syuveil.md` (à créer). Source: idem.
+
+- [ ] **🆕 Mayfil 3 Ghost Dragon Spirit pairs Optional Disc 4 canon ⭐** — Ghost Feyrbrand + Dragon Spirit (Wind) / Ghost Regole + Dragon Spirit (Water) / Divine Dragon Ghost + Dragon Spirit (Non-Elemental). Pattern "haunted Dragon Spirits" canon. À documenter `bosses/Ghost Feyrbrand.md` (à créer) + `bosses/Ghost Regole.md` (à créer) + `bosses/Divine Dragon Ghost.md` (à créer). Source: idem.
+
+- [ ] **🆕 Lavitz's Spirit + Zackwell pair canon Mayfil Disc 4 ⭐** — Lavitz's Spirit 5,000 HP + Zackwell 8,000 HP. Lavitz's Spirit drops Halberd 50% (REVISION canon). Zackwell drops Healing Rain 100%. Pattern emotional Disc 4 fight canon (Lavitz ghost reveal). À documenter `bosses/Lavitz Spirit.md` (à créer) + `bosses/Zackwell.md` (à créer). Source: idem.
+
+- [ ] **🆕 Caterpillar 3-phase transformation canon Divine Tree Disc 4 ⭐** — Caterpillar (6k HP Non-Elemental) → Pupa (2.5k HP) → Imago (12k HP) sequential. Drops Healing Rain + Moon Serenade + Sun Rhapsody 100% chacun. Pattern 3-form boss canon. Cohérent existing [`features/locations/Divine Tree.md`](features/locations/Divine Tree.md) ~29.6k HP total mention. À documenter `bosses/Caterpillar.md` (à créer) + Pupa + Imago. Source: idem.
+
+- [ ] **🆕 Melbu Frahma final boss canon Moon That Never Sets ⭐** — **42,000 HP** ⭐ highest HP boss TLoD + 200 DF / 250 MDF / 107 AT / 80 MAT / 0 EXP/Gold rewards (no drop). Pattern "high HP / moderate stats" final boss design. À documenter `bosses/Melbu Frahma.md` (à créer). Source: idem.
+
+- [ ] **🆕 Heart (Windigo) HP 3 ⭐ lowest boss HP canon** — Pattern Heart must be killed during Windigo fight (instant-kill possible). Mechanism canon : boss vulnerability instant-kill via Heart targeting ? À investiguer. Source: idem.
+
+- [ ] **🆕 Stats patterns A-AV/M-AV non-0 bosses canon** — Magician Faust 20% MAV (highest), Kanzas/Syuveil 10% PAV, Archangel 5% PAV/MAV, Selebus 10% PAV, Ghost Regole 5% MAV. Pattern endgame bosses physical avoidance canon. Source: idem.
+
+- [ ] **🆕 Multi-part bosses canon pattern ⭐** — Virage (Head/Body/Arm canon × 3 fights Disc 1-3-4) / Divine Dragon (+Cannon+Ball Disc 3) / Polter (Helm/Armor/Sword Disc 3 optional) / Caterpillar 3-phase / Michael (+Core Disc 4) / Lenus (+Regole Disc 2) / Greham (+Feyrbrand Disc 1) / Gehrich (+Mappi Disc 2). Pattern multi-target boss fights canon. À implémenter `BossFight.parts: BossPartRef[]` data-model. Source: idem.
+
+- [ ] **🆕 Shirley EXP/Gold conditional "0 (1,500)" canon ⭐** — Pattern conditional reward (sparing path canon ?). Shirley Disc 1 Shrine of Shirley boss : 0 normal / 1,500 EXP + 100 Gold conditional. À investiguer mechanism canon. Source: idem.
+
+- [ ] **🆕 HP scaling Disc 1 → 4 canon** — Commander 14 → Drake 1,200 → Divine Dragon 5,000 → Melbu Frahma 42,000. Pattern progressive scaling canon. À utiliser balancing reference Damia. Source: idem.
+
+- [ ] **🆕 AT scaling Disc 1 → 4 canon** — Commander 2 → Doel 32 → Polter Sword 134 → Belzac 178 (max). Pattern progressive scaling canon offensive bosses. Source: idem.
+
+- [ ] **🆕 Indora SPD 30 ⭐ lowest boss SPD canon** — Pattern Giganto slow canon (cohérent Kongol SPD 60 mid). Race species SPD scaling canon. Source: idem.
+
+- [ ] **🆕 Polter Sword SPD 100 ⭐ highest boss SPD canon** — Pattern animated weapon canon (vs 50 standard). Source: idem.
+
+- [ ] **🆕 Boss drops canon highlights** :
+  - **Total Vanishing 100% Mappi (Barrens Disc 2)** — boss-drop Attack Item canon (cohérent Beastie Dragon 8% drop)
+  - **Indora's Axe 100% Indora (Moon That Never Sets Disc 4)** — Kongol weapon boss-locked
+  - **Pretty Hammer 100% Last Kraken (Aglis Disc 4)** — Kongol weapon
+  - **Wargod's Amulet 100% Urobolus (Limestone Cave Disc 1)** — earliest accessory canon (cohérent Blue Bird strategy mention)
+  - **Brass Knuckle 100% Windigo (Kashua Glacier Disc 3)** — Haschel weapon
+  - **Dragoon Stones** Disc 1 (Silver/Red-Eye/Darkness) + Vellweb Disc 3 (Golden/Blue Sea/Violet/Jade)
+    À refléter `items/equipment.md` boss-locked weapon/accessory sources canon. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

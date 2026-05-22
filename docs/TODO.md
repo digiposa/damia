@@ -3099,6 +3099,34 @@
 
 - [ ] **🆕 "First minor boss TLoD" + "2nd fight entire game" canon ⭐** — Commander Seles = first minor boss + 2nd fight entire game canon. Quel est le 1er fight canon ? Probable Hellena Prison tutorial Lavitz aide OR Sandora Soldiers tutorial pre-Commander. À investiguer Disc 1 opening sequence canon. Source: idem.
 
+### Bosses / Crafty Thief (Dual-classification Boss Extras Barrens + Minor Home of Giganto — CONFIRME Boss Extras canonical 4th category + Magic Sig Stone Vulnerability + 50G Stolen! + Bastard Sword drop + A-AV 5%)
+
+- [ ] ⭐ **🆕 Boss Extras canonical 4th category CONFIRMED canon MAJEUR ⭐⭐** — Crafty Thief (Barrens with Mappi) wiki tier 2 EXPLICIT note : "not Minor Enemies, and instead categorized as Boss Extras". CONFIRME Boss Extras = canonical 4th category distinct TLoD (cohérent existing `combat/monster-categories.md` taxonomy). Pattern wiki tier 2 prévaut fandom umbrella interpretation "minions = bosses". À documenter `combat/monster-categories.md` (déjà ajusté) — Boss Extras characteristics canon : companion to main boss / Status all 8 ✔ / EXP 0 / Counter 28 / passives spécifiques possibles. Source: [`features/bosses/_sources/lod-wiki-crafty-thief.md`](features/bosses/_sources/lod-wiki-crafty-thief.md).
+
+- [ ] **🆕 Crafty Thief dual-classification canon ⭐** — **Boss Extras (Barrens with Mappi)** : HP 320, Counter 28, all 8 ✔, Magic Sig Stone Vulnerability passive / **Minor Enemy (Home of Giganto Gehrich Gang)** : HP 200, Counter 28, 4/4 standard, 50G Stolen! ability. Pattern same NPC role different encounter context. À implémenter `bosses/crafty-thief.ts` data-model dual entries. Source: idem.
+
+- [ ] ⭐ **🆕 Magic Sig Stone Vulnerability passive Boss Extras canon NEW MAJEUR ⭐** — Crafty Thief Barrens Boss Extras "Is affected by Magic Stone of Signet". Cohérent existing **Magical Stone of Signet** canon (Blue Bird Rare Monster strategy fandom reveal). Pattern Boss Extras can have specific item vulnerabilities canon. À documenter `items/key-items.md` (à créer) Magic Stone of Signet item entry + effect canon précis (Time Stop ? Status ? Damage modifier ?). À implémenter `BossPassive { type: 'item-vulnerability'; item: ItemRef }` data-model. Source: idem.
+
+- [ ] ⭐ **🆕 50G Stolen! gold-steal ability canon NEW MAJEUR ⭐⭐** — Crafty Thief Home of Giganto ≤50% HP : Removes 50G from player + post-use switches to **Cut with Knife** ability. Pattern thief mob steal mechanic canon. À implémenter `MobAbility { type: 'gold-steal'; amount: 50; postAction: 'cutWithKnife'; cannotRecover: true }` data-model Damia. Pattern boss/mob "ability one-shot then replacement" canon (cohérent Commander Power Up + Caterpillar Transform). Source: idem.
+
+- [ ] ⭐ **🆕 Bastard Sword drop compensation canon NEW MAJEUR ⭐** — Crafty Thief defeated drops Bastard Sword (30G sell value) — pattern thief compensation canon. "Defeating Crafty Thief does NOT return 50G" canon → player net loss -20G (-50G stolen + 30G sword). À documenter `items/equipment.md` Bastard Sword entry Dart sword weapon canon + 30G value. À implémenter "thief compensation" mechanic Damia. Source: idem.
+
+- [ ] **🆕 Cut with Knife post-50G Stolen! ability replacement canon ⭐** — Pattern boss/mob "ability one-shot then replacement" canon (cohérent Commander Power Up). À implémenter `Ability { type: 'replacement-trigger'; originalAbility: AbilityRef; replacement: AbilityRef; trigger: 'post-use' }` data-model. Source: idem.
+
+- [ ] **🆕 A-AV 5% NEW canon Boss Extras + Mob ⭐** — Crafty Thief A-AV 5% both forms. First A-AV 5% ingestion canon Damia (vs Canbria Dayfly 10%, Blue Bird 50%). Pattern thematic "thief evasion" canon. Pattern A-AV tier mapping canon Damia : 0% / 5% / 10% / 50% (Rare Monster). À cross-check autres entities A-AV 5% canon. Source: idem.
+
+- [ ] **🆕 Pellet item drop canon NEW ⭐** — Crafty Thief Boss Extras + Mob drop Pellet 8%. Probable Spell Item OR consumable. À documenter `items/consumables.md` (à créer) Pellet entry — investiguer effect canon précis. Source: idem.
+
+- [ ] **🆕 Run away! canon récurrent multi-mob shared confirmed ⭐** — Crafty Thief Home of Giganto Mob has Run away! ability (cohérent Berserk Mouse + Blue Bird Rare Monster Run away! canon). Pattern AI mob self-escape mechanic shared canon : Berserk Mouse + Blue Bird (Rare) + **Crafty Thief (Mob)** = 3 entities confirmed canon. À implémenter shared `MobAbility { type: 'run-away'; selfRemoval: true; noReward: true }` data-model. Source: idem.
+
+- [ ] **🆕 Stats divergence Boss Extras vs Mob Crafty Thief canon ⚠️** — Boss Extras HP 320 / Mob HP 200 (Mob LOWER) + Boss Extras AT 28 / Mob AT 30 (Mob slightly higher) + Boss Extras SPD 70 / Mob SPD 80. Pattern Boss Extras tanky / Mob fast offensive canon. À refléter data-model per-classification stats. Source: idem.
+
+- [ ] **🆕 Formation 475 Gangster partner Crafty Thief Home of Giganto ⭐** — Scripted encounter Crafty Thief ×2 + Gangster boss (cohérent existing Bosses master Gangster Home of Gigantos NEW canon fandom). À documenter `bosses/Gangster.md` (à créer) — Gehrich Gang boss canon Home of Giganto. Source: idem.
+
+- [ ] **🆕 Contact (arrows) Home of Giganto canon pattern récurrent** — Cohérent Berserker Contact arrows canon (Gehrich Gang hideout arrow traps). Pattern Death Frontier visible-mob distinct Home of Giganto arrows-traps. Source: idem.
+
+- [ ] **🆕 Gehrich Gang faction expanded canon ⭐** — Gehrich Gang Home of Giganto members canon : Berserker + Piggy + **Crafty Thief** + **Gangster** + (Mappi cross-Barrens) + Gehrich (leader). Pattern faction roster expanding canon. À documenter `lore/gehrich-gang.md` (à créer) — faction lore canon. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

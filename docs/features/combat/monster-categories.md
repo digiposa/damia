@@ -128,28 +128,38 @@ type MonsterStats = {
   - **Mayfil Ghost Dragon Spirits ×3 pairs** (Disc 4)
   - **Lavitz's Spirit + Zackwell** (Mayfil Disc 4)
 
-## Boss Extras canon ⭐ NEW MAJEUR
+## Boss Extras canon ⭐ NEW MAJEUR — CONFIRMED canonical 4th category ⭐⭐
 
 > For enemies who appear in Boss encounters but are **neither Minor Enemies nor Bosses**, see **Boss Extras**.
 
-⚠️ **Terminology divergence wiki vs fandom canon** :
+⭐ **CONFIRMÉ wiki tier 2 ⭐⭐ MAJEUR** : Crafty Thief (Barrens with Mappi) ingestion wiki dit explicitly :
 
-- **Wiki tier 2** : "Boss Extras" = 3ème catégorie distincte ("neither Minor Enemy nor Boss")
-- **Fandom tier 3** : "boss minions, even though they are substantially weaker than their boss, **are counted as bosses and not as regular monsters**"
-- → **Damia adopt fandom interpretation** : boss minions = subset of Bosses (simpler model). "Boss Extras" wiki = peut-être autre concept (interactable objects in boss arenas, e.g. Drake's Wire Net, Volcano Ball) — à investiguer.
+> "Note: The Crafty Thieves that appear with Mappi are **not Minor Enemies, and instead categorized as Boss Extras**."
 
-### Pattern boss minions canon (fandom interpretation adopted)
+→ **Boss Extras = canonical 4th category distinct canon TLoD**. Damia adopt wiki tier 2 strict canonical taxonomy (resout fandom umbrella interpretation "minions = bosses").
 
-- Boss minions = Bosses category subset, classified avec their parent boss
-- Examples canon fandom :
-  - **Drake the Bandit's Wire Net + Bursting Bomb** (Drake fight minions)
-  - **Fire Bird's Volcano Ball** (summon)
-  - **Hellena Warden (Fruegel minion)** + **Senior Warden (Fruegel fight)**
-  - **Ghost Knight** (Ghost Commander minion)
-  - **Windigo's Snow Cannon** (Windigo minion)
-  - **Melbu Frahma's Tentacle + Monster (boss summon)** (final minions)
-  - **Drake the Bandit's Wire Net + Bursting Bomb** (weapons-as-targets)
-- À investiguer wiki tier 2 page Boss Extras si existe — peut-être concept différent
+### Boss Extras characteristics canon ⭐
+
+- **Companion to main boss** : spawned alongside boss in scripted encounter
+- **Status Immunity all 8 ✔ boss-tier** systematic (cohérent boss-tier immunity)
+- **EXP 0 / Gold 0** typical (main boss yields rewards)
+- **Counter 28** standard high-density tier
+- **Escape allowed** parfois (vs Boss Escape 0% strict)
+- **Specific passive vulnerabilities possible** : ex. Magic Sig Stone Vulnerability (Crafty Thief Barrens)
+- Examples confirmed canon : **Crafty Thief (Barrens with Mappi)** ⭐ first ingestion ; autres bosses multi-part probable (Mappi adds, etc.)
+
+### Pattern adoption Damia
+
+- **Wiki tier 2 prévaut canonical** : Boss Extras 4ème catégorie distincte
+- Fandom interpretation "boss minions counted as bosses" = approximative, wiki granular prévaut
+- Pattern Damia : `MonsterCategory = 'boss-extras'` distinct des autres 3 categories
+
+### Pattern boss minions canon (fandom umbrella interpretation rejected)
+
+⚠️ Pattern Damia adopt wiki tier 2 strict :
+
+- Boss minions in boss fights = **Boss Extras canonical** (NOT subset Boss)
+- Fandom "minions = bosses" interprétation = imprécis, wiki tier 2 distingue Boss Extras separate
 
 ## Unique Monsters (Jars) — catégorie SÉPARÉE distincte Rare Monster canon ⭐
 

@@ -3062,6 +3062,43 @@
 
 - [ ] **🆕 "Knights of Sandora defeated" story-canon Power Up trigger ⭐** — Boss Seles Power Up Auto trigger = when all Knights defeated party. Pattern story-canon condition trigger boss ability canon (cohérent Hero Competition + autres scripted events). À implémenter `BossCondition { type: 'allies-defeated' }` data-model. Source: idem.
 
+### Bosses / Commander fandom complement — JP name + appearance canon + Seventh Fort + Great Commander NPC + fandom canon ability names + Potion = Healing Potion item + stats/drops divergences
+
+- [ ] **🆕 Commander JP name 小隊長 (Kotaichō) "Squad/Platoon Leader" canon ⭐** — Imperial Sandora military rank canon. Pattern lore military hierarchy : Commander (Squad Leader) < Great Commander < Emperor Doel. À refléter localization Damia. Source: [`features/bosses/_sources/fandom-commander.md`](features/bosses/_sources/fandom-commander.md).
+
+- [ ] **🆕 HP JP +1 unit minimal stats pattern Commander Seles ⭐** — HP 14 US → 15 JP. Pattern minimal stats +1 unit canon (NOT +25% standard ; cohérent Berserk Mouse HP 2 → 4 = +100% car arrondi minimal stats sensitivity). À documenter `combat/jp-vs-us-stats.md` (à créer) pattern minimal stats +1 unit canon. Source: idem.
+
+- [ ] ⭐ **🆕 Commander appearance canon ⭐** — Visual design 2 color schemes :
+  - **Seles** : red trim armor + large red cape + black sword
+  - **Marshland Seventh Fort** : blue trim + cape + silver sword
+    Pattern thematic color schemes per-location canon. À refléter sprite design Damia. Source: idem.
+
+- [ ] ⭐ **🆕 Seventh Fort location canon NEW ⭐** — Marshland Commander = **Seventh Fort** canon name (Imperial Sandora military base). À documenter `locations/Seventh Fort.md` (à créer) — Marshland sub-area Imperial military base canon. Cohérent existing locations Damia Marshland generic. Source: idem.
+
+- [ ] ⭐ **🆕 Great Commander of Sandora NPC canon NEW MAJEUR ⭐** — Distinct NPC met later (Shana arrest probable canon) — "more bulky armor" similar Commander appearance. Pattern Imperial Sandora hierarchy : Commander (Squad Leader) < Great Commander. À documenter `npcs/Great Commander.md` (à créer) — Shana arrest scene NPC canon. Source: idem.
+
+- [ ] ⭐ **🆕 Sandora Soldiers "run away upon killing one" canon NEW ⭐** — Pattern soldiers flee mid-fight si un kill. Pattern AI mob escape mechanic (cohérent Berserk Mouse Run away! pattern). À implémenter AI mob "flee on partner death" data-model Damia. Source: idem.
+
+- [ ] ⭐ **🆕 Potion ability = Boss uses Healing Potion canonically NEW MAJEUR ⭐** — Wiki "HP recovers 30% (4) HP" générique = Fandom précise : **Boss uses Healing Potion item canonically** (4 HP = standard Healing Potion canon). Pattern boss-uses-inventory-items canon. À implémenter `BossAbility { type: 'use-item'; item: ItemRef }` data-model Damia. Pattern boss canon récurrent (autres bosses utilise items ?). Source: idem.
+
+- [ ] ⭐ **🆕 Fandom canon ability names Commander Seles + Marshland ⭐** :
+  - **Seles** : **Sword** (= wiki ~Sword Slash) / **Double Strike** (= wiki ~Slash Twice) / **Potion** (= wiki "HP recovers")
+  - **Marshland** : **Slash** (= wiki ~Sword Slash mob) / **Double Slash** (= wiki ~Multi Slash) / Stunning Hammer confirmed
+    Adopter fandom canon names officiels (vs wiki ~ community approximations). À implémenter abilities Damia. Pattern naming Seles vs Marshland canon : Sword/Slash + Double Strike/Double Slash = similar but distinct canon names. Source: idem.
+
+- [ ] **🆕 EXP/Gold divergences Commander Seles wiki vs fandom ⚠️** :
+  - EXP : wiki **20** vs fandom **24** (+20%)
+  - Gold : wiki **20** vs fandom **26** (+30%)
+    → Pattern fandom higher recurrent (probable JP closer). Source: comparaison.
+
+- [ ] ⚠️ **🆕 Drops divergence Marshland wiki vs fandom MAJEUR** — Wiki tier 2 "Attack Ball 100%" Marshland mob drop / Fandom infobox "Burn Out + 2× Healing Potion 100%" combined. Wiki tier 2 prévaut canonical Damia probable. Possible : 2× Healing Potion = Seles Boss secondary drop OR Marshland fandom revised. À investiguer Discord/Wulves source tier 1. Source: comparaison.
+
+- [ ] ⚠️ **🆕 Commander Marshland classification "Scripted" wiki vs "Optional Seventh Fort" fandom DIVERGENCE** — Wiki "Scripted" (Required) / Fandom "optional Seventh Fort". Possible : Seventh Fort visit optional but encounter scripted ONCE if visited. Damia clarification needed. Source: comparaison.
+
+- [ ] ⚠️ **🆕 Soldier rank naming wiki vs fandom canon ⚠️** — Wiki Boss Seles formation "Knight of Sandora" / Fandom "Sandoran Soldier". Possible distinct entities canon (Knights vs Soldiers ranks Sandora military) OR fandom imprécis. À investiguer : Knights of Sandora canon mob existing TODO. Source: comparaison.
+
+- [ ] **🆕 "First minor boss TLoD" + "2nd fight entire game" canon ⭐** — Commander Seles = first minor boss + 2nd fight entire game canon. Quel est le 1er fight canon ? Probable Hellena Prison tutorial Lavitz aide OR Sandora Soldiers tutorial pre-Commander. À investiguer Disc 1 opening sequence canon. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

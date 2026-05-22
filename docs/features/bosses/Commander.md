@@ -15,10 +15,11 @@
 > **Sources** :
 >
 > - 🥈 [`_sources/lod-wiki-commander.md`](./_sources/lod-wiki-commander.md) — wiki LoD (dual-classification Boss Seles + Minor Marshland + Darkness Disc 1 + Power Up mechanic + HP recovers + Burn Out canon + Instant Death Immunity + Attack Ball 100% drop + Escape 100% + Stunning Hammer)
+> - 🥉 [`_sources/fandom-commander.md`](./_sources/fandom-commander.md) — fandom (JP name 小隊長 Kotaichō "Squad Leader" + HP JP +1 minimal stats pattern + appearance canon Seles red/Marshland blue color schemes + Seventh Fort Marshland location canon NEW + Great Commander of Sandora distinct NPC canon NEW + fandom canon ability names Sword/Double Strike/Slash/Double Slash/Stunning Hammer/Potion + Potion ability = uses Healing Potion canonically + Sandora Soldiers "run away upon killing one" + EXP 24 / Gold 26 fandom higher + ⚠️ Drops "2× Healing Potion 100%" divergence wiki Attack Ball)
 
 ## Statut
 
-🟡 **Draft post-ingestion wiki LoD** — fandom à ingérer pour cross-check si page existe.
+🟢 **Canon documenté wiki + fandom** — divergences notées (drops Marshland + Optional vs Scripted Seventh Fort).
 
 ## Identity canon
 
@@ -246,6 +247,54 @@
 - [`../items/consumables.md`](../items/consumables.md) (à créer) — Burn Out + Attack Ball Spell Items entries canon
 - [`../combat/damage-modifiers.md`](../combat/damage-modifiers.md) (à créer) — Power Up canon variants
 - [`../combat/monster-categories.md`](../combat/monster-categories.md) — dual-classification Boss vs Minor Enemy canon
+
+## Cross-check fandom (compléments + divergences)
+
+**Confirmations utiles fandom** :
+
+- **Darkness + Seles + Marshland locations** confirmed
+- **HP US 14 + 4 HP heal recovers (= 30% of 14)** confirmed
+- **Power Up trigger Knights/Soldiers defeated** confirmed
+- **Burn Out Fire-elemental ability** confirmed
+- **Stunning Hammer 100% Stun ability** confirmed
+
+**NEW canon fandom-only** ⭐ MAJEUR :
+
+- ⭐ **JP name 小隊長 (Kotaichō) "Squad/Platoon Leader" canon** — Imperial Sandora military rank canon
+- ⭐ **HP JP 15 (+1 unit) minimal stats pattern** : Commander Seles HP 14 US → 15 JP (NOT +25% standard, pattern minimal stats +1 unit canon)
+- ⭐ **Appearance canon ⭐** :
+  - **Seles** : red trim armor + large red cape + black sword
+  - **Marshland (Seventh Fort)** : blue trim + cape + silver sword
+- ⭐ **"Seventh Fort" Marshland location canon NEW** — Marshland Commander = Seventh Fort (Imperial Sandora military base). À documenter `locations/Seventh Fort.md` (à créer)
+- ⭐ **Great Commander of Sandora NPC canon NEW** — distinct NPC met later (Shana arrest probable canon) — "more bulky armor" similar appearance. À documenter `npcs/Great Commander.md` (à créer)
+- ⭐ **"First minor boss TLoD" Commander Seles canon** — pattern Commander Seles = 2nd fight (post-1st tutorial fight pre-Commander)
+- ⭐ **Sandora Soldiers "run away upon killing one of them" canon ⭐** — Pattern soldiers flee mid-fight (cohérent Berserk Mouse Run away! pattern). À refléter AI mob escape mechanic
+- ⭐ **Potion ability = Boss uses Healing Potion canonically ⭐ NEW MAJEUR** — Boss casts player-accessible item canon (4 HP heal = standard Healing Potion canon). Pattern boss-uses-inventory-items canon
+- ⭐ **Fandom canon ability names ⭐** :
+  - **Seles** : **Sword** (= ~Sword Slash) / **Double Strike** (= ~Slash Twice) / **Potion** (= HP recovers)
+  - **Marshland** : **Slash** (= ~Sword Slash mob) / **Double Slash** (= ~Multi Slash) / Stunning Hammer (confirmed)
+  - Adopter fandom canon names officiels (vs wiki ~ approximations)
+- ⭐ **EXP 24 / Gold 26 fandom higher** (vs wiki EXP 20 / Gold 20) — pattern fandom higher recurrent
+
+**Divergences wiki vs fandom** :
+
+| Stat / Aspect                    | Wiki LoD                | Fandom                                       | Notes                                                                                                                           |
+| -------------------------------- | ----------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| **HP JP**                        | (silent)                | **15** (+1 unit)                             | Pattern minimal stats +1 unit canon NEW                                                                                         |
+| **EXP**                          | 20                      | **24** (+20%)                                | ⚠️ fandom higher                                                                                                                |
+| **Gold**                         | 20                      | **26** (+30%)                                | ⚠️ fandom higher                                                                                                                |
+| **Drops Marshland**              | Attack Ball 100%        | **2× Healing Potion 100%** ⚠️                | DIVERGENCE — wiki tier 2 prévaut Attack Ball probable                                                                           |
+| **Marshland classification**     | "Scripted" Mob          | **"optional Seventh Fort"**                  | ⚠️ divergence : Scripted (Required) vs Optional canon                                                                           |
+| **Soldier rank naming**          | "Knight of Sandora"     | "Sandora Soldier"                            | ⚠️ wiki Boss formation uses "Knight of Sandora", fandom uses "Sandoran Soldier" — possible distinct entities OR fandom imprécis |
+| **~Sword Slash / Sword**         | ~Sword Slash            | **Sword**                                    | Fandom canon name officiel — adopter Seles                                                                                      |
+| **~Slash Twice / Double Strike** | ~Slash Twice            | **Double Strike**                            | Fandom canon name officiel — adopter Seles                                                                                      |
+| **~Sword Slash / Slash (mob)**   | ~Sword Slash            | **Slash**                                    | Fandom canon name officiel — adopter Marshland                                                                                  |
+| **~Multi Slash / Double Slash**  | ~Multi Slash            | **Double Slash**                             | Fandom canon name officiel — adopter Marshland                                                                                  |
+| **HP recovers / Potion**         | "HP recovers" générique | **Potion** (uses Healing Potion canonically) | Fandom precise — adopter ⭐                                                                                                     |
+
+→ **Damia adopt JP stats** (HP 15) ✓ confirmed.
+→ **Fandom canon names** prévalent (Sword/Double Strike/Slash/Double Slash/Potion).
+→ **Wiki tier 2 prévaut** : drops Marshland Attack Ball + Marshland scripted classification.
 
 ## Gaps / TODO
 

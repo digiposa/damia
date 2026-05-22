@@ -2721,6 +2721,31 @@
 
 - [ ] **🆕 Rotating Hammer canon ability name (community) Bowling** — Wiki ~Rotating Hammer (community), fandom canon name à investiguer ingestion future. Source: idem.
 
+### Mobs / Bowling fandom complement — JP name + Appearance automaton 3 arms + Spinning Attack canon + Spell Item Attack Ball NEW + JP stats confirmés
+
+- [ ] **🆕 Bowling JP name ボーリング (Bōringu) direct translit** — Source: [`features/mobs/_sources/fandom-bowling.md`](features/mobs/_sources/fandom-bowling.md).
+
+- [ ] **🆕 Bowling appearance canon MAJEUR ⭐** — Humanoid automaton with **light-brown wood + gray stone body**, **head indistinguishable from torso aside red eye**, **three arms used as flails**. Pattern thematic "primitive Wingly automaton" canon (cohérent Snowfield Disc 3 → Vellweb Wingly proximity). À refléter visual sprite design Damia. Source: idem.
+
+- [ ] **🆕 Spinning Attack canon name officiel (vs wiki ~Rotating Hammer community) ⭐** — Adopter fandom canon > 25% phase ability. Pattern "three arms swinging" cohérent appearance. Source: idem.
+
+- [ ] **🆕 Charging Spirit Bowling = "Uses All-out Attack next turn" simpler ⚠️** — Fandom clarifie : Bowling Charging Spirit toujours preps All-out Attack (vs wiki "Rotating Hammer OR All-out Attack" dual-option). Pattern Bowling AI différent Air Combat/Berserker (dual-option). Damia adopt fandom simpler version probable. À implémenter `MobAI3PhaseCharging.chargingSpiritOptions: 'single' | 'dual'` data-model. Source: idem.
+
+- [ ] **🆕 Encounter rate Very common canon Bowling** — Vs Common Beastie Dragon/Berserker, Uncommon Air Combat. Pattern encounter rate variability canon. Cohérent ~10min Attack Ball farming. Source: idem.
+
+- [ ] **🆕 Attack Ball = Spell Item canon NEW ⭐ MAJEUR** — Fandom classifie Attack Ball comme "spell item" (vs Attack Item Total Vanishing / Repeat Item Healing Potion). Pattern Spell Items canon distinct : item qui cast spell effect (probable Repeat Item magic-type OU consumable spell-cast). À reconcilier `items/consumables.md` (à créer) taxonomy 3 categories : **Attack Items** (Total Vanishing/Pandemonium one-shot Erase) / **Repeat Items** (Healing Potion/Spirit Potion reusable) / **Spell Items NEW** (Attack Ball/etc spell-cast). Cannot be purchased + ~10 min farming canon. Source: idem.
+
+- [ ] **🆕 Bowling JP stats confirmés ⭐** — HP US 400 / JP **500** (+25% pattern systematic) + Gold US 42 / JP **14** (÷3 pattern systematic). Damia adopt JP : HP 500 / Gold 14. Cohérent décision projet adopt JP. Source: idem.
+
+- [ ] **🆕 Stats divergences Bowling wiki vs fandom ⚠️** :
+  - P. Attack : wiki 70 vs fandom **79** (+13%)
+  - M. Attack : wiki 50 vs fandom **56** (+12%)
+    → Pattern fandom higher (probable JP closer). À reconcilier final canon Damia. Source: comparaison.
+
+- [ ] **🆕 "Defend once Charging Spirit" strategy canon Bowling** — Guard reduce All-out Attack damage. Pattern player counter-strategy : Guard pendant Charging Spirit turn = mitigation. À documenter `combat/strategy.md` (à créer). Source: idem.
+
+- [ ] **🆕 "Primitive Wingly automaton" thematic Bowling canon** — Cohérent Snowfield Disc 3 location proximity Vellweb Wingly Knights area. Pattern Wingly-tech mobs Disc 3 ? À cross-check autres Snowfield mobs (Windy Weasel/Wildman/White Ape) + Polter Helm/Armor/Sword bosses thematic. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

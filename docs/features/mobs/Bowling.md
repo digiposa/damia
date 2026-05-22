@@ -13,10 +13,11 @@
 > **Sources** :
 >
 > - 🥈 [`_sources/lod-wiki-bowling.md`](./_sources/lod-wiki-bowling.md) — wiki LoD (Non-Elemental Snowfield Disc 3 + Status all 8 ✔ Minor + Counter 4 NEW tier + Attack Ball 8% + AI Charging Spirit Air-Combat-style)
+> - 🥉 [`_sources/fandom-bowling.md`](./_sources/fandom-bowling.md) — fandom (JP name ボーリング + ⭐ appearance "humanoid automaton wood/stone 3 arms flails + red eye" + Spinning Attack canon name + Charging Spirit "uses All-out Attack next turn" simpler + Very common encounter + ⭐ Attack Ball = Spell Item canon NEW + HP JP 500 + Gold JP 14 confirme JP pattern)
 
 ## Statut
 
-🟡 **Draft post-ingestion wiki LoD** — fandom à ingérer pour cross-check si page existe.
+🟢 **Canon documenté wiki + fandom** — Damia adopt JP stats (HP 500 / Gold 14).
 
 ## Identity canon
 
@@ -26,18 +27,19 @@
 - **Disc** : Disc 3 (Snowfield → Vellweb transit area)
 - **Pattern symbolique** : ⭐ **Minor Enemy avec Status Immunity all 8 ✔ NEW canon** + ⭐ **Counter 4 NEW lowest non-0 tier**
 
-## Stats canon ⚠️ Damia adopt JP canon (fallback US)
+## Stats canon ⚠️ Damia adopt JP ⭐
 
-| Stat | Value (US)      | Damia canon (JP fallback US) |
-| ---- | --------------- | ---------------------------- |
-| HP   | 400             | 400 (JP à confirmer fandom)  |
-| AT   | 70              | 70                           |
-| DF   | **160** ⚠️ high | 160                          |
-| MAT  | 50              | 50                           |
-| MDF  | 80              | 80                           |
-| SPD  | 60              | 60                           |
-| A-AV | 0%              | 0%                           |
-| M-AV | 0%              | 0%                           |
+| Stat | Wiki US  | Fandom US | **Damia (JP)**                             | Notes |
+| ---- | -------- | --------- | ------------------------------------------ | ----- |
+| HP   | 400      | 400       | **500** ✓ JP confirmed fandom +25% pattern |
+| AT   | 70       | **79**    | **79** (fandom higher, possible JP)        |
+| DF   | 160 high | 160       | **160**                                    |
+| MAT  | 50       | **56**    | **56** (fandom higher)                     |
+| MDF  | 80       | 80        | **80**                                     |
+| SPD  | 60       | 60        | **60**                                     |
+| A-AV | 0%       | 0%        | **0%**                                     |
+| M-AV | 0%       | 0%        | **0%**                                     |
+| Gold | 42       | 42        | **14** ✓ JP confirmed fandom ÷3 pattern    |
 
 → Pattern "tank physical" canon : HP 400 + **DF 160 high anti-physical** + MDF 80 moderate = mob favorise magic player strategy. AT 70 substantial damage.
 
@@ -210,6 +212,55 @@ Pattern **NEW** Minor Enemy all 8 immune :
 - [`../combat/additions.md`](../combat/additions.md) — Counter Opportunities tiers 0/4/9/16/19/28 canon
 - [`../combat/monster-categories.md`](../combat/monster-categories.md) — Minor Enemy Bowling exception canon
 - [`../items/consumables.md`](../items/consumables.md) (à créer) — Attack Ball entry NEW canon
+
+## Cross-check fandom (compléments + divergences)
+
+**Confirmations utiles fandom** :
+
+- **Non-Elemental + Snowfield location** confirmé
+- **HP US 400 / JP 500** ✓ confirme JP +25% pattern (Damia adopt 500)
+- **Gold US 42 / JP 14** ✓ confirme JP ÷3 pattern (Damia adopt 14)
+- **DF 160 / MDF 80 / SPD 60** match
+- **Attack Ball 8% drop** confirmé
+- **Counter Yes** confirmé
+- **All 8 status ailments immune** confirmé ("They cannot be defeated by using status ailments")
+- **4 formations** : solo / + Windy Weasel / + Wildman / + White Ape ×2 (cohérent wiki)
+
+**NEW canon fandom-only** ⭐ :
+
+- ⭐ **JP name ボーリング (Bōringu)** — direct katakana translit "Bowling"
+- ⭐ **Appearance canon MAJEUR** : **humanoid automaton with light-brown wood + gray stone body**, **head indistinguishable from torso aside red eye**, **three arms used as flails** — Pattern thematic "primitive Wingly automaton" canon (cohérent Snowfield Disc 3 → Vellweb Wingly proximity). À refléter visual sprite design Damia.
+- ⭐ **Spinning Attack canon name officiel** (= wiki ~Rotating Hammer community) — adopter fandom canon
+- ⭐ **Charging Spirit Bowling = "Uses All-out Attack next turn"** simpler clarification (vs wiki "Rotating Hammer OR All-out Attack"). Pattern Bowling Charging Spirit = always preps All-out Attack (vs Air Combat/Berserker dual-option). Damia adopt fandom simpler.
+- ⭐ **Encounter rate Very common** canon (vs Common Beastie Dragon/Berserker, Uncommon Air Combat)
+- ⭐ **"Defend once Charging Spirit"** strategy canon — Guard mitigates All-out Attack damage
+- ⭐ **"Die very quick"** canon paradox — DF 160 high mais HP 400 → fragile vs additions
+- ⭐ **Attack Ball = Spell Item canon NEW ⭐ MAJEUR** :
+  - "Spell Item" classification canon distinct
+  - Pattern Spell Items canon : item qui cast spell effect (probable Repeat Item magic-type OR consumable spell-cast)
+  - **Cannot be purchased** drop-only acquisition
+  - **~10 minutes farming** canon (cohérent Very common encounter)
+  - À reconcilier `items/consumables.md` taxonomy : Attack Items (Total Vanishing/Pandemonium one-shot) vs Repeat Items (Healing Potion/etc) vs **Spell Items NEW** (Attack Ball/etc spell-cast)
+
+**Divergences stats wiki vs fandom** :
+
+| Stat                                   | Wiki LoD                          | Fandom                    | Notes                                                              |
+| -------------------------------------- | --------------------------------- | ------------------------- | ------------------------------------------------------------------ |
+| **HP US/EU**                           | 400                               | 400                       | Match                                                              |
+| **HP JP**                              | (silent)                          | **500**                   | Fandom canon JP +25% pattern systematic confirmé — Damia adopt 500 |
+| **P. Attack**                          | 70                                | **79**                    | ⚠️ DIVERGENCE +13% (fandom probable JP closer)                     |
+| **M. Attack**                          | 50                                | **56**                    | ⚠️ DIVERGENCE +12% (idem)                                          |
+| **DF / MDF**                           | 160/80                            | 160/80                    | Match                                                              |
+| **SPD**                                | 60                                | 60                        | Match                                                              |
+| **Gold US**                            | 42                                | 42                        | Match                                                              |
+| **Gold JP**                            | (silent)                          | **14**                    | Fandom canon JP ÷3 pattern systematic — Damia adopt 14             |
+| **~Rotating Hammer / Spinning Attack** | ~Rotating Hammer                  | **Spinning Attack**       | Fandom canon name officiel — adopter                               |
+| **Charging Spirit options**            | Rotating Hammer OR All-out Attack | **Always All-out Attack** | Fandom simpler — adopter Damia probable                            |
+| **Encounter rate**                     | (silent)                          | **Very common**           | Fandom canon Very common rate                                      |
+| **Attack Ball type**                   | (drop only)                       | **Spell Item**            | Fandom NEW classification — adopt items taxonomy                   |
+
+→ **Damia adopt JP stats** (HP 500 / Gold 14) ✓ confirmé fandom.
+→ **Fandom canon names + appearance + Spell Item classification** prévalent canon names + descriptions.
 
 ## Gaps / TODO
 

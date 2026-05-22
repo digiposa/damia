@@ -2701,6 +2701,26 @@
   - `bosses/*.md` toutes existing docs
     À refléter "Stats canon (JP adopté)" sections ⭐. Source: décision projet.
 
+### Mobs / Bowling (Non-Elemental Snowfield Disc 3 — Status all 8 ✔ Minor Enemy NEW + Counter 4 NEW lowest tier + Attack Ball drop NEW + Charging Spirit Air-Combat-style)
+
+- [ ] **🆕 Bowling canon data-model** — **Non-Elemental** element, HP 400 (JP à confirmer), AT 70, DF **160 high**, MAT 50, MDF 80, SPD 60. Mob Snowfield Disc 3 partner Windy Weasel + Wildman + White Ape. Pattern tank physical (DF high). À implémenter `mobs/bowling.ts`. Source: [`features/mobs/_sources/lod-wiki-bowling.md`](features/mobs/_sources/lod-wiki-bowling.md).
+
+- [ ] ⭐ **🆕 Status Immunity all 8 ✔ Minor Enemy NEW canon ⭐ MAJEUR** — Bowling = preuve canon Minor Enemy avec boss-tier immunity (vs standard 4/4 ou deviations 5/3, 6/2). Pattern Mob varying jusqu'à 8/8 immune. Cross-référence : Bowling Minor + Rare Monsters Birds + Bosses share all 8 ✔ → not exclusive Rare/Boss trait. À documenter `combat/status-effects.md` per-mob immunity tier matrix avec `'minor-boss-tier-8'` profile NEW. Source: idem.
+
+- [ ] ⭐ **🆕 Counter Opportunities tier 4 NEW lowest non-0 ⭐ MAJEUR** — Bowling first ingestion Counter (4) tier. Pattern Damia étendu **6 tiers canon : 0 / 4 / 9 / 16 / 19 / 28**. Counter (4) = Dart Volcano + Dart Crush Dance + Meru Perky Step + Albert Gust of Wind Dance (4 button presses 4 abilities total). À investiguer si autres mobs Counter 4 exist alphabetical. Per user instruction : feature non-implémentée Damia, factual mention only. Source: idem.
+
+- [ ] **🆕 Attack Ball 8% drop NEW canon item ⭐** — Bowling drops Attack Ball 8%. Effect canon unknown (probable Repeat Item attack damage OR consumable). À investiguer fandom + items wiki. À documenter `items/consumables.md` (à créer) Attack Ball entry. Source: idem.
+
+- [ ] **🆕 Charging Spirit Air-Combat-style AI Bowling pattern ⭐** — Confirms shared canon Air Combat + Bowling = same probability-based Charging Spirit (vs Berserker @25% exact threshold). 75% basic / 25% Charging Spirit > 25% HP / 25% All-out Attack! ≤ 25% HP (3× phys). Pattern AI réutilisable Damia `MobAI3PhaseCharging` data-model + cross-mob ability references. Source: idem.
+
+- [ ] **🆕 Snowfield mob faction canon NEW ⭐** — Bowling + **Windy Weasel** + **Wildman** + **White Ape** = 4 mobs Snowfield Disc 3 ecosystem canon. À documenter `mobs/Windy Weasel.md` + `mobs/Wildman.md` + `mobs/White Ape.md` (à créer). Cohérent Polter Helm/Armor/Sword optional bosses Snowfield + Snowfield → Vellweb road. Source: idem.
+
+- [ ] **🆕 Snowfield → Vellweb road canon Disc 3** — Bowling formation 181 spawns on this transit road. Pattern road Disc 3 pre-Vellweb 4 Dragoon Knights Optional bosses. À documenter `locations/Snowfield.md` + `locations/Vellweb.md` (à créer). Source: idem.
+
+- [ ] **🆕 Pattern "tank physical" canon Bowling ⭐** — HP 400 + DF 160 high + MDF 80 moderate + AT 70 = mob anti-physical favorise magic player strategy. Cross-référence : Beastie Dragon (DF 130 high) similar pattern. Pattern Disc 3 mob tank physical canon. Source: idem.
+
+- [ ] **🆕 Rotating Hammer canon ability name (community) Bowling** — Wiki ~Rotating Hammer (community), fandom canon name à investiguer ingestion future. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

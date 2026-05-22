@@ -2851,6 +2851,20 @@
   - M. Attack : wiki 76 vs fandom **86** (+13%) — idem
     → Damia adopt fandom 65/86 probable. Source: comparaison.
 
+### NPCs / Carlo (King of Unified Serdio pré-game lore — Albert's father + Doel's brother + Serdian Civil War trigger)
+
+- [ ] **🆕 Carlo NPC lore canon ⭐** — **King Carlo of Serdio** = last king of unified Serdio (pre-Civil War). Albert's father + Doel's brother. **Murdered by Doel 20 years pre-game** → Serdio split Kingdom Basil (Albert north) + Imperial Sandora (Doel south) + 2 decades Civil War canon. Document NPC lore : [`features/npcs/Carlo.md`](features/npcs/Carlo.md). Source: [`features/npcs/_sources/lod-wiki-carlo.md`](features/npcs/_sources/lod-wiki-carlo.md) + [`features/npcs/_sources/fandom-carlo.md`](features/npcs/_sources/fandom-carlo.md).
+
+- [ ] ⭐ **🆕 Reveal canon tragique Disc 4 Carlo NEW MAJEUR ⭐** — Albert duel Doel Moon that Never Sets reveals : Carlo lui-même **trustful of Doel** + **self-doubts king stature** ("didn't quite have the stature to be King" + "Without Doel, he couldn't do anything") + **expected Doel succession** ("you who was most likely to take the throne"). **Conflit familial = misunderstanding tragique canon** — Doel a tué frère qui aurait été allié. Pattern "miscommunication tragic family conflict" canon. À refléter Disc 4 boss fight Doel dialogues + Albert reveals. Source: idem.
+
+- [ ] **🆕 Two views canon Carlo ⭐** — Doel's view (incompetent leader, overtaxation/disorder/corrupt ministers) vs Albert's view (loved by people + vassals). Pattern double-perspective canon political ambiguity. Source: idem.
+
+- [ ] **🆕 Serdian Civil War 2 decades lore canon ⭐** — 20 years post-Carlo death → Disc 1 game start. Bale-Basil (Albert north) vs Imperial Sandora (Doel south). À documenter `lore/serdian-civil-war.md` (à créer) + `lore/serdia.md` (à créer) — full Serdio lore. Source: idem.
+
+- [ ] **🆕 NPCs catalog `features/npcs/` créé NEW ⭐** — Pattern feature category NPCs lore (vs party-members + bosses + mobs). Premier NPC documenté = Carlo. Pattern à étendre autres NPCs lore TLoD : Albert's mother (à investiguer), Empress Karina (Doel's wife), autres NPCs canon. Source: décision projet.
+
+- [ ] **🆕 Carlo questions ouvertes canon** : Carlo's wife / Albert's mother documented ? Carlo's reign duration ? Carlo's age ? À investiguer Discord/Wulves source tier 1 + autres ingestion. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

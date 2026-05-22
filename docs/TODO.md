@@ -2746,6 +2746,26 @@
 
 - [ ] **🆕 "Primitive Wingly automaton" thematic Bowling canon** — Cohérent Snowfield Disc 3 location proximity Vellweb Wingly Knights area. Pattern Wingly-tech mobs Disc 3 ? À cross-check autres Snowfield mobs (Windy Weasel/Wildman/White Ape) + Polter Helm/Armor/Sword bosses thematic. Source: idem.
 
+### Mobs / Cactus (Earth Death Frontier Disc 4 — Counter 16 Minor NEW + symmetric balanced AT=MAT/DF=MDF + Contact visible mob + Recovery Ball drop NEW)
+
+- [ ] **🆕 Cactus canon data-model** — **Earth** element, HP 320 (JP +25% ~400 à confirmer), AT 67, DF **150 high**, MAT 67, MDF **150 high**, SPD 60. Mob Death Frontier Disc 4 Cactus ×2 formation unique. À implémenter `mobs/cactus.ts`. Source: [`features/mobs/_sources/lod-wiki-cactus.md`](features/mobs/_sources/lod-wiki-cactus.md).
+
+- [ ] ⭐ **🆕 Counter Opportunities 16 Minor Enemy NEW canon ⭐ MAJEUR** — Cactus = first Minor Enemy avec Counter 16 confirmed canon. Previously thought Counter 16 = exclusive Unique Jars tier (Lucky Jar/Cursed Jar/Treasure Jar). Pattern Counter tier per-mob assigned NOT category-correlated. À reconcilier `combat/additions.md` Counter Opportunities tier mapping documentation. Pattern Damia 6 tiers canon : 0 / 4 / 9 / 16 (Minor + Jar shared) / 19 / 28. Source: idem.
+
+- [ ] ⭐ **🆕 Stats "symmetric balanced tank" canon NEW Cactus ⭐** — AT=MAT=67 + DF=MDF=150 unique pattern symmetric. Mob anti-physical AND anti-magic balanced offense. Pattern Disc 4 Death Frontier mob design "tough generalist". À cross-check autres Disc 4 mobs same pattern. Source: idem.
+
+- [ ] ⭐ **🆕 Recovery Ball 15% drop NEW item canon ⭐** — Cactus drops Recovery Ball 15%. Pattern Spell Item probable (cohérent Attack Ball Bowling Spell Item canon) — Recovery thematic = healing-cast Spell Item probable. **15% drop rate ⭐ high** (vs 8% standard). Cohérent existing TODO 1046 "Recovery Ball 100 random" Magic Damage SP grants. À documenter `items/consumables.md` (à créer) Recovery Ball entry Spell Item healing. Source: idem.
+
+- [ ] ⭐ **🆕 "Contact" encounter mechanic Death Frontier visible mob canon NEW ⭐** — Cactus formation 456 Death Frontier submaps 748/755/763/769 = **Contact** (visible mob contact-trigger). Cohérent existing `locations/Death Frontier.md` "Collision Encounter (mobs visibles + contact = battle, comme Phantom Ship)". Distinct **"Contact (arrows)" Berserker** Home of Gigantos arrow traps. À documenter `combat/encounter-mechanics.md` (à créer) — pattern 3 encounter types canon : `random` / `contact-arrows` / `contact-visible-mob`. Source: idem.
+
+- [ ] **🆕 Cactus ×2 unique formation canon** — Cactus uniquement spawns par paires (formation 456). Pas de solo ni partners autres mobs. Pattern formation "duo dedicated" canon. Source: idem.
+
+- [ ] **🆕 World Map roads bidirectional Cactus canon Disc 4 ⭐** — Death Frontier ↔ Ulara (entrance + exit Wingly hidden city) + Ulara → Home of Giganto (reverse direction Disc 4 to Disc 2 area). Pattern roaming mob roads multi-direction canon. À documenter `world-map/disc4-roads.md` (à créer). Source: idem.
+
+- [ ] **🆕 AI 2-phase simple Cactus canon** — ~Bite (>50%, 1× phys) / ~Thousand Needles (≤50%, **3× phys**). Pas de Charging Spirit telegraph (vs Air Combat/Berserker/Bowling). Pattern AI simple direct escalation canon. Pattern "wounded mob more dangerous" canon récurrent. Source: idem.
+
+- [ ] **🆕 ~Thousand Needles canon name (community) Cactus** — Wiki ~Thousand Needles (community), pattern thematic "cactus shoots needles" — possible Final Fantasy "1000 Needles" reference. Fandom canon name à investiguer ingestion future. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

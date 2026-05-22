@@ -13,10 +13,11 @@
 > **Sources** :
 >
 > - 🥈 [`_sources/lod-wiki-crescent-bee.md`](./_sources/lod-wiki-crescent-bee.md) — wiki LoD (Wind Prairie Disc 1 + A-AV 20% NEW canon higher tier + Spinning Gale 8% drop confirme Spell Item canon + AI 2-phase ~Needle Prick / Spinning Gale 1.5× Wind magic + Vampire Kiwi/Mantis partners NEW + 3 Prairie roads canon + Escape 80% Disc 1 + recolor Stinger Barrens canon Trivia NEW)
+> - 🥉 [`_sources/fandom-crescent-bee.md`](./_sources/fandom-crescent-bee.md) — fandom (⭐ Appearance "aerial insect 2 large wings + massive stinger below" canon + "far weaker cousin to Stinger" recolor confirme + Buzzing Sting canon name + ⚠️ Spinning Gale "attack all targets" AoE divergence MAJEUR vs wiki Single + ⚠️ HP JP 20 EXTRÊME divergence +122% + ⚠️ Counterattack No fandom vs wiki Yes Counter 28 + Encounter Uncommon + Strategy "conserve Spinning Gale for Urobolus boss" + Hoax canon weakness magical attacks reveal NEW)
 
 ## Statut
 
-🟡 **Draft post-ingestion wiki LoD** — fandom à ingérer pour cross-check si page existe.
+🟢 **Canon documenté wiki + fandom** — divergences notées (Counterattack + Spinning Gale target + HP JP extrême).
 
 ## Identity canon
 
@@ -27,18 +28,19 @@
 - **Visual canon** : **Recolor of Stinger** (Barrens Disc 2 mob) — pattern recolor canon récurrent TLoD
 - **Pattern symbolique** : ⭐ **A-AV 20% NEW tier canon** + **Spinning Gale Spell Item drop canon** + **Recolor of Stinger**
 
-## Stats canon ⚠️ Damia adopt JP (à confirmer fandom)
+## Stats canon ⚠️ Damia adopt JP ⭐
 
-| Stat     | Value (US)     | Damia canon                                       | Notes                      |
-| -------- | -------------- | ------------------------------------------------- | -------------------------- |
-| HP       | 9              | JP probable ~11 (+1-2 unit minimal stats pattern) | À confirmer fandom         |
-| AT       | 5              | 5                                                 |                            |
-| DF       | 100            | 100                                               |                            |
-| MAT      | 5              | 5                                                 |                            |
-| MDF      | 100            | 100                                               |                            |
-| SPD      | 60             | 60                                                |                            |
-| **A-AV** | **20%** ⭐ NEW | 20%                                               | Higher A-AV tier canon NEW |
-| M-AV     | 0%             | 0%                                                |                            |
+| Stat     | Wiki US        | Fandom US | **Damia (JP)** ⭐                      | Notes                                                          |
+| -------- | -------------- | --------- | -------------------------------------- | -------------------------------------------------------------- |
+| HP       | 9              | 9         | **20** ⚠️ EXTRÊME divergence JP +122%  | Pattern minimal stats sensitive (cohérent Berserk Mouse +100%) |
+| AT       | 5              | **6**     | **6** (fandom higher)                  | +20% fandom                                                    |
+| DF       | 100            | 100       | **100**                                |                                                                |
+| MAT      | 5              | **6**     | **6** (fandom higher)                  | +20% fandom                                                    |
+| MDF      | 100            | 100       | **100**                                |                                                                |
+| SPD      | 60             | 60        | **60**                                 |                                                                |
+| **A-AV** | **20%** ⭐ NEW | (silent)  | **20%**                                | Higher A-AV tier canon NEW (confirme fandom "may evade")       |
+| M-AV     | 0%             | 0%        | **0%**                                 |                                                                |
+| Gold     | 6              | 6         | **2** ✓ JP confirmed fandom ÷3 pattern |                                                                |
 
 ⚠️ **A-AV 20% NEW canon MAJEUR ⭐** :
 
@@ -177,6 +179,47 @@ Pattern mob standard : 4 immune (Petrify/Bewitch/Arm Block/Dispirit) / 4 vulnera
 - [`../combat/damage-formula.md`](../combat/damage-formula.md) — A-AV modifier + Attack Multiplier 1.5× Spinning Gale
 - [`../combat/additions.md`](../combat/additions.md) — Counter Opportunities tier 28 standard
 - [`../items/consumables.md`](../items/consumables.md) (à créer) — Spinning Gale Spell Item Wind 1.5× magic damage entry NEW
+
+## Cross-check fandom (compléments + divergences)
+
+**Confirmations utiles fandom** :
+
+- **Wind + Prairie location** confirmed
+- **EXP 10** confirmed
+- **DF 100 / MDF 100 / SPD 60** match
+- **A-AV "may evade attacks"** confirme wiki 20% canon
+- **Spinning Gale drop 8%** confirmed
+- **3 formations** : solo / + Mantis / + Vampire Kiwi (cohérent wiki)
+- **Disc 1 Monsters category** ✅
+- **Recolor of Stinger** confirme via "far weaker cousin to Stinger, another relative to the bee family"
+
+**NEW canon fandom-only** ⭐ MAJEUR :
+
+- ⭐ **Appearance canon MAJEUR ⭐** : "aerial insect + 2 large wings + massive stinger below" canon — visual design Damia
+- ⭐ **"Far weaker cousin to Stinger" canon récurrent** — confirme **Stinger family** canon (Crescent Bee Disc 1 weaker + Stinger Disc 2 stronger). Pattern recolor mob canon confirmed.
+- ⭐ **Buzzing Sting canon name officiel** (= wiki ~Needle Prick community) — adopter fandom canon
+- ⭐ **Encounter rate Uncommon** canon (vs Bowling/Canbria Dayfly/Cactus Very common)
+- ⭐ **Strategy "conserve Spinning Gale for Urobolus boss"** canon — Wind weakness Earth Urobolus
+- ⭐ **"Hoax battles massive weakness to magical attacks regardless of element"** canon NEW MAJEUR — Hoax canon mob/boss vulnerability magic-overall
+
+**Divergences wiki vs fandom** :
+
+| Stat / Aspect                     | Wiki LoD             | Fandom                   | Notes                                                                                                                  |
+| --------------------------------- | -------------------- | ------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
+| **HP US/EU**                      | 9                    | 9                        | Match                                                                                                                  |
+| **HP JP**                         | (silent)             | **20** ⚠️ EXTRÊME        | Fandom +122% (vs +25% standard) — pattern minimal stats sensitivity. Damia adopt 20 JP                                 |
+| **P. Attack**                     | 5                    | **6**                    | ⚠️ DIVERGENCE +20% (fandom probable JP closer)                                                                         |
+| **M. Attack**                     | 5                    | **6**                    | ⚠️ DIVERGENCE +20%                                                                                                     |
+| **Gold US**                       | 6                    | 6                        | Match                                                                                                                  |
+| **Gold JP**                       | (silent)             | **2**                    | Fandom canon JP ÷3 pattern — Damia adopt 2                                                                             |
+| **Counterattack**                 | **Yes** + Counter 28 | **No** ⚠️                | ⚠️ DIVERGENCE — Wiki tier 2 prévaut Counter 28 canon Damia                                                             |
+| **~Needle Prick / Buzzing Sting** | ~Needle Prick        | **Buzzing Sting**        | Fandom canon name officiel — adopter                                                                                   |
+| **Spinning Gale target**          | Single target ⭐     | **"all targets"** AoE ⚠️ | ⚠️ MAJEUR DIVERGENCE — Wiki tier 2 Single prévaut canonical. Fandom internal inconsistency (Battle AoE / Drops Single) |
+| **Encounter rate**                | (silent)             | **Uncommon**             | Fandom NEW canon                                                                                                       |
+
+→ **Damia adopt JP stats** (HP 20 / Gold 2) ✓ confirmed extrême canon.
+→ **Wiki tier 2 prévaut** : Counter 28 + Spinning Gale Single target + A-AV 20%.
+→ **Fandom canon names** (Buzzing Sting) + appearance + strategic hints.
 
 ## Gaps / TODO
 

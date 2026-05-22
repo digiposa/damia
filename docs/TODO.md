@@ -3183,6 +3183,31 @@
 
 - [ ] **🆕 ~Needle Prick canon name (community) Crescent Bee** — Wiki community approximation > 50% phase ability (1× phys). Pattern thematic "bee stinger" canon. Fandom canon name à investiguer ingestion future. Source: idem.
 
+### Mobs / Crescent Bee fandom complement — Appearance aerial insect canon + "far weaker cousin to Stinger" confirme recolor family + Buzzing Sting canon + Spinning Gale AoE divergence + HP JP 20 EXTRÊME + Hoax magical weakness canon NEW
+
+- [ ] **🆕 Crescent Bee appearance canon MAJEUR ⭐** — "Aerial insect with 2 large wings + massive stinger below" canon. À refléter sprite design Damia : 2-wing bee + stinger (vs Canbria Dayfly 3 pairs wings). Source: [`features/mobs/_sources/fandom-crescent-bee.md`](features/mobs/_sources/fandom-crescent-bee.md).
+
+- [ ] **🆕 "Far weaker cousin to Stinger" canon récurrent confirme Stinger family ⭐** — Crescent Bee Disc 1 weaker + Stinger Disc 2 stronger variant canon. Cohérent existing wiki "recolor of Stinger" Trivia. Pattern recolor mob canon récurrent confirme. À documenter `mobs/Stinger.md` (à créer) — Barrens Disc 2 mob, Crescent Bee family. Source: idem.
+
+- [ ] **🆕 Buzzing Sting canon name officiel (vs wiki ~Needle Prick community) ⭐** — Adopter fandom canon > 50% phase ability. Pattern thematic "bee buzzing sting" cohérent appearance massive stinger canon. Source: idem.
+
+- [ ] ⚠️ **🆕 Spinning Gale target divergence wiki Single vs fandom "all targets" AoE MAJEUR ⚠️** — Wiki tier 2 Single target / Fandom Battle "an attack all spell item" + fandom Drops "attacks only one enemy" (internal inconsistency). Wiki tier 2 prévaut canon Damia Single target probable. Cependant thematic "spinning gale wind storm" suggère AoE canonically. À investiguer Discord/Wulves canon précis. Pattern Spinning Gale targeting canon Spell Item ambiguous. Source: comparaison.
+
+- [ ] ⚠️ **🆕 HP JP 20 EXTRÊME divergence ⚠️ MAJEUR Crescent Bee** — HP US 9 / JP **20** = +122% pattern EXTRÊME (vs +25% standard JP). Pattern minimal stats sensitive scaling (cohérent Berserk Mouse +100% sur HP 2→4, Imago +67% sur 12k→20k). Damia adopt JP 20. À refléter dans `combat/jp-vs-us-stats.md` (à créer) pattern minimal stats extrême variants canon. Source: idem.
+
+- [ ] ⚠️ **🆕 Counterattack divergence wiki vs fandom Crescent Bee ⚠️** — Wiki tier 2 "Counters Additions? Yes" + Counter 28 / Fandom "Can Counterattack: No". Wiki tier 2 prévaut canon Damia Counter 28. Pattern fandom default Yes/No imprécis canon récurrent (cohérent Canbria Dayfly same divergence). Source: comparaison.
+
+- [ ] **🆕 Encounter rate Uncommon Crescent Bee canon ⭐** — Vs Bowling/Canbria Dayfly/Cactus Very common. Pattern Disc 1 encounter rate variability canon. Source: idem.
+
+- [ ] **🆕 Strategy "conserve Spinning Gale for Urobolus boss" canon ⭐** — Urobolus = Earth-element boss Disc 1 Limestone Cave (cohérent existing Bosses master). Wind weakness Earth → Spinning Gale 1.5× damage vs Urobolus. Pattern strategic Spell Item usage canon. À refléter `bosses/Urobolus.md` (à créer) strategy canon section. Source: idem.
+
+- [ ] ⭐ **🆕 "Hoax battles massive weakness to magical attacks regardless of element" canon NEW MAJEUR ⭐** — Hoax location (Disc 1 Sandora Elite + Kongol boss fights) = massive magic vulnerability canon. "Regardless of element" = pattern Hoax mob/boss weakness magic-overall (NOT specific element). Pattern strategic location-specific weakness canon NEW. À documenter `locations/Hoax.md` (à créer) — magical weakness canon. Pattern location-canon weakness profile per-zone. Source: idem.
+
+- [ ] **🆕 Stats divergences Crescent Bee wiki vs fandom ⚠️** :
+  - P. Attack : wiki 5 vs fandom **6** (+20%)
+  - M. Attack : wiki 5 vs fandom **6** (+20%)
+    → Damia adopt fandom 6/6 probable (fandom higher JP closer pattern). Source: comparaison.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

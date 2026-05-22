@@ -2907,6 +2907,49 @@
 
 - [ ] **🆕 "Scripted + Escape 0%" boss combat lock-in canon ⭐** — Pattern boss canon cohérent fandom Bosses master "Escape cannot be used". Caterpillar = first explicit boss documentation Escape 0% canon Damia. Source: idem.
 
+### Bosses / Caterpillar fandom complement — Imago naming + Rose "unawakened fruit + subspecies of insect" lore MAJEUR + Imago Harlequin appearance + 4 fandom canon ability names + stats divergences
+
+- [ ] **🆕 Naming canon Caterpillar vs Imago primary** — Wiki primary "Caterpillar" (first form) / Fandom page name "Imago" (final form). Damia adopt **Caterpillar primary boss name canonical** (first encountered + EXP/Gold attribué). "Imago" = final form name canonical. Source: [`features/bosses/_sources/fandom-caterpillar.md`](features/bosses/_sources/fandom-caterpillar.md).
+
+- [ ] ⭐ **🆕 Rose dialogue "unawakened fruit + subspecies of insect" canon NEW MAJEUR ⭐⭐** — Rose recognizes Imago canon. Pattern lore Disc 4 : Divine Tree harbors **awakened (108 TLoD species)** + **unawakened fruits** potential additional species. Caterpillar = potential 109th+ species canon (= insect-derived subspecies). Cohérent existing `locations/Divine Tree.md` 108 fruits = 108 species lore + Virage 108th fruit Moon That Never Sets. À documenter `lore/divine-tree.md` (à créer) + cross-référence `locations/Divine Tree.md` lore reveal Disc 4. Source: idem.
+
+- [ ] **🆕 Story canon Kongol's landing wakes Caterpillar ⭐** — Giganto stomp impact shakes Imago/Caterpillar from slumber. Pattern narrative trigger boss fight Disc 4 Divine Tree. Caterpillar "crawls off-screen, later confronts team". À refléter cutscene scripted Damia. Source: idem.
+
+- [ ] ⭐ **🆕 Imago Harlequin/Jester humanoid appearance canon MAJEUR ⭐** — "Transparent luminescent red + yellow tinted wings matching main body color scheme + head antennas + regular hands". Pattern thematic "insect adult humanoid Harlequin jester" canon — distinctive design Disc 4 boss. À refléter sprite design Damia. Source: idem.
+
+- [ ] **🆕 Caterpillar "eccentric tentacle-like tails" appearance canon** — Cohérent wiki ~Tentacle Whip ability. À refléter visual sprite Caterpillar form 1. Source: idem.
+
+- [ ] **🆕 Pupa "floats in mid air + wriggles" canon + "foreshadowing of another boss to come"** — Pattern intermediate cocoon state thematic + narrative tension build. Cohérent wiki ~Writhe "does nothing". Source: idem.
+
+- [ ] ⭐ **🆕 4 Imago abilities fandom canon names NEW ⭐ MAJEUR** :
+  - **Infight** (= wiki ~Pickup Slash) — hover + grab head antennas + smack 2-3× + jump away
+  - **High Output Laser** (= wiki ~Laser) — beam of energy Light-magic
+  - **Smoke of Despair** (= wiki ~Dark Vapor) — hover + flap wings
+  - **Triangle Death** (= wiki Can't Combat) — blue triangle + capture + slam ground ⭐
+    Adopter fandom canon names officiels (vs wiki ~ approximations). À implémenter ability names Damia. Source: idem.
+
+- [ ] ⭐ **🆕 Can't Combat vs Triangle Death dual-naming canon NEW ⭐** — Wiki "Can't Combat" (ability mechanic ID, ties weapons canon) / Fandom "Triangle Death" (visual descriptor — blue triangle + slam ground). **Both valid canon names probable** — pattern dual-naming canon (mechanic ID + visual descriptor). Damia conserve both pour data-model :
+
+  ```ts
+  type Ability = { mechanicId: string; visualName?: string; ... };
+  // Caterpillar Imago : { mechanicId: 'cantCombat', visualName: 'Triangle Death', ... }
+  ```
+
+  Source: idem.
+
+- [ ] **🆕 Smoke of Despair effects divergence wiki vs fandom ⚠️** — Wiki "~99.01% Dispiriting only" / Fandom "stun OR poison OR dispirit" (3 effects probable). Wiki tier 2 prévaut Dispiriting-only canon Damia ? OR fandom 3-effects accurate ? À investiguer Discord/Wulves source tier 1. Source: idem.
+
+- [ ] **🆕 Stats divergences Caterpillar wiki vs fandom ⚠️** :
+  - Caterpillar AT : wiki 110 vs fandom **140** (+27%) — fandom higher
+  - Imago AT : wiki 100 vs fandom **140** (+40%) ⚠️ MAJOR
+  - MAT all forms : wiki 92/92/134 vs fandom **103/103/150** (+12%) recurrent
+  - DF/MDF/SPD match
+    → Damia adopt fandom higher probable (JP closer). OR wiki tier 2 prévaut. Source: comparaison.
+
+- [ ] **🆕 "Moon That Never Sets lays within heart of Divine Tree" canon confirmation** — Cohérent existing `locations/Divine Tree.md` lore. Pattern Divine Tree = vessel Moon That Never Sets (Virage 108th fruit + Crystal Sphere). Caterpillar boss = pre-Moon access fight canon. À cross-référer lore. Source: idem.
+
+- [ ] **🆕 "Subspecies of insect" Imago lineage canon** — Rose dialogue indique Imago = derived insect species. Pattern Divine Tree harbours **awakened (108 TLoD species canon)** + **unawakened fruits potential subspecies**. À investiguer lore "subspecies" canon + 108 species roster détaillé. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

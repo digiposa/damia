@@ -19,10 +19,11 @@
 > **Sources** :
 >
 > - 🥈 [`_sources/lod-wiki-caterpillar.md`](./_sources/lod-wiki-caterpillar.md) — wiki LoD (Caterpillar 6k/Pupa 2.5k/Imago 12k 3-form + Counter 28/0/28 + Status all 8 ✔ + 3 drops 100% Spell Items + AI "if→then" model + Auto/Ignore Turn Order conditions + A-AV status reduction + Dark Vapor RNG 1/101 + Can't Combat Instant Death + Light-elemental Laser)
+> - 🥉 [`_sources/fandom-caterpillar.md`](./_sources/fandom-caterpillar.md) — fandom (page name **"Imago"** vs wiki "Caterpillar" + ⭐ **Rose dialogue "unawakened fruit + subspecies of insect" canon MAJEUR** + Story Kongol's landing wakes + ⭐ Imago Harlequin/Jester humanoid appearance MAJEUR + 4 fandom canon ability names Imago : **Infight / High Output Laser / Smoke of Despair / Triangle Death** + ⚠️ stats divergences fandom higher + ⚠️ Smoke of Despair "stun OR poison OR dispirit" divergence wiki Dispiriting-only)
 
 ## Statut
 
-🟡 **Draft post-ingestion wiki LoD** — fandom à ingérer pour cross-check si page existe.
+🟢 **Canon documenté wiki + fandom** — fandom complements + divergences notées.
 
 ## Identity canon
 
@@ -257,6 +258,78 @@
 - [`../combat/monster-categories.md`](../combat/monster-categories.md) — Boss AI "if → then" model NEW canon
 - [`../combat/elements.md`](../combat/elements.md) — Light vs Darkness Imago Laser canon
 - [`../items/consumables.md`](../items/consumables.md) (à créer) — Healing Rain / Moon Serenade / Sun Rhapsody Spell Items 100% drops
+
+## Cross-check fandom (compléments + divergences)
+
+**Confirmations utiles fandom** :
+
+- **Non-Elemental + Divine Tree location** confirmé
+- **HP Caterpillar 6k / Pupa 2.5k / Imago 12k** match wiki
+- **EXP 13,000 / Gold 300** confirmed
+- **3 drops Spell Items 100% (Healing Rain + Moon Serenade + Sun Rhapsody)** confirmed
+- **Light-element Laser ability** confirmé Imago
+- **Counter Yes** confirmed (Caterpillar + Imago)
+
+**NEW canon fandom-only** ⭐ :
+
+- ⭐ **Page name "Imago" canon final form** (vs wiki "Caterpillar" primary) — Damia adopt Caterpillar primary boss name
+- ⭐ **Rose dialogue canon MAJEUR ⭐** :
+  - **"Unawakened fruit"** = Caterpillar/Imago potential additional fruit Divine Tree (cohérent existing `locations/Divine Tree.md` 108 fruits = 108 species lore)
+  - **"Subspecies of insect"** = Imago = derived insect species canon
+  - Pattern lore reveal Disc 4 : Divine Tree harbors awakened (108 TLoD species) + **unawakened fruits** potential additional species
+- ⭐ **Story canon** : **Kongol's landing wakes Caterpillar from slumber** + "crawls off-screen, later confronts team" — Giganto stomp wake canon
+- ⭐ **"Moon That Never Sets lays within heart of Divine Tree"** canon (cohérent location lore)
+- ⭐ **Caterpillar appearance** : "eccentric tentacle-like tails" canon (cohérent ~Tentacle Whip)
+- ⭐ **Pupa "foreshadowing of another boss to come"** narrative canon
+- ⭐ **Imago appearance canon MAJEUR ⭐** :
+  - **Harlequin/Jester humanoid** entity canon
+  - **Transparent luminescent red + yellow tinted wings**
+  - Wings match color scheme main body
+  - Head antennas + regular hands
+  - Pattern thematic "insect adult humanoid Harlequin jester canon" — distinctive design
+  - À refléter sprite design Damia
+- ⭐ **4 Imago abilities fandom canon names NEW ⭐ MAJEUR** :
+  - **Infight** (= wiki ~Pickup Slash) — hover + grab antennas + smack 2-3× + jump away
+  - **High Output Laser** (= wiki ~Laser) — beam of energy Light-magic
+  - **Smoke of Despair** (= wiki ~Dark Vapor) — hover + flap wings
+  - **Triangle Death** (= wiki Can't Combat) — blue triangle + capture + slam ground ⭐
+
+**Divergences wiki vs fandom** :
+
+| Stat / Aspect                     | Wiki LoD                                                | Fandom                          | Notes                                                                 |
+| --------------------------------- | ------------------------------------------------------- | ------------------------------- | --------------------------------------------------------------------- |
+| **Page name**                     | Caterpillar (primary)                                   | **Imago** (final)               | Damia adopt **Caterpillar primary** canon                             |
+| **AT Caterpillar**                | 110                                                     | **140** (+27%)                  | ⚠️ DIVERGENCE — fandom higher probable JP closer                      |
+| **AT Imago**                      | 100                                                     | **140** (+40%) ⚠️               | ⚠️ MAJOR DIVERGENCE                                                   |
+| **MAT all forms**                 | 92/92/134                                               | **103/103/150** (+12%)          | ⚠️ DIVERGENCE recurrent fandom higher                                 |
+| **Smoke of Despair effects**      | "Dispiriting only"                                      | "stun OR poison OR dispirit" ⚠️ | Fandom 3-effects vs wiki 1-effect — à investiguer canon               |
+| **Caterpillar abilities**         | 4 (Transform/Tentacle Whip/Splash Poison/Rancid Stench) | omits Rancid Stench             | Fandom loose narrative — wiki prévaut explicit                        |
+| **Can't Combat / Triangle Death** | "Can't Combat"                                          | **Triangle Death**              | ⭐ Both valid canon names probable — mechanic ID vs visual descriptor |
+
+→ **Wiki tier 2 prévaut** : Caterpillar primary name + stats numériques + abilities list complete + Smoke of Despair Dispiriting-only.
+→ **Fandom canon names** Imago abilities (Infight / High Output Laser / Smoke of Despair / Triangle Death) prévalent + appearance descriptions.
+
+## Story canon Disc 4 ⭐ NEW
+
+### Lore reveal Rose
+
+- **Rose recognizes Imago as "unawakened fruit + subspecies of insect"** ⭐ canon
+- Cohérent existing `locations/Divine Tree.md` 108 fruits = 108 species lore
+- Pattern : Divine Tree harbors **108 awakened species (TLoD canon)** + **unawakened fruits potential additional species** (Caterpillar = NEW unawakened fruit canon)
+
+### Narrative arc canon
+
+1. Party reaches Divine Tree Disc 4 (post-Mayfil)
+2. **Kongol lands** in Divine Tree → impact shakes Imago/Caterpillar from slumber ⭐
+3. Caterpillar **crawls off-screen** — narrative tension
+4. Rose dialogue : "unawakened fruit + subspecies of insect" reveal
+5. **Large Caterpillar lands in front of team** → fight commences scripted
+
+### Linked location lore
+
+- **Moon That Never Sets lays within heart of Divine Tree** canon confirmation
+- Pattern Divine Tree = vessel Moon That Never Sets (Virage 108th fruit + Crystal Sphere lore)
+- Caterpillar boss fight = guardian/awakening pre-Moon access ?
 
 ## Gaps / TODO
 

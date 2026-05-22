@@ -17,10 +17,11 @@
 > **Sources** :
 >
 > - 🥈 [`_sources/lod-wiki-claire.md`](./_sources/lod-wiki-claire.md) — wiki LoD (Thunder Moon Disc 4 + dual-entity Possessed/Unpossessed + Unslayable/Alternate Win Condition/Retaliate passives + Four-Gods-Destruction reduce-to-1 + extra turn mechanic + Untargetable + Talk HP-threshold + multi-entity boss pattern récurrent canon)
+> - 🥉 [`_sources/fandom-claire-boss.md`](./_sources/fandom-claire-boss.md) — fandom (⭐ **"War God" possession canon MAJEUR** + **"Mind's eye awaken!" correct dialogue canon exact** + Four-Gods-Destruction **targets Haschel only** (NOT random) + Claire quote canon true desires + Haschel resolution quote + HP JP 4,000 confirmed + Identity reveal Claire = Dart's mother canon all but certainty)
 
 ## Statut
 
-🟡 **Draft post-ingestion wiki LoD** — fandom à ingérer pour cross-check si page existe.
+🟢 **Canon documenté wiki + fandom** — identity Claire = Claire Feld (Dart's mother) canon cross-référencée [`../npcs/Claire.md`](../npcs/Claire.md).
 
 ## Identity canon
 
@@ -227,6 +228,51 @@ Pattern boss-tier standard immunity both forms.
 - [`Caterpillar.md`](./Caterpillar.md) — Boss AI "if → then" model + Counter 0 pattern intermediate forms shared (Pupa)
 - [`../combat/multi-entity-bosses.md`](../combat/multi-entity-bosses.md) (à créer) — pattern technical canon multi-entity boss fights
 - [`../combat/monster-categories.md`](../combat/monster-categories.md) — Boss AI canon section
+
+## Cross-check fandom (compléments + divergences)
+
+**Confirmations utiles fandom** :
+
+- **Thunder + Moon That Never Sets** location confirmed
+- **HP US 3,200 / JP 4,000** ✓ confirme JP +25% pattern (Damia adopt 4,000)
+- **Counter Yes** confirmed
+- **EXP 6,000 + Drops Nothing** confirmed
+- **Four-Gods-Destruction reduces HP to 1** confirmé
+
+**NEW canon fandom-only** ⭐ MAJEUR :
+
+- ⭐ **"War God" possession canon NEW MAJEUR ⭐⭐** — Specific divine entity possessing Claire (cohérent Haschel "Summon 4 Gods" addition + Four-Gods-Destruction naming). Pattern thematic War God vs Haschel canon : 4 Gods = Haschel's power ↔ War God possession Claire = corrupt aspect.
+- ⭐ **"Mind's eye awaken!" exact correct dialogue canon ⭐ MAJEUR** — Specific Alternate Win Condition trigger. Player Talk command → choose "Mind's eye awaken!" answer → battle ends + frees Claire from War God.
+- ⭐ **Four-Gods-Destruction targets HASCHEL ONLY canon ⭐** — Wiki said "Single target" générique / Fandom précise Haschel only. Pattern story-canon ability target spécifique. Pattern thematic "daughter attacks father" canon.
+- ⭐ **Identity Claire = Haschel's daughter possessed canon ⭐** — Confirmed boss = Haschel's long lost daughter. Younger version (pre-Dart birth canon).
+- ⭐ **Claire's true desires quote canon** : "I just want to sing songs, chitchat with my friends, pick flowers and fall in love!" — rejection martial arts training canon
+- ⭐ **Haschel post-dialogue resolution quote** : "Mind's eye awaken! I don't care about myself. I have to save my daughter, Claire! I'll focus all my body and soul into this, and kill the devil that possesses my Claire!!"
+- ⭐ **Post-correct-dialogue mechanic canon** : Haschel gains ability to defend Four-Gods-Destruction + frees Claire from War God
+- ⭐ **Combat pattern précisé** : Phase 1 (physical) → Phase 2 halfway through (Four-Gods-Destruction Haschel 1-2× to 1 HP) → Phase 3 (2-3 attacks in a row, heal/guard critical)
+- ⭐ **Identity reveal Claire = Dart's mother canon "all but a certainty"** — voir [`../npcs/Claire.md`](../npcs/Claire.md) lore complete unified canon
+
+**Divergences wiki vs fandom** :
+
+| Stat / Aspect                                | Wiki LoD                   | Fandom                                  | Notes                                            |
+| -------------------------------------------- | -------------------------- | --------------------------------------- | ------------------------------------------------ |
+| **HP US**                                    | 3,200                      | 3,200                                   | Match                                            |
+| **HP JP**                                    | (silent)                   | **4,000**                               | Fandom canon JP +25% pattern — Damia adopt 4,000 |
+| **P. Attack**                                | 76                         | **86**                                  | ⚠️ DIVERGENCE +13% (fandom probable JP closer)   |
+| **M. Attack**                                | 76                         | **86**                                  | ⚠️ DIVERGENCE +13%                               |
+| **Four-Gods-Destruction target**             | "Single target"            | **"Haschel only"** ⭐                   | Fandom story-canon précisé — adopter             |
+| **War God identity**                         | (silent)                   | **"War God"** ⭐                        | Fandom canon NEW — identity entity possédante    |
+| **Correct dialogue Alternate Win Condition** | (silent specific dialogue) | **"Mind's eye awaken!"** ⭐ exact canon | Fandom canon NEW — adopter exact answer          |
+
+→ **Damia adopt JP stats** (HP 4,000) ✓ confirmed.
+→ **Fandom canon names + Haschel-only target + dialogue exact** prévalent.
+
+## Identity canon ⭐ MAJEUR — cross-reference `npcs/Claire.md`
+
+Boss Claire = **Haschel's daughter** (lore canon) = **Claire Feld** (Dart's mother + Zieg's wife, fandom evidence all but certainty canon).
+
+→ **Dart = Haschel's grandson canon** (strongly hinted, NOT directly confirmed in-game).
+
+Voir [`../npcs/Claire.md`](../npcs/Claire.md) pour lore unified canon Haschel's daughter + Claire Feld + timeline complete + Mayfil soul + Melbu Frahma Zieg possession context.
 
 ## Gaps / TODO
 

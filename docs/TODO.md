@@ -2985,6 +2985,57 @@
 
 - [ ] **🆕 Correct dialogue Talk Alternate Win Condition canon ⚠️** — Quels choix dialogue précis terminent battle Claire ? À investiguer fandom/script Disc 4 Haschel Claire dialogue tree. Pattern story-canon resolution canon Damia. Source: idem.
 
+### Bosses + NPCs / Claire fandom complement — Identity unified canon Claire = Claire Feld + War God + "Mind's eye awaken!" exact dialogue + Haschel-only target + Melbu Frahma Zieg possession Neet 18y pre-game lore reveal MAJEUR
+
+- [ ] ⭐ **🆕 Identity Claire = Claire Feld unified canon NEW MAJEUR ⭐⭐⭐** — Strong evidence canon : Claire (Haschel's daughter) = Claire Feld (Dart's mother + Zieg's wife). 3 fandom pages = 1 personnage unified canon. **Dart = Haschel's grandson canon** (strongly hinted, NOT directly confirmed in-game). Evidence list canon :
+  1. Lullaby = Shana's Theme canon (Claire composed + Dart knew childhood)
+  2. Claire Bridge Fletz Disc 2 reveal
+  3. Haschel "she doesn't know about [me] yet" Moon Disc 4
+  4. Piano Moon Hotel reaction Haschel + Dart
+  5. "You look just like me when I was younger" Haschel to Dart pre-final
+  6. Timeline : 25y Claire ran away + Dart 23y old → Claire met Zieg ~2y post-Rouge
+     À implémenter unified NPC `npcs/Claire.md` (créé) + cross-reference `bosses/Claire.md`. Source: [`features/npcs/_sources/fandom-claire-lore.md`](features/npcs/_sources/fandom-claire-lore.md).
+
+- [ ] ⭐ **🆕 "War God" boss possession canon NEW MAJEUR ⭐** — Claire (Boss) Disc 4 Moon possessed by **War God** (specific divine entity, NOT just "demon"). Pattern thematic Haschel "Summon 4 Gods" addition + Four-Gods-Destruction naming connect. War God vs Haschel canon : 4 Gods = Haschel's power ↔ War God possession Claire = corrupt aspect. À documenter `lore/war-god.md` (à créer) — possible single deity OR among 4 Gods Haschel canon. Source: [`features/bosses/_sources/fandom-claire-boss.md`](features/bosses/_sources/fandom-claire-boss.md).
+
+- [ ] ⭐ **🆕 "Mind's eye awaken!" exact correct dialogue canon NEW MAJEUR ⭐** — Alternate Win Condition specific trigger : player Talk command Claire → choose "Mind's eye awaken!" → battle ends + frees Claire from War God. À implémenter dialogue tree boss Claire Damia. Pattern story-canon resolution canon récurrent ? À cross-check autres bosses Alternate Win Condition dialogue choices. Source: idem.
+
+- [ ] ⭐ **🆕 Four-Gods-Destruction targets HASCHEL ONLY canon NEW ⭐** — Wiki "Single target" générique vs fandom "Haschel only" précisé. Pattern story-canon ability target spécifique (daughter attacks father thematic canon). À implémenter target-specific ability data-model : `{ target: 'haschel-only' }` boss ability canon. Source: idem.
+
+- [ ] ⭐ **🆕 Lullaby = Shana's Theme canon NEW MAJEUR ⭐⭐** — 27y pre-game Claire teenage composed lullaby for future child. Shana's Theme = music box-like rearrangement of Claire's lullaby canon. Furni Disc 3 reveal mechanism : Shana sings to Fa (mayor's child) → Haschel recognizes Claire's tune → Dart knew childhood → trigger Haschel awareness Dart connection. À refléter music canon Damia : Shana's Theme = Claire's lullaby thematic reuse. Source: idem.
+
+- [ ] ⭐ **🆕 Melbu Frahma possession Zieg via Dragoon Spirit canon NEW MAJEUR ⭐⭐ MAJEUR** — 11,000 years ago Zieg destroyed Melbu's body end Dragon Campaign canon → Melbu transferred soul into Red-Eye Dragoon Spirit → sealed soul awaited reactivation. **Neet 18y pre-game** : Zieg used Dragoon Spirit → Melbu set free → took over Zieg's body. Pattern canon : Zieg final antagonist Disc 4 = Melbu possessed Zieg. À documenter `lore/melbu-frahma-zieg-possession.md` (à créer) + cross-référer `bosses/Zieg Feld.md` (à créer) + `bosses/Melbu Frahma.md` (à créer). Source: idem.
+
+- [ ] ⭐ **🆕 Claire Feld Neet death canon — 3 possibilités MAJEUR ⭐** — Cause Claire Feld's death Neet 18y pre-game ambiguous canon :
+  1. **Fire** (Neet burning)
+  2. **Black Monster attack** directly
+  3. **Zieg under Melbu's control** ⭐ tragic implication (potential filicide via possessed husband)
+     Pattern thematic dark ambiguity canon — game does NOT reveal exact cause. À documenter `lore/neet-tragedy.md` (à créer) — 3 hypothesis canon list. Source: idem.
+
+- [ ] ⭐ **🆕 Claire's soul Mayfil canon implied MAJEUR ⭐** — Disc 4 Death City Mayfil possible encounter Dart with Claire Feld's soul. Bright light → soul familiar + warm. Dart quote canon : "We will stop dad" (Dart aware Zieg-Melbu connection). Soul heals entire party + becomes **healing point** (gameplay mechanic). Pattern thematic "mother's soul aids son" canon Disc 4. À documenter `locations/Mayfil.md` (à créer) + cross-référer healing point gameplay canon. Source: idem.
+
+- [ ] **🆕 Lotta NPC canon NEW ⭐** — Rouge School fellow martial artist + Claire's sparring partner. 25y pre-game incident : Lotta seriously injured/killed by Claire after Haschel criticism trigger. Fate canon (survived ? died ?) à investiguer. À documenter `npcs/Lotta.md` (à créer) — sparring incident catalyst canon. Source: idem.
+
+- [ ] **🆕 Timeline canon Claire unified ⭐** :
+  - 27y pre-game : Claire teenage composed lullaby
+  - 25y pre-game : Lotta sparring incident → ran away Rouge
+  - ~24-23y pre-game : Met Zieg + Dart born
+  - 20y pre-game : Haschel started pursuit (5y gap unexplained)
+  - 18y pre-game : Black Monster Neet → Claire Feld dies
+  - Disc 4 : younger Claire boss + Mayfil soul possibly meets Dart
+    À documenter `lore/claire-timeline.md` (à créer) — unified timeline canon. Source: idem.
+
+- [ ] **🆕 Pattern boss "Alternate Win Condition specific dialogue" récurrent canon ?** — Claire = "Mind's eye awaken!" exact answer. À cross-check autres bosses dialogue resolution canon TLoD. Pattern story-canon boss alternate path resolution canon récurrent ? Source: idem.
+
+- [ ] **🆕 5-year Haschel delay canon unexplained ⚠️** — Claire ran away 25y pre-game / Haschel pursued 20y (per quote). Gap 5y unexplained. Possible interpretations : Haschel hesitated 5y / Haschel pursued differently / quote 20y approximation. À investiguer Discord/Wulves canon. Source: idem.
+
+- [ ] **🆕 Dart age 5 Neet canon ⭐** — Confirmed Dart 23y old (Official Guidebook) + Neet tragedy 18y pre-game = Dart age 5 at tragedy. Wandered ruins alone, found Red-Eye Dragoon Spirit from Zieg → inheritance canon. À cross-référer `party-members/Dart Feld.md` (à créer) backstory. Source: idem.
+
+- [ ] **🆕 Stats divergences Claire wiki vs fandom ⚠️** :
+  - P. Attack : wiki 76 vs fandom **86** (+13%) — fandom higher
+  - M. Attack : wiki 76 vs fandom **86** (+13%) idem
+    → Damia adopt fandom higher probable JP closer. Source: comparaison.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

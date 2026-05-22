@@ -2950,6 +2950,41 @@
 
 - [ ] **🆕 "Subspecies of insect" Imago lineage canon** — Rose dialogue indique Imago = derived insect species. Pattern Divine Tree harbours **awakened (108 TLoD species canon)** + **unawakened fruits potential subspecies**. À investiguer lore "subspecies" canon + 108 species roster détaillé. Source: idem.
 
+### Bosses / Claire (Possessed boss Disc 4 Moon That Never Sets — Haschel's daughter — Multi-entity boss pattern récurrent + Unslayable + Alternate Win Condition dialogue + Four-Gods-Destruction reduce-to-1 + Untargetable)
+
+- [ ] **🆕 Claire boss canon dual-entity Moon Disc 4 ⭐ MAJEUR** — Haschel's daughter possessed. **Claire (Possessed)** + **Claire (Unpossessed)** dual-entity formation 435 submap 611. Thunder element. Stats identical (HP 3200/AT 76/DF 100/MAT 76/MDF 100/SPD 55). À implémenter `bosses/claire.ts` multi-entity data-model. Source: [`features/bosses/_sources/lod-wiki-claire.md`](features/bosses/_sources/lod-wiki-claire.md).
+
+- [ ] ⭐ **🆕 Multi-entity boss fights pattern canon récurrent ⭐ MAJEUR** — Pattern "2+ entities in battle swapped for dialogue/graphical reasons" canon TLoD :
+  - **Claire (Disc 4 Moon)** = Possessed + Unpossessed swap
+  - **Kamuy (Disc 2 Evergreen Optional)**
+  - **Lloyd (Flanvel Tower Disc 3)**
+  - **Magician Faust (Real)**
+  - **3 Dragon Spirits Mayfil Disc 4** (Feyrbrand/Regole/Divine Dragon Spirits)
+  - **Zieg Feld (Disc 4 Moon final)**
+    À documenter `combat/multi-entity-bosses.md` (à créer) — pattern technical canon Damia. Data-model `MultiEntityBoss { entities, rewardAttribution }`. Source: idem.
+
+- [ ] ⭐ **🆕 Unslayable boss passive canon NEW MAJEUR ⭐** — Claire Possessed : HP=0 ne tue pas, continue actions. Chance trigger when targeted by attack. Pattern boss "unkillable via damage only" canon. Solution canon = Alternate Win Condition dialogue path. À implémenter `BossPassive { type: 'unslayable'; triggerChance; onTrigger }` data-model. Source: idem.
+
+- [ ] ⭐ **🆕 Alternate Win Condition boss passive canon NEW MAJEUR ⭐⭐** — Claire Possessed defeated via correct dialogue choice during Talk command (NOT damage). Pattern story-canon boss resolution via dialogue. À implémenter `BossWinCondition = 'damage' | 'dialogue' | 'both'` data-model + Talk command player canon. Cohérent thematic Haschel "save daughter via words" canon Disc 4. Source: idem.
+
+- [ ] ⭐ **🆕 Retaliate boss passive canon NEW ⭐** — Claire Possessed HP=0 + targeted → trigger Retaliate Rouge Art. Pattern boss "death attack response" canon. Cohérent existing canon "Ignore Turn Order paired with Retaliate". À implémenter `BossPassive { type: 'retaliate'; trigger: 'hp-zero-targeted'; ability }` data-model. Source: idem.
+
+- [ ] ⭐ **🆕 Untargetable boss passive canon NEW MAJEUR ⭐** — Claire Unpossessed cannot be targeted or take damage. Pattern "graphical entity in battle pour dialogue swap" canon. Cohérent multi-entity boss pattern canon récurrent. À implémenter `BossPassive { type: 'untargetable' }` data-model. Source: idem.
+
+- [ ] ⭐ **🆕 Four-Gods-Destruction ability mechanic canon NEW MAJEUR ⭐⭐** — Claire Possessed ability : **Reduce Target HP to 1** + **Grant target turn out of order** + **Auto Do Nothing next turn**. Pattern boss "near-instakill + extra turn + filler" combo canon. Thematic reference Haschel "Summon 4 Gods" addition canon. À implémenter ability `fourGodsDestruction` Damia avec data-model `AbilityEffect = { type: 'reduce-hp-to-1' } | { type: 'grant-extra-turn'; outOfOrder: true }`. Source: idem.
+
+- [ ] **🆕 ~Talk ability NEW canon MAJEUR ⭐** — Claire Unpossessed breaks possession briefly to speak with Haschel, reverts post-speech. **Trigger conditions** : HP <75% (once) + HP <50% (once) + HP <25% (continuously). Pattern boss "dialogue interjection threshold" canon. Combo player : Talk threshold + Talk command player → correct dialogue → battle ends. À implémenter ability `talk` Damia avec HP-threshold conditions + dialogue trigger. Source: idem.
+
+- [ ] **🆕 Rouge Art canon name (community) Claire** — Possessed Claire physical attack 1× phys single. Pattern thematic possessed "rouge" (red) magic art canon. Fandom canon name à investiguer ingestion future. Source: idem.
+
+- [ ] **🆕 Pattern boss reward attribution multi-entity canon ⭐** — Claire EXP 6,000 attribué Unpossessed entity (Possessed EXP 0). Pattern multi-entity boss : EXP/Gold attribué entity-spécifique. À refléter data-model `MultiEntityBoss.rewardAttribution: { exp: BossEntityRef; gold: BossEntityRef }`. Source: idem.
+
+- [ ] **🆕 Pattern Counter multi-entity boss canon** — Claire Possessed Counter 28 / Unpossessed Counter 0. Pattern cohérent Pupa Counter 0 intermediate forms. Pattern multi-entity boss : main entity Counter standard / graphical entity Counter 0. Source: idem.
+
+- [ ] **🆕 Disc 4 Moon trials structure canon — Claire = Haschel individual trial probable ⭐** — Cohérent Hero Competition pattern + Atlow individual trial. Pattern Moon That Never Sets Disc 4 individual party member trials canon. À investiguer Moon trials full structure (Albert Doel duel existing + Haschel Claire probable + autres ?). Source: idem.
+
+- [ ] **🆕 Correct dialogue Talk Alternate Win Condition canon ⚠️** — Quels choix dialogue précis terminent battle Claire ? À investiguer fandom/script Disc 4 Haschel Claire dialogue tree. Pattern story-canon resolution canon Damia. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

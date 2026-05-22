@@ -2796,6 +2796,28 @@
 
 - [ ] **🆕 Damage descriptions divergence wiki vs fandom Cactus ⚠️** — Wiki tier 2 explicit "1× phys / 3× phys HP-conditional" / Fandom imprécis "medium both abilities". Wiki tier 2 prévaut HP-conditional escalation canon Damia. Pattern AI 2-phase explicit damage scaling canon. Source: idem.
 
+### Mobs / Canbria Dayfly (Wind Death Frontier Disc 4 — A-AV 10% NEW first Minor + Status 5/3 Poison immune NEW + Counter 0 + Spinning Gale 1.5× Wind magic + Body Purifier drop NEW + Cambrian mistranslation)
+
+- [ ] **🆕 Canbria Dayfly canon data-model** — **Wind** element, HP 520 (JP +25% ~650 à confirmer), AT 58, DF 100, **A-AV 10% ⭐ NEW first Minor**, MAT 76, MDF 140 high, M-AV 0%, SPD 70. Mob Death Frontier Disc 4 ubiquitous (37 submaps coverage). À implémenter `mobs/canbria-dayfly.ts`. Source: [`features/mobs/_sources/lod-wiki-canbria-dayfly.md`](features/mobs/_sources/lod-wiki-canbria-dayfly.md).
+
+- [ ] ⭐ **🆕 A-AV 10% NEW first Minor Enemy non-0 canon ⭐ MAJEUR** — Canbria Dayfly = first Minor Enemy avec A-AV non-0 ingestion canon Damia (vs Blue Bird Rare Monster 50% A-AV existing — Minor Enemies were 0% par défaut). Pattern thematic "flying insect dodge" canon. À refléter `combat/damage-formula.md` A-AV modifier applies Minor Enemy canon. Implication player : 10% miss physical attacks. À cross-check autres mobs Disc 4 same pattern. Source: idem.
+
+- [ ] ⭐ **🆕 Status Immunity 5/3 Poison immune NEW canon ⭐** — Canbria Dayfly Poison ✔ immune NEW (distinct Berserk Mouse Fear+, Berserker Confuse+Fear+, Bowling all 8). Pattern thematic "insect immune to poison naturally" canon. À documenter `combat/status-effects.md` per-mob immunity matrix avec `'minor-deviation-5-3-poison'` profile NEW. Source: idem.
+
+- [ ] **🆕 Counter Opportunities 0 "Counters Additions? No" Canbria Dayfly** — Pattern multi-mob no counter : Air Combat / Feyrbrand / Fire Bird / **Canbria Dayfly NEW** ⭐. Per user instruction : feature non-implémentée Damia, factual mention only. Source: idem.
+
+- [ ] ⭐ **🆕 Spinning Gale canon name officiel (NOT ~ approximation) ⭐** — Wiki tier 2 canonical name explicit (vs ~Bite community approximation). **1.5× Wind-elemental magic damage canon** ⭐ — pattern Attack Multiplier 1.5× canon cohérent `combat/damage-formula.md`. À implémenter ability `spinningGale` Damia avec 1.5× multiplier + Wind element. Source: idem.
+
+- [ ] ⭐ **🆕 Body Purifier 8% drop NEW item canon ⭐** — Probable Healing Item Poison cure thematic (cohérent Canbria Dayfly Poison immune irony). Pattern Purifier items canon : Mind Purifier (Confuse) + **Body Purifier (Poison probable)** + autres Purifiers ? À documenter `items/consumables.md` (à créer) Body Purifier entry + Mind Purifier taxonomy Purifier items. Source: idem.
+
+- [ ] **🆕 37 submaps coverage canon Canbria Dayfly ⭐ MAJEUR** — Pattern "ubiquitous mob" Death Frontier (submaps 747-758, 760-763, 765-778, 780-786) vs Cactus 4 submaps localisés. À refléter spawn rates per-submap canon Death Frontier ecosystem. Source: idem.
+
+- [ ] **🆕 Partner Scorpion NEW mob canon Death Frontier ⭐** — Formation 458 Canbria Dayfly + Scorpion. À documenter `mobs/Scorpion.md` (à créer) Death Frontier mob partner Disc 4. Source: idem.
+
+- [ ] **🆕 "Contact ×37" encounter mechanic Canbria Dayfly** — Pattern Death Frontier visible mob Collision Encounter (cohérent locations/Death Frontier.md existing + Cactus pattern). 37 submaps spawn notation. Source: idem.
+
+- [ ] ⭐ **🆕 Trivia "Cambrian" mistranslation canon NEW ⭐** — Wiki trivia : correct name = **Cambrian** (geological period ~500 million years ago Earth). "Canbria" = JP→EN mistranslation probable. À décider naming canon Damia : adopt canonical "Cambrian Dayfly" OR conserve community-translated "Canbria Dayfly" wiki standard. Pattern thematic "primordial insect creature" Death Frontier desert canon. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

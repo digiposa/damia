@@ -2865,6 +2865,48 @@
 
 - [ ] **🆕 Carlo questions ouvertes canon** : Carlo's wife / Albert's mother documented ? Carlo's reign duration ? Carlo's age ? À investiguer Discord/Wulves source tier 1 + autres ingestion. Source: idem.
 
+### Bosses / Caterpillar (Boss 3-form transformation Divine Tree Disc 4 — AI "if→then" model NEW + A-AV status reduction NEW + Dark Vapor RNG 1/101 NEW + Can't Combat Instant Death combo + 3 Spell Items drops 100%)
+
+- [ ] **🆕 Caterpillar 3-form boss canon data-model ⭐ MAJEUR** — Caterpillar → Pupa → Imago séquentielle (HP=0 = Transform au lieu de mort). HP : Caterpillar 6k / Pupa 2.5k / Imago 12k = total ~20.5k US (JP +25% ~25.6k). EXP 13k total (Caterpillar only). À implémenter `bosses/caterpillar.ts` multi-phase data-model. Cohérent existing `locations/Divine Tree.md` 3-phase mention. Source: [`features/bosses/_sources/lod-wiki-caterpillar.md`](features/bosses/_sources/lod-wiki-caterpillar.md).
+
+- [ ] ⭐ **🆕 NEW Boss AI "if → then" model canon ⭐ MAJEUR** — Pattern boss behavior changes player input + conditions + multi-action random selection. Key terms canon : **Auto** (next turn condition met) + **Ignore Turn Order** (Retaliate pattern doesn't change turn values). À implémenter `BossAI` data-model :
+
+  ```ts
+  type BossAction = { name; target; effect; conditions: BossCondition[] };
+  type BossCondition =
+    | { type: 'hp-zero'; ignoreTurnOrder: true; result: 'transform' }
+    | { type: 'auto'; previousAction: AbilityRef }
+    | { type: 'target-status'; status: StatusEffect };
+  ```
+
+  À documenter `combat/monster-categories.md` Boss AI canon section. Source: idem.
+
+- [ ] ⭐ **🆕 3 Spell Items 100% drops séquentiels canon ⭐ MAJEUR** — Healing Rain (Caterpillar) + Moon Serenade (Pupa) + Sun Rhapsody (Imago). Pattern boss multi-part 100% guaranteed drops = farming high-value Disc 4. À documenter `items/consumables.md` (à créer) — Healing Rain + Moon Serenade + Sun Rhapsody entries Spell Items canon. Source: idem.
+
+- [ ] ⭐ **🆕 A-AV status reduction NEW canon ⭐ MAJEUR** — Caterpillar abilities Poison/Stun + Imago Dispiriting "reduced by **A-AV**" (NOT M-AV usual mob pattern). Pattern distinct boss abilities canon vs Minor Enemy abilities M-AV reduction. À investiguer canon distinction A-AV vs M-AV per-ability type. À documenter `combat/status-effects.md` (à créer) per-ability reduction modifier matrix canon. Implémenter `StatusReductionModifier = 'A-AV' | 'M-AV'` data-model per-ability. Source: idem.
+
+- [ ] ⭐ **🆕 Dark Vapor RNG 1/101 (~0.99%) code calling 0-100 NEW canon ⭐ MAJEUR** — Imago Dispiriting 99.01% listed mais code RNG 0-100 inclusive (101 values) = 1/101 chance fail. Pattern technical canon Damia. Cohérent Trivia : Ghost Commander Skull Projection + Kamuy Howl same RNG pattern. À documenter `combat/rng-mechanics.md` (à créer) canon RNG 0-100 inclusive multi-boss pattern. Implémenter RNG status proc 0-100 inclusive Damia. Source: idem.
+
+- [ ] ⭐ **🆕 Can't Combat Instant Death ability boss canon NEW ⭐ MAJEUR** — Name same canon "Can't Combat Weapons" (Gladius/Brass Knuckle/Indora's Axe). Imago boss ability variant : trigger only Dispirited target + Auto next turn. **Pattern boss combo canon** : Dark Vapor → Auto Can't Combat = setup Instant Death sequence. Strategy player : prevent Dispirited status → prevent Can't Combat. Cohérent canon Erase mechanic existing (Basilisk immune Can't Combat Weapons). À implémenter ability `cantCombat` Damia avec conditions Dispirited + Auto. Source: idem.
+
+- [ ] **🆕 Pupa "Writhe" useless turn canon NEW ⭐** — "Does nothing" pattern boss filler turn cocoon state thematic. À implémenter ability `noop` Damia pour boss filler turns. Pattern multi-form boss intermediate state pattern. Source: idem.
+
+- [ ] **🆕 Imago "Laser" Light-elemental NEW canon ⭐** — Non-Elemental boss BUT Light-elemental ability. Pattern boss flex element abilities canon (cohérent Divine Dragon "Non-Elemental tag but spells regular elements" existing). Implication player : Darkness Rose Dragoon strong vs Light ability. Source: idem.
+
+- [ ] **🆕 Pupa Counter 0 NEW canon ⭐** — Pupa = "Counters Additions? No" (vs Caterpillar/Imago Counter 28). Pattern boss intermediate form Counter 0. Pattern multi-form boss canon : intermediate state = no counter mechanic. À cross-référence autres multi-form bosses canon (Virage Body pieces, Polter Helm/Armor/Sword) si même pattern. Source: idem.
+
+- [ ] **🆕 HP total Caterpillar reconcilation** ⚠️ — Existing `locations/Divine Tree.md` mention "~29,600 HP total" canon. Wiki tier 2 ingestion : 6k + 2.5k + 12k = **20.5k** US / ~25.6k JP. ⚠️ Divergence ~9k vs locations Damia. À investiguer : possible older Damia data différent OR fandom JP variant other. Source: comparaison.
+
+- [ ] **🆕 Caterpillar = Virage subset canon ?** — Cohérent story Disc 4 Divine Tree : Moon falls onto Divine Tree → Virage swarm crawls out. Caterpillar = Divine Tree boss vs Virage subset ? À investiguer canon classification (cohérent `locations/Divine Tree.md` 108 species lore). Source: idem.
+
+- [ ] **🆕 Healing Rain / Moon Serenade / Sun Rhapsody Spell Items canon ⭐** — 3 Caterpillar boss drops. À documenter `items/consumables.md` (à créer) :
+  - **Healing Rain** : Spell Item healing-AoE probable
+  - **Moon Serenade** : Spell Item lunar-themed (cohérent Lucky Jar drop Moon Serenade canon)
+  - **Sun Rhapsody** : Spell Item solar-themed
+    À investiguer effects précis fandom + items wiki ingestion future. Source: idem.
+
+- [ ] **🆕 "Scripted + Escape 0%" boss combat lock-in canon ⭐** — Pattern boss canon cohérent fandom Bosses master "Escape cannot be used". Caterpillar = first explicit boss documentation Escape 0% canon Damia. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

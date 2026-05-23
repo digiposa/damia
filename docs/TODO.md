@@ -3313,6 +3313,30 @@
 
 - [ ] **🆕 Conditional road canon NEW "Only if crossing from Forest Intersection Road" Crystal Golem ⭐** — Hellena Prison Intersection → Kazas Intersection road specific condition canon. Pattern road conditional spawn mechanic NEW canon. À documenter `world-map/` (à créer) conditional road encounters canon. Source: idem.
 
+### Mobs / Crystal Golem fandom complement — JP stats CONFIRMED HP 200/Gold 9 + HP recovers scaling canon resolved (30% × HP base) + Appearance "giant crystal evil grinning face" NEW + "Outside Fletz" terminology + Trans Light confirmé + "Can't Combat" immune confirms Instant Death
+
+- [ ] ⭐ **🆕 Crystal Golem JP stats CONFIRMED fandom MAJEUR ⭐⭐** — HP US 160 / JP **200** ✓ (+25% pattern systematic confirmé) + Gold US 27 / JP **9** ✓ (÷3 pattern systematic confirmé). Damia adopt JP 200/9. Cohérent décision projet adopt JP. Pattern JP/US conversion canon récurrent confirmé (cohérent Bowling/Crocodile/Crescent Bee). Source: [`features/mobs/_sources/fandom-crystal-golem.md`](features/mobs/_sources/fandom-crystal-golem.md).
+
+- [ ] ⭐ **🆕 HP recovers scaling canon resolved MAJEUR ⭐⭐** — Fandom **"recover 60 health"** vs wiki **"30% (48) HP"** → divergence apparente résolue par scaling : **60 HP = JP HP 200 × 30%** ✓ / **48 HP = US HP 160 × 30%** ✓. Confirme **30% multiplier canon scales with HP base** — Damia adopt JP base → recovery **60 HP**. Pattern recovery % canon scaling per-mob HP base. À implémenter `hpRecovers` ability avec `healPercent: 0.3` (scaling automatique sur HP max canon). Source: idem.
+
+- [ ] ⭐ **🆕 Appearance canon Crystal Golem NEW MAJEUR ⭐** — Fandom révèle visual canon : **"giant crystal with evil grinning face on it"**. Pattern thematic "sentient evil crystal" canon (vs typical golem humanoid form). "Big monster" terminology = imposing presence canon. À refléter sprite design Damia : giant crystal + evil grinning face + Light glow + Light element thematic. Pattern unique mob design canon Disc 1. Source: idem.
+
+- [ ] **🆕 "Outside Fletz" location terminology canon ⭐** — Fandom utilise "Outside Fletz" = simplification narrative pour "Barrier Station → Fletz Intersection" road (wiki tier 2 précis). Pattern fandom geographic simplification canon récurrent. Cohérent Disc 2 area access via Barrier Station. Source: idem.
+
+- [ ] **🆕 "Completely immune to all status ailments including Can't Combat" canon confirmed fandom ⭐** — Confirms wiki **Instant Death Immunity passive** (= "Can't Combat" immune) + **all 8 ✔ Status Immunity**. Pattern Mob passive boss-tier canon confirmed cross-source wiki + fandom. Source: idem.
+
+- [ ] **🆕 Trans Light canon name confirmed fandom ⭐** — Fandom utilise "Trans Light" verbatim (cohérent wiki tier 2 canonical). Confirms canon name officiel cross-source. Source: idem.
+
+- [ ] **🆕 "Normal physical attack causes stun" canon confirmed fandom ⭐** — Fandom confirms **~Clap 1× phys + 50% Stun proc** wiki canon (sans utiliser nom "~Clap" community). Pattern physical attack + status proc canon. Source: idem.
+
+- [ ] **🆕 Formation solo only canon confirmed Crystal Golem ⭐** — Fandom liste UNIQUEMENT formation solo (cohérent wiki formation 60). Pattern "big monster" = solo encounter canon (vs typical mob duo/trio pattern). Pattern Crystal Golem solo presence thematic. Source: idem.
+
+- [ ] **🆕 Stats divergences Crystal Golem wiki vs fandom ⚠️** :
+  - P. Attack : wiki 19 vs fandom **20** (+1 minor divergence)
+  - M. Attack : wiki 18 vs fandom **21** (+17% divergence)
+  - DF/MDF/SPD/EXP match wiki
+    → Damia adopt fandom higher AT 20 / MAT 21 probable (JP closer pattern récurrent). Source: comparaison.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

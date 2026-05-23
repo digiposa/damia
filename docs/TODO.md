@@ -3208,6 +3208,28 @@
   - M. Attack : wiki 5 vs fandom **6** (+20%)
     → Damia adopt fandom 6/6 probable (fandom higher JP closer pattern). Source: comparaison.
 
+### Mobs / Crocodile (Water Marshland Disc 1 — ANOMALY weaker secondary ability canon RARE + Skull Casting canon name + appearance trident-tail/dorsal fin + Pellet 10% farming source canon)
+
+- [ ] **🆕 Crocodile canon data-model** — **Water** element, HP 32, AT 10, **DF 160 high**, MAT 9, **MDF 50 LOW**, SPD 50, A-AV/M-AV 0%. Mob Marshland Disc 1 + road Volcano Villude. Pattern tank physical / weak magic profile canon. À implémenter `mobs/crocodile.ts`. Source: [`features/mobs/_sources/lod-wiki-crocodile.md`](features/mobs/_sources/lod-wiki-crocodile.md).
+
+- [ ] ⭐ **🆕 ANOMALY canon weaker secondary ability Crocodile NEW MAJEUR ⭐⭐** — RARE pattern : Crocodile = mob qui devient OBJECTIVELY WEAKER post HP threshold (Bite 2× phys > 25% → Skull Casting 1× phys ≤ 50%). **OPPOSITE of standard "wounded mob more dangerous" canon TLoD** récurrent (Air Combat/Berserker/Caterpillar All-out Attack 3× phys pattern). Pattern UNIQUE TLoD à investiguer si autres mobs same anomaly. À documenter `combat/mob-ai.md` (à créer) — anomaly pattern canon Crocodile + autres cases. Implémenter `MobAIPhasePattern = 'standard-stronger-on-wound' | 'anomaly-weaker-on-wound'` data-model. Source: idem.
+
+- [ ] ⭐ **🆕 Skull Casting canon name officiel ⭐** — Wiki tier 2 canonical (NOT ~ approximation). 1× phys damage ≤ 50% HP. Pattern thematic "skull casting" — Crocodile defensive retreat ability canon ? À investiguer effect précis + fandom appearance. Source: idem.
+
+- [ ] **🆕 Bite 2× phys high primary canon Crocodile ⭐** — Bite typically 1× phys (cohérent Berserk Mouse / autres). Crocodile Bite **2× phys = rare high primary ability** canon. Pattern primary high damage ability canon. Source: idem.
+
+- [ ] ⭐ **🆕 Appearance canon Crocodile MAJEUR ⭐** — "Large reptile resembling real-world crocodile + **trident-like blades on tail** + **large dorsal fin on back**". Pattern fantasy crocodile modifications canon (aquatic Water theme cohérent). À refléter sprite design Damia : crocodile + trident-blade tail + dorsal fin. Source: idem.
+
+- [ ] **🆕 Pellet 10% drop higher rate canon Crocodile ⭐** — Pattern Pellet drop rate varies per-mob canon : Crocodile 10% (Marshland Disc 1) vs Crafty Thief 8% (Home of Giganto Disc 2). **Crocodile = better Pellet farming source canon Disc 1**. Cohérent existing Pellet = Spell Item purchasable 10G all shops canon. À refléter `items/consumables.md` Pellet farming sources canon. Source: idem.
+
+- [ ] **🆕 Pattern "tank physical / weak magic" canon Crocodile ⭐** — DF 160 high anti-physical + MDF 50 LOW magic-vulnerable + AT/MAT 10/9 balanced. Pattern mob favorise magic player strategy canon (cohérent Beastie Dragon DF 130 pattern). Pattern strategic mob profile canon. Source: idem.
+
+- [ ] **🆕 HP overlap zone 25-50% AI selection ambiguous canon ⚠️ Crocodile** — Phase 1 (HP > 25%) + Phase 2 (HP ≤ 50%) overlap in 25-50% HP zone. Both abilities possible. AI selection canon : random ? Weighted ? À investiguer Discord. Pattern HP overlap zones canon multi-phase mobs. Source: idem.
+
+- [ ] **🆕 Marshland → Volcano Villude road canon Disc 1 ⭐** — Crocodile World Map road. Pattern Disc 1 transit road Fire Bird boss + Wounded Virage area Volcano Villude. À documenter `locations/Marshland.md` (à créer) + `locations/Volcano Villude.md` (à créer). Source: idem.
+
+- [ ] **🆕 Escape rate 60% Marshland Disc 1 canon ⭐** — Between Forest 90% / Prairie 80% early Disc 1 and standard 30%. Pattern Marshland intermediate escape canon Disc 1. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

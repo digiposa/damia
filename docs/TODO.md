@@ -3230,6 +3230,49 @@
 
 - [ ] **🆕 Escape rate 60% Marshland Disc 1 canon ⭐** — Between Forest 90% / Prairie 80% early Disc 1 and standard 30%. Pattern Marshland intermediate escape canon Disc 1. Source: idem.
 
+### Mobs / Crocodile fandom complement — Disc 1 highest DF + appearance 4-legs/3-spines + Jaws canon + Skull Casting "3 skulls horror" visual + Magic Stone of Signet "delays 3 turns" REVEALED MAJEUR + Pellet Earth-element NEW + Gushing Magma Fire NEW + Sea Dragon NEW partner mob
+
+- [ ] **🆕 Crocodile JP stats confirmés ⭐** — HP US **33** (vs wiki 32 minor divergence) / JP **40** (+25% pattern) + Gold US 6 / JP **2** (÷3). Damia adopt JP 40/2. Cohérent décision projet adopt JP. Stats divergences fandom +20-22% AT/MAT. Source: [`features/mobs/_sources/fandom-crocodile.md`](features/mobs/_sources/fandom-crocodile.md).
+
+- [ ] **🆕 "Disc 1 highest DF mob" + "Marshland's most powerful enemy" canon ⭐** — Crocodile DF 160 = Disc 1 highest mob canon. Pattern Disc 1 mob ranking canon. À cross-référer autres Disc 1 mobs DF stats canon. Source: idem.
+
+- [ ] **🆕 Appearance canon Crocodile MAJEUR ⭐** :
+  - 4 legs near stomach + Red eyes + 3 massive claws tail-tip + **3 spines on back** + Green scaly skin + Lengthy teeth
+  - ⚠️ **Visual divergence wiki "dorsal fin" vs fandom "3 spines"** sur back — à reconcilier
+  - À refléter sprite design Damia : crocodile + 4-legs-stomach + 3-claws-tail + 3-spines-back + green + red eyes
+  - Source: idem.
+
+- [ ] ⭐ **🆕 Jaws canon name officiel (vs wiki ~Bite community) ⭐** — Adopter fandom canon > 25% phase ability. Description : "Launches its body towards a single target biting in mid air". Source: idem.
+
+- [ ] ⭐ **🆕 Skull Casting visual canon MAJEUR ⭐⭐** — "Opens its mouth, **launching three skulls towards a single target from within**" — Crocodile expels SKULLS from inside mouth ⚠️ horror canon. Pattern thematic "necromantic crocodile" canon — unique visual design. À refléter VFX/animation Damia : mouth opens → 3 skull projectiles launched. Pattern macabre design canon Disc 1 Marshland mob. Source: idem.
+
+- [ ] ⭐ **🆕 MAGIC STONE OF SIGNET EFFECT CANON REVEALED MAJEUR ⭐⭐⭐** — Fandom révèle effect : **"delays three turns of one target"**. Pattern time-stop / turn-delay item canon. Cohérent existing **Crafty Thief Boss Extras "Magic Sig Stone Vulnerability" passive** (= affected by 3-turn delay) + **Blue Bird strategy "Speed Down + Magical Stone of Signet"** canon. À documenter `items/key-items.md` (à créer) Magic Stone of Signet entry précis : **3-turn delay target ability canon**. Pattern strategic combat item canon MAJEUR. À implémenter `ItemEffect { type: 'turn-delay'; turns: 3; target: 'single' }` data-model Damia. Source: idem.
+
+- [ ] ⭐ **🆕 Pellet = Earth-element Spell Item canon NEW MAJEUR ⭐** — Fandom révèle Pellet = "average damage dealing single target **earth-element** based spell item". Pattern Spell Items per-element canon :
+  - **Burn Out** : Fire-element
+  - **Gushing Magma** : Fire-element NEW
+  - **Spinning Gale** : Wind-element
+  - **Pellet** : **Earth-element** ⭐ NEW
+    À documenter `items/consumables.md` (à créer) Pellet Earth-element Spell Item entry + per-element Spell Items taxonomy canon. Source: idem.
+
+- [ ] ⭐ **🆕 Gushing Magma NEW Fire-element Spell Item canon ⭐** — Fandom révèle Gushing Magma = Fire-element Spell Item (cohérent Burn Out Fire). Pattern Fire Spell Items canon : Burn Out + Gushing Magma + autres ? À documenter `items/consumables.md` (à créer) Gushing Magma entry. Source canon : à investiguer drop/shop. Source: idem.
+
+- [ ] ⭐ **🆕 Sea Dragon NEW Marshland mob canon ⭐ MAJEUR** — Fandom NEW formation : Crocodile + Sea Dragon ×2 (wiki tier 2 omits). Sea Dragon = NEW mob canon Marshland Disc 1 (probable Water-element thematic). À documenter `mobs/Sea Dragon.md` (à créer) — Marshland Disc 1 mob canon. Source: idem.
+
+- [ ] **🆕 "Travel in packs of two" canon Crocodile** — Pattern Crocodile ×2 formation 38 dominant canon (cohérent wiki 35%/35% rates). Pattern duo mob canon récurrent. Source: idem.
+
+- [ ] **🆕 "Slow to attack" canon Crocodile** — SPD 50 = slow canon, player advantage. Pattern strategic mob slow SPD canon. Source: idem.
+
+- [ ] **🆕 "Single Magic from Dart" strategy canon ⭐** — Fandom suggère Dart Disc 1 magic capacity (probable Dragoon form OR Repeat Items magic-type). Pattern player Dart magic Disc 1 hint canon. À investiguer Dart magic abilities Disc 1 precise. Source: idem.
+
+- [ ] **🆕 Encounter rate Uncommon Crocodile canon ⭐** — Cohérent Crescent Bee Uncommon pattern Disc 1. Source: idem.
+
+- [ ] **🆕 Stats divergences Crocodile wiki vs fandom ⚠️** :
+  - HP US : wiki 32 vs fandom **33** (+1 minor divergence)
+  - P. Attack : wiki 10 vs fandom **12** (+20%)
+  - M. Attack : wiki 9 vs fandom **11** (+22%)
+    → Damia adopt fandom higher probable (JP closer pattern). Source: comparaison.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

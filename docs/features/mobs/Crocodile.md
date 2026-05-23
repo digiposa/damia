@@ -15,10 +15,11 @@
 > **Sources** :
 >
 > - 🥈 [`_sources/lod-wiki-crocodile.md`](./_sources/lod-wiki-crocodile.md) — wiki LoD (Water Marshland Disc 1 + DF 160 / MDF 50 tank physical canon + Status standard 4/4 + Counter 28 + Pellet 10% drop + AI 2-phase ANOMALY Bite 2×→Skull Casting 1× + Skull Casting canon name + Marshland → Volcano Villude road + appearance trident-blade tail + dorsal fin canon)
+> - 🥉 [`_sources/fandom-crocodile.md`](./_sources/fandom-crocodile.md) — fandom (⭐ "Disc 1 highest DF mob" + "Marshland's most powerful enemy" canon + Appearance "4 legs near stomach + red eyes + 3 claws tail + **3 spines on back** (vs wiki dorsal fin) + green scaly + lengthy teeth" + **Jaws canon name officiel** + Skull Casting "3 skulls from mouth" horror visual canon + ⭐ **MAGIC STONE OF SIGNET effect canon REVEALED : "delays 3 turns" MAJEUR** + ⭐ **Pellet = Earth-element Spell Item canon NEW MAJEUR** + ⭐ **Gushing Magma NEW Fire Spell Item canon** + ⭐ **Sea Dragon NEW Marshland mob canon** formation + HP US 33 / JP 40 + Encounter Uncommon)
 
 ## Statut
 
-🟡 **Draft post-ingestion wiki LoD** — fandom à ingérer pour cross-check si page existe.
+🟢 **Canon documenté wiki + fandom** — divergences notées (HP US 32/33 + visual back fin/spines + AT/MAT stats).
 
 ## Identity canon
 
@@ -29,18 +30,19 @@
 - **Visual canon** : Crocodile + trident-like tail blades + large dorsal fin (aquatic Water theme)
 - **Pattern symbolique** : ⭐ **ANOMALY weaker secondary ability canon (rare)** + **Tank physical** + **Pellet farming source Disc 1**
 
-## Stats canon ⚠️ Damia adopt JP (à confirmer fandom)
+## Stats canon ⚠️ Damia adopt JP ⭐
 
-| Stat | Value (US)      | Damia canon         | Notes                                 |
-| ---- | --------------- | ------------------- | ------------------------------------- |
-| HP   | 32              | 32 (JP à confirmer) |                                       |
-| AT   | 10              | 10                  |                                       |
-| DF   | **160** ⚠️ high | 160                 | DF anti-physical high                 |
-| MAT  | 9               | 9                   |                                       |
-| MDF  | **50** ⚠️ low   | 50                  | MDF anti-magic LOW — magic-vulnerable |
-| SPD  | 50              | 50                  |                                       |
-| A-AV | 0%              | 0%                  |                                       |
-| M-AV | 0%              | 0%                  |                                       |
+| Stat | Wiki US         | Fandom US   | **Damia (JP)** ⭐                          | Notes                                       |
+| ---- | --------------- | ----------- | ------------------------------------------ | ------------------------------------------- |
+| HP   | 32              | **33** (+1) | **40** ✓ JP confirmed fandom +25% pattern  | ⚠️ Minor US divergence wiki 32 vs fandom 33 |
+| AT   | 10              | **12**      | **12** (fandom higher, possible JP closer) | +20%                                        |
+| DF   | **160** ⚠️ high | 160         | **160**                                    | DF anti-physical high — Disc 1 highest      |
+| MAT  | 9               | **11**      | **11** (fandom higher)                     | +22%                                        |
+| MDF  | **50** ⚠️ low   | 50          | **50**                                     | MDF anti-magic LOW — magic-vulnerable       |
+| SPD  | 50              | 50          | **50**                                     | "Slow to attack" canon fandom               |
+| A-AV | 0%              | 0%          | **0%**                                     |                                             |
+| M-AV | 0%              | 0%          | **0%**                                     |                                             |
+| Gold | 6               | 6           | **2** ✓ JP confirmed fandom ÷3 pattern     |                                             |
 
 → Pattern **"tank physical / weak magic" canon** ⭐ : HP 32 + DF 160 high anti-physical + MDF 50 LOW magic-vulnerable + AT/MAT 10/9 balanced offensive. Mob favorise magic player strategy.
 
@@ -110,6 +112,7 @@ Pattern mob standard : 4 immune (Petrify/Bewitch/Arm Block/Dispirit) / 4 vulnera
 
 - **Crocodile solo** (formation 31) : submap 107 (10%)
 - **Crocodile ×2** (formation 38) : submaps 110, 111 (35%, 35%)
+- **Crocodile + Sea Dragon ×2** ⭐ NEW fandom — Sea Dragon NEW Marshland mob canon (wiki tier 2 omits)
 
 ### World Map road canon
 

@@ -3273,6 +3273,46 @@
   - M. Attack : wiki 9 vs fandom **11** (+22%)
     → Damia adopt fandom higher probable (JP closer pattern). Source: comparaison.
 
+### Mobs / Crystal Golem (Light Shrine of Shirley Disc 1 — Counter 3 NEW LOWEST tier canon MAJEUR + Status all 8 ✔ Minor récurrent + Instant Death Immunity passive + AI 3-phase Clap/Trans Light/HP recovers self-heal + Sapphire Pin drop NEW + 5 roads multi-disc coverage canon)
+
+- [ ] **🆕 Crystal Golem canon data-model** — **Light** element, HP 160 (JP +25% ~200 à confirmer), AT 19, DF 120 moderate, MAT 18, **MDF 160 high anti-magic**, SPD 80 high, A-AV/M-AV 0%. Mob Shrine of Shirley Disc 1 + 5 World Map roads Disc 1-2. Pattern "balanced tank anti-magic" canon. À implémenter `mobs/crystalGolem.ts`. Source: [`features/mobs/_sources/lod-wiki-crystal-golem.md`](features/mobs/_sources/lod-wiki-crystal-golem.md).
+
+- [ ] ⭐ **🆕 Counter Opportunities tier 3 NEW LOWEST non-0 canon MAJEUR ⭐⭐** — Crystal Golem first ingestion Counter (3) tier (vs Bowling 4 previously NEW lowest). Pattern Damia étendu **7 tiers canon : 0 / 3 / 4 / 9 / 16 / 19 / 28**. À investiguer si autres mobs Counter 3 exist alphabetical ingestion future. Per user instruction : feature non-implémentée Damia, factual tier mention only. Source: idem.
+
+- [ ] ⭐ **🆕 Status Immunity all 8 ✔ Minor Enemy récurrent canon ⭐** — Crystal Golem = **2ème Minor Enemy all 8 ✔ ingestion canon Damia** (cohérent Bowling Snowfield Disc 3 pattern). Confirms Minor Enemy varying status immunity per-mob canon : 4/4 standard / 5/3 / 6/2 / **all 8 ✔ boss-tier récurrent**. Pattern non-exclusif Rare/Boss trait. À documenter `combat/monster-categories.md` Status Immunity tier mapping update + `'minor-boss-tier-8'` profile NEW confirmed second case. Source: idem.
+
+- [ ] ⭐ **🆕 Instant Death Immunity Mob passive canon récurrent ⭐** — Crystal Golem **Mob passive** (cohérent existing **Commander Marshland Boss passive**). Pattern Minor Enemy avec passive canon rare (most Minor no passive) — confirms cross-mob/boss shared passive canon. Immune Can't Combat Weapons (Gladius / Brass Knuckle / Indora's Axe). Cohérent thematic "crystal golem solid construct". À documenter `combat/mob-passives.md` (à créer) — pattern Minor Enemy passives canon : Commander Marshland + Crystal Golem confirmed. Source: idem.
+
+- [ ] ⭐ **🆕 AI 3-phase NEW Crystal Golem MAJEUR ⭐** — Phase 1 (HP > 25%) ~Clap (1× phys + 50% Stun proc) / Phase 2 (HP ≤ 50%) **Trans Light** (1.5× Light-elemental magic) / Phase 3 (HP ≤ 25%) **HP recovers** (30% Max HP = 48 HP self-heal). HP overlap zones 25-50% (Clap + Trans Light) + ≤25% (all three possible). Pattern AI 3-phase avec self-heal NEW canon Mob. À implémenter `MobAI3PhaseSelfHeal` data-model. Source: idem.
+
+- [ ] ⭐ **🆕 Trans Light canon name officiel + Light-element ability NEW ⭐** — Wiki tier 2 canonical (NOT ~ approximation). 1.5× Light-elemental magic damage. Pattern Attack Multiplier 1.5× canon (cohérent Spinning Gale Wind / Burn Out Fire 1.5×). **First Mob Light ability ingestion Damia**. À implémenter ability `transLight` Damia Light 1.5× magic. Source: idem.
+
+- [ ] ⭐ **🆕 HP recovers self-heal Mob canon NEW MAJEUR ⭐⭐** — Crystal Golem = **First Minor Enemy self-heal ingestion canon Damia**. Self-heal 30% Max HP (48 HP) on Phase 3 (HP ≤ 25%). Cohérent **Commander Seles HP recovers boss ability canon** (same name) — pattern boss/mob shared ability canon récurrent. À implémenter ability `hpRecovers` Damia shared cross-mob/boss. Pattern Mob recovery ability strategic burst threshold canon. Source: idem.
+
+- [ ] **🆕 ~Clap canon name (community) + 50% Stun proc Crystal Golem** — Wiki community approximation > 25% phase. 1× phys + 50% chance Stun. **A-AV reduces Stun proc canon** (cohérent Caterpillar pattern — A-AV reduction status canon cross-mob/boss confirmé vs M-AV theory). Pattern thematic "crystal golem clapping shockwave". Source: idem.
+
+- [ ] ⭐ **🆕 First Light-element Minor Enemy ingestion canon Damia ⭐** — Crystal Golem = first Light Minor ingestion. Pattern Light mobs rare canon — most Light = Shana/Miranda allies. Cohérent thematic "crystal golem" Light + Shrine of Shirley (Shirley = Light Dragoon Spirit canon Disc 1). À cross-référer autres Light Minor mobs canon ingestion future. Source: idem.
+
+- [ ] **🆕 Sapphire Pin NEW item canon 2% drop ⭐** — Crystal Golem drops Sapphire Pin 2% (pattern accessory drop rate cohérent Berserker Energy Girdle 2%, Drake's Ring 2%). Probable accessory ("pin" thematic accessoire). Effect précis canon à investiguer fandom. À documenter `items/equipment.md` Sapphire Pin accessory canon entry. Source: idem.
+
+- [ ] **🆕 Pattern "balanced tank anti-magic" canon Crystal Golem ⭐** — DF 120 moderate + **MDF 160 high anti-magic** + AT 19 / MAT 18 balanced + SPD 80 high (first strike often). Pattern mob anti-magic priority canon (OPPOSITE Crocodile DF 160 anti-physical profile). Pattern Disc 1 mob anti-magic profile canon. Source: idem.
+
+- [ ] ⭐ **🆕 5 World Map roads multi-disc coverage canon MAJEUR ⭐** — Crystal Golem spawns :
+  - **Kazas Intersection → Lohan Intersection** road (Disc 1)
+  - **Hellena Prison Intersection → Kazas Intersection** road (Disc 1, conditional ⚠️ "Only if crossing from Forest Intersection Road")
+  - **Kazas → Intersection** road (Disc 1)
+  - **Barrier Station → Fletz Intersection** road (Disc 2)
+  - **Barrier Station → Nest of Dragon Intersection** road (Disc 1-2)
+    Pattern **5 roads multi-disc canon** (Disc 1 Kazas area + Disc 2 Fletz area via Barrier Station). À documenter `world-map/` (à créer) roads canon multi-disc. Pattern road conditional canon NEW "Only if crossing from X" mechanic. Source: idem.
+
+- [ ] **🆕 Shrine of Shirley Disc 1 location canon ⭐** — Crystal Golem submaps 153, 154, 156. Cohérent existing Shrine of Shirley = Disc 1 Drake the Bandit + Shirley boss location canon. Cohérent thematic Light element (Shirley = Light Dragoon Spirit canon). À documenter `locations/Shrine of Shirley.md` (à créer). Encounter rates 20%/35%/35% canon. Source: idem.
+
+- [ ] **🆕 Escape rate 40% canon Crystal Golem** — Standard intermediate Disc 1 (cohérent Home of Gigantos 40% pattern). Pattern intermediate escape rate Disc 1-2 canon. Source: idem.
+
+- [ ] **🆕 HP overlap zones canon Crystal Golem ⚠️** — Phase boundaries overlap : HP 25-50% zone (Clap + Trans Light) + ≤25% zone (all three abilities possible). Pattern HP overlap zones multi-phase mobs canon — AI selection canon : random ? Weighted ? À investiguer Discord. Source: idem.
+
+- [ ] **🆕 Conditional road canon NEW "Only if crossing from Forest Intersection Road" Crystal Golem ⭐** — Hellena Prison Intersection → Kazas Intersection road specific condition canon. Pattern road conditional spawn mechanic NEW canon. À documenter `world-map/` (à créer) conditional road encounters canon. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

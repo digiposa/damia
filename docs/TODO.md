@@ -3970,6 +3970,57 @@
 
 - [ ] **🆕 EXP 6000 / Gold 0 / Drops Nothing canon Death Rose ⭐** — Pattern Disc 4 trial boss yield canon cohérent Dark Doel same EXP. Story trial pattern : no direct loot rewards canon. Pattern Moon trials no rewards (rewards via story progression). Source: idem.
 
+### Bosses / Death Rose fandom complement — CORRECTION IDENTITY MIRANDA'S MOTHER apparition NOT Rose dark form MAJEUR + Miranda's mother backstory canon REVEALED + JP HP 3000 +25% CONFIRMED + Mille Seseau Moon + Vine Snap + Pollen Spray NEW + SP farming canon
+
+- [ ] ⭐⭐⭐ **🆕 CORRECTION CANON IDENTITY Death Rose = APPARITION OF MIRANDA'S MOTHER (rose plant manifestation) MAJEUR ⭐⭐⭐** — Fandom révèle : "Death Rose is actually the first boss the player is facing as an **apparition of Miranda's hatred towards her mother**". ⚠️ NOT Rose party member dark form (wiki tier 2 initial interpretation à corriger). Pattern manifestation Miranda's hatred toward mother (rose plant opens up revealing mother's face during battle). Pattern Moon trials canon CORRECTION : character FAMILY/PAST confrontation (NOT party member dark forms). Pattern Damia `MobRecolor` data-model nécessite distinction : **mob personality = "miranda-mother-apparition"** vs party member. À CORRECTION existing Death Rose.md identity canon appliquée. Source: [`features/bosses/_sources/fandom-death-rose.md`](features/bosses/_sources/fandom-death-rose.md).
+
+- [ ] ⭐⭐⭐ **🆕 Miranda's mother backstory canon REVEALED MAJEUR ⭐⭐⭐** — Pattern Miranda family backstory canon Disc 4 reveal :
+  - Mother left because **father drunk + wasted hard-earned money** → forced to leave
+  - Father stayed : "at least cared enough to stay" (Miranda's perception)
+  - Mother visited many times to take Miranda — father kicked her out
+  - Miranda emotional arc : hatred → understanding → forgiveness canon Disc 4
+  - **Resolution** : Miranda forgives mother → Death Rose disappears (Alternate Win Condition trigger ✓)
+    À documenter `party-members/Miranda.md` mother + father backstory canon NEW MAJEUR Disc 4 reveal. Pattern Miranda character arc canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Death Rose JP HP 3000 ✓ +25% CONFIRMED systematic MAJEUR ⭐⭐⭐** — Wiki US 2400 / JP **3000** ✓ (2400 × 1.25 = 3000 exact). Pattern JP/US conversion systematic confirmé. Damia adopt JP 3000. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Mille Seseau snowy landscape Moon canon Death Rose ⭐⭐** — Pattern Moon trials = location-specific to character canon (cohérent Albert's Bale Castle 20 ans ago Dark Doel trial — Albert's homeland canon parallel). Mille Seseau = Miranda's homeland canon (Queen Theresa Deningrad). Pattern thematic "homeland trial" canon Disc 4 Moon. À documenter `locations/Moon That Never Sets.md` (à créer) avec Mille Seseau snowy landscape Miranda trial canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Pattern Moon trials = character family/past confrontation canon CORRECTION MAJEUR ⭐⭐** — Pattern CORRECTION Moon trials canon : NOT party member dark forms but **PARENTS/FAMILY apparitions** canon :
+  - **Dark Doel (Albert trial)** = Doel **uncle** apparition (Albert's family — Doel killed Carlo Albert's father)
+  - **Death Rose (Miranda trial)** ⭐ NEW = **Mother apparition** (Miranda's family past — abandonment story)
+  - Pattern Disc 4 = character family/past confrontation canon NEW
+  - Other trials probable per character : Dart confronts Zieg/Black Monster ? Haschel confronts Claire ? Kongol confronts Gigantos ? Rose confronts Zieg/Dragon Campaign ?
+    Pattern Moon trials canon canon récurrent MAJEUR à documenter `combat/moon-trials.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐ **🆕 SP farming Miranda Dragoon Spirit canon NEW Death Rose MAJEUR (fandom) ⭐⭐** — Fandom : "You can farm SP to level Miranda's Dragoon Spirit if you keep **declining the request to forgive**". Pattern : decline forgiveness → battle continues → SP farm canon strategy. Cohérent Unslayable passive : Boss invulnerable to HP-kill, only victory via Alternate Win Condition (forgiveness). Pattern player choice canon : forgive (end battle) OR decline (farm SP indefinitely). Cohérent existing Spider Urchin SP grinding pattern Disc 4 (Aglis Disc 4 canon). À documenter `combat/sp-farming.md` (à créer) — Death Rose SP farming canon strategy. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Pollen Spray NEW canon ability MAJEUR (fandom) ⭐⭐⭐** — Fandom révèle ability **Pollen Spray** (vs wiki absent !). Description : "The Death Rose sprays pollen at Miranda". Pattern thematic "rose plant pollen attack" canon NEW. ⚠️ Wiki tier 2 ne liste pas Pollen Spray — possible wiki omis OR fandom narrative addition. Pattern rose-plant thematic abilities canon : vines (Vine Snap) + absorb (Vampiric Tentacle) + pollen (Pollen Spray). À implémenter `PollenSprayAbility` data-model NEW canon Damia (à investiguer effect précis : status proc ? AoE ?). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Vine Snap canon name fandom (regroups wiki ~Thorn Claw + ~Spin Thread possibly) MAJEUR ⭐⭐** — Fandom **Vine Snap** = canon name simplifie wiki dual ~Thorn Claw + ~Spin Thread baseline abilities (both 1× phys). Damia adopt fandom canon name **Vine Snap** > wiki community ~Thorn Claw/~Spin Thread (simpler canon name). Pattern thematic "rose vine snap" canon. À reconcilier wiki + fandom ability list précis (Vine Snap = 1 OR 2 abilities ?). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Absorb canon name fandom = Vampiric Tentacle wiki cross-source confirmed ⭐⭐** — Fandom **Absorb** = shortened canon name fandom (vs wiki ~Vampiric Tentacle). Confirms wiki Vampiric Tentacle canon : 1.5× phys + life-steal mechanic damage-based. Damia adopt wiki canon name **Vampiric Tentacle** (plus précis) — fandom Absorb = informal shortened. Pattern Death Rose-Miranda thematic "rose absorbs Miranda's life" canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Battle dialogue revelation canon Death Rose MAJEUR ⭐⭐⭐** — Fandom révèle dialogue script complet :
+  - HP < 75% : Mother truth begins "Miranda's father drunk + wasted money"
+  - HP < 50% : Miranda retorts "at least father cared enough to stay"
+  - HP < 25% (continuously) : Mother "I visited him so many times to take you with me. But every time, he just kicked me out"
+  - Forgiveness response = Alternate Win Condition trigger
+    Pattern dialogue HP threshold canon = **3 progressive revelation triggers** canon. Pattern emotional arc combat canon NEW Damia. À documenter `combat/boss-dialogue.md` (à créer) — Boss dialogue triggers + Alternate Win Condition responses canon. Source: idem.
+
+- [ ] ⭐⭐ **"First boss Moon That Never Sets" canon Death Rose (fandom) ⭐⭐** — Pattern Moon trials story sequence : Death Rose = **first boss** Moon trials sequence canon. Pattern Miranda trial = first individual trial canon. À investiguer Moon trials story sequence canon précis (Death Rose first → Dark Doel ? → autres ?). Pattern Disc 4 Moon trials chronologic order canon. Source: idem.
+
+- [ ] **🆕 Visual canon Death Rose NEW MAJEUR (fandom) ⭐⭐⭐** — "Rose plant + opens up revealing Miranda's mother's face during battle". Pattern unique boss visual canon NEW Damia. À refléter sprite design Damia : rose plant + open mode revealing mother's face. Pattern thematic "rose flower = symbol hatred manifested + mother apparition" canon. Source: idem.
+
+- [ ] **🆕 Stats divergences Death Rose wiki vs fandom ⚠️** :
+  - AT : wiki **44** vs fandom **50** (+6 / +14%)
+  - MAT : wiki **44** vs fandom **50** (+6 / +14%)
+  - HP/DF/MDF/SPD/EXP/Gold match ✓
+  - → Damia adopt fandom higher AT 50 / MAT 50 probable (JP closer pattern récurrent)
+    Source: comparaison.
+
+- [ ] **🆕 Element "none" fandom = Non-Elemental wiki cross-source confirmed Death Rose ⭐** — Pattern terminology cross-source canon : Element "none" (fandom narrative) = Non-Elemental (wiki canonical). Pattern Non-Elemental Boss canon récurrent. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

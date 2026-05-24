@@ -3792,6 +3792,50 @@
   - Total Vanishing item drop (Death-themed one-shot weapon)
     Pattern design canon "Death-themed perfect" — design philosophy ironique. Source: idem.
 
+### Mobs / Death fandom complement — JP HP 250 ✓ +25% systematic CONFIRMED + Appearance Grim Reaper + Des Rapier canon name + All-Out Attack NEW separate ability + Lightning Punisher canon name + Skeleton + Magician Bogey NEW mobs + Charging Spirit triple-option NEW + No-return Phantom Ship canon + Total Vanishing farming canon
+
+- [ ] ⭐⭐ **🆕 Death JP stats CONFIRMED +25% systematic fandom MAJEUR ⭐⭐** — HP US 200 / JP **250** ✓ (+25% pattern systematic, 200 × 1.25 = 250 exact) + Gold US 30 / JP **10** ✓ (÷3 pattern systematic, 30 ÷ 3 = 10 exact). Damia adopt JP 250/10. Pattern JP/US conversion canon récurrent confirmé (cohérent autres mobs +25% standard). Source: [`features/mobs/_sources/fandom-death.md`](features/mobs/_sources/fandom-death.md).
+
+- [ ] ⭐⭐ **🆕 Appearance canon Death NEW MAJEUR (fandom) ⭐⭐** — Fandom révèle visual canon : "**traditional Grim Reaper** + **bare skulls** + **skeletal hands wielding Scythe** + **long black cloak**". Pattern thematic classic Grim Reaper canon. À refléter sprite design Damia : Grim Reaper Scythe + black cloak + skeletal. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Des Rapier canon name officiel Death NEW (fandom) ⭐⭐** — Fandom révèle canon name (vs wiki ~Reaping Slash community approximation). Description : "Floats towards single target swings Scythe medium physical damage". Pattern thematic "Des Rapier" — "Des" préfixe (Death German "der" / French thematic). Pattern Scythe weapon canon (cohérent Grim Reaper appearance). Damia adopt fandom canon **Des Rapier** > wiki community ~Reaping Slash. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 All-Out Attack NEW canon ability separate Death MAJEUR (fandom) ⭐⭐⭐** — Wiki tier 2 listed only Charging Spirit dual-option (Midnight Terror OR Can't Combat) — fandom révèle **All-Out Attack** = separate ability "massive physical damage" canon (~50% target HP probable). Pattern Charging Spirit **triple-option** canon NEW Death : Midnight Terror OR Lightning Punisher OR All-Out Attack ⚠️. Cohérent existing All-Out Attack canon shared ability (Bowling / Air Combat existing pattern). À reconcilier wiki/fandom — fandom plus complète canon. À implémenter `allOutAttack` ability Damia Mob Charging Spirit triple-option canon. À implémenter `MobAI.chargingSpiritOptions: 'single' | 'dual' | 'triple'` data-model étendu canon NEW. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Lightning Punisher canon name officiel Death NEW MAJEUR (fandom) ⭐⭐⭐** — Fandom révèle canon name ability (vs wiki "Can't Combat" — wiki used status name as ability name). Description : "Inflicts the status ailment Can't Combat upon single target". Pattern naming canon : ability name (Lightning Punisher) ≠ status name (Can't Combat). Pattern thematic "Lightning Punisher" Thunder thematic ironic (Death = Darkness mais uses Lightning-named ability). Damia adopt fandom canon **Lightning Punisher** > wiki "Can't Combat" ability naming. Pattern Mob Instant Death offensive 2 abilities confirmed canon : **Cute Cat Dance of Death + Death Lightning Punisher** both inflict Can't Combat status (different ability names). À implémenter ability `lightningPunisher` Damia Mob Instant Death "Can't Combat" canon. Source: idem.
+
+- [ ] ⭐ **🆕 Midnight Terror minor damage addition canon NEW (fandom) ⭐** — Fandom révèle : Midnight Terror = 100% Fear proc + **"some minor damage"** (vs wiki tier 2 100% Fear only, no damage mention). Pattern Midnight Terror = Fear proc + minor magic damage canon NEW (cohérent magic ability + damage typique). À reconcilier exact damage multiplier (probable 0.5× or 1× magic). À mettre à jour ability `midnightTerror` data-model avec minor damage. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Skeleton NEW mob canon Phantom Ship Disc 2 MAJEUR (fandom) ⭐⭐** — Fandom révèle formation "Death ×2 + Skeleton" canon. **Skeleton** = NEW mob canon Phantom Ship Disc 2. Pattern thematic "Skeleton" cohérent Phantom Ship ghost-themed dungeon canon. À documenter `mobs/Skeleton.md` (à créer) — Phantom Ship Disc 2 mob canon NEW. Pattern Phantom Ship Disc 2 mob ecosystem étendu : Death + Will-O-Wisp + **Skeleton** + **Magician Bogey** (4 mobs Disc 2 confirmed). Source: idem.
+
+- [ ] ⭐ **🆕 Magician Bogey NEW mob canon Phantom Ship Disc 2 "limited" (fandom) ⭐** — Fandom mentionne **Magician Bogey** = NEW mob canon Phantom Ship Disc 2 ("most annoying enemy other than the limited Magician Bogey"). "Limited" = rare/specific encounter canon (probable spawn rare ou scripted). À documenter `mobs/Magician Bogey.md` (à créer) — Phantom Ship Disc 2 mob canon NEW. Pattern "limited" encounter mob canon NEW (à investiguer mécanique précise). Source: idem.
+
+- [ ] ⭐⭐ **🆕 NEW formations canon Death fandom MAJEUR ⭐** — Wiki tier 2 listed only 1 formation (Will-O-Wisp ×2 + Death — 453). Fandom révèle 4 formations canon total :
+  - Death solo
+  - Death + Will-O-Wisp ×2 (wiki ✓)
+  - **Death ×2** ⭐ NEW (formation duo)
+  - **Death ×2 + Skeleton** ⭐⭐ NEW
+    "Both on rare occasion" canon = Death ×2 + Skeleton rare encounter. Pattern Phantom Ship Disc 2 ecosystem étendu cross-source. Source: idem.
+
+- [ ] ⭐⭐ **🆕 "No returning to Phantom Ship" canon NEW MAJEUR (fandom) ⭐⭐** — Phantom Ship = **one-time area canon** (no return after story progression). Pattern story-progression canon : Phantom Ship Disc 2 → permanent advance. ⚠️ Player must farm Total Vanishing during Phantom Ship visit if wanted. "But you will still be able to find more later in the game" = Total Vanishing other sources canon (à investiguer — Beastie Dragon Disc 3 ?). Pattern multi-source canon Total Vanishing : Phantom Ship Disc 2 (Death) + later (à confirmer). À documenter `locations/Phantom Ship.md` (à créer) — Disc 2 one-time area canon. Pattern Damia : data-model `LocationCanon { oneTimeArea?: boolean; postStoryNoReturn?: boolean }` canon. Source: idem.
+
+- [ ] ⭐ **🆕 "Prioritize killing Death immediately" strategy canon NEW (fandom) ⭐** — Fandom : "Hands down, if this creature is fighting you, regardless of whatever other creatures are with it, **prioritize killing this immediately**". Death = top priority kill canon Phantom Ship Disc 2. Pattern threat level canon : Death = highest threat in encounter. Strategy canon : kill Death first regardless of formation partners. Cohérent existing Cute Cat Dance of Death threat pattern (Instant Death offensive). À documenter `combat/strategy.md` (à créer) priority-target canon par mob. Source: idem.
+
+- [ ] ⭐ **🆕 Total Vanishing farming canon Death (fandom) ⭐** — Fandom : "30+ minutes average" farming time canon (cohérent 8% drop + Uncommon encounter). "Instantly destroy minor enemies with it" canon ✓ confirme Attack Item one-shot mob killer canon (cohérent existing Beastie Dragon reveal). Pattern Total Vanishing = Attack Item one-shot minor mob killer canon confirmed cross-source. À documenter `items/consumables.md` Total Vanishing canon farming time + sources canon. Source: idem.
+
+- [ ] ⭐ **🆕 Encounter rate "Uncommon" canon Death (fandom) ⭐** — Pattern encounter rate canon : Uncommon (cohérent Crescent Bee / Crocodile Uncommon Disc 1 pattern existing). Pattern Phantom Ship Disc 2 mob frequency canon. Source: idem.
+
+- [ ] **🆕 Stats divergences Death wiki vs fandom ⚠️** :
+  - AT : wiki **50** vs fandom **56** (+6 / +12%)
+  - MAT : wiki **35** vs fandom **40** (+5 / +14%)
+  - HP/DF/MDF/SPD/EXP match ✓
+  - → Damia adopt fandom higher AT 56 / MAT 40 probable (JP closer pattern récurrent)
+    Source: comparaison.
+
+- [ ] **🆕 Charging Spirit description fandom "special or All-Out Attack" canon ⭐** — Fandom : "Prepares to do a special or All-Out Attack". Pattern Charging Spirit triple-option Death canon confirmé fandom (cohérent wiki Midnight Terror/Can't Combat dual + fandom adds All-Out Attack triple). Pattern Damia adopt triple-option canon fandom-enriched. Source: idem.
+
+- [ ] **🆕 Will-O-Wisp formation cross-source confirmed Death ⭐** — Fandom confirme formation Death + Will-O-Wisp ×2 canon (cohérent wiki formation 453). Pattern Will-O-Wisp NEW mob canon Phantom Ship partner confirmé cross-source. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

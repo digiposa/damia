@@ -22,23 +22,46 @@
 >
 > ⭐ **Death Purger NEW mob canon (recolor parent Zenebatos Disc 4)** Trivia recolor reveal.
 >
-> Pattern thematic IRONIC MAJEUR ⭐ : "Death-themed mob immune to Death dealing Death (Can't Combat)" canon.
+> ⭐⭐ **Appearance canon NEW MAJEUR (fandom)** : "traditional Grim Reaper + bare skulls + skeletal hands wielding Scythe + long black cloak".
+>
+> ⭐⭐ **Des Rapier canon name officiel (fandom)** — vs wiki ~Reaping Slash community approximation.
+>
+> ⭐⭐⭐ **All-Out Attack NEW canon ability separate (fandom)** — massive physical damage canon. Charging Spirit triple-option canon (Midnight Terror + Lightning Punisher + All-Out Attack).
+>
+> ⭐⭐⭐ **Lightning Punisher canon name officiel (fandom)** — vs wiki "Can't Combat" (wiki used status name as ability name). Pattern Mob Instant Death offensive 2 abilities confirmed (Dance of Death + Lightning Punisher both inflict Can't Combat status).
+>
+> ⭐⭐ **Skeleton NEW mob canon Phantom Ship Disc 2** + **Magician Bogey NEW mob canon "limited" Phantom Ship**.
+>
+> ⭐⭐ **"No returning to this area" canon Phantom Ship** — one-time area, must farm Total Vanishing during visit (other sources later in game).
+>
+> ⭐ **Encounter rate Uncommon canon (fandom)** + **JP HP 250 ✓ CONFIRMED +25% systematic** + **JP Gold 10 ✓ ÷3 confirmed**.
 >
 > **Sources** :
 >
 > - 🥈 [`_sources/lod-wiki-death.md`](./_sources/lod-wiki-death.md) — wiki LoD (Darkness Phantom Ship Disc 2 + Counter 28 high-density + Status 7/1 deviation Poison-only-vulnerable NEW MAJEUR + EXP 66 / Gold 30 / Total Vanishing 8% drop NEW + HP 200 low / DF 120 high / MAT 35 / MDF 60 low + Instant Death Immunity passive 3ème instance + AI HP-based chance modifiers 4-phase Charging Spirit/Reaping Slash/Midnight Terror/Can't Combat + Charging Spirit dual-option + Midnight Terror 100% Fear M-AV reduces NEW + Can't Combat Mob Instant Death NEW 2ème instance + Will-o'-Wisp NEW partner + Contact ×3 encounter type NEW + Death Purger Zenebatos recolor canon + escape 30%)
+> - 🥉 [`_sources/fandom-death.md`](./_sources/fandom-death.md) — fandom (⭐⭐ **JP HP 250 ✓ +25% systematic CONFIRMED** + **JP Gold 10 ✓ ÷3** + ⭐⭐ **Appearance canon NEW "traditional Grim Reaper + bare skulls + skeletal hands wielding Scythe + long black cloak"** + ⭐⭐ **Des Rapier canon name officiel** vs wiki ~Reaping Slash + ⭐⭐⭐ **All-Out Attack NEW canon ability separate** massive damage + ⭐⭐⭐ **Lightning Punisher canon name officiel** vs wiki "Can't Combat" + ⭐ **Midnight Terror minor damage addition canon** + ⭐⭐ **Skeleton + Magician Bogey NEW mobs Phantom Ship Disc 2** + ⭐⭐ **"No returning to this area" Phantom Ship canon** + Total Vanishing 30+ min farming canon + Encounter rate Uncommon + NEW formations Death solo + Death ×2 + Death ×2 + Skeleton + Stats divergences AT 50→56 / MAT 35→40)
 
 ## Statut
 
-🟡 **Canon documenté wiki tier 2 uniquement** — fandom complement à ingérer en suite.
+🟢 **Canon documenté wiki + fandom** — JP HP 250 ✓ confirmed +25% systematic + Appearance canon NEW + Des Rapier + Lightning Punisher canon names + All-Out Attack NEW separate ability + Skeleton + Magician Bogey NEW mobs + No-return Phantom Ship canon.
 
 ## Identity canon
 
-- **Espèce** : Death (entité spectrale Darkness-themed — recolor Death Purger Zenebatos canon)
+- **Espèce** : Death (entité spectrale Darkness-themed — **traditional Grim Reaper** canon fandom — recolor Death Purger Zenebatos canon)
 - **Element** : **Darkness** ⭐
-- **Location canon** : **Phantom Ship** Disc 2 (submaps 288, 291, 296)
+- **Location canon** : **Phantom Ship** Disc 2 (submaps 288, 291, 296) — **ONE-TIME AREA canon** (no return after story progression)
 - **Disc** : Disc 2 (Phantom Ship area — cohérent Halberd weapon source canon)
-- **Pattern symbolique** : ⭐ **Darkness spectral entity** + **Status 7/1 NEW extreme deviation** + **Instant Death Immunity passive** + **Can't Combat offensive** + **Total Vanishing drop ironic** + **Death Purger recolor**
+- **Visual canon (fandom)** ⭐⭐ : "Traditional Grim Reaper + bare skulls + skeletal hands wielding Scythe + long black cloak"
+- **Pattern symbolique** : ⭐ **Darkness Grim Reaper** + **Status 7/1 NEW extreme deviation** + **Instant Death Immunity passive** + **Lightning Punisher offensive (Can't Combat)** + **All-Out Attack massive** + **Total Vanishing drop ironic** + **Death Purger recolor** + **Top priority kill canon**
+
+### Appearance canon NEW fandom ⭐⭐ MAJEUR
+
+- **Traditional Grim Reaper** archetype canon
+- **Bare skulls** visual canon
+- **Skeletal hands wielding Scythe** canon (cohérent Des Rapier scythe ability)
+- **Long black cloak** = Darkness thematic canon
+- À refléter sprite design Damia : Grim Reaper Scythe + black cloak + skeletal
+- Pattern thematic classic Grim Reaper canon
 
 ### Darkness element Phantom Ship thematic canon ⭐
 
@@ -55,20 +78,20 @@
 - Total Vanishing item drop (Death-themed one-shot weapon)
 - Pattern design canon récurrent thematic Death
 
-## Stats canon ⚠️ Damia adopt JP ⭐
+## Stats canon ⚠️ Damia adopt JP ⭐ (JP confirmed fandom +25% systematic)
 
-| Stat | Wiki US | **Damia (JP)** ⭐                 | Notes                         |
-| ---- | ------- | --------------------------------- | ----------------------------- |
-| HP   | 200     | (JP +25% ~250 à confirmer fandom) | ⚠️ **Low HP Disc 2**          |
-| AT   | 50      | **50**                            | Mid-tier                      |
-| DF   | 120     | **120**                           | High DF anti-physical         |
-| MAT  | 35      | **35**                            | Lower MAT                     |
-| MDF  | 60      | **60**                            | Low MDF anti-magic vulnerable |
-| SPD  | 50      | **50**                            | Low SPD                       |
-| A-AV | 0%      | **0%**                            |                               |
-| M-AV | 0%      | **0%**                            |                               |
-| Gold | 30      | (JP ÷3 ~10 à confirmer fandom)    |                               |
-| EXP  | 66      | **66**                            |                               |
+| Stat | Wiki US | Fandom US   | **Damia (JP)** ⭐                             | Notes                                      |
+| ---- | ------- | ----------- | --------------------------------------------- | ------------------------------------------ |
+| HP   | 200     | 200         | **250** ✓ JP confirmed fandom +25% systematic | (200 × 1.25 = 250 exact ✓) — Low HP Disc 2 |
+| AT   | 50      | **56** (+6) | **56** (fandom higher, JP closer probable)    | ⚠️ wiki 50 vs fandom 56 divergence (+12%)  |
+| DF   | 120     | 120         | **120**                                       | High DF anti-physical                      |
+| MAT  | 35      | **40** (+5) | **40** (fandom higher, JP closer probable)    | ⚠️ wiki 35 vs fandom 40 divergence (+14%)  |
+| MDF  | 60      | 60          | **60**                                        | Low MDF anti-magic vulnerable              |
+| SPD  | 50      | 50          | **50**                                        | Low SPD                                    |
+| A-AV | 0%      | -           | **0%**                                        |                                            |
+| M-AV | 0%      | -           | **0%**                                        |                                            |
+| Gold | 30      | 30          | **10** ✓ JP confirmed fandom ÷3 systematic    | (30 ÷ 3 = 10 exact ✓)                      |
+| EXP  | 66      | 66          | **66**                                        |                                            |
 
 → Pattern **"low HP physical-tank magic-vulnerable" canon Death** ⭐ :
 
@@ -132,56 +155,74 @@ Counter 28 = high-density tier canon. Per user instruction : feature non-implém
 - Pattern thematic IRONIC MAJEUR ⭐ : "Death-themed mob immune to Death dealing Death (Can't Combat ability)" canon
 - À documenter `combat/mob-passives.md` (à créer) — pattern Mob Instant Death Immunity passives canon : 3 mobs confirmed
 
-## AI canon (HP-based avec chance modifiers complex 4-phase NEW ⭐ MAJEUR)
+## AI canon (HP-based avec chance modifiers complex 4-phase + Charging Spirit triple-option NEW ⭐ MAJEUR fandom-enriched)
 
-| HP       | Chance | Action              | Target | Effect                                                | Notes                                              |
-| -------- | ------ | ------------------- | ------ | ----------------------------------------------------- | -------------------------------------------------- |
-| **>50%** | 25%    | **Charging Spirit** | Single | **Uses Midnight Terror OR Can't Combat on next turn** | Dual-option telegraph canon                        |
-| **>25%** | 75%    | ~Reaping Slash      | Single | 1× Physical damage                                    |                                                    |
-| **≤25%** | 25%    | **Midnight Terror** | Single | **100% chance to inflict Fear**                       | Target's **M-AV** reduces chance to receive status |
-| **≤25%** | 75%    | **Can't Combat**    | Single | **Inflicts Instant Death**                            |                                                    |
+| HP                       | Chance | Action                        | Target | Effect                                                                             | Notes                                              |
+| ------------------------ | ------ | ----------------------------- | ------ | ---------------------------------------------------------------------------------- | -------------------------------------------------- |
+| **>50%**                 | 25%    | **Charging Spirit**           | Single | **Uses Midnight Terror OR Lightning Punisher OR All-Out Attack on next turn** ⭐⭐ | Triple-option telegraph canon (fandom-revealed)    |
+| **>25%**                 | 75%    | **Des Rapier**                | Single | 1× Physical damage (Scythe swing)                                                  | Fandom canon name (vs wiki ~Reaping Slash)         |
+| **≤25%**                 | 25%    | **Midnight Terror**           | Single | **100% chance to inflict Fear** + minor magic damage (fandom canon)                | Target's **M-AV** reduces chance to receive status |
+| **≤25%**                 | 75%    | **Lightning Punisher**        | Single | **Inflicts Can't Combat (Instant Death)**                                          | Fandom canon name (vs wiki "Can't Combat" naming)  |
+| **Post-Charging Spirit** | -      | **All-Out Attack** ⭐⭐⭐ NEW | Single | **Massive physical damage** (~50% target HP probable)                              | Fandom-revealed separate ability                   |
 
-⚠️ Pattern AI canon mob **HP-based avec chance modifiers complex 4-phase NEW MAJEUR ⭐** :
+⚠️ Pattern AI canon mob **HP-based avec chance modifiers complex 4-phase + Charging Spirit triple-option NEW MAJEUR ⭐ fandom-enriched** :
 
-- **Phase HP > 50%** : 25% Charging Spirit (dual-option telegraph) + 75% ~Reaping Slash (1× phys baseline)
-- **Phase HP > 25%** : 75% ~Reaping Slash (continuous baseline) — overlap zone with > 50% Charging Spirit
-- **Phase HP ≤ 25%** : 25% Midnight Terror (100% Fear M-AV reduces) + 75% **Can't Combat** (Instant Death)
-- Pattern AI Death cycle canon : early-game Charging Spirit telegraph → mid-game Reaping Slash baseline → late-game burst Midnight Terror + Can't Combat
-- ⚠️ **Pattern dangereux ≤ 25% canon ⭐** : 75% chance Instant Death (Can't Combat) at low HP — high threat majeur Mob
+- **Phase HP > 50%** : 25% Charging Spirit (triple-option telegraph) + 75% Des Rapier (1× phys baseline)
+- **Phase HP > 25%** : 75% Des Rapier (continuous baseline) — overlap zone with > 50% Charging Spirit
+- **Phase HP ≤ 25%** : 25% Midnight Terror (100% Fear M-AV reduces) + 75% **Lightning Punisher** (Instant Death)
+- **Post-Charging Spirit** : Midnight Terror OR Lightning Punisher OR All-Out Attack canon
+- Pattern AI Death cycle canon : early-game Charging Spirit telegraph (triple-option) → mid-game Des Rapier baseline → late-game burst Midnight Terror + Lightning Punisher + All-Out Attack potential
+- ⚠️ **Pattern dangereux ≤ 25% canon ⭐** : 75% chance Instant Death (Lightning Punisher) at low HP — high threat majeur Mob
 
-### ~Reaping Slash canon name (community)
+### Des Rapier canon name officiel ⭐⭐ MAJEUR (fandom)
 
-- **~Reaping Slash** = community approximation > 25% baseline ability
-- **1× phys damage** canon
-- Pattern thematic "death reap scythe" canon
+- **Des Rapier** = canon name officiel **fandom** (vs wiki ~Reaping Slash community approximation)
+- Description : "Floats towards single target swings Scythe medium physical damage"
+- **1× phys damage** canon (wiki) — "medium" fandom descriptor
+- Pattern thematic "Des Rapier" — "Des" préfixe canon (Death German "der" / French thematic)
+- Pattern Scythe weapon canon (cohérent Grim Reaper appearance)
+- Damia adopt fandom canon **Des Rapier** > wiki community ~Reaping Slash
 
-### Charging Spirit dual-option Death canon ⭐ MAJEUR
+### Charging Spirit triple-option Death canon ⭐⭐⭐ MAJEUR (fandom-enriched)
 
 - **Charging Spirit** = canon name shared cross-mob (cohérent Air Combat / Bowling / Berserker / Cute Cat pattern)
-- ⭐ **Dual-option telegraph** : Midnight Terror OR Can't Combat next turn
-- Pattern Air Combat-style **dual-option Charging Spirit canon** (cohérent Cute Cat Fury Swipes OR Dance of Death)
-- À implémenter `MobAI.chargingSpiritOptions: 'single' | 'dual'` data-model (cohérent existing canon)
-- Pattern Death = "dual" canon
+- ⭐⭐⭐ **Triple-option telegraph** : Midnight Terror OR Lightning Punisher OR All-Out Attack next turn (fandom-enriched canon)
+- Wiki tier 2 listed dual-option only (Midnight Terror OR Can't Combat) — fandom adds All-Out Attack 3ème option canon
+- Pattern Death = "triple" canon (NEW pattern variation — vs typical single/dual Charging Spirit)
+- À implémenter `MobAI.chargingSpiritOptions: 'single' | 'dual' | 'triple'` data-model étendu canon NEW
 
 ### Midnight Terror canon name officiel ⭐ NEW MAJEUR
 
-- **Midnight Terror** = canon name officiel (NOT ~ approximation) — wiki tier 2 canonical
+- **Midnight Terror** = canon name officiel (NOT ~ approximation) — wiki tier 2 + fandom cross-source confirmed
 - Single target + **100% chance to inflict Fear** canon (high reliability status)
+- ⭐ **Minor magic damage** addition canon (fandom reveal) — pattern Midnight Terror = Fear proc + minor damage canon NEW
 - Pattern thematic "midnight terror" = night-fear canon Darkness
 - ⚠️ **M-AV reduces Fear proc canon ⭐ MAJEUR**
-- À implémenter ability `midnightTerror` Damia Single 100% Fear proc M-AV-reduced
+- À implémenter ability `midnightTerror` Damia Single 100% Fear proc + minor magic damage + M-AV-reduced
 
-### Can't Combat canon name officiel ⭐⭐⭐ NEW MAJEUR
+### Lightning Punisher canon name officiel ⭐⭐⭐ NEW MAJEUR (fandom)
 
-- **Can't Combat** = canon name officiel ability Mob (NOT ~ approximation) — wiki tier 2 canonical
-- Single target + **Inflicts Instant Death** canon
-- ⚠️ **Pattern Mob "Can't Combat" Instant Death offensive ability canon NEW 2ème instance ⭐⭐⭐** :
-  - 1ère = **Cute Cat Dance of Death** (existing canon)
-  - 2ème = **Death Can't Combat** ⭐ NEW
+- **Lightning Punisher** = canon name officiel ability Mob **fandom** (vs wiki "Can't Combat" — wiki used status name as ability name)
+- Single target + **Inflicts Can't Combat (Instant Death)** canon
+- Pattern naming canon : ability name (Lightning Punisher) ≠ status name (Can't Combat)
+- Pattern thematic "Lightning Punisher" Thunder thematic ironic (Death = Darkness mais uses Lightning-named ability)
+- Damia adopt fandom canon **Lightning Punisher** > wiki "Can't Combat" ability naming
+- ⚠️ **Pattern Mob Instant Death offensive ability canon NEW 2ème instance ⭐⭐⭐** :
+  - 1ère = **Cute Cat Dance of Death** (existing canon — ability name)
+  - 2ème = **Death Lightning Punisher** ⭐ NEW (ability name) — inflicts Can't Combat status (cohérent Dance of Death same status effect)
   - Pattern Mob Instant Death offensive canon récurrent (vs typical mob no Instant Death offensive)
   - Cohérent existing **Erase mechanic 4-tier player canon** — Mob equivalent canon confirmed cross-mob
-- À implémenter ability `cantCombat` Damia Mob Instant Death "Can't Combat" canon
-- Pattern thematic IRONIC ⭐⭐ : "Death uses Can't Combat" — perfect thematic match Mob name + ability
+- À implémenter ability `lightningPunisher` Damia Mob Instant Death "Can't Combat" canon
+- Pattern thematic IRONIC ⭐⭐ : "Death uses Lightning Punisher to Can't Combat" — multi-layer thematic match
+
+### All-Out Attack canon name officiel ⭐⭐⭐ NEW MAJEUR (fandom)
+
+- **All-Out Attack** = canon name officiel **fandom** (separate ability — wiki tier 2 omits)
+- Single target + **Massive physical damage** canon (~50% target HP probable)
+- Pattern shared ability cross-mob canon (cohérent existing Air Combat All-Out Attack 3× phys + Bowling All-Out Attack pattern)
+- Charging Spirit triple-option includes All-Out Attack canon (NEW reveal fandom)
+- À implémenter ability `allOutAttack` Damia Mob shared cross-mob Death + Air Combat + Bowling
+- Pattern Damia : `AllOutAttackAbility { type: 'massive-physical'; multiplier: 3 | 0.5xHP }` data-model shared canon
 
 ## Pattern A-AV/M-AV per-ability classification CONFIRMED canon ⭐⭐ MAJEUR — 6ème instance
 
@@ -229,13 +270,35 @@ Counter 28 = high-density tier canon. Per user instruction : feature non-implém
 - Pattern Disc 2 standard escape canon
 - Pattern Phantom Ship interior dungeon escape canon
 
-### Phantom Ship Disc 2 mobs ecosystem canon ⭐ MAJEUR
+### Phantom Ship Disc 2 mobs ecosystem canon ⭐ MAJEUR (fandom-enriched)
 
 - **Death** : Darkness element (Counter 28, Status 7/1 Poison only vulnerable)
-- **Will-o'-Wisp** ⭐ NEW : Phantom Ship Disc 2 mob canon (formation 453 partner ×2)
-- Pattern Phantom Ship Disc 2 mob ecosystem canon : Death + Will-o'-Wisp (2 mobs Disc 2 confirmed)
+- **Will-O-Wisp** ⭐ NEW : Phantom Ship Disc 2 mob canon (formation 453 partner ×2)
+- **Skeleton** ⭐⭐ NEW (fandom) : Phantom Ship Disc 2 mob canon (formation Death ×2 + Skeleton)
+- **Magician Bogey** ⭐ NEW (fandom) : Phantom Ship Disc 2 mob canon "limited" (rare/specific encounter)
+- Pattern Phantom Ship Disc 2 mob ecosystem canon : Death + Will-O-Wisp + **Skeleton** + **Magician Bogey** (4 mobs Disc 2 confirmed via fandom enrichment)
 - Pattern thematic ghost-themed dungeon canon (cohérent existing Phantom Ship canon)
-- À documenter `mobs/Will-o'-Wisp.md` (à créer) — Phantom Ship Disc 2 mob canon NEW
+- À documenter `mobs/Will-O-Wisp.md` + `mobs/Skeleton.md` + `mobs/Magician Bogey.md` (à créer) — Phantom Ship Disc 2 mobs canon NEW
+
+### NEW formations canon Death fandom ⭐ MAJEUR
+
+- Wiki tier 2 listed only 1 formation : Will-O-Wisp ×2 + Death (453)
+- Fandom révèle 4 formations canon total :
+  - Death solo
+  - Death + Will-O-Wisp ×2 (wiki ✓)
+  - **Death ×2** ⭐ NEW (formation duo)
+  - **Death ×2 + Skeleton** ⭐⭐ NEW
+- Pattern Phantom Ship Disc 2 ecosystem étendu cross-source
+- "Both on rare occasion" canon = Death ×2 + Skeleton rare encounter
+
+### "No returning to this area" canon Phantom Ship ⭐⭐ MAJEUR (fandom)
+
+- **Phantom Ship = one-time area canon** (no return after story progression)
+- Pattern story-progression canon : Phantom Ship Disc 2 → permanent advance
+- ⚠️ Player must farm Total Vanishing during Phantom Ship visit if wanted
+- "But you will still be able to find more later in the game" = Total Vanishing other sources canon (à investiguer — Beastie Dragon Disc 3 ?)
+- Pattern multi-source canon Total Vanishing : Phantom Ship Disc 2 (Death) + later (à confirmer)
+- À documenter `locations/Phantom Ship.md` (à créer) — Disc 2 one-time area canon
 
 ## Trivia canon recolor reveal ⭐⭐ MAJEUR
 
@@ -258,27 +321,31 @@ Counter 28 = high-density tier canon. Per user instruction : feature non-implém
 - À documenter `mobs/Death Purger.md` (à créer) — Zenebatos Disc 4 mob canon NEW (parent recolor)
 - ⚠️ **Pattern naming inversion** : "Death Purger" ≠ "Death" — Death Purger thematic "purger" suggests Wingly thematic Zenebatos canon
 
-## Combat flow canon
+## Combat flow canon (fandom-enriched)
 
 1. Mob spawn Phantom Ship submaps 288/291/296 (Contact ×3 encounter — visible mob mechanic)
-2. AI cycle HP-based avec chance modifiers :
-   - HP > 50% (= HP 101+) : 25% Charging Spirit (dual-option telegraph) + 75% ~Reaping Slash
-   - HP > 25% (= HP 51+) : 75% ~Reaping Slash baseline (overlap with > 50% phase)
-   - HP ≤ 25% (= HP 50-) : 25% Midnight Terror (100% Fear M-AV reduces) + **75% Can't Combat (Instant Death) ⚠️**
+2. AI cycle HP-based avec chance modifiers (Damia JP HP 250 base) :
+   - HP > 50% (= HP 126+) : 25% Charging Spirit (**triple-option** telegraph : Midnight Terror OR Lightning Punisher OR All-Out Attack) + 75% Des Rapier (1× phys baseline)
+   - HP > 25% (= HP 63+) : 75% Des Rapier baseline (overlap with > 50% phase)
+   - HP ≤ 25% (= HP 62-) : 25% Midnight Terror (100% Fear M-AV reduces + minor magic damage) + **75% Lightning Punisher (Instant Death) ⚠️**
+   - **Post-Charging Spirit** : Midnight Terror OR Lightning Punisher OR All-Out Attack (massive phys ~50% target HP)
 3. Counter mechanism (Counter 28 high-density tier)
 4. **DF 120 high** + **MDF 60 low anti-magic vulnerable** = magic attacks favored player strategy
 5. **A-AV 0% / M-AV 0%** = no avoidance
 6. **Instant Death Immunity passive** = Can't Combat Weapons (player) miss
 
-### Strategy canon recommandée
+### Strategy canon recommandée (fandom-enriched ⭐)
 
+- ⭐⭐ **PRIORITIZE KILLING DEATH IMMEDIATELY** canon (fandom) — top priority kill regardless of formation partners
 - **Darkness weak Light** → Shana Light Dragoon / Light Repeat Items
-- ⚠️ **Avoid Can't Combat ≤ 25% trigger** = 75% Instant Death risk MAJEUR — equip Talisman OR Rose's Hairband canon counter (cohérent Cute Cat Dance of Death same threat)
-- ⚠️ **Charging Spirit > 50% dual-option** : peut télégraphier Midnight Terror OR Can't Combat early
+- ⚠️ **Avoid Lightning Punisher ≤ 25% trigger** = 75% Instant Death risk MAJEUR — equip Talisman OR Rose's Hairband canon counter (cohérent Cute Cat Dance of Death same threat)
+- ⚠️ **Charging Spirit > 50% triple-option** : peut télégraphier Midnight Terror OR Lightning Punisher OR All-Out Attack early
+- ⚠️ **All-Out Attack risk** : ~50% target HP massive damage — burst-kill avant Charging Spirit trigger
 - **Midnight Terror Fear risk** : equip M-AV gear (reduce proc) OR Spirit Potion (cure Fear ?)
 - **Magic attacks favored** : exploit MDF 60 low anti-magic vulnerability + HP 200 low burst kill
-- ⚠️ **Total Vanishing 8% farming** : 8% rate canon Phantom Ship Disc 2 (Death drops own counter)
-- **Sustain damage HP > 50%** = avoid Can't Combat phase via burst
+- ⚠️ **Total Vanishing 8% farming** : 8% rate canon Phantom Ship Disc 2 (Death drops own counter) — **MUST FARM DURING VISIT** (no return area canon)
+- ⚠️ **Farming time canon** : 30+ min average (8% × Uncommon encounter)
+- **Sustain damage HP > 50%** = avoid Lightning Punisher phase via burst
 - **Status applicables** : ONLY Poison (Death is Poison-vulnerable only, 7/1 deviation)
 - **Escape 30%** = standard Disc 2
 
@@ -286,22 +353,31 @@ Counter 28 = high-density tier canon. Per user instruction : feature non-implém
 
 ### Décisions canon à conserver
 
-1. **Stats canon (JP adopt à confirmer)** : HP 200 low + AT 50 + DF 120 + MAT 35 + MDF 60 + SPD 50 + A-AV/M-AV 0%
+1. **Stats canon (JP confirmed fandom +25% systematic)** ⭐ : HP **250** ✓ + AT **56** + DF 120 + MAT **40** + MDF 60 + SPD 50 + A-AV/M-AV 0% + Gold **10** ✓
 2. **Element Darkness** : Minor Darkness Phantom Ship canon
-3. **Status Immunity 7/1 deviation NEW MAJEUR canon** ⭐⭐ : only Poison vulnerable, near-boss-tier immunity
-4. **Counter 28 high-density tier** : standard
-5. **Instant Death Immunity passive Mob canon 3ème instance** : Commander Marshland + Crystal Golem + Death
-6. **AI HP-based avec chance modifiers complex 4-phase** : Charging Spirit + Reaping Slash + Midnight Terror + Can't Combat
-7. **Charging Spirit dual-option canon** : Midnight Terror OR Can't Combat (cohérent Cute Cat pattern)
-8. **Midnight Terror canon name officiel** : 100% Fear proc M-AV-reduced (6ème pattern A-AV/M-AV instance)
-9. **Can't Combat Mob Instant Death offensive ability canon NEW 2ème instance** : cohérent Cute Cat Dance of Death
-10. **Total Vanishing 8% drop source canon NEW** : Death Phantom Ship Disc 2 (ironic thematic perfect)
-11. **Will-o'-Wisp NEW mob canon partner** : Phantom Ship Disc 2 ecosystem
-12. **Contact ×3 encounter type NEW canon** : visible mob mechanic (cohérent Berserker Contact)
-13. **Death Purger NEW recolor parent canon Zenebatos Disc 4** : pattern recolor récurrent
-14. **Phantom Ship location only** : no World Map road
-15. **Escape 30% Disc 2 standard** : intermediate dungeon
-16. **Pattern thematic IRONIC Death** : 7/1 immunity + Instant Death passive + Can't Combat + Total Vanishing drop = perfect Death theme canon
+3. **Appearance canon (fandom)** ⭐ : Traditional Grim Reaper + bare skulls + skeletal hands + Scythe + black cloak
+4. **Status Immunity 7/1 deviation NEW MAJEUR canon** ⭐⭐ : only Poison vulnerable, near-boss-tier immunity
+5. **Counter 28 high-density tier** : standard
+6. **Instant Death Immunity passive Mob canon 3ème instance** : Commander Marshland + Crystal Golem + Death
+7. **AI HP-based avec chance modifiers complex 4-phase + Charging Spirit triple-option fandom-enriched** : Des Rapier + Midnight Terror + Lightning Punisher + All-Out Attack
+8. **Charging Spirit triple-option canon (fandom)** ⭐⭐⭐ : Midnight Terror OR Lightning Punisher OR All-Out Attack (NEW pattern triple-option vs typical dual-option Cute Cat)
+9. **Des Rapier canon name officiel (fandom)** ⭐⭐ : > wiki ~Reaping Slash community — Scythe swing
+10. **Midnight Terror canon name officiel** : 100% Fear proc M-AV-reduced + minor magic damage (fandom addition) (6ème pattern A-AV/M-AV instance)
+11. **Lightning Punisher canon name officiel (fandom)** ⭐⭐⭐ : Mob Instant Death (Can't Combat status) — vs wiki "Can't Combat" naming. NEW 2ème instance Mob Instant Death offensive (cohérent Cute Cat Dance of Death)
+12. **All-Out Attack canon name officiel (fandom)** ⭐⭐⭐ : NEW separate ability massive physical damage (~50% target HP)
+13. **Total Vanishing 8% drop source canon NEW** : Death Phantom Ship Disc 2 (ironic thematic perfect)
+14. **Will-O-Wisp NEW mob canon partner** : Phantom Ship Disc 2 ecosystem
+15. **Skeleton NEW mob canon partner (fandom)** ⭐⭐ : Death ×2 + Skeleton formation
+16. **Magician Bogey NEW mob canon "limited" (fandom)** ⭐ : Phantom Ship rare encounter
+17. **Contact ×3 encounter type NEW canon** : visible mob mechanic (cohérent Berserker Contact)
+18. **Death Purger NEW recolor parent canon Zenebatos Disc 4** : pattern recolor récurrent
+19. **Phantom Ship location only** : no World Map road
+20. **Escape 30% Disc 2 standard** : intermediate dungeon
+21. **"No returning to Phantom Ship" canon (fandom)** ⭐⭐ : one-time area, must farm Total Vanishing during visit
+22. **NEW formations canon (fandom)** : Death solo + Death ×2 + Death ×2 + Skeleton (vs wiki 1 formation only)
+23. **Encounter rate Uncommon canon (fandom)** : cohérent Crescent Bee / Crocodile pattern
+24. **Strategy canon "PRIORITIZE KILLING DEATH IMMEDIATELY" (fandom)** ⭐⭐ : top priority kill canon
+25. **Pattern thematic IRONIC Death** : 7/1 immunity + Instant Death passive + Can't Combat + Total Vanishing drop = perfect Death theme canon
 
 ### Implementation tech
 
@@ -361,11 +437,23 @@ Counter 28 = high-density tier canon. Per user instruction : feature non-implém
 
 ### Questions ouvertes
 
-- **JP stats Death** : confirmer fandom HP +25% pattern → HP ~250 ?
+- ~~**JP stats Death**~~ ✅ **RÉSOLU fandom** : HP **250** ✓ +25% systematic confirmed (200 × 1.25 = 250 exact) / Gold **10** ✓ ÷3 systematic confirmed
+- **AT/MAT divergences wiki vs fandom** : 50 vs 56 / 35 vs 40 — Damia adopt fandom higher probable (JP closer pattern récurrent)
+- **All-Out Attack multiplier précis** : "massive physical damage" / "half killing target" fandom — probable ~50% target HP OR 3× phys (cohérent existing All-Out Attack canon) ? À investiguer Discord
+- **Lightning Punisher vs Dance of Death naming canonical** : both inflict Can't Combat status — pattern Mob Instant Death offensive abilities canon (different names per mob) ? À cross-référer ingestion future
+- **Charging Spirit triple-option pattern other mobs** : Death triple = NEW unique pattern OR autres mobs ? À investiguer cross-mob
+- **Midnight Terror damage multiplier précis** : "minor damage" fandom — 0.5× ou 1× magic ? À investiguer
 - **Death Purger stats canon** : à ingérer wiki tier 2 + fandom future (parent recolor Zenebatos Disc 4)
-- **Will-o'-Wisp stats canon** : à ingérer wiki tier 2 + fandom future
-- **Total Vanishing autres drop sources** : Death 8% + Beastie Dragon ? + autres ?
-- **Can't Combat vs Dance of Death naming difference** : same Instant Death effect ? Differential damage ? À investiguer
+- **Will-O-Wisp stats canon** : à ingérer wiki tier 2 + fandom future
+- **Skeleton stats canon (fandom NEW)** : à ingérer wiki tier 2 + fandom future Phantom Ship Disc 2
+- **Magician Bogey stats canon (fandom NEW)** : à ingérer wiki tier 2 + fandom future "limited" encounter
+- **Total Vanishing other sources canon** : Death Phantom Ship Disc 2 + "later in game" (fandom hint) — Beastie Dragon Mountain of Mortal Dragon Disc 3 ? + autres ?
+- **Pattern Mob Instant Death offensive 3ème instance** : Cute Cat Dance of Death + Death Lightning Punisher — autres mobs ? À cross-check ingestion future
+- **Death Purger Zenebatos thematic "purger"** : Wingly purge purification thematic Disc 4 ?
+- **Phantom Ship submaps 288/291/296 vs Halberd source 286?** : à cross-check Halberd Mayfil reveal
+- **Pattern Mob with Instant Death Immunity + Instant Death offensive** : Death = paradox unique TLoD ? Autres mobs ?
+- **Contact ×3 encounter mechanic précis** : 3 visible mobs each submap ? Total 3 instances across submaps ?
+- **Phantom Ship "no return area" canon précis** : story-progression trigger précis ? À investiguer story canon
 - **Pattern Mob Instant Death offensive 3ème instance** : Cute Cat + Death — autres mobs ? À cross-check ingestion future
 - **Death Purger Zenebatos thematic "purger"** : Wingly purge purification thematic Disc 4 ?
 - **Phantom Ship submaps 288/291/296 vs Halberd source 286?** : à cross-check Halberd Mayfil reveal

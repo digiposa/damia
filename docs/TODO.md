@@ -3535,6 +3535,55 @@
 
 - [ ] **🆕 "Auto" + "Ignore Turn Order" mechanic terms canon NEW ⭐** — Wiki tier 2 définit explicitement : **Auto** = action used next turn if conditions met / **Ignore Turn Order** = current turn order values unchanged from this action. Pattern combat mechanic terminology canon NEW (à documenter `combat/boss-ai.md` à créer). Source: idem.
 
+### Bosses / Dark Doel wiki (Multi-entity boss Moon That Never Sets Disc 4 Albert trial — Dark Doel + Light Sword + Shadow Blade 3500 HP + Untargetable passive + Instigate mechanic NEW Boss Extras + ~Curved Thunder + ~Triple Slash + Boss Extras canonical 2nd instance + AI "if → then" + Counter 28/0)
+
+- [ ] ⭐ **🆕 Dark Doel standalone canon doc créé MAJEUR ⭐** — Création `bosses/Dark Doel.md` synthesis canon (auparavant section Emperor Doel doc). Multi-entity boss canon Disc 4 Moon trial Albert canon. Source: [`features/bosses/_sources/lod-wiki-dark-doel.md`](features/bosses/_sources/lod-wiki-dark-doel.md).
+
+- [ ] ⭐⭐ **🆕 Multi-entity boss canon récurrent Dark Doel confirmed MAJEUR ⭐⭐** — Dark Doel + Light Sword + Shadow Blade = **3-entity multi-entity boss canon Disc 4 finale**. Cohérent existing multi-entity bosses : Claire / Kamuy / Lloyd Flanvel / Magician Faust / 3 Dragon Spirits / Zieg Feld. Pattern Damia `MultiEntityBoss { main; extras; synergy }` data-model canon. À documenter `combat/multi-entity-bosses.md` (à créer) — pattern canon récurrent étendu confirmed. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Untargetable passive Dark Doel canon MAJEUR ⭐⭐** — Pattern **"Components must be destroyed first"** canon : Dark Doel **cannot be targeted/damaged** while EITHER Light Sword OR Shadow Blade alive. Player MUST destroy both Boss Extras first → Dark Doel becomes targetable. Cohérent existing Emperor Doel doc reveal "Cannot be attacked before 2 swords defeated". À implémenter `UntargetablePassive { condition: 'while-entity-alive'; entities; mode: 'OR' | 'AND' }` data-model. Pattern Boss + Boss Extras synergy canon MAJEUR. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 "INSTIGATE" MECHANIC NEW CANON Boss Extras MAJEUR ⭐⭐⭐** — Pattern Boss Extras = "command-the-boss" canon NEW :
+  - **Light Sword Instigate Sword Slash** → force Dark Doel to use ~Sword Slash (1× phys)
+  - **Shadow Blade Instigate Blade Slash** → force Dark Doel to use ~Blade Slash (1× phys)
+  - **Ignore turn order** = Dark Doel forced action ne change pas son turn order canon
+  - Pattern Boss Extras drive Boss behavior canon NEW
+  - Consistent **"Ignore Turn Order" terminology canon** (cohérent Danton "Auto" + "Ignore Turn Order")
+    À implémenter `InstigateAbility { type: 'force-boss-action'; targetBoss; forcedAction; ignoreTurnOrder: true }` data-model Damia. Pattern unique multi-entity boss mechanic canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Boss Extras canonical 4th category 2nd instance confirmed cross-boss MAJEUR ⭐** — Light Sword + Shadow Blade = **2ème Boss Extras ingestion canon Damia** (1ère = Crafty Thief Boss Extras Pellet/Drake's Ring etc.). Pattern Boss Extras canonical category distinct Minor Enemy / Rare Monster / Boss. Pattern characteristics canon confirmed cross-boss :
+  - Counter (0) canon
+  - EXP/Gold/Drops 0/0/Nothing canon
+  - Status all 8 ✔ canon
+  - Stats similar Boss (HP 1000, DF 120)
+  - A-AV 5% canon (cohérent Cute Cat parallel)
+    À mettre à jour `combat/monster-categories.md` Boss Extras = 4th category with multiple confirmed instances (Crafty Thief + Dark Doel). Source: idem.
+
+- [ ] ⭐ **🆕 ~Curved Thunder NEW canon name Dark Doel post-swords phase ⭐** — Wiki tier 2 community approximation : 1× Thunder-elemental magic damage. Condition : Light Sword OR Shadow Blade destroyed (post-Boss-Extras-destruction phase canon). Pattern Thunder element ability cohérent Doel Violet Dragoon canon. Cohérent existing Emperor Doel doc "Lightning Cape" phase post-swords-destroyed. À reconcilier Curved Thunder vs Lightning Cape canon name. Source: idem.
+
+- [ ] ⭐ **🆕 ~Triple Slash NEW canon name Dark Doel while Boss Extras alive ⭐** — Wiki tier 2 community approximation : 2× Physical damage. Condition : Light Sword OR Shadow Blade in battle. Pattern thematic "triple slash" (lift + slam + slash combo ?). Pattern Dark Doel dual-phase AI canon (Triple Slash phase 1 + Curved Thunder phase 2). Source: idem.
+
+- [ ] **🆕 ~Sword Slash + ~Blade Slash 1× phys forced via Instigate canon Dark Doel ⭐** — Wiki tier 2 community approximation. Only used via Boss Extras Instigate mechanic. Pattern unique forced-action canon Boss Extras → Boss. Source: idem.
+
+- [ ] **🆕 AI canon "if → then" model Dark Doel confirmed cross-boss ⭐** — Pattern Boss AI canon récurrent (cohérent Caterpillar + Danton + Dark Doel). "Auto" + "Ignore Turn Order" terminology canon confirmed. À documenter `combat/boss-ai.md` (à créer) — "if → then" model + Auto + Ignore Turn Order + Instigate mechanic NEW. Source: idem.
+
+- [ ] **🆕 Pattern identical paired Boss Extras canon ⭐** — Light Sword + Shadow Blade = stats identical pair canon (HP 1000 / AT 70 / DF 120 / SPD 45 / MAT 76 / MDF 120 / A-AV 5% / M-AV 0%). Pattern dual entity Boss Extras paired canon. À investiguer autres paired Boss Extras canon cross-boss. Source: idem.
+
+- [ ] **🆕 HP total combat 3500 Disc 4 finale tier canon ⭐** — Dark Doel 1500 + Light Sword 1000 + Shadow Blade 1000 = **3500 HP total**. Pattern multi-entity boss HP distributed canon. Pattern Disc 4 finale combat tier canon. Source: idem.
+
+- [ ] **🆕 EXP 6000 high late game canon Dark Doel ⭐** — Pattern Disc 4 finale trial boss EXP reward canon. Gold 0 / Drops Nothing = story-only Disc 4 trial pattern. Source: idem.
+
+- [ ] **🆕 A-AV 5% Boss Extras canon Light Sword + Shadow Blade ⭐** — Cohérent existing Cute Cat A-AV 5% canon. Pattern A-AV 5% tier extension across Boss Extras + Minor Enemy. À documenter `combat/avoidance-tiers.md` (à créer) per-mob A-AV/M-AV tier mapping étendu. Source: idem.
+
+- [ ] **🆕 Moon That Never Sets submap 596 Disc 4 trial canon Dark Doel ⭐** — Pattern Disc 4 Moon trials boss canon (Albert individual trial). Scripted / 0% escape = story trial boss canon. À documenter `locations/Moon That Never Sets.md` (à créer) — Disc 4 trials area canon. Source: idem.
+
+- [ ] **🆕 Stats divergences Dark Doel wiki vs existing Emperor Doel fandom doc ⚠️** :
+  - Wiki tier 2 : HP 1500 / AT 60 / MAT 70
+  - Existing Emperor Doel fandom doc : HP US 1500 / JP 2500 / AT 75 / MAT 90
+  - Possible : existing doc Lightning Cape phase post-swords stats ? Versions différentes ?
+  - Damia adopt wiki tier 2 precise canon (1500 / 60 / 70) — wiki pattern précis
+  - À reconcilier ingestion Dark Doel fandom dédié future. Source: comparaison.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

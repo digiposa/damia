@@ -318,7 +318,7 @@ Counter formula canon : `floor{floor[floor{floor[(AT² × 250 / DF)] / 100} × T
 - **Haschel** (futur Violet Dragoon héritier) : `../party-members/Haschel.md` (à créer)
 - **Carlo** (frère tué par Doel, Albert's father) : `lore/serdia.md` (à créer) ou `npcs/carlo.md`
 - **Katrina** (Doel's wife) : `npcs/katrina.md` (à créer)
-- **Dark Doel** (Disc 4 alternate Bale rematch) : `./Dark Doel.md` (à créer)
+- **Dark Doel** (Disc 4 Moon trial Albert — multi-entity 3500 HP total) : [`Dark Doel.md`](./Dark Doel.md) ✅ ingéré wiki + fandom
 - **Damage formula** : [`../combat/damage-formula.md`](../combat/damage-formula.md) (Attack Multiplier per ability)
 - **Elements** : [`../combat/elements.md`](../combat/elements.md) (Thunder)
 - **Additions** : [`../combat/additions.md`](../combat/additions.md) (counter group 28 Emperor / group 0 Dragoon)

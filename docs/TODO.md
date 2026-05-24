@@ -3883,6 +3883,56 @@
 
 - [ ] **🆕 Stats Disc 4 upgrade variant Death Purger vs Death parent ⭐** — Pattern recolor stats scaling canon : HP +166% (200 → 532) / AT +66% (50 → 83) / MAT +66% (35 → 58) / MDF +66% (60 → 100) / A-AV +10% (0% → 10%). DF/SPD shared canon. Pattern Disc 4 variants stats scaling canon (à investiguer pattern universel recolors). Source: idem.
 
+### Mobs / Death Purger fandom complement — JP HP 666 ✓ +25% CONFIRMED + "Law City Zenebatos" location NEW + Appearance Reaper canon + Des Rapier + Lightning Punisher canon names shared cross-recolor + "Cousin to Death" + "Does NOT share Fear" subset canon + Power Up 1.5× quad-stat CORRECTION + Stats divergences MAJEUR + Total Vanishing ~10 min farming
+
+- [ ] ⭐⭐ **🆕 Death Purger JP HP 666 ✓ +25% CONFIRMED systematic fandom MAJEUR ⭐⭐** — Wiki US 532 / fandom US 583 ⚠️ / **JP 666** ✓ (532 × 1.25 = 665 ≈ 666 ✓). JP Gold **8** ✓ ÷3 confirmed (22 ÷ 3 ≈ 7.33 → 8). Damia adopt wiki US 532 + JP 666 canon (wiki US plus précis, fandom US 583 probable typo/version). Source: [`features/mobs/_sources/fandom-death-purger.md`](features/mobs/_sources/fandom-death-purger.md).
+
+- [ ] ⭐⭐ **🆕 "Law City, Zenebatos" location canon NEW MAJEUR (fandom) ⭐⭐** — Fandom révèle location canon name : **Law City, Zenebatos** ⭐. Pattern thematic "Law City" Wingly judicial canon. Cohérent thematic Death Purger + Guillotine + Professor formation partners (judicial/punisher/scholar machinery Wingly). À documenter/vérifier `locations/Zenebatos.md` existing : "Law City" canon name addition. Pattern Wingly Zenebatos = Law City judicial machinery canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Appearance canon Death Purger NEW MAJEUR (fandom) ⭐⭐** — Fandom révèle visual canon :
+  - **Reaper or malevolent ghostly spirit** archetype canon
+  - **Massive Scythe** weapon canon
+  - **Long blue cloak** (vs Death black cloak — recolor color variation canon)
+  - **Gold-trimmed red collar + 5 red gems decorative piece** = Wingly ornate canon
+  - **Black eye sockets + yellow flame spheres** = supernatural
+  - **Two tall horns** = demonic appearance
+  - **Skeletal face + hands** (shared Death thematic)
+    À refléter sprite design Damia. Pattern recolor color variation canon : Death (black cloak Phantom Ship) vs Death Purger (blue cloak Wingly Law City Zenebatos). Source: idem.
+
+- [ ] ⭐⭐ **🆕 "Cousin to Death" canon shared recolor family confirmed (fandom) ⭐⭐** — Fandom : "This monster is the much more potent cousin to Death". Pattern recolor family canon : cousin relationship cohérent existing chronological canon (Death Disc 2 parent → Death Purger Disc 4 variant). "Much more potent" = stat upgrade canon confirmé. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 "Same names for attacks" canon shared cross-recolor MAJEUR (fandom) ⭐⭐⭐** — Fandom : "has the same names for its attacks" (cohérent Death naming canon). Pattern **recolor shared ability canon NEW** ⭐ :
+  - **Des Rapier** = canon shared Death + Death Purger (vs wiki ~Reaping Slash community)
+  - **Lightning Punisher** = canon shared Death + Death Purger (vs wiki "Can't Combat" status-naming)
+    Damia adopt fandom canon names cross-recolor. Pattern Damia data-model : recolor shared ability names canon. Pattern Mob Instant Death offensive canon 3 mobs confirmed cross-mob : Cute Cat (Dance of Death) + Death + Death Purger (both Lightning Punisher). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 "Does NOT share Fear with Death" canon NEW MAJEUR (fandom) ⭐⭐⭐** — Fandom : "It is easier than Death, though, in that it does not share with Death the ability to cause Fear". Pattern **Death Purger LACKS Midnight Terror** (Fear ability) ⚠️ canon. Pattern recolor AI subset canon NEW : Death (parent 5 abilities complex) vs Death Purger (variant 3 abilities subset simpler). "Easier than Death" canon confirmé : recolor variant less complex AI vs parent. Pattern recolor AI variation canon NEW universel à investiguer cross-recolor (Plague Rat vs Berserk Mouse / Stinger vs Crescent Bee). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Power Up 1.5× quad-stat CORRECTION fandom precision MAJEUR ⭐⭐** — Wiki tier 2 : "Increases damage inflicted and reduces damage received by 50% for 3 turns" (2 stats simpler). Fandom : "Increases **both physical and magical attack power** as well as **both defences** by a **1.5× multiplier** for **3 turns**". CORRECTION canon : Power Up affects **4 stats** = P-Atk + M-Atk + P-Def + M-Def (1.5× = +50% mathematically equivalent wiki, fandom plus précis sur stats affectés). À implémenter `PowerUpAbility { type: 'self-buff-quad'; duration: 3; multiplier: 1.5; affects: ['p-atk', 'm-atk', 'p-def', 'm-def'] }` data-model CORRECTION (vs initial 2-stat). Source: idem.
+
+- [ ] ⭐ **🆕 Total Vanishing ~10 min farming canon Death Purger NEW (fandom) ⭐** — Fandom : "average amount of time required to obtain this is roughly 10 minutes". Pattern Death Purger faster farming canon (vs Death 30+ min canon). Pattern Encounter rate Death Purger > Death (probable Common vs Death Uncommon). Pattern multi-source Total Vanishing canon confirmed avec farming times :
+  - Phantom Ship Disc 2 (Death) 8% — one-time area, 30+ min average
+  - **Zenebatos Disc 4 (Death Purger) 8%** — late-game permanent, **~10 min average** (faster)
+    À documenter `items/consumables.md` Total Vanishing entry avec sources + farming times canon. Source: idem.
+
+- [ ] **🆕 "Spell items + dragoon magic favored" + Light element bonus canon (fandom) Death Purger ⭐** — Fandom : "spell items or dragoon magic most frequently, you are in luck since it has lower resistance towards magical attacks" + "light element based spell items to gain the bonus damage against its elemental weakness". Confirms MDF 100 mid (vs DF 120 anti-physical) + Darkness weak Light pattern récurrent cross-source. Source: idem.
+
+- [ ] **🆕 "Great chance to evade attacks" canon confirms A-AV 10% cross-source (fandom) ⭐** — Fandom narrative confirme A-AV 10% canon Death Purger. Pattern evasion mechanic canon récurrent cross-source. Source: idem.
+
+- [ ] **🆕 Stats divergences Death Purger wiki vs fandom ⚠️ MAJEUR** :
+  - HP US : wiki **532** vs fandom **583** (+10% — fandom probable typo/version, JP 666 confirms wiki US 532)
+  - AT : wiki **83** vs fandom **93** (+12%)
+  - MAT : wiki **58** vs fandom **65** (+12%)
+  - EXP : wiki **144** vs fandom **134** (-7% divergence)
+  - Gold : wiki **24** vs fandom **22** (-2 divergence)
+  - DF/MDF/SPD match ✓
+  - → Damia adopt mix : wiki HP 532 + EXP 144 (cohérent JP +25%) + fandom higher AT 93 + MAT 65 (JP closer pattern récurrent)
+    Source: comparaison.
+
+- [ ] **🆕 Pattern recolor color variation canon (fandom) Death family ⭐** — Death black cloak (Phantom Ship Disc 2) vs Death Purger **blue cloak + ornate red gold trim** (Wingly Law City Zenebatos Disc 4). Pattern recolor color variation canon NEW : palette + ornaments variation cross-recolor. À cross-référer autres recolors color variations canon (Berserk Mouse vs Plague Rat / Crescent Bee vs Stinger / etc.). Source: idem.
+
+- [ ] **🆕 Formations canon confirmed cross-source Death Purger ⭐** — 3 formations canon identiques wiki tier 2 confirmé fandom : Death Purger solo + Death Purger + Guillotine + Death Purger ×2 + Professor. Pattern Guillotine + Professor NEW mobs canon Law City Zenebatos partners confirmé cross-source. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

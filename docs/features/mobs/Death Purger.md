@@ -20,23 +20,51 @@
 >
 > ⭐ **Stats Disc 4 upgrade** : HP 532 / AT 83 / MAT 58 / MDF 100 (vs Death 200/50/35/60 = +166%/+66%/+66%/+66%).
 >
-> Pattern Death family canon shared : Darkness + Status 7/1 + Instant Death Immunity + Counter 28 + Total Vanishing drop + Can't Combat + Reaping Slash baseline.
+> Pattern Death family canon shared : Darkness + Status 7/1 + Instant Death Immunity + Counter 28 + Total Vanishing drop + Des Rapier + Lightning Punisher canon names cross-recolor.
+>
+> ⭐⭐ **"Law City, Zenebatos" location canon NEW MAJEUR (fandom)** — Wingly judicial thematic canon.
+>
+> ⭐⭐ **Appearance canon NEW MAJEUR (fandom)** : "Reaper + massive Scythe + **long blue cloak** (vs Death black) + gold-trimmed red collar + 5 red gems + black eye sockets + yellow flame spheres + two tall horns + skeletal face/hands".
+>
+> ⭐⭐⭐ **"Same names for attacks" canon cross-recolor CONFIRMED (fandom)** : Des Rapier + Lightning Punisher canon shared Death family.
+>
+> ⭐⭐⭐ **"Does NOT share Fear with Death" canon NEW MAJEUR (fandom)** — Death Purger LACKS Midnight Terror. Pattern recolor AI subset canon : Death (5 abilities complex) vs Death Purger (3 abilities subset simpler).
+>
+> ⭐⭐ **Power Up CORRECTION fandom precision** : 1.5× multiplier sur **4 stats** (P-Atk + M-Atk + P-Def + M-Def) / 3 turns (vs wiki "damage inflicted + damage received" 2 stats general).
+>
+> ⭐ **JP HP 666 ✓ +25% CONFIRMED** (532 × 1.25 = 666) — fandom US 583 divergence (typo probable, wiki US 532 canon).
+>
+> ⭐ **Total Vanishing ~10 min farming canon (fandom)** — vs Death 30+ min (Death Purger faster source canon).
 >
 > **Sources** :
 >
 > - 🥈 [`_sources/lod-wiki-death-purger.md`](./_sources/lod-wiki-death-purger.md) — wiki LoD (Darkness Zenebatos Disc 4 + Counter 28 high-density + Status 7/1 deviation cohérent Death + EXP 144 / Gold 24 / Total Vanishing 8% drop shared Death + HP 532 / DF 120 / MAT 58 / MDF 100 / A-AV 10% NEW + Instant Death Immunity passive 4ème instance + AI 3-phase Reaping Slash / Power up NEW canon / Can't Combat + Power up dual-effect 50% buff NEW MAJEUR + Guillotine + Professor NEW mobs partners + Trivia reciprocal recolor reveal Death parent CORRECTION + escape 30%)
+> - 🥉 [`_sources/fandom-death-purger.md`](./_sources/fandom-death-purger.md) — fandom (⭐⭐ **JP HP 666 ✓ +25% CONFIRMED** + JP Gold 8 ÷3 + ⭐⭐ **"Law City Zenebatos" location canon NEW** + ⭐⭐ **Appearance canon NEW MAJEUR** Reaper + blue cloak + red collar + 5 gems + horns + yellow flame eyes + ⭐⭐ **"Cousin to Death" canon** + ⭐⭐⭐ **"Same names for attacks" canon cross-recolor** Des Rapier + Lightning Punisher shared + ⭐⭐⭐ **"Does NOT share Fear" canon MAJEUR** Death Purger LACKS Midnight Terror + ⭐⭐ **Power Up 1.5× on 4 stats CORRECTION** vs wiki 2 stats + ⭐ Total Vanishing ~10 min farming canon + ⚠️ Stats divergences MAJEUR HP US 532/583 / AT 83/93 / MAT 58/65 / EXP 144/134 + A-AV 10% evade cross-source confirmed + Darkness weak Light bonus damage canon)
 
 ## Statut
 
-🟡 **Canon documenté wiki tier 2 uniquement** — fandom complement à ingérer en suite.
+🟢 **Canon documenté wiki + fandom** — JP HP 666 ✓ confirmed +25% systematic + "Law City Zenebatos" location canon + Appearance canon NEW + Des Rapier + Lightning Punisher canon names cross-recolor + No Midnight Terror Fear ability + Power Up 1.5× quad-stat CORRECTION.
 
 ## Identity canon
 
-- **Espèce** : Death Purger (entité spectrale Darkness-themed Wingly — **recolor variant of Death** Phantom Ship Disc 2 parent canon)
+- **Espèce** : Death Purger (entité spectrale Darkness-themed Wingly Reaper — **recolor variant of Death** Phantom Ship Disc 2 parent canon — **"cousin to Death"** canon fandom)
 - **Element** : **Darkness** ⭐
-- **Location canon** : **Zenebatos** Disc 4 (submaps 529, 530, 532, 717, 718) — Wingly forest city
+- **Location canon** : **Law City, Zenebatos** Disc 4 ⭐ (submaps 529, 530, 532, 717, 718) — Wingly judicial city canon fandom
 - **Disc** : Disc 4 (Wingly purification thematic canon)
-- **Pattern symbolique** : ⭐ **Darkness Wingly punisher** + **Recolor variant Death Disc 4** + **Status 7/1 Death family shared** + **Power up Self-buff NEW** + **Instant Death Immunity passive 4ème** + **Total Vanishing drop shared** + **A-AV 10% NEW tier**
+- **Visual canon (fandom)** ⭐⭐ : "Reaper + massive Scythe + **long blue cloak** (vs Death black cloak) + gold-trimmed red collar + 5 red gems decorative + black eye sockets + yellow flame spheres + two tall horns + skeletal face/hands"
+- **Pattern symbolique** : ⭐ **Darkness Wingly Reaper "Law City"** + **Recolor variant Death Disc 4 cousin** + **Status 7/1 Death family shared** + **Power Up 1.5× quad-stat Self-buff NEW** + **Instant Death Immunity passive 4ème** + **Total Vanishing drop shared** + **A-AV 10% NEW tier** + **AI subset Death (3 vs 5 abilities — no Midnight Terror)**
+
+### Appearance canon NEW fandom ⭐⭐ MAJEUR
+
+- **Reaper or malevolent ghostly spirit** archetype canon
+- **Massive Scythe** weapon canon (cohérent Des Rapier ability scythe-themed)
+- **Long blue cloak** = Wingly thematic Zenebatos canon (recolor color variation vs Death black cloak)
+- **Gold-trimmed red collar + 5 red gems decorative piece** = Wingly ornate canon Law City
+- **Black eye sockets + yellow flame spheres** = supernatural canon
+- **Two tall horns** = demonic appearance canon
+- **Skeletal face + hands** canon (shared Death thematic)
+- À refléter sprite design Damia : Reaper + Scythe + **blue cloak (vs Death black)** + red collar + 5 gems + horns + yellow flame eyes + skeletal
+- Pattern recolor visual distinction canon : Death (black cloak Phantom Ship) vs Death Purger (blue cloak + ornate Wingly trim Law City Zenebatos)
 
 ### Darkness element Zenebatos thematic canon ⭐
 
@@ -55,20 +83,29 @@
 - Damia adopt chronological canon : Death Disc 2 = first appearance asset / Death Purger Disc 4 = upgraded reuse
 - À mettre à jour existing Death.md trivia : "Death Purger = recolor **variant** Death" (not parent)
 
-## Stats canon ⚠️ Damia adopt JP ⭐
+## Stats canon ⚠️ Damia adopt JP ⭐ (JP confirmed fandom +25% systematic)
 
-| Stat | Wiki US    | **Damia (JP)** ⭐                 | Notes                                              |
-| ---- | ---------- | --------------------------------- | -------------------------------------------------- |
-| HP   | 532        | (JP +25% ~665 à confirmer fandom) | Disc 4 high HP tier (+166% vs Death 200)           |
-| AT   | 83         | **83**                            | Disc 4 high AT (+66% vs Death 50)                  |
-| DF   | 120        | **120**                           | High DF (shared Death canon)                       |
-| MAT  | 58         | **58**                            | Disc 4 high MAT (+66% vs Death 35)                 |
-| MDF  | 100        | **100**                           | Mid MDF (+66% vs Death 60 — less magic-vulnerable) |
-| SPD  | 50         | **50**                            | Low SPD (shared Death canon)                       |
-| A-AV | **10%** ⭐ | **10%**                           | ⭐ A-AV 10% tier (cohérent Canbria Dayfly canon)   |
-| M-AV | 0%         | **0%**                            |                                                    |
-| Gold | 24         | (JP ÷3 ~8 à confirmer fandom)     |                                                    |
-| EXP  | 144        | **144**                           | Disc 4 yield                                       |
+| Stat | Wiki US    | Fandom US    | **Damia (JP)** ⭐                            | Notes                                                 |
+| ---- | ---------- | ------------ | -------------------------------------------- | ----------------------------------------------------- |
+| HP   | 532        | **583** ⚠️   | **666** ✓ JP confirmed fandom +25%           | (532 × 1.25 = 665 ≈ 666 ✓) — fandom US 583 divergence |
+| AT   | 83         | **93** (+10) | **93** (fandom higher, JP closer probable)   | ⚠️ wiki 83 vs fandom 93 divergence (+12%)             |
+| DF   | 120        | 120          | **120**                                      | High DF (shared Death canon)                          |
+| MAT  | 58         | **65** (+7)  | **65** (fandom higher, JP closer probable)   | ⚠️ wiki 58 vs fandom 65 divergence (+12%)             |
+| MDF  | 100        | 100          | **100**                                      | Mid MDF (+66% vs Death 60 — less magic-vulnerable)    |
+| SPD  | 50         | 50           | **50**                                       | Low SPD (shared Death canon)                          |
+| A-AV | **10%** ⭐ | -            | **10%**                                      | ⭐ A-AV 10% tier (cohérent Canbria Dayfly canon)      |
+| M-AV | 0%         | -            | **0%**                                       |                                                       |
+| Gold | 24         | 22 ⚠️        | **8** ✓ JP confirmed fandom ÷3 (22÷3≈7.33→8) | ⚠️ wiki 24 vs fandom 22 -2 divergence                 |
+| EXP  | 144        | 134 ⚠️       | **144** (wiki adopt — fandom -7% divergence) | ⚠️ wiki 144 vs fandom 134 divergence                  |
+
+⚠️ **Stats divergences wiki vs fandom Death Purger ⚠️ MAJEUR** :
+
+- HP US : wiki 532 vs fandom **583** (+10% — fandom probable typo/version, JP 666 confirms wiki 532)
+- AT : wiki 83 vs fandom **93** (+12%)
+- MAT : wiki 58 vs fandom **65** (+12%)
+- EXP : wiki **144** vs fandom **134** (-7% divergence)
+- Gold : wiki 24 vs fandom 22 (-2 divergence)
+- → Damia adopt mix : wiki HP 532 (cohérent JP 666) + wiki EXP 144 / fandom higher AT 93 + MAT 65 (JP closer pattern récurrent)
 
 → Pattern **"Disc 4 upgraded variant of Death" canon Death Purger** ⭐ MAJEUR :
 
@@ -124,48 +161,58 @@ Counter 28 = high-density tier canon (shared Death). Per user instruction : feat
 - Pattern thematic IRONIC cohérent Death family : "Death-themed mob immune to Death dealing Death (Can't Combat ability)" canon
 - À documenter `combat/mob-passives.md` (à créer) — 4 mobs Instant Death Immunity confirmed canon
 
-## AI canon (3-phase ⭐)
+## AI canon (3-phase ⭐ — shared ability names cross-recolor Death confirmed fandom)
 
-| HP       | Chance | Action            | Target | Effect                                                                               |
-| -------- | ------ | ----------------- | ------ | ------------------------------------------------------------------------------------ |
-| **Any**  | 75%    | ~Reaping Slash    | Single | 1× Physical damage (shared Death canon ~)                                            |
-| **>25%** | 25%    | **Power up** ⭐⭐ | Self   | **Increases damage inflicted + reduces damage received by 50% for 3 turns**          |
-| **≤25%** | 25%    | **Can't Combat**  | Single | **Inflicts Instant Death** (cohérent Death Lightning Punisher possible same ability) |
+| HP       | Chance | Action                        | Target | Effect                                                                               |
+| -------- | ------ | ----------------------------- | ------ | ------------------------------------------------------------------------------------ |
+| **Any**  | 75%    | **Des Rapier** ⭐⭐           | Single | 1× Physical damage (Scythe swing — shared Death canon name)                          |
+| **>25%** | 25%    | **Power Up** ⭐⭐             | Self   | **1.5× multiplier on P-Atk + M-Atk + P-Def + M-Def for 3 turns** (fandom CORRECTION) |
+| **≤25%** | 25%    | **Lightning Punisher** ⭐⭐⭐ | Single | **Inflicts Can't Combat (Instant Death)** — shared Death canon name                  |
 
 ⚠️ Pattern AI canon mob **3-phase ⭐ MAJEUR** :
 
-- **Phase Any HP** : 75% ~Reaping Slash (1× phys baseline) — shared Death canon
-- **Phase HP > 25%** : 25% **Power up** (Self-buff 3 turns) ⭐ NEW canon
-- **Phase HP ≤ 25%** : 25% Can't Combat (Instant Death)
-- Pattern AI Death Purger cycle canon : baseline Reaping Slash + late-game burst Power up OR Can't Combat
-- Pattern différent Death AI canon : Death = Charging Spirit triple-option (Midnight Terror/Lightning Punisher/All-Out Attack) vs Death Purger = simpler 3-phase
-- Pattern recolor AI canon : parent (Death) complexity > variant (Death Purger) simpler — recolor variation canon
+- **Phase Any HP** : 75% **Des Rapier** (1× phys baseline) — shared Death canon name fandom
+- **Phase HP > 25%** : 25% **Power Up** (Self-buff quad-stat 1.5× / 3 turns) ⭐ NEW canon
+- **Phase HP ≤ 25%** : 25% **Lightning Punisher** (Instant Death Can't Combat) — shared Death canon name fandom
+- Pattern AI Death Purger cycle canon : baseline Des Rapier + late-game burst Power Up OR Lightning Punisher
+- Pattern recolor AI subset canon ⭐⭐ MAJEUR : **Death Purger LACKS Midnight Terror** (Fear ability) — Death has 5 abilities (+ Midnight Terror + Charging Spirit + All-Out Attack), Death Purger has 3 (subset Des Rapier + Power Up + Lightning Punisher)
+- Pattern "easier than Death" canon (fandom) : recolor variant simpler AI (3 abilities vs 5) — recolor AI subset canon NEW
 
-### ~Reaping Slash canon name (community) — shared Death recolor
+### Des Rapier canon name officiel ⭐⭐ MAJEUR — shared Death recolor cross-source
 
-- **~Reaping Slash** = community approximation any-HP baseline ability (cohérent Death shared ~ ability — recolor shared)
-- **1× phys damage** canon
-- Pattern thematic "death reap scythe" canon
-- ⚠️ Note : Death fandom révèle canon **Des Rapier** > wiki ~Reaping Slash — à cross-référer Death Purger fandom future ingestion si shared
+- **Des Rapier** = canon name officiel **fandom** (cohérent Death same canon) — shared cross-recolor ⭐⭐
+- Wiki tier 2 ~Reaping Slash community approximation (vs fandom Des Rapier canon)
+- Description fandom : "Flies towards single target slicing through them with Scythe medium physical damage"
+- Pattern Death family shared canon ability name (fandom "same names for attacks" canon)
+- **1× phys damage** canon (wiki) — "medium" fandom descriptor
+- Pattern thematic "Reaper Scythe slice" canon
+- Damia adopt fandom canon **Des Rapier** > wiki community ~Reaping Slash (cohérent Death adoption)
 
-### Power up canon name officiel ⭐⭐ NEW MAJEUR
+### Power Up canon name officiel ⭐⭐ NEW MAJEUR + fandom precision CORRECTION
 
-- **Power up** = canon name officiel (NOT ~ approximation) — wiki tier 2 canonical
-- Self-buff : **Increases damage inflicted + reduces damage received by 50% for 3 turns** canon
-- Pattern thematic "Death Purger empowers itself for punishment" canon
+- **Power Up** = canon name officiel (NOT ~ approximation) — wiki tier 2 canonical + fandom confirmed
+- ⭐⭐ **Fandom precision canon CORRECTION** : Self-buff **1.5× multiplier on 4 stats** :
+  - **P. Attack** ×1.5
+  - **M. Attack** ×1.5
+  - **P. Defense** ×1.5
+  - **M. Defense** ×1.5
+  - **Duration : 3 turns**
+- Wiki tier 2 simpler description : "damage inflicted + damage received by 50%" (mathematically equivalent 1.5× = +50%, but fandom plus précis sur 4 stats affectés)
 - Pattern Mob Self-buff ability canon NEW (vs typical mob direct-damage abilities)
-- Pattern dual-effect buff canon : offensive +damage + defensive -damage received simultanément 50% canon
-- À implémenter ability `powerUp` Damia Self-buff 3-turn duration +damage/-damage received 50%
-- Pattern Damia : `PowerUpAbility { type: 'self-buff-dual'; duration: 3; effects: ['damage-increase-50', 'damage-reduction-50'] }` data-model canon
+- Pattern quad-effect buff canon : offensive (P-Atk + M-Atk) + defensive (P-Def + M-Def) simultanément 1.5× canon
+- À implémenter ability `powerUp` Damia Self-buff 3-turn duration quad-stat 1.5× multiplier
+- Pattern Damia : `PowerUpAbility { type: 'self-buff-quad'; duration: 3; multiplier: 1.5; affects: ['p-atk', 'm-atk', 'p-def', 'm-def'] }` data-model canon CORRECTION (vs initial 2-stat data-model)
 
-### Can't Combat canon name (wiki tier 2)
+### Lightning Punisher canon name officiel ⭐⭐⭐ MAJEUR — shared Death recolor cross-source
 
-- **Can't Combat** = wiki tier 2 ability naming
-- Single target + **Inflicts Instant Death** canon
-- ⚠️ Pattern naming canon ⚠️ : wiki Death + Death Purger use Can't Combat (status name) — fandom Death révèle Lightning Punisher (specific ability name)
-- Possible interprétation : Death Purger Can't Combat = same ability mechanically as Death's Lightning Punisher (shared canon abilities cross-recolor)
-- À investiguer fandom Death Purger if Lightning Punisher canon name shared OR different ability canon
-- À implémenter ability `cantCombat` Damia Mob Instant Death canon (potentially shared `lightningPunisher` with Death recolor)
+- **Lightning Punisher** = canon name officiel **fandom** (vs wiki "Can't Combat" — wiki used status name as ability name)
+- Shared Death canon name cross-recolor confirmed fandom ⭐ ("same names for attacks" canon)
+- Description fandom Death Purger : "Inflicts Can't Combat upon single target"
+- Pattern Death family shared canon ability name : Death + **Death Purger** both use **Lightning Punisher** ✓ confirmed cross-source
+- Pattern Mob Instant Death offensive canon 3 confirmed mobs canon : Cute Cat (Dance of Death) + Death + **Death Purger** (both Lightning Punisher) ⭐ MAJEUR
+- À implémenter ability `lightningPunisher` Damia Mob Instant Death "Can't Combat" canon shared Death + Death Purger
+- Pattern thematic IRONIC ⭐⭐ : "Death + Death Purger use Lightning Punisher to Can't Combat" — multi-layer thematic match
+- Damia adopt fandom canon **Lightning Punisher** > wiki "Can't Combat" ability naming (cohérent Death adoption)
 
 ## Pattern A-AV/M-AV tier mapping étendu ⭐ MAJEUR
 
@@ -241,37 +288,45 @@ Counter 28 = high-density tier canon (shared Death). Per user instruction : feat
 5. **A-AV 10% / M-AV 0%** = low physical avoidance
 6. **Instant Death Immunity passive** = Can't Combat Weapons (player) miss
 
-### Strategy canon recommandée
+### Strategy canon recommandée (fandom-enriched ⭐)
 
-- **Darkness weak Light** → Shana/Miranda Light Dragoon / Light Repeat Items
-- ⚠️ **Avoid Can't Combat ≤ 25% trigger** = Instant Death risk — equip Talisman OR Rose's Hairband canon counter
-- ⚠️ **Power up self-buff threat** : Death Purger devient 50% plus dangereux / 50% plus résistant pour 3 turns — burst-kill avant Power up trigger
-- **Magic attacks balanced** : MDF 100 mid (vs Death MDF 60 magic-vulnerable — Death Purger less weak)
-- ⚠️ **Total Vanishing 8% farming** : 8% rate canon Zenebatos Disc 4 (Death Purger late-game source)
-- **Sustain damage HP > 25%** = avoid Can't Combat phase via burst
+- ⭐ **Darkness weak Light bonus damage canon (fandom)** → Shana/Miranda Light Dragoon / Light Repeat Items — pattern Light element bonus damage confirmé cross-source
+- ⚠️ **Avoid Lightning Punisher ≤ 25% trigger** = Instant Death risk — equip Talisman OR Rose's Hairband canon counter (cohérent Death same threat)
+- ⚠️ **Power Up self-buff threat** : Death Purger devient 1.5× plus dangereux (P-Atk + M-Atk) ET 1.5× plus résistant (P-Def + M-Def) pour 3 turns — burst-kill avant Power Up trigger
+- ⭐ **"Eliminate fast once damaged" canon (fandom)** : Power Up may prevent kill same turn → Can't Combat trigger risk increased
+- **Spell items + dragoon magic favored** (fandom) : MDF 100 mid (lower resistance to magic vs DF 120 anti-physical)
+- ⚠️ **Total Vanishing 8% farming canon ~10 min** (fandom) : Death Purger faster source canon (vs Death 30+ min Phantom Ship one-time area)
+- **Sustain damage HP > 25%** = avoid Lightning Punisher phase via burst
 - **Status applicables** : ONLY Poison (Death Purger is Poison-vulnerable only, 7/1 deviation cohérent Death)
-- **A-AV 10% mob avoidance** = ~10% physical attacks miss
+- **A-AV 10% mob evade canon** = ~10% physical attacks miss (fandom "great chance to evade" confirmed)
+- **Light element spell items bonus damage** (fandom canon)
 - **Escape 30%** = standard Disc 4
+- ⭐ **Death Purger AI subset Death canon ⭐** : LACKS Midnight Terror (Fear) — Death Purger less complex AI vs Death (3 abilities vs 5)
 
 ## Vision Damia (implémentation)
 
 ### Décisions canon à conserver
 
-1. **Stats canon (JP adopt à confirmer)** : HP 532 + AT 83 + DF 120 + MAT 58 + MDF 100 + SPD 50 + **A-AV 10%** + M-AV 0%
-2. **Element Darkness** : Minor Darkness Zenebatos canon (Death family shared)
-3. **Recolor variant Death canon** ⭐⭐ : Death (Disc 2 parent) → Death Purger (Disc 4 upgraded variant) — CORRECTION vs Death.md reverse claim
-4. **Status Immunity 7/1 deviation cohérent Death recolor shared** ⭐ : only Poison vulnerable
-5. **Counter 28 high-density tier** : standard (shared Death)
-6. **Instant Death Immunity passive Mob canon 4ème instance** : Commander Marshland + Crystal Golem + Death + Death Purger
-7. **AI 3-phase canon** : Reaping Slash baseline + Power up Self-buff + Can't Combat Instant Death
-8. **Power up canon name officiel NEW MAJEUR** ⭐⭐ : Self-buff dual-effect +damage/-damage received 50% / 3 turns
-9. **Can't Combat canon name (wiki naming)** : Mob Instant Death (potentially shared mechanics avec Death Lightning Punisher fandom canon)
-10. **Total Vanishing 8% drop canon shared Death recolor** ⭐⭐ : pattern recolor signature drop shared
-11. **A-AV 10% canon** : cohérent Canbria Dayfly existing tier — pattern A-AV 10% tier canon récurrent
-12. **Guillotine + Professor NEW mobs canon** : Zenebatos Disc 4 partners
-13. **Zenebatos Disc 4 location only** : no World Map road
-14. **Escape 30% Disc 4 standard** : late-game
-15. **Pattern Death family canon shared** ⭐⭐ : 9 propriétés partagées Death (Darkness/Status 7/1/Instant Death Immunity/Counter 28/Total Vanishing drop/Can't Combat/Reaping Slash/SPD 50/DF 120)
+1. **Stats canon (JP confirmed fandom +25% systematic)** ⭐ : HP **666** ✓ + AT **93** + DF 120 + MAT **65** + MDF 100 + SPD 50 + **A-AV 10%** + M-AV 0% + Gold **8** ✓
+2. **Element Darkness** : Minor Darkness Law City Zenebatos canon (Death family shared)
+3. **Location canon "Law City, Zenebatos"** ⭐ (fandom) — Wingly judicial city canon
+4. **Recolor variant Death canon** ⭐⭐ : Death (Disc 2 parent) → Death Purger (Disc 4 upgraded variant) — CORRECTION vs Death.md reverse claim — "cousin to Death" canon fandom
+5. **Appearance canon (fandom)** ⭐⭐ : Reaper + Scythe + **blue cloak** (vs Death black) + red collar + 5 gems + horns + yellow flame eyes + skeletal
+6. **Status Immunity 7/1 deviation cohérent Death recolor shared** ⭐ : only Poison vulnerable
+7. **Counter 28 high-density tier** : standard (shared Death)
+8. **Instant Death Immunity passive Mob canon 4ème instance** : Commander Marshland + Crystal Golem + Death + Death Purger
+9. **AI 3-phase canon (subset Death simpler)** : Des Rapier baseline + Power Up Self-buff + Lightning Punisher Instant Death — **LACKS Midnight Terror** (Fear) vs Death (recolor AI subset canon)
+10. **Des Rapier canon name officiel (fandom)** ⭐⭐ : > wiki ~Reaping Slash community — shared Death canon name cross-recolor
+11. **Power Up canon name officiel + 1.5× quad-stat CORRECTION (fandom)** ⭐⭐ : Self-buff 1.5× P-Atk + M-Atk + P-Def + M-Def / 3 turns (vs wiki 2-stat simpler description)
+12. **Lightning Punisher canon name officiel (fandom)** ⭐⭐⭐ : Mob Instant Death (Can't Combat status) — shared Death canon name cross-recolor — 3 mobs canon Instant Death offensive : Cute Cat (Dance of Death) + Death + Death Purger (both Lightning Punisher)
+13. **Total Vanishing 8% drop canon shared Death recolor** ⭐⭐ : pattern recolor signature drop shared + farming ~10 min (vs Death 30+ min) Death Purger faster source
+14. **A-AV 10% canon** : cohérent Canbria Dayfly existing tier — pattern A-AV 10% tier canon récurrent — "great chance to evade" fandom confirme
+15. **Guillotine + Professor NEW mobs canon** : Law City Zenebatos Disc 4 partners (Wingly judicial thematic)
+16. **Zenebatos Disc 4 location only** : no World Map road
+17. **Escape 30% Disc 4 standard** : late-game
+18. **Pattern Death family canon shared** ⭐⭐ : 10 propriétés partagées Death (Darkness / Status 7/1 / Instant Death Immunity / Counter 28 / Total Vanishing drop / **Des Rapier name** / **Lightning Punisher name** / SPD 50 / DF 120 / Reaper Scythe thematic)
+19. **Pattern recolor AI subset canon NEW** ⭐⭐ : Death (parent 5 abilities complex) vs Death Purger (variant 3 abilities subset simpler) — recolor variation canon "easier" fandom
+20. **Pattern recolor color variation** ⭐ : Death black cloak Phantom Ship vs Death Purger blue cloak Wingly Law City Zenebatos
 
 ### Implementation tech
 
@@ -293,15 +348,13 @@ Counter 28 = high-density tier canon (shared Death). Per user instruction : feat
     ];
   };
   ```
-- Ability `powerUp` Self-buff dual-effect :
+- Ability `powerUp` Self-buff quad-stat (CORRECTION fandom precision) :
   ```ts
   type PowerUpAbility = {
-    type: 'self-buff-dual';
+    type: 'self-buff-quad';
     duration: 3; // turns
-    effects: {
-      damageIncrease: 0.5; // +50% damage inflicted
-      damageReduction: 0.5; // -50% damage received
-    };
+    multiplier: 1.5;
+    affects: ['p-atk', 'm-atk', 'p-def', 'm-def']; // 4 stats
   };
   ```
 - Status Immunity profile 7/1 (cohérent Death) :
@@ -320,15 +373,19 @@ Counter 28 = high-density tier canon (shared Death). Per user instruction : feat
 
 ### Questions ouvertes
 
-- **JP stats Death Purger** : confirmer fandom HP +25% pattern → HP ~665 ?
-- **Death Purger fandom complement** : à ingérer wiki tier 2 + fandom future
-- **Lightning Punisher canon name shared Death Purger ?** : fandom Death uses Lightning Punisher — Death Purger same ability canon ? À investiguer
-- **Des Rapier canon name shared Death Purger ?** : fandom Death uses Des Rapier (vs wiki ~Reaping Slash) — Death Purger fandom future si shared ?
-- **Guillotine + Professor stats canon** : à ingérer wiki tier 2 + fandom future Zenebatos Disc 4
-- **Pattern recolor AI complexity variation** : Death (4-phase complex) vs Death Purger (3-phase simple) — pattern recolor simplification AI canon ?
-- **Power up Mob Self-buff autres mobs canon** : Death Purger first ingestion NEW, autres mobs Self-buff ?
-- **Pattern recolor stats upgrade canon** : Death Purger +166% HP / +66% AT/MAT/MDF — pattern Disc 4 variants stats scaling canon ?
+- ~~**JP stats Death Purger**~~ ✅ **RÉSOLU fandom** : HP **666** ✓ +25% systematic confirmed (wiki US 532 × 1.25 = 665 ≈ 666 ✓) / Gold **8** ✓ ÷3 confirmed
+- ~~**Lightning Punisher canon name shared Death Purger**~~ ✅ **RÉSOLU fandom** : Confirmed shared cross-recolor (Death + Death Purger both Lightning Punisher canon)
+- ~~**Des Rapier canon name shared Death Purger**~~ ✅ **RÉSOLU fandom** : Confirmed shared cross-recolor (Death + Death Purger both Des Rapier canon)
+- ⚠️ **Stats divergences fandom US** : HP 583 (vs wiki 532) / AT 93 (vs 83) / MAT 65 (vs 58) / EXP 134 (vs 144) — fandom probable typo/version. Damia adopt wiki HP 532 + EXP 144 (cohérent JP 666 +25%) + fandom higher AT 93 + MAT 65 (JP closer pattern récurrent) — mix canon
+- **Power Up 1.5× quad-stat fandom precision** : data-model CORRECTION (4 stats P-Atk + M-Atk + P-Def + M-Def vs wiki simpler 2-stat description). Mathematically equivalent (1.5× = +50%) but fandom plus précis sur stats affectés
+- ⭐ **Pattern recolor AI subset canon NEW** : Death Purger LACKS Midnight Terror (Fear) vs Death — recolor variant simpler AI subset of parent — pattern universel à investiguer cross-recolor (Plague Rat vs Berserk Mouse / Stinger vs Crescent Bee)
+- **Guillotine + Professor stats canon** : à ingérer wiki tier 2 + fandom future Law City Zenebatos Disc 4
+- **Power Up Mob Self-buff autres mobs canon** : Death Purger first ingestion NEW canon, autres mobs Self-buff ?
+- **Pattern recolor stats upgrade canon** : Death Purger +25% JP HP / +66% AT/MAT/MDF — pattern Disc 4 variants stats scaling canon ?
 - **Pattern Status profile recolor shared** : Death family Status 7/1 shared — pattern universel recolor share Status ? (Plague Rat vs Berserk Mouse à investiguer)
+- **Total Vanishing farming ~10 min Death Purger** (fandom) vs Death 30+ min — Encounter rate Death Purger Common probable ? À investiguer
+- **"Law City Zenebatos" canon name** : à intégrer existing `locations/Zenebatos.md` doc — Wingly judicial city canon
+- **Pattern color variation recolor** : Death black cloak vs Death Purger blue cloak — à cross-référer autres recolors color variations (Berserk Mouse vs Plague Rat / etc.)
 
 ## Liens transverses
 

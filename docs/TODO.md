@@ -3658,6 +3658,47 @@
 
 - [ ] **🆕 Dark Elf article fandom stub note ⭐** — Article fandom stub canon (informations limitées vs wiki tier 2 complet). Pattern fandom stub canon. Damia priorise wiki tier 2 pour stats + AI précis canon (vs fandom narrative). Source: idem.
 
+### Mobs / Deadly Spider (Earth Mountain of Mortal Dragon Disc 3 — Status 5/3 deviation Poison immune NEW MAJEUR + AI 2-phase Cobweb 50% Arm-Blocking A-AV reduces 5ème pattern instance + Mega Sea Dragon NEW partner + Evil Spider recolor parent + Limestone Cave NEW location + Body Purifier 8% drop)
+
+- [ ] **🆕 Deadly Spider canon data-model** — **Earth** element, HP 328 (JP +25% ~410 à confirmer), AT 60, DF 100 mid, MAT 42, **MDF 60 low anti-magic vulnerable**, SPD 50 low, A-AV/M-AV 0%. EXP 90 / Gold 39. Mob Mountain of Mortal Dragon Disc 3 interior dungeon only. Pattern "balanced Disc 3 physical-focused magic-vulnerable" canon. À implémenter `mobs/deadlySpider.ts`. Source: [`features/mobs/_sources/lod-wiki-deadly-spider.md`](features/mobs/_sources/lod-wiki-deadly-spider.md).
+
+- [ ] ⭐⭐ **🆕 Status Immunity 5/3 deviation Poison immune NEW canon Deadly Spider MAJEUR ⭐⭐** — 5 immune (Petrify/Bewitch/Arm Block/Dispirit/**Poison**) / 3 vulnerable (Confuse/Fear/Stun). **Poison immunity NEW deviation** from standard 4/4 mob pattern. Cohérent thematic "spider venom = poison-resistant" canon biology. Pattern Minor Enemy Status varying per-mob canon : 4/4 standard / **5/3 NEW** / 6/2 / all 8 ✔ boss-tier. À documenter `combat/monster-categories.md` Status Immunity tier mapping update + `'minor-5-3-poison-immune'` profile NEW canon. Source: idem.
+
+- [ ] ⭐ **🆕 Cobweb NEW canon name officiel Deadly Spider ⭐** — Wiki tier 2 canonical (NOT ~ approximation). Single target + **1× Physical damage + 50% chance Arm-Blocking proc** canon. Pattern thematic "spider web traps target arm" canon. **A-AV reduces Arm-Blocking proc canon**. À implémenter ability `cobweb` Damia 1× phys + 50% Arm-Blocking proc A-AV-reduced. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Pattern A-AV/M-AV per-ability classification CONFIRMED 5ème instance Deadly Spider Cobweb ⭐⭐** — Cross-mob pattern canon CONFIRMED étendu :
+  - Crystal Golem ~Clap (physical-tagged Stun) → A-AV reduces
+  - Cursed Jar Stunning Hammer (magical-tagged Stun) → M-AV reduces
+  - Cute Cat Luring Dance (magical-tagged Bewitchment) → M-AV reduces
+  - Dark Elf Petrifying Arrow (magical-tagged Petrification) → M-AV reduces
+  - **Deadly Spider Cobweb (physical-tagged Arm-Blocking)** → **A-AV reduces** ⭐ 5ème instance NEW
+  - Pattern : Magical-tagged ability → M-AV reduces / Physical-tagged ability → A-AV reduces
+  - Pattern bien établi cross-mob (Crystal Golem + Cobweb physical → A-AV ; Stunning Hammer + Luring Dance + Petrifying Arrow magical → M-AV)
+  - À documenter `combat/avoidance-tiers.md` (à créer) per-mob A-AV/M-AV tier mapping + per-ability classification canon. Source: idem.
+
+- [ ] ⭐ **🆕 Mega Sea Dragon NEW mob canon Mountain of Mortal Dragon Disc 3 MAJEUR ⭐** — Deadly Spider formation partners (155 + 158). Pattern Mountain of Mortal Dragon Disc 3 mob ecosystem canon : Deadly Spider + Beastie Dragon + Baby Dragon + **Mega Sea Dragon** (4 mobs Disc 3 confirmed). Pattern "Mega" naming canon = upgraded/larger variant probable. Probable Water thematic (cohérent existing Sea Dragon Marshland Disc 1 — Mega = upgrade ?). À documenter `mobs/Mega Sea Dragon.md` (à créer) — Mountain of Mortal Dragon Disc 3 mob canon NEW. À investiguer relationship Mega Sea Dragon vs Sea Dragon Marshland Disc 1. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Evil Spider NEW mob canon (recolor parent Deadly Spider) + Limestone Cave NEW location canon MAJEUR ⭐⭐** — Wiki tier 2 trivia reveal : Deadly Spider model = recolor of **Evil Spider** located in **Limestone Cave**. Pattern recolor canon récurrent (cohérent existing) :
+  - Berserk Mouse → Plague Rat
+  - Crescent Bee → Stinger
+  - Assassin Cock → Fowl Fighter
+  - **Evil Spider → Deadly Spider** ⭐ NEW
+    À documenter `mobs/Evil Spider.md` (à créer) — parent recolor mob canon Limestone Cave + `locations/Limestone Cave.md` (à créer) — Evil Spider location canon (Disc ? à investiguer, probable Disc 1-2 early). Pattern asset reuse canon. Pattern Damia : `MobRecolor { parent; variant }` data-model canon. Source: idem.
+
+- [ ] ⭐ **🆕 Body Purifier 8% drop source canon Deadly Spider ⭐** — Pattern thematic IRONIC ⭐ : Poison-immune mob drops Poison cure (vs typical Poison-inflicting mob dropping cure). Cohérent existing item canon **Body Purifier** (cures Poison status). Pattern multi-mob drop source canon (Deadly Spider + Arrow Shooter existing ? + autres ?). À documenter `items/consumables.md` Body Purifier entry — Deadly Spider 8% Disc 3 source canon. Source: idem.
+
+- [ ] **🆕 Counter 16 mid-low tier Deadly Spider confirmed ⭐** — Cohérent pattern **Unique Jars (Lucky/Treasure/Cursed) + Cactus + Deadly Spider** Counter 16 tier mid-low density. Pattern 8 tiers canon : 0 / 3 / 4 / 9 / **16** / 19 / 23 / 28. Source: idem.
+
+- [ ] **🆕 Mountain of Mortal Dragon Disc 3 location canon Deadly Spider ⭐** — Submaps 413-427 (massive coverage). Cohérent existing **Baby Dragon + Beastie Dragon** Mountain of Mortal Dragon Disc 3 canon (Disc 3 Mountain Wind area). Pattern Disc 3 mob ecosystem canon massive. À documenter `locations/Mountain of Mortal Dragon.md` (à créer) — Disc 3 Mountain area canon. Source: idem.
+
+- [ ] **🆕 Deadly Spider World Map = None canon** — Pattern Deadly Spider = location-only canon (no World Map road spawn). Pattern Mountain of Mortal Dragon mob = interior dungeon canon. Source: idem.
+
+- [ ] **🆕 Escape rate 30% canon Mountain of Mortal Dragon Disc 3 ⭐** — Pattern Disc 3 standard escape canon (vs Disc 1 elevated rates). Pattern late-game lower escape rates canon. Source: idem.
+
+- [ ] **🆕 ~Bite canon name (community) Deadly Spider** — Wiki community approximation > 25% baseline ability. 1× phys damage canon. Pattern thematic "spider bite". Source: idem.
+
+- [ ] **🆕 Pattern Spider thematic web-trap canon Deadly Spider ⭐** — Cobweb late-game ability + Arm-Blocking status = web traps target arm thematic. Pattern AI 2-phase spider canon : Bite baseline + Cobweb wounded. À investiguer Evil Spider AI cross-mob shared (recolor pattern shared abilities ?). Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

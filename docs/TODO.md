@@ -3507,6 +3507,34 @@
 
 - [ ] **🆕 Haschel party member Divine Tree Disc 3-4 canon confirmed gallery ⭐** — Image gallery confirme Haschel = party member Divine Tree canon. Cohérent existing Haschel canon (Summon 4 Gods + Hex Hammer additions per Counter table). Pattern party composition Disc 3-4 canon. Source: idem.
 
+### Bosses / Danton wiki (Hero Competition Round 3 Lohan Disc 1 Earth heavy armor — AI "if → then" canon + ~Bring It! 4-turn reactive NEW MAJEUR + All-out Attack! HP-to-1 Single Use Auto ≤ 25% UNIQUE TLoD variant + Counter 28 + Status all 8 ✔ Boss + No passives + JP HP 300 confirmed cross-source)
+
+- [ ] ⭐ **🆕 Danton wiki tier 2 canon ingestion MAJEUR ⭐** — Complète fandom existing `_sources/fandom-hero-competition.md`. AI canon "if → then" model révélé wiki tier 2 + cross-source confirmations. Source: [`features/bosses/_sources/lod-wiki-danton.md`](features/bosses/_sources/lod-wiki-danton.md).
+
+- [ ] ⭐⭐ **🆕 ~Bring It! NEW canon reactive ability 4-turn MAJEUR ⭐⭐⭐** — Wiki tier 2 révèle ability mécanique précise : 4 turns Do Nothing + reactive (if physical attack received → 0 damage + ignore turn order + retaliate 0.5× phys attacker). Pattern thematic cross-source **"Make my day kiddo, bring it!"** confirmé (cohérent fandom mallet drop trap reveal). Pattern Boss reactive ability canon NEW (vs proactive). Pattern character-thematic ability canon (taunt → counter mechanic). À implémenter `BringItAbility { duration: 4; reactive: 'physical-attack'; effects: ['damage-immunity', 'ignore-turn-order', 'retaliate-0.5x-phys'] }` data-model Damia. Pattern "Ignore Turn Order" mechanic canon NEW. Source: idem.
+
+- [ ] ⭐⭐ **🆕 All-out Attack! "Reduce Target's HP to 1" UNIQUE TLoD variant canon MAJEUR ⭐⭐⭐** — Wiki tier 2 révèle ability **"Reduce Target's HP to 1"** Single Use Auto ≤ 25% HP. Pattern UNIQUE TLoD Danton variant All-out Attack canon : HP-to-1 reduction (vs typical "All-out Attack 3× phys" pattern Air Combat/Bowling). Cross-source confirmed **fandom Dart HP→1 reveal** ✓. Cohérent fandom **comedy beat "Danton stumbles and falls"** canon (executes HP-to-1 but loses balance → Dart wins by default). À implémenter `AllOutAttackHpTo1Ability { type: 'reduce-hp-to-1'; singleUse: true; autoTrigger: 'hp <= 25%' }` data-model Damia. Pattern "Single Use" + "Auto" conditions canon NEW (cohérent existing Boss AI canon). Source: idem.
+
+- [ ] ⭐ **🆕 Boss AI "if → then" model canon confirmed cross-source ⭐** — Wiki tier 2 explicite "Auto" + "Ignore Turn Order" mechanic terms. Cohérent existing **Caterpillar boss AI "if → then" model** canon. Pattern Boss AI canon récurrent. Pattern "Ignore Turn Order" mechanic canon NEW (paired with Retaliate action). À documenter `combat/boss-ai.md` (à créer) — "if → then" model + reactive abilities canon. Source: idem.
+
+- [ ] ⭐ **🆕 Danton JP HP 300 confirmed cross-source ⭐** — Wiki US 240 / fandom JP 300 = +25% pattern systematic confirmé. Damia adopt JP 300 canon. Cohérent décision projet adopt JP. Source: idem.
+
+- [ ] **🆕 Stats divergences Danton wiki vs fandom ⚠️ minor** :
+  - AT : wiki **23** vs fandom **26** (+3 / +13%)
+  - MAT : wiki **8** vs fandom **10** (+2 / +25%)
+  - HP/DF/MDF/SPD match ✓
+  - → Damia adopt fandom higher probable (JP closer pattern récurrent). Source: comparaison.
+
+- [ ] **🆕 Status all 8 ✔ Boss-tier Danton confirmed ⭐** — Pattern Boss-tier immunity canon majoritaire confirmé. Cohérent existing Bosses canon all 8 ✔. Source: idem.
+
+- [ ] **🆕 No passives canon Danton ⭐** — Pattern bosses peuvent ou non avoir passives canon (variable per-boss). Danton = pure AI offensive/defensive canon. À cross-référer autres Hero Competition bosses (Belzac/etc.) passives canon. Pattern variability boss passives canon. Source: idem.
+
+- [ ] **🆕 Lohan submap 638 Scripted encounter canon Danton ⭐** — Pattern Hero Competition Round 3 Lohan Disc 1 canon. Scripted / 0% escape = pattern tournament boss canon. À documenter `quests/disc1-hero-competition.md` (à créer/vérifier) — tournament master doc. Source: idem.
+
+- [ ] **🆕 Counter 28 high-density tier Danton confirmed ⭐** — Cohérent pattern Boss + Mob Counter 28 récurrent. Confirmed cross-source. Source: idem.
+
+- [ ] **🆕 "Auto" + "Ignore Turn Order" mechanic terms canon NEW ⭐** — Wiki tier 2 définit explicitement : **Auto** = action used next turn if conditions met / **Ignore Turn Order** = current turn order values unchanged from this action. Pattern combat mechanic terminology canon NEW (à documenter `combat/boss-ai.md` à créer). Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

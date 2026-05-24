@@ -3473,6 +3473,40 @@
 
 - [ ] **🆕 Pattern Mobs with Instant Death Immunity vs Cute Cat Dance of Death ⚠️** — Question canon : Commander Marshland + Crystal Golem (Instant Death Immunity passive) vs Cute Cat Dance of Death = Mob ability missing ? Pattern Instant Death passive vs Mob Instant Death offensive canon. À investiguer Discord. Source: idem.
 
+### Mobs / Cute Cat fandom complement — JP stats CONFIRMED HP 800/Gold 17 + Fury Swipes canon name officiel + Talisman + Rose's Hairband NEW accessories canon protect Can't Combat MAJEUR + "only Thunder mob within Divine Tree" unique canon + Disc 4 Monsters category fandom (Disc 3-4 timing) + Dancer's Shoes = accessory classification + Stats divergences AT/MAT/HP wiki vs fandom + Charging Spirit fandom generic template
+
+- [ ] ⭐ **🆕 Cute Cat JP stats CONFIRMED fandom MAJEUR ⭐⭐** — HP US 640 / JP **800** ✓ (+25% pattern systematic confirmé) + Gold US 51 / JP **17** ✓ (÷3 pattern systematic confirmé). Damia adopt JP 800/17. Cohérent décision projet adopt JP. Pattern JP/US conversion canon récurrent confirmé (cohérent Bowling/Crocodile/Crescent Bee/Crystal Golem). Source: [`features/mobs/_sources/fandom-cute-cat.md`](features/mobs/_sources/fandom-cute-cat.md).
+
+- [ ] ⭐ **🆕 Fury Swipes canon name officiel NEW MAJEUR ⭐** — Fandom révèle canon name (vs wiki ~Scratch community approximation). Description : "Runs towards single target smacking them several times with paws, dealing **medium physical damage**". Pattern thematic "cat fury swipes multi-strike" canon. ⚠️ "Medium damage" fandom vs wiki "1× phys" — possible multi-strike effective higher damage canon. Damia adopt fandom canon **Fury Swipes** > wiki community ~Scratch. À mettre à jour ability data-model. Source: idem.
+
+- [ ] ⭐⭐ **🆕 TALISMAN + ROSE'S HAIRBAND NEW ACCESSORIES CANON MAJEUR ⭐⭐⭐** — Fandom révèle 2 accessoires canon protection Can't Combat status :
+  - **Talisman** = NEW accessory canon (protects against Can't Combat status)
+  - **Rose's Hairband** = NEW accessory canon (protects against Can't Combat status) — **character-specific accessory Rose-themed** canon NEW
+    Pattern accessories anti-status canon récurrent. Cohérent **Dance of Death Mob Instant Death "Can't Combat" ability** canon → counter player items. Pattern strategic counter Mob Instant Death offensive canon. Pattern character-specific accessory canon NEW (Rose's Hairband Rose-themed equipment). À documenter `items/equipment.md` Talisman + Rose's Hairband accessories canon entries. À implémenter `AccessoryEffect { type: 'status-immunity'; status: 'Cant-Combat' }` data-model Damia. Pattern character-specific equipment NEW canon (Rose's Hairband). Source: idem.
+
+- [ ] ⭐ **🆕 "Only thunder-element monster within The Divine Tree" canon unique Cute Cat ⭐** — Fandom confirms Cute Cat = unique Thunder mob Divine Tree canon (cohérent wiki First Thunder Minor Enemy Damia). Pattern Divine Tree mob diversity canon : Cute Cat (Thunder) + Manticore (?) + Mountain Ape (?). À cross-check Manticore + Mountain Ape elements ingestion future. Source: idem.
+
+- [ ] ⭐ **🆕 Disc 4 Monsters category fandom vs Disc 3 wiki implicit DIVERGENCE ⚠️** — Fandom catégorise **Disc 4 Monsters** (vs wiki tier 2 implicit Disc 3 contexte Divine Tree). Pattern Divine Tree timing canon : Disc 3-4 transition area (accessible Disc 3 events + Disc 4 finale). Damia adopt Disc 3-4 canon. À investiguer story timing canon précis (Discord ?). Pattern category timing canon divergence wiki vs fandom. Source: idem.
+
+- [ ] ⭐ **🆕 Dancer's Shoes = accessory canon classification confirmé fandom ⭐** — Fandom : "the accessory Dancer's Shoes" canon — classification **accessory** (vs SPD-boost footwear category ambiguity). Pattern accessories canon Damia includes Dancer's Shoes. "Very rare 2%" drop rate canon cohérent. À documenter `items/equipment.md` Dancer's Shoes = accessory category canon. Source: idem.
+
+- [ ] **🆕 "Evade attacks with given probability" canon confirms A-AV/M-AV cross-source ⭐** — Fandom narrative confirme **A-AV 5% / M-AV 5% Cute Cat canon**. Pattern evasion mechanic canon récurrent cross-source. Source: idem.
+
+- [ ] **🆕 Charging Spirit fandom generic template vs wiki precise ⚠️** — Fandom : "Uses special attack or All-out Attack next turn" = generic Charging Spirit template (cohérent Air Combat / Berserker). Wiki tier 2 : "Scratch or Dance of Death next turn" = specific Cute Cat dual-option canon. Damia adopt wiki tier 2 precise canon (specific abilities télégraphiées). Pattern fandom generic descriptor vs wiki specific canon. Source: comparaison.
+
+- [ ] **🆕 Stats divergences Cute Cat wiki vs fandom ⚠️** :
+  - HP US : wiki 640 vs fandom **704** (+10% — fandom higher OR JP intermediate ?)
+  - P. Attack : wiki 71 vs fandom **80** (+12.7%)
+  - M. Attack : wiki 91 vs fandom **102** (+12%)
+  - DF/MDF/SPD match
+  - JP HP 800 confirmé fandom = +25% wiki US 640 (pas +13% fandom US 704)
+  - → Damia adopt fandom higher AT 80 / MAT 102 probable (JP closer pattern récurrent)
+    À investiguer wiki source older vs fandom intermediate. Source: comparaison.
+
+- [ ] **🆕 Formations canon confirmed cross-source Cute Cat ⭐** — 3 formations identiques wiki tier 2 confirmé fandom : Cute Cat solo (262) + Cute Cat + Manticore (266) + Cute Cat + Mountain Ape ×2 (269). Pattern Manticore + Mountain Ape NEW mobs canon Divine Tree partners cross-source confirmé. Source: idem.
+
+- [ ] **🆕 Haschel party member Divine Tree Disc 3-4 canon confirmed gallery ⭐** — Image gallery confirme Haschel = party member Divine Tree canon. Cohérent existing Haschel canon (Summon 4 Gods + Hex Hammer additions per Counter table). Pattern party composition Disc 3-4 canon. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

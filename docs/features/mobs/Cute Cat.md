@@ -1,40 +1,47 @@
-# Cute Cat — Mob Thunder Divine Tree (Disc 3)
+# Cute Cat — Mob Thunder Divine Tree (Disc 3-4)
 
-> **Mob Divine Tree Disc 3** : Thunder element + interior dungeon location only (no World Map). Submaps 583-592 massive coverage.
+> **Mob Divine Tree Disc 3-4** : Thunder element + interior dungeon location only (no World Map). Submaps 583-592 massive coverage. **Unique Thunder mob Divine Tree canon** (fandom).
 >
 > ⭐ **First Thunder-element Minor Enemy ingestion canon Damia** — Pattern Thunder mobs rare canon (most Thunder = Meru/Kanzas allies).
 >
-> ⭐ **AI 4-phase complex NEW MAJEUR** : ~Scratch any HP + Charging Spirit > 50% (dual-option Scratch OR Dance of Death) + Luring Dance ≤ 50% > 25% (100% Bewitchment) + Dance of Death ≤ 25% (Instant Death "Can't Combat").
+> ⭐ **AI 4-phase complex NEW MAJEUR** : Fury Swipes any HP + Charging Spirit > 50% (dual-option Fury Swipes OR Dance of Death) + Luring Dance ≤ 50% > 25% (100% Bewitchment) + Dance of Death ≤ 25% (Instant Death "Can't Combat").
 >
 > ⭐⭐ **Dance of Death NEW canon name + first Mob "Can't Combat" Instant Death offensive ability ingestion canon Damia** ⭐ MAJEUR (pattern Mob Instant Death offensive ≤ 25% threshold rare canon).
+>
+> ⭐⭐ **TALISMAN + ROSE'S HAIRBAND NEW accessories canon MAJEUR** (protect against Dance of Death Can't Combat) — pattern character-specific accessory (Rose's Hairband) canon NEW.
+>
+> ⭐ **Fury Swipes canon name officiel** (fandom — multi-strike paws "medium physical damage") — Damia adopt > wiki ~Scratch community.
 >
 > ⭐ **Luring Dance NEW canon name** 100% Bewitchment proc + **M-AV reduces** Bewitchment proc.
 >
 > ⭐⭐ **Pattern A-AV/M-AV per-ability classification CONFIRMED canon MAJEUR** — Magical-tagged ability (Luring Dance / Stunning Hammer) → M-AV reduces / Physical-tagged ability (~Clap) → A-AV reduces.
 >
-> ⭐ **Charging Spirit dual-option canon** (Scratch OR Dance of Death) — cohérent Air Combat dual-option vs Bowling single.
+> ⭐ **Charging Spirit dual-option canon** (Fury Swipes OR Dance of Death wiki precise) — cohérent Air Combat dual-option vs Bowling single. ⚠️ Fandom utilise template generic (special/All-out Attack) — wiki tier 2 plus précis.
 >
-> ⭐ **Manticore + Mountain Ape NEW mobs canon Divine Tree Disc 3** (formation partners).
+> ⭐ **Manticore + Mountain Ape NEW mobs canon Divine Tree Disc 3-4** (formation partners confirmed cross-source).
 >
-> ⭐ **Dancer's Shoes 2% drop source canon revealed** — Cute Cat Divine Tree Disc 3 (cohérent existing Cursed Jar fandom items récurrents).
+> ⭐ **Dancer's Shoes 2% drop source canon revealed** — Cute Cat Divine Tree (classification **accessory** fandom confirmé, cohérent existing Cursed Jar fandom items récurrents).
+>
+> ⭐ **JP HP 800 ✓ CONFIRMED + JP Gold 17 ✓ CONFIRMED** (+25% / ÷3 pattern systematic) — fandom.
 >
 > ⭐ **M-AV 5% rare canon NEW** (most mobs M-AV 0%).
 >
 > **Sources** :
 >
-> - 🥈 [`_sources/lod-wiki-cute-cat.md`](./_sources/lod-wiki-cute-cat.md) — wiki LoD (Thunder Divine Tree Disc 3 + Counter 28 high-density + Status 4/4 standard + EXP 162 / Gold 51 / Dancer's Shoes 2% drop + HP 640 / DF 140 / MAT 91 / MDF 180 high-tier Disc 3 + A-AV/M-AV 5% NEW low tier + AI 4-phase complex Scratch/Charging Spirit/Luring Dance/Dance of Death + Charging Spirit dual-option + Luring Dance 100% Bewitchment M-AV reduces + Dance of Death Instant Death "Can't Combat" Mob ability NEW + Manticore + Mountain Ape NEW mobs partners + escape 30% standard Disc 3)
+> - 🥈 [`_sources/lod-wiki-cute-cat.md`](./_sources/lod-wiki-cute-cat.md) — wiki LoD (Thunder Divine Tree Disc 3-4 + Counter 28 high-density + Status 4/4 standard + EXP 162 / Gold 51 / Dancer's Shoes 2% drop + HP 640 / DF 140 / MAT 91 / MDF 180 high-tier + A-AV/M-AV 5% NEW low tier + AI 4-phase complex Scratch/Charging Spirit/Luring Dance/Dance of Death + Charging Spirit dual-option precise + Luring Dance 100% Bewitchment M-AV reduces + Dance of Death Instant Death "Can't Combat" Mob ability NEW + Manticore + Mountain Ape NEW mobs partners + escape 30%)
+> - 🥉 [`_sources/fandom-cute-cat.md`](./_sources/fandom-cute-cat.md) — fandom (⭐⭐ **JP HP 800 ✓ / Gold 17 ✓ CONFIRMED** +25%/÷3 pattern + ⭐ **Fury Swipes canon name officiel** vs wiki ~Scratch + ⭐⭐ **Talisman + Rose's Hairband NEW accessories canon protect Can't Combat** MAJEUR + ⭐ **"only thunder-element monster within The Divine Tree" canon unique** + Disc 4 Monsters category fandom (vs wiki implicit Disc 3) + Dancer's Shoes = accessory classification confirmé + "Evade attacks with probability" confirms A-AV/M-AV + Charging Spirit fandom generic template + Stats divergences AT 71→80 / MAT 91→102 / HP US 640→704)
 
 ## Statut
 
-🟡 **Canon documenté wiki tier 2 uniquement** — fandom complement à ingérer en suite.
+🟢 **Canon documenté wiki + fandom** — JP stats confirmed + Fury Swipes canon name + Talisman/Rose's Hairband accessories NEW + Disc 3-4 timing canon.
 
 ## Identity canon
 
-- **Espèce** : Cute Cat (chat Thunder-themed)
+- **Espèce** : Cute Cat (chat Thunder-themed, **unique Thunder mob Divine Tree canon** — fandom)
 - **Element** : **Thunder** ⭐ — First Thunder-element Minor Enemy ingestion canon Damia
-- **Location canon** : **Divine Tree** Disc 3 (submaps 583, 584, 585, 586, 587, 589, 590, 591, 592)
-- **Disc** : Disc 3 (post-Wind Dragoon area thematic)
-- **Pattern symbolique** : ⭐ **Thunder Minor rare** + **AI 4-phase complex NEW** + **Dance of Death Instant Death Mob NEW** + **A-AV/M-AV pattern per-ability CONFIRMED** + **Disc 3 high-stats tier**
+- **Location canon** : **Divine Tree** Disc 3-4 (submaps 583, 584, 585, 586, 587, 589, 590, 591, 592)
+- **Disc** : Disc 3-4 (Divine Tree timing canon transition area — wiki implicit Disc 3, fandom Disc 4)
+- **Pattern symbolique** : ⭐ **Thunder Minor rare unique Divine Tree** + **AI 4-phase complex NEW** + **Dance of Death Instant Death Mob NEW** + **A-AV/M-AV pattern per-ability CONFIRMED** + **Talisman/Rose's Hairband accessories counter NEW** + **Disc 3-4 high-stats tier**
 
 ### Thunder element Divine Tree thematic canon ⭐
 
@@ -44,20 +51,20 @@
 - First Thunder-element Minor Enemy ingestion canon Damia ⚠️ rare
 - À cross-référer autres Thunder Minor mobs canon ingestion future
 
-## Stats canon ⚠️ Damia adopt JP ⭐
+## Stats canon ⚠️ Damia adopt JP ⭐ (JP confirmed fandom)
 
-| Stat | Wiki US              | **Damia (JP)** ⭐                 | Notes                          |
-| ---- | -------------------- | --------------------------------- | ------------------------------ |
-| HP   | 640                  | (JP +25% ~800 à confirmer fandom) | Disc 3 high HP tier            |
-| AT   | 71                   | **71**                            | Disc 3 high AT                 |
-| DF   | 140                  | **140**                           | High mod                       |
-| MAT  | 91                   | **91**                            | Disc 3 high MAT                |
-| MDF  | **180** ⚠️ very high | **180**                           | **MDF anti-magic very high**   |
-| SPD  | 70                   | **70**                            | Moderate                       |
-| A-AV | **5%** ⭐            | **5%**                            | Low A-AV tier (existing canon) |
-| M-AV | **5%** ⭐            | **5%**                            | ⭐ M-AV 5% rare canon NEW      |
-| Gold | 51                   | (JP ÷3 ~17 à confirmer fandom)    |                                |
-| EXP  | 162                  | **162**                           |                                |
+| Stat | Wiki US              | Fandom US      | **Damia (JP)** ⭐                           | Notes                          |
+| ---- | -------------------- | -------------- | ------------------------------------------- | ------------------------------ |
+| HP   | 640                  | **704** (+10%) | **800** ✓ JP confirmed fandom +25%          | Disc 3-4 high HP tier          |
+| AT   | 71                   | **80** (+13%)  | **80** (fandom higher, JP closer probable)  | Disc 3-4 high AT               |
+| DF   | 140                  | 140            | **140**                                     | High mod                       |
+| MAT  | 91                   | **102** (+12%) | **102** (fandom higher, JP closer probable) | Disc 3-4 high MAT              |
+| MDF  | **180** ⚠️ very high | 180            | **180**                                     | **MDF anti-magic very high**   |
+| SPD  | 70                   | 70             | **70**                                      | Moderate                       |
+| A-AV | **5%** ⭐            | 5%             | **5%**                                      | Low A-AV tier (existing canon) |
+| M-AV | **5%** ⭐            | 5%             | **5%**                                      | ⭐ M-AV 5% rare canon NEW      |
+| Gold | 51                   | 51             | **17** ✓ JP confirmed fandom ÷3 pattern     |                                |
+| EXP  | 162                  | 162            | **162**                                     |                                |
 
 → Pattern **"balanced high-tier Disc 3 anti-magic" canon Cute Cat** ⭐ :
 
@@ -117,11 +124,13 @@ Counter 28 = high-density tier canon. Per user instruction : feature non-implém
 - ⚠️ **HP overlap zones canon complex** : ~Scratch Any HP overlaps avec toutes phases + Charging Spirit > 50% peut télégraphier Dance of Death normalement ≤ 25%
 - Pattern AI complex multi-phase NEW (vs typical 2-3 phase canon)
 
-### ~Scratch canon name (community)
+### Fury Swipes canon name officiel ⭐ MAJEUR (fandom)
 
-- **~Scratch** = community approximation any-HP baseline ability
-- **1× phys damage** canon
-- Pattern thematic "cat scratch" canon
+- **Fury Swipes** = canon name officiel fandom (vs wiki ~Scratch community approximation)
+- Description : "Runs towards single target smacking them several times with paws, dealing **medium physical damage**"
+- Pattern thematic "cat fury swipes multi-strike" canon
+- ⚠️ "Medium physical damage" fandom vs wiki "1× phys" — possible interpretation : multi-strike = effective higher damage canon
+- Damia adopt fandom canon **Fury Swipes** > wiki community ~Scratch
 
 ### Charging Spirit dual-option canon ⭐ MAJEUR
 
@@ -142,7 +151,7 @@ Counter 28 = high-density tier canon. Per user instruction : feature non-implém
 
 ### Dance of Death canon name officiel ⭐⭐ NEW MAJEUR
 
-- **Dance of Death, Can't Combat** = canon name officiel (NOT ~ approximation) — wiki tier 2 canonical
+- **Dance of Death, Can't Combat** = canon name officiel cross-source (wiki + fandom confirmed)
 - **Inflicts Instant Death** ≤ 25% HP phase canon (OR via Charging Spirit telegraph > 50%)
 - ⚠️ **"Can't Combat" Mob Instant Death offensive ability canon NEW** ⭐⭐ :
   - Cute Cat Dance of Death = **first Mob "Can't Combat" Instant Death ability ingestion canon Damia**
@@ -151,6 +160,16 @@ Counter 28 = high-density tier canon. Per user instruction : feature non-implém
   - Pattern Mob Instant Death offensive low-HP-threshold canon (≤ 25% trigger)
 - À implémenter ability `danceOfDeath` Damia Instant Death "Can't Combat" Mob canon
 - Pattern Damia strategic Mob ability canon — high threat low HP threshold
+
+### Talisman + Rose's Hairband NEW accessories canon ⭐⭐ MAJEUR (fandom)
+
+- ⭐ **Talisman** = NEW accessory canon (protects against Can't Combat status)
+- ⭐ **Rose's Hairband** = NEW accessory canon (protects against Can't Combat status) — **character-specific accessory (Rose-themed)** canon NEW
+- Pattern accessories anti-status canon récurrent
+- Cohérent **Dance of Death Mob Instant Death "Can't Combat" ability** wiki canon → counter player items canon
+- Pattern strategic counter Mob Instant Death offensive canon (player counter-tool)
+- À implémenter `AccessoryEffect { type: 'status-immunity'; status: 'Cant-Combat' }` data-model Damia
+- Pattern character-specific accessory canon NEW (Rose's Hairband Rose-themed equipment)
 
 ## Pattern A-AV/M-AV per-ability classification CONFIRMED canon ⭐⭐ MAJEUR
 
@@ -198,45 +217,49 @@ Counter 28 = high-density tier canon. Per user instruction : feature non-implém
 ## Combat flow canon
 
 1. Mob spawn Divine Tree submaps 583-592 (massive coverage interior dungeon)
-2. AI cycle 4-phase complex (Damia JP HP 800 base à confirmer) :
-   - Any HP : ~Scratch (1× phys baseline)
-   - HP > 50% : Charging Spirit (dual-option Scratch OR Dance of Death)
+2. AI cycle 4-phase complex (Damia JP HP 800 ✓ confirmed) :
+   - Any HP : Fury Swipes (multi-strike phys "medium damage")
+   - HP > 50% : Charging Spirit (dual-option Fury Swipes OR Dance of Death)
    - HP ≤ 50%, > 25% : Luring Dance (100% Bewitchment, M-AV reduces)
-   - HP ≤ 25% : Dance of Death (Instant Death "Can't Combat")
+   - HP ≤ 25% (= HP 200-) : Dance of Death (Instant Death "Can't Combat")
    - Charging Spirit > 50% peut télégraphier Dance of Death (override canon)
 3. Counter mechanism (Counter 28 high-density tier)
 4. **DF 140 high** + **MDF 180 very high anti-magic** = physical and magical attacks reduced
-5. **A-AV 5% / M-AV 5%** = low avoidance both physical/magical attacks
+5. **A-AV 5% / M-AV 5%** = low avoidance both physical/magical attacks ("evade attacks with probability" fandom)
 
-### Strategy canon recommandée
+### Strategy canon recommandée (fandom-enriched ⭐)
 
-- **Thunder weak Wind** → Albert Jade Wind Dragoon (Disc 1+) / Wind Repeat Items
+- **Thunder weak Wind** → Albert Jade Wind Dragoon / Wind Repeat Items
+- ⭐⭐ **Equip Talisman OR Rose's Hairband accessory** = protects against Dance of Death "Can't Combat" Instant Death (NEW canon counter-tool MAJEUR)
 - ⚠️ **Avoid Dance of Death ≤ 25% trigger** = Instant Death "Can't Combat" risk MAJEUR
 - ⚠️ **Charging Spirit > 50% telegraph** : peut télégraphier Dance of Death early — guard or burst
 - **Luring Dance Bewitchment risk** : equip M-AV gear (reduce proc) OR Body Purifier (cure)
 - **Sustain damage HP > 50%** = burst kill before Luring Dance + Dance of Death phases
-- **Dancer's Shoes farming** : 2% rate canon Cute Cat Divine Tree
+- **Dancer's Shoes farming** : 2% rate canon Cute Cat Divine Tree (accessory canon confirmé)
 - **Status applicables** : Confuse / Fear / Poison / Stun (standard 4/4)
-- **Escape 30%** = low Disc 3 standard
+- **Escape 30%** = low Disc 3-4 standard
 
 ## Vision Damia (implémentation)
 
 ### Décisions canon à conserver
 
-1. **Stats canon (JP adopt à confirmer)** : HP 640 + AT 71 + DF 140 + MAT 91 + MDF 180 + SPD 70 + **A-AV/M-AV 5% NEW**
-2. **Element Thunder** : First Thunder-element Minor Enemy canon Damia
+1. **Stats canon (JP adopt confirmé fandom)** ⭐ : HP **800** ✓ + AT **80** + DF 140 + MAT **102** + MDF 180 + SPD 70 + **A-AV/M-AV 5% NEW** + Gold **17** ✓
+2. **Element Thunder** : First Thunder-element Minor Enemy canon Damia + **unique Thunder mob Divine Tree canon** (fandom)
 3. **Status Immunity standard 4/4** : pattern majoritaire
 4. **Counter 28 high-density tier** : standard
-5. **4-phase AI complex canon** : Scratch (any) / Charging Spirit > 50% dual-option / Luring Dance ≤ 50% > 25% / Dance of Death ≤ 25%
-6. **Charging Spirit dual-option canon** : Air Combat-style (vs Bowling single-option)
-7. **Luring Dance canon name officiel** : 100% Bewitchment proc, M-AV-reduced
-8. **Dance of Death canon name officiel** : Instant Death "Can't Combat" Mob offensive ability NEW
-9. **Pattern A-AV/M-AV per-ability classification CONFIRMED** : magical-tagged → M-AV / physical-tagged → A-AV
-10. **Dancer's Shoes 2% drop source canon** : Cute Cat Divine Tree Disc 3
-11. **M-AV 5% rare canon NEW** : tier mapping étendu
-12. **Divine Tree location only** : no World Map road
-13. **Manticore + Mountain Ape NEW mobs canon** : formation partners
-14. **Escape 30% Disc 3 standard** : low late-game
+5. **4-phase AI complex canon** : Fury Swipes (any) / Charging Spirit > 50% dual-option / Luring Dance ≤ 50% > 25% / Dance of Death ≤ 25%
+6. **Fury Swipes canon name officiel** (fandom) : multi-strike paws "medium physical damage" — Damia adopt > wiki ~Scratch
+7. **Charging Spirit dual-option canon** : Air Combat-style (vs Bowling single-option) — wiki tier 2 precise (Fury Swipes OR Dance of Death)
+8. **Luring Dance canon name officiel** : 100% Bewitchment proc, M-AV-reduced
+9. **Dance of Death canon name officiel** : Instant Death "Can't Combat" Mob offensive ability NEW
+10. **Talisman + Rose's Hairband NEW accessories canon** ⭐⭐ : protect against Can't Combat (counter-tool Dance of Death) — Rose's Hairband = character-specific accessory NEW
+11. **Pattern A-AV/M-AV per-ability classification CONFIRMED** : magical-tagged → M-AV / physical-tagged → A-AV
+12. **Dancer's Shoes 2% drop source canon** : Cute Cat Divine Tree (classification **accessory** confirmé fandom)
+13. **M-AV 5% rare canon NEW** : tier mapping étendu
+14. **Divine Tree location only** : no World Map road
+15. **Manticore + Mountain Ape NEW mobs canon** : formation partners confirmed cross-source
+16. **Escape 30% Disc 3-4 standard** : low late-game
+17. **Disc 3-4 timing canon** : wiki implicit Disc 3, fandom Disc 4 — Damia adopt Disc 3-4 transition (Divine Tree timing canon)
 
 ### Implementation tech
 
@@ -283,31 +306,38 @@ Counter 28 = high-density tier canon. Per user instruction : feature non-implém
 
 ### Questions ouvertes
 
-- **JP stats Cute Cat** : confirmer fandom HP +25% pattern → HP ~800 ?
+- ~~**JP stats Cute Cat**~~ ✅ **RÉSOLU fandom** : HP **800** ✓ +25% / Gold **17** ✓ ÷3 confirmed
+- **HP US wiki 640 vs fandom 704 divergence ⚠️** : interprétation ? Wiki source older ou fandom JP intermediate ? À investiguer
+- **AT 71 vs 80 / MAT 91 vs 102 divergences wiki vs fandom** : fandom higher pattern récurrent (JP closer probable) — Damia adopt fandom values probable
+- **Fury Swipes "medium damage" canon multiplier** : 1× phys wiki vs "medium" fandom = multi-strike effective ? À investiguer Discord
 - **Manticore + Mountain Ape stats canon** : à ingérer wiki tier 2 + fandom future
 - **Charging Spirit > 50% dual-option Dance of Death override** : peut télégraphier ability normalement ≤ 25% phase ? À investiguer Discord
 - **Dance of Death M-AV/A-AV reduction** : Instant Death "Can't Combat" reduced by avoidance ? Or always 100% hit if not Instant Death Immune ?
 - **Mobs with Instant Death Immunity vs Cute Cat Dance of Death** : Commander Marshland + Crystal Golem immune → Dance of Death misses ? À investiguer
+- **Talisman + Rose's Hairband effect précis** : protect against Can't Combat confirmed — accessoires complete effect (other statuses?) à investiguer items canon
+- **Rose's Hairband character-specific canon** : Rose-themed accessory — pattern character-specific equipment NEW Damia ?
 - **Pattern other Mobs with Dance of Death / Instant Death offensive** : Cute Cat first ingestion, autres mobs same ability ?
-- **Thunder Minor Enemy autres canon Damia** : Cute Cat premier ingestion, autres mobs Thunder exist ?
+- **Thunder Minor Enemy autres canon Damia** : Cute Cat premier ingestion + unique Divine Tree confirmed — autres Thunder mobs exist (other locations) ?
 - **Pattern Cat family Mobs canon** : Cute Cat thematic — autres Cat mobs canon ? (cohérent Berserk Mouse Plague Rat family recolor pattern)
+- **Disc 3 vs Disc 4 Divine Tree timing canon** : wiki implicit Disc 3, fandom Disc 4 — à investiguer story timing canon précis
 
 ## Liens transverses
 
 - [`README.md`](./README.md) — pattern général mobs canon
-- [`../locations/Divine Tree.md`](../locations/Divine Tree.md) (à créer) — Disc 3 Wind Dragoon area
-- [`Manticore.md`](./Manticore.md) (à créer) — Divine Tree Disc 3 mob canon NEW
-- [`Mountain Ape.md`](./Mountain Ape.md) (à créer) — Divine Tree Disc 3 mob canon NEW
+- [`../locations/Divine Tree.md`](../locations/Divine Tree.md) (à créer) — Disc 3-4 Wind Dragoon area
+- [`Manticore.md`](./Manticore.md) (à créer) — Divine Tree Disc 3-4 mob canon NEW
+- [`Mountain Ape.md`](./Mountain Ape.md) (à créer) — Divine Tree Disc 3-4 mob canon NEW
 - [`Crystal Golem.md`](./Crystal Golem.md) — Stun proc A-AV reduces (physical-tagged ability)
 - [`Cursed Jar.md`](./Cursed Jar.md) — Stunning Hammer M-AV reduces (magical-tagged ability — same pattern Cute Cat Luring Dance)
 - [`Bowling.md`](./Bowling.md) — Charging Spirit single-option pattern (vs Cute Cat dual-option)
 - [`Air Combat.md`](./Air Combat.md) — Charging Spirit dual-option pattern shared canon
+- [`../party-members/Rose.md`](../party-members/Rose.md) — Rose's Hairband character-specific accessory canon NEW
 - [`../combat/elements.md`](../combat/elements.md) — Thunder weak Wind canon
 - [`../combat/additions.md`](../combat/additions.md) — Counter Opportunities tier 28 high-density
 - [`../combat/avoidance-tiers.md`](../combat/avoidance-tiers.md) (à créer) — A-AV/M-AV tier mapping per-mob + per-ability classification canon
 - [`../combat/mob-ai.md`](../combat/mob-ai.md) (à créer) — 4-phase complex AI pattern canon + Charging Spirit dual-option + Dance of Death Mob Instant Death
-- [`../combat/instant-death.md`](../combat/instant-death.md) (à créer) — Mob Instant Death offensive canon Dance of Death + Erase mechanic player parallel
-- [`../items/equipment.md`](../items/equipment.md) — Dancer's Shoes Cute Cat 2% drop source canon
+- [`../combat/instant-death.md`](../combat/instant-death.md) (à créer) — Mob Instant Death offensive canon Dance of Death + Erase mechanic player parallel + Talisman/Rose's Hairband counter
+- [`../items/equipment.md`](../items/equipment.md) — Dancer's Shoes Cute Cat 2% drop source canon (accessory) + Talisman + Rose's Hairband NEW accessories Can't Combat protection canon
 
 ## Gaps / TODO
 

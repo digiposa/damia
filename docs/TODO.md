@@ -3425,6 +3425,54 @@
 
 - [ ] **🆕 Location simplification fandom Cursed Jar ⚠️** — Fandom "Road between Lohan and Nest of Dragon" = un seul des 4 roads wiki tier 2. Pattern fandom geographic simplification canon récurrent (vs wiki tier 2 exhaustive). Damia adopt wiki 4 roads exhaustif. Source: comparaison.
 
+### Mobs / Cute Cat (Thunder Divine Tree Disc 3 — First Thunder Minor canon + AI 4-phase complex NEW + Dance of Death first Mob "Can't Combat" Instant Death offensive NEW MAJEUR + Luring Dance 100% Bewitchment NEW + Charging Spirit dual-option Air-Combat-style + Pattern A-AV/M-AV per-ability classification CONFIRMED + Dancer's Shoes 2% drop source + Manticore + Mountain Ape NEW mobs partners + M-AV 5% NEW low tier)
+
+- [ ] **🆕 Cute Cat canon data-model** — **Thunder** element, HP 640 high (JP +25% ~800 à confirmer), AT 71, DF 140, MAT 91, **MDF 180 very high anti-magic**, SPD 70 moderate, **A-AV 5% / M-AV 5% NEW low tier**. EXP 162 / Gold 51. Mob Divine Tree Disc 3 interior dungeon only. Pattern "balanced high-tier Disc 3 anti-magic" canon. À implémenter `mobs/cuteCat.ts`. Source: [`features/mobs/_sources/lod-wiki-cute-cat.md`](features/mobs/_sources/lod-wiki-cute-cat.md).
+
+- [ ] ⭐ **🆕 First Thunder-element Minor Enemy ingestion canon Damia MAJEUR ⭐** — Cute Cat = first Thunder Minor canon. Pattern Thunder mobs rare canon — most Thunder = Meru/Kanzas allies. Cohérent thematic "electric cat" + Divine Tree Disc 3. À cross-référer autres Thunder Minor mobs canon ingestion future. Source: idem.
+
+- [ ] ⭐ **🆕 AI 4-phase complex canon Cute Cat NEW MAJEUR ⭐** — Pattern AI complex multi-phase NEW (vs typical 2-3 phase) :
+  - **Any HP** : ~Scratch (1× phys baseline)
+  - **> 50% HP** : Charging Spirit (dual-option telegraph)
+  - **≤ 50% > 25% HP** : Luring Dance (100% Bewitchment proc, M-AV reduces)
+  - **≤ 25% HP** : Dance of Death (Instant Death "Can't Combat")
+    HP overlap zones canon : ~Scratch any HP + Charging Spirit > 50% peut télégraphier Dance of Death override. À implémenter `MobAI4PhaseComplex` data-model. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Dance of Death NEW canon name + first Mob "Can't Combat" Instant Death offensive ability ingestion canon Damia MAJEUR ⭐⭐⭐** — Wiki tier 2 canonical (NOT ~ approximation). Inflicts Instant Death "Can't Combat" Mob ability ≤ 25% HP phase. **Pattern Mob Instant Death offensive canon NEW** (vs typical mob no Instant Death offensive). Cohérent existing **Erase mechanic 4-tier player canon** (Can't Combat Weapons + Total Vanishing + Pandemonium + Demon's Gate) — Mob equivalent Damia. Pattern Mob Instant Death low-HP threshold strategic ability canon. À implémenter ability `danceOfDeath` Damia Instant Death "Can't Combat" Mob canon. À documenter `combat/instant-death.md` (à créer) Mob Instant Death offensive canon Dance of Death + Erase mechanic player parallel. Source: idem.
+
+- [ ] ⭐ **🆕 Luring Dance NEW canon name officiel ⭐** — Wiki tier 2 canonical. 100% Bewitchment proc ≤ 50% > 25% HP phase (high reliability status). Pattern thematic "cat luring victim dance". À implémenter ability `luringDance` Damia (100% Bewitchment proc, M-AV-reduced). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Pattern A-AV/M-AV per-ability classification CONFIRMED canon MAJEUR ⭐⭐⭐** — Cross-mob/boss pattern canon CONFIRMED par Cute Cat Luring Dance :
+  - **Crystal Golem ~Clap** (physical-tagged Stun) → **A-AV reduces**
+  - **Cursed Jar Stunning Hammer** (magical-tagged Stun) → **M-AV reduces**
+  - **Cute Cat Luring Dance** ⭐ NEW (magical-tagged Bewitchment) → **M-AV reduces**
+  - Pattern : Magical-tagged ability (dance/spell-themed) → M-AV reduces / Physical-tagged ability (clap/strike-themed) → A-AV reduces
+  - À documenter `combat/avoidance-tiers.md` (à créer) per-mob A-AV/M-AV tier mapping + per-ability classification canon
+  - À implémenter `StatusProcModifier { type; chance; reducedBy: 'A-AV' | 'M-AV'; abilityType: 'physical' | 'magical' }` data-model canon. Source: idem.
+
+- [ ] ⭐ **🆕 Charging Spirit dual-option Cute Cat canon MAJEUR ⭐** — Telegraph dual-option : Scratch OR Dance of Death next turn (Air Combat-style canon). Pattern Air Combat-style dual-option Charging Spirit canon (cohérent Air Combat Charging Spirit + All-out Attack/basic). Pattern différent Bowling **single-option** (Charging Spirit → All-out Attack only). À implémenter `MobAI.chargingSpiritOptions: 'single' | 'dual'` data-model (cohérent existing Bowling fandom). Pattern Cute Cat = "dual" canon. ⚠️ Charging Spirit > 50% peut **télégraphier Dance of Death** normalement réservée ≤ 25% — pattern AI override canon. Source: idem.
+
+- [ ] ⭐ **🆕 Manticore + Mountain Ape NEW mobs canon Divine Tree Disc 3 MAJEUR ⭐** — Cute Cat formation partners :
+  - **Manticore** = NEW mob canon Divine Tree Disc 3 (formation 266 partner Cute Cat)
+  - **Mountain Ape** = NEW mob canon Divine Tree Disc 3 (formation 269 partner ×2 Cute Cat)
+    Pattern Divine Tree Disc 3 mob ecosystem canon : Cute Cat + Manticore + Mountain Ape (3 mobs Disc 3 confirmed). À documenter `mobs/Manticore.md` + `mobs/Mountain Ape.md` (à créer) — Divine Tree Disc 3 mobs canon. Source: idem.
+
+- [ ] ⭐ **🆕 Dancer's Shoes 2% drop source canon revealed Cute Cat ⭐** — Wiki tier 2 révèle Cute Cat Divine Tree Disc 3 = drop source canon NEW. Confirms existing item canon **Dancer's Shoes** (mentioned in Cursed Jar fandom strategy items récurrents). Pattern equipment 2% drop rate canon (cohérent Sapphire Pin 2%, Energy Girdle 2%, Drake's Ring 2%). À documenter `items/equipment.md` Dancer's Shoes entry — Cute Cat 2% drop source + SPD-boost footwear canon récurrent. Source: idem.
+
+- [ ] ⭐ **🆕 M-AV 5% rare canon NEW Cute Cat ⭐** — Most mobs M-AV 0% canon majoritaire. Cute Cat M-AV 5% = NEW low-tier M-AV present canon. Pattern A-AV/M-AV tier mapping cross-mob étendu : 0% / 5% / 10% / 20% / 50%. À documenter `combat/avoidance-tiers.md` (à créer) per-mob A-AV/M-AV tier mapping. Source: idem.
+
+- [ ] **🆕 ~Scratch canon name (community) Cute Cat** — Wiki community approximation any-HP baseline ability. 1× phys damage canon. Pattern thematic "cat scratch". Source: idem.
+
+- [ ] **🆕 Divine Tree Disc 3 location canon ⭐** — Cute Cat submaps Divine Tree massive coverage : 583, 584, 585, 586, 587, 589, 590, 591, 592. Pattern Divine Tree Disc 3 ecosystem canon (cohérent existing Divine Tree boss area). Pattern Thunder element thematic Divine Tree (Wind Dragoon Spirit area thematic ?). À documenter `locations/Divine Tree.md` (à créer) — Disc 3 location canon. Source: idem.
+
+- [ ] **🆕 Cute Cat World Map = None canon** — Pattern Cute Cat = location-only canon (no World Map road spawn). Pattern Divine Tree mob = interior dungeon canon. Source: idem.
+
+- [ ] **🆕 Escape rate 30% canon Divine Tree Disc 3** — Pattern Disc 3 standard escape canon (vs Disc 1 elevated rates 40-90%). Pattern late-game lower escape rates canon. Source: idem.
+
+- [ ] **🆕 Pattern "balanced high-tier Disc 3 anti-magic" canon Cute Cat ⭐** — HP 640 high + DF 140 high + **MDF 180 very high anti-magic strong** + AT 71 / MAT 91 high offensive Disc 3 + SPD 70 moderate. Pattern Disc 3 mob high-stats tier canon (vs Disc 1 mobs much lower). À documenter stats tier mapping per-Disc canon. Source: idem.
+
+- [ ] **🆕 Pattern Mobs with Instant Death Immunity vs Cute Cat Dance of Death ⚠️** — Question canon : Commander Marshland + Crystal Golem (Instant Death Immunity passive) vs Cute Cat Dance of Death = Mob ability missing ? Pattern Instant Death passive vs Mob Instant Death offensive canon. À investiguer Discord. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

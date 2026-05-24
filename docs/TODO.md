@@ -3387,6 +3387,44 @@
 
 - [ ] **🆕 Pattern Cursed Jar = World Map ONLY canon ⭐** — No in-location encounter (vs typical Minor Enemy Shrine/Forest spawn). Pattern Unique Jars = Rare Monsters World Map only canon (à confirmer Lucky/Treasure Jar). Pattern rare encounter type canon Disc 1-2. Source: idem.
 
+### Mobs / Cursed Jar fandom complement — SACHET NEW item canon auto-kill Unique Monsters MAJEUR + 00PARTS NEW Unique Monster canon MAJEUR + "Unique Monster" category terminology = Rare Monster wiki + Magic Stone of Signet REQUIRED strategy + Speed Down location Mountain of Mortal Dragon Disc 3 + Long Bow Shana/Miranda weapon canon confirmé + Party build canon farming + Items récurrents canon
+
+- [ ] ⭐ **🆕 SACHET NEW ITEM CANON MAJEUR ⭐⭐⭐** — Fandom révèle **Sachet auto-damage 10 HP one-shot ALL Unique Monsters canon**. Pattern shared cross-Unique-Monster signature counter item. Sachet bypass Damage Mitigation 1-cap (fixed damage canon). À documenter `items/sachet.md` (à créer) — Unique Monster signature counter item canon. À implémenter `SachetItem` data-model `{ type: 'fixed-damage'; damage: 10; targetCategory: 'unique-monster'; bypassMitigation: true }`. Pattern Damia strategic counter Unique Monsters canon. ⚠️ "Time-consuming farming" canon — Sachet source à investiguer. Source: [`features/mobs/_sources/fandom-cursed-jar.md`](features/mobs/_sources/fandom-cursed-jar.md).
+
+- [ ] ⭐ **🆕 00PARTS NEW Unique Monster canon MAJEUR ⭐⭐** — Fandom révèle 00PARTS = Unique Monster similar Cursed Jar (runs away quickly + 1-damage cap + Magical Immunity + Physical Attack Barrier). Pattern Unique Monsters umbrella étendu : Lucky/Treasure/Cursed Jars + **00PARTS** + autres ? Probable Disc 3-4 location (à confirmer). À documenter `mobs/00PARTS.md` (à créer) — Unique Monster canon NEW. Pattern Unique Monsters share strategy (Sachet + Magic Stone of Signet + Speed Down). Source: idem.
+
+- [ ] ⭐ **🆕 "Unique Monster" category terminology canon = Rare Monster wiki ⭐** — Fandom uses "Unique Monster" umbrella (cohérent existing Blue Bird canon). Cross-source terminology canon Damia : Wiki "Rare Monster" = Fandom "Unique Monster" canonical. Pattern category dual-terminology canon. À mettre à jour `combat/monster-categories.md` Rare Monster = Unique Monster cross-source canon. Source: idem.
+
+- [ ] ⭐ **🆕 Magic Stone of Signet REQUIRED strategy canon Cursed Jar MAJEUR ⭐** — Fandom confirms **"required to at least have a Magic Stone of Signet in the inventory"** for consistent Cursed Jar kill. Strategy : attack 1-2 dmg → Magic Stone of Signet (3-turn delay) → finish attacks before mob runs away. Cohérent Crocodile fandom reveal "3-turn delay" canon. Pattern strategic Unique Monster counter canon. À documenter `items/key-items.md` (à créer) Magic Stone of Signet REQUIRED Unique Monster strategy canon. Source: idem.
+
+- [ ] ⭐ **🆕 Speed Down location canon Mountain of Mortal Dragon Disc 3 NEW ⭐** — Fandom révèle "Speed Down (found on the Mountain of Mortal Dragon)" canon. Mountain of Mortal Dragon = Disc 3 location canon (cohérent existing Baby Dragon ingestion). À documenter `items/consumables.md` (à créer) Speed Down found-location canon Disc 3. Pattern Repeat Item location-specific drop canon. Source: idem.
+
+- [ ] ⭐ **🆕 Long Bow Shana/Miranda weapon canon confirmé NEW ⭐** — Fandom : "Shana/Miranda should use the Long Bow". Pattern Shana/Miranda bow archetype canon (cohérent Shana/Miranda shared archetype canon Damia). À documenter `items/equipment.md` Long Bow weapon entry + `party-members/Shana.md` + `party-members/Miranda.md` weapon canon. Pattern accuracy-focused weapon Shana/Miranda canon. Source: idem.
+
+- [ ] **🆕 Items canon récurrents Cursed Jar farming ⭐** :
+  - **Wargod's Amulet** accessory accuracy boost canon (cohérent Wargod Calling/Ultimate Wargod additions canon ?)
+  - **Sallet** helmet accuracy boost canon
+  - **Dancer's Shoes** SPD-boost footwear canon
+  - **Bandit's Shoes** SPD-boost footwear canon
+  - **Magical Greaves** SPD-boost armor canon
+  - **Dancer's Ring** SPD-boost accessory canon
+    À documenter `items/equipment.md` (à créer/maj) entries canon. Pattern accuracy + SPD items canon Unique Monster farming. Source: idem.
+
+- [ ] **🆕 Party build canon Cursed Jar farming ⭐** — Fandom recommande **Dart + Meru + Shana/Miranda** avec Shana/Miranda = main damage dealer (Long Bow accuracy). Pattern strategic party canon accuracy-focused Unique Monster farming. Cohérent shared 00PARTS farming strategy. À documenter `combat/strategy.md` (à créer) party builds canon par target. Source: idem.
+
+- [ ] **🆕 "Runs away quickly cannot instantly KO" canon Cursed Jar + 00PARTS ⭐** — Confirms wiki Run away! 25%/turn canon + AT 0 (no offensive threat). Pattern Unique Monster low-threat-high-reward canon. Player urgency = finish before escape. Source: idem.
+
+- [ ] **🆕 Stats divergences Cursed Jar wiki vs fandom ⚠️** :
+  - AT : wiki **0** vs fandom **1** (+1 minor divergence)
+  - MAT : wiki **0** vs fandom **1** (+1 minor divergence)
+  - HP/DF/MDF/SPD/EXP/Gold match
+  - Interprétation : wiki "0" = "no offensive used" vs fandom "1" = minimal effective value ?
+    À trancher decision Damia. Source: comparaison.
+
+- [ ] **🆕 Element "none" fandom = Non-Elemental wiki cross-source ⭐** — Cross-source terminology canon : Element "none" (fandom narrative) = Non-Elemental (wiki canonical). Pattern Non-Elemental Rare Monsters canon. Source: idem.
+
+- [ ] **🆕 Location simplification fandom Cursed Jar ⚠️** — Fandom "Road between Lohan and Nest of Dragon" = un seul des 4 roads wiki tier 2. Pattern fandom geographic simplification canon récurrent (vs wiki tier 2 exhaustive). Damia adopt wiki 4 roads exhaustif. Source: comparaison.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

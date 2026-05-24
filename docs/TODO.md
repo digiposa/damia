@@ -3836,6 +3836,53 @@
 
 - [ ] **🆕 Will-O-Wisp formation cross-source confirmed Death ⭐** — Fandom confirme formation Death + Will-O-Wisp ×2 canon (cohérent wiki formation 453). Pattern Will-O-Wisp NEW mob canon Phantom Ship partner confirmé cross-source. Source: idem.
 
+### Mobs / Death Purger wiki (Darkness Zenebatos Disc 4 — recolor VARIANT Death + CORRECTION reciprocal claim + Status 7/1 shared + Total Vanishing 8% shared + Instant Death Immunity passive 4ème instance + Power up NEW Self-buff ability + A-AV 10% tier + Guillotine + Professor NEW mobs partners)
+
+- [ ] ⭐⭐ **🆕 Death Purger canon data-model** — **Darkness** element, HP 532 (JP +25% ~665 à confirmer), AT 83, DF 120 high, MAT 58, MDF 100 mid, SPD 50 low, **A-AV 10% NEW tier**, M-AV 0%. EXP 144 / Gold 24. Mob Zenebatos Disc 4 interior dungeon only. **Recolor variant of Death** (Phantom Ship Disc 2 parent canon). Pattern Disc 4 upgraded variant Death : +166% HP / +66% AT/MAT/MDF / +10% A-AV vs Death. À implémenter `mobs/deathPurger.ts`. Source: [`features/mobs/_sources/lod-wiki-death-purger.md`](features/mobs/_sources/lod-wiki-death-purger.md).
+
+- [ ] ⭐⭐ **🆕 Recolor canon CORRECTION reciprocal claim Death ↔ Death Purger MAJEUR ⭐⭐** — Wiki tier 2 reciprocal claim cross-page (Death dit "recolor of Death Purger" / Death Purger dit "recolor of Death"). Damia adopt **chronological canon** : Death (Disc 2 first appearance) = parent / Death Purger (Disc 4 upgraded variant) = recolor. Pattern recolor = chronological asset reuse canon. CORRECTION existing Death.md trivia appliquée. Pattern recolor canon récurrent confirmé : Death → Death Purger ⭐ NEW (Disc 2 parent → Disc 4 variant). Pattern Damia `MobRecolor { parent: 'death'; variant: 'deathPurger'; chronological: 'disc-2-to-disc-4' }` data-model canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Status 7/1 deviation cohérent Death recolor shared canon Death Purger ⭐⭐** — 7 immune / 1 vulnerable (only Poison) identique Death canon ✓. **Pattern recolor shared Status Immunity NEW canon** ⭐ : Death family (Death + Death Purger) = same 7/1 only-Poison-vulnerable. Pattern thematic IRONIC cohérent Death : "Death-themed mob immune to almost everything except Poison" biology paradox canon. Pattern recolor canon shared Status profile (à investiguer si tous recolors shared Status — Plague Rat vs Berserk Mouse ?). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Power up NEW canon ability MAJEUR Death Purger ⭐⭐⭐** — Wiki tier 2 canonical (NOT ~ approximation). Self-buff : **Increases damage inflicted + reduces damage received by 50% for 3 turns** canon. Pattern Mob Self-buff ability canon NEW (vs typical mob direct-damage abilities). Pattern dual-effect buff canon : offensive +damage + defensive -damage received simultanément 50% canon. À implémenter ability `powerUp` Damia Self-buff 3-turn duration +damage/-damage received 50%. Pattern Damia : `PowerUpAbility { type: 'self-buff-dual'; duration: 3; effects: ['damage-increase-50', 'damage-reduction-50'] }` data-model canon. À documenter `combat/mob-buffs.md` (à créer) Mob Self-buff abilities canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Total Vanishing 8% drop canon shared Death recolor Death Purger MAJEUR ⭐⭐** — Identique Death canon ✓ pattern **recolor shared signature drop canon** ⭐. Pattern Damia : `MobRecolor` shared drop canon (recolor inherits parent drop). ⭐ **Résout fandom Death reveal "no return to Phantom Ship, find more later in game"** — **Death Purger Disc 4 = "later in game" Total Vanishing source canon** ✓ confirmed cross-source. Pattern multi-source Total Vanishing canon confirmed : Phantom Ship Disc 2 (Death) one-time + **Zenebatos Disc 4 (Death Purger)** late-game permanent. À documenter `items/consumables.md` Total Vanishing Death + Death Purger 8% drop sources canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Instant Death Immunity passive Mob canon 4ème instance Death Purger ⭐⭐** — Cohérent existing **Commander Marshland (Boss) + Crystal Golem (Minor) + Death (Minor) + Death Purger (Minor)** ⭐ NEW 4ème instance ✓. Pattern Mob Instant Death Immunity passive canon : 4 mobs confirmed. Pattern thematic IRONIC cohérent Death family : "Death-themed mob immune to Death dealing Death (Can't Combat ability)" canon. À documenter `combat/mob-passives.md` (à créer) — 4 mobs Instant Death Immunity confirmed canon. Source: idem.
+
+- [ ] ⭐ **🆕 A-AV 10% canon Death Purger tier confirmed ⭐** — Pattern A-AV 10% tier canon récurrent : Canbria Dayfly (existing) + **Death Purger** (NEW) ✓ confirmed cross-mob. Pattern A-AV/M-AV tier mapping étendu : 0% (majoritaire) / 5% (Cute Cat + Boss Extras Dark Doel) / **10% (Canbria Dayfly + Death Purger)** / 20% (Crescent Bee) / 50% (à confirmer). À documenter `combat/avoidance-tiers.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Guillotine + Professor NEW mobs canon Zenebatos Disc 4 MAJEUR ⭐⭐** — Death Purger formation partners :
+  - **Guillotine** = NEW mob canon Zenebatos Disc 4 (formation 246 partner)
+  - **Professor** = NEW mob canon Zenebatos Disc 4 (formation 249 partner ×2 Death Purger)
+    Pattern Zenebatos Disc 4 mob ecosystem canon : Death Purger + **Guillotine** + **Professor** (3 mobs Disc 4 confirmed). Pattern thematic Wingly Zenebatos canon : "Purger" + "Guillotine" + "Professor" = punisher/judicial/scholar thematic (Wingly machinery thematic). À documenter `mobs/Guillotine.md` + `mobs/Professor.md` (à créer) — Zenebatos Disc 4 mobs canon NEW. Source: idem.
+
+- [ ] **🆕 Can't Combat canon wiki naming Death Purger ⚠️** — Wiki uses "Can't Combat" (status name as ability name) — cohérent wiki Death naming. Fandom Death révèle **Lightning Punisher** ability name. Possible interprétation : Death Purger Can't Combat = same ability mechanically as Death Lightning Punisher (shared canon abilities cross-recolor). À investiguer fandom Death Purger if Lightning Punisher canon name shared OR different ability canon. À documenter `combat/instant-death.md` (à créer) Mob Instant Death offensive abilities canon. Source: idem.
+
+- [ ] **🆕 ~Reaping Slash canon name shared Death recolor Death Purger ⭐** — Community approximation any-HP baseline ability (cohérent Death shared ~ ability — recolor shared). 1× phys damage canon. Pattern thematic "death reap scythe" canon. ⚠️ Note : Death fandom révèle canon **Des Rapier** > wiki ~Reaping Slash — à cross-référer Death Purger fandom future ingestion si shared. Source: idem.
+
+- [ ] **🆕 AI 3-phase Death Purger canon ⭐** — Pattern AI cycle canon : baseline Reaping Slash 75% + late-game burst Power up 25% (HP > 25%) OR Can't Combat 25% (HP ≤ 25%). Pattern recolor AI complexity variation canon : Death (4-phase Charging Spirit triple-option complex) vs Death Purger (3-phase simpler). Pattern recolor AI canon : parent complexity > variant simpler — recolor variation canon NEW à investiguer pattern universel. Source: idem.
+
+- [ ] **🆕 Pattern Death family recolor canon shared MAJEUR ⭐⭐** — 9 propriétés partagées Death (parent) ↔ Death Purger (variant) :
+  - Element Darkness (shared)
+  - Status 7/1 only-Poison-vulnerable (shared)
+  - Instant Death Immunity passive (shared)
+  - Counter 28 high-density tier (shared)
+  - Total Vanishing 8% drop (shared signature)
+  - Can't Combat ability (shared — same Instant Death effect)
+  - Reaping Slash baseline (shared ~ approximation)
+  - SPD 50 low (shared)
+  - DF 120 high (shared)
+    Pattern recolor canon shared properties cross-mob. À documenter `combat/mob-recolors.md` (à créer) — recolor family canon récurrent. Source: idem.
+
+- [ ] **🆕 Zenebatos Disc 4 location canon Death Purger ⭐** — Submaps 529, 530, 532, 717, 718. Cohérent existing Zenebatos Disc 4 canon (Wingly forest city location). Pattern Zenebatos Disc 4 mob ecosystem canon. À documenter/vérifier `locations/Zenebatos.md` (existing ?) — Disc 4 Wingly forest city. Pattern thematic Wingly Zenebatos canon machinery (Purger/Guillotine/Professor). Source: idem.
+
+- [ ] **🆕 Death Purger World Map = None canon** — Pattern Death Purger = location-only canon (no World Map road spawn). Pattern Zenebatos mob = interior dungeon canon (Wingly city). Source: idem.
+
+- [ ] **🆕 Escape rate 30% canon Zenebatos Disc 4 Death Purger ⭐** — Pattern Disc 4 standard escape canon. Pattern late-game lower escape rates canon. Source: idem.
+
+- [ ] **🆕 Stats Disc 4 upgrade variant Death Purger vs Death parent ⭐** — Pattern recolor stats scaling canon : HP +166% (200 → 532) / AT +66% (50 → 83) / MAT +66% (35 → 58) / MDF +66% (60 → 100) / A-AV +10% (0% → 10%). DF/SPD shared canon. Pattern Disc 4 variants stats scaling canon (à investiguer pattern universel recolors). Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

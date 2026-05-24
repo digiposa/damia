@@ -20,7 +20,7 @@
 >
 > ⭐ **Will-o'-Wisp NEW mob canon Phantom Ship Disc 2** formation partner ×2.
 >
-> ⭐ **Death Purger NEW mob canon (recolor parent Zenebatos Disc 4)** Trivia recolor reveal.
+> ⭐ **Death Purger NEW mob canon (recolor VARIANT Zenebatos Disc 4)** Trivia recolor reveal ⚠️ CORRECTION : Death = parent canon chronological (Disc 2 first appearance) / Death Purger = variant upgraded Disc 4. Wiki reciprocal claim cross-page corrigée.
 >
 > ⭐⭐ **Appearance canon NEW MAJEUR (fandom)** : "traditional Grim Reaper + bare skulls + skeletal hands wielding Scythe + long black cloak".
 >
@@ -47,7 +47,7 @@
 
 ## Identity canon
 
-- **Espèce** : Death (entité spectrale Darkness-themed — **traditional Grim Reaper** canon fandom — recolor Death Purger Zenebatos canon)
+- **Espèce** : Death (entité spectrale Darkness-themed — **traditional Grim Reaper** canon fandom — **parent recolor** Death Purger Zenebatos Disc 4 variant canon ⭐ CORRECTION chronological)
 - **Element** : **Darkness** ⭐
 - **Location canon** : **Phantom Ship** Disc 2 (submaps 288, 291, 296) — **ONE-TIME AREA canon** (no return after story progression)
 - **Disc** : Disc 2 (Phantom Ship area — cohérent Halberd weapon source canon)
@@ -300,26 +300,29 @@ Counter 28 = high-density tier canon. Per user instruction : feature non-implém
 - Pattern multi-source canon Total Vanishing : Phantom Ship Disc 2 (Death) + later (à confirmer)
 - À documenter `locations/Phantom Ship.md` (à créer) — Disc 2 one-time area canon
 
-## Trivia canon recolor reveal ⭐⭐ MAJEUR
+## Trivia canon recolor reveal ⭐⭐ MAJEUR + CORRECTION
 
-### Death Purger parent recolor canon ⭐⭐
+### Reciprocal recolor wiki tier 2 ⚠️ CORRECTION chronological canon ⭐⭐
 
-> Their model is a recolor of **Death Purger** located in **Zenebatos**.
+> Death wiki trivia : "Their model is a recolor of **Death Purger**" ⚠️ (reverse claim)
+> Death Purger wiki trivia : "Their model is a recolor of **Death**" ✓ (correct chronological)
 
-⚠️ **Recolor canon Death ⭐⭐ MAJEUR NEW** :
+⚠️ **Recolor canon CORRECTION ⭐⭐ MAJEUR** :
 
-- **Death = recolor of Death Purger** canon
-- **Death Purger** = NEW mob canon (parent recolor)
-- **Zenebatos** = existing canon Disc 4 (Wingly forest city location)
-- Pattern recolor canon récurrent (cohérent existing) :
+- ⚠️ **Reciprocal claim wiki tier 2** : both pages claim each other as recolor parent (documentation inconsistency)
+- ⭐ **Damia adopt chronological canon** : **Death = parent (Disc 2 first appearance) / Death Purger = upgraded variant Disc 4 recolor**
+  - Death Phantom Ship Disc 2 = first chronological appearance
+  - Death Purger Zenebatos Disc 4 = late-game reuse of asset (recolor + stats upgrade)
+  - Pattern recolor = chronological asset reuse canon
+- ⭐ Pattern recolor canon récurrent (cohérent existing) :
   - Berserk Mouse → Plague Rat (recolor)
   - Crescent Bee → Stinger (recolor)
   - Assassin Cock → Fowl Fighter (recolor)
   - Evil Spider → Deadly Spider (recolor)
-  - **Death Purger → Death** ⭐ NEW (Disc 4 → Disc 2 reverse-recolor canon ?)
-- Pattern Damia : `MobRecolor { parent: 'deathPurger'; variant: 'death' }` data-model canon
-- À documenter `mobs/Death Purger.md` (à créer) — Zenebatos Disc 4 mob canon NEW (parent recolor)
-- ⚠️ **Pattern naming inversion** : "Death Purger" ≠ "Death" — Death Purger thematic "purger" suggests Wingly thematic Zenebatos canon
+  - **Death → Death Purger** ⭐ CORRECTION chronological canon (Disc 2 parent → Disc 4 variant)
+- Pattern Damia : `MobRecolor { parent: 'death'; variant: 'deathPurger'; chronological: 'disc-2-to-disc-4' }` data-model canon
+- ✅ Death Purger documentée [`Death Purger.md`](./Death Purger.md) — Zenebatos Disc 4 upgraded variant canon
+- ⚠️ **Pattern naming** : "Death Purger" = Wingly thematic "purger" (judicial machinery Zenebatos canon) — Wingly upgrade variant Death
 
 ## Combat flow canon (fandom-enriched)
 

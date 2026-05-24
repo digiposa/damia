@@ -3584,6 +3584,50 @@
   - Damia adopt wiki tier 2 precise canon (1500 / 60 / 70) — wiki pattern précis
   - À reconcilier ingestion Dark Doel fandom dédié future. Source: comparaison.
 
+### Mobs / Dark Elf (Darkness Evergreen Forest Disc 1 — Counter 23 NEW intermediate tier MAJEUR + AI HP-based chance modifiers NEW + Detonate Arrow NEW + Petrifying Arrow 100% Petrification NEW + Bewitching Arrow cut content reveal NEW + Depetrifier 8% drop source + Forest Runner + Flying Rat NEW mobs partners + MDF 180 anti-magic)
+
+- [ ] **🆕 Dark Elf canon data-model** — **Darkness** element, HP 450 mid-tier (JP +25% ~562 à confirmer), AT 42, DF 70, MAT 44, **MDF 180 very high anti-magic** (cohérent Cute Cat 180 pattern), SPD 70 mid, A-AV/M-AV 0%. EXP 80 / Gold 36. Mob Evergreen Forest Disc 1 interior dungeon only. Pattern "anti-magic balanced Disc 1 magical-archer" canon. À implémenter `mobs/darkElf.ts`. Source: [`features/mobs/_sources/lod-wiki-dark-elf.md`](features/mobs/_sources/lod-wiki-dark-elf.md).
+
+- [ ] ⭐ **🆕 Counter Opportunities tier 23 NEW intermediate canon MAJEUR ⭐** — Dark Elf first ingestion Counter (23) tier intermediate between 19 et 28. Pattern Damia étendu **8 tiers canon : 0 / 3 / 4 / 9 / 16 / 19 / 23 / 28**. À investiguer autres mobs Counter 23 tier exist alphabetical. Per user instruction : feature non-implémentée Damia, factual tier mention only. Source: idem.
+
+- [ ] ⭐ **🆕 AI HP-based avec chance modifiers Dark Elf NEW pattern MAJEUR ⭐** — Pattern AI Minor Enemy avec chance distribution per HP zone NEW (vs typical fixed phase abilities) :
+  - **Phase HP > 50%** : ~Heel Drop (1× phys baseline)
+  - **Phase HP ≤ 50% > 25%** : 75% Detonate Arrow + 25% Petrifying Arrow
+  - **Phase HP ≤ 25%** : 50% Detonate Arrow + 50% Petrifying Arrow
+    Pattern complex phase + RNG canon Minor Enemy. À implémenter `MobAIHpChance` data-model. Source: idem.
+
+- [ ] ⭐ **🆕 Detonate Arrow NEW canon name officiel ⭐** — Wiki tier 2 canonical (NOT ~ approximation). Party target + 0.5× Non-Elemental magic damage AoE. Pattern thematic "exploding arrow AoE". Pattern Non-Elemental magic ability canon. Cross-reference Arrow Shooter Detonate Arrow shared canon (Arrow family ?). À implémenter ability `detonateArrow` Damia Party Non-Elemental 0.5× magic AoE. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Petrifying Arrow NEW canon name officiel MAJEUR ⭐⭐** — Wiki tier 2 canonical (NOT ~ approximation). Single target + **100% chance Petrification proc** canon. **M-AV reduces Petrification proc** (cohérent pattern A-AV/M-AV per-ability classification CONFIRMED 4ème instance). À implémenter ability `petrifyingArrow` Damia Single 100% Petrification proc M-AV-reduced. Pattern Mob Petrification offensive ability canon NEW (cohérent Basilisk Petrifying Glare 100% similar pattern existing). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Pattern A-AV/M-AV per-ability classification CONFIRMED 4ème instance Dark Elf ⭐⭐** — Cross-mob/boss pattern canon CONFIRMED étendu :
+  - Crystal Golem ~Clap (physical-tagged Stun) → A-AV reduces
+  - Cursed Jar Stunning Hammer (magical-tagged Stun) → M-AV reduces
+  - Cute Cat Luring Dance (magical-tagged Bewitchment) → M-AV reduces
+  - **Dark Elf Petrifying Arrow (magical-tagged Petrification)** → **M-AV reduces** ⭐ 4ème instance NEW
+  - Pattern : Magical-tagged ability → M-AV reduces / Physical-tagged ability → A-AV reduces
+  - À documenter `combat/avoidance-tiers.md` (à créer) per-mob A-AV/M-AV tier mapping + per-ability classification canon
+  - Pattern Damia `StatusProcModifier { reducedBy: 'A-AV' | 'M-AV'; abilityType: 'physical' | 'magical' }` data-model canon confirmé. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Bewitching Arrow cut content canon NEW MAJEUR ⭐⭐** — Wiki tier 2 trivia reveal : combat script residual ability **"Bewitching Arrow"** cut from final game. Reveal canon : **2 enemies Evergreen Forest had Bewitchment ability planned** → one cut to avoid redundancy → **confirms other Evergreen Forest mob canon Bewitchment ability** (Forest Runner OR Flying Rat probable). Pattern game design canon : status diversification per-area canon ⭐. Pattern thematic "Dark Elf 3-arrow trio" canon (Detonate + Petrifying + Bewitching cut → Detonate + Petrifying only canon). À documenter `combat/cut-content.md` (à créer) — cut abilities canon documentation. Pattern Damia : data-model `MobAbility { canon: true; cut?: boolean }` optional reference. Decision Damia : adopt cut Bewitching Arrow ? OR respect canon cut content ? Source: idem.
+
+- [ ] ⭐ **🆕 Forest Runner + Flying Rat NEW mobs canon Evergreen Forest Disc 1 MAJEUR ⭐** — Dark Elf formation partners :
+  - **Forest Runner** = NEW mob canon Evergreen Forest Disc 1 (formation 137 partner)
+  - **Flying Rat** = NEW mob canon Evergreen Forest Disc 1 (formation 138 partner ×2)
+    Pattern Evergreen Forest Disc 1 mob ecosystem canon : Dark Elf + Forest Runner + Flying Rat (3 mobs confirmed). À documenter `mobs/Forest Runner.md` + `mobs/Flying Rat.md` (à créer) — Evergreen Forest Disc 1 mobs canon. À investiguer Bewitchment ability ownership (per trivia cut content reveal). Source: idem.
+
+- [ ] ⭐ **🆕 Depetrifier 8% drop source canon Dark Elf ⭐** — Pattern thematic IRONIC canon ⭐ : Dark Elf inflicts Petrification (Petrifying Arrow 100%) + drops Depetrifier counter — design canon. Cohérent existing item canon **Depetrifier** (mentioned Basilisk doc — cures Petrification). À documenter `items/consumables.md` Depetrifier entry — Dark Elf 8% Disc 1 source canon (pre-Basilisk Tower of Flanvel Disc 3 source). Pattern Petrification cure-item drop canon. Source: idem.
+
+- [ ] **🆕 ~Heel Drop canon name (community) Dark Elf** — Wiki community approximation > 50% phase baseline ability. 1× phys damage canon. Pattern thematic "elf kick attack". Source: idem.
+
+- [ ] **🆕 Evergreen Forest Disc 1 location canon Dark Elf ⭐** — Submaps 340, 341, 342, 343, 345. Pattern **Shana home village area Disc 1** pre-Hellena rescue canon. Pattern Disc 1 forest mob ecosystem canon. À documenter `locations/Evergreen Forest.md` (à créer) — Disc 1 location canon. Source: idem.
+
+- [ ] **🆕 Dark Elf World Map = None canon** — Pattern Dark Elf = location-only canon (no World Map road spawn). Pattern Evergreen Forest mob = interior dungeon canon. Source: idem.
+
+- [ ] **🆕 Escape rate 30% canon Evergreen Forest Disc 1** — Pattern Disc 1 standard escape rate canon (between early high rates 60-90% et standard 30%). Pattern Evergreen Forest pre-Hellena rescue intermediate area canon. Source: idem.
+
+- [ ] **🆕 MDF 180 very high anti-magic Disc 1 mob canon Dark Elf ⭐** — Cohérent Cute Cat MDF 180 pattern Disc 3-4 — Dark Elf Disc 1 anti-magic mid-tier MDF 180. Pattern Disc 1 anti-magic mob canon NEW (vs typical low MDF Disc 1 mobs). Pattern Dark Elf magical-archer thematic. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

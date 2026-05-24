@@ -3337,6 +3337,56 @@
   - DF/MDF/SPD/EXP match wiki
     → Damia adopt fandom higher AT 20 / MAT 21 probable (JP closer pattern récurrent). Source: comparaison.
 
+### Mobs / Cursed Jar (Rare Monster Non-Elemental 3ème Unique Jar trio canon — World Map only Disc 1-2 + Night Raid 100% drop NEW + SPD 200 EXTRÊME + AT/MAT 0 + Escape 100% + Stunning Hammer 100% Stun NEW + M-AV reduces Stun DIVERGENCE vs Crystal Golem A-AV + Destroyer Mace NEW weapon canon)
+
+- [ ] **🆕 Cursed Jar canon data-model** — **Non-Elemental** element, HP 4 extrême low, **AT 0 / MAT 0** (no offensive stats), DF/MDF 100 moderate, **SPD 200 EXTRÊME** (highest SPD ingestion canon Damia), A-AV/M-AV 0%. EXP 300 / Gold 0. Rare Monster category subset Minor canon. À implémenter `mobs/cursedJar.ts`. Source: [`features/mobs/_sources/lod-wiki-cursed-jar.md`](features/mobs/_sources/lod-wiki-cursed-jar.md).
+
+- [ ] ⭐ **🆕 3ème Rare Monster Unique Jar ingestion canon Damia MAJEUR ⭐** — Cursed Jar = 3ème Unique Jar canon après Lucky Jar + Treasure Jar (trio complet). Pattern Unique Jars Counter 16 tier consistent confirmé (Lucky/Treasure/Cursed all Counter 16). À ingérer Lucky Jar + Treasure Jar canon ingestion future pour compléter trio Unique Jars canon. Pattern Unique Jars = Rare Monsters World Map only signature 100% item drop. Source: idem.
+
+- [ ] ⭐ **🆕 Night Raid 100% drop NEW item canon MAJEUR ⭐** — Cursed Jar signature drop (100% guaranteed canon). Probable Attack Item ou Spell Item canon (thematic "raid"). À documenter `items/` Night Raid entry — investiguer effect précis fandom + items wiki. Pattern Rare Monster Jar = signature 100% item drop canon. Source: idem.
+
+- [ ] ⭐ **🆕 SPD 200 EXTRÊME canon Cursed Jar MAJEUR ⭐** — Highest SPD ingestion canon Damia. Pattern Jar SPD high récurrent ? À cross-check Lucky/Treasure Jar SPD canon. Cursed Jar = always first strike canon (SPD 200 EXTRÊME guarantees first turn). À documenter `combat/speed-tiers.md` (à créer) SPD tier mapping per-mob. Source: idem.
+
+- [ ] ⭐ **🆕 AT/MAT 0 canon Cursed Jar Jar pattern ⭐** — No offensive stats (uses Rare Attack 10% Max HP bypass formula instead). Pattern Rare Monster Jar bypass-formula offensive canon. Cohérent thematic "static jar = no offensive stats" canon. Source: idem.
+
+- [ ] ⭐ **🆕 Escape 100% canon Cursed Jar MAJEUR ⭐** — Always escapable canon (player advantage, avoid losing turns to Stunning Hammer). Pattern Rare Monster escape rate variable canon : 100% (Cursed Jar) vs Lucky/Treasure Jar à vérifier. Cohérent thematic "cursed jar = player can always avoid". À documenter pattern Rare Monster escape canon. Source: idem.
+
+- [ ] ⭐ **🆕 Stunning Hammer canon name officiel NEW ability ⭐** — Wiki tier 2 canonical (NOT ~ approximation). 100% Stun proc ≤ 50% HP phase canon (high reliability status). À implémenter ability `stunningHammer` Damia (100% Stun proc). Source: idem.
+
+- [ ] ⭐ **🆕 M-AV reduces Stun proc Stunning Hammer DIVERGENCE NEW MAJEUR ⭐⭐** — Pattern A-AV/M-AV per-ability canon DIVERGENCE :
+  - Cursed Jar Stunning Hammer : **M-AV reduces** Stun proc
+  - Crystal Golem ~Clap : **A-AV reduces** Stun proc
+  - Pattern A-AV/M-AV per-ability classification canon (physical-tagged vs magical-tagged ability ?)
+  - À investiguer Discord pattern A-AV vs M-AV per-ability classification canon
+  - À implémenter `StatusProcModifier` data-model avec `reducedBy: 'A-AV' | 'M-AV'` per-ability config
+  - Pattern canon précis status proc reduction attribute per ability. Source: idem.
+
+- [ ] ⭐ **🆕 Destroyer Mace NEW weapon canon MAJEUR ⭐** — Mentionné via Damage Mitigation bypass modifier ("Attacker Fear" + "Destroyer Mace" only apply post-1-damage cap Rare Monster). Pattern weapon canon NEW ingestion (probable weapon mid/late-game character — à investiguer Dart/Lavitz/Rose/Meru/Albert weapons). À documenter `items/equipment.md` Destroyer Mace weapon entry NEW canon. Source: idem.
+
+- [ ] **🆕 Physical Attack Barrier canon name officiel NEW Cursed Jar ⭐** — Wiki tier 2 canonical. Self-buff reduces physical damage to 0 until next turn. 25% chance any phase. Pattern Mob Barrier ability canon (cohérent Aqua King Barriers boss-tier — Mob-tier version). À implémenter `physicalAttackBarrier` ability Damia (1-turn duration). Source: idem.
+
+- [ ] **🆕 Run away! shared Rare Monster ability canon Cursed Jar ⭐** — 25% chance per turn. Does NOT award EXP/Gold/Item if mob runs away (vs player escape). Pattern Rare Monster escape risk canon — player must finish fast. Cohérent Blue Bird / Berserk Mouse Run away! shared. À implémenter shared `runAway` ability cross-mob Rare Monster canon. Source: idem.
+
+- [ ] **🆕 Rare Monster passive duo canon Cursed Jar confirmed ⭐** — **Damage Mitigation** (physical → 1) + **Magical Immunity** (magical → 0) standard duo. Cohérent existing Blue Bird Rare Monster same duo. Cross-coverage Rare Monsters universal canon confirmed (Blue Bird + Cursed Jar). Pattern Damia `RareMonsterPassive` data-model shared canon. Source: idem.
+
+- [ ] **🆕 "Attacker Fear" + "Destroyer Mace" Damage Mitigation bypass modifiers canon ⭐** — Only these 2 modifiers apply AFTER 1-damage cap. Pattern Damage Mitigation bypass canon. Attacker Fear = mob Fear status → boost damage modifier canon. Pattern strategic counter-Rare Monster canon. Source: idem.
+
+- [ ] **🆕 AI Rare Monster chance-based pattern canon Cursed Jar ⭐** — Multi-action chance-based (vs Minor Enemy HP-conditional canon) :
+  - Phase HP > 50% : 50% ~Rare Attack / 25% Physical Attack Barrier / 25% Run away!
+  - Phase HP ≤ 50% : 50% Stunning Hammer / 25% Physical Attack Barrier / 25% Run away!
+    Pattern probabilities distribution canon Rare Monster. À implémenter `RareMonsterAI` chance-based data-model (vs `MinorEnemyAI` HP-conditional). Source: idem.
+
+- [ ] **🆕 ~Rare Attack shared Rare Monster canon Cursed Jar ⭐** — Community approximation HP > 50% phase. **10% target Max HP bypass formula** (cohérent Blue Bird). Only "Guarding" + "Target Fear" modifiers apply (formula bypass). Pattern Rare Monster "Rare Attack" universal trait canon. À implémenter ability `rareAttack` Damia shared cross-Rare Monster. Source: idem.
+
+- [ ] **🆕 4 World Map roads coverage canon Cursed Jar Disc 1-2 ⭐** — Cursed Jar spawns :
+  - **Nest of Dragon to Intersection** (Disc 1, most common spawn)
+  - **Lohan Intersection to Nest of Dragon Intersection** (Disc 1)
+  - **Nest of Dragon to Shrine of Shirley** (Disc 1)
+  - **Barrier Station to Intersection** (Disc 2)
+    Pattern 4 roads multi-disc canon (Disc 1 Nest of Dragon area + Disc 2 Barrier Station). World Map ONLY (no in-location encounter). Pattern Unique Jars = World Map only canon probable. À documenter `world-map/` (à créer) roads canon multi-disc. Source: idem.
+
+- [ ] **🆕 Pattern Cursed Jar = World Map ONLY canon ⭐** — No in-location encounter (vs typical Minor Enemy Shrine/Forest spawn). Pattern Unique Jars = Rare Monsters World Map only canon (à confirmer Lucky/Treasure Jar). Pattern rare encounter type canon Disc 1-2. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

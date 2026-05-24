@@ -3738,6 +3738,60 @@
 
 - [ ] **🆕 Rose + Dart party member Mountain of Mortal Dragon Disc 3 canon confirmed gallery ⭐** — Image gallery Deadly Spider Cobweb on Rose + Gnaw on Dart confirme party composition Mountain of Mortal Dragon Disc 3 canon. Cohérent existing Disc 3 party composition canon. Source: idem.
 
+### Mobs / Death (Darkness Phantom Ship Disc 2 — Status 7/1 NEW extreme deviation Poison-only-vulnerable MAJEUR + Total Vanishing 8% drop signature ironic + Instant Death Immunity passive 3ème instance + Can't Combat NEW Mob Instant Death offensive 2ème instance + Midnight Terror NEW Fear M-AV 6ème pattern + Charging Spirit dual-option + Contact ×3 encounter NEW + Will-o'-Wisp NEW partner + Death Purger Zenebatos recolor parent NEW)
+
+- [ ] **🆕 Death canon data-model** — **Darkness** element, HP **200 low** Disc 2 (JP +25% ~250 à confirmer), AT 50, DF 120 high anti-physical, MAT 35, **MDF 60 low anti-magic vulnerable**, SPD 50 low, A-AV/M-AV 0%. EXP 66 / Gold 30. Mob Phantom Ship Disc 2 interior dungeon only. Pattern "low HP physical-tank magic-vulnerable" canon (glass cannon defensive). À implémenter `mobs/death.ts`. Source: [`features/mobs/_sources/lod-wiki-death.md`](features/mobs/_sources/lod-wiki-death.md).
+
+- [ ] ⭐⭐⭐ **🆕 Status Immunity 7/1 deviation NEW MAJEUR canon Death only Poison vulnerable ⭐⭐⭐** — Most extreme deviation tier yet : **7 immune** (Petrify/Bewitch/Arm Block/Dispirit/Confuse/Fear/Stun) / **1 vulnerable** (only **Poison**). Pattern Minor Enemy Status tier mapping étendu : 4/4 standard / 5/3 (Deadly Spider) / 6/2 / **7/1 Death NEW** / all 8 ✔ (Bowling/Crystal Golem). Pattern thematic IRONIC ⭐ "Death-themed mob immune to almost everything except Poison" biology paradox canon. Pattern Death = near-boss-tier immunity Mob canon (1 step from all 8 ✔). À documenter `combat/monster-categories.md` Status Immunity tier mapping update + `'minor-7-1-poison-only'` profile NEW canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 TOTAL VANISHING 8% drop source canon REVEALED MAJEUR ⭐⭐⭐** — Death Phantom Ship Disc 2 drops Total Vanishing 8% (Attack Item one-shot mob killer existing canon per user instruction). Pattern thematic IRONIC ⭐⭐ : Death drops Total Vanishing (Death-themed one-shot item = perfect thematic match — "Death gives you Death"). Pattern Death drop = signature item canon. À documenter `items/consumables.md` Total Vanishing entry — Death 8% Phantom Ship Disc 2 source canon. Pattern multi-mob drop source canon Total Vanishing (Death + Beastie Dragon ? + autres). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Instant Death Immunity Mob passive canon 3ème instance Death ⭐⭐** — Cohérent existing **Commander Marshland Instant Death Immunity passive canon** (Boss) + **Crystal Golem Instant Death Immunity passive canon** (Minor) + **Death Instant Death Immunity passive canon** (Minor) ⭐ NEW 3ème instance. Pattern Mob Instant Death Immunity passive canon cross-mob confirmé : 3 mobs (1 Boss + 2 Minor). Immune Can't Combat Weapons (Gladius / Brass Knuckle / Indora's Axe). Pattern thematic IRONIC MAJEUR ⭐ : "Death-themed mob immune to Death dealing Death (Can't Combat ability)" canon. À documenter `combat/mob-passives.md` (à créer) — pattern Mob Instant Death Immunity passives canon : 3 mobs confirmed. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Can't Combat NEW Mob Instant Death offensive ability canon 2ème instance Death MAJEUR ⭐⭐⭐** — Wiki tier 2 canonical. Single target + **Inflicts Instant Death** canon. Pattern Mob "Can't Combat" Instant Death offensive ability canon NEW 2ème instance : 1ère = **Cute Cat Dance of Death** (existing) / 2ème = **Death Can't Combat** ⭐ NEW. Pattern Mob Instant Death offensive canon récurrent confirmé cross-mob. Cohérent existing **Erase mechanic 4-tier player canon** — Mob equivalent canon confirmé. À implémenter ability `cantCombat` Damia Mob Instant Death "Can't Combat" canon. Pattern thematic IRONIC ⭐⭐ : "Death uses Can't Combat" — perfect thematic match Mob name + ability. Source: idem.
+
+- [ ] ⭐ **🆕 Midnight Terror NEW canon name officiel Death ⭐** — Wiki tier 2 canonical (NOT ~ approximation). Single target + **100% chance Fear proc** canon. **M-AV reduces Fear proc canon**. Pattern thematic "midnight terror" = night-fear Darkness canon. À implémenter ability `midnightTerror` Damia Single 100% Fear proc M-AV-reduced. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Pattern A-AV/M-AV per-ability classification CONFIRMED 6ème instance Death Midnight Terror ⭐⭐** — Cross-mob pattern canon CONFIRMED bien établi étendu :
+  - Crystal Golem ~Clap (physical-tagged Stun) → A-AV reduces
+  - Cursed Jar Stunning Hammer (magical-tagged Stun) → M-AV reduces
+  - Cute Cat Luring Dance (magical-tagged Bewitchment) → M-AV reduces
+  - Dark Elf Petrifying Arrow (magical-tagged Petrification) → M-AV reduces
+  - Deadly Spider Cobweb (physical-tagged Arm-Blocking) → A-AV reduces
+  - **Death Midnight Terror (magical-tagged Fear)** → **M-AV reduces** ⭐ 6ème instance NEW
+  - Pattern : Magical-tagged ability → M-AV reduces / Physical-tagged ability → A-AV reduces
+  - Pattern bien établi cross-mob CONFIRMED MAJEUR : 2 physical → A-AV (Clap + Cobweb) ; 4 magical → M-AV (Stunning Hammer + Luring Dance + Petrifying Arrow + Midnight Terror)
+  - À documenter `combat/avoidance-tiers.md` (à créer) per-mob A-AV/M-AV tier mapping + per-ability classification canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Charging Spirit dual-option Death canon MAJEUR ⭐** — Telegraph dual-option : Midnight Terror OR Can't Combat next turn. Pattern Air Combat-style **dual-option Charging Spirit canon** (cohérent existing Cute Cat Fury Swipes OR Dance of Death pattern). Pattern Death = "dual" canon. À implémenter `MobAI.chargingSpiritOptions: 'single' | 'dual'` data-model (cohérent existing canon Bowling fandom). Source: idem.
+
+- [ ] ⭐ **🆕 AI HP-based avec chance modifiers complex 4-phase NEW canon Death MAJEUR ⭐** — Pattern AI Minor Enemy avec chance distribution per HP zone complex :
+  - **Phase HP > 50%** : 25% Charging Spirit (dual-option telegraph) + 75% ~Reaping Slash (1× phys baseline)
+  - **Phase HP > 25%** : 75% ~Reaping Slash baseline (overlap zone > 50%)
+  - **Phase HP ≤ 25%** : 25% Midnight Terror (100% Fear M-AV reduces) + **75% Can't Combat (Instant Death)** ⚠️ DANGEREUX
+    Pattern dangereux ≤ 25% canon ⭐ : 75% chance Instant Death (Can't Combat) at low HP — high threat majeur Mob. À implémenter `MobAIHpChanceComplex` data-model. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Contact ×3 encounter type NEW canon Death MAJEUR ⭐⭐** — Pattern **visible mob encounter mechanic canon** : "Contact" = player must touch visible mob to trigger battle (vs typical random encounter rate). ×3 = 3 spawn instances probable (3 visible mobs in submaps 288/291/296). Pattern Phantom Ship Disc 2 visible mob canon (cohérent ghost-themed dungeon). Cohérent existing **Berserker Contact arrows encounter NEW canon** Disc 2 Home of Gigantos pattern. À documenter `combat/encounter-mechanics.md` (à créer) — Contact encounter type canon. Pattern Damia : `EncounterType { type: 'random' | 'contact'; visibleMob: boolean; instances?: number }` data-model canon. Source: idem.
+
+- [ ] ⭐ **🆕 Will-o'-Wisp NEW mob canon Phantom Ship Disc 2 MAJEUR ⭐** — Death formation partner ×2 (formation 453). Pattern Phantom Ship Disc 2 mob ecosystem canon : Death + **Will-o'-Wisp** (2 mobs Disc 2 confirmed). Pattern thematic "Will-o'-Wisp ghostly spirit" canon (cohérent Phantom Ship thematic ghost dungeon). À documenter `mobs/Will-o'-Wisp.md` (à créer) — Phantom Ship Disc 2 mob canon NEW. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Death Purger NEW mob canon (recolor parent Zenebatos Disc 4) + Trivia recolor reveal MAJEUR ⭐⭐** — Wiki tier 2 trivia reveal : Death model = recolor of **Death Purger** located in **Zenebatos**. **Death Purger** = NEW mob canon (parent recolor) + **Zenebatos** = existing canon Disc 4 (Wingly forest city location). Pattern recolor canon récurrent (cohérent existing Plague Rat / Stinger / Fowl Fighter / Deadly Spider). Pattern **Disc 4 → Disc 2 reverse-recolor** canon ? À investiguer chronology design. À documenter `mobs/Death Purger.md` (à créer) — Zenebatos Disc 4 mob canon NEW (parent recolor). ⚠️ Pattern naming inversion : "Death Purger" ≠ "Death" — Death Purger thematic "purger" suggests Wingly thematic Zenebatos canon. Source: idem.
+
+- [ ] **🆕 Phantom Ship Disc 2 location canon Death ⭐** — Submaps 288, 291, 296. Cohérent existing Phantom Ship Disc 2 canon (Halberd weapon source existing canon — Lavitz's Spirit Mayfil reveal). Pattern Phantom Ship Disc 2 mob ecosystem canon. À documenter `locations/Phantom Ship.md` (à créer) — Disc 2 ghost-themed dungeon area canon. Source: idem.
+
+- [ ] **🆕 Death World Map = None canon** — Pattern Death = location-only canon (no World Map road spawn). Pattern Phantom Ship mob = interior dungeon canon. Source: idem.
+
+- [ ] **🆕 Escape rate 30% canon Phantom Ship Disc 2 Death ⭐** — Pattern Disc 2 standard escape canon. Pattern Phantom Ship interior dungeon escape canon. Source: idem.
+
+- [ ] **🆕 ~Reaping Slash canon name (community) Death** — Wiki community approximation > 25% baseline ability. 1× phys damage canon. Pattern thematic "death reap scythe". Source: idem.
+
+- [ ] **🆕 Pattern thematic IRONIC Death canon MAJEUR ⭐⭐** — Pattern design canon récurrent Death-themed mob :
+  - Status 7/1 = near-boss-tier immunity (biology paradox)
+  - Instant Death Immunity passive (immune to Death weapons)
+  - Can't Combat Instant Death offensive ability (deals Death)
+  - Total Vanishing item drop (Death-themed one-shot weapon)
+    Pattern design canon "Death-themed perfect" — design philosophy ironique. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

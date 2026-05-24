@@ -4021,6 +4021,65 @@
 
 - [ ] **🆕 Element "none" fandom = Non-Elemental wiki cross-source confirmed Death Rose ⭐** — Pattern terminology cross-source canon : Element "none" (fandom narrative) = Non-Elemental (wiki canonical). Pattern Non-Elemental Boss canon récurrent. Source: idem.
 
+### Bosses / Divine Dragon wiki (Non-Elemental Mountain of Mortal Dragon Disc 3 final boss — Multi-entity 3-entity 9000 HP total + Dragon Block Staff anti-Dragoon NEW + Final Blow main-priority NEW + Boss Extras canonical 3ème instance + Instigate 2ème + Countdown mechanic NEW + Divine Dragon Cannon position-based AoE NEW + Intimidating Presence reactive counter NEW + Dragon Shield + Gravity Grabber + Flash Hall NEW items + Burning Wave NEW)
+
+- [ ] ⭐⭐⭐ **🆕 Divine Dragon canon data-model multi-entity 3-entity MAJEUR ⭐⭐⭐** — **Non-Elemental** element all 3 entities. Divine Dragon HP 5000 (JP +25% ~6250) + AT 60 + DF 160 high + MAT 53 + MDF 60 low + SPD 60. Divine Cannon HP 2000 + AT 51 + DF 160 + MAT **60** (higher) + MDF 60 + SPD 50. Divine Ball HP 2000 + AT 51 + DF 160 + MAT 53 + MDF 60 + SPD 50. **HP total 9000** Disc 3 final boss massive tier. À implémenter `bosses/divineDragon.ts` multi-entity. Source: [`features/bosses/_sources/lod-wiki-divine-dragon.md`](features/bosses/_sources/lod-wiki-divine-dragon.md).
+
+- [ ] ⭐⭐⭐ **🆕 Dragon Block Staff passive NEW canon MAJEUR Divine Dragon ⭐⭐⭐** — **Dragoons gain 0.4× Damage Dealt + 4× Damage Received** ⚠️. Pattern unique Boss canon : DISCOURAGES Dragoon form usage canon NEW. Pattern thematic "Dragon Block Staff = Wingly anti-Dragon weapon canon" (cohérent Lloyd holds Dragon Block Staff Disc 4 existing canon). Strategy canon : avoid Dragoon transformations vs Divine Dragon — use Additions + Items instead. À implémenter `DragonBlockStaffPassive { type: 'anti-dragoon'; dragoonDamageDealt: 0.4; dragoonDamageReceived: 4.0 }` data-model canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Final Blow passive NEW canon MAJEUR Divine Dragon ⭐⭐⭐** — Battle ends when **Divine Dragon HP 0** (Boss Extras optional kill). Pattern multi-entity boss main-priority canon NEW (vs Dark Doel Untargetable Boss Extras-priority). Pattern player strategy canon : focus Divine Dragon HP 5000 for victory (Boss Extras optional drops only). À implémenter `FinalBlowPassive { type: 'main-boss-victory'; mainEntity: 'divineDragon'; bossExtrasOptional: true }` data-model canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Boss Extras canonical 3ème instance canon Divine Dragon MAJEUR ⭐⭐⭐** — Divine Cannon + Divine Ball = **3ème Boss Extras ingestion canon Damia** :
+  1. Crafty Thief (existing canon — Boss Extras canonical 4th category established)
+  2. Dark Doel : Light Sword + Shadow Blade (Disc 4 Moon trial)
+  3. **Divine Dragon : Divine Cannon + Divine Ball** ⭐ NEW (Disc 3 Mountain of Mortal Dragon)
+     Pattern Boss Extras canonical category 3 confirmed instances. Pattern characteristics canon récurrent confirmed cross-boss : Counter 0 + EXP/Gold 0 + Status all 8 ✔ + Stats Boss-similar + **100% drops** (Gravity Grabber + Flash Hall). À mettre à jour `combat/monster-categories.md` Boss Extras = 4th category 3 confirmed instances. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Instigate mechanic 2ème instance canon Divine Dragon MAJEUR ⭐⭐⭐** — Pattern Boss Extras force Boss action canon confirmed cross-boss 2ème instance :
+  - **Divine Cannon Instigate Divine Dragon Cannon** (forces Divine Dragon use Divine Dragon Cannon)
+  - **Divine Ball Instigate Divine Dragon Barrage** (forces Divine Dragon use Divine Dragon Barrage)
+    Cohérent existing **Dark Doel Light Sword Instigate Sword Slash + Shadow Blade Instigate Blade Slash** (Disc 4 trial). Pattern Boss Extras = "command-the-boss" canon récurrent confirmé cross-boss. Pattern Damia : `InstigateAbility` shared cross-boss data-model. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Countdown mechanic Divine Cannon canon NEW MAJEUR ⭐⭐⭐** — Pattern unique multi-entity countdown timer canon NEW Damia :
+  - **Count starts 3** → reduces 1 per ~Countdown action
+  - **Trigger** : Divine Dragon HP <61%
+  - **Enable/Disable canon** : Disabled by default (Do nothing) / Enabled when Divine Dragon HP <61% + Divine Dragon takes any action OTHER than Divine Dragon Cannon
+  - **Auto Instigate Divine Dragon Cannon** : when Count reaches 0
+    Pattern stall paradox : forcing Divine Dragon Cannon resets Countdown but Cannon = massive 8× primary damage. À implémenter `CountdownMechanic { initial: 3; trigger: 'main-hp<61%'; enabledCondition: 'main-action-not-divine-dragon-cannon'; autoActionAtZero: 'instigate-divine-dragon-cannon' }` data-model canon NEW. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Divine Dragon Cannon position-based AoE NEW canon MAJEUR ⭐⭐⭐** — Pattern unique position-based AoE canon NEW Damia :
+  - **Central party member primary** → 8× Non-Elemental magic + both sides adjacent 4×
+  - **Side member primary** (left/right) → 8× primary + center 4× + **opposite side 0% (NOT targeted)**
+    Pattern thematic "Divine Dragon Cannon = AoE laser canon". Player strategy canon : positioning matters — central member = both side members adjacent damage / side member = opposite side immune. À implémenter `DivineDragonCannonAbility { type: 'position-based-aoe'; primaryMultiplier: 8; adjacentMultiplier: 4; oppositeSideMultiplier: 0; element: 'non-elemental'; abilityType: 'magic' }` data-model canon NEW. À documenter `combat/position-based-aoe.md` (à créer) — pattern position-based AoE canon NEW. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Burning Wave NEW canon ability Divine Dragon ⭐⭐** — Wiki tier 2 canonical. Party target + **3× Fire-elemental magic damage** canon (NEW canon AoE). Pattern Fire AoE ability canon NEW MAJEUR (3× magic Party = high damage). Pattern thematic "Fire AoE wave". À implémenter ability `burningWave` Damia Party 3× Fire magic AoE. Source: idem.
+
+- [ ] ⭐⭐ **🆕 ~Intimidating Presence reactive counter-item canon NEW MAJEUR Divine Dragon ⭐⭐** — Wiki tier 2 community approximation. Party 100% Fear proc, A-AV reduces. **Auto trigger canon** : when targeted by **Item Magic All-target** (counter-item reactive mechanic canon NEW). Pattern Boss reactive counter-item canon NEW (vs typical Boss reactive abilities). Pattern A-AV/M-AV per-ability classification 7ème instance (physical/intimidation-tagged → A-AV reduces Fear). À implémenter `IntimidatingPresenceAbility { type: 'reactive-counter-item'; trigger: 'item-magic-all-target'; effect: { status: 'Fear'; chance: 1.0; reducedBy: 'A-AV' }; target: 'party' }` data-model canon NEW. Source: idem.
+
+- [ ] ⭐ **🆕 Existing items confirmed cross-boss Divine Dragon ⭐** — Pellet (Earth Spell Item) + Burn Out (Fire Spell Item) + Down Burst (Wind Air Combat shared canon) all cross-confirmed Divine Dragon abilities. Pattern Spell Item / Boss ability shared canon récurrent confirmé. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Dragon Shield NEW item canon MAJEUR Divine Dragon ⭐⭐** — 20% drop Divine Dragon. Pattern probable armor canon ("Shield" thematic). Probable anti-Dragoon item canon (cohérent Dragon Block Staff passive thematic). À investiguer fandom + items wiki canon. À documenter `items/equipment.md` Dragon Shield armor canon entry NEW. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Gravity Grabber NEW item canon Divine Cannon ⭐⭐** — 100% guaranteed Boss Extra drop. Pattern thematic "Gravity" = probable Spell Item Earth/gravity. Pattern Boss Extras 100% drop canon récurrent. À documenter `items/consumables.md` Gravity Grabber Spell Item canon entry NEW. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Flash Hall NEW item canon Divine Ball ⭐⭐** — 100% guaranteed Boss Extra drop. Pattern thematic "Flash Hall" = probable Spell Item Light/flash. À documenter `items/consumables.md` Flash Hall Spell Item canon entry NEW. Source: idem.
+
+- [ ] ⭐ **🆕 EXP 10,000 highest yield ingestion canon Damia Divine Dragon ⭐** — Pattern Disc 3 final boss EXP reward canon massive. Cohérent existing canon yields scaling. Source: idem.
+
+- [ ] **🆕 ~Arm Swipe canon name community Divine Dragon ⭐** — Wiki community approximation Party 1× Physical damage ability baseline. Pattern thematic "dragon arm sweep". Source: idem.
+
+- [ ] **🆕 ~Divine Dragon Barrage canon name community ⭐⭐** — Wiki community approximation forced Divine Dragon ability via Divine Ball Instigate. Party 2× Non-Elemental magic damage canon. Pattern Instigate mechanic 2ème instance canon. À implémenter `divineDragonBarrage` ability Damia. Source: idem.
+
+- [ ] **🆕 Pattern multi-entity boss canon récurrent 3ème ingestion Divine Dragon ⭐⭐** — 3-entity multi-entity boss canon récurrent étendu :
+  - **Claire** (existing) / Kamuy / Lloyd Flanvel / Magician Faust / 3 Dragon Spirits / Zieg Feld
+  - **Dark Doel + Light Sword + Shadow Blade** (Disc 4 Moon trial)
+  - **Divine Dragon + Divine Cannon + Divine Ball** ⭐ NEW (Disc 3 Mountain of Mortal Dragon)
+    Pattern Damia : `MultiEntityBoss` data-model canon récurrent. À documenter `combat/multi-entity-bosses.md` (à créer) — pattern canon récurrent étendu. Source: idem.
+
+- [ ] **🆕 Mountain of Mortal Dragon submap 423 Disc 3 final boss canon Divine Dragon ⭐** — Pattern Disc 3 final boss canon Mountain of Mortal Dragon (cohérent existing mob ecosystem Beastie Dragon / Baby Dragon / Deadly Spider). À documenter `locations/Mountain of Mortal Dragon.md` (à créer) — Disc 3 Mountain Wind area + Divine Dragon final boss canon. Source: idem.
+
+- [ ] **🆕 Divine Dragoon Spirit canon context cross-reference ⚠️** — Divine Dragon Boss Disc 3 = narrative confrontation canon. Divine Dragoon Spirit acquisition = Disc 4 via Lloyd post-Melbu Frahma fight (cohérent existing Dart canon). Pattern story canon distinction : Boss fight ≠ Spirit drop (drops Dragon Shield 20% instead). À cross-référer existing Dart.md + Lloyd Disc 4 canon. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

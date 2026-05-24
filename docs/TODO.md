@@ -3933,6 +3933,43 @@
 
 - [ ] **🆕 Formations canon confirmed cross-source Death Purger ⭐** — 3 formations canon identiques wiki tier 2 confirmé fandom : Death Purger solo + Death Purger + Guillotine + Death Purger ×2 + Professor. Pattern Guillotine + Professor NEW mobs canon Law City Zenebatos partners confirmé cross-source. Source: idem.
 
+### Bosses / Death Rose wiki (Non-Elemental Moon That Never Sets Disc 4 — probable Miranda trial — Unslayable + Alternate Win Condition dialogue victory NEW MAJEUR + Talk Miranda dialogue trigger + Vampiric Tentacle life-steal NEW + Thorn Claw + Spin Thread baseline)
+
+- [ ] ⭐⭐ **🆕 Death Rose canon data-model** — **Non-Elemental** element, HP 2400 (JP +25% ~3000 à confirmer), AT 44 / MAT 44 balanced, DF 80 low-mid, **MDF 140 high anti-magic**, SPD 50 low, A-AV/M-AV 0%. EXP 6000 / Gold 0 / Drops Nothing. Counter (0) Boss canon. Boss Moon That Never Sets submap 607 Disc 4 Scripted (probable Miranda individual trial canon — parallel Dark Doel Albert trial). À implémenter `bosses/deathRose.ts`. Source: [`features/bosses/_sources/lod-wiki-death-rose.md`](features/bosses/_sources/lod-wiki-death-rose.md).
+
+- [ ] ⭐⭐⭐ **🆕 Unslayable passive NEW canon MAJEUR Death Rose ⭐⭐⭐** — When HP reduced to 0, Death Rose **NOT slain** and **continues to take actions** ⚠️. Pattern unique Boss canon NEW Damia : impossible HP-victory canon — Boss invulnerable to standard kill mechanic. À implémenter `UnslayablePassive { type: 'no-hp-victory'; continueAtZero: true; alternateWinRequired: true }` data-model canon. Pattern thematic "Rose immortal Black Monster" canon possible. Pattern Boss canon "cannot kill via HP" canon NEW (vs typical HP 0 = defeated). À documenter `combat/boss-passives.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Alternate Win Condition passive NEW canon MAJEUR Death Rose ⭐⭐⭐** — When **correct dialogue chosen during Talk**, battle ends. Pattern **dialogue-based victory canon NEW** ⭐ : player must respond correctly to Talk to win. Pattern unique non-HP victory condition canon NEW (vs typical reduce HP to 0). À implémenter `AlternateWinCondition { type: 'dialogue-correct'; trigger: 'talk-response'; triggerAbility: 'talk' }` data-model canon. Pattern thematic "Miranda confrontation Rose dialogue" canon (story trial mechanic Disc 4). Cohérent passive Unslayable : Boss invulnerable to HP-kill, only way to win = dialogue correct. À documenter `combat/win-conditions.md` (à créer) — Mob/Boss win conditions canon NEW (HP 0 + Alternate + scripted). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 ~Talk ability NEW MAJEUR Death Rose ⭐⭐⭐** — Community approximation dialogue ability. N/A target (no damage) + **Talk to Miranda** canon. Used **once at HP < 75%** + **once at HP < 50%** + **continuously at HP < 25%**. Pattern **Miranda-specific dialogue trigger canon** ⭐ : Death Rose-Miranda dialogue mechanic (cohérent Alternate Win Condition passive). Pattern dialogue HP threshold progression canon : 75% → 50% → 25% (3 dialogue triggers). À implémenter `TalkAbility { target: 'character'; characterId: 'miranda'; triggers: ['hp<75%', 'hp<50%', 'hp<25%']; mode: ['once', 'once', 'continuous']; alternateWinResponse: true }` data-model canon. Pattern story trial mechanic canon Disc 4. Source: idem.
+
+- [ ] ⭐⭐ **🆕 ~Vampiric Tentacle NEW canon Death Rose MAJEUR ⭐⭐** — Community approximation > 25% phase special ability. **1.5× Physical damage + HP recovers equal to damage dealt** canon ⭐. Pattern **Vampiric absorb / life-steal ability canon NEW** ⭐ : damage dealt = HP recovered (life-steal mechanic). Pattern life-steal Mob/Boss canon NEW (vs Crystal Golem HP recovers % Max HP — Death Rose = damage-based life-steal variant). Cohérent passive Unslayable : Vampiric Tentacle = Boss self-heal mechanic complement Unslayable invincibility. À implémenter ability `vampiricTentacle` Damia 1.5× phys + life-steal canon. Pattern Damia : `VampiricTentacleAbility { multiplier: 1.5; type: 'physical'; lifesteal: { type: 'damage-dealt'; amount: 'equal-to-damage' } }` data-model canon. À documenter `combat/lifesteal.md` (à créer) — Vampiric absorb life-steal abilities canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Pattern Moon trials canon récurrent Death Rose + Dark Doel MAJEUR ⭐⭐** — Pattern individual trials per character canon Disc 4 :
+  - **Dark Doel (submap 596)** = Albert individual trial canon (multi-entity boss + Untargetable + Instigate)
+  - **Death Rose (submap 607)** ⭐ NEW = probable Miranda individual trial canon (single-entity + Unslayable + Alternate Win Condition dialogue victory + Talk Miranda)
+  - Each trial = unique mechanic canon (Dark Doel = component destruction / Death Rose = dialogue victory)
+  - Pattern thematic "character confrontation past" canon Disc 4
+- À investiguer autres Moon trials canon ingestion future (Dart / Meru / Haschel / Kongol / Shana ?). Pattern Moon That Never Sets multi-trial area canon récurrent. À documenter `locations/Moon That Never Sets.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Death Rose = Rose dark form Miranda trial canon probable MAJEUR ⭐⭐** — Pattern thematic "Death Rose" = Rose dark form canon. Cohérent ~Talk to Miranda ability (Miranda-specific trigger). Cohérent Black Monster lore canon (Rose = Black Monster — Miranda = Shana Light Dragoon successor confronts Rose's past). Pattern Disc 4 reveal trials : characters confront personal demons/past via Moon trials. Pattern parallel : Dark Doel (Doel dark form trial Albert) vs Death Rose (Rose dark form trial Miranda probable). À investiguer story trial context canon Miranda + Rose narrative arc Disc 4. Source: idem.
+
+- [ ] ⭐ **🆕 AI canon "if → then" model Death Rose confirmed cross-boss ⭐** — Pattern Boss AI canon récurrent (cohérent Caterpillar + Danton + Dark Doel + Death Rose). "Auto" + "Ignore Turn Order" terminology canon confirmed. À documenter `combat/boss-ai.md` (à créer) — "if → then" model + Auto + Ignore Turn Order + dialogue triggers NEW canon. Source: idem.
+
+- [ ] **🆕 ~Thorn Claw + ~Spin Thread canon names community Death Rose ⭐** — Wiki community approximations > 25% phase baseline abilities. Both 1× phys damage canon. Pattern duo baseline abilities canon (Thorn Claw thematic "rose thorn claw scratch" + Spin Thread thematic "rose-stem thread spin attack"). Source: idem.
+
+- [ ] **🆕 ~Do nothing ≤ 25% phase Death Rose canon ⭐** — Boss enters passive state at HP ≤ 25% : Do nothing + Talk continuously dialogue spam canon. Pattern AI Death Rose phases canon : aggressive HP > 25% → passive HP ≤ 25% + dialogue continuously. Strategy player canon : reduce HP to ≤ 25% then dialogue Talk loop until correct response = Alternate Win Condition trigger. Source: idem.
+
+- [ ] **🆕 Status all 8 ✔ Boss-tier Death Rose confirmed ⭐** — Pattern Boss-tier immunity canon majoritaire confirmé. Cohérent existing Bosses canon all 8 ✔ (Dark Doel + Danton + Bowling pattern). Source: idem.
+
+- [ ] **🆕 Element Non-Elemental Boss canon Death Rose ⭐** — Pattern Non-Elemental Boss canon (vs typical Death-themed Darkness). Pattern thematic Rose dark form Non-Elemental (cohérent Rose canon character + Cursed Jar Non-Elemental Unique Monster parallel). Source: idem.
+
+- [ ] **🆕 Counter (0) Boss canon Death Rose ⭐** — Cohérent existing Boss-tier specific + Boss Extras Counter 0 pattern. Per user instruction : feature non-implémentée Damia, factual tier mention only. Source: idem.
+
+- [ ] **🆕 Moon That Never Sets submap 607 Scripted Disc 4 canon Death Rose ⭐** — Pattern Disc 4 trial boss canon scripted / 0% escape (cohérent Dark Doel submap 596 same pattern). Pattern individual trials per character canon Disc 4. À documenter `locations/Moon That Never Sets.md` (à créer) — Disc 4 trials area canon. Source: idem.
+
+- [ ] **🆕 EXP 6000 / Gold 0 / Drops Nothing canon Death Rose ⭐** — Pattern Disc 4 trial boss yield canon cohérent Dark Doel same EXP. Story trial pattern : no direct loot rewards canon. Pattern Moon trials no rewards (rewards via story progression). Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

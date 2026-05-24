@@ -3699,6 +3699,45 @@
 
 - [ ] **🆕 Pattern Spider thematic web-trap canon Deadly Spider ⭐** — Cobweb late-game ability + Arm-Blocking status = web traps target arm thematic. Pattern AI 2-phase spider canon : Bite baseline + Cobweb wounded. À investiguer Evil Spider AI cross-mob shared (recolor pattern shared abilities ?). Source: idem.
 
+### Mobs / Deadly Spider fandom complement — JP HP 410 ✓ +25% systematic CONFIRMED + Appearance canon NEW + Gnaw canon name officiel + Arm-Blocking 3-5 turns duration REVEALED NEW MAJEUR + Cobweb damage type wiki/fandom divergence + Body Purifier 10 gold shop canon + Encounter "Very common"
+
+- [ ] ⭐⭐ **🆕 Deadly Spider JP stats CONFIRMED +25% systematic fandom MAJEUR ⭐⭐** — HP US 328 / JP **410** ✓ (+25% pattern systematic confirmé, 328 × 1.25 = 410 exact) + Gold US 39 / JP **13** ✓ (÷3 pattern systematic confirmé, 39 ÷ 3 = 13 exact). Damia adopt JP 410/13. Cohérent décision projet adopt JP. Pattern JP/US conversion canon récurrent confirmé (cohérent Bowling/Crocodile/Crescent Bee/Crystal Golem/Cute Cat/Danton — Dark Elf reste exception +11% variant). Source: [`features/mobs/_sources/fandom-deadly-spider.md`](features/mobs/_sources/fandom-deadly-spider.md).
+
+- [ ] ⭐⭐ **🆕 Appearance canon Deadly Spider NEW MAJEUR ⭐⭐** — Fandom révèle visual canon :
+  - **Giant size = small deer scale** (imposing creature canon vs typical mob spider size)
+  - **Green and grey/white fur** = visual palette canon
+  - **8 eyes total** : 3 large horizontal + 3 small above + 2 below = arachnid eye configuration canon
+  - **4 large pincers on face** = predatory canon
+    À refléter sprite design Damia. Pattern thematic predatory giant spider canon. Source: idem.
+
+- [ ] ⭐ **🆕 Gnaw canon name officiel Deadly Spider NEW (fandom) ⭐** — Fandom révèle canon name (vs wiki ~Bite community approximation). Description : "Runs towards single target, biting them for medium physical damage". Pattern thematic "spider gnaw bite" canon. Damia adopt fandom canon **Gnaw** > wiki community ~Bite. À mettre à jour ability data-model. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Arm-Blocking 3-5 turns duration canon REVEALED NEW MAJEUR (fandom) ⭐⭐⭐** — Pattern Status Arm-Blocking canon mechanic reveal NEW canon : prevent character from attacking physically for **3-5 turns**. Pattern status proc duration RNG canon NEW (3-5 random range). À documenter `combat/status-effects.md` (à créer) — Arm-Blocking 3-5 turns duration canon. À implémenter `ArmBlockingStatus { type: 'physical-attack-block'; duration: { min: 3; max: 5; random: true } }` data-model Damia. Pattern Status duration canon mécanique précise NEW. Cross-référer autres status durations (Petrification / Bewitchment / etc.) canon. Source: idem.
+
+- [ ] ⚠️ **🆕 Cobweb damage type DIVERGENCE wiki Physical vs fandom Magic MAJEUR ⚠️** — Wiki tier 2 : "1× **Physical** damage + 50% Arm-Blocking" + "A-AV reduces". Fandom : "Spits cobweb dealing medium **MAGIC** damage + Arm-Blocking". ⚠️ Damage type divergence : wiki Physical vs fandom Magic. Pattern interpretation : Wiki tier 2 = canonical mechanic (A-AV reduces → physical-tagged ability canon confirmé pattern A-AV/M-AV per-ability) / Fandom = narrative interpretation (cobweb spit = magical-feeling visual). ⚠️ **Damia adopt wiki Physical canon** (cohérent A-AV reduction pattern classification). Pattern Cobweb = ranged projectile physical-tagged canon. À investiguer Discord pattern précis Cobweb damage type. Source: comparaison.
+
+- [ ] ⭐ **🆕 Body Purifier 10 gold all item shops canon Deadly Spider (fandom) ⭐** — Fandom révèle : "This item can be bought for 10 gold at any item shop". Pattern Body Purifier = shop-purchasable item canon (cohérent Pellet 10 gold all shops + Mind Purifier 20 gold shop existing canon). Pattern shop pricing canon récurrent. À documenter `items/consumables.md` Body Purifier shop canon entry. Pattern Mind Purifier 20 gold + Body Purifier 10 gold + Pellet 10 gold all shops pricing canon récurrent. Source: idem.
+
+- [ ] ⭐ **🆕 Encounter rate "Very common" canon Deadly Spider (fandom) ⭐** — Pattern encounter rate canon : Very common (cohérent Bowling Very common Disc 3 pattern existing). Pattern Mountain of Mortal Dragon Disc 3 mob frequency canon. Cohérent farming Body Purifier 8% rate viable canon. Source: idem.
+
+- [ ] **🆕 Stats divergences Deadly Spider wiki vs fandom ⚠️** :
+  - AT : wiki **60** vs fandom **68** (+8 / +13%)
+  - MAT : wiki **42** vs fandom **48** (+6 / +14%)
+  - HP/DF/MDF/SPD/EXP match ✓
+  - → Damia adopt fandom higher AT 68 / MAT 48 probable (JP closer pattern récurrent)
+    Source: comparaison.
+
+- [ ] **🆕 "Immune to poison" cross-source confirmed Deadly Spider ⭐** — Fandom confirme wiki Status 5/3 deviation Poison immune canon. Cohérent thematic "spider venom = poison-resistant" biology canon. Cross-source confirmation Status 5/3 NEW canon. Source: idem.
+
+- [ ] **🆕 Formations canon confirmed cross-source + NEW reveal Deadly Spider ⭐** — 4 formations canon fandom (vs wiki tier 2 4 formations) :
+  - Deadly Spider solo (formation 153 wiki ✓)
+  - Deadly Spider + Beastie Dragon (formation 157 wiki ✓)
+  - **Deadly Spider + Mega Sea Dragon** ⭐ NEW (vs wiki formation 155 = Mega Sea Dragon + Deadly Spider — same different naming order)
+  - Deadly Spider + Mega Sea Dragon ×2 (formation 158 wiki ✓)
+    Pattern Mega Sea Dragon NEW mob canon Mountain of Mortal Dragon partner confirmé cross-source. Pattern Beastie Dragon existing partner confirmé cross-source. Source: idem.
+
+- [ ] **🆕 Rose + Dart party member Mountain of Mortal Dragon Disc 3 canon confirmed gallery ⭐** — Image gallery Deadly Spider Cobweb on Rose + Gnaw on Dart confirme party composition Mountain of Mortal Dragon Disc 3 canon. Cohérent existing Disc 3 party composition canon. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

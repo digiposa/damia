@@ -12,21 +12,26 @@
 >
 > ⭐⭐ **Petrifying Arrow NEW canon name MAJEUR** : 100% Petrification proc Single + **M-AV reduces** (cohérent pattern A-AV/M-AV per-ability classification — 4ème instance confirmed).
 >
-> ⭐⭐ **Trivia cut ability "Bewitching Arrow" canon NEW MAJEUR** — combat script reveal + confirms other Evergreen Forest mob has Bewitchment ability canon.
+> ⭐⭐⭐ **Cut "Bewitching Arrow" trivia RÉSOLU fandom MAJEUR** : **Forest Runner has WOOING (Bewitchment) ability canon** = other Evergreen Forest mob avec Bewitchment confirmed cross-source. Cut Bewitching Arrow Dark Elf to avoid redundancy with Forest Runner Wooing canon ✓.
 >
-> ⭐ **Forest Runner + Flying Rat NEW mobs canon Evergreen Forest** formation partners.
+> ⭐ **Forest Runner + Flying Rat NEW mobs canon Evergreen Forest** formation partners + **Forest Runner Wooing reveal NEW canon ability**.
 >
 > ⭐ **Depetrifier 8% drop source canon** — pattern thematic ironic canon (Dark Elf inflicts Petrification + drops cure).
 >
-> ⭐ **MDF 180 very high anti-magic** (cohérent Cute Cat MDF 180 pattern).
+> ⭐ **Drop Kick canon name officiel** (fandom — vs wiki ~Heel Drop community approximation).
+>
+> ⭐ **MDF 180 very high anti-magic** (cohérent Cute Cat MDF 180 pattern) — ⚠️ fandom MDF 120 divergence (Damia adopt wiki 180).
+>
+> ⭐ **JP HP 500 confirmed +11% variation NON systematic** (vs typical +25%) — pattern JP scaling variant canon. **JP Gold 12 ✓ ÷3 confirmed**.
 >
 > **Sources** :
 >
 > - 🥈 [`_sources/lod-wiki-dark-elf.md`](./_sources/lod-wiki-dark-elf.md) — wiki LoD (Darkness Evergreen Forest Disc 1 + Counter 23 NEW intermediate + Status standard 4/4 + EXP 80 / Gold 36 / Depetrifier 8% drop + HP 450 / DF 70 / MAT 44 / MDF 180 very high + AI HP-based chance modifiers Heel Drop/Detonate Arrow/Petrifying Arrow + Detonate Arrow Party Non-Elemental NEW + Petrifying Arrow 100% Petrification M-AV reduces NEW + Trivia cut Bewitching Arrow + Forest Runner + Flying Rat NEW mobs partners + escape 30%)
+> - 🥉 [`_sources/fandom-dark-elf.md`](./_sources/fandom-dark-elf.md) — fandom (⭐⭐⭐ **Forest Runner WOOING (Bewitchment) ability canon REVEALED MAJEUR** — résout trivia cut Bewitching Arrow + ⭐ **JP HP 500 +11% variation NON systematic canon** + **JP Gold 12 ÷3 confirmed** + ⭐ **Drop Kick canon name officiel** vs wiki ~Heel Drop + **Petrify Arrow fandom shortened** + Detonate Arrow Magic Attack confirmed + ⭐ **"Forest Runner Wooing only at red health" strategy canon** + **Kill Dark Elf first strategy canon** + ⚠️ Stats divergences AT 42→50 / MAT 44→50 / MDF 180→120 wiki vs fandom + **Petrify removes character from combat canon explanation** + Stub article note)
 
 ## Statut
 
-🟡 **Canon documenté wiki tier 2 uniquement** — fandom complement à ingérer en suite.
+🟢 **Canon documenté wiki + fandom** — Cut Bewitching Arrow trivia RÉSOLU (Forest Runner Wooing) + JP HP 500 +11% variant + Drop Kick canon name + Kill order strategy.
 
 ## Identity canon
 
@@ -42,20 +47,34 @@
 - Cohérent Evergreen Forest forest mob ecosystem canon
 - Pattern Disc 1 early Darkness mobs canon
 
-## Stats canon ⚠️ Damia adopt JP ⭐
+## Stats canon ⚠️ Damia adopt JP ⭐ (JP confirmed fandom)
 
-| Stat | Wiki US              | **Damia (JP)** ⭐                 | Notes                                               |
-| ---- | -------------------- | --------------------------------- | --------------------------------------------------- |
-| HP   | 450                  | (JP +25% ~562 à confirmer fandom) | Disc 1 mid-tier HP                                  |
-| AT   | 42                   | **42**                            | Mid-tier Disc 1                                     |
-| DF   | 70                   | **70**                            | Low-mid DF                                          |
-| MAT  | 44                   | **44**                            | Mid-tier Disc 1                                     |
-| MDF  | **180** ⚠️ very high | **180**                           | ⚠️ MDF anti-magic very high (cohérent Cute Cat 180) |
-| SPD  | 70                   | **70**                            | Mid SPD                                             |
-| A-AV | 0%                   | **0%**                            |                                                     |
-| M-AV | 0%                   | **0%**                            |                                                     |
-| Gold | 36                   | (JP ÷3 ~12 à confirmer fandom)    |                                                     |
-| EXP  | 80                   | **80**                            |                                                     |
+| Stat | Wiki US              | Fandom US   | **Damia (JP)** ⭐                            | Notes                                              |
+| ---- | -------------------- | ----------- | -------------------------------------------- | -------------------------------------------------- |
+| HP   | 450                  | 450         | **500** ✓ JP confirmed fandom (+11% variant) | ⚠️ Variation NON systematic (vs typical +25%)      |
+| AT   | 42                   | **50** (+8) | **50** (fandom higher, JP closer probable)   | ⚠️ wiki 42 vs fandom 50 divergence                 |
+| DF   | 70                   | 70          | **70**                                       | Low-mid DF                                         |
+| MAT  | 44                   | **50** (+6) | **50** (fandom higher, JP closer probable)   | ⚠️ wiki 44 vs fandom 50 divergence                 |
+| MDF  | **180** ⚠️ very high | **120** ⚠️  | **180** (wiki tier 2 plus précis canon)      | ⚠️ MAJEUR divergence (-33%) — Damia adopt wiki 180 |
+| SPD  | 70                   | 70          | **70**                                       | Mid SPD                                            |
+| A-AV | 0%                   | -           | **0%**                                       |                                                    |
+| M-AV | 0%                   | -           | **0%**                                       |                                                    |
+| Gold | 36                   | 36          | **12** ✓ JP confirmed fandom ÷3 pattern      |                                                    |
+| EXP  | 80                   | 80          | **80**                                       |                                                    |
+
+⚠️ **JP HP scaling variant canon NEW MAJEUR ⭐** :
+
+- Dark Elf HP US 450 → JP **500** = **+11% variation NON systematic** (vs typical +25%)
+- Pattern JP scaling variable per-mob canon : +11% (Dark Elf) / +25% standard (Crystal Golem/Cute Cat/Bowling/Crocodile/Crescent Bee/Danton) / +67% extreme (Imago) / +122% extreme (Crescent Bee Wind variant)
+- Gold ÷3 toujours constant canon
+- À documenter `combat/jp-us-stats-scaling.md` (à créer) — pattern JP scaling variable per-mob canon
+
+⚠️ **Stats divergences wiki vs fandom ⚠️ MAJEUR** :
+
+- AT : wiki **42** vs fandom **50** (+19%)
+- MAT : wiki **44** vs fandom **50** (+13%)
+- **MDF : wiki 180 vs fandom 120** ⚠️ MAJEUR (-33%) — Damia adopt wiki 180 (pattern wiki plus précis canon)
+- Pattern fandom higher offensive (AT/MAT JP closer probable) + fandom MDF lower potential erreur
 
 → Pattern **"anti-magic balanced Disc 1 magical-archer" canon Dark Elf** ⭐ :
 
@@ -124,11 +143,12 @@ Per user instruction : feature Counter non-implémentée Damia, factual tier men
 - Pattern AI HP zone + chance distribution canon NEW (vs typical fixed phase abilities Minor Enemy)
 - Pattern complex phase + RNG canon Minor Enemy
 
-### ~Heel Drop canon name (community)
+### Drop Kick canon name officiel (fandom) ⭐
 
-- **~Heel Drop** = community approximation > 50% phase ability
+- **Drop Kick** = canon name officiel **fandom** (NOT ~ approximation) — Damia adopt > wiki community ~Heel Drop
+- ~Heel Drop = wiki community approximation pre-fandom-reveal
 - **1× phys damage** baseline canon
-- Pattern thematic "elf kick attack" canon
+- Pattern thematic "elf drop kick" canon
 
 ### Detonate Arrow canon name officiel ⭐ NEW
 
@@ -190,21 +210,31 @@ Per user instruction : feature Counter non-implémentée Damia, factual tier men
 - Pattern Evergreen Forest Disc 1 mob ecosystem canon : Dark Elf + Forest Runner + Flying Rat (3 mobs Disc 1 confirmed)
 - À documenter `mobs/Forest Runner.md` + `mobs/Flying Rat.md` (à créer) — Evergreen Forest Disc 1 mobs canon
 
-## Trivia canon cut content reveal ⭐⭐ MAJEUR
+## Trivia canon cut content reveal ⭐⭐⭐ MAJEUR — RÉSOLU fandom
 
-### Bewitching Arrow — cut ability canon
+### Bewitching Arrow — cut ability canon ✅ RÉSOLU fandom
 
 > Based on the combat script, this foe likely had a move that would have been called **"Bewitching Arrow"**, which may have been cut to avoid having **two enemies in Evergreen Forest capable of inflicting Bewitchment**.
 
-⚠️ **Cut content canon Dark Elf ⭐⭐ MAJEUR** :
+⚠️ **Cut content canon Dark Elf ⭐⭐⭐ MAJEUR + RÉSOLU fandom** :
 
 - **Bewitching Arrow** = canon cut content ability Dark Elf (combat script residual canon)
-- Reveal canon : **2 enemies Evergreen Forest had Bewitchment ability planned** → one cut to avoid redundancy
-- → **Confirms other Evergreen Forest mob canon Bewitchment ability** (Forest Runner OR Flying Rat probable)
-- Pattern game design canon : status diversification per-area canon ⭐
+- Reveal canon wiki : **2 enemies Evergreen Forest had Bewitchment ability planned** → one cut to avoid redundancy
+- ✅ **RÉSOLU fandom MAJEUR ⭐⭐** : **Forest Runner has WOOING (Bewitchment) ability canon** = other Evergreen Forest mob avec Bewitchment confirmed
+- Pattern game design canon CONFIRMED : status diversification per-area canon ✓ ⭐
 - Pattern thematic "Dark Elf 3-arrow trio" canon (Detonate + Petrifying + Bewitching cut → Detonate + Petrifying only canon)
+- Forest Runner Wooing = retained Bewitchment ability canon Evergreen Forest area
 - À documenter `combat/cut-content.md` (à créer) — cut abilities canon documentation
-- Pattern Damia : data-model `MobAbility { canon: true; status: 'cut'?: boolean }` optional reference
+- Pattern Damia : data-model `MobAbility { canon: true; cut?: boolean }` optional reference
+
+### Forest Runner Wooing canon reveal ⭐⭐ NEW (fandom)
+
+- **Wooing** = canon name officiel ability Forest Runner (fandom reveal)
+- Bewitchment-type effect canon : "removes character from combat" (cohérent Bewitchment status)
+- **"Only at red health"** condition canon (HP ≤ 25% probable — AI low HP threshold)
+- Pattern thematic "Wooing" = attract/charm = Bewitchment narrative cohérent
+- À documenter `mobs/Forest Runner.md` (à créer) — Wooing ability canon Bewitchment proc + AI red health trigger
+- Pattern Forest Runner AI canon : late-game ability trigger (cohérent Crystal Golem HP recovers ≤ 25%, Cute Cat Dance of Death ≤ 25%, etc.)
 
 ## Combat flow canon
 
@@ -217,10 +247,12 @@ Per user instruction : feature Counter non-implémentée Damia, factual tier men
 4. **DF 70 low-mid** + **MDF 180 very high anti-magic** = physical attacks favored, magic strongly reduced
 5. **A-AV 0% / M-AV 0%** = no avoidance
 
-### Strategy canon recommandée
+### Strategy canon recommandée (fandom-enriched ⭐)
 
+- ⭐ **Kill Dark Elf FIRST** canon (fandom) — Dark Elf = main threat (Petrify Arrow 100% from HP ≤ 50%)
+- **Forest Runner second priority** — Wooing only at red health (HP ≤ 25% probable late trigger)
 - **Darkness weak Light** → Shana Light Dragoon (post-Disc 1) / Light Repeat Items
-- ⚠️ **Petrifying Arrow risk** : equip M-AV gear (reduce proc) OR carry **Depetrifier** (cure Petrification — Dark Elf own drop ironic canon)
+- ⚠️ **Petrifying Arrow risk = removes character from combat one-shot** (fandom canon explanation) : equip M-AV gear (reduce proc) OR carry **Depetrifier** (cure Petrification — Dark Elf own drop ironic canon)
 - **Detonate Arrow AoE Party risk** : sustain HP all party
 - **Sustain damage HP > 50%** = avoid arrow phase (Detonate + Petrifying)
 - **Physical attacks favored** (MDF 180 anti-magic — physical strategy canon)
@@ -232,19 +264,24 @@ Per user instruction : feature Counter non-implémentée Damia, factual tier men
 
 ### Décisions canon à conserver
 
-1. **Stats canon (JP adopt à confirmer)** : HP 450 + AT 42 + DF 70 + MAT 44 + MDF 180 + SPD 70 + A-AV/M-AV 0%
+1. **Stats canon (JP confirmed fandom +11% variant)** ⭐ : HP **500** ✓ + AT **50** + DF 70 + MAT **50** + **MDF 180 wiki** (vs fandom 120 erreur probable) + SPD 70 + A-AV/M-AV 0% + Gold **12** ✓
 2. **Element Darkness** : Minor Darkness Evergreen Forest canon
 3. **Status Immunity standard 4/4** : pattern majoritaire
 4. **Counter 23 NEW intermediate tier canon** : 8 tiers canon mapping étendu 0/3/4/9/16/19/**23**/28
-5. **AI HP-based avec chance modifiers** : Heel Drop > 50% / Detonate Arrow + Petrifying Arrow ≤ 50% chance split
-6. **Detonate Arrow canon name officiel** : Party 0.5× Non-Elemental magic AoE
-7. **Petrifying Arrow canon name officiel** : Single 100% Petrification proc M-AV-reduced
-8. **Pattern A-AV/M-AV per-ability CONFIRMED 4ème instance** : magical-tagged → M-AV / physical-tagged → A-AV
-9. **Depetrifier 8% drop source canon** : Dark Elf Evergreen Forest Disc 1
-10. **Bewitching Arrow cut canon ⭐** : 3-arrow trio thematic Damia adopt OR keep canon cut content
-11. **Forest Runner + Flying Rat NEW mobs canon** : formation partners Evergreen Forest
-12. **Evergreen Forest location only** : no World Map road
-13. **Escape 30% Disc 1 standard** : intermediate forest
+5. **AI HP-based avec chance modifiers** : Drop Kick > 50% / Detonate Arrow + Petrifying Arrow ≤ 50% chance split
+6. **Drop Kick canon name officiel** (fandom) : > wiki ~Heel Drop community
+7. **Detonate Arrow canon name officiel** : Party 0.5× Non-Elemental magic AoE
+8. **Petrifying Arrow canon name officiel** : Single 100% Petrification proc M-AV-reduced
+9. **Pattern A-AV/M-AV per-ability CONFIRMED 4ème instance** : magical-tagged → M-AV / physical-tagged → A-AV
+10. **Depetrifier 8% drop source canon** : Dark Elf Evergreen Forest Disc 1 (ironic thematic)
+11. **Bewitching Arrow cut canon RÉSOLU** ⭐ : Forest Runner Wooing canon = other Bewitchment Evergreen Forest mob
+12. **Forest Runner Wooing ability canon NEW** : Bewitchment proc red health AI trigger
+13. **Forest Runner + Flying Rat NEW mobs canon** : formation partners Evergreen Forest
+14. **Evergreen Forest location only** : no World Map road
+15. **Escape 30% Disc 1 standard** : intermediate forest
+16. **Strategy canon "Kill Dark Elf first"** (fandom) : kill order priority canon
+17. **JP HP scaling variant +11% Dark Elf** : pattern JP scaling variable per-mob canon (non systematic +25%)
+18. **Petrification removes character from combat canon explanation** (fandom)
 
 ### Implementation tech
 
@@ -291,12 +328,17 @@ Per user instruction : feature Counter non-implémentée Damia, factual tier men
 
 ### Questions ouvertes
 
-- **JP stats Dark Elf** : confirmer fandom HP +25% pattern → HP ~562 ?
+- ~~**JP HP Dark Elf**~~ ✅ **RÉSOLU fandom** : HP **500** ✓ +11% variation NON systematic (pattern JP scaling variant canon NEW)
+- ~~**Bewitching Arrow cut content other Evergreen Forest mob**~~ ✅ **RÉSOLU fandom** : Forest Runner Wooing canon = other Bewitchment mob
+- **AT/MAT divergences wiki vs fandom** : 42 vs 50 / 44 vs 50 — Damia adopt fandom higher probable (JP closer pattern récurrent)
+- **MDF 180 vs 120 divergence MAJEUR** : wiki tier 2 plus précis canon (adopt 180) — fandom 120 erreur probable ? À investiguer Discord
+- **JP HP scaling +11% variant Dark Elf** : pattern JP scaling variable per-mob canon (cohérent autres variants Imago +67% / Crescent Bee +122%) — à investiguer si pattern par mob type
+- **Forest Runner Wooing AI trigger "red health" précis** : HP ≤ 25% probable canon — à confirmer wiki tier 2 Forest Runner future ingestion
 - **Forest Runner + Flying Rat stats canon** : à ingérer wiki tier 2 + fandom future
-- **Forest Runner / Flying Rat Bewitchment ability canon** : which mob has Bewitchment (per trivia cut "Bewitching Arrow") ?
+- **Forest Runner Wooing ability mechanic** : 100% Bewitchment proc ? M-AV reduces ? À investiguer wiki tier 2 future
 - **Detonate Arrow shared cross-mob canon** : Arrow Shooter (existing Earth Disc 2) Detonate Arrow same canon ? Cross-mob shared ability ?
 - **Bewitching Arrow cut content** : Damia adopt cut ability ? OR respect canon cut content ?
-- **Pattern Mob 100% Petrification offensive** : Dark Elf first ingestion, autres mobs ? (Basilisk Petrifying Glare 100% similar pattern existing)
+- **Pattern Mob 100% Petrification offensive** : Dark Elf first ingestion Mob, autres mobs ? (Basilisk Petrifying Glare 100% similar pattern existing)
 - **Counter 23 vs 28 boundary** : autres mobs Counter 23 tier exist ? À cross-check alphabetical ingestion
 
 ## Liens transverses

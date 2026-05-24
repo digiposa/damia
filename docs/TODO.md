@@ -3628,6 +3628,36 @@
 
 - [ ] **🆕 MDF 180 very high anti-magic Disc 1 mob canon Dark Elf ⭐** — Cohérent Cute Cat MDF 180 pattern Disc 3-4 — Dark Elf Disc 1 anti-magic mid-tier MDF 180. Pattern Disc 1 anti-magic mob canon NEW (vs typical low MDF Disc 1 mobs). Pattern Dark Elf magical-archer thematic. Source: idem.
 
+### Mobs / Dark Elf fandom complement — Forest Runner WOOING (Bewitchment) RÉSOLU cut Bewitching Arrow MAJEUR + JP HP 500 +11% variant NON systematic NEW + Drop Kick canon name + Kill Dark Elf first strategy + Petrify removes character explanation + Stats divergences AT/MAT wiki vs fandom + MDF 120 vs 180 divergence
+
+- [ ] ⭐⭐⭐ **🆕 Forest Runner WOOING (Bewitchment) ability canon REVEALED fandom MAJEUR ⭐⭐⭐** — Fandom révèle Forest Runner has **Wooing** ability (Bewitchment-type "removes character from combat"). **RÉSOUT trivia cut content Dark Elf "Bewitching Arrow"** ✓ : Forest Runner = other Evergreen Forest mob avec Bewitchment ability canon (cut Dark Elf Bewitching Arrow to avoid redundancy). Pattern game design canon : status diversification per-area canon CONFIRMED ✓. **Wooing canon name NEW Forest Runner** ability canon. "Wooing only at red health" condition canon (HP ≤ 25% probable). Pattern thematic "Wooing" = attract/charm = Bewitchment narrative cohérent. À documenter `mobs/Forest Runner.md` (à créer) — Wooing ability canon Bewitchment proc + AI red health trigger. Source: [`features/mobs/_sources/fandom-dark-elf.md`](features/mobs/_sources/fandom-dark-elf.md).
+
+- [ ] ⭐⭐ **🆕 JP HP 500 +11% variation NON systematic Dark Elf canon NEW MAJEUR ⭐** — Fandom HP US 450 / JP **500** = **+11% variation NON systematic** (vs typical +25%). Pattern **JP scaling variable per-mob canon** : +11% (Dark Elf) / +25% standard (Crystal Golem/Cute Cat/Bowling/Crocodile/Crescent Bee/Danton) / +67% extreme (Imago) / +122% extreme (Crescent Bee Wind variant). Gold ÷3 toujours constant canon. Damia adopt JP 500 canon. À documenter `combat/jp-us-stats-scaling.md` (à créer) — pattern JP scaling variable per-mob canon. Source: idem.
+
+- [ ] ⭐ **🆕 Drop Kick canon name officiel Dark Elf NEW (fandom) ⭐** — Fandom révèle canon name (vs wiki ~Heel Drop community approximation). Pattern thematic "elf drop kick" canon. 1× phys damage baseline canon. Damia adopt fandom canon **Drop Kick** > wiki community ~Heel Drop. À mettre à jour ability data-model. Source: idem.
+
+- [ ] **🆕 Petrify Arrow fandom shortened name (vs wiki "Petrifying Arrow") ⚠️** — Minor naming difference cross-source. Damia adopt wiki **Petrifying Arrow** (more formal canon name). Confirms cross-source Petrification 100% proc canon. Source: comparaison.
+
+- [ ] **🆕 Detonate Arrow Magic Attack tag confirmed cross-source ⭐** — Fandom "Magic Attack" tag confirms wiki Non-Elemental magic damage canon. Pattern Detonate Arrow Party magic AoE canon confirmed cross-source. Source: idem.
+
+- [ ] ⭐ **🆕 "Kill Dark Elf first" strategy canon NEW (fandom) ⭐** — Dark Elf = main threat (Petrify Arrow 100% from HP ≤ 50%). Forest Runner = secondary threat (Wooing only at red health = HP ≤ 25%). Pattern kill order canon : Dark Elf first → Forest Runner second. Strategy player priority canon. À documenter `combat/strategy.md` (à créer) party strategy canon par target. Source: idem.
+
+- [ ] **🆕 Petrification removes character from combat canon explanation (fandom) ⭐** — Fandom : "Petrify an ally, effectively **removing a character from combat in one shot**". Pattern Petrification = combat removal canon (cohérent Erase mechanic similar). Pattern Damia : Petrification status = remove from combat canon. À documenter `combat/status-effects.md` (à créer) — Petrification removal mechanic canon. Source: idem.
+
+- [ ] **🆕 Stats divergences Dark Elf wiki vs fandom ⚠️** :
+  - AT : wiki **42** vs fandom **50** (+8 / +19%)
+  - MAT : wiki **44** vs fandom **50** (+6 / +13%)
+  - **MDF : wiki 180 vs fandom 120** ⚠️ MAJEUR divergence (-33%) — Damia adopt wiki **180** (pattern wiki tier 2 plus précis canon)
+  - HP/DF/SPD/EXP match ✓
+  - Damia adopt fandom higher AT 50 / MAT 50 probable (JP closer pattern récurrent)
+  - À investiguer Discord MDF discrepancy. Source: comparaison.
+
+- [ ] **🆕 JP Gold 12 ✓ ÷3 pattern systematic confirmed Dark Elf ⭐** — Fandom US 36 / JP **12** = ÷3 pattern systematic confirmed cohérent autres mobs. Damia adopt JP 12 canon. Source: idem.
+
+- [ ] **🆕 Formations canon confirmed cross-source Dark Elf ⭐** — 3 formations identiques wiki tier 2 confirmé fandom : Dark Elf solo (133) + Dark Elf + Forest Runner (137) + Dark Elf + Flying Rat ×2 (138). Pattern Forest Runner + Flying Rat NEW mobs canon Evergreen Forest partners cross-source confirmed. Source: idem.
+
+- [ ] **🆕 Dark Elf article fandom stub note ⭐** — Article fandom stub canon (informations limitées vs wiki tier 2 complet). Pattern fandom stub canon. Damia priorise wiki tier 2 pour stats + AI précis canon (vs fandom narrative). Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

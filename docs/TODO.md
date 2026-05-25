@@ -4282,6 +4282,64 @@
 
 - [ ] **🆕 Encounter rate "Common" canon fandom** — Cohérent wiki 20-35% submap dependent. Pattern Damia encounter rate descriptive terminology canon. Source: idem.
 
+### Bosses / Dragon Spirit wiki (3 ghost-form bosses Mayfil Disc 4 — Feyrbrand + Regole + Divine Dragon revisit — Dual-entity boss + Retaliate passive NEW MAJEUR + Untargetable Ghost form trick + Cross-boss untargetable canon récurrent + 3 signature Spell Items + Status Slime/W Laser/Tsunami NEW + Divine Dragon Cannon position-based ✓)
+
+- [ ] ⭐⭐⭐ **🆕 3 Dragon Spirits Mayfil Disc 4 canon MAJEUR ⭐⭐⭐** — 3 ghost-form bosses Disc 4 Mayfil Death City = revisit canon dragons defeated previously : (1) Dragon Spirit (Feyrbrand) Wind HP 8000 formation 449 submap 542 drop Down Burst 100% ; (2) Dragon Spirit (Regole) Water HP 12000 formation 448 submap 544 drop Frozen Jet 100% ; (3) Dragon Spirit (Divine Dragon) Non-Elemental HP 16000 formation 447 submap 546 drop Flash Hall 100%. Pattern thematic Mayfil = revisit boss area canon Disc 4. À documenter `bosses/Dragon Spirit.md` (créé). Cohérent existing Divine Dragon canon "BATTLE AT MAYFIL revisit boss" canon. Source: [`features/bosses/_sources/lod-wiki-dragon-spirit.md`](features/bosses/_sources/lod-wiki-dragon-spirit.md).
+
+- [ ] ⭐⭐⭐ **🆕 Dual-entity boss canon MAJEUR (Dragon Spirit + Ghost) ⭐⭐⭐** — Chaque Dragon Spirit = Dragon Spirit form (targetable) + Ghost form (untargetable). Pattern Damia : `DragonSpiritBoss { entityType: 'dual-entity'; ghostForm: { targetable: false; ... } }` data-model canon NEW. Boss-tier dual-entity pattern canon NEW Damia. À documenter `combat/dual-entity-bosses.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Retaliate passive canon NEW MAJEUR ⭐⭐⭐** — Reactive ability triggered when Dragon Spirit targeted by attack → "Ignore turn order + use Instigate" / transform Ghost + abilities. Pattern Damia : `RetaliatePassive { trigger: 'on-targeted-by-attack'; chance: 'variable'; effect: 'ignore-turn-order + instigate' }` data-model canon NEW. Variant per-spirit canon : Feyrbrand "use Instigate" / Regole "transform + subset abilities" / Divine Dragon "transform + 7-ability sub-pool expansive". À documenter `combat/passives.md` (à créer) Retaliate canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Untargetable Ghost form Trivia MAJEUR canon NEW ⭐⭐⭐** — Ghost counterpart "likely only intended for creating graphical effect of transforming" → consequence canon : **Ghost forms unaffected Power Down + Speed Down** ⚠️ bypass debuffs canon. Strategy implication : Power Down + Speed Down INEFFECTIVE Dragon Spirits battles. Pattern Damia : `UntargetableGhostFormBoss { unaffectedByDebuffs: ['power-down', 'speed-down']; purpose: 'graphical-transformation-effect' }` data-model canon NEW. À documenter `combat/stat-debuffs.md` (à créer) Power Down + Speed Down ineffective untargetable canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Cross-boss untargetable trick canon récurrent NEW MAJEUR ⭐⭐⭐** — 5 additional bosses canon untargetable trick confirmed : **Kamuy** (NEW boss) + **Lloyd (Flanvel Tower)** (NEW variant separate main Lloyd Disc 3) + **Magician Faust (Real)** (NEW variant separate "real" form) + **Claire** (NEW boss — Dart's mother encounter possible Disc 4 ?) + **Zieg Feld** (NEW boss — Dart's father antagonist final-area Disc 4). 5 additional + 3 Dragon Spirits = **8 bosses canon confirmed** untargetable mechanic. À documenter individuels : `bosses/Kamuy.md`, `bosses/Lloyd (Flanvel Tower).md`, `bosses/Magician Faust (Real).md`, `bosses/Claire.md`, `bosses/Zieg Feld.md` (tous à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Lloyd (Flanvel Tower) NEW boss variant canon MAJEUR ⭐⭐⭐** — Boss variant Disc 3 Tower of Flanvel separate main Lloyd boss canon. Cohérent existing canon Lloyd Disc 3-4 + cohérent Dragon Soldier Tower of Flanvel canon Disc 3. Pattern Damia : Lloyd multiple encounters canon (Lloyd Tower of Flanvel Disc 3 + main Lloyd boss Disc 3-4). Untargetable trick canon. À documenter `bosses/Lloyd (Flanvel Tower).md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Magician Faust (Real) NEW boss variant canon MAJEUR ⭐⭐⭐** — Boss variant "real" form separate main Magician Faust boss canon. Pattern Damia : Faust multiple encounters canon (Real variant + main Faust). Untargetable trick canon. À investiguer "Real" qualifier meaning canon (real vs illusion ?). À documenter `bosses/Magician Faust (Real).md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Claire NEW boss canon MAJEUR ⭐⭐⭐** — Boss canon NEW référence Trivia Dragon Spirit. Claire = Dart's mother canon lore. Pattern Damia : Claire boss encounter possible Disc 4 ? (à investiguer story canon) — possible Mayfil revisit thematic cohérent ghost-form encounters. Untargetable trick canon. À documenter `bosses/Claire.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Zieg Feld NEW boss canon MAJEUR ⭐⭐⭐** — Boss canon NEW référence Trivia Dragon Spirit. Zieg Feld = Dart's father canon lore — antagonist final-area Disc 4 canon. Pattern Damia : Zieg Feld boss encounter Disc 4 final-area Moon That Never Sets ? (à investiguer story canon). Untargetable trick canon. À documenter `bosses/Zieg Feld.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Kamuy NEW boss canon MAJEUR ⭐⭐⭐** — Boss canon NEW référence Trivia Dragon Spirit. Untargetable trick canon. À investiguer story canon (Kamuy = ?). À documenter `bosses/Kamuy.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 3 signature Spell Items drops 100% canon ⭐⭐⭐** — Dragon Spirit form 100% guaranteed drops : **Down Burst** (Wind, Feyrbrand spirit) + **Frozen Jet** (Water, Regole spirit) + **Flash Hall** (Non-Elemental, Divine Dragon spirit). Pattern thematic spirit element matches Spell Item element canon. À documenter `items/Down Burst.md` + `items/Frozen Jet.md` + `items/Flash Hall.md` (tous à créer/vérifier). Pattern Damia : 3 spirits = 3 free signature Spell Items canon (1 farm run). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Mayfil Death City Disc 4 = Dragon Spirits encounter location canon ⭐⭐⭐** — 3 spawn submaps 542/544/546 separate encounter formations canon. Pattern Damia : Mayfil = revisit boss area canon Disc 4 (3 Dragon Spirits + autres bosses Mayfil canon). À documenter `locations/Mayfil.md` (à créer). Cross-référer existing Mayfil mentions canon (Dragon Soldier Mayfil cross-reference + Divine Dragon "BATTLE AT MAYFIL"). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Instigate self-action canon ✓ cohérent Boss Extras + Divine Dragon canon ⭐⭐⭐** — Action self-targeting transforming Dragon Spirit → Ghost form → use Ghost ability → revert Dragon Spirit. Pattern Boss Extras Instigate canon : canonical mechanic transforming entity boss. Pattern Damia : `InstigateSelfAction { type: 'transform-attack-revert'; targetForm: 'ghost-form' }` data-model canon. Cohérent existing Divine Dragon Disc 3 Boss Extras Instigate canon. À documenter `combat/boss-extras.md` (à créer/vérifier) Instigate canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Status Slime NEW Feyrbrand spirit ability MAJEUR ⭐⭐** — 1× Physical damage + **100% inflict Fear OR Poison OR Stun** (multi-status proc canon NEW vs typical 50% single-status). Pattern Damia : `StatusSlimeAbility { type: 'physical+multi-status'; multiplier: 1; statusProcs: ['fear', 'poison', 'stun']; procChance: 1.0 }` data-model canon NEW. À implémenter ability Damia. Source: idem.
+
+- [ ] ⭐⭐ **🆕 W Laser NEW Regole spirit ability MAJEUR ⭐⭐** — 2× **Light-elemental** magic Party (cross-element canon : Water spirit uses Light magic NEW). Pattern Damia : `WLaserAbility { type: 'magic-party-aoe'; multiplier: 2; element: 'light' }` data-model canon NEW. Pattern cross-element canon : spirits use abilities outside their natural element canon. À implémenter ability Damia. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Tsunami NEW Regole spirit ability MAJEUR ⭐⭐** — 4× Water-elemental magic Party (high-tier Party AoE canon). Pattern Damia : `TsunamiAbility { type: 'magic-party-aoe'; multiplier: 4; element: 'water'; accessTrigger: 'instigate-only' }` data-model canon NEW. ⭐⭐ **Differential ability access canon NEW** : Tsunami available only via Instigate (NOT Retaliate) — pattern canon NEW. À implémenter ability Damia. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Divine Dragon spirit canonical Dragon Spirit form abilities NOT ~ approximations ⭐⭐** — **Burning Wave** (3× Fire Party) / **Burn Out** (1.5× Fire Single) / **Pellet** (1.5× Earth Single) / **Down Burst** (3× Wind Party) = canon names officiels (no ~ marker wiki). Cohérent existing Divine Dragon Disc 3 boss canon. Pattern Damia : Dragon Spirit form 4 abilities = canon names from existing Divine Dragon canon (cohérent revisit). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Divine Dragon Cannon position-based AoE canon ✓ cohérent existing ⭐⭐** — Position-based AoE : 4× primary / 2× adjacent Non-Elemental magic. Pattern position-based : central member primary → both sides adjacent / side member primary → central adjacent + opposite side NOT targeted. Pattern Damia : `DivineDragonCannonAbility { type: 'position-based-aoe'; multiplierPrimary: 4; multiplierAdjacent: 2; element: 'non-elemental'; magicType: 'magic' }` data-model canon (cohérent existing canon Divine Dragon Disc 3). Source: idem.
+
+- [ ] ⭐⭐ **🆕 EXP/Gold "0/X" pattern dual-entity yield canon NEW ⭐⭐** — Ghost form = 0 EXP / 0 Gold (untargetable, defeated indirectly via Dragon Spirit defeat) / Dragon Spirit form = X yield canon. Pattern Damia : dual-entity yield split canon (cohérent untargetable trick mechanic). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Status all 8 ✔ Boss-tier all 3 Dragon Spirits canon ⭐⭐** — Standard pattern Boss all 8 ✔ immune (Petrify/Bewitch/Arm Block/Dispirit/Confuse/Fear/Poison/Stun). Cohérent existing canon Boss-tier all 8 ✔ pattern. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Counter 28 high-density tier all 3 Dragon Spirits canon ⭐⭐** — Cohérent existing canon HIGH DENSITY tier pattern. Per user instruction : feature Counter non-implémentée Damia, factual tier mention only. Source: idem.
+
+- [ ] ⭐ **🆕 Retaliate variant per-spirit canon ⭐** — Feyrbrand : "use Instigate" (standard) / Regole : "transform Ghost Regole + Tentacle Smash OR W Laser + revert" (subset, NO Tsunami via Retaliate) / Divine Dragon : "transform Divine Dragon Ghost + 7-ability sub-pool expansive" (most complex). Pattern canon variant per-spirit. Source: idem.
+
+- [ ] ⭐ **🆕 M-AV 0/5% Regole variant canon NEW ⭐** — Dragon Spirit form 0% / Ghost form 5% différencié pattern NEW canon. Pattern Damia : stats variant per-form canon NEW. Source: idem.
+
+- [ ] **🆕 Wiki naming inconsistency Divine Dragon Barrage vs Divine Dragon Bullet ⚠️** — Retaliate passive lists "Divine Dragon Bullet" mais Abilities lists "Divine Dragon Barrage" — probable typo wiki canon. Damia adopt **Divine Dragon Barrage** (Abilities section more authoritative + cohérent ~ approximation marker). À clarifier fandom future. Source: idem.
+
+- [ ] **🆕 Dragon Spirit Story canon à investiguer ⚠️** — Wiki section "Read More" — story lore Dragon Spirits canon Mayfil revisit. À ingérer wiki + fandom future pour comprendre narrative context 3 Dragon Spirits canon. Source: idem.
+
+- [ ] **🆕 JP stats Dragon Spirits à confirmer fandom future ⚠️** — Wiki US only ingéré. Pattern Damia adopt JP when available (+25% HP typical / ÷3 Gold systematic). À mettre à jour quand fandom Dragon Spirits ingéré (probablement détaillé sur Feyrbrand/Regole/Divine Dragon fandom pages individuelles). Source: à ingérer.
+
+- [ ] **🆕 Element advantages Dragon Spirits canon à clarifier ⚠️** — Feyrbrand Wind weak Earth ? Regole Water weak Fire/Lightning ? Divine Dragon Non-Elemental neutral all ? À clarifier `combat/elements.md` cross-référence canon. Source: à investiguer.
+
+- [ ] **🆕 Retaliate chance % canon ⚠️** — Wiki dit "Chance to trigger when targeted by attack" — exact % à investiguer fandom + Discord future. Source: à investiguer.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

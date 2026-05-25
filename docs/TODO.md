@@ -4366,7 +4366,35 @@
 
 - [ ] ⭐ **🆕 Escape rate 40% Valley of Corrupted Gravity canon ⭐** — Cohérent Home of Gigantos 40% intermediate Disc 1-2 pattern. Pattern Damia escape rate Disc 2 dungeon. Source: idem.
 
-- [ ] **🆕 JP stats Dragonfly à confirmer fandom future ⚠️** — Wiki US only ingéré (HP 296 / Gold 21). Pattern Damia adopt JP when available (+25% HP typical = ~370 / Gold ÷3 = ~7). À mettre à jour quand fandom Dragonfly ingéré. Source: à ingérer.
+- [ ] **🆕 JP stats Dragonfly à confirmer fandom future ⚠️** — Wiki US only ingéré (HP 296 / Gold 21). Pattern Damia adopt JP when available (+25% HP typical = ~370 / Gold ÷3 = ~7). À mettre à jour quand fandom Dragonfly ingéré. ✅ **RÉSOLU fandom** : JP HP **370** ✓ +25% CONFIRMED / JP Gold **7** ✓ ÷3 CONFIRMED. Source: à ingérer.
+
+### Mobs / Dragonfly fandom complement — JP stats CONFIRMED 370/7 + Devil Sting canon name officiel MAJEUR + Appearance purple draconic demonic visage detailed + Thunderbolt cross-source confirmed + Angel's Prayer 30 G shop purchasable NEW + Dragonfly x2 rare formation NEW + HP US 319 / AT 35 / MAT 35 / XP 36 divergences wiki
+
+- [ ] ⭐⭐⭐ **🆕 Devil Sting canon name officiel MAJEUR (fandom) ⭐⭐⭐** — Wiki ~Claw and Pierce = community approximation, fandom révèle **Devil Sting** name officiel. Effect canon : "Flies towards + latches on + stings single target with tail + high physical damage" (cohérent appearance "long sharp pointed tail"). 1× phys damage baseline. Pattern thematic "Devil" prefix cohérent demonic visage head appearance canon Dragonfly. Pattern Damia : adopter **Devil Sting** canon name officiel + flag community ~Claw and Pierce alias deprecated. À implémenter ability `devilSting` Damia. Source: [`features/mobs/_sources/fandom-dragonfly.md`](features/mobs/_sources/fandom-dragonfly.md).
+
+- [ ] ⭐⭐⭐ **🆕 Appearance canon DETAILED MAJEUR Dragonfly (fandom) ⭐⭐⭐** — Pattern thematic **purple draconic-demonic humanoid insect creature** canon Dragonfly — fusion dragon + demonic + insect aerial design. **Purple draconic creature** + **floats with two wings** (cohérent SPD 80 high aerial) + **long sharp pointed tail** (cohérent Devil Sting) + **long arms half body length** with **massive razor-like claws** + **torso somewhat humanoid** + **head almost demonic visage** (cohérent "Devil" Sting prefix canon). Pattern Damia sprite design canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 JP HP 370 ✓ +25% systematic CONFIRMED Dragonfly (fandom) ⭐⭐⭐** — Wiki US 296 × 1.25 = 370 ✓ matches JP fandom exact. ⚠️ Fandom US 319 divergence wiki 296 — JP base derived from **wiki US** baseline canon (NOT fandom US). Pattern Damia adopt JP 370 priority + flag US source ambiguity wiki/fandom. Pattern Damia +25% HP US→JP systematic canon récurrent CONFIRMED 7 mobs : Crystal Golem (160→200) + Deadly Spider (328→410) + Death (200→250) + Death Purger (533→666) + Dragon Soldier (488→610) + Dragonfly (296→370). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 JP Gold 7 ✓ ÷3 systematic CONFIRMED Dragonfly (fandom) ⭐⭐⭐** — US 21 ÷ 3 = 7 ✓ matches JP exact. Pattern Damia ÷3 Gold US→JP systematic canon récurrent confirmed cross-mob. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Thunderbolt canon name CROSS-SOURCE confirmed Dragonfly (fandom) ⭐⭐** — Canon name officiel CROSS-SOURCE confirmed (wiki + fandom both list canon name). Effect canon fandom : "Large thunderbolt rains upon all party members + high Thunder element magic damage". Pattern Damia ThunderboltAbility data-model canon cross-mob (Dragonfly + à investiguer Cute Cat ?). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Angel's Prayer purchasable 30 Gold "practically every shop" canon NEW MAJEUR (fandom) ⭐⭐** — Revive item buyable standard consumable canon NEW. Pattern Damia : drop farming **inefficient** when shop available (Angel's Prayer 30 G alternative vs Dragonfly 8% drop). Strategy farming canon optionnel. À documenter `items/Angel's Prayer.md` (à créer) — revive item canon Damia + purchasable 30 G + drop sources. Pattern Damia consumable items shop economy canon NEW. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Dragonfly x2 rare formation NEW canon (fandom) ⭐⭐** — "Very rarely appear with another Dragonfly" canon. "Never appears with other types of monsters" — Dragonfly exclusive formation canon (no mixed). ⚠️ Pattern wiki vs fandom : wiki encounter formation list mentions only Dragonfly solo (92) — fandom canon Dragonfly x2 rare formation = NEW formation potentially unlisted wiki ⚠️ à confirmer. Source: idem.
+
+- [ ] ⭐⭐ **🆕 "Most powerful regularly encounterable monster Valley of Corrupted Gravity" canon (fandom) ⭐⭐** — Dragonfly = top-tier Mob Valley canon. "Damage potentially very high especially when health halved" (Thunderbolt phase activation ≤50% HP). À noter : "regularly encounterable" qualifier suggère non-regular encounters Valley (boss spawns ?) — à investiguer. Source: idem.
+
+- [ ] ⭐⭐ **🆕 HP US fandom 319 vs wiki 296 divergence ⚠️** — Wiki US 296 vs Fandom US 319 (+23 / +7.8% divergence). Damia adopt JP 370 priority (cohérent +25% systematic pattern wiki US × 1.25 = 370 ✓ NOT fandom US 319 × 1.16). Pattern Damia : flag US source ambiguity wiki/fandom + adopt JP canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 XP 36 fandom vs 48 wiki MAJOR divergence ⚠️** — -25% wiki vs fandom XP. Damia adopt fandom **36** probable closer JP canon (cohérent +25% HP pattern : XP scaling inverse ?). À valider Guidebook JP future. Pattern canon NEW : XP US/JP can differ from HP scaling formula. Source: idem.
+
+- [ ] ⭐⭐ **🆕 AT 35 + MAT 35 fandom CORRECTION wiki Dragonfly (+9%/+13% divergence) ⭐⭐** — Wiki AT 32 vs Fandom 35 / Wiki MAT 31 vs Fandom 35. Pattern Damia adopt fandom higher (JP closer probable cohérent pattern systematic). À valider Guidebook JP future. Source: idem.
+
+- [ ] ⭐ **🆕 Encounter rate "Uncommon" Dragonfly canon (fandom) ⭐** — Pattern Damia encounter rate descriptive terminology canon. Cohérent existing canon "Common" terminology pattern. Source: idem.
+
+- [ ] ⭐ **🆕 Farming time "roughly an hour" Angel's Prayer Dragonfly source canon (fandom) ⭐** — 8% drop rate canon. Vs Knight Shield 45 min (Dragon Soldier) — Dragonfly farming slower (~2× rate). Pattern Damia drop farming time canon documentation. Source: idem.
 
 ### À décider / explorer
 

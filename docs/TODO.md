@@ -4599,7 +4599,37 @@
 
 - [ ] ⭐ **🆕 Status 4/4 standard Minor Enemy canon Erupting Chick** — Cohérent existing pattern. Source: idem.
 
-- [ ] **🆕 JP stats Erupting Chick à confirmer fandom future ⚠️** — Wiki US only ingéré. Pattern Damia adopt JP when available (+25% HP / Gold ÷3). Source: à ingérer.
+- [ ] **🆕 JP stats Erupting Chick à confirmer fandom future ⚠️** — Wiki US only ingéré. Pattern Damia adopt JP when available (+25% HP / Gold ÷3). ✅ **RÉSOLU fandom** : JP HP **150** ✓ +25% CONFIRMED / JP Gold **5** ✓ ÷3 CONFIRMED. Source: à ingérer.
+
+### Mobs / Erupting Chick fandom complement — JP HP 150/5 CONFIRMED + Baby Roc lineage canon CONFIRMED MAJEUR + Appearance pink featherless chick in nest + Tiny Kick + Rave Twister NEW ability + "Cannot Stun" baby vs adult NEW + Mind Purifier 20G shop NEW + AI wiki vs fandom DIVERGENCE MAJEUR
+
+- [ ] ⭐⭐⭐ **🆕 Baby Roc lineage canon CONFIRMED MAJEUR Erupting Chick (fandom) ⭐⭐⭐** — "Baby form of the Roc" canon fandom ✓ CONFIRMS Roc dual existence canon Damia ! Pattern Damia : **baby/adult lineage canon Mob NEW** (Erupting Chick baby + Roc adult Valley of Corrupted Gravity). Pattern canon récurrent à investiguer cross-mob (autres baby/adult lineages ?). À documenter `mobs/Roc.md` (à créer) — adult Roc canon Wind Valley of Corrupted Gravity + lineage Erupting Chick baby. Source: [`features/mobs/_sources/fandom-erupting-chick.md`](features/mobs/_sources/fandom-erupting-chick.md).
+
+- [ ] ⭐⭐⭐ **🆕 Appearance canon DETAILED MAJEUR Erupting Chick (fandom) ⭐⭐⭐** — Young chick in nest + **baby form of Roc** + **no feathers + whole body pink** + can move/jump/kick **with nest remaining under/around it** (nest immobile baby canon). Pattern Damia sprite design canon : pink featherless chick + nest base + small mobile creature. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Tiny Kick canon name officiel MAJEUR Erupting Chick (fandom) ⭐⭐⭐** — Wiki ~Kick = community approximation, fandom révèle **Tiny Kick** name officiel. Effect canon : "Runs towards single opponent + jump kick + low physical damage" (cohérent thematic baby chick small kick). Pattern thematic "tiny" prefix = cohérent baby form. À implémenter ability `tinyKick` Damia. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Rave Twister NEW ability canon MAJEUR Erupting Chick (fandom) ⭐⭐⭐** — Wind element spell + Party + **medium-high magic damage** (shared ability with adult Roc canon NEW). ⚠️ **NOT in wiki AI table** — canon discrepancy MAJEUR. Pattern Damia : `RaveTwisterAbility { type: 'magic-party-aoe'; multiplier: '?'; element: 'wind' }` data-model canon NEW (multiplier à confirmer). Pattern Damia : shared ability baby/adult Roc lineage canon NEW. À implémenter ability `raveTwister` Damia. À investiguer wiki incomplete AI table. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 "Cannot Stun" baby vs adult canon NEW MAJEUR Erupting Chick (fandom) ⭐⭐⭐** — "Cannot Stun an opponent" canon NEW : Erupting Chick baby lacks adult Roc Stun ability. Pattern Damia : **baby vs adult ability differences canon NEW** (Erupting Chick = baby Roc, lacks adult abilities). À cross-référer adult Roc canon (Stun ability + other adult-only abilities). Pattern thematic baby/adult lineage canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Mind Purifier 20 Gold shop canon NEW MAJEUR Erupting Chick (fandom) ⭐⭐⭐** — "You can simply buy them in most places for **20G**" — Mind Purifier purchasable consumable canon NEW. Pattern Damia : standard buyable consumable canon NEW (cohérent existing Angel's Prayer 30G shop pattern — **2ème consumable purchasable confirmed**). Pattern Damia consumable items shop economy canon NEW : **tiers de prix canon** (Mind Purifier 20G + Angel's Prayer 30G). Drop farming inefficient when shop available. À cross-référer `items/Mind Purifier.md` (à créer/vérifier). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 AI wiki vs fandom DIVERGENCE MAJEUR Erupting Chick (fandom) ⭐⭐⭐** — Wiki AI : ~Kick / Summon Roc / Run away! vs Fandom AI : Tiny Kick / Rave Twister / Summon Roc. ⚠️ Run away! NOT in fandom + Rave Twister NOT in wiki. Pattern Damia : adopter **union des 2 sources canon** = **AI 4-ability pool** (Tiny Kick + Summon Roc + Rave Twister + Run away!). Pattern Damia : flag wiki AI table incomplete (Rave Twister missing) + flag fandom AI incomplete (Run away! missing). À investiguer Discord pour AI table complete future. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 JP HP 150 ✓ +25% systematic CONFIRMED Erupting Chick (fandom) ⭐⭐⭐** — US 120 × 1.25 = 150 ✓ matches JP exact. Pattern Damia +25% HP US→JP systematic canon récurrent CONFIRMED 9 entities maintenant. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 JP Gold 5 ✓ ÷3 systematic CONFIRMED Erupting Chick (fandom) ⭐⭐⭐** — US 15 ÷ 3 = 5 ✓ matches JP exact. Pattern Damia ÷3 Gold Mob systematic confirmed cross-mob. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Summon Roc CROSS-SOURCE CONFIRMED + tweeting lore canon (fandom) ⭐⭐** — Effect canon fandom : "Summons by **tweeting** fully aged Roc to **swoop down + smash all allies + medium damage**". Pattern thematic : chick **tweet** call = summon parental Roc canon. Roc Boss Extra-like temporary one-shot summon canon ✓ confirmed cross-source. Source: idem.
+
+- [ ] ⭐⭐ **🆕 AT 26 + MAT 26 fandom CORRECTION wiki Erupting Chick (fandom) ⭐⭐** — Wiki AT 20 vs Fandom 26 (+30%) / Wiki MAT 22 vs Fandom 26 (+18%). Pattern Damia adopt fandom higher (JP closer probable cohérent pattern systematic). Source: idem.
+
+- [ ] ⭐⭐ **🆕 "One of the lowest MDF in the game" canon Erupting Chick (fandom) ⭐⭐** — MDF 30 confirmé fandom comme "one of the lowest" canon. Pattern Damia : MDF tier rankings canon (Erupting Chick = very low MDF tier reference). Source: idem.
+
+- [ ] ⭐⭐ **🆕 "Capable of killing in a hit or two" fragility canon Erupting Chick (fandom) ⭐⭐** — Pattern Damia : fragile mob canon (HP 120 low + MDF 30 very low). Strategy canon : kill rapidly to bypass Summon Roc + Run away! thresholds. Source: idem.
+
+- [ ] ⭐ **🆕 Encounter rate "Very common" Erupting Chick canon (fandom) ⭐** — Pattern Damia encounter rate descriptive terminology canon. Source: idem.
 
 ### À décider / explorer
 

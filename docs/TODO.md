@@ -4577,6 +4577,30 @@
 
 - [ ] **🆕 Power formula Target Power Up vs Down ambiguity wiki ⚠️** — Wiki ambiguity "Target Power Up → −(1/2) or if power up then (1/2)". À clarifier fandom + Discord future. Source: à investiguer.
 
+### Mobs / Erupting Chick wiki (Wind Valley of Corrupted Gravity Disc 2 — Minor Enemy + Summon Roc temporary one-shot summon NEW MAJEUR + Run away! self-escape NEW MAJEUR + A-AV 20% high tier + Killer Bird + Spider Urchin NEW partner mobs)
+
+- [ ] ⭐⭐⭐ **🆕 Summon Roc canon NEW MAJEUR Erupting Chick wiki ⭐⭐⭐** — Mob summons **Roc** (Boss Extra-like entity) → **2× Physical damage Party AoE** → ⚠️ **Roc does NOT remain in battle** canon NEW. Pattern Damia : `SummonRocAbility { type: 'summon-extra-one-shot'; summonEntity: 'roc'; effect: { multiplier: 2; type: 'physical'; target: 'party' }; entityRemains: false }` data-model canon NEW. Pattern **temporary one-shot summon mechanic canon NEW** (vs Drake Bandit Bursting Ball + Wire persistent summons). Pattern thematic "chick summons adult Roc bird for parental attack". Roc dual existence canon ? (regular mob + summoned variant). À implémenter ability Damia. Source: [`features/mobs/_sources/lod-wiki-erupting-chick.md`](features/mobs/_sources/lod-wiki-erupting-chick.md).
+
+- [ ] ⭐⭐⭐ **🆕 Run away! ability canon NEW MAJEUR Erupting Chick wiki ⭐⭐⭐** — Mob self-escape removes target from combat. ⚠️ **No reward canon NEW** : "Does NOT award EXP, gold, or item". Pattern Damia : `RunAwayAbility { type: 'self-escape'; effect: 'remove-from-battle'; rewardsGranted: false }` data-model canon NEW. Pattern Mob desperation escape mechanic canon NEW (vs typical mob fight-to-death). **Strategy CRITIQUE** : burst-kill avant Run away! trigger ≤ 25% HP pour rewards. Erupting Chick = premier Mob avec self-escape mechanic ingestion canon Damia. À implémenter ability Damia. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Erupting Chick Mob canon Disc 2 Valley of Corrupted Gravity ⭐⭐** — Wind element Minor Enemy. Stats US HP 120 / AT 20 / DF 80 / MAT 22 / MDF 30 / SPD 80 / **A-AV 20%** + Gold 15 + EXP 32. Pattern "fast fragile dodge canon" (SPD 80 + A-AV 20% high + HP 120 low + MDF 30 very low). Status 4/4 standard. Counter 28 high-density. AI 3-phase NEW (~Kick / Summon Roc / Run away!). Mind Purifier 8% drop. À documenter `mobs/Erupting Chick.md` (créé). Source: idem.
+
+- [ ] ⭐⭐ **🆕 A-AV 20% NEW canon Mob Erupting Chick ⭐⭐** — High A-AV tier Mob canon (status proc reduction pattern récurrent canon Damia). Pattern Damia : Erupting Chick = first Mob with explicit high A-AV % tier ingestion. À cross-référer pattern A-AV reduces status proc canon universel. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Killer Bird + Spider Urchin NEW partner mobs canon Valley of Corrupted Gravity ⭐⭐** — Mixed formations canon : Killer Bird x2 + Erupting Chick (formation 95 submaps 252/253/255 35%/35%/20%) + Erupting Chick x2 + Spider Urchin (formation 97 submaps 253-257). Pattern Damia : 3 formation types Erupting Chick (solo + 2 mixed). À documenter `mobs/Killer Bird.md` + `mobs/Spider Urchin.md` (à créer) — NEW partner mobs canon Valley. Source: idem.
+
+- [ ] ⭐⭐ **🆕 AI 3-phase Mob HP overlap zones canon Erupting Chick ⭐⭐** — Phase 1 (HP > 25%) ~Kick / Phase 2 (HP ≤ 50%) Summon Roc / Phase 3 (HP ≤ 25%) Run away!. HP overlap zones canon : 25-50% overlap (~Kick + Summon Roc) + ≤25% all three abilities possible. Pattern Damia : MobAI 3-phase overlap selection canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Yield contingency canon Run away! Erupting Chick ⭐⭐** — Si Erupting Chick uses Run away! (≤ 25% HP), **NO EXP / NO gold / NO item awarded** canon. Pattern Damia : Mob yield contingency canon NEW (yield contingent on kill before Run away!). Source: idem.
+
+- [ ] ⭐ **🆕 Mind Purifier 8% drop canon Erupting Chick** — Existing item canon (probable Confusion cure). 8% drop rate canon. Source: idem.
+
+- [ ] ⭐ **🆕 Counter 28 high-density tier confirmé Erupting Chick** — Cohérent existing canon. Source: idem.
+
+- [ ] ⭐ **🆕 Status 4/4 standard Minor Enemy canon Erupting Chick** — Cohérent existing pattern. Source: idem.
+
+- [ ] **🆕 JP stats Erupting Chick à confirmer fandom future ⚠️** — Wiki US only ingéré. Pattern Damia adopt JP when available (+25% HP / Gold ÷3). Source: à ingérer.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

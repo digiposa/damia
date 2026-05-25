@@ -4246,7 +4246,41 @@
 
 - [ ] ⭐ **🆕 Counter 28 high-density tier confirmé Dragon Soldier ⭐** — Counter Opportunities (28) cohérent existing canon Aqua King / Berserk Mouse / Berserker / Atlow / Blue Bird / etc. Pattern Damia tier mapping confirmed. Per user instruction : feature Counter non-implémentée Damia, factual tier mention only. Source: idem.
 
-- [ ] **🆕 JP stats Dragon Soldier à confirmer fandom future ⚠️** — Wiki US only ingéré (HP 488 / Gold 60). Pattern Damia adopt JP when available (+25% HP typical = ~610 / Gold ÷3 systematic = ~20). À mettre à jour quand fandom Dragon Soldier ingéré. Source: à ingérer.
+- [ ] **🆕 JP stats Dragon Soldier à confirmer fandom future ⚠️** — Wiki US only ingéré (HP 488 / Gold 60). Pattern Damia adopt JP when available (+25% HP typical = ~610 / Gold ÷3 systematic = ~20). À mettre à jour quand fandom Dragon Soldier ingéré. ✅ **RÉSOLU fandom** : JP HP **610** ✓ +25% CONFIRMED / JP Gold **20** ✓ ÷3 CONFIRMED. Source: à ingérer.
+
+### Mobs / Dragon Soldier fandom complement — JP stats CONFIRMED 610/20 + Vanishing Stone Key Item NEW MAJEUR + Optional sector Tower of Flanvel + Appearance detailed grey draconic humanoid + Destructive Cut canon name officiel + Knight Shield ACCESSORY correction + HP Recovery scaling US 146/JP 183 + AT 137 + MAT 97 wiki divergence + Mayfil cross-reference + Additions training
+
+- [ ] ⭐⭐⭐ **🆕 Vanishing Stone Key Item NEW canon MAJEUR (fandom) ⭐⭐⭐** — NEW Key Item canon Damia. **Function canon** : required access optional sector Tower of Flanvel (gates Dragon Soldier mob spawns). Pattern thematic "vanishing" = probable teleport/invisibility/access-key item canon. À documenter `items/Vanishing Stone.md` (à créer) — Key Item Disc 3 Tower of Flanvel optional sector access canon. Pattern Damia : Vanishing Stone gates optional content canon (cohérent pattern existing canon Key Items gating areas). À investiguer : Vanishing Stone obtained where ? Pattern canon Disc 3 sequence ? Source: [`features/mobs/_sources/fandom-dragon-soldier.md`](features/mobs/_sources/fandom-dragon-soldier.md).
+
+- [ ] ⭐⭐⭐ **🆕 Tower of Flanvel optional sector NEW canon MAJEUR (fandom) ⭐⭐⭐** — Dragon Soldier "located **deep within Tower of Flanvel in optional sector** that requires **Vanishing Stone** to enter". Pattern Damia : Tower of Flanvel = Disc 3 Mille Seseau Snowfield Tower + optional gated content via Vanishing Stone Key Item. "Most powerful mob within this location" canon — Dragon Soldier = top-tier mob Tower of Flanvel. À documenter `locations/Tower of Flanvel.md` (à créer) layout + optional sector canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 JP HP 610 ✓ +25% systematic CONFIRMED (fandom) ⭐⭐⭐** — US wiki 488 × 1.25 = 610 ✓ matches JP fandom exact. Pattern Damia +25% HP US→JP systematic canon récurrent confirmed Crystal Golem (160→200), Deadly Spider (328→410), Death (200→250), Death Purger (533→666), Dragon Soldier (488→610). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 JP Gold 20 ✓ ÷3 systematic CONFIRMED (fandom) ⭐⭐⭐** — US 60 ÷ 3 = 20 ✓ matches JP exact. Pattern Damia ÷3 Gold US→JP systematic canon récurrent confirmed cross-mob. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Appearance canon DETAILED MAJEUR (fandom) ⭐⭐⭐** — Pattern thematic **dragon-humanoid knight warrior** canon Dragon Soldier — fusion draconic anatomy + armored knight equipment. **Grey-skinned draconic humanoid** ("hence the name") + **heavy gold-trimmed grey armor** covering majority body (visible : face, arms, feet, tail) + **large shield with emblem upon exterior** (cohérent Knight Shield drop) + **massive sword in opposing hand** (cohérent Destructive Cut + Sword Slash community name) + **red eyes** + **pointed teeth** + **medium-sized horn upon head** + **two large ears** + **three massive hook-shaped claws on each foot** + **large tail resting behind**. Pattern Damia sprite design canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Destructive Cut canon name officiel MAJEUR (fandom) ⭐⭐** — Wiki ~Sword Slash = community approximation, fandom révèle **Destructive Cut** name officiel. Effect canon : "Lunges towards single opponent + swings large sword + medium physical damage" (cohérent appearance "massive sword in opposing hand"). 1× Physical damage baseline (wiki + fandom cohérent). Pattern Damia : adopter **Destructive Cut** canon name officiel + flag community ~Sword Slash alias deprecated. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Knight Shield = ACCESSORY classification CORRECTION (fandom) ⭐⭐** — Wiki hypothesis "shield = probable armor" CORRIGÉ → **accessory** canon fandom. Pattern Damia : adopter **Knight Shield = accessory** canon (override wiki hypothesis). À documenter `items/equipment.md` Knight Shield accessory classification correction. Pattern thematic "knight equipment accessory" canon (cohérent Dancer's Shoes accessory thematic pattern). Effect précis à investiguer Guidebook future (probable stat/elemental bonus accessory canon). "Decent item of which you may want to attain" — desirable accessory canon. Farming time average 45 minutes canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 HP Recovery scaling resolved cross-version (fandom) ⭐⭐** — US fandom 146 HP heal ✓ matches wiki 146 ✓ exact. JP fandom 183 HP heal ✓ matches calculation 610 × 30% = 183 ✓ exact. Pattern **30% scaling formula canon CONFIRMED cross-mob + cross-version** ✓ : Crystal Golem US 160 × 30% = 48 ✓ / JP 200 × 30% = 60 ✓ + Dragon Soldier US 488 × 30% = 146 ✓ / JP 610 × 30% = 183 ✓. ⚠️ Fandom "roughly 28%" imprécis — Damia adopt **30% Max HP exact** (wiki + math confirmed). HP Recovery vs HP recovers naming variant — adopt **HP Recovery** (fandom capitalization more formal canon). Source: idem.
+
+- [ ] ⭐⭐ **🆕 AT 137 + MAT 97 fandom CORRECTION wiki (+12%/+13% divergence) ⭐⭐** — Wiki AT 122 vs Fandom 137 / Wiki MAT 86 vs Fandom 97. Pattern Damia adopt fandom higher (JP closer probable cohérent pattern systematic). À valider Guidebook JP future. Source: idem.
+
+- [ ] ⭐⭐ **🆕 HP US 488 vs 528 wiki/fandom divergence ⚠️** — Wiki US 488 vs Fandom US/EU 528 (+8.2%). Damia adopt JP 610 priority (US source ambiguity wiki/fandom disagree US stat). Source: idem.
+
+- [ ] ⭐⭐ **🆕 "Spam Physical Attack Barrier quite often" frequency canon (fandom) ⭐⭐** — Dragon Soldier tend to abuse Physical Attack Barrier ability "quite often" canon fandom. Pattern Damia : AI 25% chance Physical Attack Barrier > 25% HP — frequency observable behavior canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Mayfil cross-reference Disc 4 damage tier canon (fandom) ⭐⭐** — "Updated gear + levels → **average damage similar to Mayfil monsters**" canon fandom. Pattern Damia : Dragon Soldier = Disc 3 mob with **Disc 4-tier offensive output** canon. À cross-référer `locations/Mayfil.md` (à créer) Death City Disc 4 damage benchmark canon. Pattern thematic : Dragon Soldier punches above Disc 3 weight class (optional content reward justifies difficulty). Source: idem.
+
+- [ ] ⭐ **🆕 Additions training farming spot canon (fandom) ⭐** — Dragon Soldier ideal Additions training (high HP + Counter 28 + spam Physical Attack Barrier). Pattern Damia : Dragon Soldier farming spot canon recommended Disc 3 Additions training. Source: idem.
+
+- [ ] ⭐ **🆕 Knight Shield farming time 45 min avg (fandom) ⭐** — 2% drop rate canon ⚠️ rare drop. Farming estimate canon Damia documentation. Source: idem.
+
+- [ ] ⭐ **🆕 Encounter formation 177 wiki vs fandom divergence ⭐** — Wiki ID 177 : "Metal Fang x2, Dragon Soldier" (2× Metal Fang + 1× Dragon Soldier) vs Fandom : "Dragon Soldier x2 + Metal Fang" (2× Dragon Soldier + 1× Metal Fang). Damia adopt **wiki canon** (more precise + ID numbered + submap referenced). Possible fandom inversion / typo canon — wiki priority data source. Source: idem.
+
+- [ ] **🆕 Encounter rate "Common" canon fandom** — Cohérent wiki 20-35% submap dependent. Pattern Damia encounter rate descriptive terminology canon. Source: idem.
 
 ### À décider / explorer
 

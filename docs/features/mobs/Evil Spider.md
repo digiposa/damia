@@ -1,6 +1,6 @@
 # Evil Spider — Mob Limestone Cave (Disc 1)
 
-> **Mob Earth element Limestone Cave Disc 1** — fragile early-game arachnid mob. 4 submaps spawn (45 primary 35% / 48 20% / 49 10% / 51 20%). Escape rate **70% NEW HIGH tier canon**.
+> **Mob Earth element Limestone Cave Disc 1** — **"most powerful enemy in Limestone Cave" canon fandom** (top-tier Mob Limestone, excl. Urobolus boss). 4 submaps spawn (45 primary 35% / 48 20% / 49 10% / 51 20%). Escape rate **70% NEW HIGH tier canon**. **Appears solo only canon** (balance design fandom).
 >
 > ⭐⭐⭐ **Recolor family canon CONFIRMED Trivia wiki MAJEUR ⭐⭐⭐** — Evil Spider model = recolor of Deadly Spider (Mountain of Mortal Dragon Disc 3). Pattern Damia : **Evil Spider parent ancestor + Deadly Spider recolor child** (cohérent chronologie Disc 1 → Disc 3 game progression). Cohérent Cobweb shared ability across recolor family canon. Pattern thematic insect family canon (cohérent existing Crescent Bee / Stinger + Death / Death Purger recolor family canon).
 >
@@ -20,6 +20,22 @@
 >
 > ⭐⭐ **Pattern "fragile early Disc 1 mob"** — HP 30 + AT 8 very low + DF 80 + MDF 60 (magic favored counter).
 >
+> ⭐⭐⭐ **JP HP 50 ANOMALY MAJEUR ⚠️⚠️⚠️ pattern break fandom** — US 30 → JP 50 (+67% NOT +25% systematic). FIRST pattern break canon Damia (9 previous mobs +25% confirmed). Hypothesis : minimum HP floor JP very low HP mobs / scaling spécial fragile mobs Disc 1 / data error. Damia adopt JP 50 priority + flag pattern break + investiguer cross-mob low HP.
+>
+> ⭐⭐⭐ **Gnaw canon name officiel MAJEUR fandom ⭐⭐⭐** (wiki ~Bite community) — "Rushes up to target and bites them". ✓ **CROSS-RECOLOR canon family CONFIRMATION** : Gnaw shared with Deadly Spider existing canon ✓. Pattern Damia : Gnaw = canon name shared cross-recolor family (Evil Spider + Deadly Spider).
+>
+> ⭐⭐⭐ **Cobweb CROSS-SOURCE CONFIRMED fandom ⭐⭐⭐** — "Deals magic damage by spinning a web at target" canon fandom ✓. Cohérent existing Deadly Spider Cobweb canon (shared cross-recolor family ability). ⭐ Fandom Evil Spider confirms **Magic** type (vs existing Deadly Spider wiki/fandom Physical/Magic divergence canon).
+>
+> ⭐⭐⭐ **Recolor family canon CROSS-SOURCE CONFIRMED MAJEUR fandom ⭐⭐⭐** — "Cousin enemy found on Disc 3 known as Deadly Spider" canon fandom ✓ CONFIRMS wiki Trivia recolor canon. "Cousin" terminology canon = recolor family relationship pattern Damia.
+>
+> ⭐⭐⭐ **Appearance DIVERGENCE wiki vs fandom canon ⚠️ MAJEUR** — Wiki : brown + yellow + sharp leg prongs + 4 pedipalps. Fandom : brown + tan + 4 red eyes + 2 fangs. Pattern Damia : adopter union wiki + fandom (brown + yellow/tan + 4 red eyes NEW fandom + sharp leg prongs wiki + 4 pedipalps wiki precise vs 2 fangs fandom).
+>
+> ⭐⭐ **"Most powerful enemy Limestone Cave" canon fandom** — Top-tier Mob Limestone (highest AT + 2nd highest HP in Cave canon). Solo formation only canon (balance design "would pose more threat in groups").
+>
+> ⭐⭐ **AT 9 + MAT 7 fandom higher** (vs wiki 8/6 small divergences +12%/+17%).
+>
+> ⭐⭐ **Gold JP 4 ✓ ÷3 systematic CONFIRMED fandom** (12 ÷ 3 = 4 ✓).
+>
 > ⭐ **Status 4/4 standard Minor Enemy canon**.
 >
 > ⭐ **Earth Minor Enemy ingestion canon** (cohérent existing Earth mobs).
@@ -27,10 +43,11 @@
 > **Sources** :
 >
 > - 🥈 [`_sources/lod-wiki-evil-spider.md`](./_sources/lod-wiki-evil-spider.md) — wiki LoD tier 2 (stats US 30 HP / 8 AT / 80 DF / 6 MAT / 60 MDF / 60 SPD + Counter 16 + Status 4/4 + Yield 12 EXP / 12 Gold / Angel's Prayer 8% + AI 2-phase ~Bite/Cobweb + Limestone Cave 4 submaps + Escape 70% NEW high tier + Appearance brown+yellow+sharp prongs+4 pedipalps + Trivia recolor of Deadly Spider)
+> - 🥉 [`_sources/fandom-evil-spider.md`](./_sources/fandom-evil-spider.md) — fandom tier 3 (⭐ **JP HP 50 ANOMALY MAJEUR +67% NOT +25%** + ⭐ **JP Gold 4 ✓ ÷3 CONFIRMED** + ⭐ **Gnaw canon name officiel MAJEUR cross-recolor** + ⭐ **Cobweb cross-source confirmed** + ⭐ **Recolor "cousin Deadly Spider" canon CONFIRMED** + ⭐ **Appearance brown+tan+4 red eyes+2 fangs DIVERGENCE wiki** + ⭐ **"Most powerful Limestone" + "Highest Attack + 2nd highest HP" canon** + ⭐ **"Appears solo" canon confirms solo formation** + ⭐ **AT 9 + MAT 7 fandom higher divergences**)
 
 ## Statut
 
-🟡 **Canon documenté wiki tier 2 uniquement** — fandom à ingérer (JP stats + appearance complet + Trivia future).
+🟢 **Canon documenté wiki tier 2 + fandom tier 3 cross-source confirmé** — JP Gold ✓ ÷3 CONFIRMED + Gnaw/Cobweb canon names officiels + Recolor family cousin canon CONFIRMED + Appearance divergences wiki/fandom + "Most powerful Limestone" canon. ⚠️ **JP HP 50 ANOMALY MAJEUR pattern break** (FIRST instance non-+25% — à investiguer).
 
 ## Identity canon
 
@@ -63,20 +80,42 @@
 - À cross-référer existing `mobs/Deadly Spider.md` canon — corriger pattern parent/child si nécessaire
 - Pattern thematic canon : insect family canon recurring (3 instances confirmed maintenant)
 
-## Stats canon ⚠️ Damia adopt US base — JP TBD fandom future
+## Stats canon ⭐ Damia adopt JP — JP CONFIRMED fandom ⚠️⚠️⚠️ ANOMALY MAJEUR
 
-| Stat | Wiki US | **Damia (US base — JP TBD)**       | Notes                                |
-| ---- | ------- | ---------------------------------- | ------------------------------------ |
-| HP   | **30**  | **30** (JP à confirmer +25% = ~38) | Very low HP Minor Enemy Disc 1       |
-| AT   | **8**   | **8**                              | Very low Attack (fragile)            |
-| DF   | **80**  | **80**                             | Moderate Defense                     |
-| MAT  | **6**   | **6**                              | Very low Magical (Cobweb 1× modeste) |
-| MDF  | 60      | 60                                 | Low MDF (magic favored counter)      |
-| SPD  | 60      | 60                                 | Moderate                             |
-| A-AV | 0%      | 0%                                 | Standard Minor                       |
-| M-AV | 0%      | 0%                                 | Standard Minor                       |
-| Gold | 12      | 12 (JP à confirmer ÷3 = ~4)        | Pattern ÷3 systematic JP/US          |
-| EXP  | 12      | 12                                 | Low Disc 1 yield                     |
+| Stat | Wiki US | Fandom US/EU | **Fandom JP** ⭐ | **Damia (JP)** ⭐              | Notes                                                       |
+| ---- | ------- | ------------ | ---------------- | ------------------------------ | ----------------------------------------------------------- |
+| HP   | 30      | 30           | **50** ⚠️⚠️⚠️    | **50** ⚠️ JP ANOMALY MAJEUR    | ⚠️ **+67% NOT +25% systematic** — FIRST PATTERN BREAK Damia |
+| AT   | 8       | **9** ⚠️     | ?                | **9** (fandom slightly higher) | Wiki vs fandom +12% small divergence                        |
+| DF   | 80      | 80           | ?                | **80**                         | Same ✓                                                      |
+| MAT  | 6       | **7** ⚠️     | ?                | **7** (fandom slightly higher) | Wiki vs fandom +17% small divergence                        |
+| MDF  | 60      | 60           | ?                | **60**                         | Same ✓                                                      |
+| SPD  | 60      | 60           | ?                | **60**                         | Same ✓                                                      |
+| A-AV | 0%      | 0%           | 0%               | **0%**                         | Standard Minor                                              |
+| M-AV | 0%      | 0%           | 0%               | **0%**                         | Standard Minor                                              |
+| Gold | 12      | 12 US/EU     | **4** ✓ JP       | **4** ✓ JP ÷3 confirmed        | Pattern ÷3 systematic JP/US confirmed                       |
+| XP   | 12      | 12           | 12               | **12**                         | Low Disc 1 yield                                            |
+
+→ Pattern **"fragile early Disc 1 mob" canon Evil Spider ⭐** :
+
+- HP 50 JP (vs 30 US) + AT 9 very low → fragile early-game mob
+- DF 80 moderate + MDF 60 low → magic favored counter
+- Pattern Damia : early-game Disc 1 fragile mob canon
+
+⚠️⚠️⚠️ **JP HP 50 ANOMALY MAJEUR ⭐⭐⭐ FIRST PATTERN BREAK Damia** :
+
+- US 30 → JP 50 = **×1.67 (+67%)** — NOT +25% systematic
+- ⚠️ Pattern Damia : **FIRST pattern break +25% HP systematic canon** (9 previous mobs +25% confirmed)
+- ⚠️ **Hypothesis canon possible** :
+  - **Minimum HP floor JP** : very low HP mobs (< ~40) bumped to minimum 50 floor canon ?
+  - **Scaling spécial Disc 1 fragile mobs** : +67% tier early-game ?
+  - **Data error fandom** : 50 = typo (37 actual ?)
+- Pattern Damia : adopt **JP 50 priority** + flag pattern break MAJEUR + investiguer cross-mob low HP early-game
+- À investiguer Discord pour clarification JP scaling low HP mobs
+
+⚠️ **JP Gold ÷3 systematic CONFIRMED Evil Spider ⭐⭐** :
+
+- US 12 ÷ 3 = 4 ✓ matches JP exact
+- Pattern Damia ÷3 Gold Mob systematic confirmed cross-mob (Gold scaling normal — only HP anomaly)
 
 → Pattern **"fragile early Disc 1 mob" canon Evil Spider ⭐** :
 
@@ -120,27 +159,32 @@
 
 Per user instruction : feature Counter non-implémentée Damia, factual tier mention only.
 
-## AI canon (2-phase Bite + Cobweb)
+## AI canon (2-phase Gnaw + Cobweb — canon names fandom)
 
-| HP    | Action     | Target | Effect                               | Notes                       |
-| ----- | ---------- | ------ | ------------------------------------ | --------------------------- |
-| Any   | **~Bite**  | Single | 1× Physical damage                   | Community approximation (~) |
-| ≤ 50% | **Cobweb** | Single | **1× Non-Elemental magic damage** ⭐ | Canon name officiel (no ~)  |
+| HP    | Action                                 | Target | Effect                                                                               | Notes                                    |
+| ----- | -------------------------------------- | ------ | ------------------------------------------------------------------------------------ | ---------------------------------------- |
+| Any   | **Gnaw** ⭐⭐⭐ canon (~Bite wiki)     | Single | "Rushes up to target and bites them" + **1× Physical damage**                        | Fandom canon officiel (wiki community ~) |
+| ≤ 50% | **Cobweb** ⭐⭐⭐ canon ✓ cross-source | Single | "Deals magic damage by spinning a web at target" + **1× Non-Elemental magic damage** | Cross-source confirmed (wiki + fandom)   |
 
-⚠️ **Cobweb canon name officiel ⭐⭐⭐ cohérent Deadly Spider recolor family** :
+### Gnaw canon name officiel ⭐⭐⭐ MAJEUR fandom (~Bite wiki community)
 
-- **Cobweb** = canon name officiel (NO ~ marker — canonical wiki)
+- **Gnaw** = canon name officiel fandom (vs wiki ~Bite community approximation)
+- Effect canon : "Rushes up to target and bites them" (cohérent appearance fangs + pedipalps biting)
+- 1× physical baseline
+- ⭐⭐ **CROSS-RECOLOR canon family confirmation** : Gnaw shared with Deadly Spider existing canon ✓
+- Pattern Damia : Gnaw = canon name shared cross-recolor family (Evil Spider + Deadly Spider both)
+- Pattern Damia : adopter **Gnaw** canon name officiel + flag community ~Bite alias deprecated
+
+### Cobweb canon name officiel CROSS-SOURCE CONFIRMED ⭐⭐⭐ cohérent Deadly Spider recolor family
+
+- **Cobweb** = canon name officiel (NO ~ marker — canonical wiki + fandom)
 - **1× Non-Elemental magic damage Single**
+- Effect canon fandom : "Deals magic damage by spinning a web at the target"
 - ⭐⭐ **Cohérent existing Deadly Spider Cobweb canon** (cross-mob recolor family shared ability)
-- Pattern Damia : Cobweb shared ability canon recolor family (Evil Spider parent + Deadly Spider child)
-- Pattern thematic "spider web sticky magic web attack" canon
+- ⚠️ ⭐⭐⭐ **Evil Spider fandom confirms Magic type** ✓ (cohérent wiki Evil Spider Non-Elemental magic) — vs existing Deadly Spider canon wiki Physical / fandom Magic DIVERGENCE
+- Pattern Damia : Cobweb = Non-Elemental magic canon (Evil Spider canonical resolves Deadly Spider divergence)
 - Pattern Damia : `CobwebAbility { type: 'magic-single'; multiplier: 1; element: 'non-elemental' }` data-model canon shared cross-recolor
-
-### ~Bite canon name (community)
-
-- **~Bite** = community approximation baseline ability
-- 1× physical baseline (cohérent appearance "4 pedipalps for biting")
-- Pattern thematic 4-pedipalp biting spider canon
+- Pattern thematic "spider spinning web magic attack" canon
 
 ## Encounters canon
 

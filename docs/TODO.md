@@ -4651,7 +4651,27 @@
 
 - [ ] ⭐ **🆕 Cobweb shared cross-recolor pattern canon Evil Spider/Deadly Spider** — Cobweb ability shared across recolor family canon. Pattern Damia : recolor family shared abilities canon (cohérent existing Crescent Bee/Stinger Spinning Gale + Death/Death Purger Total Vanishing patterns). Source: idem.
 
-- [ ] **🆕 JP stats Evil Spider à confirmer fandom future ⚠️** — Wiki US only ingéré (HP 30 / Gold 12). Pattern Damia adopt JP when available (+25% HP / Gold ÷3). Source: à ingérer.
+- [ ] **🆕 JP stats Evil Spider à confirmer fandom future ⚠️** — Wiki US only ingéré (HP 30 / Gold 12). Pattern Damia adopt JP when available (+25% HP / Gold ÷3). ✅ **RÉSOLU fandom** : JP HP **50** ⚠️ ANOMALY (+67% NOT +25%) / JP Gold **4** ✓ ÷3 CONFIRMED. Source: à ingérer.
+
+### Mobs / Evil Spider fandom complement — JP HP 50 ANOMALY MAJEUR pattern break + JP Gold 4 ÷3 CONFIRMED + Gnaw canon name cross-recolor + Cobweb cross-source confirmed + Recolor "cousin" canon CONFIRMED + Appearance divergences + "Most powerful Limestone" canon
+
+- [ ] ⭐⭐⭐ **🆕 JP HP 50 ANOMALY MAJEUR FIRST PATTERN BREAK +25% systematic Damia (fandom) ⭐⭐⭐** — US 30 → JP 50 = **×1.67 (+67%)** — NOT +25% systematic. **FIRST pattern break canon Damia** (9 previous mobs +25% confirmed : Crystal Golem / Deadly Spider / Death / Death Purger / Dragon Soldier / Dragonfly / Drake the Bandit / Earth Shaker / Erupting Chick). Hypothesis canon possible : (1) **Minimum HP floor JP very low HP mobs** (< ~40 → bumped to 50 floor) ; (2) **Scaling spécial Disc 1 fragile mobs** (+67% tier early-game) ; (3) **Data error fandom** (typo 50 = 37 actual). Pattern Damia : adopt JP 50 priority + flag pattern break MAJEUR + investiguer cross-mob low HP early-game. À investiguer Discord clarification JP scaling low HP mobs. Source: [`features/mobs/_sources/fandom-evil-spider.md`](features/mobs/_sources/fandom-evil-spider.md).
+
+- [ ] ⭐⭐⭐ **🆕 Gnaw canon name officiel MAJEUR cross-recolor confirmation Evil Spider (fandom) ⭐⭐⭐** — Wiki ~Bite = community approximation, fandom révèle **Gnaw** name officiel ("Rushes up to target and bites them"). ⭐⭐ **CROSS-RECOLOR canon family CONFIRMATION** : Gnaw shared with Deadly Spider existing canon ✓. Pattern Damia : Gnaw = canon name shared cross-recolor family (Evil Spider + Deadly Spider both). À implémenter ability `gnaw` Damia shared cross-recolor. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Cobweb CROSS-SOURCE CONFIRMED + RÉSOUDS Deadly Spider divergence Evil Spider (fandom) ⭐⭐⭐** — "Deals magic damage by spinning a web at target" canon fandom ✓. ⚠️ Cohérent existing Deadly Spider Cobweb canon + ⭐⭐⭐ **Evil Spider fandom confirms Magic type** ✓ — **RÉSOUDS existing Deadly Spider canon wiki Physical / fandom Magic DIVERGENCE** : Cobweb = Non-Elemental magic canon (Evil Spider canonical resolves cross-recolor). Pattern Damia : `CobwebAbility { type: 'magic-single'; multiplier: 1; element: 'non-elemental' }` data-model canon shared cross-recolor confirmed. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Recolor family "cousin" canon CROSS-SOURCE CONFIRMED Evil Spider (fandom) ⭐⭐⭐** — "There is a cousin enemy found on disc 3 known as the Deadly Spider" canon fandom ✓ CONFIRMS wiki Trivia recolor canon. ⭐ "Cousin" terminology canon fandom = pattern Damia recolor family relationship canon. Cohérent existing recolor family canon Damia (3 instances : Crescent Bee/Stinger + Death/Death Purger + Evil Spider/Deadly Spider). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Appearance DIVERGENCE wiki vs fandom canon Evil Spider (fandom) ⚠️⭐⭐** — Wiki : brown + yellow + sharp leg prongs + 4 pedipalps. Fandom : brown + tan + 4 red eyes + 2 fangs. Pattern Damia : adopter **union wiki + fandom** (brown + yellow/tan + 4 red eyes NEW fandom + sharp leg prongs wiki + 4 pedipalps wiki precise vs 2 fangs fandom). Pattern Damia : flag appearance source divergence canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 JP Gold 4 ✓ ÷3 systematic CONFIRMED Evil Spider (fandom) ⭐⭐⭐** — US 12 ÷ 3 = 4 ✓ matches JP exact. Pattern Damia ÷3 Gold Mob systematic confirmed cross-mob (Gold scaling normal — only HP anomaly). Source: idem.
+
+- [ ] ⭐⭐ **🆕 "Most powerful enemy Limestone Cave" canon Evil Spider (fandom) ⭐⭐** — Top-tier Mob Limestone (excl. Urobolus boss) canon fandom. "Highest Attack + 2nd highest HP in the Cave" canon stats reference. Solo formation only canon (balance design "would pose more threat in groups"). À cross-référer `locations/Limestone Cave.md` Mob hierarchy canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 AT 9 + MAT 7 fandom higher Evil Spider (fandom) ⭐⭐** — Wiki AT 8 vs Fandom 9 (+12% small) / Wiki MAT 6 vs Fandom 7 (+17% small). Pattern Damia adopt fandom slightly higher (JP closer probable). Source: idem.
+
+- [ ] ⭐ **🆕 "Appears solo" canon Evil Spider (fandom) confirms wiki solo formation** — Cohérent wiki solo formation (24) only. Pattern Damia : Evil Spider solo-only formation canon (balance design). Source: idem.
 
 ### À décider / explorer
 

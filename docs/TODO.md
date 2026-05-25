@@ -4396,6 +4396,44 @@
 
 - [ ] ⭐ **🆕 Farming time "roughly an hour" Angel's Prayer Dragonfly source canon (fandom) ⭐** — 8% drop rate canon. Vs Knight Shield 45 min (Dragon Soldier) — Dragonfly farming slower (~2× rate). Pattern Damia drop farming time canon documentation. Source: idem.
 
+### Bosses / Drake the Bandit wiki (Wind Shrine of Shirley Disc 1 — Multi-entity boss 5 entities + Final Blow passive Disc 1 NEW + Bomb→Wire→HP recovers chain NEW + Bursting Ball Boss Extra NEW kamikaze + Wire Boss Extra NEW MAJEUR defensive shield + Impassable/Sharp passives NEW + Bandit's Ring 30% drop NEW + Boss Extras canonical 4ème instance)
+
+- [ ] ⭐⭐⭐ **🆕 Drake the Bandit Multi-entity Boss canon MAJEUR Disc 1 ⭐⭐⭐** — Boss Shrine of Shirley submap 161 Wind element. Multi-entity battle canon : Drake (HP 1,200) + 3× Bursting Ball (HP 64 kamikaze bombs) + 1× Wire (HP 120 defensive shield) = 5-entity battle. Story canon : Drake = bandit stealing Shirley's Light Dragoon Spirit Disc 1. À documenter `bosses/Drake the Bandit.md` (créé). Source: [`features/bosses/_sources/lod-wiki-drake-the-bandit.md`](features/bosses/_sources/lod-wiki-drake-the-bandit.md).
+
+- [ ] ⭐⭐⭐ **🆕 Final Blow passive Disc 1 canon NEW MAJEUR ⭐⭐⭐** — Drake the Bandit confirms Disc 1 instance Final Blow passive (cohérent existing Divine Dragon Final Blow canon Disc 3). Effect canon : battle ends when Drake HP reaches 0 (Boss Extras persist mais battle ends). Pattern Damia : `FinalBlowPassive { trigger: 'main-boss-hp-zero'; effect: 'end-battle' }` data-model canon — Drake confirms cross-disc canonical recurring passive (Disc 1 Drake + Disc 3 Divine Dragon). Pattern canon multi-entity boss : kill main = win battle. À documenter `combat/passives.md` (à créer/vérifier) Final Blow passive cross-boss canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Bomb Trap → Wire Trap → HP recovers chain canon NEW MAJEUR ⭐⭐⭐** — Sequential "Enable" trigger system Drake AI canon NEW : (1) Bomb Trap (within first 3 actions guaranteed — summons 3× Bursting Ball + enables Wire Trap) → (2) Wire Trap (HP ≤ 50% — summons Wire + enables HP recovers) → (3) HP recovers (HP ≤ 33.3% — single-use 30% Max HP heal = 360 HP). Pattern Damia `EnableChainAI` data-model canon NEW. À cross-référer pattern Boss AI canon cross-boss. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Bursting Ball Boss Extra NEW canon MAJEUR ⭐⭐⭐** — Kamikaze self-destruct AoE bomb Boss Extra summoned by Drake's Bomb Trap (3× simultaneous). Stats HP 64 fragile + DF 150 high + MDF 50 low. AI 2-Roll-Forward → Auto-Detonate (1× phys + self-destructs) Auto. Position-based target "opposite party member" canon (3-position cohérent existing Divine Dragon Cannon). Pattern Damia : `BurstingBallKamikazeAI { rollPhases: 2; autoDetonate: true; target: 'opposite-party-member'; selfDestruct: true }` data-model canon NEW. Strategy : magic burst (MDF 50 low) avant Auto-Detonate trigger. À implémenter Boss Extra summoned entity Damia avec kamikaze AI canon NEW. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Wire Boss Extra NEW canon MAJEUR defensive shield ⭐⭐⭐** — Boss Extra summoned by Drake's Wire Trap (1× single). Stats HP 120 + AT 13 (irrelevant — passive-only) + DF 120. AI = ~Do nothing (passive-only entity canon NEW). 2 NEW passives MAJEURS defensive shield for Drake : Impassable + Sharp. Pattern Damia : Boss Extra passive-only entity canon NEW (cohérent thematic Wire = inanimate trap barbed wire). À implémenter Boss Extra entity Damia avec passive-only AI canon NEW. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Impassable passive canon NEW MAJEUR (Wire) ⭐⭐⭐** — **0× Physical Damage Multiplier to Drake the Bandit** = full physical immunity via Wire while alive. Pattern Damia : `ImpassablePassive { effect: 'physical-damage-zero-to-protected-entity'; protectedEntity: 'drake-the-bandit' }` data-model canon NEW. Pattern Boss Extra defensive shield canon NEW : Wire = shield for Drake (physical attacks deal 0 damage while Wire alive). Strategy counter : kill Wire first to disable Impassable + access physical damage Drake. À implémenter passive `impassable` Damia. À cross-référer pattern existing Boss Extra defensive shield canon (cohérent Lloyd Untargetable Dark Doel canon ?). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Sharp reactive passive canon NEW MAJEUR (Wire) ⭐⭐⭐** — **(1,000 / attacker's DF) Physical Damage** reactive to attacker when Drake targeted by Addition. ⚠️ Reactive damage formula canon NEW : 1,000 / DF inverse formula (lower DF = higher damage taken). Pattern Damia : `SharpReactivePassive { trigger: 'protected-targeted-by-addition'; formula: '1000 / attackerDF'; damageTarget: 'attacker' }` data-model canon NEW. Pattern reactive thorns/spikes damage canon NEW (cohérent thematic Wire = sharp barbed wire). Strategy counter : avoid Additions Drake-targeted while Wire alive (Magic / Items / non-Addition attacks favored). À implémenter passive `sharp` Damia. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Boss Extras canonical 4ème instance confirmed ⭐⭐⭐** — Drake the Bandit Disc 1 + Crafty Thief Disc 1 + Divine Dragon Disc 3 + Dark Doel Disc 4 = 4 Boss Extras instances cross-disc confirmed canon. Pattern Damia : Boss Extras = canonical recurring boss mechanic (4 instances Disc 1/3/4). À documenter `combat/boss-extras.md` (à créer/vérifier) Boss Extras canonical pattern Damia. Source: idem.
+
+- [ ] ⭐⭐ **🆕 HP recovers single-use chain-gated canon NEW variant ⭐⭐** — Drake HP recovers single-use vs Crystal Golem repeatable / Dragon Soldier repeatable — pattern Damia HP recovers variants cross-boss canon (repeatable vs single-use). 30% Max HP = 360 HP (Drake US 1,200 × 30% = 360 ✓ cohérent existing 30% formula cross-mob/boss confirmed). Triple-condition gated : Wire Trap enabled + HP ≤ 33.3% + single-use. À implémenter ability `hpRecovers` Damia avec variant single-use option canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Bandit's Ring 30% drop NEW item canon ⭐⭐** — High drop rate (vs typical 2-8% Mob accessory). Pattern thematic "Bandit" name = cohérent Drake the Bandit signature drop. Probable accessory canon (ring thematic). À documenter `items/equipment.md` Bandit's Ring accessory entry — effect précis à investiguer fandom + Guidebook. Pattern Damia : high drop rate Boss signature item canon (vs Mob low rate). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Shrine of Shirley Drake submap 161 location canon ⭐⭐** — Drake spawn submap 161 (vs Crystal Golem submaps 153/154/156 — boss-specific submap canon). Pattern thematic Shirley Light Dragoon Spirit shrine canon. À cross-référer `locations/Shrine of Shirley.md` (à créer) — Disc 1 Light Dragoon Spirit location canon avec Drake submap 161 + Crystal Golem submaps 153/154/156. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Bomb Trap "within first 3 actions" guaranteed canon ⭐⭐** — Drake AI guaranteed Bomb Trap within first 3 actions canon — pattern guaranteed early-battle ability cross-boss ? Pattern Damia : Boss AI scripted-priority canon documentation. À investiguer cross-boss pattern. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Multi-entity boss priority order strategy canon ⭐⭐** — Drake battle priority canon : (1) Kill Bursting Balls rapidly (HP 64 fragile + Auto-Detonate threat 2-turn warning) → (2) Kill Wire if summoned (disable Impassable + Sharp passives) → (3) Focus Drake (Final Blow ends battle). Pattern Damia : multi-entity boss strategy canon order kill priority. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Counter 0 No counter tier confirmed 3 entities Drake ⭐⭐** — Drake + Bursting Ball + Wire all Counter 0 (cohérent existing canon Air Combat/Feyrbrand/Fire Bird/Canbria Dayfly). Pattern Damia tier mapping canon : Boss + Boss Extras Counter 0 standard pattern. Source: idem.
+
+- [ ] ⭐ **🆕 Boss Extras 0/0/Nothing yield pattern confirmed ⭐** — Bursting Ball + Wire EXP/Gold/Drop 0 cohérent existing Boss Extra no-yield pattern canon Damia. Source: idem.
+
+- [ ] ⭐ **🆕 Scripted encounter + Escape 0% Drake canon standard ⭐** — Pattern Boss battle standard non-fuyable scripted canon. Source: idem.
+
+- [ ] **🆕 JP stats Drake + Boss Extras à confirmer fandom future ⚠️** — Wiki US only ingéré (Drake HP 1,200 / Gold 100 + Bursting Ball HP 64 + Wire HP 120). Pattern Damia adopt JP when available (+25% HP typical / Gold ÷3 systematic). À mettre à jour quand fandom Drake the Bandit ingéré. Source: à ingérer.
+
+- [ ] **🆕 Story Drake the Bandit canon à investiguer ⚠️** — Wiki section "Read More" — story lore Drake bandit stealing Shirley's Light Dragoon Spirit canon Disc 1. À ingérer wiki + fandom future pour comprendre narrative context complet. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

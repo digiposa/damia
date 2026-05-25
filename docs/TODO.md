@@ -4631,6 +4631,28 @@
 
 - [ ] ⭐ **🆕 Encounter rate "Very common" Erupting Chick canon (fandom) ⭐** — Pattern Damia encounter rate descriptive terminology canon. Source: idem.
 
+### Mobs / Evil Spider wiki (Earth Limestone Cave Disc 1 — Recolor parent of Deadly Spider canon MAJEUR + Cobweb shared ability canon + Appearance WIKI DIRECT NEW + Escape 70% HIGH tier + Counter 16 Mid-low 4ème instance + Angel's Prayer 2ème farming source)
+
+- [ ] ⭐⭐⭐ **🆕 Recolor family canon CONFIRMED Trivia wiki Evil Spider MAJEUR ⭐⭐⭐** — Wiki Trivia : "Evil Spider model = recolor of Deadly Spider located in Mountain of Mortal Dragon" canon. Pattern Damia : **Evil Spider parent ancestor + Deadly Spider recolor child** (cohérent chronologie Disc 1 → Disc 3 game progression). Cohérent existing recolor family canon Damia : Crescent Bee / Stinger + Death / Death Purger + Evil Spider / Deadly Spider (3 instances confirmed). Cobweb shared ability across recolor family canon. À cross-référer existing `mobs/Deadly Spider.md` canon — corriger pattern parent/child si nécessaire. Source: [`features/mobs/_sources/lod-wiki-evil-spider.md`](features/mobs/_sources/lod-wiki-evil-spider.md).
+
+- [ ] ⭐⭐⭐ **🆕 Cobweb canon name officiel cohérent existing Deadly Spider Evil Spider (wiki) ⭐⭐⭐** — 1× Non-Elemental magic Single (NO ~ marker — canonical wiki). Shared ability across recolor family canon (Evil Spider parent + Deadly Spider child). Pattern thematic "spider web sticky magic attack". Pattern Damia : `CobwebAbility { type: 'magic-single'; multiplier: 1; element: 'non-elemental' }` data-model canon shared cross-recolor. À cross-référer existing Deadly Spider Cobweb canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Appearance canon WIKI DIRECT NEW MAJEUR Evil Spider (wiki) ⭐⭐⭐** — Rare wiki tier 2 providing appearance directly : Brown + yellow arachnid + **sharp prongs jutting from end of legs** + **4 pedipalps for biting** (vs real-world spiders 2 pedipalps — **biological divergence canon NEW**). Pattern Damia sprite design canon : brown + yellow + sharp leg prongs + 4 pedipalps biting equipment. Pattern Damia : wiki appearance exception canon (usually fandom domain). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Evil Spider Mob canon Disc 1 Limestone Cave (wiki) ⭐⭐** — Earth Minor Enemy. Stats US HP 30 / AT 8 / DF 80 / MAT 6 / MDF 60 / SPD 60 + Gold 12 + EXP 12. Pattern "fragile early Disc 1 mob" (1-shot probable). Status 4/4 standard. Counter 16 Mid-low tier. AI 2-phase ~Bite/Cobweb. Angel's Prayer 8% drop. À documenter `mobs/Evil Spider.md` (créé). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Escape rate 70% NEW HIGH tier canon Evil Spider (wiki) ⭐⭐** — Pattern Damia : NEW HIGH escape tier canon (vs typical 30-40% pattern). Pattern Disc 1 early-game easy escape canon. Pattern Damia : escape rate variable per-mob canon (low / moderate / high tiers). À cross-référer cross-mob future. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Counter 16 Mid-low tier confirmé 4ème instance Evil Spider (wiki) ⭐⭐** — Evil Spider = 4ème Minor Enemy Mid-low tier ingestion canon Damia (cohérent Lucky Jar + Cursed Jar + Treasure Jar Unique Jars trio + Cactus Minor existing canon). Counter Opportunities tier mapping canon updated. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Limestone Cave 4 submaps location canon Evil Spider (wiki) ⭐⭐** — Cohérent existing Limestone Cave canon (Crocodile + Orc + Screaming Bat + Slime + Ugly Balloon + Urobolus partner mobs). 4 submaps spawn 45/48/49/51 (primary 45 35%). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Angel's Prayer 8% drop 2ème farming source canon Evil Spider (wiki) ⭐⭐** — Evil Spider = 2ème source Angel's Prayer farming canon Damia (cohérent existing Dragonfly Valley Disc 2 source). Pattern Damia : Angel's Prayer multi-source farming canon (Dragonfly Disc 2 + Evil Spider Disc 1). ⚠️ Pattern fandom Dragonfly canon : Angel's Prayer 30G shop purchasable — drop farming inefficient vs shop alternative. Source: idem.
+
+- [ ] ⭐ **🆕 Cobweb shared cross-recolor pattern canon Evil Spider/Deadly Spider** — Cobweb ability shared across recolor family canon. Pattern Damia : recolor family shared abilities canon (cohérent existing Crescent Bee/Stinger Spinning Gale + Death/Death Purger Total Vanishing patterns). Source: idem.
+
+- [ ] **🆕 JP stats Evil Spider à confirmer fandom future ⚠️** — Wiki US only ingéré (HP 30 / Gold 12). Pattern Damia adopt JP when available (+25% HP / Gold ÷3). Source: à ingérer.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

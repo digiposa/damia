@@ -4723,7 +4723,29 @@
 
 - [ ] ⭐ **🆕 Escape rate 50% Volcano Villude canon Fire Spirit (wiki) ⭐** — Moderate-high Disc 1 pattern. Source: idem.
 
-- [ ] **🆕 JP stats Fire Spirit à confirmer fandom future ⚠️** — Wiki US only ingéré. Pattern Damia adopt JP when available (+25% HP / Gold ÷3). Source: à ingérer.
+- [ ] **🆕 JP stats Fire Spirit à confirmer fandom future ⚠️** — Wiki US only ingéré. Pattern Damia adopt JP when available (+25% HP / Gold ÷3). ✅ **RÉSOLU fandom** : JP HP **33** ✓ +25% CONFIRMED (round 32.5 → 33) / JP Gold **4** ✓ ÷3 CONFIRMED. Source: à ingérer.
+
+### Mobs / Fire Spirit fandom complement — JP HP 33/4 CONFIRMED + Sneak Attack canon name + Recover canon name + JP 9 HP floor REVEAL + Specter cousin 4ème recolor family NEW MAJEUR + MDF tier ranking per-element NEW + Appearance flame + Counter divergence ⚠️
+
+- [ ] ⭐⭐⭐ **🆕 Specter recolor cousin canon NEW MAJEUR Fire Spirit (fandom) ⭐⭐⭐** — "Cousin in appearance of Specter found in Magical City Aglis" canon fandom. ⭐⭐⭐ **4ème recolor family canon Damia** : Crescent Bee/Stinger + Death/Death Purger + Evil Spider/Deadly Spider + **Fire Spirit/Specter**. Pattern Damia : Fire Spirit Disc 1 (parent ancestor probable) + Specter Disc 4 (cousin variant chronologie game). ⚠️ DIVERGENCE location Specter : database wiki Enemies "Specter Darkness Mayfil" vs fandom "Magical City Aglis" — à clarifier. À cross-référer existing Specter canon. Source: [`features/mobs/_sources/fandom-fire-spirit.md`](features/mobs/_sources/fandom-fire-spirit.md).
+
+- [ ] ⭐⭐⭐ **🆕 MDF tier ranking per-element canon NEW MAJEUR Fire Spirit (fandom) ⭐⭐⭐** — "Fire Spirit tied with Hell Hound for **2nd highest MDF on Fire Element monster**" canon fandom. Implies **#1 Fire MDF mob existe** (à identifier cross-mob). Pattern Damia : **MDF ranking per-element canon NEW** (Fire/Water/Earth/Thunder/Wind/Light/Darkness/Non-Elemental). À investiguer cross-mob Fire : Magma Fish / Red Hot / Salamander / Sandora Soldier Fire MDF comparison pour identifier #1 Fire MDF. À documenter `combat/elements.md` MDF tier ranking per-element canon NEW. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Sneak Attack canon name officiel MAJEUR Fire Spirit (fandom) ⭐⭐⭐** — Wiki ~Twin Slap = community approximation, fandom révèle **Sneak Attack** name officiel. Effect canon : "Flies up to target + whips target with its tail" (cohérent appearance flame creature tail-like attack). Pattern thematic "sneak attack flame whip" canon. Pattern Damia : adopter **Sneak Attack** canon name officiel + flag community ~Twin Slap alias deprecated. ⚠️ Pattern interpretation divergence : fandom "whips with tail" vs wiki "twin slap" (2-hit) — à clarifier. À implémenter ability `sneakAttack` Damia. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Recover canon name + JP 9 HP floor REVEAL CONFIRMS cross-version floor() rounding canon (fandom) ⭐⭐⭐** — **Recover** = canon name officiel fandom (wiki HP recovers community-ish). Effect canon : "Heals 30% HP : 7 (US) or 9 (JAP)" ⭐⭐⭐ JP REVEAL. **US 26 × 30% = 7.8 → 7 floor ✓** + **JP 33 × 30% = 9.9 → 9 floor ✓** — Pattern Damia : **floor() rounding canon CONFIRMED cross-version** ⭐⭐⭐. Pattern Damia : `RecoverAbility { healPercent: 0.3; rounding: 'floor' }` data-model canon confirmed cross-version. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 JP HP 33 ✓ +25% systematic CONFIRMED Fire Spirit + round canon (fandom) ⭐⭐⭐** — US 26 × 1.25 = 32.5 → **JP 33 round** ✓. Pattern Damia : +25% HP US→JP systematic canon récurrent CONFIRMED 11 entities maintenant. ⚠️ Pattern rounding : **round** canon (vs Evil Spider 30 → 50 anomaly floor pattern) — pattern JP rounding variable canon (round vs floor) à investiguer cross-mob. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 JP Gold 4 ✓ ÷3 systematic CONFIRMED Fire Spirit (fandom) ⭐⭐⭐** — US 12 ÷ 3 = 4 ✓ matches JP exact. Pattern Damia ÷3 Gold Mob systematic confirmed cross-mob. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Counter DIVERGENCE wiki Yes/19 vs fandom "No" MAJEUR Fire Spirit (fandom) ⚠️⚠️** — Wiki : "Counters Additions? Yes" + Counter Opportunities (19). Fandom : "Can Counterattack: No". Pattern Damia : adopt **wiki Counter 19 precise** + flag fandom claim. À investiguer Discord pour clarification mechanic Counter Opportunities vs general counterattack. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Appearance canon DETAILED Fire Spirit (fandom) ⭐⭐⭐** — Flame larger on upper torso than bottom + 2 short arms also made of flame. Pattern thematic : floating flame creature humanoid upper-body + flame arms canon. Pattern Damia sprite design canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 AT 11 + MAT 15 fandom CORRECTION wiki Fire Spirit (fandom) ⭐⭐** — Wiki AT 8(I)/9(II) variants vs Fandom AT 11 single value (+22-37%). Wiki MAT 13 vs Fandom 15 (+15%). Pattern Damia adopt wiki precise variant data + flag fandom higher. À investiguer : fandom 11 = autre variant ? autre source ? Source: idem.
+
+- [ ] ⭐⭐ **🆕 Status all 8 ✔ + A-AV 20% cross-source CONFIRMED Fire Spirit (fandom) ⭐⭐** — "Immune to all Status Ailments" + "20% A-AV" canon fandom ✓ cohérent wiki. Pattern Damia cross-source validation. Source: idem.
 
 ### À décider / explorer
 

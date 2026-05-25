@@ -24,13 +24,34 @@
 >
 > ⭐ **Salamander partner mob canon NEW** — Volcano Villude mixed formation 48.
 >
+> ⭐⭐⭐ **JP HP 33 ✓ +25% systematic CONFIRMED fandom** (26 × 1.25 = 32.5 → 33 round) + **JP Gold 4 ✓ ÷3 CONFIRMED** (12 ÷ 3 = 4 ✓).
+>
+> ⭐⭐⭐ **Sneak Attack canon name officiel MAJEUR fandom ⭐⭐⭐** (wiki ~Twin Slap community) — "Flies up to target + whips target with its tail" (cohérent appearance flame creature tail-like attack).
+>
+> ⭐⭐⭐ **Recover canon name MAJEUR + HP Recovery US 7 / JP 9 CONFIRMS floor rounding cross-version ⭐⭐⭐** — US 26 × 30% = 7.8 → 7 floor ✓ + JP 33 × 30% = 9.9 → 9 floor ✓. Pattern Damia : floor() rounding canon CONFIRMED cross-version.
+>
+> ⭐⭐⭐ **Specter recolor cousin canon NEW MAJEUR fandom ⭐⭐⭐** — "Cousin in appearance of Specter found in Magical City Aglis" canon. **4ème recolor family canon Damia** (Crescent Bee/Stinger + Death/Death Purger + Evil Spider/Deadly Spider + Fire Spirit/Specter). ⚠️ DIVERGENCE location Specter (Mayfil wiki database vs Aglis fandom).
+>
+> ⭐⭐⭐ **MDF tier ranking per-element canon NEW MAJEUR fandom ⭐⭐⭐** — "Fire Spirit tied with Hell Hound for 2nd highest MDF on Fire Element monster" canon. Implies #1 Fire MDF mob existe (à identifier cross-mob). Pattern Damia : MDF ranking per-element canon NEW.
+>
+> ⭐⭐⭐ **Appearance canon DETAILED fandom ⭐⭐⭐** — Flame larger on upper torso than bottom + 2 short flame arms.
+>
+> ⭐⭐⭐ **Counter DIVERGENCE wiki Counter 19 vs fandom "No" MAJEUR ⚠️** — Damia adopt wiki precise (Counter 19) + flag fandom claim.
+>
+> ⭐⭐⭐ **AT 11 + MAT 15 fandom CORRECTION wiki** (AT 8/9 wiki vs 11 fandom +22-37% / MAT 13 vs 15 +15%) — Damia adopt wiki precise variant data + flag fandom higher.
+>
+> ⭐⭐ **Status all 8 ✔ Immunity cross-source CONFIRMED** ("immune to all Status Ailments" fandom).
+>
+> ⭐⭐ **A-AV 20% cross-source CONFIRMED** ✓.
+>
 > **Sources** :
 >
 > - 🥈 [`_sources/lod-wiki-fire-spirit.md`](./_sources/lod-wiki-fire-spirit.md) — wiki LoD tier 2 (stats US 26 HP / 8/9 AT (variants) / 100 DF / 13 MAT / 160 MDF / 60 SPD / **dual A-AV/M-AV 20%** + Counter 19 + Status all 8 ✔ + Yield 13 EXP / 12 Gold / Spirit Cloak 10%/2% variant + AI 2-phase ~Twin Slap/HP recovers + **Passive Fire Immunity NEW MAJEUR** + Volcano Villude 6 submaps + 3 formations + Salamander partner + Escape 50%)
+> - 🥉 [`_sources/fandom-fire-spirit.md`](./_sources/fandom-fire-spirit.md) — fandom tier 3 (⭐ **JP HP 33 ✓ +25% CONFIRMED round** + ⭐ **JP Gold 4 ✓ ÷3 CONFIRMED** + ⭐ **Sneak Attack canon name officiel** + ⭐ **Recover canon name + JP 9 HP floor REVEAL** + ⭐ **Specter cousin canon 4ème recolor family NEW MAJEUR** + ⭐ **MDF tier ranking per-element Fire NEW MAJEUR** + ⭐ **Appearance flame upper torso + 2 flame arms** + ⭐ **Status all 8 ✔ cross-source CONFIRMED** + ⭐ **A-AV 20% cross-source CONFIRMED** + ⭐ **Counter divergence wiki Yes/19 vs fandom No ⚠️** + ⭐ **AT 11 + MAT 15 fandom higher**)
 
 ## Statut
 
-🟡 **Canon documenté wiki tier 2 uniquement** — fandom à ingérer (JP stats + appearance + Trivia future).
+🟢 **Canon documenté wiki tier 2 + fandom tier 3 cross-source confirmé** — JP HP 33 ✓ +25% CONFIRMED (round) + JP Gold 4 ✓ ÷3 CONFIRMED + Sneak Attack/Recover canon names officiels + Specter cousin canon 4ème recolor family + MDF tier ranking per-element Fire NEW + floor() rounding canon CONFIRMED cross-version. ⚠️ Counter divergence wiki Yes/19 vs fandom No à clarifier.
 
 ## Identity canon
 

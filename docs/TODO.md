@@ -4697,6 +4697,34 @@
 
 - [ ] **🆕 JP stats Fairy à confirmer fandom future ⚠️** — Wiki US only ingéré. Pattern Damia adopt JP when available (+25% HP / Gold ÷3). Source: à ingérer.
 
+### Mobs / Fire Spirit wiki (Fire Volcano Villude Disc 1 — 2 variants NEW MAJEUR + Status all 8 ✔ 3ème instance + Fire Immunity passive NEW MAJEUR + HP recovers 5ème instance + floor rounding NEW + Spirit Cloak NEW item + Dual A-AV/M-AV 2ème instance + Counter 19 Mid 2ème instance)
+
+- [ ] ⭐⭐⭐ **🆕 2 variants Fire Spirit (I) / (II) canon NEW MAJEUR (wiki) ⭐⭐⭐** — Visually indistinguishable + identical otherwise except AT 8/9 + Spirit Cloak drop 10%/2%. ⭐ **Variant-conditional spawn canon NEW** : Fire Spirit (II) only appears in duo formation 47. Pattern Damia : variant-based spawn system canon NEW (Fire Spirit I solo+duo / II only duo). À implémenter Damia variant mob spawn system canon NEW. À investiguer cross-mob : autres variant-conditional mobs ? Source: [`features/mobs/_sources/lod-wiki-fire-spirit.md`](features/mobs/_sources/lod-wiki-fire-spirit.md).
+
+- [ ] ⭐⭐⭐ **🆕 Passive Fire Immunity Mob canon NEW MAJEUR (wiki) ⭐⭐⭐** — Fire-elemental magic damage reduced to 0 canon NEW. Pattern Damia : Mob passive canon récurrent (cohérent existing Instant Death Immunity Commander Marshland + Crystal Golem). Pattern thematic "Fire Spirit immune to own element". Pattern Damia : `FireImmunityPassive { effect: 'elemental-magic-damage-zero'; element: 'fire' }` data-model canon NEW. À implémenter passive `fireImmunity` Damia. À cross-référer : autres elemental-immunity passives canon (Water/Earth/Thunder/Light/Darkness/Wind/Non-Elemental) ? Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 HP recovers 30% formula 5ème instance + floor() rounding canon NEW MAJEUR (wiki) ⭐⭐⭐** — 30% Max HP = 7 HP (Fire Spirit US 26 × 30% = 7.8 → **floor 7 ✓** ⚠️ NEW floor behavior reveal). Pattern Damia : Crystal Golem 48/60 + Dragon Soldier 146 + Drake 360 + Fairy 96 + Fire Spirit **7 (floor canon NEW)**. Pattern Damia : `HpRecoversAbility { healPercent: 0.3; rounding: 'floor' }` data-model canon NEW floor rounding REVEAL. À cross-référer cross-mob : floor rounding pattern cross-mob ? Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Status all 8 ✔ Minor Boss-tier 3ème instance canon récurrent (wiki) ⭐⭐⭐** — Fire Spirit = 3ème Minor Enemy all 8 ✔ ingestion canon Damia (cohérent existing Bowling + Crystal Golem). Pattern Damia : Minor Enemy all 8 ✔ canon récurrent tier. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Fire Spirit Mob canon Disc 1 Volcano Villude ⭐⭐** — Fire Minor Enemy. Stats US HP 26 / AT 8(I)/9(II) / DF 100 / MAT 13 / MDF 160 / SPD 60 / **dual A-AV/M-AV 20%** + Gold 12 + EXP 13. Pattern "fragile dual-AV tank anti-magic" (HP 26 very low + DF 100 + MDF 160 very high + dual A-AV/M-AV 20%). 3 encounter formations (solo 43 + duo 47 + mixed Salamander 48). Escape 50%. À documenter `mobs/Fire Spirit.md` (créé). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Spirit Cloak NEW item canon (wiki) ⭐⭐** — Drop Fire Spirit 10% (I) / 2% (II) variant-based. Probable Fire equipment thematic. Pattern Damia : drop rate variant per-Mob-variant canon NEW (10% Fire Spirit I + 2% Fire Spirit II). À documenter `items/Spirit Cloak.md` (à créer/vérifier) — Fire equipment canon NEW. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Dual A-AV/M-AV 20% canon 2ème instance Fire Spirit (wiki) ⭐⭐** — Cohérent existing Fairy 10% dual-AV pattern. Fire Spirit = 2ème instance dual-AV Mob canon Damia (vs Fairy 10%). Pattern Damia : dual-AV variable tier canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Counter 19 Mid density tier 2ème instance Fire Spirit (wiki) ⭐⭐** — Cohérent existing Assassin Cock canon. Fire Spirit = 2ème Minor Enemy Mid density tier ingestion canon Damia. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Volcano Villude 6 submaps location canon Fire Spirit (wiki) ⭐⭐** — 6 submaps spawn (115-123 range). Cohérent existing canon database mentions. À documenter `locations/Volcano Villude.md` (à créer/vérifier) — Disc 1 location canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Salamander partner mob canon NEW Volcano Villude (wiki) ⭐⭐** — Fire Spirit (I) + Salamander mixed formation 48 canon. À documenter `mobs/Salamander.md` (à créer) — Volcano Villude partner mob canon NEW. Source: idem.
+
+- [ ] ⭐ **🆕 ~Twin Slap canon name (community) Fire Spirit (wiki) ⭐** — Community approximation > 25% baseline ability. 1× physical. Source: idem.
+
+- [ ] ⭐ **🆕 Escape rate 50% Volcano Villude canon Fire Spirit (wiki) ⭐** — Moderate-high Disc 1 pattern. Source: idem.
+
+- [ ] **🆕 JP stats Fire Spirit à confirmer fandom future ⚠️** — Wiki US only ingéré. Pattern Damia adopt JP when available (+25% HP / Gold ÷3). Source: à ingérer.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

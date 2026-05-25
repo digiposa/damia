@@ -1,140 +1,110 @@
-# Dragon Block Staff — fandom (verbatim)
+# Dragon Block Staff — fandom (verbatim — lore-focused)
 
 > **Source** : [The Legend of Dragoon Wiki (fandom) — Dragon Block Staff](https://legendofdragoon.fandom.com/wiki/Dragon_Block_Staff)
-> **Fiabilité** : 🥉 **tier 3** (fandom — lore key item canon + 3 battle effects canon).
-> **Sauvegardé le** : 2026-05-23.
-> **Usage** : référence canon **Dragon Block Staff** (Wingly artifact anti-Dragon/Dragoon Disc 3 key item). ⭐⭐⭐ **Lore canon MASSIVE** : created by ancient Winglies + kept Divine Dragon sealed 10,000+ years + hidden Kadessa (former Wingly capital, now "Forbidden Land") + acquisition Disc 3 quest. + ⭐⭐⭐ **Forest of Winglies canon** : secret path Evergreen Forest north reveals Meru as Wingly + Ancestor Blano permits entry. + ⭐⭐⭐ **Miranda joins group canon Disc 3** for Dragon Block Staff quest. + ⭐⭐⭐ **Grand Jewel boss canon NEW MAJEUR** : Wingly guardian Kadessa ruins protects Staff. + ⭐⭐⭐ **Dragon Block Staff effects PER-BATTLE variable canon NEW MAJEUR** : Grand Jewel 10% dmg / 10× received | Divine Dragon **40% dmg / 4× received** (cohérent wiki Divine Dragon 0.4× / 4× canon) | Melbu Frahma final phase 10% / 10×. + ⭐⭐⭐ **Dragon Block Staff broke during Divine Dragon battle canon** — last time ever used. + ⭐⭐⭐ **Dragon Buster LOST canon** Forest of Winglies reveal (vs Dragon Block Staff still safe Kadessa). + ⭐⭐ **"Healing/defensive Dragoon Magic NOT affected" canon** — supportive Dragoon Magic strategy cohérent Divine Dragon fandom récent. + ⭐⭐ **Ancestor Blano canon Forest of Winglies leader**. + ⭐⭐ **"Winglies can no longer master the Staff" canon** — Dragoons may use canon NEW.
+> **Fiabilité** : 🥉 **tier 3** (fandom — lore-focused canon complémentaire wiki tier 2 gameplay-focused).
+> **Sauvegardé le** : 2026-05-25.
+> **Usage** : référence canon Dragon Block Staff **lore complémentaire** (vs gameplay-focused wiki tier 2 source `lod-wiki-dragon-block-staff.md`). ⭐⭐⭐ **NEW canons MAJEURS vs wiki** : **Luanna 2nd Sacred Sister Mille Seseau canon** (lit énergie Staff → "huge tornado of energy that absorbs everything"). + ⭐⭐ **Rose recommendation canon** (Dart's group decides search Staff upon **Rose recommendation** — vs wiki "Meru reveals location"). + ⭐⭐ **Staff visual canon** : "glows **eerie green** before suddenly breaking" — animation/VFX canon. + ⭐⭐ **Trivia theory canon** : Dragon Block Staff = force behind Divine Dragon sealing (theory — unclear why Staff breaks Divine Dragon battle — could not contain ferocity 'King of Dragons' completely + shattered absorbing too much power). + ⭐ **Ancestor Blano reveals Dragon Buster lost canon** (confirms wiki canon — Blano's revelation specifically). + ⭐ **Chapter 3 title canon = "Fate & Soul"** + **Endiness world canon** + **Divine Dragon "bound in chains" pre-game canon**.
 
 ---
 
-## Description canon
+## Description fandom
 
-The **Dragon Block Staff** is a **magical Wingly artifact** created to **diminish the power of Dragons and Dragoons**. Dart and company are on a quest to retrieve it, in order to **stop the Divine Dragon's attacks**. The staff is protected by a **powerful guardian in ruins leftover from the Dragon Campaign**.
+The **Dragon Block Staff** is a **legendary artifact made by the ancient Winglies** to **weaken the power of Dragons and Dragoons**.
 
-⚠️ **Dragon Block Staff canon NEW MAJEUR ⭐⭐⭐** :
+⚠️ **Description canon ⭐⭐⭐** :
 
-- **Wingly artifact** canon — created by ancient Winglies
-- **Anti-Dragon + Anti-Dragoon canon** : diminishes power of BOTH Dragons + Dragoons
-- Pattern Wingly anti-Dragon weapons canon (cohérent existing Dragon Buster canon)
-- **Quest object Disc 3** : Dart's party retrieve → stop Divine Dragon attacks
-- **Protected by guardian** Dragon Campaign ruins canon
+- "Legendary artifact" canon (vs "magical Wingly artifact" wiki tier 2)
+- Made by **ancient Winglies** canon ✓ confirmed
+- Function : weaken power of Dragons + Dragoons canon ✓ confirmed cross-source
+- Pattern Wingly anti-Dragon canon
 
-## History canon ⭐⭐⭐ MAJEUR
+## Story
 
-This staff has been **passed down through generations of Winglies**. It is said to have **kept the Divine Dragon sealed for over 10,000 years**. At some point before or after that, it was hidden in the **former Wingly capital Kadessa** — now known as the **Forbidden Land**.
+### Before the events of the game ⭐⭐⭐
 
-⚠️ **History canon Dragon Block Staff ⭐⭐⭐ MAJEUR** :
+Over **10,000 years before the events of the game**, when the **Divine Dragon plagued the land of Endiness**, the **Winglies, who used to rule over the ancient world**, constructed **two magical items to fight against Dragons**, the **Dragon Buster and the Dragon Block Staff**. The Dragon Block Staff was the artifact that was **presumably used to weaken the Divine Dragon and bind him in chains**.
 
-- **Passed down generations of Winglies** canon
-- **Sealed Divine Dragon 10,000+ years** ✓ confirmé cross-source (cohérent existing Divine Dragon fandom récent canon)
-- **Hidden Kadessa = former Wingly capital** canon NEW MAJEUR
-- **Kadessa = "Forbidden Land"** present-day canon NEW
-- À documenter `locations/Kadessa.md` (à créer) — Forbidden Land Wingly former capital canon NEW
-- À cross-référer `dragoons/dragons.md` + Divine Dragon lore canon
+⚠️ **Pre-game lore canon ⭐⭐⭐ MAJEUR** :
 
-## Present canon ⭐⭐⭐ MASSIVE Disc 3 acquisition story
+- **10,000 years ago canon** ✓ confirmed cross-source (cohérent existing Divine Dragon + Wingly civilization canon)
+- **Endiness = world canon** (TLoD setting world name canon — référence existing)
+- **Winglies ruled ancient world canon** ✓ confirmed
+- **Divine Dragon "plagued the land"** canon : era of Divine Dragon rampage pre-Wingly weapons
+- **Two magical items constructed canon** : **Dragon Buster + Dragon Block Staff** ✓ confirmed cross-source pair pattern Wingly anti-Dragon weapons
+- **Dragon Block Staff = weakened Divine Dragon canon** : presumably used to weaken + bind in chains
+- **"Bind in chains" canon** ⭐⭐ NEW — Divine Dragon was **chained** by Staff (visual/lore canon)
+- Pattern Damia : Dragon Block Staff = primary Wingly anti-Divine Dragon weapon ancient era canon
 
-With the Divine Dragon free from its magical prison in Mortal Dragon Mountain, Dart and company think about how to defeat the Dragon. The staff's possible whereabouts revealed by **Meru, who believes it is located in the Forest of Winglies**. **Miranda joins the group** to ensure the party is capable of handling the job, and they go to the **Evergreen Forest**. To the **north, a secret path is revealed** whereby **Meru is confirmed to be a Wingly**.
+### Chapter 3: Fate & Soul ⭐⭐⭐
 
-The party arrives in the **Wingly Forest**, met with immediate hostility. They plea for support, and by **order of Ancestor Blano** are permitted to enter. Arriving near the top of the village, the group speaks with Blano asking for his support against the Divine Dragon. He reveals he knew they were coming, admitting that "the times won't leave Winglies alone". Blano states that both parties must combine strengths to overcome the Divine Dragon, or no one will survive. **Winglies can no longer master the staff**, but it is believed that **Dragoons may be able to use it**. He reveals that the **Dragon Buster is lost**, but the **Dragon Block Staff is still safe and accounted for**. Despite some difficulty with the teleportation system, Blano and several Winglies channel their magic so that the party can retrieve the staff.
+When the **Divine Dragon awakens from its millenials-old seal at the Mountain of Mortal Dragon**, it goes on a **vengeful rampage over Mille Seseau**. **Dart and his group decide to search for the Dragon Block Staff upon recommendation of Rose** to have any hope of standing against the king of Dragons.
 
-⚠️ **Story canon Disc 3 Dragon Block Staff quest ⭐⭐⭐ MAJEUR** :
+⚠️ **Disc 3 Chapter 3 acquisition canon ⭐⭐⭐ MAJEUR** :
 
-- **Meru reveals Staff location canon** : Forest of Winglies (her Wingly heritage)
-- **Miranda joins group canon** : Disc 3 Dragon Block Staff quest (cohérent existing Miranda Disc 3 join canon)
-- **Evergreen Forest secret path north** : reveals Forest of Winglies hidden canon
-- **Meru confirmed Wingly canon** (story reveal Disc 3) ✓
-- **Ancestor Blano canon NEW MAJEUR** : Wingly elder Forest of Winglies leader
-- **"Winglies can no longer master the Staff" canon NEW** : Wingly magic decline thematic Disc 3-4 era
-- **Dragoons may use Staff canon** : pattern Dragoon mastery Staff canon
-- **Dragon Buster LOST canon** ⭐⭐⭐ MAJEUR : confirms Dragon Buster mentioned but lost Disc 3 (cohérent Divine Dragon fandom récent — Lloyd gives Dart Dragon Buster Disc 4 — implies Lloyd finds/has it Disc 3-4)
-- **Wingly teleportation system canon** : magic-channel transport Kadessa
+- **Chapter 3 title canon = "Fate & Soul"** canon ✓ (TLoD official disc/chapter title)
+- **Divine Dragon "vengeful rampage over Mille Seseau"** canon : explains Divine Dragon attacks Mille Seseau (Deningrad — cohérent existing Deningrad burned canon)
+- **"King of Dragons" canon** ✓ confirmed cross-source (cohérent existing Divine Dragon title canon)
+- ⭐⭐ **Rose recommendation canon NEW** : Dart's group decides search Staff upon **Rose** recommendation (vs existing first fandom "Meru reveals location") — pattern Rose Dragon Campaign veteran knowledge canon
+- Pattern : Rose recommends + Meru leads to Forest of Winglies canon (cohérent both fandoms)
+- À cross-référer `party-members/Rose.md` : Dragon Block Staff knowledge canon (Dragon Campaign veteran)
 
-Having been sealed in the **ruins of Kadessa**, the Dragon Block Staff is protected by a **magical guardian**. The party navigates the grand ruins, eventually arriving in a special chamber. The staff appears to be **embedded in a large, rocky formation**. Miranda notes that it doesn't appear impressive, but **Rose rebuts that the appearance of an object doesn't correlate to its magical prowess**. She goes on to convey that the **Divine Dragon was sealed because it could not be tamed nor killed**. Meru proceeds to retrieve the staff, when a sudden rumbling shakes the area violently. **A large object dislodges itself from the ceiling, flipping over so that the staff is upright atop a large, strange mass of dark material and golden glows**. A battle ensues with the powerful guardian **Grand Jewel**. After the party defeats the guardian, the staff descends slowly and is claimed by the party. They head back to the Wingly Forest, as the Divine Dragon flies overhead.
+Meru leads the group to the **Forest of Winglies**, where **Ancestor Blano reveals that the Dragon Buster, another artifact that belonged to the Winglies, was lost**. For Dart and his fellow Dragoons to find the Dragon Block Staff, he directs them to the **Forbidden Land**, the **ruins of the ancient Wingly capital Kadessa**. They make their way through the old ruins of the capital and find the Dragon Block Staff, but upon **Meru trying to remove it, the Grand Jewel, the guardian of the Dragon Block Staff, reveals itself and forces the group to a fight**.
 
-⚠️ **Grand Jewel boss canon NEW MAJEUR ⭐⭐⭐** :
+⚠️ **Forest of Winglies + Kadessa canon ⭐⭐⭐ confirmed cross-source** :
 
-- **Grand Jewel** = NEW Boss canon Kadessa ruins (Dragon Block Staff guardian Wingly creation)
-- Pattern thematic "Dark material + golden glows" canon
-- Pattern Boss canon Disc 3 Kadessa Forbidden Land
-- À documenter `bosses/Grand Jewel.md` (à créer) — Wingly guardian boss canon NEW Disc 3
-- Cohérent existing Wingly anti-Dragon thematic
+- **Meru leads group canon** ✓ confirmed (her Wingly heritage)
+- **Ancestor Blano reveals Dragon Buster lost canon** ✓ confirmed précisé : c'est Blano specifically qui révèle Dragon Buster lost
+- **Forbidden Land = ruins ancient Wingly capital Kadessa** canon ✓ confirmed cross-source
+- **Grand Jewel guardian reveals itself canon** ✓ confirmed cross-source (when Meru tries to remove Staff)
+- À cross-référer `npcs/Ancestor Blano.md` : Dragon Buster lost revelation canon
 
-⚠️ **Rose canon quote MAJEUR ⭐⭐⭐** :
+After the battle, **Dart and his companions receive the Dragon Block Staff**. Back in **Deningrad**, **Luanna, the Second Sacred Sister of Mille Seseau, reads the energy of the staff and describes it as a huge tornado of energy that absorbs everything**. Eventually, the group travels to the Mountain of Mortal Dragon to fight the Divine Dragon and use the power of the Dragon Block Staff to weaken the Divine Dragon.
 
-- "Divine Dragon was sealed because it could not be tamed nor killed" canon ✓ confirmé Divine Dragon lore (cohérent Divine Dragon fandom récent — ancient Winglies couldn't kill)
-- Pattern Rose canon knowledge = Dragon Campaign veteran lore
+⚠️ **Luanna canon NEW MAJEUR ⭐⭐⭐** :
 
-The party races to the Mountain of Mortal Dragon. As they navigate the terrain, sounds of a battle are heard. The party moves in to find **Lloyd has already engaged and heavily weakened the Divine Dragon**. Lloyd is fatigued, and the Dragon roars. **Dart and the party charge into battle. Dart uses the Dragon Block Staff right away**, limiting the Dragon's power (and that of Dragoons). Despite the Dragon being weakened by Lloyd + Staff, the battle is quite difficult. The party is victorious, the Divine Dragon is felled, and **Lloyd swoops back in to claim the Divine Dragoon Spirit**. **The Dragon Block Staff broke during the battle**, marking the **last time it was ever used**.
+- **Luanna = 2nd Sacred Sister of Mille Seseau canon** ⭐⭐⭐ NEW canon
+- Pattern Mille Seseau Sacred Sisters canon : Luanna = #2 (probable existing Miranda = 1st Sacred Sister cohérent)
+- **Luanna reads energy of Staff canon** : "huge tornado of energy that absorbs everything"
+- ⚠️ Pattern Damia : Luanna = magic-sensitive Sacred Sister NPC canon Disc 3 Deningrad
+- À documenter `npcs/Luanna.md` (à créer) — 2nd Sacred Sister Mille Seseau magic-sensitive NPC canon NEW
+- Cohérent existing Deningrad Sacred Sisters canon (Miranda = ex-1st Sister à confirmer)
+- **Post-battle Deningrad detour canon** : after Grand Jewel battle → return Deningrad → Luanna reads Staff → travel Mountain of Mortal Dragon
+- Pattern story flow Disc 3 : Grand Jewel → Deningrad (Luanna) → Mountain of Mortal Dragon (Divine Dragon) canon NEW
 
-⚠️ **Dragon Block Staff usage Divine Dragon battle canon ⭐⭐⭐ MAJEUR** :
+In the battle, **Dart holds it up into the air and it begins to absorb the draconic power; it glows an eerie green before suddenly breaking and drastically weaking both the power**.
 
-- **Dart uses Staff at battle start** canon : limits Dragon + Dragoon power
-- **Staff broke during battle** canon : last time ever used canon
-- ⚠️ Pattern Damia : Dragon Block Staff = **single-use battle Disc 3 Divine Dragon** canon (cannot reuse Disc 4)
-- Cohérent existing Lloyd canon story + Divine Dragoon Spirit acquisition
+⚠️ **Visual canon Staff activation Divine Dragon battle ⭐⭐ NEW** :
 
-## Use in Combat ⭐⭐⭐ MASSIVE per-battle variable effects canon
+- **Dart holds Staff up into the air** canon (animation canon)
+- **Staff absorbs draconic power** canon (gameplay = Divine Dragon + Dragoons power reduction)
+- **Glows eerie green canon** ⭐ NEW (VFX/animation canon — color = green)
+- Pattern Damia VFX : Dragon Block Staff activation = eerie green absorption tornado canon
+- **Suddenly breaking + drastically weakening both the power** canon ✓ confirmed cross-source
+- Pattern : "drastically weakening BOTH the power" canon (Divine Dragon + Dragoons = both weakened)
+- À implémenter `DragonBlockStaffActivationVFX { color: 'eerie-green'; effect: 'tornado-absorbs-draconic-power'; result: 'breaks-then-weakens-both' }` data-model canon
 
-In combat, the Dragon Block Staff always **diminishes the power of Dragoons and Dragons**. However, its **exact effects vary among the three battles** it makes an appearance in. In all cases, the staff **does not reduce the effects of Dragoon Magic which involve healing and defensive buffs**, making it effective to transform for short periods at a time.
+## Gallery captions
 
-⚠️ **Pattern Dragon Block Staff per-battle variable effects canon NEW MAJEUR ⭐⭐⭐** :
+- "Dart and his group find the Dragon Block Staff in the Forbidden Land" — Kadessa ruins acquisition canon
+- "The Grand Jewel, the guardian of the Staff, reveals itself" — boss reveal canon
+- "Dart uses the Dragon Block Staff in the battle against the Divine Dragon" — Divine Dragon battle canon
+- "The Dragon Block Staff absorbing the power of Dragons and the Divine Dragon" — VFX canon
 
-- Pattern **exact effect varies per battle** canon (Grand Jewel / Divine Dragon / Melbu Frahma)
-- Pattern **healing + defensive Dragoon Magic NOT affected** ✓ confirmed cross-source (cohérent Divine Dragon fandom récent "supportive Dragoon Magic only" — Albert Rose Storm / Meru Rainbow Breath / Miranda healing)
-- À implémenter `DragonBlockStaffEffect { type: 'anti-dragoon'; dragoonDamageDealt: number; dragoonDamageReceived: number; affectsHealingDefensiveDragoonMagic: false }` data-model canon
+⚠️ **Gallery captions canon ⭐** : visual references canon (à investiguer Gallery images future sprites Damia)
 
-### Grand Jewel battle ⭐⭐⭐
+## Trivia ⭐⭐ theory canon
 
-> If Dragoons are used in the battle, the **Grand Jewel will activate the power of the staff**. While the effect is active, **Dragoons deal 10% damage and receive 10x as much damage**.
+> Dialogue in the game before the battle with the Grand Jewel **hints at the Dragon Block Staff being the force behind the sealing of the Divine Dragon**. However, it is **unknown whether this is actually the case**, and it is **unclear why the Dragon Block Staff breaks during the battle with the Divine Dragon**. It is **theorized that the Dragon Block Staff could not contain the ferocity of the 'King of Dragons' completely and shattered when it absorbed too much of its power**.
 
-⚠️ **Grand Jewel Dragon Block Staff effect canon ⭐⭐⭐** :
+⚠️ **Trivia theory canon ⭐⭐ NEW** :
 
-- **Dragoons deal 10% damage** (-90%)
-- **Dragoons receive 10× damage** (+900%)
-- Pattern most punishing Dragon Block Staff effect canon
-- **Reactive trigger** : Grand Jewel activates Staff only when Dragoons used canon
-- Pattern Damia : `DragonBlockStaffGrandJewelEffect { dragoonDamageDealt: 0.10; dragoonDamageReceived: 10; reactiveTrigger: 'dragoon-used' }` data-model canon
+- **Dialogue hint canon** : Staff = force behind Divine Dragon sealing (pre-Grand Jewel battle dialogue canon)
+- **Officially ambiguous canon** : "unknown whether actually the case" — TLoD lore intentional mystery
+- **Unclear why Staff breaks canon** : official ambiguity Divine Dragon battle
+- **Fan theory canon** : Staff couldn't contain ferocity 'King of Dragons' completely → shattered absorbing too much power
+- Pattern Damia : Staff break = canonical event but mechanism = official mystery canon (Damia respects lore ambiguity)
+- À cross-référer `bosses/Divine Dragon.md` : Staff sealing ambiguity canon Trivia
 
-### Divine Dragon battle ⭐⭐⭐ (cohérent wiki canon existing)
+## Article complet fandom ⭐⭐ canon
 
-> At the start of battle with the Divine Dragon, Dart will activate the Dragon Block Staff. This causes the staff to break, but its effects will remain until the battle is over. **Dragoons will deal only 40% of normal damage, while taking 4x damage**. The Divine Dragon is weakened as well, but its stats do not change; implying that its stats only reflect the weakened state.
-
-⚠️ **Divine Dragon Dragon Block Staff effect canon cross-source confirmed ⭐⭐⭐ MAJEUR** :
-
-- **Dragoons deal 40% damage** (-60%) ✓ confirmé wiki Divine Dragon canon 0.4× damage dealt
-- **Dragoons receive 4× damage** (+300%) ✓ confirmé wiki Divine Dragon canon 4× damage received
-- Pattern Divine Dragon Dragon Block Staff effect ✓ cross-source confirmed
-- **Staff breaks at activation** + **effects remain entire battle** canon
-- **Divine Dragon stats reflect weakened state** canon (implying real Divine Dragon stats higher than displayed) ⚠️ NEW canon
-- Pattern Damia : `DragonBlockStaffDivineDragonEffect { dragoonDamageDealt: 0.4; dragoonDamageReceived: 4; breaksAtActivation: true; effectPermanentBattle: true; targetWeakened: true }` data-model canon
-
-### Melbu Frahma final phase battle ⭐⭐⭐
-
-> Melbu Frahma will use this ability in his final phase if targeted by a Dragoon Magic attack. Like the original effect from Grand Jewel, **Dragoons will deal 10% of normal damage and receive 10x more damage than normal**.
-
-⚠️ **Melbu Frahma Dragon Block Staff effect canon ⭐⭐⭐** :
-
-- **Dragoons deal 10% damage** (-90%)
-- **Dragoons receive 10× damage** (+900%)
-- Pattern Melbu Frahma = same Grand Jewel effect canon (10%/10×)
-- **Reactive trigger** : Melbu Frahma final phase + Dragoon Magic attack target → activates canon
-- Pattern Melbu Frahma final boss Disc 4 mimics ancient Wingly anti-Dragoon magic canon
-- ⚠️ Pattern : Dragon Block Staff was broken Disc 3 — but Melbu Frahma uses **ability** (not physical Staff) canon — Wingly magic intrinsic
-- À documenter `bosses/Melbu Frahma.md` (à créer/vérifier) — Disc 4 final boss + Dragon Block Staff ability final phase canon
-
-### Pattern Dragon Block Staff variable effects table canon ⭐⭐⭐
-
-| Battle            | Dragoon Damage Dealt | Dragoon Damage Received | Activation                                           |
-| ----------------- | -------------------- | ----------------------- | ---------------------------------------------------- |
-| **Grand Jewel**   | 10% (-90%)           | 10× (+900%)             | Reactive : if Dragoons used                          |
-| **Divine Dragon** | **40% (-60%)** ✓     | **4× (+300%)** ✓        | Dart activates start battle → Staff breaks           |
-| **Melbu Frahma**  | 10% (-90%)           | 10× (+900%)             | Reactive : final phase + Dragoon Magic attack target |
-
-Pattern Damia canon : Dragon Block Staff = variable per-encounter anti-Dragoon multiplier canon NEW.
-
-## Stub article note
-
-(Article complete fandom — no stub note)
-
-⚠️ **Article fandom complet canon ⭐** — Massive lore + 3 battle effects canon Dragon Block Staff.
+Fandom article complet (no stub note) — Lore-focused complément wiki tier 2 gameplay-focused.

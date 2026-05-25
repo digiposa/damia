@@ -12,30 +12,30 @@
 >
 > ⭐⭐⭐ **Story canon MASSIVE Disc 3** : Meru reveals location Forest of Winglies (her Wingly heritage) + Miranda joins group + Evergreen Forest secret path north + Ancestor Blano Wingly elder permits entry + Wingly teleportation system + **Grand Jewel boss NEW canon Kadessa ruins guardian** + Dragon Block Staff acquisition.
 >
-> ⭐⭐⭐ **Dragon Buster LOST canon Disc 3 reveal (fandom)** — cohérent Lloyd gives Dart Dragon Buster Disc 4 (post-Melbu Frahma — Lloyd finds/has it Disc 3-4).
+> ⭐⭐⭐ **Dragon Buster LOST canon Disc 3 reveal (wiki + fandom confirmé)** — cohérent Lloyd gives Dart Dragon Buster Disc 4 (post-Melbu Frahma — Lloyd finds/has it Disc 3-4).
 >
-> ⭐⭐ **"Winglies can no longer master the Staff" canon** — Wingly magic decline thematic Disc 3-4 era.
+> ⭐⭐ **"Winglies can no longer master the Staff" canon (wiki)** — Wingly magic decline thematic Disc 3-4 era.
 >
-> ⭐⭐ **Kadessa = former Wingly capital "Forbidden Land" present canon NEW MAJEUR**.
+> ⭐⭐ **Kadessa = former Wingly capital "Forbidden Land" present canon NEW MAJEUR (wiki + fandom)**.
 >
-> ⭐⭐⭐ **Luanna 2nd Sacred Sister Mille Seseau canon NEW MAJEUR (fandom 2)** — reads Staff energy à Deningrad : "huge tornado of energy that absorbs everything" canon. Pattern story flow Disc 3 Grand Jewel → **Deningrad detour (Luanna)** → Mountain of Mortal Dragon canon NEW.
+> ⭐⭐⭐ **Luanna 2nd Sacred Sister Mille Seseau canon NEW MAJEUR (fandom)** — reads Staff energy à Deningrad : "huge tornado of energy that absorbs everything" canon. Pattern story flow Disc 3 Grand Jewel → **Deningrad detour (Luanna)** → Mountain of Mortal Dragon canon NEW.
 >
-> ⭐⭐ **Rose recommendation canon (fandom 2)** : Dart's group decides search Staff upon **Rose** recommendation (pattern Rose Dragon Campaign veteran knowledge) — cohérent Meru leads Forest of Winglies.
+> ⭐⭐ **Rose recommendation canon (fandom)** : Dart's group decides search Staff upon **Rose** recommendation (pattern Rose Dragon Campaign veteran knowledge) — cohérent wiki "Meru leads Forest of Winglies".
 >
-> ⭐⭐ **Visual VFX canon (fandom 2)** : Dart holds Staff into air → absorbs draconic power → **glows eerie green** → suddenly breaks → drastically weakens both power canon. Pattern Damia VFX implementation.
+> ⭐⭐ **Visual VFX canon (fandom)** : Dart holds Staff into air → absorbs draconic power → **glows eerie green** → suddenly breaks → drastically weakens both power canon. Pattern Damia VFX implementation.
 >
-> ⭐⭐ **Pre-game lore canon (fandom 2)** : Divine Dragon plagued **Endiness** 10,000 years ago → Winglies constructed pair Dragon Buster + Dragon Block Staff → Staff presumably **bound Divine Dragon in chains** canon NEW.
+> ⭐⭐ **Pre-game lore canon (fandom)** : Divine Dragon plagued **Endiness** 10,000 years ago → Winglies constructed pair Dragon Buster + Dragon Block Staff → Staff presumably **bound Divine Dragon in chains** canon NEW.
 >
-> ⭐⭐ **Trivia theory canon (fandom 2)** : Dialogue hints Staff = force behind Divine Dragon sealing — **officially ambiguous** (unknown if true) + theorized Staff couldn't contain ferocity 'King of Dragons' completely + shattered absorbing too much power canon.
+> ⭐⭐ **Trivia theory canon (fandom)** : Dialogue hints Staff = force behind Divine Dragon sealing — **officially ambiguous** (unknown if true) + theorized Staff couldn't contain ferocity 'King of Dragons' completely + shattered absorbing too much power canon.
 >
 > **Sources** :
 >
-> - 🥉 [`_sources/fandom-dragon-block-staff.md`](./_sources/fandom-dragon-block-staff.md) — fandom 1 gameplay-focused (lore canon MASSIVE 10,000 ans seal + Kadessa Forbidden Land + Forest of Winglies acquisition Disc 3 + Ancestor Blano + Meru Wingly reveal + Miranda joins + **Grand Jewel boss NEW canon** + Dragon Block Staff broke Divine Dragon battle + 3 battle effects variable canon Grand Jewel 10%/10× / Divine Dragon 40%/4× / Melbu Frahma 10%/10× + Dragon Buster lost canon + Winglies can no longer master canon)
-> - 🥉 [`_sources/fandom-dragon-block-staff-2.md`](./_sources/fandom-dragon-block-staff-2.md) — fandom 2 lore-focused (Chapter 3 "Fate & Soul" title canon + **Luanna 2nd Sacred Sister NEW MAJEUR** + Rose recommendation canon + Endiness world canon + Divine Dragon "bound in chains" canon + Deningrad detour story flow canon + visual VFX eerie green canon + Trivia theory officially ambiguous canon)
+> - 🥈 [`_sources/lod-wiki-dragon-block-staff.md`](./_sources/lod-wiki-dragon-block-staff.md) — wiki LoD tier 2 gameplay-focused (lore canon MASSIVE 10,000 ans seal + Kadessa Forbidden Land + Forest of Winglies acquisition Disc 3 + Ancestor Blano + Meru Wingly reveal + Miranda joins + **Grand Jewel boss NEW canon** + Dragon Block Staff broke Divine Dragon battle + 3 battle effects variable canon Grand Jewel 10%/10× / Divine Dragon 40%/4× / Melbu Frahma 10%/10× + Dragon Buster lost canon + Winglies can no longer master canon)
+> - 🥉 [`_sources/fandom-dragon-block-staff.md`](./_sources/fandom-dragon-block-staff.md) — fandom tier 3 lore-focused (Chapter 3 "Fate & Soul" title canon + **Luanna 2nd Sacred Sister NEW MAJEUR** + Rose recommendation canon + Endiness world canon + Divine Dragon "bound in chains" canon + Deningrad detour story flow canon + visual VFX eerie green canon + Trivia theory officially ambiguous canon)
 
 ## Statut
 
-🟡 **Canon documenté 2× fandom sources (gameplay-focused + lore-focused)** — wiki tier 2 à ingérer en suite (probable existing on legendofdragoon.org/wiki/Dragon_Block_Staff). Note : Divine Dragon boss canon déjà détaille passive Dragon Block Staff (cohérent fandoms).
+🟢 **Canon documenté wiki tier 2 + fandom tier 3** — cross-source confirmé (gameplay-focused wiki + lore-focused fandom). Note : Divine Dragon boss canon déjà détaille passive Dragon Block Staff (cohérent wiki + fandom).
 
 ## Identity canon
 
@@ -51,10 +51,10 @@
 
 - **Created by ancient Winglies** millennia ago (anti-Dragon weapon canon)
 - **Pre-game era canon** : Divine Dragon plagued **Endiness** 10,000+ years ago → Winglies (who ruled ancient world) constructed pair **Dragon Buster + Dragon Block Staff** canon NEW
-- **Endiness = TLoD world canon** (fandom 2)
+- **Endiness = TLoD world canon** (fandom)
 - **Passed down generations** of Winglies canon
 - **Sealed Divine Dragon 10,000+ years** canon ✓ cross-source confirmed (cohérent Divine Dragon fandom récent — ancient Winglies couldn't kill Divine Dragon, only seal)
-- **Presumably used to weaken Divine Dragon + bind in chains canon NEW** ⭐⭐ (fandom 2 — Divine Dragon was chained by Staff visual/lore canon)
+- **Presumably used to weaken Divine Dragon + bind in chains canon NEW** ⭐⭐ (fandom — Divine Dragon was chained by Staff visual/lore canon)
 - **Hidden in Kadessa** (former Wingly capital) — now **"Forbidden Land"** present canon NEW MAJEUR
 - Pattern Wingly civilization decline canon : Forbidden Land = former capital ruins
 
@@ -62,11 +62,11 @@
 
 ### Forest of Winglies acquisition quest
 
-- **Disc 3 Chapter 3 title canon = "Fate & Soul"** (fandom 2)
+- **Disc 3 Chapter 3 title canon = "Fate & Soul"** (fandom)
 - **Divine Dragon free** from Mountain of Mortal Dragon (post-seal break Disc 3) — threatens world canon
-- **Divine Dragon vengeful rampage over Mille Seseau canon** (fandom 2) — explains Deningrad attack
+- **Divine Dragon vengeful rampage over Mille Seseau canon** (fandom) — explains Deningrad attack
 - Party considers how to defeat Dragon
-- **Rose recommends search Staff canon NEW (fandom 2)** : Dart's group decides search upon Rose recommendation (pattern Rose Dragon Campaign veteran knowledge)
+- **Rose recommends search Staff canon NEW (fandom)** : Dart's group decides search upon Rose recommendation (pattern Rose Dragon Campaign veteran knowledge)
 - **Meru reveals Staff location + leads to Forest of Winglies** : her Wingly heritage canon reveal
 - **Miranda joins group** : Disc 3 quest party member canon
 - **Evergreen Forest secret path north** : reveals Forest of Winglies hidden canon
@@ -88,10 +88,10 @@
 - **Grand Jewel guardian battle** Wingly creature canon NEW
 - Party defeats Grand Jewel → Staff descends slowly → claimed by party
 
-### Deningrad detour — Luanna reads Staff canon NEW (fandom 2) ⭐⭐⭐
+### Deningrad detour — Luanna reads Staff canon NEW (fandom) ⭐⭐⭐
 
-- After Grand Jewel battle → party receives Staff → **return Deningrad** canon NEW (fandom 2)
-- **Luanna = 2nd Sacred Sister of Mille Seseau** canon NEW MAJEUR (fandom 2)
+- After Grand Jewel battle → party receives Staff → **return Deningrad** canon NEW (fandom)
+- **Luanna = 2nd Sacred Sister of Mille Seseau** canon NEW MAJEUR (fandom)
 - **Luanna reads Staff energy canon** : "huge tornado of energy that absorbs everything"
 - Pattern Mille Seseau Sacred Sisters canon : Luanna = #2 (cohérent existing Miranda Sacred Sister canon)
 - Pattern story flow Disc 3 canon : Forest of Winglies → Kadessa (Grand Jewel) → Deningrad (Luanna) → Mountain of Mortal Dragon canon
@@ -103,7 +103,7 @@
 - **Lloyd already engaged + heavily weakened Divine Dragon** canon
 - Lloyd fatigued → Dragon roars
 - **Dart uses Dragon Block Staff at battle start** canon → limits Dragon + Dragoon power
-- **Visual VFX canon (fandom 2)** : Dart **holds Staff up into the air** → absorbs draconic power → **glows eerie green** → suddenly breaks
+- **Visual VFX canon (fandom)** : Dart **holds Staff up into the air** → absorbs draconic power → **glows eerie green** → suddenly breaks
 - **Staff breaks at activation** canon → effects remain entire battle (cohérent gameplay)
 - **"Drastically weakens both the power"** canon (Divine Dragon + Dragoons = both weakened cross-source confirmed)
 - Despite Dragon weakened by Lloyd + Staff → battle quite difficult
@@ -168,14 +168,14 @@ Pattern Wingly anti-Dragon weapons canon Damia confirmed cross-source :
 11. **Pattern Wingly magic decline canon** : "can no longer master the Staff" — Dragoons can use canon
 12. **Miranda joins group Disc 3 for Dragon Block Staff quest canon**
 13. **Meru Wingly heritage reveal Disc 3 canon** : Forest of Winglies secret path
-14. **Rose recommendation canon (fandom 2)** : Rose recommends search Staff (pattern Rose Dragon Campaign veteran knowledge)
-15. **Luanna 2nd Sacred Sister Mille Seseau canon NEW (fandom 2)** : reads Staff energy à Deningrad post-Grand Jewel
-16. **Deningrad detour story flow canon (fandom 2)** : Grand Jewel → Deningrad (Luanna) → Mountain of Mortal Dragon
-17. **VFX eerie green canon (fandom 2)** : Staff activation visual canon (color green + tornado absorption)
-18. **Divine Dragon "bound in chains" pre-game canon (fandom 2)** : Staff presumably chained Divine Dragon ancient era
-19. **Chapter 3 title canon = "Fate & Soul"** (fandom 2 — TLoD official disc/chapter title)
-20. **Endiness = TLoD world canon** (fandom 2)
-21. **Trivia theory officially ambiguous canon (fandom 2)** : Staff = force behind Divine Dragon sealing (dialogue hint) BUT officially unknown + theory shattered absorbing too much power
+14. **Rose recommendation canon (fandom)** : Rose recommends search Staff (pattern Rose Dragon Campaign veteran knowledge)
+15. **Luanna 2nd Sacred Sister Mille Seseau canon NEW (fandom)** : reads Staff energy à Deningrad post-Grand Jewel
+16. **Deningrad detour story flow canon (fandom)** : Grand Jewel → Deningrad (Luanna) → Mountain of Mortal Dragon
+17. **VFX eerie green canon (fandom)** : Staff activation visual canon (color green + tornado absorption)
+18. **Divine Dragon "bound in chains" pre-game canon (fandom)** : Staff presumably chained Divine Dragon ancient era
+19. **Chapter 3 title canon = "Fate & Soul"** (fandom — TLoD official disc/chapter title)
+20. **Endiness = TLoD world canon** (fandom)
+21. **Trivia theory officially ambiguous canon (fandom)** : Staff = force behind Divine Dragon sealing (dialogue hint) BUT officially unknown + theory shattered absorbing too much power
 
 ### Implementation tech
 
@@ -210,7 +210,7 @@ Pattern Wingly anti-Dragon weapons canon Damia confirmed cross-source :
 
 ### Questions ouvertes
 
-- **Wiki tier 2 Dragon Block Staff** : à ingérer wiki canon (probable existing on legendofdragoon.org/wiki/Dragon_Block_Staff)
+- ✅ **Wiki tier 2 Dragon Block Staff ingéré** : `_sources/lod-wiki-dragon-block-staff.md` (cross-source confirmé fandom)
 - **Grand Jewel stats canon** : à ingérer wiki + fandom future Grand Jewel boss
 - **Kadessa location canon** : à ingérer fandom + wiki future (Forbidden Land Wingly former capital)
 - **Ancestor Blano canon NPC** : à ingérer fandom future Wingly elder Forest of Winglies
@@ -229,7 +229,7 @@ Pattern Wingly anti-Dragon weapons canon Damia confirmed cross-source :
 - [`../locations/Forest of Winglies.md`](../locations/Forest of Winglies.md) (à créer) — Disc 3 Evergreen Forest secret path north Wingly Forest canon
 - [`../locations/Evergreen Forest.md`](../locations/Evergreen Forest.md) (à créer) — Disc 1 + secret path north Disc 3
 - [`../npcs/Ancestor Blano.md`](../npcs/Ancestor Blano.md) (à créer) — Wingly elder Forest of Winglies NEW NPC canon
-- [`../npcs/Luanna.md`](../npcs/Luanna.md) (à créer) — 2nd Sacred Sister Mille Seseau magic-sensitive NPC canon NEW (fandom 2)
+- [`../npcs/Luanna.md`](../npcs/Luanna.md) (à créer) — 2nd Sacred Sister Mille Seseau magic-sensitive NPC canon NEW (fandom)
 - [`../party-members/Meru.md`](../party-members/Meru.md) — Wingly heritage reveal Disc 3 + Forest of Winglies origin
 - [`../party-members/Miranda.md`](../party-members/Miranda.md) — joins group Disc 3 Dragon Block Staff quest
 - [`../party-members/Rose.md`](../party-members/Rose.md) — Rose Dragon Campaign veteran lore canon (Divine Dragon sealed quote)

@@ -4537,6 +4537,46 @@
 
 - [ ] ⭐ **🆕 "Always paired with another Earth Shaker" fandom claim ⚠️ INACCURATE (fandom) ⭐** — Wiki solo formation (84) submap 232 10% exists ⚠️ fandom inaccurate claim. Damia adopt wiki canon (solo + x2 both formations exist). Source: idem.
 
+### Combat / Enemies wiki (foundation meta-page MAJEUR — Random encounters arrow color NEW + 6 Damage Formulas REVEALED + 11 Variable Multipliers REVEALED + 14 NEW Bosses revealed via database + Categories 3+1 confirmed + Total Vanishing/Pandemonium susceptibility + Graphical-only entities canon)
+
+- [ ] ⭐⭐⭐⭐⭐ **🆕 6 Damage Formulas canon REVEALED MAJEUR wiki ⭐⭐⭐⭐⭐** — Physical : `floor{floor[floor{floor[(AT^2 * 5 / DF)] * AttackMult * TargetFear * AttackerFear} * Power] * Guard}` / Magical : MAT²/MDF + Field + Element / Addition Counter : AT² × 250/DF / 100 (wiki incomplete ⚠️) / **Rare Monster Attack** : `(Target MaxHP / 10)` = **10% Max HP** NEW canon / **Wire Counter** : `(1000 / DF)` ✓ Drake Bandit Sharp passive cross-source CONFIRMED / **Haunting Bolt** : `(Target CurrentHP / 2)` = **50% Current HP** Ghost Commander signature NEW. À documenter `combat/damage-formula.md` (existing — update with revealed formulas). Source: [`features/combat/_sources/lod-wiki-enemies.md`](features/combat/_sources/lod-wiki-enemies.md).
+
+- [ ] ⭐⭐⭐ **🆕 11 Variable Multipliers canon REVEALED MAJEUR wiki ⭐⭐⭐** — Attack Multiplier (hidden per-enemy) / Target Fear ×2 / Attacker Fear ×0.5 / Power (Power items state) / Attacker Power Up ×0.5 / Power Down −0.5 / Target Power Up −0.5 / Down ×0.5 (ambiguity ⚠️) / Field (element match special field) / Attack Element match/opposite ×0.5/−0.5 / Element (Target Element vs attack element) ×0.5/−0.5 / Guard ×0.5. Pattern Damia : 11 variables canon définissent toute formule damage cross-attack-type. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Random encounter mechanic Arrow color indicator canon NEW MAJEUR wiki ⭐⭐⭐** — UI spinning triangle above Dart's head 3-tier color : Blue (Many steps) / Yellow (Some) / Red (Few). Each area uses different step value (per-location threshold canon). À documenter `combat/random-encounters.md` (à créer) — arrow color indicator canon NEW + step counter mechanic. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Bug 75% fewer steps running up/right canon NEW wiki ⭐⭐⭐** — "A bug causes movement up or right when running to count 75% fewer steps than intended". Pattern Damia : known game bug canon direction-dependent step count. ⚠️ Décision Damia : reproduire OR fixer ce bug ? Balance vs canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Patrolling visible enemies areas canon NEW wiki ⭐⭐⭐** — Some areas arrow permanent red + visible patrolling enemies collision = battle (vs random invisible). Pattern Damia : 2 encounter mechanics canon (random steps + patrolling visible). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Rare Monster Attack signature 10% Max HP canon NEW MAJEUR wiki ⭐⭐⭐** — `(Target MaxHP / 10)` formula = Rare Monsters signature attack canon NEW. Pattern Damia : Rare Monsters gimmick damage canon (Cursed Jar / Lucky Jar / Treasure Jar / Cute Cat). À documenter `combat/damage-formula.md` Rare Monster Attack canon NEW. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Haunting Bolt 50% Current HP Ghost Commander signature canon NEW MAJEUR wiki ⭐⭐⭐** — `(Target CurrentHP / 2)` formula = Ghost Commander Phantom Ship Disc 2 signature ability canon NEW. Pattern : strong but cannot kill (always leaves 50% HP min). À cross-référer `bosses/Ghost Commander.md` (à créer/vérifier) — Haunting Bolt signature canon NEW. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Wire Counter formula ✓ CROSS-SOURCE CONFIRMED Drake Bandit Sharp passive wiki ⭐⭐⭐** — `(1000 / DF)` formula ✓ confirme Sharp passive Wire Boss Extra Drake canon existing. Pattern Damia : Sharp passive Drake Wire = Wire Counter formula cohérent ✓. Cross-source confirmation canon Damia consolidée. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 14 NEW Bosses canon revealed via Enemies database wiki ⭐⭐⭐** — Database wiki révèle 14 NEW bosses canon Damia : Belzac/Damia/Kanzas/Syuveil (4 Legendary 7 Dragoons Vellweb optional) + Last Kraken (Aglis) + Windigo + Imago/Pupa/Caterpillar transforms + Magician Faust Apparition vs Optional variants + Kubila/Vector/Selebus (Zenebatos) + Lavitz's Spirit + Zackwell (Mayfil) + Indora + Michael/Michael's Core + Archangel + Melbu Frahma + Tentacle/Bomb Star/Monster (3 Boss Extras final boss). À documenter `bosses/` 14 nouvelles entrées. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Belzac + Damia + Kanzas + Syuveil = 4 Legendary 7 Dragoons canon NEW MAJEUR ⭐⭐⭐** — Optional fight Vellweb = legendary Dragoons spirits canon Disc 4. Each drops "Stone" elemental item canon (Golden / Blue Sea / Violet / Jade Stones). Pattern thematic Vellweb = Dragoons legendary final resting place canon. Cohérent existing canon 7 legendary Dragoons Dragon Campaign. Stats : Belzac HP 16,000 Earth / Damia HP 9,000 Water / Kanzas HP 12,000 Thunder / Syuveil HP 10,000 Wind. À documenter `bosses/Belzac.md` + `bosses/Damia.md` + `bosses/Kanzas.md` + `bosses/Syuveil.md` (tous à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Melbu Frahma final boss + 3 Boss Extras canon MAJEUR ⭐⭐⭐** — Melbu Frahma HP 42,000 = highest HP canon TLoD. 3 Boss Extras Tentacle / Bomb Star / Monster (HP 1,600 each Non-Elemental). Pattern canon multi-entity final boss canon (cohérent existing Boss Extras pattern). À documenter `bosses/Melbu Frahma.md` (à créer/vérifier) — final boss canon Disc 4 + 3 Boss Extras. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Lavitz's Spirit + Zackwell canon Mayfil Disc 4 MAJEUR ⭐⭐⭐** — Lavitz's Spirit = Lavitz revisit ghost form Disc 4 Mayfil canon NEW MAJEUR (Lavitz died Disc 1). HP 5,000 Wind + Halberd 50% drop (cohérent Lavitz Halberd weapon canon). Zackwell HP 8,000 Darkness multi-entity battle + Healing Rain 100% drop. Pattern thematic Mayfil = ghost area Disc 4 (cohérent existing Dragon Spirits canon). À documenter `bosses/Lavitz's Spirit.md` + `bosses/Zackwell.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Magician Faust 2 variants canon CONFIRMED ⭐⭐⭐** — **Apparition** (Flanvel Tower 0 EXP / 0 Gold / Nothing drop) = story scripted variant + **Optional** (Flanvel Tower 20,000 EXP / 10,000 Gold / Phantom Shield 100% drop) = post-game optional super-boss. ⚠️ Cohérent existing Drake Trivia "Magician Faust (Real)" — "Real" probable = "Optional" variant (real fight vs Apparition cutscene). À documenter `bosses/Magician Faust.md` (à créer) — 2 variants canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Graphical-only entities excluded canon NEW wiki ⭐⭐** — Kamuy's Tree + 4 Mazo found with Faust = untargetable non-attacking entities excluded database. Pattern Damia : untargetable + non-attacking = graphical-only (excluded) vs untargetable BUT attacking (Dragon Spirits Ghost forms) = included. 4 Mazo Faust = NEW graphical entities canon Magician Faust battle. Pattern Damia : graphical-only canon design philosophy. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Total Vanishing / Pandemonium susceptibility Minor Enemies canon confirmed ⭐⭐** — Page Enemies wiki confirme Minor Enemies (incl. Rare Monsters) susceptible Total Vanishing / Pandemonium instant-kill items canon. Pattern Damia : instant-kill items work vs Minor Enemies only (Bosses immune). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Enemies meta-page database master reference canon wiki ⭐⭐** — 100+ enemies entries complete stats (HP / DF / MDF / PAV / MAV / AT / MAT / SPD / EXP / Gold / Drops / Location). Pattern Damia : database = master reference future cross-source validation stats canon. Cohérent existing ingestions individuelles Damia. Source: idem.
+
+- [ ] ⭐ **🆕 Rare Monsters terminology Guidebook 2000 p.15 reference canon ⭐** — Citation Legend of Dragoon Official Guidebook (ASCII, 2000) p.15 confirme terminology officiel "Rare Monsters" canon (vs community variants "Unique Monsters" fandom). Pattern Damia : adopt "Rare Monsters" canon Guidebook officiel. Source: idem.
+
+- [ ] **🆕 Addition Counter formula complete à investiguer ⚠️** — Wiki incomplete formula `floor{floor[floor{floor[(AT^2 * 250 / DF)] / 100} * Target Fear * Attacker...`. À investiguer Discord ou autre source pour formule complete. Source: à investiguer.
+
+- [ ] **🆕 Power formula Target Power Up vs Down ambiguity wiki ⚠️** — Wiki ambiguity "Target Power Up → −(1/2) or if power up then (1/2)". À clarifier fandom + Discord future. Source: à investiguer.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

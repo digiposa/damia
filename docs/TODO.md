@@ -4485,6 +4485,26 @@
 
 - [ ] ⭐ **🆕 Drake "Bandit's loyalty" mystery canon (fandom) ⭐** — "Never revealed how he came to picking up that task" — pattern thematic mystery canon Drake's origin. Source: idem.
 
+### Mobs / Earth Shaker wiki (Earth Barrens Disc 1 — Minor Enemy + ~Stomp the Ground 0.5× Party AoE NEW low multiplier MAJEUR + Stunning Hammer 8% 2ème farming source + A-AV reduces Stun 3ème instance pattern récurrent + Barrens 2 submaps + AI 2-phase HP-shift variant NEW)
+
+- [ ] ⭐⭐⭐ **🆕 ~Stomp the Ground 0.5× Party AoE NEW low multiplier canon MAJEUR ⭐⭐⭐** — First instance < 1× multiplier Mob canon Damia. Pattern Damia `StompTheGroundAbility { type: 'physical-party-aoe'; multiplier: 0.5 }` data-model canon NEW. Pattern thematic "earth-shaker stomps ground = weak Party tremor". ⚠️ **Sub-1× multiplier canon** (rare Mob — most Mobs ≥ 1× offensive). À investiguer cross-mob : autres mobs avec sub-1× multiplier abilities ? À implémenter ability `stompTheGround` Damia. Source: [`features/mobs/_sources/lod-wiki-earth-shaker.md`](features/mobs/_sources/lod-wiki-earth-shaker.md).
+
+- [ ] ⭐⭐ **🆕 Earth Shaker Mob canon Disc 1 Barrens ⭐⭐** — Earth element Minor Enemy. Stats US HP 200 / AT 33 / DF 140 / MAT 27 / MDF 60 / SPD 50 + Gold 15 + EXP 48. Pattern "anti-physical tank moderate" (DF 140 high + MDF 60 low magic favored counter). Status 4/4 standard. Counter 28 high-density. AI 2-phase HP-shift NEW variant. Stunning Hammer 8% drop. À documenter `mobs/Earth Shaker.md` (créé). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Stunning Hammer 8% drop canon Earth Shaker 2ème farming source ⭐⭐** — Cohérent existing Cursed Jar Stunning Hammer 100% Stun NEW canon. Earth Shaker = 2ème source farming canon Damia (vs Cursed Jar primary Disc 1-2 Rare Monster). Pattern Damia : multi-source farming canon Stunning Hammer (Cursed Jar + Earth Shaker Barrens Disc 1 Minor). À cross-référer `items/Stunning Hammer.md` (à créer/vérifier) — drop sources cross-mob canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 A-AV reduces status proc canon RÉCURRENT 3ème instance ⭐⭐** — Earth Shaker ~Rush 50% Stun proc + A-AV reduces canon récurrent. Cohérent existing Caterpillar boss + Crystal Golem mob A-AV reduces status pattern canon. Earth Shaker = **3ème instance pattern confirmé canon Damia cross-mob/boss** (Caterpillar boss + Crystal Golem mob + Earth Shaker mob). Pattern Damia : A-AV reduction status proc canon universel cross-entity ? Source: idem.
+
+- [ ] ⭐⭐ **🆕 Barrens location canon Disc 1 confirmé Earth Shaker ⭐⭐** — Cohérent existing Crafty Thief Barrens canon. 2 submaps spawn Earth Shaker (232 + 233 primary 35%). À documenter `locations/Barrens.md` (à créer/vérifier) — Disc 1 location canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 AI 2-phase HP-shift NEW pattern variant Earth Shaker ⭐⭐** — Phase 1 (HP > 50%) aggressive Single (~Rush 1× phys + 50% Stun proc) → Phase 2 (HP ≤ 50%) **weak Party AoE shift** (~Stomp the Ground 0.5× phys Party). Pattern "wounded mob defensive AoE shift" canon NEW (vs typical mob escalation pattern). Pattern Damia : `MobAI2PhaseHPShift` data-model canon NEW. Source: idem.
+
+- [ ] ⭐ **🆕 Counter 28 high-density tier confirmé Earth Shaker** — Cohérent existing canon Aqua King/Berserker/Dragon Soldier/Dragon Spirits/etc. Source: idem.
+
+- [ ] ⭐ **🆕 Escape rate 40% Earth Shaker Barrens canon** — Pattern intermediate Disc 1 (cohérent Home of Gigantos / Crystal Golem / Dragonfly 40% pattern). Source: idem.
+
+- [ ] **🆕 JP stats Earth Shaker à confirmer fandom future ⚠️** — Wiki US only ingéré (HP 200 / Gold 15). Pattern Damia adopt JP when available (+25% HP typical = ~250 / Gold ÷3 = ~5). À mettre à jour quand fandom Earth Shaker ingéré. Source: à ingérer.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

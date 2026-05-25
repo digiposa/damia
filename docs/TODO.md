@@ -4673,6 +4673,30 @@
 
 - [ ] ⭐ **🆕 "Appears solo" canon Evil Spider (fandom) confirms wiki solo formation** — Cohérent wiki solo formation (24) only. Pattern Damia : Evil Spider solo-only formation canon (balance design). Source: idem.
 
+### Mobs / Fairy wiki (Light Kadessa Disc 3 — Trans Light cross-mob CONFIRMED Light Family + Dancing Ray NEW + HP recovers 4ème instance + Sun Rhapsody Light Spell Item + Puck partner + Dual A-AV/M-AV NEW)
+
+- [ ] ⭐⭐⭐ **🆕 Trans Light cross-mob canon CONFIRMED MAJEUR Light Family shared canon (wiki) ⭐⭐⭐** — Cohérent existing Crystal Golem Trans Light canon ✓ (Light element shared ability cross-mob canon). 1.5× Light magic Single. Pattern Damia : **Trans Light = Light Family shared ability canon NEW** (Crystal Golem Disc 1 + Fairy Disc 3 both). Pattern thematic "Light energy transmission attack" canon. Pattern Damia : `TransLightAbility { type: 'magic-single'; multiplier: 1.5; element: 'light' }` data-model shared Light Family. Source: [`features/mobs/_sources/lod-wiki-fairy.md`](features/mobs/_sources/lod-wiki-fairy.md).
+
+- [ ] ⭐⭐⭐ **🆕 Dancing Ray NEW ability canon MAJEUR Fairy (wiki) ⭐⭐⭐** — 1× Light-elemental magic Party AoE (canon name officiel NO ~ marker — canonical wiki). Pattern thematic "dancing light rays Party AoE attack" canon. Pattern Damia : `DancingRayAbility { type: 'magic-party-aoe'; multiplier: 1; element: 'light' }` data-model canon NEW. À implémenter ability `dancingRay` Damia. Pattern Light Party AoE canon NEW (parallel Dragonfly Thunderbolt Wind/Thunder Party AoE). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 HP recovers 30% formula CONFIRMS 4ème cross-mob/boss instance Fairy MAJEUR (wiki) ⭐⭐⭐** — 30% Max HP = 96 HP (Fairy US 320 × 30% = 96 ✓). Pattern Damia : `HpRecoversAbility { type: 'self-heal'; healPercent: 0.3 }` data-model canon shared cross-mob/boss CONFIRMED **4 instances** maintenant : Crystal Golem (48/60) + Dragon Soldier (146) + Drake the Bandit (360 single-use) + Fairy (96). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Fairy Mob canon Disc 3 Kadessa ⭐⭐** — Light Minor Enemy. Stats US HP 320 / AT 43 / DF 80 / MAT 57 / MDF 150 / SPD 70 / **dual A-AV/M-AV 10%** + Gold 24 + EXP 81. Pattern "balanced magical caster" (MDF 150 high anti-magic + DF 80 moderate + MAT 57 caster). Status 4/4 standard. Counter 28 high-density. AI 4-ability ~Staff Smack/Trans Light/Dancing Ray/HP recovers. Sun Rhapsody 8% drop. À documenter `mobs/Fairy.md` (créé). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Sun Rhapsody 8% drop canon Light Spell Item source Fairy (wiki) ⭐⭐** — Sun Rhapsody item canon (Light Spell Item probable thematic). Fairy = Sun Rhapsody source canon Damia. À cross-référer `items/Sun Rhapsody.md` (à créer/vérifier) — Light Spell Item canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Puck partner mob canon Kadessa Fairy formation 149 (wiki) ⭐⭐** — Cohérent existing Kadessa partner mobs canon (Puck appears in mixed formation 149 avec Fairy x2). À documenter `mobs/Puck.md` (à créer) — Kadessa partner mob canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Dual A-AV/M-AV 10% tier NEW canon Mob Fairy (wiki) ⭐⭐** — Moderate dodge dual canon (vs single A-AV typical pattern). Pattern Damia : **dual-AV canon NEW** (Fairy = premier ingestion dual-AV Mob). À investiguer cross-mob : autres mobs avec dual A-AV/M-AV ? Source: idem.
+
+- [ ] ⭐⭐ **🆕 AI 4-ability Mob HP phase canon Fairy (wiki) ⭐⭐** — Phase 1 (HP > 50%) ~Staff Smack / Phase 2 (HP ≤ 50%, > 25%) Trans Light / Phase 3 (HP ≤ 25%) Dancing Ray + HP recovers (equal chance). Pattern Damia : 4-ability mob with sub-phase 25-50% canon NEW. Source: idem.
+
+- [ ] ⭐ **🆕 Light Minor Enemy 3ème ingestion canon Damia Fairy ⭐** — Pattern Light Minor Enemy rare canon (Crystal Golem Disc 1 + Fairy Disc 3). Light mobs limited canon. Source: idem.
+
+- [ ] ⭐ **🆕 Kadessa 10 submaps Fairy spawn canon (wiki) ⭐** — Submaps 394-405 range (solo 394/399/404 10% + mixed 395/396/397/400/401/402/405 20-35%). Cohérent existing Kadessa canon (Grand Jewel + Spinninghead + Toad Stool + Gnome + Puck + S Virage partners). Source: idem.
+
+- [ ] **🆕 JP stats Fairy à confirmer fandom future ⚠️** — Wiki US only ingéré. Pattern Damia adopt JP when available (+25% HP / Gold ÷3). Source: à ingérer.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

@@ -4432,7 +4432,58 @@
 
 - [ ] **🆕 JP stats Drake + Boss Extras à confirmer fandom future ⚠️** — Wiki US only ingéré (Drake HP 1,200 / Gold 100 + Bursting Ball HP 64 + Wire HP 120). Pattern Damia adopt JP when available (+25% HP typical / Gold ÷3 systematic). À mettre à jour quand fandom Drake the Bandit ingéré. Source: à ingérer.
 
-- [ ] **🆕 Story Drake the Bandit canon à investiguer ⚠️** — Wiki section "Read More" — story lore Drake bandit stealing Shirley's Light Dragoon Spirit canon Disc 1. À ingérer wiki + fandom future pour comprendre narrative context complet. Source: idem.
+- [ ] **🆕 Story Drake the Bandit canon à investiguer ⚠️** — Wiki section "Read More" — story lore Drake bandit stealing Shirley's Light Dragoon Spirit canon Disc 1. À ingérer wiki + fandom future pour comprendre narrative context complet. ✅ **RÉSOLU fandom** : Drake = guardian Shrine canon + Dragoni Plant cure Shana Dragon poisoning + White Silver Dragoon Spirit Shirley acquisition + Drake love Shirley + Drake = only boss NPC canon. Source: idem.
+
+### Bosses / Drake the Bandit fandom complement — JP HP 1,500 ✓ CONFIRMED + Drake = Guardian Shrine canon MAJEUR + Dragoni Plant + Dragon poisoning + White Silver Dragoon Spirit + Canon names Dagger Toss/Wire Net/Bombs/Heal + Healing Potion item canon NEW + Kamuy CROSS-SOURCE CONFIRMED + Drake = ONLY boss NPC UNIQUE + Drake love Shirley NEW lore + Resident Knight Harris NEW NPC + Special Transformation Dragoon ref
+
+- [ ] ⭐⭐⭐ **🆕 JP HP 1,500 ✓ +25% systematic CONFIRMED Drake (fandom) ⭐⭐⭐** — Wiki US 1,200 × 1.25 = 1,500 ✓ matches JP fandom exact. Pattern Damia +25% HP US→JP systematic canon récurrent CONFIRMED **Boss instance** (Drake = 1er Boss confirmé +25% pattern Damia — vs Mobs Crystal Golem/Deadly Spider/Death/Death Purger/Dragon Soldier/Dragonfly). ⚠️ **Gold ÷3 NOT applied Boss anomaly ⚠️** : Drake Gold US 100 = JP 100 (vs Mob ÷3 systematic). Pattern Damia : Bosses Gold canon ≠ Mobs Gold ÷3 systematic — à investiguer cross-boss pattern. Source: [`features/bosses/_sources/fandom-drake-the-bandit.md`](features/bosses/_sources/fandom-drake-the-bandit.md).
+
+- [ ] ⭐⭐⭐ **🆕 Drake = Guardian Shrine of Shirley canon MAJEUR (fandom) ⭐⭐⭐** — NOT bandit per se — defender role canon officiel fandom. "For a long time, Drake protected Shrine of Shirley **from other bandits**." Fiercely loyal Shirley. Origin unknown. Pattern Damia : "Drake the Bandit" = name (probable misnomer / community label) + role canon = guardian. À cross-référer canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Dragoni Plant + Dragon poisoning canon Disc 1 lore MAJEUR (fandom) ⭐⭐⭐** — Party (Dart/Lavitz/Rose) goes beyond "troublesome plant" in Nest of Dragon → Shrine of Shirley **in search of Dragoni Plant** as cure for **Shana's Dragon poisoning** ⭐ canon Disc 1. ⚠️ Shirley reveal : "there is NONE [Dragoni Plant] in the Shrine". Pattern Damia : **Dragoni Plant = NEW Key Item canon MAJEUR** (cure Dragon poisoning Shana Disc 1). **Dragon poisoning Shana = canon status effect Disc 1** (probable Shana Dragon Spirit consequence). À documenter `items/Dragoni Plant.md` (à créer) + `status-effects/dragon-poisoning.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 White Silver Dragoon Spirit Shirley acquisition canon Disc 1 (fandom) ⭐⭐⭐** — Shirley gives Spirit to heal Shana (alternative cure Dragoni Plant). Cohérent existing Shana White Silver Dragoon canon. Pattern Damia : Shirley = previous White Silver Dragoon canon → passes Spirit to Shana. Spirit heals Shana's Dragon poisoning canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Canon ability names officiels fandom MAJEUR Drake (fandom) ⭐⭐⭐** — Wiki community approximations → fandom révèle canon names :
+  - **Dagger Toss** (~Throw Knives wiki) — throws "2 daggers" possible multi-hit canon (ambiguity vs wiki 1× phys)
+  - **Bombs** (~Bomb Trap wiki) — opens box + 3 bombs + 3 rolls + massive damage explosion
+  - **Wire Net** (~Wire Trap wiki) — weaves wire net + invulnerable physical + barrier needs destroyed
+  - **Heal via Healing Potion item** (HP recovers wiki ability classification) — heal 360 HP when "yellow or below" UI threshold
+    Pattern Damia : adopter canon names officiels fandom + flag wiki ~ aliases deprecated. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Healing Potion item-based Boss heal canon NEW MAJEUR (fandom) ⭐⭐⭐** — Drake "uses Healing Potion" item to heal 360 HP (vs wiki HP recovers ability classification). Pattern Damia : **Healing Potion item-based Boss heal canon NEW** (cohérent existing Commander Healing Potion canon reference). Pattern ambiguity canon Item vs Ability classification — Damia adopt fandom narrative (Boss consumes item) + mechanic wiki canon (30% Max HP heal). Pattern canon : Boss using consumable items canon NEW. À cross-référer `items/Healing Potion.md` (à créer/vérifier) — existing canon item Damia + Boss consumption canon NEW. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Kamuy boss CROSS-SOURCE CONFIRMED via Drake Trivia (fandom) ⭐⭐⭐** — Drake model reused Disc 3 Furni listening Resident Knight Harris' plan about **wolf Kamuy**. **CROSS-SOURCE CONFIRMATION** existing Dragon Spirit Trivia untargetable trick canon (8 bosses untargetable confirmed) ! Kamuy = wolf boss canon Disc 3 Furni. À documenter `bosses/Kamuy.md` (à créer) — wolf boss canon Disc 3 + story canon à investiguer. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Drake = ONLY boss becoming NPC canon UNIQUE Trivia MAJEUR (fandom) ⭐⭐⭐** — "Drake the Bandit is the only boss in the game to become a NPC that can freely be talked to after the fight" canon fandom. Pattern canon UNIQUE : no other boss canon has post-battle dialogue NPC mode. Pattern Damia : Drake post-battle NPC UNIQUE canon — special case lore device. À documenter `combat/boss-mechanics.md` (à créer) — Drake post-battle NPC UNIQUE canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Drake love Shirley canon NEW lore MAJEUR (fandom) ⭐⭐⭐** — Post-game dialogue Shrine of Shirley : Drake admits "**in love with Shirley**" + "**keeps guarding Shrine despite not believing Shirley returns**". Pattern thematic lore canon : Drake's loyalty motivated by love + tragic devotion canon. Pattern Damia : Drake post-battle dialogue NPC canon Disc 1-2+ continue Shrine guard + love reveal lore device. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Resident Knight Harris NEW NPC canon Furni Disc 3 (fandom) ⭐⭐⭐** — NPC Furni Disc 3 + Kamuy plan canon reference. À documenter `npcs/Resident Knight Harris.md` (à créer) — NEW NPC Furni Disc 3 + Kamuy plan canon. À documenter `locations/Furni.md` (à créer/vérifier) — Disc 3 location canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Special Transformation command Dragoons canon reference (fandom) ⭐⭐** — Fandom strategy : "Using the Special Transformation command might be recommendable to **double the attacking power of Dragoons for a given time**". Pattern Dragoon mechanic canon : 2× damage timed. À cross-référer `dragoons/mechanics.md` Special Transformation canon (existing canon ?). Pattern Damia : Dragoon damage-doubling timed mechanic canon référence. Source: idem.
+
+- [ ] ⭐⭐ **🆕 JP name canon Drake 盗賊ドレイク (Tōzoku Doreiku) "Thief Drake" (fandom) ⭐⭐** — US "Bandit" = JP "Thief" localization variant. Pattern Damia : adopt **Drake the Bandit** (US official name) + JP name référence canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 HP threshold "yellow or below" UI indicator canon NEW (fandom) ⭐⭐** — UI HP color threshold indicator canon (vs wiki "HP ≤ 33.3%" numeric threshold) — same threshold différent representation. Pattern Damia : UI HP color thresholds canon (yellow/red/etc.) — à documenter UI canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 AT 23 + MAT 20 fandom CORRECTION wiki Drake (+15%/+18% divergences) ⭐⭐** — Wiki AT 20 vs Fandom 23 / Wiki MAT 17 vs Fandom 20. Pattern Damia adopt fandom higher (JP closer probable cohérent pattern systematic). À valider Guidebook JP future. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Wire HP 100 fandom vs 120 wiki divergence ⚠️ (fandom) ⭐⭐** — Wire Boss Extra HP -20/-17% fandom vs wiki. Damia adopt wiki precise data (120 HP). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Bombs HP 76 fandom vs Bursting Ball 64 wiki divergence ⚠️ (fandom) ⭐⭐** — Bursting Ball Boss Extra HP +12/+19% fandom vs wiki. Damia adopt wiki precise data (64 HP). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Bombs roll count 3 fandom vs 2 wiki divergence ⚠️ (fandom) ⭐⭐** — Bursting Ball Roll Forward sequence count +50% fandom vs wiki. Damia adopt wiki precise (2-roll canon — cohérent precise wiki AI data). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Nest of Dragon "troublesome plant" obstacle canon Disc 1 (fandom) ⭐⭐** — Disc 1 path canon Nest of Dragon → Shrine of Shirley with "troublesome plant" obstacle. Pattern Damia : Nest of Dragon location canon Disc 1 + plant obstacle mécanique canon. À documenter `locations/Nest of Dragon.md` (à créer/vérifier) Disc 1 location canon + plant obstacle. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Shrine of Shirley layout canon traps + chests + messages (fandom) ⭐⭐** — Drake's defenses : "Multitude of traps + messages inside chests" to discourage adventurers + bandits intruding. Pattern Damia : Shrine of Shirley layout canon Disc 1 (Drake traps + chests messages + Crystal Golem mob spawns + Drake submap 161 boss). À documenter `locations/Shrine of Shirley.md` (à créer) layout canon complet. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Dart Explosion Dragoon Magic Spell canon reference (fandom) ⭐⭐** — Dart Dragoon Magic Spell canon. Fire-element Dart ability canon strategy vs Drake (cohérent Dart Fire Dragoon canon). À documenter/vérifier `party-members/Dart.md` Explosion canon Dragoon ability. Source: idem.
+
+- [ ] ⭐ **🆕 Battle pragmatism Rose canon (fandom) ⭐** — Rose canon dialogue : "it would be easier to kill him" → pattern Rose pragmatic character canon cohérent existing Rose canon. Source: idem.
+
+- [ ] ⭐ **🆕 Drake "Bandit's loyalty" mystery canon (fandom) ⭐** — "Never revealed how he came to picking up that task" — pattern thematic mystery canon Drake's origin. Source: idem.
 
 ### À décider / explorer
 

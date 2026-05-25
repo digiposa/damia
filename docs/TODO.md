@@ -4202,6 +4202,28 @@
 
 - [ ] **🆕 Wiki tier 2 Dragon Block Staff à ingérer ⚠️** — Probable existing on legendofdragoon.org/wiki/Dragon_Block_Staff. À ingérer pour cross-source confirmation + wiki precise stats/mechanics. Note : Divine Dragon boss canon déjà détaille passive Dragon Block Staff (cohérent fandom). Source: à ingérer.
 
+### Items / Dragon Block Staff fandom 2 (lore-focused — Luanna 2nd Sacred Sister NEW + Rose recommendation + Endiness world + Divine Dragon bound in chains + VFX eerie green + Deningrad detour + Chapter 3 title + Trivia theory)
+
+- [ ] ⭐⭐⭐ **🆕 Luanna 2nd Sacred Sister of Mille Seseau canon NEW MAJEUR (fandom 2) ⭐⭐⭐** — Luanna = 2nd Sacred Sister Mille Seseau canon NEW. Reads Staff energy à Deningrad post-Grand Jewel battle : "huge tornado of energy that absorbs everything". Pattern Mille Seseau Sacred Sisters canon : Luanna = #2 (cohérent existing Miranda Sacred Sister canon). Pattern Damia : Luanna = magic-sensitive Sacred Sister NPC canon Disc 3 Deningrad. À documenter `npcs/Luanna.md` (à créer) — 2nd Sacred Sister Mille Seseau magic-sensitive NPC canon NEW. Cohérent existing Deningrad Sacred Sisters canon. Source: [`features/items/_sources/fandom-dragon-block-staff-2.md`](features/items/_sources/fandom-dragon-block-staff-2.md).
+
+- [ ] ⭐⭐⭐ **🆕 Deningrad detour story flow Disc 3 canon NEW (fandom 2) ⭐⭐⭐** — Pattern story flow Disc 3 canon : Forest of Winglies → Kadessa (Grand Jewel) → **Deningrad (Luanna reads Staff)** → Mountain of Mortal Dragon canon NEW. Pattern Damia story progression Disc 3 confirmed. À cross-référer existing Deningrad canon + story flow Disc 3. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Rose recommendation canon (fandom 2) ⭐⭐** — Dart's group decides search Dragon Block Staff upon **Rose** recommendation canon (vs existing first fandom "Meru reveals location"). Pattern Rose Dragon Campaign veteran knowledge canon. Cross-référer existing `party-members/Rose.md` Dragon Block Staff knowledge canon. Pattern : Rose recommends + Meru leads to Forest of Winglies (cohérent both fandoms). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Endiness = TLoD world canon (fandom 2) ⭐⭐** — Pre-game era canon : Divine Dragon plagued **Endiness** (TLoD world setting canon). Référence world name pour Damia worldbuilding. À cross-référer `lore/world.md` (à créer/vérifier) — Endiness world canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Divine Dragon "bound in chains" pre-game canon NEW (fandom 2) ⭐⭐** — Pre-game era 10,000 years ago : Dragon Block Staff **presumably used to weaken Divine Dragon + bind in chains** canon NEW. Pattern Damia : Divine Dragon = **chained** by Staff ancient era visual/lore canon. À cross-référer existing `bosses/Divine Dragon.md` lore — sealing mechanism chains canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 VFX Staff activation Divine Dragon battle canon NEW (fandom 2) ⭐⭐** — Visual canon : Dart **holds Staff up into the air** → **absorbs draconic power** → **glows eerie green** → suddenly breaks → drastically weakens both power. Pattern Damia VFX implementation : `DragonBlockStaffActivationVFX { color: 'eerie-green'; effect: 'tornado-absorbs-draconic-power'; animation: 'dart-holds-staff-up'; result: 'staff-breaks-then-weakens-both' }` data-model canon NEW. À implémenter VFX canon Damia Divine Dragon battle. Source: idem.
+
+- [ ] ⭐ **🆕 Chapter 3 title canon = "Fate & Soul" (fandom 2) ⭐** — TLoD Disc 3 / Chapter 3 official title canon : "Fate & Soul". Pattern Damia : chapter titles canon préservés. À cross-référer `lore/chapters.md` (à créer/vérifier) — TLoD 4 discs/chapters canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Trivia theory officially ambiguous canon (fandom 2) ⭐⭐** — Dialogue dans game pre-Grand Jewel battle **hints** Dragon Block Staff = force behind Divine Dragon sealing. Pattern **officially ambiguous canon** : "unknown whether actually the case" + "unclear why Staff breaks Divine Dragon battle". Theory : Staff couldn't contain ferocity 'King of Dragons' completely + shattered absorbing too much power canon. Pattern Damia : Staff break = canonical event but mechanism = official mystery canon (Damia respects lore ambiguity). À cross-référer `bosses/Divine Dragon.md` Trivia sealing ambiguity canon. Source: idem.
+
+- [ ] ⭐ **🆕 Divine Dragon vengeful rampage Mille Seseau canon (fandom 2) ⭐** — Pattern story canon Disc 3 : Divine Dragon awakens Mountain of Mortal Dragon → **vengeful rampage over Mille Seseau** canon (explains Deningrad attack). Cohérent existing Deningrad burned canon. À cross-référer `bosses/Divine Dragon.md` Disc 3 rampage canon. Source: idem.
+
+- [ ] ⭐ **🆕 Ancestor Blano reveals Dragon Buster lost canon (fandom 2) ⭐** — Confirms existing canon **précisé** : c'est **Blano specifically** qui révèle Dragon Buster lost (vs vague "fandom 1 reveal"). À cross-référer `npcs/Ancestor Blano.md` (à créer) reveal canon Dragon Buster lost — Blano knowledge canon. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

@@ -4224,6 +4224,30 @@
 
 - [ ] ⭐ **🆕 Ancestor Blano reveals Dragon Buster lost canon (fandom) ⭐** — Confirms wiki canon **précisé** : c'est **Blano specifically** qui révèle Dragon Buster lost (vs vague "wiki reveal"). À cross-référer `npcs/Ancestor Blano.md` (à créer) reveal canon Dragon Buster lost — Blano knowledge canon. Source: idem.
 
+### Mobs / Dragon Soldier wiki (Earth Flanvel Tower Disc 3 — Minor Enemy heavy knight + Physical Attack Barrier NEW ability MAJEUR + HP recovers cross-mob confirmed + Knight Shield NEW item + Metal Fang sibling NEW mob + Flanvel Tower NEW location MAJEUR + AI 3-phase 75% baseline NEW pattern)
+
+- [ ] ⭐⭐⭐ **🆕 Flanvel Tower NEW location canon MAJEUR ⭐⭐⭐** — Disc 3 Mille Seseau Snowfield Tower (cohérent thematic Snow Queen / White Silver Dragon Spirit canon TLoD). Location exclusive Dragon Soldier + Metal Fang mob spawns. À documenter `locations/Flanvel Tower.md` (à créer) — Disc 3 Mille Seseau Snowfield Tower NEW location canon. Cross-référer existing Snowfield + Mille Seseau canon. Source: [`features/mobs/_sources/lod-wiki-dragon-soldier.md`](features/mobs/_sources/lod-wiki-dragon-soldier.md).
+
+- [ ] ⭐⭐⭐ **🆕 Physical Attack Barrier NEW ability canon MAJEUR ⭐⭐⭐** — Self-buff ability "reduces physical damage to 0 until next turn" = full physical immunity 1 turn defensive canon NEW. Pattern Mob defensive self-buff canon rare (most Mob aggressive attacks only). Strategy counter : utiliser Magic attacks pendant Barrier turn (physique inutile). Pattern Damia : `PhysicalAttackBarrierAbility { type: 'self-buff'; effect: 'physical-damage-zero'; duration: 'next-turn' }` data-model canon NEW. À implémenter ability `physicalAttackBarrier` Damia. À investiguer cross-mob/boss : autres mobs/boss avec same ability + symmetric Magical Attack Barrier ? Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Dragon Soldier Mob canon Disc 3 Flanvel Tower ⭐⭐⭐** — Earth element Minor Enemy. Stats US HP 488 / AT 122 / DF 160 / MAT 86 / MDF 100 / SPD 50 / A-AV/M-AV 0% + Gold 60 + EXP 180. Pattern "anti-physical heavy tank knight" canon (DF 160 high + AT 122 high + SPD 50 slow). Status 4/4 standard (Petrify/Bewitch/Arm Block/Dispirit ✔ vs Confuse/Fear/Poison/Stun ✗). Counter 28 high-density tier. À documenter `mobs/Dragon Soldier.md` (créé). Source: idem.
+
+- [ ] ⭐⭐ **🆕 HP recovers cross-mob confirmed canon ⭐⭐** — **30% Max HP scaling formula canon** ✓ confirmed cross-mob : Crystal Golem US 160 × 30% = 48 ✓ / Dragon Soldier US 488 × 30% = 146 ✓. Pattern `HpRecoversAbility { type: 'self-heal'; healPercent: 0.3 }` data-model canon **shared cross-mob/boss** (Crystal Golem + Dragon Soldier + Commander Seles confirmed). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Knight Shield NEW item canon ⭐⭐** — 2% drop Dragon Soldier. Pattern thematic "shield" = probable armor canon (defensive equipment knight thematic). Cohérent thematic Dragon Soldier (knight) drops Knight Shield (knight equipment). À documenter `items/equipment.md` Knight Shield armor canon entry — effect précis à investiguer fandom + Guidebook. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Metal Fang sibling mob NEW canon ⭐⭐** — Flanvel Tower fellow encounter (mixed formation 177 = Metal Fang x2 + Dragon Soldier, 35% submap 451). À documenter `mobs/Metal Fang.md` (à créer) — Disc 3 Flanvel Tower Mob NEW. Pattern mixed formation canon : 3-entity formation (Metal Fang x2 + Dragon Soldier). Source: idem.
+
+- [ ] ⭐⭐ **🆕 AI 3-phase 75% baseline + 25% phase-conditional NEW pattern ⭐⭐** — Pattern NEW Mob AI : 75% baseline ability (~Sword Slash 1× phys) + 25% phase-conditional (HP > 25% → Physical Attack Barrier OR HP ≤ 25% → HP recovers, both 25% chance). Pattern aggressive baseline + conditional self-action canon NEW (vs Crystal Golem phase-based exclusive). Pattern Damia : `MobAI3PhaseBaselineConditional` data-model canon NEW. À investiguer cross-mob : autres mobs avec same 75% baseline + 25% conditional pattern ? Source: idem.
+
+- [ ] ⭐ **🆕 Encounter Formation 171 "Unused" canon ⭐** — Dragon Soldier solo (171) = Unused encounter canon (cut content / dev placeholder). Pattern cut content encounter canon : formation existe data mais N/A spawn. Cohérent pattern Dark Elf / Bewitching Arrow cut content canon (existing canon). À noter : encounter ID 171 reserved data mais non-spawn dans final game. Source: idem.
+
+- [ ] ⭐ **🆕 Earth element thematic divergence Snowfield Tower canon ⭐** — Dragon Soldier Earth element dans Snowfield Mille Seseau (vs typical Ice/Water mobs Snowfield). Pattern thematic "stone fortress + armored knight soldier" canon. Cohérent Earth thematic Tower (stone structure) canon. Pattern thematic divergence canon : Earth-element Mob dans région froide → fortress-armor association. Source: idem.
+
+- [ ] ⭐ **🆕 Counter 28 high-density tier confirmé Dragon Soldier ⭐** — Counter Opportunities (28) cohérent existing canon Aqua King / Berserk Mouse / Berserker / Atlow / Blue Bird / etc. Pattern Damia tier mapping confirmed. Per user instruction : feature Counter non-implémentée Damia, factual tier mention only. Source: idem.
+
+- [ ] **🆕 JP stats Dragon Soldier à confirmer fandom future ⚠️** — Wiki US only ingéré (HP 488 / Gold 60). Pattern Damia adopt JP when available (+25% HP typical = ~610 / Gold ÷3 systematic = ~20). À mettre à jour quand fandom Dragon Soldier ingéré. Source: à ingérer.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

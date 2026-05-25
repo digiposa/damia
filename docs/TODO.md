@@ -4503,7 +4503,39 @@
 
 - [ ] ⭐ **🆕 Escape rate 40% Earth Shaker Barrens canon** — Pattern intermediate Disc 1 (cohérent Home of Gigantos / Crystal Golem / Dragonfly 40% pattern). Source: idem.
 
-- [ ] **🆕 JP stats Earth Shaker à confirmer fandom future ⚠️** — Wiki US only ingéré (HP 200 / Gold 15). Pattern Damia adopt JP when available (+25% HP typical = ~250 / Gold ÷3 = ~5). À mettre à jour quand fandom Earth Shaker ingéré. Source: à ingérer.
+- [ ] **🆕 JP stats Earth Shaker à confirmer fandom future ⚠️** — Wiki US only ingéré (HP 200 / Gold 15). Pattern Damia adopt JP when available (+25% HP typical = ~250 / Gold ÷3 = ~5). À mettre à jour quand fandom Earth Shaker ingéré. ✅ **RÉSOLU fandom** : JP HP **250** ✓ +25% CONFIRMED / JP Gold **5** ✓ ÷3 CONFIRMED. Source: à ingérer.
+
+### Mobs / Earth Shaker fandom complement — JP HP 250/5 CONFIRMED + Charge/Earthquake canon names officiels MAJEUR + Appearance rhinoceros 4 horns cuboid DETAILED + Stunning Hammer 3-turn Stun duration REVEALED + Haschel Stun resistance NEW + Donau Flower City + Fork World Map + Stun loop trap canon
+
+- [ ] ⭐⭐⭐ **🆕 Charge canon name officiel MAJEUR Earth Shaker (fandom) ⭐⭐⭐** — Wiki ~Rush = community approximation, fandom révèle **Charge** name officiel. Effect canon : "Charges towards single target + smashes with **horns** + medium damage + 50% Stun proc" (cohérent appearance "4 horns facing forward"). Pattern thematic "rhinoceros charge with 4 horns smash" canon. Pattern Damia : adopter **Charge** canon name officiel + flag community ~Rush alias deprecated. Source: [`features/mobs/_sources/fandom-earth-shaker.md`](features/mobs/_sources/fandom-earth-shaker.md).
+
+- [ ] ⭐⭐⭐ **🆕 Earthquake canon name officiel MAJEUR Earth Shaker (fandom) ⭐⭐⭐** — Wiki ~Stomp the Ground = community approximation, fandom révèle **Earthquake** name officiel. Effect canon fandom : "Stands up + stomps ground with **front two feet** + high damage all targets" ⚠️ divergence wiki precise 0.5× vs fandom qualitative "high damage". Damia adopt wiki precise 0.5× multiplier canon (sub-1× Mob NEW pattern Damia first instance). Pattern Damia : adopter **Earthquake** canon name officiel + flag community ~Stomp the Ground alias deprecated. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Appearance canon DETAILED MAJEUR Earth Shaker (fandom) ⭐⭐⭐** — Pattern thematic **large rhinoceros-creature** canon. Large rhinoceros + **4 horns on face all facing forward** (cohérent Charge "horns smash") + short heavy pointed tail + little spikes on sides + **bulky creature rectangular cuboid structure** (visual). Pattern Damia sprite design canon : grey rhinoceros + 4 forward horns + cuboid body + side spikes + short pointed tail. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 JP HP 250 ✓ +25% systematic CONFIRMED Earth Shaker (fandom) ⭐⭐⭐** — US 200 × 1.25 = 250 ✓ matches JP fandom exact. Pattern Damia +25% HP US→JP systematic canon récurrent CONFIRMED 8 entities maintenant : Crystal Golem / Deadly Spider / Death / Death Purger / Dragon Soldier / Dragonfly / Drake the Bandit (Boss) / **Earth Shaker**. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 JP Gold 5 ✓ ÷3 systematic CONFIRMED Earth Shaker (fandom) ⭐⭐⭐** — US 15 ÷ 3 = 5 ✓ matches JP exact. Pattern Damia ÷3 Gold Mob systematic confirmed cross-mob (vs Boss Drake anomaly Gold ÷3 NOT applied). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Stunning Hammer 3-turn Stun duration canon NEW REVEALED MAJEUR (fandom) ⭐⭐⭐** — "Stunning Hammer stuns single target for **THREE TURNS**" canon precise duration REVEALED. Pattern Damia : `StunningHammerItem { type: 'item-attack-stun'; statusProc: 'stun'; procChance: 1.0; duration: 3 }` data-model canon NEW. Cohérent existing Cursed Jar 100% Stun proc canon. Fandom commentary : "no real need to get one, especially at the low 8% chance" — Stunning Hammer underpowered farming canon. À cross-référer `items/Stunning Hammer.md` (à créer/vérifier) — 3-turn duration REVEALED + drop sources cross-mob. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Haschel Stun resistance canon NEW MAJEUR (fandom) ⭐⭐⭐** — "Haschel seems to have good resistance towards being stunned so he would be more useful in this battle" canon fandom. Pattern Damia : **per-character status resistance canon NEW** (probable stat-based ou character-trait canon). À cross-référer `party-members/Haschel.md` Stun resistance canon NEW. Pattern Damia : party member individual resistance to status effects canon NEW. À investiguer cross-status : other character resistances canon ? Source: idem.
+
+- [ ] ⭐⭐ **🆕 Donau "Flower City" canon nickname (fandom) ⭐⭐** — Cohérent existing Donau location canon. Pattern Damia : Donau = "Flower City" nickname canon. À cross-référer `locations/Donau.md` existing canon + nickname update. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Fork World Map Donau ↔ Valley of Corrupted Gravity canon Disc 1 (fandom) ⭐⭐** — Earth Shaker "very high chance of being the only fight at the **fork between Donau (Flower City) and Valley of Corrupted Gravity**" canon. Pattern Damia : Barrens spawn fork canon Disc 1 World Map road. À cross-référer `world-map/` (à créer) — Disc 1 fork canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Stun loop trap canon NEW Earth Shaker x2 (fandom) ⭐⭐** — "Could get stuck in a loop where one or more people are stunned repetitively, constantly taking 100+ damage possibly until death" canon. Pattern Damia : Earth Shaker x2 Stun cascade = potential party wipe canon. Strategy : kill quickly OR Haschel team to mitigate. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Additions training farming spot canon Earth Shaker (fandom) ⭐⭐** — "Good for getting additions up at first when they still take several hits to knock down" canon. Pattern Damia : Earth Shaker = 2ème Additions training spot canon (cohérent Dragon Soldier pattern existing). Pattern Damia farming canon documentation. Source: idem.
+
+- [ ] ⭐⭐ **🆕 AT 31 fandom INVERSE divergence wiki 33 ⚠️ (fandom) ⭐⭐** — Wiki AT 33 vs Fandom 31 (-2 / -6%) — pattern atypique (vs typical fandom higher). Damia adopt wiki 33 (cohérent typical pattern). Pattern Damia : flag inverse divergence canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 MAT 31 fandom CORRECTION wiki 27 (+15% divergence) ⭐⭐** — Wiki MAT 27 vs Fandom 31. Pattern Damia adopt fandom higher (JP closer probable cohérent pattern systematic). Source: idem.
+
+- [ ] ⭐ **🆕 Encounter rate "Very common" Earth Shaker canon (fandom) ⭐** — Pattern Damia encounter rate descriptive terminology canon. Source: idem.
+
+- [ ] ⭐ **🆕 "Always paired with another Earth Shaker" fandom claim ⚠️ INACCURATE (fandom) ⭐** — Wiki solo formation (84) submap 232 10% exists ⚠️ fandom inaccurate claim. Damia adopt wiki canon (solo + x2 both formations exist). Source: idem.
 
 ### À décider / explorer
 

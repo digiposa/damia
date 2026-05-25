@@ -4158,6 +4158,50 @@
 
 - [ ] **🆕 Rose introduction quote canon Divine Dragon (fandom) ⭐** — "The arrival of the 'one who glares through seven diabolical eyes, and crosses the sky with seven wings.' It's trouble. It's the King of Dragons. The Divine Dragon." Pattern Rose canon knowledge = Dragon Campaign veteran lore (cohérent existing Rose canon Black Monster + Dragon Campaign survivor). À cross-référer `party-members/Rose.md`. Source: idem.
 
+### Items / Dragon Block Staff fandom (Key Item Wingly artifact Disc 3 — Variable per-battle effects + Grand Jewel boss NEW + Kadessa Forbidden Land + Forest of Winglies acquisition + Dragon Buster lost reveal)
+
+- [ ] ⭐⭐⭐ **🆕 Dragon Block Staff Key Item canon Disc 3 MAJEUR ⭐⭐⭐** — Wingly artifact anti-Dragon + anti-Dragoon canon. Quest object Disc 3 : Dart's party retrieve Forest of Winglies/Kadessa ruins → stop Divine Dragon. Created by ancient Winglies. Passed down generations. Sealed Divine Dragon **10,000+ years** ✓ cross-source confirmed (cohérent Divine Dragon lore récent — ancient Winglies couldn't kill). À documenter `items/Dragon Block Staff.md` (créé). Source: [`features/items/_sources/fandom-dragon-block-staff.md`](features/items/_sources/fandom-dragon-block-staff.md).
+
+- [ ] ⭐⭐⭐ **🆕 Kadessa = former Wingly capital "Forbidden Land" present canon NEW MAJEUR (fandom) ⭐⭐⭐** — Storage Dragon Block Staff sealed Kadessa ruins. Pattern Wingly civilization decline canon : Forbidden Land = former capital ruins. À documenter `locations/Kadessa.md` (à créer) — Forbidden Land Wingly former capital canon NEW. Cross-référer existing Wingly thematic (Zenebatos Law City + Forest of Winglies + Kadessa). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Grand Jewel boss canon NEW MAJEUR (fandom) ⭐⭐⭐** — Wingly guardian boss Kadessa ruins (Dragon Block Staff protector). Pattern thematic "dark material + golden glows" + "embedded in rocky formation" + "dislodges from ceiling flipping over Staff upright" canon. Pattern Boss canon Disc 3 Kadessa Forbidden Land. À documenter `bosses/Grand Jewel.md` (à créer) — Wingly guardian boss canon NEW Disc 3. À ingérer wiki tier 2 + fandom future Grand Jewel stats + abilities. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Dragon Block Staff variable per-battle effects canon NEW MAJEUR (fandom) ⭐⭐⭐** — Pattern variable effects par battle :
+  - **Grand Jewel battle** : Dragoons 10% damage dealt / 10× damage received (reactive trigger if Dragoons used)
+  - **Divine Dragon battle** : Dragoons **40% dmg / 4× received** ✓ confirmé wiki Divine Dragon canon cross-source. Dart activates start battle → Staff **BREAKS** (last time ever used)
+  - **Melbu Frahma final phase** : Dragoons 10% / 10× (reactive trigger Dragoon Magic attack — Wingly magic intrinsic ability, Staff already broken)
+    Pattern Damia : `DragonBlockStaffKeyItem` data-model variable per-battle effects canon NEW MAJEUR. Pattern healing + defensive Dragoon Magic NOT affected canon ✓ cohérent Divine Dragon strategy "supportive Dragoon Magic only" fandom récent. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Dragon Block Staff breaks Divine Dragon battle canon NEW MAJEUR (fandom) ⭐⭐⭐** — "The Dragon Block Staff broke during the battle, marking the last time it was ever used". Pattern Damia : Dragon Block Staff = **single-use battle Disc 3 Divine Dragon** canon (cannot reuse Disc 4 — Melbu Frahma uses Wingly magic intrinsic ability). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Dragon Buster LOST canon Disc 3 reveal (fandom) ⭐⭐⭐** — Forest of Winglies Ancestor Blano reveals : Dragon Buster **lost canon** (vs Dragon Block Staff still safe Kadessa). Cohérent existing Divine Dragon fandom canon : Lloyd gives Dart Dragon Buster Disc 4 (post-Melbu Frahma — Lloyd finds/has Dragon Buster Disc 3-4 between reveal "lost" Disc 3 → Lloyd has it Disc 4). À documenter `items/Dragon Buster.md` (à créer) — Wingly sword anti-Dragon Dart ultimate weapon canon NEW. Pattern Wingly anti-Dragon weapons pair canon : Dragon Block Staff (reduce power) + Dragon Buster (sword kill). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Forest of Winglies location canon (fandom) ⭐⭐** — Evergreen Forest secret path north reveals Forest of Winglies hidden canon Disc 3 acquisition quest. Pattern Wingly Forest hostility → Ancestor Blano permits entry. Pattern Wingly teleportation system magic-channel to Kadessa ruins canon. **Meru confirmed Wingly canon** story reveal Disc 3 ✓ via secret path. À documenter `locations/Forest of Winglies.md` (à créer) — Disc 3 Wingly Forest canon NEW. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Ancestor Blano canon NPC NEW (fandom) ⭐⭐** — Wingly elder leader Forest of Winglies canon Disc 3. Pattern thematic "Times won't leave Winglies alone" canon. Pattern Damia : `AncestorBlanoNpc { type: 'wingly-elder'; location: 'forest-of-winglies'; permitsEntry: true; reveals: ['staff-location', 'dragon-buster-lost'] }` data-model canon. À documenter `npcs/Ancestor Blano.md` (à créer) — Wingly elder NEW NPC canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Miranda joins group Dragon Block Staff quest canon Disc 3 (fandom) ⭐⭐** — Miranda joins party for Dragon Block Staff quest canon Disc 3. Cohérent existing Miranda Disc 3 join canon story arc. À cross-référer existing `party-members/Miranda.md` join trigger canon Disc 3. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Meru Wingly heritage reveal Disc 3 canon (fandom) ⭐⭐** — Meru reveals Staff location Forest of Winglies via her Wingly heritage. Pattern Meru Wingly confirmé canon Disc 3 story reveal. Cross-référer existing `party-members/Meru.md` Wingly canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Rose canon Disc 3 reveals (fandom) ⭐⭐** — Rose canon dialogue Kadessa ruins :
+  - "The appearance of an object doesn't correlate to its magical prowess" canon
+  - "Divine Dragon was sealed because it could not be tamed nor killed" canon ✓ confirmé Divine Dragon lore cross-source
+    Pattern Rose canon knowledge Dragon Campaign veteran lore (cohérent existing). Source: idem.
+
+- [ ] ⭐⭐ **🆕 "Winglies can no longer master the Staff" canon NEW (fandom) ⭐⭐** — Pattern Wingly magic decline thematic Disc 3-4 era. **Dragoons may use Staff canon NEW**. Pattern Damia : Wingly magic civilization decline canon (post-Divine Dragon free era). Source: idem.
+
+- [ ] **🆕 Wingly teleportation system canon (fandom) ⭐** — Forest of Winglies → Kadessa ruins via Blano + Winglies channel magic. Pattern Wingly magic-channel transport canon. À documenter `dragoons/wingly-magic.md` (à créer) — Wingly magic capabilities canon. Source: idem.
+
+- [ ] **🆕 Divine Dragon real stats weakened state canon (fandom) ⭐** — Fandom : "Divine Dragon is weakened as well, but its stats do not change; implying that its stats only reflect the weakened state". Pattern Divine Dragon real stats higher than displayed canon. À documenter `bosses/Divine Dragon.md` (existing) — stats canon = weakened state via Dragon Block Staff. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Pattern Wingly anti-Dragon weapons canon récurrent ⭐⭐** — Pattern Wingly anti-Dragon weapons canon confirmé cross-source :
+  - **Dragon Block Staff** : Wingly artifact reduces Dragon + Dragoon power canon (variable effects 10%/40%)
+  - **Dragon Buster** : Wingly sword anti-Dragon canon (Dart ultimate weapon Disc 4 from Lloyd)
+    Pattern Wingly civilization canon ancient anti-Dragon weapons creation. À documenter `dragoons/wingly-anti-dragon-weapons.md` (à créer) — pattern canon récurrent + items list. Source: idem.
+
+- [ ] **🆕 Wiki tier 2 Dragon Block Staff à ingérer ⚠️** — Probable existing on legendofdragoon.org/wiki/Dragon_Block_Staff. À ingérer pour cross-source confirmation + wiki precise stats/mechanics. Note : Divine Dragon boss canon déjà détaille passive Dragon Block Staff (cohérent fandom). Source: à ingérer.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

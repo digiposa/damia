@@ -4080,6 +4080,84 @@
 
 - [ ] **🆕 Divine Dragoon Spirit canon context cross-reference ⚠️** — Divine Dragon Boss Disc 3 = narrative confrontation canon. Divine Dragoon Spirit acquisition = Disc 4 via Lloyd post-Melbu Frahma fight (cohérent existing Dart canon). Pattern story canon distinction : Boss fight ≠ Spirit drop (drops Dragon Shield 20% instead). À cross-référer existing Dart.md + Lloyd Disc 4 canon. Source: idem.
 
+### Bosses / Divine Dragon fandom complement — JP HP NON systematic +40-50% variant + Appearance 7 wings/7 eyes + Lore MASSIVE + BATTLE AT MAYFIL revisit boss NEW MAJEUR + Dragons 7-tier Guidebook + Dragon Buster + Bravery Amulet + Spiritual Ring + Pressure Fear 4-stat reduction + Dragon Claw + Divine Dragon Ball canon names + Imperial Spell NEW
+
+- [ ] ⭐⭐⭐ **🆕 JP HP NON systematic variant Divine Dragon canon NEW MAJEUR (fandom) ⭐⭐⭐** — Head **US 5000 / JP 7000** (+40%) / Ball/Cannon **US 2000 / JP 3000** (+50%). Pattern Boss JP scaling variable canon NEW (vs typical +25% systematic mobs). Pattern Boss ≠ pas toujours +25% systematic. Damia adopt JP 7000 / 3000 canon. À documenter `combat/jp-us-stats-scaling.md` (à créer) — pattern JP scaling variable per-mob/boss canon (mobs typically +25% standard, bosses variable). Source: [`features/bosses/_sources/fandom-divine-dragon.md`](features/bosses/_sources/fandom-divine-dragon.md).
+
+- [ ] ⭐⭐⭐ **🆕 JP name 神竜王 Shinryūō "God Dragon King" canon MAJEUR (fandom) ⭐⭐⭐** — Divine Dragon = "King of Dragons" title canon (strongest all Dragons). Pattern Boss JP name canonical. À cross-référer autres Dragons JP names canon ingestion future. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Appearance canon Divine Dragon NEW MAJEUR (fandom) ⭐⭐⭐** :
+  - Colossal Western-style quadrupedal winged reptile + elongated neck
+  - **7 wings** ⭐⭐⭐ canon
+  - Long tail + **cannon on right shoulder** (Divine Dragon Cannon source)
+  - **7 eyes** : 6 at front upper jaw + 1 largest seventh eye on chin (**main eye Lloyd target canon**)
+  - Post-seal-break : body shackled + broken chains hanging from limbs
+  - Guidebook : **68 meters long / 180 tons**
+    Pattern thematic "King of Dragons" 7-eyes 7-wings canon. À refléter sprite design Damia. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Lore canon MASSIVE Divine Dragon (fandom) MAJEUR ⭐⭐⭐** :
+  - **10,000+ years sealed** by ancient Winglies Mountain of Mortal Dragon (couldn't kill)
+  - Pre-Dragon Campaign : shared "God Dragon King" title with another 7-eyed Dragon → Divine Dragon prevailed
+  - Dragon Campaign : humans **unable to ally** → remained sealed
+  - **Chapter 3 Fate & Soul** : seal weakens → Evergreen Forest aggression + Forest of Winglies Guaraha reveals to Meru
+  - Seal dissolves → Dragon free → vengeance world
+  - Dart Red-Eye + Albert Jade Dragoon resonance canon
+  - **First attack Deningrad** minor / **Major attack Deningrad** : Crystal Palace Signet destroyed + **Moon seal dissolves**
+  - Party + Dragon Block Staff defeats
+  - **Lloyd kills with main eye stab** + Divine Dragoon Spirit manifests as soul
+  - Lloyd takes Spirit BUT cannot use (doesn't react)
+  - **End Chapter 4** : Lloyd struck by Melbu Frahma → dying gives Dart **Divine Dragoon Spirit + Dragon Buster** canon
+    Pattern Disc 3 story arc canon Mille Seseau + Divine Dragon + Moon seal mechanic. À documenter `story/disc-3-divine-dragon-arc.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 BATTLE AT MAYFIL — Divine Dragon Spirit revisit boss canon NEW MAJEUR (fandom) ⭐⭐⭐** — Pattern Disc 4 revisit boss canon NEW :
+  - **Divine Dragon Spirit** Disc 4 **Death City Mayfil** (optional encounter)
+  - HP US 16,000 / JP **20,000** ✓ (+25% systematic confirmed — vs Mountain Disc 3 +40-50% variant)
+  - AT 120 / DF 160 / MAT 130 / MDF 100 / SPD 60 / Gold 400 / EXP 8000
+  - Drop **Flash Hall 100%** / **Counter Yes** (vs Mountain Counter No)
+  - ⭐ **NO Dragon Block Staff Disc 4** : Dragoons fully usable canon
+  - ⭐⭐⭐ **"Most challenging boss battles in entire game" canon** — high speed = consecutive actions Game Over risk
+    Pattern Damia : `RevisitBossCanon { mainBoss; revisitForm; location; disc; dragoonsAvailable }` data-model NEW canon. Pattern Disc 4 revisit boss canon (à investiguer autres revisit bosses). À documenter `bosses/Divine Dragon Spirit Mayfil.md` (à créer ou intégrer Divine Dragon.md). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Dragons 7-tier ranking canon Guidebook MAJEUR (fandom) ⭐⭐⭐** — Pattern Dragons ranked **7 tiers** par # eyes = rank/power canon (max 7). **Divine Dragon = 7 eyes = top tier canon**. Pattern **Dragoon Spirit formation lore canon NEW MAJEUR** : eyes "dragged together" when sufficient power dragon dies → forms Dragoon Spirit. Spirit must be claimed quickly or expires. À documenter `dragoons/dragon-tiers.md` (à créer) — 7-tier Dragon ranking canon Guidebook. À cross-référer autres Dragons canon (Red-Eye / Jade / Blue-Sea / Violet / Golden / Dark / White Silver-Dragon) tier rankings. Pattern Damia : Dragon canonical lore mechanic. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Pressure canon name officiel + Fear 4-stat reduction canon NEW MAJEUR (fandom) ⭐⭐⭐** — **Pressure** = canon name fandom (vs wiki ~Intimidating Presence community). Description : "shakes head, casts Fear into all party members causing fear that **lowers attack and defense from both physical and magical**" ⭐⭐⭐. Pattern Fear status canon mechanic NEW MAJEUR : **4-stat reduction** (P-Atk + P-Def + M-Atk + M-Def). À documenter `combat/status-effects.md` (à créer) — Fear status canon mechanic 4-stat reduction canon NEW. Pattern Damia : `FearStatus { type: 'stat-reduction'; affects: ['p-atk', 'p-def', 'm-atk', 'm-def']; reductionPercent: ? }` data-model canon CORRECTION. Damia adopt fandom canon **Pressure** > wiki community ~Intimidating Presence. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Dragon Claw canon name officiel (fandom) ⭐⭐** — vs wiki ~Arm Swipe community. Description : "swipes claw across the field and attacks the entire party dealing moderate damage". Damia adopt fandom canon **Dragon Claw** > wiki ~Arm Swipe. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Divine Dragon Ball canon name officiel (fandom) ⭐⭐** — vs wiki ~Divine Dragon Barrage community. Description : "flies into air + fires volley of energy balls Party high magical damage". **Common attack canon**. Damia adopt fandom canon **Divine Dragon Ball** > wiki ~Divine Dragon Barrage. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Imperial Spell NEW canon ability MAJEUR (fandom) ⭐⭐⭐** — Wiki community ~5 elemental abilities séparées (Pellet/Burn Out/Burning Wave/Down Burst). Fandom révèle **Imperial Spell** = "shakes neck, using max-level Attack Item magic" generic descriptor. ⚠️ Possible interprétation : fandom regroupe wiki precise abilities sous generic Imperial Spell. Damia adopt mix : wiki precise abilities (canonical mechanics) + Imperial Spell fandom narrative descriptor. À reconcilier wiki + fandom ability list précis. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Dragon Buster NEW item canon Dart ultimate weapon MAJEUR (fandom) ⭐⭐⭐** — Lloyd gives Dart Disc 4 (end Chapter 4 dying) along with Divine Dragoon Spirit. Probable **Dart's ultimate weapon canon** (anti-Dragon thematic possible — "Dragon Buster"). À documenter `items/equipment.md` Dragon Buster ultimate weapon canon entry NEW. Pattern Damia : Dart weapons progression canon Disc 4. À cross-référer `party-members/Dart.md` weapons table canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Bravery Amulet NEW item canon (fandom) ⭐⭐** — Anti-Fear accessory canon : "prevents Divine Dragon from inflicting Fear". Pattern accessories anti-status canon récurrent (cohérent existing Talisman + Rose's Hairband anti-Can't Combat canon). À documenter `items/equipment.md` Bravery Amulet accessory canon entry NEW. Pattern Damia : `AccessoryEffect { type: 'status-immunity'; status: 'Fear' }` data-model canon NEW. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Spiritual Ring + Guard Badge + Legend Casque NEW items canon (fandom) ⭐⭐** — Anti-magic accessories canon Mayfil revisit fight :
+  - **Spiritual Ring** = anti-magic accessory canon NEW
+  - **Guard Badge** = anti-magic accessory canon NEW
+  - **Legend Casque** = anti-magic accessory canon NEW (probable late-game)
+    Pattern Disc 4 anti-magic accessories canon. À documenter `items/equipment.md` accessories canon entries NEW. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Dragoon limited 1 round canon (fandom) Divine Dragon strategy ⭐⭐** — Pattern Dragon Block Staff battle canon : Dragoons usage limited 1 round + supportive Dragoon Magic only :
+  - **Albert Rose Storm** (Wind defensive party buff)
+  - **Meru Rainbow Breath** (Water heal/buff)
+  - **Miranda healing spells** (Light heal)
+    Pattern Dragoon Magic supportive canon Damia Disc 3 boss strategy. Cohérent existing Dragoon Magic spells canon (à cross-référer party-members docs). Source: idem.
+
+- [ ] ⭐ **🆕 "Divine DG Ball" mistranslation canon (fandom) ⭐** — Trivia : Japanese **Shinryū Tama** (Tama = "ball") mistranslated as "Divine Dragon Egg" (Tamago = "egg"). Pattern translation error canon. Damia adopt correct "Divine Dragon Ball" canon for Dart Dragoon Magic name. Source: idem.
+
+- [ ] **🆕 Stats divergences Divine Dragon wiki vs fandom ⚠️** :
+  - AT : wiki **60** vs fandom **65** (+5 / +8%)
+  - MAT : wiki **53** vs fandom **58** (+5 / +9%)
+  - HP US match (5000)
+  - DF/MDF/SPD/Gold/EXP match ✓
+  - → Damia adopt fandom higher AT 65 + MAT 58 probable (JP closer pattern récurrent)
+    Source: comparaison.
+
+- [ ] **🆕 Divine Dragoon Spirit lore canon hint Tower of Flanvel Disc 3 (fandom) ⭐⭐** — Tower of Flanvel Disc 3 Mirror chamber cutscene pre-Lloyd fight : Spirit shines near Dart while Lloyd holds it = canon hint Dart destined master. Pattern Dragoon Spirit selection canon : Spirits choose master canon. À documenter `bosses/Lloyd.md` (existing/à créer) + cohérent existing Dart canon. Source: idem.
+
+- [ ] **🆕 Rose introduction quote canon Divine Dragon (fandom) ⭐** — "The arrival of the 'one who glares through seven diabolical eyes, and crosses the sky with seven wings.' It's trouble. It's the King of Dragons. The Divine Dragon." Pattern Rose canon knowledge = Dragon Campaign veteran lore (cohérent existing Rose canon Black Monster + Dragon Campaign survivor). À cross-référer `party-members/Rose.md`. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

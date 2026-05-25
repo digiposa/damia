@@ -4340,6 +4340,34 @@
 
 - [ ] **🆕 Retaliate chance % canon ⚠️** — Wiki dit "Chance to trigger when targeted by attack" — exact % à investiguer fandom + Discord future. Source: à investiguer.
 
+### Mobs / Dragonfly wiki (Thunder Valley of Corrupted Gravity Disc 2 — Minor Enemy + Thunderbolt canon name officiel + Counter 4 very-low tier 2ème instance + AI 2-phase + Balanced anti-stat tank profile NEW + Angel's Prayer 8% drop + Valley 5 submaps location canon)
+
+- [ ] ⭐⭐⭐ **🆕 Thunderbolt canon name officiel MAJEUR ⭐⭐⭐** — Party AoE 1× Thunder-elemental magic damage canon name officiel (NOT ~ approximation). Pattern thematic "thunder strike electric discharge" canon Dragonfly Thunder element. Pattern Damia : `ThunderboltAbility { type: 'magic-party-aoe'; multiplier: 1; element: 'thunder'; target: 'party' }` data-model canon NEW. À implémenter ability `thunderbolt` Damia. Pattern Thunder-element ability canon NEW Mob — à cross-référer existing Thunder mobs (Cute Cat) pour pattern shared canon. Source: [`features/mobs/_sources/lod-wiki-dragonfly.md`](features/mobs/_sources/lod-wiki-dragonfly.md).
+
+- [ ] ⭐⭐ **🆕 Dragonfly Mob canon Disc 2 Valley of Corrupted Gravity ⭐⭐** — Thunder element Minor Enemy. Stats US HP 296 / AT 32 / DF 120 / MAT 31 / MDF 150 / SPD 80 / A-AV/M-AV 0% + Gold 21 + EXP 48. Pattern "balanced anti-stat tank" canon NEW (DF 120 + MDF 150 dual high defense). Status 4/4 standard. Counter 4 very-low tier. AI 2-phase Claw and Pierce (>25%) / Thunderbolt (≤50% Party Thunder magic). Angel's Prayer 8% drop. À documenter `mobs/Dragonfly.md` (créé). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Valley of Corrupted Gravity 5 submaps location canon ⭐⭐** — Disc 2 dungeon area (cohérent existing `locations/README.md` "à spec"). 5 submaps Dragonfly spawn : 252 (35% primary) / 254 (20%) / 255 / 256 / 257 (10% each). Pattern thematic "gravity-bent valley + aerial mobs" cohérent. À documenter `locations/Valley of Corrupted Gravity.md` (à créer) — Disc 2 dungeon area canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Counter 4 very-low tier 2ème instance canon ⭐⭐** — Dragonfly = 2ème Minor Enemy "Very low" tier ingestion canon Damia (cohérent Bowling existing pattern). Counter Opportunities tier mapping canon Damia updated : 7 tiers 0/3/4/9/16/19/28 — tier 4 confirmed 2 instances (Bowling + Dragonfly). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Pattern "balanced anti-stat tank" canon Dragonfly NEW ⭐⭐** — DF 120 high + MDF 150 high = dual high defense (vs typical anti-physical OR anti-magic single-priority pattern existing canon). First Minor Enemy balanced anti-stat profile ingestion canon Damia. À investiguer cross-mob : autres mobs avec balanced DF+MDF profile ? Pattern Damia : new combat archetype "balanced defensive tank" canon NEW. Source: idem.
+
+- [ ] ⭐⭐ **🆕 AI 2-phase Mob HP overlap zone canon ⭐⭐** — Phase 1 (HP > 25%) ~Claw and Pierce / Phase 2 (HP ≤ 50%) Thunderbolt. HP overlap zone 25-50% canon : both abilities possible (equal chance random selection per Minor Enemy AI canon). Pattern Damia : MobAI overlap zone selection canon — équivalent existing pattern Mob AI canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Angel's Prayer 8% drop canon Dragonfly Disc 2 farming source ⭐⭐** — Existing item canon Angel's Prayer = revive item. 8% drop rate canon. Pattern Dragonfly farming source canon Disc 2 (early revive item farming spot). À cross-référer `items/Angel's Prayer.md` (à créer/vérifier) — revive item canon Damia. Source: idem.
+
+- [ ] ⭐ **🆕 SPD 80 high first-strike often canon Dragonfly ⭐** — Pattern aerial dragonfly thematic cohérent (fast aerial real-world association). SPD 80 = high tier Minor Enemy (vs Dragon Soldier SPD 50 slow knight). Pattern Damia : SPD canon per-mob archetype. Source: idem.
+
+- [ ] ⭐ **🆕 Thunder element Minor Enemy ingestion canon Damia ⭐** — Dragonfly = 2ème Thunder Minor Enemy ingestion (1er = Cute Cat existing canon). Thunder mobs limited canon. Pattern Damia : Thunder element rare Minor Enemy ingestion. Source: idem.
+
+- [ ] ⭐ **🆕 ~Claw and Pierce community approximation canon ⭐** — Community approximation baseline ability (1× phys) Dragonfly >25% phase. Pattern thematic "dragonfly claws + piercing sting" canon (insect physical attack). Source: idem.
+
+- [ ] ⭐ **🆕 AT 32 / MAT 31 low offensive canon Dragonfly ⭐** — Weak attacker (mostly Thunderbolt magic Party AoE threat ≤50% HP). Pattern Damia : low-offensive Mob with single magic AoE threat canon. Source: idem.
+
+- [ ] ⭐ **🆕 Escape rate 40% Valley of Corrupted Gravity canon ⭐** — Cohérent Home of Gigantos 40% intermediate Disc 1-2 pattern. Pattern Damia escape rate Disc 2 dungeon. Source: idem.
+
+- [ ] **🆕 JP stats Dragonfly à confirmer fandom future ⚠️** — Wiki US only ingéré (HP 296 / Gold 21). Pattern Damia adopt JP when available (+25% HP typical = ~370 / Gold ÷3 = ~7). À mettre à jour quand fandom Dragonfly ingéré. Source: à ingérer.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

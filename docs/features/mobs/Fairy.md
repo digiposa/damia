@@ -1,6 +1,6 @@
-# Fairy — Mob Kadessa (Disc 3)
+# Fairy — Mob Forbidden Land / Kadessa (Disc 3)
 
-> **Mob Light element Kadessa Disc 3** — magical fairy caster Mob. 2 encounter formations (Fairy solo submaps 394/399/404 10% + mixed Fairy x2 + Puck formation 149 submaps 395-405 20-35%). Escape 30%. **Light Minor Enemy 3ème ingestion canon Damia** (rare — cohérent Crystal Golem).
+> **Mob Light element Forbidden Land / Kadessa Disc 3** — tiny female fairy magical caster (6 wings + wand red stone + pink/purple clothing + dark purple hair). 2 encounter formations (Fairy solo submaps 394/399/404 10% + mixed Fairy x2 + Puck formation 149 submaps 395-405 20-35%). Escape 30%. Encounter rate "Common" fandom. **Light Minor Enemy 3ème ingestion canon Damia** (rare — cohérent Crystal Golem).
 >
 > ⭐⭐⭐ **Trans Light cross-mob canon CONFIRMED MAJEUR ⭐⭐⭐** — Cohérent existing Crystal Golem Trans Light canon (Light element shared ability cross-mob canon). 1.5× Light-elemental magic Single. Pattern Damia : Trans Light = **Light Family shared ability canon** (Crystal Golem + Fairy both).
 >
@@ -26,13 +26,36 @@
 >
 > ⭐ **Light Minor Enemy 3ème ingestion canon Damia** — Pattern Light rare (Crystal Golem Disc 1 + Fairy Disc 3 + Witch later).
 >
+> ⭐⭐⭐ **JP HP 400 ✓ +25% systematic CONFIRMED fandom ⭐⭐⭐** (320 × 1.25 = 400 ✓) + **JP Gold 8 ✓ ÷3 systematic CONFIRMED fandom ⭐⭐⭐** (24 ÷ 3 = 8 ✓).
+>
+> ⭐⭐⭐ **Trans Light + Dancing Ray = SPELL ITEMS canon REVEALED MAJEUR fandom ⭐⭐⭐** — "Uses the spell item of the same name" — Fairy abilities are **item-based** (cohérent existing Drake Bandit Healing Potion item-based pattern canon). Pattern Damia : **Mob using Spell Items canon NEW MAJEUR** — Trans Light + Dancing Ray = Light Spell Items canon NEW.
+>
+> ⭐⭐⭐ **Magical Wand canon name officiel MAJEUR fandom ⭐⭐⭐** (wiki ~Staff Smack community) — "Flies towards single + smacks with magic wand + low physical damage" (cohérent appearance wand nearly height whole body).
+>
+> ⭐⭐⭐ **Sun Rhapsody = full MP restore single ally canon REVEALED MAJEUR fandom ⭐⭐⭐** — Effect NEW canon REVEALED ! Pattern Damia : `SunRhapsodyItem { type: 'item-mp-restore'; target: 'single-ally'; effect: 'full-mp-restore' }` data-model canon NEW. Light Spell Item utility canon (rare MP-restore vs typical HP). Farming time 30+ min canon.
+>
+> ⭐⭐⭐ **Appearance canon DETAILED MAJEUR fandom ⭐⭐⭐** — Very tiny short female humanoid + **6 wings** + wand nearly height whole body + **red stone top wand** + pink/purple clothing + dark purple short hair.
+>
+> ⭐⭐⭐ **"Forbidden Land / Kadessa" canon terminology fandom ⭐⭐⭐** — Cohérent existing Dragon Block Staff Forbidden Land = Kadessa former Wingly capital canon. Pattern Damia : terminology canon récurrent confirmé cross-source.
+>
+> ⭐⭐⭐ **A-AV DIVERGENCE wiki 10% vs fandom 20% MAJEUR ⚠️⚠️** — Damia adopt wiki precise (10%) + flag fandom higher claim. À investiguer Discord clarification.
+>
+> ⭐⭐ **HP Recovery canon name fandom + 30% (96 HP) cross-source CONFIRMED** — Pattern strategy : "ineffective at normal char levels but if party combined attacks < 30% HP could stay healed indefinitely".
+>
+> ⭐⭐ **AT 45 + MAT 64 fandom CORRECTION wiki** (43→45 +5% / 57→64 +12% — Damia adopt fandom higher).
+>
+> ⭐⭐ **Rose Darkness weak Light strategy canon** — Rose takes more damage from Fairy + Fairy more damage from Rose (mutual elemental weakness canon).
+>
+> ⭐⭐ **Encounter rate "Common" canon fandom**.
+>
 > **Sources** :
 >
 > - 🥈 [`_sources/lod-wiki-fairy.md`](./_sources/lod-wiki-fairy.md) — wiki LoD tier 2 (stats US 320 HP / 43 AT / 80 DF / 57 MAT / 150 MDF / 70 SPD + **dual A-AV/M-AV 10%** + Counter 28 + Status 4/4 + Yield 81 EXP / 24 Gold / Sun Rhapsody 8% + AI 4-ability ~Staff Smack/Trans Light/Dancing Ray/HP recovers + Kadessa 10 submaps + Puck partner + Escape 30%)
+> - 🥉 [`_sources/fandom-fairy.md`](./_sources/fandom-fairy.md) — fandom tier 3 (⭐ **JP HP 400 ✓ +25% CONFIRMED** + ⭐ **JP Gold 8 ✓ ÷3 CONFIRMED** + ⭐ **Trans Light + Dancing Ray = SPELL ITEMS canon REVEALED MAJEUR** + ⭐ **Magical Wand canon name officiel** + ⭐ **Sun Rhapsody = full MP restore single ally NEW MAJEUR** + ⭐ **Appearance tiny female + 6 wings + wand red stone DETAILED NEW MAJEUR** + ⭐ **Forbidden Land / Kadessa terminology canon** + ⭐ **A-AV 20% fandom DIVERGENCE wiki 10% ⚠️** + ⭐ **HP Recovery 96 HP cross-source confirmed** + ⭐ **AT 45 + MAT 64 fandom higher** + ⭐ **Rose Darkness strategy** + ⭐ **Encounter "Common"**)
 
 ## Statut
 
-🟡 **Canon documenté wiki tier 2 uniquement** — fandom à ingérer (JP stats + appearance + Trivia future).
+🟢 **Canon documenté wiki tier 2 + fandom tier 3 cross-source confirmé** — JP stats CONFIRMED +25% HP / ÷3 Gold systematic + Trans Light + Dancing Ray = Spell Items REVEALED MAJEUR + Magical Wand canon name + Sun Rhapsody full MP restore REVEALED + Appearance detailed + Forbidden Land/Kadessa terminology. ⚠️ A-AV DIVERGENCE wiki 10% / fandom 20% à clarifier.
 
 ## Identity canon
 
@@ -86,14 +109,22 @@
 
 **(28)** — cohérent existing canon HIGH DENSITY tier.
 
-## AI canon (4-ability NEW Staff Smack + Trans Light + Dancing Ray + HP recovers)
+## AI canon (4-ability Magical Wand + Trans Light + Dancing Ray + HP Recovery — canon names fandom)
 
-| HP           | Action             | Target | Effect                                     | Notes                                                       |
-| ------------ | ------------------ | ------ | ------------------------------------------ | ----------------------------------------------------------- |
-| > 50%        | **~Staff Smack**   | Single | 1× Physical damage                         | Community approximation (~)                                 |
-| ≤ 50%, > 25% | **Trans Light** ⭐ | Single | **1.5× Light-elemental magic damage** ⭐   | Canon name officiel ✓ cohérent existing Crystal Golem canon |
-| ≤ 25%        | **Dancing Ray** ⭐ | Party  | **1× Light-elemental magic damage** ⭐ NEW | Canon name officiel — NEW ability                           |
-| ≤ 25%        | **HP recovers**    | Self   | **Restores 30% (96) HP**                   | 4ème cross-mob/boss instance formula                        |
+| HP           | Action                                            | Target | Effect                                                                      | Source canon                                             |
+| ------------ | ------------------------------------------------- | ------ | --------------------------------------------------------------------------- | -------------------------------------------------------- |
+| > 50%        | **Magical Wand** ⭐⭐⭐ canon (~Staff Smack wiki) | Single | "Flies + smacks with magic wand" + **1× Physical damage low**               | Fandom canon officiel (wiki community ~)                 |
+| ≤ 50%, > 25% | **Trans Light** ⭐⭐⭐ Spell Item ⭐              | Single | "Uses spell item of same name" + **1.5× Light magic Single medium damage**  | ✓ Cross-source + REVEALED Spell Item canon fandom MAJEUR |
+| ≤ 25%        | **Dancing Ray** ⭐⭐⭐ Spell Item ⭐              | Party  | "Uses spell item of same name" + **1× Light magic Party AoE medium damage** | ✓ Cross-source + REVEALED Spell Item canon fandom MAJEUR |
+| ≤ 25%        | **HP Recovery** ⭐⭐⭐ canon                      | Self   | **Restores 30% Max HP = 96 HP US** ✓ cross-source confirmed                 | Cross-source confirmed (wiki + fandom)                   |
+
+### Magical Wand canon name officiel ⭐⭐⭐ MAJEUR fandom (~Staff Smack wiki community)
+
+- **Magical Wand** = canon name officiel fandom (vs wiki ~Staff Smack community approximation)
+- Effect canon : "Flies towards single person + smacks with magic wand + low physical damage" (cohérent appearance "wand nearly height whole body")
+- 1× physical baseline low
+- Pattern thematic "fairy wand smack attack" canon
+- Pattern Damia : adopter **Magical Wand** canon name officiel + flag community ~Staff Smack alias deprecated
 
 ⚠️ **Pattern AI canon mob 4-ability NEW MAJEUR ⭐⭐⭐** :
 

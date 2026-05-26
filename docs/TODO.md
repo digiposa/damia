@@ -4849,6 +4849,42 @@
 
 - [ ] ⭐⭐ **🆕 Therapy Ring sequence break canon NEW (fandom) ⭐⭐** — Possible obtain Therapy Ring pre-Vanishing Stone via careful walk avoiding Faust apparition (Land of Taboo entry). Pattern Damia : sequence break canon NEW Tower Flanvel. Source: idem.
 
+### Locations / Fletz wiki (Disc 2 Tiberoa capital — King Zior + Twin Castle + 2 princesses + Queen Fury Port + Lenus boss + Pass Valley + 3 shops + 26 items + Knight Shield 200G CONFIRMED + Trans Light Spell Item CONFIRMED + 11 NEW equipment items + 7 Stardust + 2 chests + 48 submaps)
+
+- [ ] ⭐⭐⭐ **🆕 King Zior + Twin Castle + 2 princesses Emille/Lisa canon NEW MAJEUR Fletz (wiki) ⭐⭐⭐** — Capital city Tiberoa southern region. King Zior ruler Tiberoa canon. Twin Castle north city = Tower of Moon (Princess Emille) + Tower of Stars (Princess Lisa). 2 princesses canon Disc 2. À documenter `npcs/King Zior.md` + `npcs/Princess Emille.md` + `npcs/Princess Lisa.md` (à créer). Source: [`features/locations/_sources/lod-wiki-fletz.md`](features/locations/_sources/lod-wiki-fletz.md).
+
+- [ ] ⭐⭐⭐ **🆕 Queen Fury Port beneath Twin Castle canon CROSS-SOURCE CONFIRMED ⭐⭐⭐** — Submap 224 "Port for Queen Fury beneath the castle" ✓ confirme existing Flabby Troll fandom canon Queen Fury naval encounters Disc 2. Pattern Damia : Queen Fury = Tiberoa royal ship Fletz Port canon CONFIRMED. À documenter `locations/Queen Fury.md` (à créer) — naval ship canon Disc 2. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Lenus boss canon Disc 2 Fletz CONFIRMED MAJEUR Fletz (wiki) ⭐⭐⭐** — Water boss 6,000 EXP / 200 Gold / Nothing drop. Submap 236 scripted "throne room Lenus flees". Story canon : Lenus impersonating Princess Emille 6 months canon NEW MAJEUR. Story progression : Throne room confrontation → Lenus flees → King Zior asks pursuit → Prison Island. Pattern thematic Lenus = Wingly assassin canon (cohérent existing Lenus + Regole Undersea Cavern). À documenter `bosses/Lenus.md` (à créer/vérifier). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Pass for the Valley of Corrupted Gravity Key Item canon NEW MAJEUR Disc 2 ⭐⭐⭐** — Key Item Disc 2 gating Valley of Corrupted Gravity (cohérent existing Valley canon Dragonfly/Erupting Chick/Roc). Acquisition : Donau quest → return Fletz → guard front castle → Fester item shop → Fester near castle entrance → Twin Castle King Zior obtain pass. Pattern Damia : Pass-gated location canon Disc 2 NEW. Pattern thematic : political gating canon (royal authorization). À documenter `items/Pass For Valley.md` (à créer) — Key Item Disc 2 canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Knight Shield 200G Fletz Weapon Shop CROSS-SOURCE CONFIRMED MAJEUR (wiki) ⭐⭐⭐** — ✓ Cohérent existing Flabby Troll fandom canon "Knight Shield 200G Bale OR Fletz". Fletz Weapon Shop confirme price + location. Pattern Damia cross-source CONFIRMED — Knight Shield = 200G accessory canon Tiberoa shops. Pattern Damia : drop farming inefficient (Dragon Soldier/Flabby Troll 2% drops vs shop 200G). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Trans Light 10G Item Shop CROSS-SOURCE CONFIRMED Spell Item canon Fletz (wiki) ⭐⭐⭐** — ✓ Cohérent existing Fairy fandom canon "Trans Light = Spell Item". Fletz Item Shop 10G confirme Spell Item nature + price tier canon. Pattern Damia cross-source : Trans Light = Light Spell Item canon (10G shop + Fairy drop source). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Black Rain Spell Item canon NEW MAJEUR Fletz Item Shop (wiki) ⭐⭐⭐** — 20G Item Shop Fletz. Cohérent existing Tower of Flanvel fandom canon "Black Rain chest" reveal. Pattern Damia : Black Rain = Spell Item canon NEW (probable Darkness element thematic "rain of darkness"). À documenter `items/Black Rain.md` (à créer) — Darkness Spell Item canon NEW. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 11 NEW equipment items Fletz Weapon Shop canon (wiki) ⭐⭐⭐** — Shadow Cutter (200G) + Chain Mail (150G) + Soft Boots (100G) + Poison Guard (200G) + Active Ring (200G) + Protector (200G) + Panic Guard (300G) + Stun Guard (200G) + Bravery Amulet (300G) + Magic Ego Bell (300G) + Power Wrist (200G) + Wargod Calling (1,000G). Pattern Damia : Disc 2 equipment shop tier 100-1000G canon. À documenter `items/equipment.md` 11 NEW items canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Jewelry Shop Fletz 1,000G tier canon (wiki) ⭐⭐⭐** — 4 jewelry accessories 1,000G : Ruby Ring + **Sapphire Pin** (✓ cohérent existing Crystal Golem drop) + Emerald Earring + **Platinum Collar** (✓ cohérent existing Succubus drop). Pattern Damia : jewelry shop economy 1,000G tier canon NEW. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Story canon Disc 2 Fletz MAJEUR (wiki) ⭐⭐⭐** — Emille acting strangely 6 months (Lenus impersonation) + **Fester scholar Moon That Never Sets cultural role + teaches Lisa Astronomy** + **Kaffi bar worker** NPC + **Nello "Green Party" vegetation** host + Shana confesses Dart balcony submap 662 + Banquet for heroes throne room post-Lenus submap 238. À documenter `npcs/Fester.md` + `npcs/Kaffi.md` + `npcs/Nello.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Fletz location canon Disc 2 (wiki) ⭐⭐** — Capital Tiberoa southern region (borders Aquaria Coral Reef + harbor). Architecture white + blue marble. 48 submaps détaillés (Fletz 1-24 + Twin Castle 25-48). 2 save points + Hotel/Clinic 20G + No random encounters (safe city). À documenter `locations/Fletz.md` (créé). Chain Disc 2 : Kazas #13 → Fletz #14 → Barrens #15. Source: idem.
+
+- [ ] ⭐⭐ **🆕 7 Stardust Fletz #21-27 canon + #27 conditional Lisa quest (wiki) ⭐⭐** — Stardust détaillés Fletz : Crates bar / Roof bridges / Weapons Shop box / Jewelry Shop gems / Items Shop telescope / Twin Castle statue / Twin Castle right tower base. ⚠️ Stardust #27 conditional : NOT obtainable while assisting Princess Lisa canon NEW (sequence break conditional canon). Source: idem.
+
+- [ ] ⭐⭐ **🆕 2 chests Twin Castle training room Fletz canon (wiki) ⭐⭐** — Moon Serenade + Sun Rhapsody chests (Knight's training room submap 225). Pattern Damia : Moon Serenade = Spell Item probable Moon thematic (cohérent existing Cursed Jar drops + Tower of Flanvel canon). Sun Rhapsody chest cohérent existing Fairy drop canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Magical space inside painting canon NEW Twin Castle (wiki) ⭐⭐** — Submap 669 "Magical space inside painting" NEW location canon Disc 2 (Twin Castle painting pocket dimension). Pattern Damia : magical pocket dimension canon NEW Wingly probable. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Telescope Moon That Never Sets canon Fester planetarium (wiki) ⭐⭐** — Submap 235 "Telescope view of Moon That Never Sets" canon Fester scholar + Lisa Astronomy lessons. Pattern Damia : Astronomy canon Disc 2 Fester teaching Lisa. À cross-référer Moon That Never Sets cultural lore. Source: idem.
+
+- [ ] ⭐ **🆕 Charm Potion + Healing Breeze NEW items canon Fletz Item Shop (wiki) ⭐** — Charm Potion 4G (cheap consumable NEW) + Healing Breeze 50G (Spell Item NEW). À documenter `items/Charm Potion.md` + `items/Healing Breeze.md` (à créer). Source: idem.
+
+- [ ] ⭐ **🆕 Hotel + Clinic 20G canon Fletz (wiki) ⭐** — Hotel restores HP/MP party + Clinic cures status ailments party (20G each). Pattern Damia rest area economy canon Disc 2. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

@@ -1,6 +1,6 @@
 # Freeze Knight — Mob Water Kashua Glacier (Disc 3)
 
-> **Mob Water element Kashua Glacier Disc 3 Mille Seseau** — **Water Immunity passive canon NEW MAJEUR** (Water magic damage reduced to 0). **Status 8/8 ALL IMMUNE elite Minor Enemy tier canon récurrent boss-tier pattern**. **AI 3-phase progressive trigger overlap canon récurrent** : ~Ice Lance >50% / **Spear Frost 1.5× Water magic CROSS-MOB SHARED ability canon Flying Rat NEW MAJEUR** / **Fatal Blizzard Party 1× Water magic ≤25% RED HP self-named drop canon**. 3 formations Kashua Glacier submaps 433-441 + 1 World Map road. Counter 28 high-density 5ème instance.
+> **Mob Water element Kashua Glacier Disc 3 Mille Seseau** — JP name **フリージングナイト Furījingunaito "Freezing Knight"** canon. **Ice armor humanoid + arms = massively long icicles + tall icicle shoulders/head + 5-icicle feet base** appearance canon NEW MAJEUR. **Water Immunity passive canon NEW MAJEUR** (Water magic damage reduced to 0). **Status 8/8 ALL IMMUNE elite Minor Enemy tier canon récurrent boss-tier pattern CONFIRMED cross-source**. **AI 3-phase clean non-overlap canon NEW** : **Icicle Extension** >50% / **Spear Frost CROSS-MOB SHARED ability canon Flying Rat** 25-50% / **Fatal Blizzard Party 1× Water magic ≤25% RED HP self-named drop canon CONFIRMED cross-source**. 3 formations Kashua Glacier submaps 433-441 + 1 World Map road. Counter 28 high-density 5ème instance. Encounter rate **Common** canon (fandom).
 >
 > ⭐⭐⭐ **Water Immunity passive canon NEW MAJEUR ⭐⭐⭐** — Quote canon : "Water-elemental magic damage is reduced to 0". Pattern Damia : **element immunity passive canon récurrent** (cohérent existing Fire Spirit Fire Immunity passive canon). 2ème instance documenté element-immunity passive (Fire Spirit + Freeze Knight). Pattern Damia : **element-immunity = thematic match** canon (mob's element = immunity = ice/cold knight immune Water). Implications design : Damia mob element ↔ element-immunity passive pattern récurrent. À documenter `combat/element-immunity-passives.md` (à créer) — passive canon récurrent 2ème instance.
 >
@@ -47,35 +47,40 @@
 > **Sources** :
 >
 > - 🥈 [`_sources/lod-wiki-freeze-knight.md`](./_sources/lod-wiki-freeze-knight.md) — wiki LoD tier 2 (Water element + Counter 28 high-density 15 combos détaillés + Stats 360/56/120/68/160/50 + A-AV 0% / M-AV 0% + **Status 8/8 ALL IMMUNE elite Minor Enemy tier récurrent boss-tier** + Yield 110 EXP / 27 Gold / Fatal Blizzard 8% drop NEW + **Water Immunity passive canon NEW MAJEUR** + AI 3-phase ~Ice Lance / **Spear Frost cross-mob shared canon Flying Rat** / **Fatal Blizzard Party AoE Water magic ≤25% RED HP NEW MAJEUR** + 3 formations Kashua Glacier submaps 433-441 + **Icicle Ball + Land Skater NEW mobs canon partners** + World Map road **Kashua Glacier → Snowfield**)
+> - 🥉 [`_sources/fandom-freeze-knight.md`](./_sources/fandom-freeze-knight.md) — fandom LoD tier 3 (⭐ **JP name フリージングナイト Furījingunaito "Freezing Knight" canon NEW** + ⭐ **Appearance "full ice armor + arms massively long icicles sharpening + tall icicle shoulders/head + 5-icicle feet base" canon NEW MAJEUR** + ⭐ **Icicle Extension canon name officiel CORRECTION wiki ~Ice Lance** "icicle arms extend several meters lunging single target medium physical" + ⭐ **Spear Frost CONFIRMED cross-source** "several spears ice rain single target medium water magic" + ⭐ **Fatal Blizzard CONFIRMED cross-source** "blizzard blows medium to massive water magic Party" + ⭐ **JP HP 450 +25% systematic CONFIRMED** + ⭐ **JP Gold 9 ÷3 CONFIRMED** + ⭐ **P. Attack 63 / M. Attack 77 fandom CORRECTION wiki 56/68 +12.5%/+13% probable JP higher** + ⭐ **Fire weak Water + Water weak Fire bidirectional canon CONFIRMED** strategy "deal massive damage Dart Fire element + reverse" + ⭐ **"Spam Fatal Blizzard critical health" canon NEW** emergency phase + ⭐ **"Immune all Status Ailments vanquish old fashioned way" CONFIRMED cross-source** + ⭐ **Encounter rate Common canon** + ⭐ **Fatal Blizzard powerful water spell item buy 20 Gold Kazas canon NEW MAJEUR shop reveal Disc 2** + ⭐ **Disc 3 Monsters category CONFIRMED**)
 
 ## Statut
 
-🟡 **Canon documenté wiki tier 2 uniquement** — fandom à ingérer future (appearance + JP stats + ability canon names confirmation + Icicle Ball/Land Skater partner mob canon).
+🟢 **Canon cross-source confirmed wiki tier 2 + fandom tier 3** — Sources convergent location/element/stats/Counter/Status 8/8 all immune/Water Immunity passive/3 formations. Fandom révèle MAJEUR : JP name フリージングナイト + Appearance "full ice armor + massively long icicle arms + tall icicle shoulders/head + 5-icicle feet base" + Icicle Extension canon name officiel (CORRECTION wiki ~Ice Lance) + Spear Frost/Fatal Blizzard CONFIRMED cross-source + JP HP 450 +25% + JP Gold 9 ÷3 + P. Attack 63 / M. Attack 77 fandom corrections + Fire/Water bidirectional weakness CONFIRMED + Fatal Blizzard 20 Gold Kazas shop canon NEW MAJEUR Disc 2 reveal + Encounter rate Common + "spam Fatal Blizzard critical health" emergency phase canon.
 
 ## Identity canon ⭐⭐⭐
 
 - **Nom** : Freeze Knight
-- **Espèce** : Probable ice knight (ice/cold humanoid armor knight — to confirm fandom appearance)
+- **JP name canon (fandom)** : フリージングナイト (Furījingunaito) lit. **"Freezing Knight"**
+- **Espèce** : Ice armor humanoid canon (fandom CONFIRMED)
+- **Appearance canon NEW MAJEUR (fandom)** : full armor set consisting **entirely of ice** + **arms/hands = massively long icicles motioning as if sharpening** + **shoulders and head = tall icicles far higher than human** + **feet = 5 icicles all around base including one behind**
 - **Element** : **Water** ⭐ (cohérent thematic frozen knight + Water Immunity passive)
 - **Location canon** : **Kashua Glacier** (Disc 3 Mille Seseau region) submaps 433-441 + World Map road Kashua Glacier → Snowfield
-- **Disc** : Disc 3 Mille Seseau region
+- **Disc** : Disc 3 Mille Seseau region — **Disc 3 Monsters category CONFIRMED** (fandom)
+- **Encounter rate** : **Common** canon (fandom — cohérent Forest Runner Common récurrent Disc 3 pattern)
 - **Type** : Minor Enemy canon (elite tier all-status-immune + Water Immunity passive)
-- **Pattern thematic** : ice knight Water element + Water Immunity passive + magic-leaning archetype
+- **Pattern thematic** : ice knight Water element + Water Immunity passive + magic-leaning archetype + "fairly potent with magic" canon (fandom)
 
-## Stats canon
+## Stats canon (cross-source révision fandom)
 
-| Stat | Value | Notes                                                                              |
-| ---- | ----- | ---------------------------------------------------------------------------------- |
-| HP   | 360   | Mid-tier Disc 3 (same Forest Runner 360 canon récurrent)                           |
-| AT   | 56    | Moderate-high physical attack                                                      |
-| DF   | 120   | High defense (tank-tier)                                                           |
-| MAT  | 68    | **MAT 68 > AT 56** = magic-leaning archetype canon                                 |
-| MDF  | 160   | ⚠️ **Extreme high MDF canon NEW MAJEUR** — first instance MDF 160 documented Damia |
-| SPD  | 50    | Moderate-low speed                                                                 |
-| A-AV | 0%    | No physical avoidance (zero — elite mob design canon)                              |
-| M-AV | 0%    | No magic avoidance                                                                 |
+| Stat | Wiki (US) | Fandom       | Damia adopté                                                                               |
+| ---- | --------- | ------------ | ------------------------------------------------------------------------------------------ |
+| HP   | 360       | 360 / 450 JP | **360 US / 450 JP** ✓ +25% systematic CONFIRMED cross-source                               |
+| AT   | 56        | **63**       | **63 fandom** (+12.5% probable JP canon — cohérent pattern récurrent JP higher)            |
+| DF   | 120       | 120          | **120** ✓ match (tank-tier)                                                                |
+| MAT  | 68        | **77**       | **77 fandom** (+13% probable JP canon)                                                     |
+| MDF  | 160       | 160          | **160** ✓ match — ⚠️ **Extreme high MDF canon NEW MAJEUR** first instance documented Damia |
+| SPD  | 50        | 50           | **50** ✓ match                                                                             |
+| A-AV | 0%        | —            | **0% wiki** (zero — elite mob design)                                                      |
+| M-AV | 0%        | —            | **0% wiki**                                                                                |
+| Gold | 27 US     | 27 / 9 JP    | **27 US / 9 JP** ✓ ÷3 systematic CONFIRMED cross-source                                    |
 
-→ Pattern : **MAT 68 > AT 56** = **magic-leaning archetype** canon. **MDF 160 extreme tier canon NEW MAJEUR** first instance documented. **DF 120 + MDF 160 dual-tank canon** + zero avoidance = elite tank Minor Enemy canon Damia.
+→ Pattern : **MAT 77 > AT 63** (fandom) = **magic-leaning archetype** canon (cohérent fandom "fairly potent with magic"). **MDF 160 extreme tier canon NEW MAJEUR** first instance documented. **DF 120 + MDF 160 dual-tank canon** + zero avoidance = elite tank Minor Enemy canon Damia.
 
 ## Status Immunity canon ⭐⭐⭐ ALL 8 IMMUNE elite tier récurrent
 
@@ -95,12 +100,14 @@ Pattern **all 8 status immune = elite Minor Enemy boss-tier canon récurrent** (
 - Implications strategy : Water magic spells/items useless vs Freeze Knight (cohérent thematic frozen knight unfazed by Water)
 - À documenter `combat/element-immunity-passives.md` (à créer) — passive canon récurrent
 
-## Yield canon
+## Yield canon (cross-source confirmed)
 
-- **EXP : 110** / **Gold : 27** (mid-tier Disc 3 reward)
-- **Drop : Fatal Blizzard 8%** — self-named ability drop canon NEW MAJEUR (Water Repeat Item probable)
+- **EXP : 110** / **Gold : 27 US / 9 JP** ✓ ÷3 systematic CONFIRMED cross-source
+- **Drop : Fatal Blizzard 8%** — **self-named ability drop canon NEW MAJEUR** ⭐⭐⭐ Water Spell Item canon (fandom CONFIRMED)
 
 ⭐⭐⭐ **Self-named ability drop canon NEW MAJEUR** : Freeze Knight drops Fatal Blizzard item = same name as its ≤25% Party AoE ability. Pattern Damia : **mob drops item with same name as ability canon récurrent** (cohérent Fairy Sun Rhapsody/Trans Light Spell Item drops pattern récurrent).
+
+⭐⭐⭐ **Fatal Blizzard = Spell Item buy 20 Gold Kazas canon NEW MAJEUR shop reveal Disc 2 (fandom) ⭐⭐⭐** — Quote canon : "powerful water spell item that can be bought for **20 gold in Kazas**". Pattern Damia : **Kazas Item Shop Disc 2 Fatal Blizzard canon NEW MAJEUR** — shop alternative to mob farming (cohérent recent Knight Shield Bale/Fletz + Spirit Cloak Wingly cross-source canon récurrent). Implications : Fatal Blizzard = **Water Spell Item canon NEW MAJEUR** + Kazas shop economy Disc 2 enrichi. À documenter `items/Fatal Blizzard.md` (à créer) + `locations/Kazas.md` (à créer/vérifier) Item Shop Fatal Blizzard 20 G canon NEW.
 
 ## Counter Opportunities ⭐⭐ 28 high-density (5ème instance CONFIRMED)
 
@@ -119,13 +126,13 @@ Pattern **all 8 status immune = elite Minor Enemy boss-tier canon récurrent** (
 | **Very low**     | 4     | Dragonfly / Bowling                                                                                       |
 | **No counter**   | 0     | Air Combat / Feyrbrand / Fire Bird / Earth Shaker / Erupting Chick / Fire Spirit / Flabby Troll           |
 
-## AI canon (3-phase clean non-overlap canon NEW)
+## AI canon (3-phase clean non-overlap NEW — révision fandom canon names)
 
-| HP           | Action             | Target | Effect                                                                             |
-| ------------ | ------------------ | ------ | ---------------------------------------------------------------------------------- |
-| > 50%        | ~Ice Lance         | Single | 1× Physical damage (community approximation name)                                  |
-| ≤ 50%, > 25% | **Spear Frost**    | Single | **1.5× Water-elemental magic damage** ⭐ CROSS-MOB SHARED canon Flying Rat         |
-| ≤ 25%        | **Fatal Blizzard** | Party  | **1× Water-elemental magic damage** ⚠️ NEW MAJEUR Party AoE emergency phase RED HP |
+| HP           | Action               | Target | Effect                                                                                                                                |
+| ------------ | -------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------- |
+| > 50%        | **Icicle Extension** | Single | 1× Physical — "icicle arms extend several meters long lunging towards single target" canon (fandom CORRECTION wiki ~Ice Lance)        |
+| ≤ 50%, > 25% | **Spear Frost**      | Single | **1.5× Water magic** — "several spears of ice rain down single target" canon (fandom) ⭐ CROSS-MOB SHARED Flying Rat                  |
+| ≤ 25%        | **Fatal Blizzard**   | Party  | **1× Water magic Party AoE** — "blizzard blows medium to massive water magic" canon (fandom) — emergency RED HP "spam at critical HP" |
 
 ⭐⭐⭐ **AI 3-phase canon CLEAN NON-OVERLAP NEW** :
 
@@ -133,11 +140,13 @@ Pattern **all 8 status immune = elite Minor Enemy boss-tier canon récurrent** (
 - **Fatal Blizzard trigger** ≤ 25% (exclusive)
 - Pattern Damia : **clean phase boundaries canon NEW** (vs Forest Runner overlap pattern Menacing+Wooing 25-50%). **2 AI sub-patterns canon récurrent** documenté.
 
-### ~Ice Lance canon ⭐ partial (community approximation)
+### Icicle Extension canon name officiel ⭐⭐⭐ NEW MAJEUR (fandom CORRECTION wiki ~Ice Lance)
 
-- **~Ice Lance** = community approximation name (NOT canon)
+- **Icicle Extension** = canon name officiel fandom (NOT community ~Ice Lance approximation)
+- "Icicle arms extend to be several meters long lunging towards a single target" canon description fandom
 - 1× Physical damage single target > 50% phase
-- Pattern thematic : ice spear physical attack canon
+- Pattern thematic : extending icicle arm reach attack canon (cohérent appearance "arms = massively long icicles sharpening")
+- Pattern Damia récurrent : canon names enrichis par fandom systématiquement (cohérent Glide/Devil Sting/Feet Sickle pattern récurrent fandom > wiki)
 
 ### Spear Frost canon name CROSS-MOB SHARED ⭐⭐⭐ MAJEUR
 
@@ -191,16 +200,18 @@ Pattern **all 8 status immune = elite Minor Enemy boss-tier canon récurrent** (
 5. **Status 8/8 all immune** : status proc strategies inutiles
 6. Escape 30% player accessibility moderate Disc 3 pattern
 
-### Strategy canon recommandée
+### Strategy canon recommandée (révision fandom cross-source)
 
-- ⭐⭐⭐ **Water immune** : Water magic spells/items useless (Water Immunity passive)
-- **Water mob weak to Thunder/Wind ?** : à confirmer canon TLoD elemental wheel (Water typically weak to Thunder/Plant/etc.)
-- ⭐⭐⭐ **High MDF 160 + DF 120 dual-tank** = Additions physical + non-Water elemental spells recommended (cohérent strategy guidance pattern récurrent)
-- ⭐⭐⭐ **Burst-kill priority HP > 25%** = prévenir Fatal Blizzard Party AoE phase (boss-like emergency damage)
-- **All status immune** = no Stun/Fear/Poison/etc. tactics — pure damage race
+- ⭐⭐⭐ **Water Immunity passive** : Water magic spells/items useless (passive canon)
+- ⭐⭐⭐ **Fire/Water bidirectional weakness canon CONFIRMED (fandom)** : "deal massive damage to Dart since he is Fire element, however, the reverse can be said as well" — **Dart Fire = double damage TO/FROM Freeze Knight Water** canon bidirectional cohérent TLoD elemental wheel récurrent
+- ⭐⭐⭐ **Fire spells/Dragoon form (Dart Red-Eye) = optimal vs Freeze Knight** canon strategy (fandom)
+- ⭐⭐⭐ **High MDF 160 + DF 120 dual-tank** = Additions physical + Fire magic recommended (cohérent strategy guidance pattern récurrent)
+- ⭐⭐⭐ **Burst-kill priority HP > 25%** = prévenir Fatal Blizzard Party AoE spam phase canon ("really bad to be left at critical health since they will spam Fatal Blizzard" fandom)
+- ⭐⭐⭐ **"Vanquish them the old fashioned way" canon (fandom)** : pure damage race — no Status proc tactics canon (all 8 immune)
 - **A-AV/M-AV 0%** = all attacks reliably hit
+- **"Fairly potent with magic" canon (fandom)** : magic threat priority canon
 - Counter Opportunities 28 = nombreux trigger windows pour player Additions
-- **Fatal Blizzard farming** : 8% drop = Water Repeat Item probable canon
+- **Fatal Blizzard farming** : 8% drop OR buy 20 Gold Kazas shop canon (Disc 2 reveal)
 
 ## Vision Damia (implémentation)
 

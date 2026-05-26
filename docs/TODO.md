@@ -5331,6 +5331,32 @@
 
 - [ ] ⭐ **🆕 Submap 437 Freeze Knight hotspot canon (wiki) ⭐** — 3 formations sur 3 incluent submap 437. Pattern Damia : hotspot submap canon récurrent (cohérent Flying Rat 341 / Forest Runner 340). Source: idem.
 
+### Mobs / Freeze Knight fandom complement — Icicle Extension canon name (CORRECTION wiki ~Ice Lance) + Spear Frost/Fatal Blizzard CONFIRMED cross-source + Appearance ice armor + JP name フリージングナイト + JP HP 450 +25% CONFIRMED + JP Gold 9 ÷3 + P.Attack 63 / M.Attack 77 fandom corrections + Fire/Water bidirectional weakness CONFIRMED + Fatal Blizzard 20G Kazas shop NEW MAJEUR Disc 2 reveal
+
+- [ ] ⭐⭐⭐ **🆕 Icicle Extension canon name officiel CORRECTION wiki ~Ice Lance NEW MAJEUR (fandom) ⭐⭐⭐** — Wiki ~Ice Lance = community approximation, fandom révèle **Icicle Extension** canon ("icicle arms extend several meters long lunging towards single target"). Pattern récurrent fandom > wiki naming canon. À documenter `combat/enemy-abilities.md` (à créer). Source: [`features/mobs/_sources/fandom-freeze-knight.md`](features/mobs/_sources/fandom-freeze-knight.md).
+
+- [ ] ⭐⭐⭐ **🆕 Appearance "full ice armor + massively long icicle arms + tall icicle shoulders/head + 5-icicle feet base" canon NEW MAJEUR (fandom) ⭐⭐⭐** — Quote canon : "full armor set consisting entirely of ice" + "arms/hands massively long icicles motioning as if sharpening" + "shoulders/head tall icicles far higher than human" + "feet 5 icicles all around base including one behind". Pattern Damia : ice-armor humanoid design canon NEW MAJEUR. À refléter sprite design Damia : ice-knight + icicle limbs canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Fatal Blizzard = Water Spell Item buy 20 Gold Kazas shop canon NEW MAJEUR Disc 2 reveal (fandom) ⭐⭐⭐** — Quote canon : "powerful water spell item that can be bought for **20 gold in Kazas**". Pattern Damia : **Kazas Item Shop Disc 2 Fatal Blizzard 20 G canon NEW MAJEUR** + shop alternative to mob farming canon récurrent (cohérent Knight Shield Bale/Fletz + Spirit Cloak Wingly cross-source pattern). À documenter `items/Fatal Blizzard.md` (à créer) Water Spell Item canon + `locations/Kazas.md` (à créer/vérifier) Item Shop Disc 2 enrichi. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Fire/Water bidirectional weakness canon CONFIRMED (fandom) ⭐⭐⭐** — Quote canon : "deal massive damage to Dart since he is Fire element, however, the reverse can be said as well". Pattern Damia : **Fire ↔ Water bidirectional double damage canon CONFIRMED TLoD elemental wheel** récurrent. Dart Red-Eye (Fire) Dragoon = optimal vs Freeze Knight Water canon strategy. À refléter `combat/elements.md` Fire/Water opposition canon CONFIRMED. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 JP name フリージングナイト Furījingunaito "Freezing Knight" canon NEW (fandom) ⭐⭐⭐** — JP katakana name canon récurrent fandom enrichment. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Spear Frost + Fatal Blizzard descriptions CONFIRMED cross-source (fandom) ⭐⭐⭐** — Spear Frost = "several spears of ice rain down upon single target medium water magic" + Fatal Blizzard = "blizzard blows medium to massive water magic Party AoE". Pattern Damia : cross-source ability descriptions enrichies + Spear Frost cross-mob shared ability canon Flying Rat CONFIRMED 2nd source. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 "Spam Fatal Blizzard at critical health" emergency phase canon NEW (fandom) ⭐⭐⭐** — Quote canon : "really bad to be left at critical health since they will **spam Fatal Blizzard**". Pattern Damia : **emergency phase spam behavior canon NEW** ≤25% RED HP — implications design : multi-cast Fatal Blizzard probable canon (not single cast). À investiguer Discord/Wulves cast frequency cap. Source: idem.
+
+- [ ] ⭐⭐ **🆕 JP HP 450 +25% systematic CONFIRMED + JP Gold 9 ÷3 CONFIRMED cross-source (fandom) ⭐⭐** — Pattern Damia récurrent confirmé Freeze Knight respects systematic JP scaling canon (vs récents anomalies Flying Rat +15% / Berserk Mouse +100% / Mr Bone -2%). Source: idem.
+
+- [ ] ⭐⭐ **🆕 P. Attack 63 / M. Attack 77 fandom CORRECTION wiki 56/68 +12.5%/+13% (fandom) ⭐⭐** — Pattern Damia probable JP higher values cohérent récurrent fandom CORRECTION pattern. Damia adopt fandom 63/77 probable canon JP. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Encounter rate "Common" canon Freeze Knight (fandom) ⭐⭐** — Cohérent Forest Runner Common récurrent Disc 3 pattern. Source: idem.
+
+- [ ] ⭐⭐ **🆕 "Immune to all Status Ailments — vanquish them the old fashioned way" canon CONFIRMED cross-source (fandom) ⭐⭐** — Pattern Damia : "old fashioned way" = pure damage race canon récurrent strategy guidance vs all-immune mobs. Source: idem.
+
+- [ ] ⭐⭐ **🆕 "Fairly potent with magic" canon (fandom) ⭐⭐** — Magic threat priority canon (cohérent magic-leaning archetype MAT 77 > AT 63). Source: idem.
+
 ### À décider / explorer
 
 ### À décider / explorer

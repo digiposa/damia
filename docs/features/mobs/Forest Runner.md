@@ -30,8 +30,6 @@
 >
 > ⭐⭐⭐ **Wooing canon name 100% Bewitchment NEW MAJEUR ⭐⭐⭐** — Fandom Flying Rat referenced "Wooing attack far more dangerous" — now confirmed wiki canon. **Wooing = 1× Non-Elemental magic damage + 100% Bewitchment chance** (M-AV reduces). Pattern thematic "seduction" Wooing → Bewitchment effect cohérent canon design. Pattern Damia : Wooing = **highest-threat ability Forest Runner** canon (cohérent "far more dangerous" warning fandom Flying Rat).
 >
-> ⭐⭐⭐ **Wooing canon name 100% Bewitchment NEW MAJEUR ⭐⭐⭐** — Fandom Flying Rat referenced "Wooing attack far more dangerous" — now confirmed wiki canon. **Wooing = 1× Non-Elemental magic damage + 100% Bewitchment chance** (M-AV reduces). Pattern thematic "seduction" Wooing → Bewitchment effect cohérent canon design. Pattern Damia : Wooing = **highest-threat ability Forest Runner** canon (cohérent "far more dangerous" warning fandom Flying Rat).
->
 > ⭐⭐⭐ **Menacing canon name 50% Dispirit NEW MAJEUR ⭐⭐⭐** — NEW ability canon : Menacing = 1× Non-Elemental magic damage + **50% Dispirit chance** (M-AV reduces). Pattern thematic "intimidation" Menacing → Dispirit effect cohérent canon design. Trigger overlap canon : ≤50% AND >25% phase (3-phase logic complexity NEW).
 >
 > ⭐⭐⭐ **Non-Elemental magic damage Forest Runner abilities canon NEW MAJEUR ⭐⭐⭐** — Both Menacing + Wooing = **Non-Elemental magic damage** ⚠️. Pattern Damia : **Non-Elemental ability canon** Minor Enemy 2ème instance (cohérent existing combat/elements.md Non-Elemental = grey color canon). Implications : pas de resistance via element shields (Non-Elemental hits all targets equally). À cross-référer existing Non-Elemental canon resolved (×2 vs all = FALSE per Discord).

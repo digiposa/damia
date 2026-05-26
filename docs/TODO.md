@@ -5357,6 +5357,30 @@
 
 - [ ] ⭐⭐ **🆕 "Fairly potent with magic" canon (fandom) ⭐⭐** — Magic threat priority canon (cohérent magic-leaning archetype MAT 77 > AT 63). Source: idem.
 
+### Mobs / Frilled Lizard wiki (Earth Barrens Disc 2 — Pellet canon name + cross-mob shared item Trent drop NEW MAJEUR + Run away! self-removal récurrent 4ème instance + AI 3-phase clean non-overlap récurrent + 4 World Map roads + asymmetric Home of Giganto canon 3ème instance + Scissorhands NEW partner mob + Counter 28 6ème instance)
+
+- [ ] ⭐⭐⭐ **🆕 Pellet canon name officiel + cross-mob shared item Trent drop NEW MAJEUR (wiki) ⭐⭐⭐** — **Pellet** = canon name ability Frilled Lizard Earth magic 1.5× single target ≤50% + **CROSS-MOB SHARED canon** : Trent (Forest Disc 1 Earth) drops Pellet 10% item canon existing — same name. Pattern Damia : **self-named ability-item cross-mob shared pool canon TLoD récurrent NEW MAJEUR** (cohérent Fatal Blizzard Freeze Knight + Spear Frost Flying Rat/Freeze Knight + Sun Rhapsody/Trans Light Fairy pattern récurrent). À documenter `combat/enemy-abilities.md` (à créer) + `items/Pellet.md` (à créer) Earth Repeat Item cross-source canon NEW MAJEUR. Source: [`features/mobs/_sources/lod-wiki-frilled-lizard.md`](features/mobs/_sources/lod-wiki-frilled-lizard.md).
+
+- [ ] ⭐⭐⭐ **🆕 Run away! self-removal canon récurrent 4ème instance + clean trigger ≤25% RED HP NEW (wiki) ⭐⭐⭐** — Pattern Damia : self-removal mechanic canon récurrent **4ème instance** (Berserk Mouse + Erupting Chick + Flying Rat Escape + Frilled Lizard). **Clean trigger ≤25% RED HP canon NEW** (vs trigger conditions unknown récents — Frilled Lizard = première instance documented clean threshold). Pattern Damia : self-removal ≤25% RED HP canon récurrent emergency phase. À documenter `combat/mob-self-removal.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 4 World Map roads + asymmetric Home of Giganto canon récurrent 3ème instance (wiki) ⭐⭐⭐** — Frilled Lizard 4 roads : Barrens↔Intersection + Barrens↔Donau + Barrens↔Valley of Corrupted Gravity + **Valley → Home of Giganto asymmetric** (NOT departing Home of Giganto → Valley). Pattern Damia : **directional encounter logic canon récurrent systematic 3ème instance** (cohérent Flying Rat + Forest Runner Mountain Mortal Dragon pattern). Pattern Damia : **boss-area exit roads exclude mob spawn return direction canon systematic** NEW MAJEUR. À documenter `world-map/road-encounter-logic.md` (à créer) — directional encounter canon récurrent systematic 3ème instance. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 AI 3-phase clean non-overlap canon récurrent 2ème instance (wiki) ⭐⭐⭐** — Frilled Lizard : ~Headbutt >50% / Pellet 25-50% / Run away! ≤25% — clean phase boundaries canon (cohérent Freeze Knight 2ème instance récurrent). Pattern Damia : **2 AI sub-patterns canon récurrent CONFIRMED** : (1) overlap (Forest Runner) vs (2) clean (Freeze Knight + Frilled Lizard). À documenter `combat/ai-thresholds.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Counter 28 universal multi-disc tier 6ème instance CONFIRMED Frilled Lizard (wiki) ⭐⭐⭐** — Pattern Damia : Counter 28 = universal canon récurrent multi-disc Damia CONFIRMED (Berserk Mouse + Aqua King + Archangel + Flying Rat + Forest Runner + Freeze Knight + Frilled Lizard — 6 instances). Counter 28 = **standard universal canon** confirmed. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Scissorhands NEW mob canon partner Barrens Disc 2 formation 87 NEW MAJEUR (wiki) ⭐⭐⭐** — Scissorhands = NEW mob canon Barrens Disc 2 partner Frilled Lizard formation 87. Pattern Damia : Barrens mob ecosystem canon NEW (Frilled Lizard + Stinger + Arrow Shooter + Scissorhands minimum 4 mobs). À documenter `mobs/Scissorhands.md` (à créer) — Barrens Disc 2 mob canon NEW. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Frilled Lizard stat profile Disc 2 (wiki) ⭐⭐** — HP 128 low-mid Disc 2 + AT 23 / MAT 27 magic-leaning slight + DF 100 / MDF 120 + **SPD 80 high agile lizard thematic canon** + A-AV 5% / M-AV 0%. Pattern Damia : agile reptile stat profile canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Healing Potion 8% drop pattern récurrent Disc 1-2 (wiki) ⭐⭐** — Frilled Lizard Healing Potion 8% cohérent récurrent Disc 1-2 mob drop pattern (Berserk Mouse/Assassin Cock canon récurrent). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Escape 40% Disc 2 Barrens/Valley pattern récurrent (wiki) ⭐⭐** — Cohérent Dragonfly Valley 40% + Erupting Chick Valley 40% + Frilled Lizard Barrens 40% pattern récurrent Disc 2 mid-tier accessibility canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Submap 231 Frilled Lizard hotspot canon (wiki) ⭐⭐** — 3 formations sur 4 incluent submap 231. Pattern Damia : hotspot submap canon récurrent (cohérent Flying Rat 341 / Forest Runner 340 / Freeze Knight 437). Source: idem.
+
+- [ ] ⭐ **🆕 Status 4/4 standard Minor Enemy + no status proc ability (wiki) ⭐** — Frilled Lizard pure damage + escape canon (NOT status threat vs récents Wooing/Menacing/Scream). Source: idem.
+
 ### À décider / explorer
 
 ### À décider / explorer

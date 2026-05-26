@@ -242,6 +242,43 @@ Pattern **NEW** mob 5 immune / 3 vulnerable :
 - À documenter `mobs/Plague Rat.md` (à créer) — stronger variant Berserk Mouse Disc ? (à investiguer location canon Plague Rat)
 - Implication design : **mob progression linéaire variants colors** = pattern TLoD canon systematic
 
+## Sprite Damia (art direction)
+
+![Berserk Mouse sprite sheet Damia](_assets/berserk-mouse-sprites.png)
+
+> **Sprite sheet officiel Damia** — [`_assets/berserk-mouse-sprites.png`](./_assets/berserk-mouse-sprites.png)
+
+### Design canon Damia
+
+- **Corps** : rocheux purple/blue à texture cristalline + pattes griffues quadrupède (posture lézard)
+- **Ailes** : grandes ailes membraneuses rouge sang (bat-wing canon)
+- **Yeux** : rouges luminescents
+- **Gueule** : crocs/fangs visibles (mouth ouverte attack poses)
+- **Queue** : courte cachée derrière ailes
+
+### Frames du sprite sheet
+
+- **Row 1 — Hero portrait + Idle (5 poses)** : pose statique 4-pattes + variations légères (breathing/look around)
+- **Row 2 — Walk (5 poses)** : déplacement quadrupède
+- **Row 3 — Run / Charge (5 poses)** : course rapide avec wing-flap + jump preparation
+- **Row 4 — Jump / Aerial (5 poses)** : saut + aerial attack frames
+- **Row 5 — Death (5 poses)** : KO sequence (collapse → lying)
+
+### Divergence vs canon TLoD fandom
+
+⚠️ **Damia art direction diverge appearance canon fandom** :
+
+- **Canon fandom (🥉)** : "grey colored rat with red eyes and large ears" (literal rat)
+- **Damia (Art Direction)** : **bat-winged dragon-mouse hybrid** purple/red — design plus iconique/menaçant (cohérent thematic "berserk/aggressive" + Darkness element)
+- **Justification** : design Damia renforce **Darkness element** + **aggressive nature canon** ("large and aggressive" wiki description) via bat-wings + clawed quadruped stance
+- Pattern Damia : adaptation visuelle canon (Berserk Mouse = NOT literal rat sprite — design ré-interprété en créature plus marquante visually)
+
+### Implementation tech
+
+- **Frames individuelles** (already exists) : [`public/assets/sprites/mobs/berserkMouse/frame-01.png`](../../../public/assets/sprites/mobs/berserkMouse/) (8 frames + attack/death sheets)
+- **Sprite sheet reference** ce doc : workflow art direction reference + frame extraction
+- À cross-référer Aseprite/Spine sprite sheet config futur
+
 ## Liens transverses
 
 - [`README.md`](./README.md) — pattern général mobs canon

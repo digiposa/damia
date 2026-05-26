@@ -60,6 +60,52 @@ Tall, slender, **long golden brown hair** in ponytail. **Yeux bleus** (fandom) ;
 
 ⭐⭐⭐ **Lance visible canon confirmed** — weapon design Damia respecte Jade Dragoon archetype Spear weapon canon TLoD (cohérent Lavitz/Albert spear weapon canon + Greham/Syuveil archetype pattern).
 
+### Sprite sheets Damia (base solide — animations détaillées à venir)
+
+#### 1. Idle 8-directions ⭐⭐⭐
+
+![Albert idle 8 directions](_assets/albert-sprites-idle-8dir.png)
+
+> [`_assets/albert-sprites-idle-8dir.png`](./_assets/albert-sprites-idle-8dir.png)
+
+**8 frames idle facing canon** : front / 3/4 left / side left / back-side left / back / back-side right / 3/4 right / side right. Pattern Damia : **8-directional facing system canon** (cohérent classic JRPG / ARPG 8-way movement). Lance shoulderée + cape vert flowing pose statique.
+
+#### 2. Walk/Run cycle ⭐⭐⭐
+
+![Albert walk cycle](_assets/albert-sprites-walk.png)
+
+> [`_assets/albert-sprites-walk.png`](./_assets/albert-sprites-walk.png)
+
+**8 frames walk/run cycle** : weight-shift sequential progression + cape vert flowing dynamique + lance shoulderée. Pattern Damia : **8-frame walk loop canon** (standard JRPG movement cycle).
+
+#### 3. Combat/Attack poses ⭐⭐⭐
+
+![Albert combat poses](_assets/albert-sprites-combat.png)
+
+> [`_assets/albert-sprites-combat.png`](./_assets/albert-sprites-combat.png)
+
+**8 frames combat séquence** :
+
+- **Frames 1-4** : Spear thrust attack progression — charged → thrust → follow-through → sweep slash arc visible (Spear arc trail VFX canon)
+- **Frames 5-8** : Defensive/guard poses — parry stance, side guard, raised guard, sweep finale
+
+Pattern Damia : **spear thrust + sweep combat animation canon** Jade Dragoon archetype (cohérent Lavitz/Albert weapon use TLoD). Spear arc trail visible = Additions VFX canon Damia.
+
+### Sprite analysis Damia
+
+⭐⭐⭐ **Base solide validation** :
+
+- **Consistency design** : couleurs/proportions cohérentes cross-sheets (cape vert sombre + tunique vert moyen + bottes marron + lance gold-tipped)
+- **Travel outfit canon** respecté cross-sheets ✓
+- **Pattern Damia confirmed** : 8-directional facing + 8-frame walk + 8-frame combat = **standard 8-frame animation system Damia** canon
+- **Cape physics canon** : cape flowing direction-aware (visible walk cycle + 8-dir idle facing)
+- **Lance weapon visible cross-sheets** ✓ Jade Dragoon archetype canon
+
+### Sprite frames à venir (mentioned by user)
+
+- Détails animations supplémentaires : attack chains (additions multi-hit) + Dragoon transformation + idle variations + dragon spear thrust + death sequence + dragon form sprites
+- Pattern Damia futur : per-character animation sheets canon (cohérent existing Berserk Mouse / Flying Rat / Meru sprite patterns)
+
 ### Caractère
 
 **Generous, compassionate, level-headed king**. Modest, humble, lacking arrogance/entitlement despite royalty. Deeply loved by people and knights. Wishes to be treated as **simple friend who travels** (like Lavitz, vs traitement royal).

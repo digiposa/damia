@@ -4765,7 +4765,35 @@
 
 - [ ] ⭐ **🆕 ~Club canon name (community) Flabby Troll (wiki) ⭐** — Community approximation > 25% baseline ability. 1× physical. Pattern thematic "flabby troll club attack". Source: idem.
 
-- [ ] **🆕 JP stats Flabby Troll à confirmer fandom future ⚠️** — Wiki US only ingéré. Pattern Damia adopt JP when available (+25% HP / Gold ÷3). Source: à ingérer.
+- [ ] **🆕 JP stats Flabby Troll à confirmer fandom future ⚠️** — Wiki US only ingéré. Pattern Damia adopt JP when available (+25% HP / Gold ÷3). ✅ **RÉSOLU fandom** : JP HP **700** ✓ +25% CONFIRMED exact / JP Gold **10** ✓ ÷3 CONFIRMED. Source: à ingérer.
+
+### Mobs / Flabby Troll fandom complement — JP HP 700/10 CONFIRMED + Slow-Moving Club + Troll Tap canon names + Appearance flabby tattooed humanoid + Queen Fury naval encounters NEW MAJEUR + Knight Shield 200G shop NEW MAJEUR + Amber HP threshold UI NEW + Counter divergence ⚠️
+
+- [ ] ⭐⭐⭐ **🆕 Queen Fury naval encounter canon NEW MAJEUR Flabby Troll (fandom) ⭐⭐⭐** — "One of two enemies in Undersea Cavern NOT also encountered on Queen Fury, the other being Sea Piranha" canon fandom. **Implies Undersea Cavern mobs ALSO encountered on Queen Fury** (naval encounters mob canon NEW Damia). Pattern Damia : ship/naval random encounters Queen Fury canon Disc 2 (Lohan→Queen Fury journey ?). Other Undersea mobs (Glare/Mermaid/Screw Shell) ALSO on Queen Fury canon. À documenter `locations/Queen Fury.md` (à créer) — naval encounters canon Disc 2. Source: [`features/mobs/_sources/fandom-flabby-troll.md`](features/mobs/_sources/fandom-flabby-troll.md).
+
+- [ ] ⭐⭐⭐ **🆕 Knight Shield 200 Gold Bale/Fletz shop canon NEW MAJEUR (fandom) ⭐⭐⭐** — Purchasable accessory canon shop REVEAL. Pattern Damia : **3ème item purchasable confirmed** (Angel's Prayer 30G + Mind Purifier 20G + Knight Shield 200G accessory). Pattern Damia equipment items shop economy canon NEW : tier de prix accessory canon NEW. Drop farming inefficient (2+ hours vs shop 200G). À documenter `items/Knight Shield.md` (à créer/vérifier) — accessory + 200G Bale/Fletz canon NEW. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Slow-Moving Club canon name officiel MAJEUR Flabby Troll (fandom) ⭐⭐⭐** — Wiki ~Club = community approximation, fandom révèle **Slow-Moving Club** name officiel ("Walks towards single target + slowly swings club down" cohérent SPD 50 slow). Pattern thematic "slow club swing attack" canon. À implémenter ability `slowMovingClub` Damia. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Troll Tap canon name officiel MAJEUR Flabby Troll (fandom) ⭐⭐⭐** — Wiki ~Shield Thwacking = community approximation, fandom révèle **Troll Tap** name officiel ("Hits shield with spiked mace + low magic damage + Fear all targets" cohérent appearance mace + shield). Pattern thematic "troll taps shield with mace creating fear-inducing magic". À implémenter ability `trollTap` Damia avec 100% Fear Party proc + M-AV reduces canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Appearance canon DETAILED MAJEUR Flabby Troll (fandom) ⭐⭐⭐** — Very flabby humanoid + covered red tattoos + small patch of hair + large ears + 2 large teeth lower jaw + skulled rag + wrist band clothing (minimal) + wields spiked mace + large shield + skin beige/gold. Pattern thematic flabby tattooed humanoid troll canon Damia sprite design. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 "One of few non-boss enemies that can cast Fear on all targets" canon NEW MAJEUR (fandom) ⭐⭐⭐** — Pattern Damia : **Fear Party AoE Mob canon = rare canon Damia** (Flabby Troll + few others). À investiguer cross-mob : other Fear Party AoE Mobs ? Pattern canon rare ability tier. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Counter DIVERGENCE wiki Counter 0 vs fandom "Yes" MAJEUR ⚠️⚠️ (fandom) ⭐⭐⭐** — Wiki Counter 0 (No) vs Fandom "Yes". ⚠️ **INVERSE of Fire Spirit case** (wiki Yes/19 vs fandom No). Pattern Damia : adopt wiki precise Counter 0 + flag fandom claim. À investiguer Discord pour clarification Counter mechanic vs general counterattack. Pattern Damia : recurring wiki/fandom Counter divergence canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 JP HP 700 ✓ +25% systematic CONFIRMED Flabby Troll (fandom) ⭐⭐⭐** — US 560 × 1.25 = 700 ✓ exact. Pattern Damia +25% HP US→JP systematic canon récurrent CONFIRMED 12 entities maintenant. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 JP Gold 10 ✓ ÷3 systematic CONFIRMED Flabby Troll (fandom) ⭐⭐⭐** — US 30 ÷ 3 = 10 ✓ exact. Pattern Damia ÷3 Gold Mob systematic confirmed cross-mob. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Amber HP threshold UI canon NEW (fandom) ⭐⭐** — "Amber health (<50%) rather than Red" canon. Pattern Damia : **UI HP color tier canon NEW** : Amber (≤ 50%) ⭐ NEW canon (cohérent existing Drake "yellow or below" UI canon). Pattern Damia : 3-tier (ou 4-tier) HP color UI canon Damia à documenter. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Flabby Troll x2 rare formation canon NEW (fandom) ⭐⭐** — "You can on rare occasion find a pair of Flabby Trolls within a single battle" canon fandom. Wiki MISSING formation x2. Pattern Damia : NEW formation reveal canon — wiki incomplete. À cross-référer wiki encounter formation x2 manquante. Source: idem.
+
+- [ ] ⭐⭐ **🆕 AT 65 + MAT 38 fandom CORRECTION wiki Flabby Troll (fandom) ⭐⭐** — Wiki AT 52 vs Fandom 65 (+25%) / Wiki MAT 33 vs Fandom 38 (+15%). Pattern Damia adopt fandom higher (JP closer probable cohérent pattern systematic). Source: idem.
+
+- [ ] ⭐ **🆕 Encounter rate "Rare" + Farming time 2+ hours Knight Shield canon (fandom) ⭐** — Pattern Damia encounter rate descriptive terminology canon + farming time canon documentation. Source: idem.
 
 ### À décider / explorer
 

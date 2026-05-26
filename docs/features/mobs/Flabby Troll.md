@@ -22,13 +22,38 @@
 >
 > ⭐ **Earth Minor Enemy ingestion canon** (cohérent existing Earth mobs).
 >
+> ⭐⭐⭐ **JP HP 700 ✓ +25% systematic CONFIRMED fandom** (560 × 1.25 = 700 exact) + **JP Gold 10 ✓ ÷3 CONFIRMED** (30 ÷ 3 = 10).
+>
+> ⭐⭐⭐ **Slow-Moving Club canon name officiel MAJEUR fandom ⭐⭐⭐** (wiki ~Club community) — "Walks + slowly swings club" (cohérent SPD 50 slow).
+>
+> ⭐⭐⭐ **Troll Tap canon name officiel MAJEUR fandom ⭐⭐⭐** (wiki ~Shield Thwacking community) — "Hits shield with spiked mace + low magic damage + Fear all targets" (cohérent appearance mace + shield).
+>
+> ⭐⭐⭐ **Appearance canon DETAILED MAJEUR fandom ⭐⭐⭐** — Flabby humanoid + red tattoos + small patch hair + large ears + 2 large teeth lower jaw + skulled rag + wrist band clothing + spiked mace + large shield + skin beige/gold.
+>
+> ⭐⭐⭐ **Queen Fury naval encounter canon NEW MAJEUR fandom ⭐⭐⭐** — "One of 2 Undersea Cavern enemies NOT also encountered on Queen Fury" (Flabby Troll + Sea Piranha exceptions). **Implies Undersea Cavern mobs ALSO encountered on Queen Fury** — naval random encounters Queen Fury canon NEW reveal.
+>
+> ⭐⭐⭐ **Knight Shield 200 Gold Bale/Fletz shop canon NEW MAJEUR fandom ⭐⭐⭐** — Purchasable accessory canon shop REVEAL. Pattern Damia : 3ème item purchasable confirmed (Angel's Prayer 30G + Mind Purifier 20G + Knight Shield 200G accessory). Drop farming inefficient (2+ hours vs shop).
+>
+> ⭐⭐⭐ **"One of few non-boss enemies that can cast Fear on all targets" canon NEW MAJEUR fandom** — Rare Fear Party AoE Mob canon Damia.
+>
+> ⭐⭐⭐ **Counter DIVERGENCE wiki Counter 0 vs fandom "Yes" MAJEUR ⚠️⚠️ INVERSE Fire Spirit** — Damia adopt wiki precise (Counter 0) + flag fandom claim.
+>
+> ⭐⭐ **Amber HP threshold UI canon NEW fandom ⭐⭐** — "Amber health (<50%) rather than Red" — pattern HP color tier UI canon NEW (cohérent existing Drake "yellow or below").
+>
+> ⭐⭐ **Flabby Troll x2 rare formation canon NEW fandom ⭐⭐** — Wiki MISSING formation x2. Pattern Damia : NEW formation reveal canon.
+>
+> ⭐⭐ **AT 65 + MAT 38 fandom CORRECTION wiki** (52→65 +25% / 33→38 +15% — Damia adopt fandom higher).
+>
+> ⭐⭐ **Encounter rate "Rare" fandom canon** + **Farming time 2+ hours Knight Shield canon**.
+>
 > **Sources** :
 >
 > - 🥈 [`_sources/lod-wiki-flabby-troll.md`](./_sources/lod-wiki-flabby-troll.md) — wiki LoD tier 2 (stats US 560 HP / 52 AT / 60 DF / 33 MAT / 60 MDF / 50 SPD + Counter 0 + Status 4/4 + Yield 84 EXP / 30 Gold / Knight Shield 2% + AI 2-phase ~Club/~Shield Thwacking + **M-AV reduces status proc NEW MAJEUR** + **~Shield Thwacking 100% Fear proc NEW** + Undersea Cavern 3 submaps + Mermaid partner + Escape 30%)
+> - 🥉 [`_sources/fandom-flabby-troll.md`](./_sources/fandom-flabby-troll.md) — fandom tier 3 (⭐ **JP HP 700 ✓ +25% CONFIRMED** + ⭐ **JP Gold 10 ✓ ÷3 CONFIRMED** + ⭐ **Slow-Moving Club canon name officiel** + ⭐ **Troll Tap canon name officiel** + ⭐ **Appearance flabby tattooed humanoid mace+shield DETAILED NEW MAJEUR** + ⭐ **Queen Fury naval encounter canon NEW MAJEUR** + ⭐ **Knight Shield 200G Bale/Fletz shop NEW MAJEUR** + ⭐ **"One of few non-boss Fear Party AoE" canon NEW** + ⭐ **Counter divergence wiki 0 vs fandom Yes ⚠️⚠️** + ⭐ **Amber HP threshold UI canon NEW** + ⭐ **Flabby Troll x2 rare formation NEW** + ⭐ **AT 65 + MAT 38 fandom higher** + ⭐ **Encounter "Rare" + farming 2+ hours**)
 
 ## Statut
 
-🟡 **Canon documenté wiki tier 2 uniquement** — fandom à ingérer (JP stats + appearance + Trivia future).
+🟢 **Canon documenté wiki tier 2 + fandom tier 3 cross-source confirmé** — JP HP 700 ✓ +25% CONFIRMED + JP Gold 10 ✓ ÷3 CONFIRMED + Slow-Moving Club/Troll Tap canon names officiels + Appearance detailed + Queen Fury naval encounters NEW MAJEUR + Knight Shield 200G Bale/Fletz shop NEW MAJEUR + Amber HP threshold UI NEW + Flabby Troll x2 rare formation NEW. ⚠️ Counter divergence wiki 0 vs fandom Yes à clarifier.
 
 ## Identity canon
 

@@ -4795,6 +4795,30 @@
 
 - [ ] ⭐ **🆕 Encounter rate "Rare" + Farming time 2+ hours Knight Shield canon (fandom) ⭐** — Pattern Damia encounter rate descriptive terminology canon + farming time canon documentation. Source: idem.
 
+### Locations / Flanvel Tower wiki (Disc 3 Mille Seseau dungeon — Mobile fortress 11,682 years lore NEW MAJEUR + Vanishing Stone gating CONFIRMED + 3 Moon items Lloyd NEW + Magician Faust Apparition/Real CONFIRMED + Madman/Basilisk NEW mobs + 7 chests + 12 submaps)
+
+- [ ] ⭐⭐⭐ **🆕 Mobile fortress crashed Kashua Glacier 11,682 years ago lore canon NEW MAJEUR Flanvel Tower (wiki) ⭐⭐⭐** — "Flanvel Tower is a mobile fortress that crashed into depths of Kashua Glacier 11,682 years ago" canon. NEW lore canon Damia (cohérent ancient Dragon Campaign timeframe 11,000+ years). Pattern thematic : ancient Wingly fortress canon probable. À cross-référer `dragoons/dragon-campaign.md` 11,682 years timeframe canon. À investiguer fandom Wingly origin confirmation. Source: [`features/locations/_sources/lod-wiki-flanvel-tower.md`](features/locations/_sources/lod-wiki-flanvel-tower.md).
+
+- [ ] ⭐⭐⭐ **🆕 Vanishing Stone gating canon CONFIRMED Flanvel Tower (wiki) ⭐⭐⭐** — Areas 1-7 accessible pre-Vanishing Stone (3 chests + Lloyd encounter + Faust Apparition). Areas 8-12 unlocked post-Vanishing Stone (4 chests + Magician Faust Real fight + 2nd save point). ✓ Cohérent existing Dragon Soldier fandom canon Vanishing Stone Tower of Flanvel optional sector. Pattern Damia : 12-area dungeon split pre/post Vanishing Stone canon. À documenter `items/Vanishing Stone.md` (à créer) — Key Item Disc 3 Flanvel gating canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 3 Moon items canon Disc 3 Lloyd defeat NEW MAJEUR Flanvel Tower (wiki) ⭐⭐⭐** — **Moon Gem + Moon Dagger + Moon Mirror** = 3 NEW items canon (Lloyd defeat reward Flanvel Tower submap 447). Pattern thematic "Moon" prefix series canon (cohérent existing Moon That Never Sets thematic Disc 4). Pattern Damia : Lloyd Flanvel Tower = source unique 3 Moon items canon. À documenter `items/Moon Gem.md` + `items/Moon Dagger.md` + `items/Moon Mirror.md` (à créer) — NEW Disc 3 Lloyd items canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Magician Faust 2 variants Apparition/Real CROSS-SOURCE CONFIRMED MAJEUR Flanvel Tower (wiki) ⭐⭐⭐** — Magician Faust (Apparition) submap 445 = story scripted Faust apparition pre-Vanishing (0 EXP/Gold). Magician Faust (Real) submap 452 = Dart confronts Faust real fight Vanishing Stone gated (20,000 EXP + 10,000 Gold + Phantom Shield 100% drop post-game super-boss). ✓ Cohérent existing Drake Trivia + Dragon Spirit Trivia + database Enemies wiki canon. À documenter `bosses/Magician Faust.md` (à créer) — 2 variants Apparition + Real canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Madman + Basilisk NEW mobs canon Disc 3 Flanvel Tower (wiki) ⭐⭐⭐** — **Madman** Earth EXP 165 / Gold 24 / Body Purifier 8% drop + **Basilisk** Earth EXP 150 / Gold 51 / Depetrifier 8% drop. Flanvel-specific Earth Disc 3 mobs. Pattern thematic Flanvel Earth mob trio (Dragon Soldier + Madman + Basilisk) cohérent stone fortress thematic. À documenter `mobs/Madman.md` + `mobs/Basilisk.md` (à créer) — NEW Flanvel-specific Earth mobs canon Damia. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Lloyd Flanvel Tower boss canon CONFIRMED Disc 3 (wiki) ⭐⭐** — Submap 447 scripted encounter — gets Moon Mirror from Lloyd defeat canon. EXP 12,000 + Gold 300. ✓ Cohérent existing Lloyd canon + Dragon Spirit Trivia "Lloyd (Flanvel Tower)" untargetable trick canon. À documenter `bosses/Lloyd.md` (à créer/vérifier) — Lloyd Flanvel Tower instance + Moon Mirror reveal canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 7 treasure chests détaillés Flanvel Tower (wiki) ⭐⭐** — Spirit Ring (Area 1 pre-Vanishing) + Mage Ring (Area 2 pre-Vanishing) + Therapy Ring (Area 4 pre-Vanishing) + **Dragon Helm NEW** (3 teleporters room post-Vanishing) + Magical Hat (Boss room left post-Vanishing) + Dancer's Ring (Boss room lower right post-Vanishing) + **Holy Ahnk NEW** (Boss room upper right post-Vanishing). 2 NEW items canon Damia : Dragon Helm + Holy Ahnk. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Kashua Glacier mobs cross-location canon NEW Flanvel Tower (wiki) ⭐⭐** — 5 Kashua Glacier mobs spawn ALSO Flanvel Tower (Areas 1, 9, 11) : Icicle Ball + Land Skater + Freeze Knight + Rocky Turtle + Mammoth. Pattern canon NEW : cross-location mob spawn canon Damia (mobs spawn multiple locations). À cross-référer `mobs/Icicle Ball.md` + `mobs/Land Skater.md` + `mobs/Freeze Knight.md` + `mobs/Rocky Turtle.md` + `mobs/Mammoth.md` (à créer/vérifier). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Flanvel Tower location canon Disc 3 Mille Seseau (wiki) ⭐⭐** — Dungeon mobile fortress canon. Chain Disc 3 : Kashua Glacier #31 → Flanvel Tower #32 → Snowfield #33. 2 save points + No rest + No shops + 7 chests + 9 mob encounters + 2 bosses. 12 submaps (441-452 IDs). À documenter `locations/Flanvel Tower.md` (créé). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Metal Fang Thunder partner mob canon CONFIRMED Flanvel (wiki) ⭐⭐** — Cohérent existing Dragon Soldier partner mob canon ✓. Metal Fang Thunder Flanvel-specific EXP 135 / Gold 42 / Beast Fang 2% drop. À documenter `mobs/Metal Fang.md` (à créer) — Thunder Flanvel partner mob canon. Source: idem.
+
+- [ ] ⭐ **🆕 Save points 2 + 1 Vanishing Stone gated Flanvel Tower (wiki) ⭐** — Save Point 1 (tree hollow Area 5) + Save Point 2 (3-teleporter room Area 9 Vanishing Stone gated). Pattern Damia : save point gated canon NEW (cohérent Vanishing Stone gating). Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

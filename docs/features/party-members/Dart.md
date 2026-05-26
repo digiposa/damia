@@ -33,6 +33,61 @@
 | Status combat     | **Cannot be removed** from active party (toujours présent sauf story circumstances) — _permanent and non-replacable_                                                                                           |
 | Acquisition Story | **Disc 1, scene initiale** (Forest of Seles intro) — DS already in possession, **unlock combat use post-Hoax battle vs Kongol** (Rose intervention canon)                                                      |
 
+## Sprites Damia (art direction)
+
+### Basic Attack 3-frame animation ⭐⭐⭐ TEST
+
+Decomposed 3-frame basic attack animation canon Damia :
+
+#### Frame 1 — Stance (combat ready)
+
+![Dart basic attack frame 1 stance](_assets/dart-basic-attack-1-stance.png)
+
+> [`_assets/dart-basic-attack-1-stance.png`](./_assets/dart-basic-attack-1-stance.png)
+
+**Pose canon** : combat-ready guard stance — both hands gripping hilt, sword pointing forward-down, body angled. Pattern Damia : neutral combat stance pre-attack canon.
+
+#### Frame 2 — Wind-up (overhead raise)
+
+![Dart basic attack frame 2 wind-up](_assets/dart-basic-attack-2-windup.png)
+
+> [`_assets/dart-basic-attack-2-windup.png`](./_assets/dart-basic-attack-2-windup.png)
+
+**Pose canon** : wind-up overhead raise — both hands gripping hilt high, sword raised vertical above head, body coiled. Pattern Damia : preparation/anticipation frame canon (charge phase).
+
+#### Frame 3 — Slash (follow-through with arc trail)
+
+![Dart basic attack frame 3 slash](_assets/dart-basic-attack-3-slash.png)
+
+> [`_assets/dart-basic-attack-3-slash.png`](./_assets/dart-basic-attack-3-slash.png)
+
+**Pose canon** : slash follow-through with **motion arc trail visible** — sword swung down/across, body extended forward, VFX slash arc canon. Pattern Damia : impact/follow-through frame canon avec **slash arc trail VFX** (cohérent existing Additions VFX canon Red-Eye Dragoon thematic).
+
+### Sprite analysis Damia
+
+⭐⭐⭐ **3-frame basic attack canon Damia TEST** :
+
+- **Consistency design** : couleurs/proportions cohérentes cross-frames (red armor + red headband + black undershirt + blue-gray pants + red knee-pads + spiked blonde hair) — cohérent canon apparence Dart existing
+- **Animation arc canon** : Stance → Windup → Slash = classic 3-frame attack pattern (cohérent JRPG / ARPG basic attacks)
+- **Slash arc VFX frame 3** : trail visible = **VFX-ready sprite canon** Damia (animation post-prod / particle system trigger frame)
+- **Combat-ready apparence** : Dart in standard party combat outfit canon (vs NPC outfit or Dragoon form)
+
+### Pattern Damia établi
+
+- **3-frame basic attack canon TEST** Dart — à valider par implementation + visual playback
+- À comparer avec Albert 8-frame combat sheet existing canon (denser animation)
+- Pattern Damia futur : si 3-frame validé, frames complémentaires possibles (idle / walk / death / hit-react / additions multi-hit)
+
+### Sprite frames à venir (TODO futur)
+
+- **Idle animation canon** : "cross arms + tap foot" canon existing (cf. ligne ~282 — à reproduire en sprite/animation iso)
+- **Walk / Run cycle** (cohérent Albert 8-frame walk pattern)
+- **Hit reaction + Death sequence**
+- **Additions multi-hit chains** : Double Slash / Volcano / Crush Dance / Madness Hero / Moon Strike / Burning Rush / Blazing Dynamo
+- **Dragoon transformation** + Red-Eye Dragoon form sprites + Divine Dragoon form sprites
+- **Spell cast poses** Dragoon Magic
+- **Guard / Defending** action stance
+
 ## Story / lore
 
 ### Backstory canon (18 ans pre-game → 5 ans pre-game)

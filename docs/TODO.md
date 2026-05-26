@@ -5029,6 +5029,38 @@
 
 - [ ] ⭐ **🆕 Forest geographic canon (wiki) ⭐** — Wooded area paths/shrubs/sunlight canopies. East Seles + north Prairie + south Hellena Prison. Woodland creatures large beasts + small rodents. À refléter `world-map/serdio.md` (à créer) geographic canon Disc 1. Source: idem.
 
+### Locations / Forest fandom complement — Chapter 1 "The Serdian War" title + "Whispering of the Trees" music + Wild dog CORRECTION wiki horned beast + Charm Potion dual-purpose NEW MAJEUR + encounter distance meter canon NEW MAJEUR + MDF 120 mystery design + Master Tasman previous tutorial NPC + Healing Potion 50% / Body Purifier 3-status / Burn Out Fire Multi canon effects + JP HP per-mob non-systematic + JP Gold ÷3 systematic cross-source confirmed
+
+- [ ] ⭐⭐⭐ **🆕 Chapter 1 "The Serdian War" chapter title canon NEW MAJEUR (fandom) ⭐⭐⭐** — Wiki silent sur chapter title Disc 1. Fandom révèle titre officiel : Disc 1 = **"The Serdian War"** chapter. Cohérent existing chapter naming canon (Disc 2 "Platinum Shadow" + Disc 4 "Moon & Fate" pattern récurrent). Pattern Damia : chapter naming canon Disc 1 confirmed. À documenter `quests/disc1-serdian-war.md` (à créer) — Disc 1 chapter canon. Source: [`features/locations/_sources/fandom-forest.md`](features/locations/_sources/fandom-forest.md).
+
+- [ ] ⭐⭐⭐ **🆕 "Whispering of the Trees" Forest music theme canon NEW (fandom) ⭐⭐⭐** — Forest theme officiel canon NEW MAJEUR. Pattern Damia : music theme per-location canon NEW MAJEUR. À documenter `audio/themes.md` (à créer) — per-location music canon TLoD. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Wild dog canon CORRECTION wiki "horned beast" MAJEUR DIVERGENCE (fandom) ⭐⭐⭐** — Wiki tier 2 disait "horned beast" submap 6 gorge. Fandom corrige : **"wild dog"** approaching Dart canon. Pattern Damia : creature canon = **wild dog** (cohérent thematic "leave Shana alone" childhood protection scene — Shana attaqué par dog NOT horned beast). Wiki probable approximation visuelle. Damia adopt fandom "wild dog" canon. À refléter `locations/Forest.md` Story canon + `quests/disc1-rescue-shana.md` (à créer) scripted scene canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Cutscene wild dog NOT lead to battle canon NEW (fandom confirmation) ⭐⭐⭐** — Confirmation officielle scripted scene non-combat canon submap 6 gorge. Pattern Damia : **scripted cutscene scene canon Disc 1** (NOT random encounter). À refléter `quests/disc1-rescue-shana.md` (à créer) submap 6 scripted scene canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Charm Potion dual-purpose canon NEW MAJEUR (fandom) ⭐⭐⭐** — Effets officiels révélés : **(1) From Menu: Resets distance travelled to next enemy encounter to zero** + **(2) In Battle: Avoids enemy attacks for 3 turns**. Pattern Damia : **Charm Potion dual-purpose item canon NEW MAJEUR** — encounter reset OUT of battle + 3-turn evasion IN battle. À documenter `items/Charm Potion.md` (à créer) canon dual-purpose item. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Encounter distance meter canon NEW MAJEUR (fandom Charm Potion implication) ⭐⭐⭐** — Charm Potion "Resets distance travelled to next enemy encounter" → implies random encounter system **distance-based** (NOT pure RNG) canon NEW MAJEUR. Pattern Damia : **distance-based encounter logic canon Damia** NEW. Implications data-model `encounterDistance: number` per-player track. À documenter `combat/encounter-system.md` (à créer) — distance-based encounter logic canon NEW MAJEUR. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 MDF 120 extreme high mystery design canon NEW (fandom meta) ⭐⭐⭐** — Quote fandom : "Many creatures in the Forest have an extremely high Magic Defense stat of 120, **much higher than other creatures on CD 1 or even CD 2**. **The reason for this is unknown.**" Pattern Damia : **MDF 120 mystery design canon Forest mobs** (Berserk Mouse / Assassin Cock / Trent / Goblin all MDF 120). Design intent unclear officiel : (1) tutorial physical Additions early, (2) Magic spells not yet acquired Disc 1, (3) game balance early-game. À investiguer Discord + Wulves authoritative + `combat/mob-stat-archetypes.md` (à créer) MDF design pattern. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Master Tasman previous tutorial NPC canon NEW MAJEUR (fandom cross-ref Seles) ⭐⭐⭐** — Quote canon : "In a slightly different way than **Master Tasman gave his tutorial**" → implies Seles tutorial NPC PRE-Forest canon NEW MAJEUR. Pattern Damia : **2-stage tutorial NPCs canon Disc 1** (Master Tasman Seles → Merchant Forest). À documenter `npcs/Master Tasman.md` (à créer) — Seles tutorial NPC canon NEW + `locations/Seles.md` (à créer) tutorial canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Healing Potion canon "Heals 50% target max HP" NEW (fandom) ⭐⭐⭐** — Effect officiel canon : **50% target max HP heal** (NOT fixed amount). Pattern Damia : percentage-based healing item canon NEW. À documenter `items/Healing Potion.md` (à créer/vérifier) — 50% max HP canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Body Purifier canon "Removes Poison + Stun + Arm Blocking" NEW (fandom) ⭐⭐⭐** — Effets officiels canon : 3 statuses cured = **Poison + Stun + Arm Blocking**. Pattern Damia : Body Purifier = 3-status cure item canon NEW (NOT singular Poison only). À documenter `items/Body Purifier.md` (à créer/vérifier) — 3-status canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Burn Out canon "Fire Elemental damage single target (Multi)" NEW (fandom) ⭐⭐⭐** — Effects officiels canon : **Fire elemental damage single target** + **(Multi)** = Multi Items mashing canon (cohérent existing `combat/damage-formula.md` TODO Multi Items mashing). Pattern Damia : Multi item mashing mechanic canon Disc 1 entry. À documenter `items/Burn Out.md` (à créer/vérifier) — Fire single + Multi canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Merchant tutorial expanded canon "elemental attacks ×2 opposing element" fandom simplification (fandom) ⭐⭐⭐** — Quote canon fandom : "elemental attacks do **double damage** against targets of the opposing element". ⚠️ Fandom simplification ×2 canon vs wiki tier 1 ×1.5 canon résolu existing — pattern récurrent fandom narrative simplification (cohérent existing `combat/elements.md` resolved ×1.5 Wulves + wiki tier 2 confirmed canon). Damia adopt ×1.5 canon prioritaire. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 JP HP per-mob non-systematic Forest canon NEW MAJEUR (fandom) ⭐⭐⭐** — Berserk Mouse 2/4 (+100% extreme anomaly) + Assassin Cock 3/4 (+33% anomaly) + Trent 5/6 (+20% anomaly) + Goblin 4/5 (+25% matches systematic canon). Pattern Damia : **JP HP scaling non-systematic** Forest (chaque mob propre scaling cohérent recent Flying Rat +15% / Evil Spider +67% anomalies récents). Damia adopt JP values per-mob canon individuel. À refléter mobs individuels Berserk Mouse/Assassin Cock/Trent/Goblin docs canon updates. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 JP Gold ÷3 systematic CONFIRMED 4 Forest mobs cross-source (fandom) ⭐⭐⭐** — Berserk Mouse 3/1 (÷3 ✓) + Assassin Cock 6/2 (÷3 ✓) + Trent 9/3 (÷3 ✓) + Goblin 6/2 (÷3 ✓). Pattern Damia : ÷3 Gold systematic canon Disc 1 mobs confirmed cross-source 4ème instance. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Forest "first dungeon of game" + "first location with random battle encounters" canon (fandom) ⭐⭐** — Confirmation officielle Forest = dungeon Disc 1 introductory + first random encounters canon. Pattern Damia : Forest = **gateway dungeon canon Disc 1** (tutorial + first combat exposure). À refléter `locations/Forest.md` identity canon. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

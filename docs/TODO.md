@@ -4885,6 +4885,68 @@
 
 - [ ] ⭐ **🆕 Hotel + Clinic 20G canon Fletz (wiki) ⭐** — Hotel restores HP/MP party + Clinic cures status ailments party (20G each). Pattern Damia rest area economy canon Disc 2. Source: idem.
 
+### Locations / Fletz fandom complement — Chapter 2 "The Platinum Shadow" + Disc 4 "Moon & Fate" + Fester Moon That Never Sets folklore complète + Claire Bridge canon + Emille horse fall cause + Chamber of the Sun + Parallel dimension portrait + 5 visits CONFIRMED + Lenus Wingly reveal + Shana confesses first kiss + Banquet scenes + Royal "seven heroes" story + Court NPCs + Day/night canon
+
+- [ ] ⭐⭐⭐ **🆕 Chapter 2 "The Platinum Shadow" + Chapter 4 "Moon & Fate" chapter titles canon NEW MAJEUR (fandom) ⭐⭐⭐** — Wiki était silent sur chapter titles. Fandom révèle titres officiels Disc 2 ("The Platinum Shadow") + Disc 4 ("Moon & Fate"). Pattern Damia : chapter naming canon disc progression. À refléter `quests/disc2-platinum-shadow.md` (à créer) + `quests/disc4-moon-fate.md` (à créer). Source: [`features/locations/_sources/fandom-fletz.md`](features/locations/_sources/fandom-fletz.md).
+
+- [ ] ⭐⭐⭐ **🆕 Fester "Moon That Never Sets" folklore canon complète NEW MAJEUR (fandom) ⭐⭐⭐** — Quote officielle Fester : "After counting 108 years, when the Moon That Never Sets glows red, a moon child descends upon the earth to fill the world with holy bliss. A poem of war, telling the fate given by the Moon. However, what we really get is the spawning of destruction and fear that is the Black Monster." **Cycle 108 ans canon** + **moon child** + **Black Monster destructive spawning canon MAJEUR**. À documenter `lore/Moon That Never Sets.md` (à créer) + `lore/Black Monster.md` (à créer/vérifier). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Claire Bridge canon NEW MAJEUR (fandom) ⭐⭐⭐** — Pont entrée Fletz nommé "Claire Bridge" = **simultanément Haschel's missing daughter's name + Dart's mother's name** canon. Group dismisses blood relation (Haschel joking "secret connection" Dart). Pattern thematic : foreshadowing Claire identity canon Disc 2. À documenter `lore/Claire.md` (à créer) — Haschel daughter / Dart mother reveal lore future. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Princess Emille horse fall 6 months ago canon NEW MAJEUR (fandom) ⭐⭐⭐** — Cause révélée Emille's personality change : **fell from horse during horse ride with Lisa 6 months ago** canon. Lisa connects with Gehrich Gang appearance same period via astrology. Pattern story : Lenus possession via accident (Emille body) canon NEW Wingly magical possession mechanism probable. À documenter `npcs/Princess Emille.md` + `npcs/Lenus.md` (à créer) story backstory. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Chamber of the Sun canon NEW MAJEUR (fandom) ⭐⭐⭐** — Throne room name canon officiel = **"Chamber of the Sun"**. Lieu Moon Dagger ceremony + Lenus reveal + Banquet for heroes + Lisa quote "seven stars... country of the king who lives in the Chamber of the Sun". Pattern Damia : Chamber naming canon Twin Castle Fletz. À refléter `locations/Fletz.md` Twin Castle layout naming canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Lenus reveals herself Wingly + escapes window canon (fandom) ⭐⭐⭐** — Chamber of the Sun scene : Lenus snatches Moon Dagger from King Zior, reveals **Wingly identity**, **escapes through window towards open sea** canon. Pattern thematic : Wingly elite assassin Lenus canon CONFIRMED. Cohérent existing Lenus boss canon + Undersea Cavern Regole partner. À documenter `npcs/Lenus.md` (à créer) — Wingly assassin canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Princess Emille's portrait parallel dimension canon NEW MAJEUR (fandom) ⭐⭐⭐** — Touching portrait Emille → Dart/Albert/Shana/Rose/Lisa teleported parallel dimension. **Eerie void twinkling lights + glowing bridge summoned** to seat where Emille unconscious. ✓ Confirme cross-source existing wiki submap 669 "Magical space inside painting". Pattern thematic : Wingly magical pocket dimension Lenus captivity tech canon probable. À documenter dans `locations/Fletz.md` mechanism + `npcs/Lenus.md` Wingly tech. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Moon Dagger + coming of age ceremony canon NEW MAJEUR (fandom) ⭐⭐⭐** — Princess Emille's **20 years old coming of age ceremony** canon + passing of **Moon Dagger** ceremony. Lisa's astrology warning "never hand over the Moon". Lenus snatches Moon Dagger from King Zior in Chamber of the Sun. Pattern Damia : Moon Dagger Key Item canon Disc 2 + age ceremony tradition Tiberoa canon. À documenter `items/Moon Dagger.md` (à créer) — ceremonial heirloom Tiberoa Key Item. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Libria + Commodore Puler + Kayla canon NEW NPCs (fandom) ⭐⭐⭐** — **Libria** = Princess Lisa's maid canon (addresses Albert "your majesty" + directs party Lisa) + **Commodore Puler** = Queen Fury commander canon (Donau → Illisa Bay pursuit Lenus) + **Kayla** = Queen Fury crew canon (boards 5th visit Disc 4 underground dock) + **Martel** = Stardust trade-in NPC Fletz café. Pattern Damia : 4 NEW Tiberoa court/naval NPCs canon. À documenter `npcs/Libria.md` + `npcs/Commodore Puler.md` + `npcs/Kayla.md` + `npcs/Martel.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Bandit Knights canon NEW MAJEUR (fandom) ⭐⭐⭐** — Lenus installed **fake knights formerly bandits** dans Twin Castle (warned by Giant Gate Keeper). Stealth gameplay : spotted → exit return. Pattern thematic : Gehrich Gang infiltration canon (link with Emille's behavior change same period). À documenter dans `locations/Fletz.md` Third Visit gameplay + `npcs/Gehrich Gang.md` (à créer/vérifier). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Shana confesses Dart + first kiss canon MAJEUR (fandom) ⭐⭐⭐** — Twin Castle bridge scene : "I love you, Dart. Since I was little..." → interrupted Fester then Libria → final scene shooting star wish ceremony → first kiss canon. Pattern story : Shana/Dart romance milestone Disc 2 end. À refléter `quests/disc2-platinum-shadow.md` (à créer) banquet scene canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Banquet scenes canon NEW (fandom) ⭐⭐⭐** — Multiple character scenes canon Twin Castle banquet :
+  - **Kongol axe practice canon** : "Kongol. Has. Friends. Friends of different species. Not bad."
+  - **Rose choker canon** : removes choker bedroom — "I did not laugh anymore since I put it on" (NEW Rose backstory hint MAJEUR)
+  - **Haschel + Meru kicked from dining room** (sneaking food)
+  - **Albert + Princess Emille romance developing** Tower of Moon
+  - **Dresses canon** : Meru declines (regular clothes to dance), Rose declines (naked without sword), only Shana wears dress canon
+    À documenter `quests/disc2-fletz-banquet.md` (à créer) + party-members backstory hints. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Rose choker canon NEW MAJEUR (fandom) ⭐⭐⭐** — Rose backstory hint canon : "I did not laugh anymore since I put it on" — choker = symbol Rose's 11,000 years pain canon (Black Monster identity foreshadowing). À documenter `party-members/Rose.md` + `lore/Black Monster.md` cross-ref canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 King Zior triple Festers vision canon (fandom) ⭐⭐** — Sees "**three Festers**" when Dart/Albert kneel beside Fester. Servants confirm strange behavior. Pattern thematic : magical influence on king canon (possibly Wingly via Lenus). À refléter `npcs/King Zior.md` (à créer) lore canon + investigate Lenus magical influence range. Source: idem.
+
+- [ ] ⭐⭐ **🆕 5 visits Fletz CONFIRMED + Fifth Visit Disc 4 detail (fandom) ⭐⭐** — Wiki disait 4 visits Disc 2. Fandom confirme **5 visits totals** : 4 Disc 2 (Platinum Shadow) + 1 Disc 4 (Moon & Fate). Pattern Damia : Fletz = **most visited town in game** canon (Trivia). 5th visit : underground dock Queen Fury boards Kayla. À refléter `locations/Fletz.md` total visits count canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Architecture "oriental" + star symbols canon CORRECTION (fandom) ⭐⭐** — Fandom : "large city with somewhat 'oriental' appearance. Star drawings and symbols can be seen all over the place". Pattern Damia : oriental architecture + astronomy symbols canon (vs wiki "white + blue marble" — descriptions complémentaires). À refléter `locations/Fletz.md` + concept art assets Damia. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Day/night setting canon Fletz + Ulara only (fandom Trivia) ⭐⭐** — Fletz = 1 sur seulement 2 locations playable day/night (l'autre = **Ulara Disc 4**). Pattern Damia : day/night transition canon Fletz + Ulara only. Restriction : only certain cutscenes change time, after events location always visited daytime. À refléter `locations/Fletz.md` + `locations/Ulara.md` (à créer/vérifier) + `engine/time-of-day.md` (à créer) cycle canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Gehrich Gang Tiberoa 6 months canon (fandom) ⭐⭐** — Gehrich Gang started roaming Tiberoa ~6 months ago (same period Emille's behavior change). Lisa's astrology connects both events. Pattern Damia : Lenus + Gehrich coordinated infiltration canon NEW story. À refléter `npcs/Gehrich Gang.md` (à créer/vérifier) + `npcs/Lenus.md` (à créer) Wingly-bandits coordination. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Royal family pass "seven heroes" story canon (fandom) ⭐⭐** — King Zior remarks Moon Dagger = mere ceremonial tradition, royal family will pass down **story of seven heroes** instead. Princess Lisa quote : "**The seven stars arose from the East to save the country of the king who lives in the Chamber of the Sun**". Pattern thematic : Dragoon heroes immortalization canon Tiberoa. À documenter `lore/dragoon-heroes-legacy.md` (à créer) Tiberoa narrative tradition canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Town doors locked + bandits Barrens fear canon (fandom) ⭐⭐** — Inhabitants friendly mais keep doors locked fear neighboring bandits Barrens. Pattern Damia : Disc 2 Fletz social ambiance canon NPCs behavior. À refléter `locations/Fletz.md` NPC behavior canon Disc 2 + `locations/Barrens.md` cross-ref bandits threat. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Princess Lisa astrology canon (fandom) ⭐⭐** — Princess Lisa uses astrology : (1) identifies Albert real identity ("your majesty") + (2) tries locate Emille (fails — magical obstruction) + (3) warns "never hand over the Moon" Moon Dagger ceremony. Pattern Damia : Astronomy/astrology = Lisa unique skill canon Disc 2. À refléter `npcs/Princess Lisa.md` (à créer) skillset canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Martel café Stardust trade-in NPC canon (fandom) ⭐⭐** — Stardust trade-in via **Martel in the café** canon. Pattern Damia : Stardust system canon Disc 2 NPC Fletz café. À refléter `items/Stardust.md` trade-in NPC list canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 "Two men jogging up and down" training room flavor canon (fandom) ⭐⭐** — Training room Twin Castle = "two men jogging up and down" flavor canon. Pattern Damia : Twin Castle ambiance canon + chests Moon Serenade + Sun Rhapsody location. À refléter `locations/Fletz.md` Twin Castle ambiance details. Source: idem.
+
+- [ ] ⭐ **🆕 Geographic Fletz/Illisa Bay contradiction writer mistake canon (fandom Trivia) ⭐** — Fletz south coast Tiberoa (Aquaria Coral Reef). Lenus flees south sea, mais King Zior conclut Illisa Bay (nord Tiberoa, Donau coast) → geographic contradiction officielle reconnue fandom Trivia. Pattern Damia : canonical writer's mistake — possible Damia fix (correct geography) ou preserve canon mistake. À trancher design Damia. Source: idem.
+
+- [ ] ⭐ **🆕 Pregnant woman name unborn child canon (fandom) ⭐** — Princess Emille (false) refuses to name pregnant woman's unborn (First Visit). Real Emille happily names them (Fourth Visit). Pattern Damia : NPC continuity arc canon Disc 2 (Emille redemption scene). À refléter `quests/disc2-platinum-shadow.md` (à créer). Source: idem.
+
+- [ ] ⭐ **🆕 Albert "Green Party" interest canon (fandom) ⭐** — Albert shows particular interest Nello's "Green Party" ideas (Barrens green life vision). Pattern Damia : Albert character trait canon sustainability/political interest. À refléter `party-members/Albert.md` character traits. Source: idem.
+
+- [ ] ⭐ **🆕 Lynn wedding Donau optional scene canon (fandom) ⭐** — Third Visit transition : option follow Lynn to Donau wedding Kate canon (optional scene). Pattern Damia : optional event sequence Disc 2 (cohérent existing Kate's Bouquet event canon return-only). À refléter `quests/disc2-platinum-shadow.md` optional branch + cross-ref `quests/lynn-kate-wedding.md` (à créer). Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

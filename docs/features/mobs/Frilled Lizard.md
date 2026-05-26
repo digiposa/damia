@@ -1,6 +1,6 @@
 # Frilled Lizard — Mob Earth Barrens (Disc 2)
 
-> **Mob Earth element Barrens Disc 2 Tiberoa** — **AI 3-phase clean non-overlap canon** : ~Headbutt >50% / **Pellet 1.5× Earth magic ≤50%** — self-named ability cross-mob shared canon Trent drop NEW MAJEUR / **Run away! self-removal ≤25% canon récurrent 4ème instance pattern**. 4 formations Barrens submaps 231-233 partners Stinger/Arrow Shooter/Scissorhands + **4 World Map roads canon avec 1 asymmetric Home of Giganto** récurrent. Counter 28 high-density 6ème instance. Status 4/4 standard.
+> **Mob Earth element Barrens Disc 2 Tiberoa** — JP name canon (à confirmer). **Blue human-sized velociraptor with reddish frills neck + 2 small clawed arms + 4 mandibles attacks canon NEW MAJEUR (fandom)**. **AI 3-phase clean non-overlap canon** : **Headbutt** >50% / **Pellet 1.5× Earth magic ≤50% spell item canon** — self-named ability cross-mob shared Trent drop / **Escape ≤25% (red health) canon récurrent 4ème instance pattern**. **2 drops canon NEW MAJEUR** : Healing Potion 8% + **Meteor Fall 8% spell item Earth NEW MAJEUR**. 5 formations Barrens submaps 231-233 partners Stinger/Arrow Shooter/Scissorhands + 4 World Map roads + 1 asymmetric Home of Giganto. Counter 28 high-density 6ème instance. Encounter rate **Very common** canon (fandom).
 >
 > ⭐⭐⭐ **Pellet canon name officiel ability + self-named cross-mob shared item Trent drop NEW MAJEUR ⭐⭐⭐** — **Pellet** = canon name officiel ability ≤50% Earth magic 1.5× single target (NOT community ~ approximation). **Cross-mob shared canon** : Trent (Forest Disc 1 Earth) drops **Pellet 10%** item canon existing — same name as Frilled Lizard ability. Pattern Damia : **self-named ability-item cross-mob shared canon récurrent NEW MAJEUR** (cohérent existing Fatal Blizzard Freeze Knight self-named drop + Fairy Sun Rhapsody/Trans Light pattern récurrent). Pattern Damia : Pellet = Earth ability + Earth Repeat Item shared canon NEW MAJEUR (Trent drop = item / Frilled Lizard cast = ability — same Pellet entity TLoD).
 >
@@ -39,35 +39,39 @@
 > **Sources** :
 >
 > - 🥈 [`_sources/lod-wiki-frilled-lizard.md`](./_sources/lod-wiki-frilled-lizard.md) — wiki LoD tier 2 (Earth element + Counter 28 high-density 6ème instance + Stats 128/23/100/27/120/80 + A-AV 5% / M-AV 0% + Status 4/4 standard + Yield 36 EXP / 21 Gold / Healing Potion 8% + **AI 3-phase clean non-overlap ~Headbutt / Pellet Earth magic 1.5× ≤50% / Run away! self-removal ≤25% RED HP** + **Pellet canon name + cross-mob shared self-named Trent drop NEW MAJEUR** + **Run away! self-removal 4ème instance canon récurrent** + 4 formations Barrens 231-233 partners Stinger/Arrow Shooter/Scissorhands NEW + **4 World Map roads + asymmetric Home of Giganto canon 3ème instance**)
+> - 🥉 [`_sources/fandom-frilled-lizard.md`](./_sources/fandom-frilled-lizard.md) — fandom LoD tier 3 (⭐ **Appearance "blue human-sized velociraptor reddish frills neck + 2 small clawed arms + 4 mandibles attacks" canon NEW MAJEUR** + ⭐ **Headbutt canon name officiel CORRECTION wiki ~Headbutt** "runs single target bites medium physical" + ⭐ **Pellet = spell item canon CONFIRMED** "spell item Pellet deals slightly more than medium earth damage single target" + ⭐ **Escape canon name CORRECTION wiki "Run away!"** "chance to flee fight once health reaches critical" + ⭐ **2 drops canon NEW MAJEUR** Healing Potion 8% + **Meteor Fall 8% spell item Earth NEW MAJEUR useful Valley Corrupted Gravity** + ⭐ **JP HP 160 +25% systematic CONFIRMED** (US 132 ≠ wiki 128 ⚠️ HP divergence wiki vs fandom +3%) + ⭐ **JP Gold 7 ÷3 CONFIRMED** + ⭐ **P. Attack 6 fandom ⚠️ MASSIVE DIVERGENCE wiki 23 -74%** + ⭐ **M. Attack 31 fandom CORRECTION wiki 27 +15%** + ⭐ **A-AV 120% IMPOSSIBLE MECHANIC anomaly 3ème instance** (Berserk Mouse + Forest Runner + Frilled Lizard) vs wiki A-AV 5% canonical + ⭐ **Encounter rate "Very common" canon** higher tier than Common + ⭐ **5 formations canon** (solo + 4 partner formations) + ⭐ **HP threshold 33 = ≤25% RED HP confirmed (132 × 0.25 = 33 ✓)** + ⭐ **"Do not Guard in response to Pellet" strategy guidance NEW** + ⭐ **Disc 2 Monsters category CONFIRMED**)
 
 ## Statut
 
-🟡 **Canon documenté wiki tier 2 uniquement** — fandom à ingérer future (appearance + JP stats + ability canon names confirmation + Scissorhands mob canon + Stinger lore canon).
+🟢 **Canon cross-source confirmed wiki tier 2 + fandom tier 3** — Sources convergent location/element/Counter/Status 4/4/SPD 80/MDF 120/Pellet ability/Escape mechanic. Fandom révèle MAJEUR : Appearance "blue velociraptor reddish frills + 4 mandibles" + Headbutt canon name officiel (CORRECTION wiki ~Headbutt) + Pellet = spell item confirmed canon + Escape canon name (CORRECTION wiki "Run away!") + **2 drops canon NEW MAJEUR Healing Potion + Meteor Fall spell item Earth NEW** + JP HP 160 +25% systematic CONFIRMED + JP Gold 7 ÷3 + P. Attack 6 fandom MASSIVE DIVERGENCE wiki 23 -74% + M. Attack 31 fandom +15% + A-AV 120% IMPOSSIBLE 3ème instance anomaly + Encounter rate Very common + 5 formations (solo NEW) + HP threshold 33 = ≤25% RED HP confirmed + "Do not Guard in response to Pellet" strategy guidance NEW.
 
 ## Identity canon ⭐⭐⭐
 
 - **Nom** : Frilled Lizard
-- **Espèce** : Probable frilled lizard (cohérent thematic agile lizard reptile)
+- **Espèce** : **Blue human-sized velociraptor with reddish skin frills around the neck** canon (fandom NEW MAJEUR)
+- **Appearance canon NEW MAJEUR (fandom)** : 2 small clawed arms + **4 mandibles attacks** (relies on mandibles NOT clawed arms canon thematic detail)
 - **Element** : **Earth** ⭐ (cohérent thematic frilled lizard + Pellet Earth magic ability)
 - **Location canon** : **Barrens** (Disc 2 Tiberoa region) submaps 231-233 + 4 World Map roads canon
-- **Disc** : Disc 2 Tiberoa region
-- **Type** : Minor Enemy canon (moderate tier + escape mechanic)
-- **Pattern thematic** : agile lizard reptile + Earth element + flee mechanic ≤25% (Run away!)
+- **Disc** : Disc 2 Tiberoa region — **Disc 2 Monsters category CONFIRMED** (fandom)
+- **Encounter rate** : **Very common** canon (fandom — higher tier than Common récurrent)
+- **Type** : Minor Enemy canon (moderate tier + escape mechanic + "quite fast, with low Attack" canon fandom)
+- **Pattern thematic** : blue velociraptor 4-mandible reptile + Earth element + flee mechanic ≤25% RED HP
 
-## Stats canon
+## Stats canon (cross-source révision fandom)
 
-| Stat | Value | Notes                                                               |
-| ---- | ----- | ------------------------------------------------------------------- |
-| HP   | 128   | Low-mid tier Disc 2                                                 |
-| AT   | 23    | Moderate-low physical attack                                        |
-| DF   | 100   | Moderate defense                                                    |
-| MAT  | 27    | **MAT 27 > AT 23** slight magic-leaning archetype canon             |
-| MDF  | 120   | Moderate magic defense (cohérent récurrent MDF 120 canon récurrent) |
-| SPD  | 80    | High speed (cohérent agile lizard thematic — same Forest Runner 80) |
-| A-AV | 5%    | Low physical avoidance                                              |
-| M-AV | 0%    | No magic avoidance                                                  |
+| Stat | Wiki (US) | Fandom             | Damia adopté                                                                                                                   |
+| ---- | --------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| HP   | 128       | 132 / 160 JP       | **132 US / 160 JP** ✓ +25% systematic CONFIRMED (132×0.25 = 33 = RED HP threshold ✓) — wiki 128 -3% slight divergence          |
+| AT   | 23        | **6**              | ⚠️ **MASSIVE DIVERGENCE -74%** — fandom 6 vs wiki 23. Fandom "quite fast, with low Attack" canon → fandom 6 probable canon JP  |
+| DF   | 100       | 100                | **100** ✓ match                                                                                                                |
+| MAT  | 27        | **31**             | **31 fandom** (+15% probable JP canon — cohérent pattern récurrent JP higher)                                                  |
+| MDF  | 120       | 120                | **120** ✓ match (récurrent MDF 120 canon)                                                                                      |
+| SPD  | 80        | 80                 | **80** ✓ match (high agile lizard thematic)                                                                                    |
+| A-AV | 5%        | ⚠️ 120% IMPOSSIBLE | **5% wiki canonical** (fandom 120% = impossible mechanic anomaly 3ème instance Berserk Mouse + Forest Runner + Frilled Lizard) |
+| M-AV | 0%        | —                  | **0% wiki**                                                                                                                    |
+| Gold | 21 US     | 21 / 7 JP          | **21 US / 7 JP** ✓ ÷3 systematic CONFIRMED cross-source                                                                        |
 
-→ Pattern : **SPD 80 high agile** lizard canon + **MAT 27 > AT 23** slight magic-leaning archetype canon récurrent.
+→ Pattern : **SPD 80 high agile** lizard canon + **"quite fast, with low Attack" canon fandom** (P. Attack 6 = LOW canon priority fandom). ⚠️ **A-AV 120% IMPOSSIBLE MECHANIC anomaly 3ème instance** documenté (cohérent Berserk Mouse + Forest Runner pattern récurrent fandom impossible A-AV>100% — wiki 5% canonical prevails).
 
 ## Status Immunity canon ⭐ standard 4/4
 
@@ -77,10 +81,16 @@
 
 Pattern standard Minor Enemy 4/4 canon.
 
-## Yield canon
+## Yield canon (cross-source révision fandom — 2 drops canon NEW MAJEUR)
 
-- **EXP : 36** / **Gold : 21** (mid-tier Disc 2 reward)
-- **Drop : Healing Potion 8%** — pattern récurrent Disc 1-2 status cure item drop canon
+- **EXP : 36** / **Gold : 21 US / 7 JP** ✓ ÷3 systematic CONFIRMED cross-source
+- **Drops canon NEW MAJEUR (fandom)** : **2 items canon** (vs wiki 1 drop only) :
+  - **Healing Potion 8%** — pattern récurrent Disc 1-2
+  - **Meteor Fall 8% NEW MAJEUR** — Earth Spell Item canon NEW (cohérent thematic Earth element)
+
+⭐⭐⭐ **Meteor Fall canon NEW MAJEUR Earth Spell Item (fandom)** : Quote canon : "meteor fall can be helpful for when you get to the **Valley of Corrupted Gravity**". Pattern Damia : **Meteor Fall = Earth Spell Item canon NEW MAJEUR** drop Frilled Lizard 8% — useful Disc 2 Valley dungeon canon (probable Earth attack item single target high damage). À documenter `items/Meteor Fall.md` (à créer) — Earth Spell Item canon NEW MAJEUR.
+
+⭐⭐⭐ **2 drops canon NEW MAJEUR Frilled Lizard (fandom)** : Pattern Damia : **multi-drop mob canon NEW MAJEUR** — Frilled Lizard drops 2 items canon (vs typical 1 drop pattern récurrent). Cohérent "Very common" encounter rate + 2 drops = farming-friendly mob canon Disc 2.
 
 ## Counter Opportunities ⭐⭐ 28 high-density (6ème instance CONFIRMED)
 
@@ -97,40 +107,47 @@ Pattern standard Minor Enemy 4/4 canon.
 | **Very low**     | 4     | Dragonfly / Bowling                                                                                                        |
 | **No counter**   | 0     | Air Combat / Feyrbrand / Fire Bird / Earth Shaker / Erupting Chick / Fire Spirit / Flabby Troll                            |
 
-## AI canon (3-phase clean non-overlap récurrent 2ème instance)
+## AI canon (3-phase clean non-overlap récurrent 2ème instance — révision fandom canon names)
 
-| HP    | Action        | Target | Effect                                                                                       | Notes                                      |
-| ----- | ------------- | ------ | -------------------------------------------------------------------------------------------- | ------------------------------------------ |
-| > 50% | ~Headbutt     | Single | 1× Physical damage (community approximation name)                                            |                                            |
-| ≤ 50% | **Pellet**    | Single | **1.5× Earth-elemental magic damage** ⭐ canon name + cross-mob shared Trent drop NEW MAJEUR |                                            |
-| ≤ 25% | **Run away!** | Self   | Removes mob from combat — **no EXP/gold/item awarded**                                       | Self-removal canon récurrent 4ème instance |
+| HP                  | Action       | Target | Effect                                                                                                                   | Notes                                                    |
+| ------------------- | ------------ | ------ | ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------- |
+| > 25% (>33 HP)      | **Headbutt** | Single | 1× Physical damage — "runs towards single target and **bites** them dealing medium physical damage" canon (fandom)       | Canon name officiel (fandom CORRECTION wiki ~Headbutt)   |
+| ≤ 50% (RED HP zone) | **Pellet**   | Single | **1.5× Earth-elemental magic damage spell item** — "slightly more than medium earth damage single target" canon (fandom) | ⭐ canon name + cross-mob shared Trent drop NEW MAJEUR   |
+| ≤ 25% RED HP (≤33)  | **Escape**   | Self   | "Chance to flee fight once health reaches critical" canon (fandom) — **no EXP/gold/item awarded**                        | Canon name officiel (fandom CORRECTION wiki "Run away!") |
 
-⭐⭐⭐ **AI 3-phase canon CLEAN NON-OVERLAP récurrent 2ème instance** :
+⭐⭐⭐ **AI canon CLEAN NON-OVERLAP révision fandom** :
 
-- ~Headbutt >50% (exclusive)
-- Pellet ≤50% (exclusive)
-- Run away! ≤25% (exclusive) — clean phase boundaries canon (cohérent Freeze Knight pattern)
+- **Headbutt** >25% phase (canon name fandom — wait, fandom says "Until reduced to 33 or less HP" deals normal damage = Headbutt > 25% canon)
+- **Pellet** ≤25% RED HP emergency phase (fandom : "Once reduced to red health, uses spell item Pellet")
+- **Escape** ≤25% RED HP chance to flee (alongside Pellet at red health canon — clean phase priority Pellet OR Escape)
+- ⚠️ **Révision fandom CORRECTION wiki AI thresholds** : wiki disait Headbutt >50% / Pellet ≤50% / Run away! ≤25% — fandom révèle **Headbutt >25% / Pellet ≤25% RED HP / Escape ≤25%** = 2-phase RED HP transition canon (NOT 3-phase clean non-overlap as wiki suggested). Pattern Damia : **fandom canon prevaut** thresholds — Pellet+Escape both red HP canon. Pattern récurrent récents Spear Frost/Fatal Blizzard/Wooing ≤25% RED HP pattern.
 
-### ~Headbutt canon ⭐ partial (community approximation)
+### Headbutt canon name officiel ⭐⭐⭐ NEW MAJEUR (fandom CORRECTION wiki ~Headbutt)
 
-- **~Headbutt** = community approximation name (NOT canon)
-- 1× Physical damage single target > 50% phase
-- Pattern thematic : frilled lizard headbutt charge canon
+- **Headbutt** = canon name officiel fandom (NOT community ~Headbutt approximation)
+- "Runs towards a single target and bites them" canon description (cohérent thematic 4 mandibles velociraptor bite attack)
+- 1× Physical damage single target > 25% HP phase
+- Pattern Damia récurrent : canon names enrichis par fandom systématiquement
 
-### Pellet canon name officiel ⭐⭐⭐ NEW MAJEUR
+### Pellet canon name officiel ⭐⭐⭐ NEW MAJEUR + spell item canon CONFIRMED
 
-- **Pellet** = canon name officiel ability ≤50% Earth magic 1.5× single target
-- ⭐⭐⭐ **Cross-mob shared canon Trent drop NEW MAJEUR** : Trent (Forest Disc 1 Earth) drops Pellet 10% item canon existing — same name as Frilled Lizard ability
+- **Pellet** = canon name officiel ability + **spell item** confirmed (fandom : "uses the spell item Pellet")
+- ≤25% RED HP emergency phase Earth magic 1.5× single target
+- ⭐⭐⭐ **Cross-mob shared canon Trent drop NEW MAJEUR** : Trent (Forest Disc 1 Earth) drops Pellet 10% item canon existing — same name as Frilled Lizard ability **spell item cast**
 - Pattern Damia : **self-named ability-item cross-mob shared canon récurrent NEW MAJEUR** (cohérent récurrent Spear Frost Flying Rat/Freeze Knight cross-mob shared ability pool canon TLoD)
-- Pattern thematic : Earth pellet projectile ability + Earth Repeat Item canon
+- Pattern thematic : Earth pellet projectile spell item + Earth Repeat Item canon
+- "Slightly more than medium earth damage" canon damage tier
 
-### Run away! canon ⭐⭐⭐ self-removal récurrent 4ème instance
+### Escape canon name officiel ⭐⭐⭐ NEW MAJEUR self-removal récurrent 4ème instance (fandom CORRECTION wiki "Run away!")
 
-- **Run away!** = canon name officiel self-removal mechanic
+- **Escape** = canon name officiel fandom (NOT wiki "Run away!" — fandom canon prevaut)
+- "Chance to flee fight once health reaches critical" canon
 - Self-target ability removes mob from combat — **no EXP/gold/item awarded**
-- Trigger ≤25% RED HP **clean phase canon NEW** (vs unknown triggers récents Berserk Mouse/Erupting Chick/Flying Rat Escape)
-- Pattern Damia : **self-removal canon récurrent 4ème instance** (Berserk Mouse Disc 1 + Erupting Chick Disc 2 + Flying Rat Disc 3 + Frilled Lizard Disc 2)
+- Trigger ≤25% RED HP canon CONFIRMED cross-source
+- Pattern Damia : **self-removal canon récurrent 4ème instance Escape canon** (Berserk Mouse Disc 1 + Erupting Chick Disc 2 + Flying Rat Disc 3 + Frilled Lizard Disc 2 — Flying Rat fandom = Escape canon récurrent confirmé pattern)
 - Implications strategy : burst-kill priority HP > 25% prévenir mob escape
+
+⭐⭐ **"Do not Guard in response to Pellet" strategy guidance canon NEW (fandom) ⭐⭐** — Quote canon : "With low health and defence, it should require only one more hit to finish it off, so **do not Guard in response to Pellet**". Pattern Damia : strategy guidance NEW canon — Frilled Lizard ≤25% RED HP = burst-kill priority over Guard defense canon.
 
 ## Encounters canon ⭐⭐⭐ Barrens 4 formations + 4 World Map roads
 

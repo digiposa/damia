@@ -5381,6 +5381,40 @@
 
 - [ ] ⭐ **🆕 Status 4/4 standard Minor Enemy + no status proc ability (wiki) ⭐** — Frilled Lizard pure damage + escape canon (NOT status threat vs récents Wooing/Menacing/Scream). Source: idem.
 
+### Mobs / Frilled Lizard fandom complement — Appearance blue velociraptor 4 mandibles + Headbutt/Pellet/Escape canon names officiels + 2 drops Healing Potion + Meteor Fall spell item Earth NEW MAJEUR + JP HP 160 +25% CONFIRMED + P.Attack 6 MASSIVE DIVERGENCE wiki 23 + A-AV 120% IMPOSSIBLE 3ème instance + Encounter Very common + 5 formations solo NEW
+
+- [ ] ⭐⭐⭐ **🆕 Appearance "blue human-sized velociraptor reddish frills neck + 2 small clawed arms + 4 mandibles attacks" canon NEW MAJEUR (fandom) ⭐⭐⭐** — Pattern Damia : velociraptor design canon NEW + **4 mandibles attacks canon thematic detail NEW MAJEUR** (relies on mandibles NOT clawed arms). À refléter sprite design Damia : blue velociraptor + reddish neck frills + 4-mandible head canon. Source: [`features/mobs/_sources/fandom-frilled-lizard.md`](features/mobs/_sources/fandom-frilled-lizard.md).
+
+- [ ] ⭐⭐⭐ **🆕 Meteor Fall NEW Earth Spell Item canon NEW MAJEUR Frilled Lizard 2nd drop (fandom) ⭐⭐⭐** — Quote canon : "meteor fall can be helpful for when you get to the Valley of Corrupted Gravity". Pattern Damia : **Meteor Fall = Earth Spell Item canon NEW MAJEUR** + **2 drops canon NEW MAJEUR** (Healing Potion 8% + Meteor Fall 8% vs typical 1 drop pattern récurrent). Cohérent "Very common" encounter + 2 drops = farming-friendly mob canon Disc 2. À documenter `items/Meteor Fall.md` (à créer) — Earth Spell Item canon NEW MAJEUR. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Headbutt canon name officiel CORRECTION wiki ~Headbutt NEW MAJEUR (fandom) ⭐⭐⭐** — Wiki ~Headbutt = community approximation, fandom révèle **Headbutt** canon ("runs towards single target and bites them dealing medium physical"). Pattern récurrent fandom > wiki naming canon (cohérent Devil Sting Dragonfly / Glide Flying Rat / Feet Sickle Fowl Fighter / Icicle Extension Freeze Knight). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Pellet = spell item canon CONFIRMED + cross-mob shared Trent drop CONFIRMED cross-source (fandom) ⭐⭐⭐** — Quote canon : "uses the **spell item Pellet** and deals slightly more than medium earth damage single target". Pattern Damia : **Pellet = Earth Spell Item canon CONFIRMED** + cross-mob shared canon Trent drop existing canon = same name as Frilled Lizard ability spell item cast. **Self-named ability-item cross-mob shared pool canon TLoD CONFIRMED cross-source**. À documenter `items/Pellet.md` (à créer) Earth Spell Item cross-source canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Escape canon name officiel CORRECTION wiki "Run away!" NEW (fandom) ⭐⭐⭐** — Wiki "Run away!" → fandom révèle **Escape** canon name récurrent (cohérent Flying Rat fandom Escape canon name récurrent). Pattern Damia : **Escape = canon name self-removal mechanic récurrent confirmed fandom prevaut** (4 instances : Berserk Mouse + Erupting Chick + Flying Rat + Frilled Lizard — Escape canon récurrent fandom). À refléter `combat/mob-self-removal.md` (à créer) — Escape canon name récurrent. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 P. Attack 6 fandom MASSIVE DIVERGENCE wiki 23 -74% (fandom) ⭐⭐⭐** — ⚠️ Wiki US 23 vs fandom **6** = -74% MASSIVE DIVERGENCE. Fandom canon : "quite fast, with low Attack" — fandom 6 cohérent canon "low Attack". Damia adopt fandom **6 probable canon JP** (pattern récurrent fandom probable JP higher mais ici fandom LOWER — unique anomaly). À investiguer Discord/Wulves authoritative source — possible wiki tier 2 typo. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 A-AV 120% IMPOSSIBLE MECHANIC anomaly 3ème instance (fandom) ⭐⭐⭐** — Fandom "chance to evade, with 120% A-AV". Pattern Damia : **IMPOSSIBLE A-AV >100% canon anomaly récurrent 3ème instance** (Berserk Mouse + Forest Runner + Frilled Lizard). Wiki A-AV 5% canonical prevails. Pattern récurrent fandom approximation impossible mechanic documenté 3 instances. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 JP HP 160 +25% systematic CONFIRMED canon récurrent (fandom) ⭐⭐⭐** — wiki US 128 / fandom US 132 / fandom JP 160. 132×0.25 = 33 RED HP threshold ✓ (cohérent canon AI ≤25% RED HP). Wiki 128 vs fandom 132 US -3% slight divergence (probable wiki rounding error). Damia adopt fandom 132 US / 160 JP canon. Pattern Damia : +25% systematic CONFIRMED (Frilled Lizard respects pattern). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 M. Attack 31 fandom CORRECTION wiki 27 +15% (fandom) ⭐⭐⭐** — Pattern Damia probable JP higher values cohérent récurrent pattern (vs P. Attack 6 unique anomaly fandom LOWER). Damia adopt fandom 31 probable canon JP. Source: idem.
+
+- [ ] ⭐⭐ **🆕 JP Gold 7 ÷3 CONFIRMED cross-source (fandom) ⭐⭐** — US 21 / JP 7 = ÷3 ✓ exact pattern Damia systematic récurrent CONFIRMED. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Encounter rate "Very common" canon higher tier than Common (fandom) ⭐⭐** — Pattern Damia : **encounter rate tier "Very common" canon NEW** (vs "Common" Forest Runner / Freeze Knight pattern récurrent). Cohérent farming-friendly mob canon Disc 2 + 2 drops récurrent. Source: idem.
+
+- [ ] ⭐⭐ **🆕 5 formations canon (solo NEW + 4 partner formations) (fandom) ⭐⭐** — Wiki 4 formations, fandom 5 incl solo formation. Pattern Damia : Frilled Lizard solo formation canon NEW (cohérent encounter Very common solo possible). Source: idem.
+
+- [ ] ⭐⭐ **🆕 HP threshold 33 = ≤25% RED HP confirmed (132 × 0.25 = 33 ✓) (fandom) ⭐⭐** — Math validation : 132 × 0.25 = 33 RED HP threshold ✓ exact. Pattern Damia : **AI RED HP ≤25% threshold systematic canon CONFIRMED** (cohérent récents Flying Rat/Freeze Knight/Forest Runner ≤25% pattern récurrent). Source: idem.
+
+- [ ] ⭐⭐ **🆕 "Do not Guard in response to Pellet" strategy guidance NEW (fandom) ⭐⭐** — Pattern Damia : strategy guidance canon NEW — burst-kill priority over Guard defense vs Frilled Lizard ≤25% RED HP. Cohérent récurrent strategy guidance pattern (cohérent Flying Rat "use melee" / Forest Runner "kill Dark Elf first" / Freeze Knight "spam Fatal Blizzard"). Source: idem.
+
+- [ ] ⭐⭐ **🆕 "Quite fast, with low Attack" canon (fandom) ⭐⭐** — Quote canon descriptor SPD 80 high agile + low P. Attack 6 fandom canon. Pattern Damia : **speed-focused low-attack archetype canon** Frilled Lizard. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Disc 2 Monsters category CONFIRMED (fandom) ⭐⭐** — Cohérent existing wiki Disc 2 Barrens chain canon. Source: idem.
+
 ### À décider / explorer
 
 ### À décider / explorer

@@ -5259,6 +5259,36 @@
 
 - [ ] ⭐⭐ **🆕 Armor of Yore = Special Treasure Fort Magrad signature canon (fandom Fort Magrad) ⭐⭐** — Pattern Damia : chaque zone signature treasure distincte canon — Snowfield = Magic Shield + Fort Magrad = Armor of Yore (post-boss). Source: idem.
 
+### Mobs / Fowl Fighter wiki (Fire Hellena Prison Disc 1 — Recolor of Assassin Cock Fire/Wind variant + Bird blades feet kicks NEW + Contact encounter formation 484 + Hellena Warden 2nd boss + AI 3-phase + 2× Continuous Kick + Scream Party Non-Elemental Fear + M-AV reduces 4ème instance + Counter 19 recolor inheritance + Mind Purifier 8% + 0% escape forced fight)
+
+- [ ] ⭐⭐⭐ **🆕 Recolor of Assassin Cock canon CONFIRMED Fire/Wind element shift variant NEW MAJEUR (wiki) ⭐⭐⭐** — Quote canon : "Their model is a recolor of Assassin Cock located in Forest". Pattern Damia : **5ème recolor canon documented** (Plague Rat/Berserk Mouse + Stinger/Crescent Bee + Death Purger/Death + Deadly Spider/Evil Spider + Specter/Fire Spirit + Fowl Fighter/Assassin Cock). **Element shift recolor canon NEW MAJEUR** : Wind parent → Fire variant. À documenter `combat/recolor-mob-families.md` (à créer) — recolor canon récurrent. Source: [`features/mobs/_sources/lod-wiki-fowl-fighter.md`](features/mobs/_sources/lod-wiki-fowl-fighter.md).
+
+- [ ] ⭐⭐⭐ **🆕 Bird blades equipped on feet for slashing kicks canon appearance NEW MAJEUR (wiki) ⭐⭐⭐** — Quote canon : "This bird has blades equipped on its feet for slashing foes with its kicks". Pattern Damia : weaponized bird canon design NEW MAJEUR cohérent ~Kick + ~Continuous Kick abilities = blade-foot slash. À refléter sprite design Damia : Assassin Cock recolor + blade-feet visible. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Contact-only encounter formation 484 + Hellena Warden (2nd) 0% escape forced fight canon NEW MAJEUR (wiki) ⭐⭐⭐** — UNIQUE submap 33 Hellena Prison : Fowl Fighter ×2 + Hellena Warden (2nd) formation 484 Contact encounter + 0% escape forced fight. Pattern Damia : scripted forced fight canon Disc 1 + **Hellena Warden (2nd) boss canon NEW MAJEUR** (parent 1st existing canon — 2nd encounter NEW). À documenter `bosses/Hellena Warden 2nd.md` (à créer) + cross-ref `bosses/Hellena Warden.md`. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 AI 3-phase canon NEW MAJEUR Fowl Fighter (wiki) ⭐⭐⭐** — ~Kick >50% (1× phys) / ~Continuous Kick ≤50% (2× phys ⭐ rare high damage multiplier canon) / ~Scream Party (1× Non-Elemental magic + 50% Fear M-AV reduces). Pattern Damia : multi-target AoE Party threat canon + 2× damage multiplier rare canon Minor Enemy. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 ~Continuous Kick 2× damage multiplier canon NEW MAJEUR (wiki) ⭐⭐⭐** — Pattern Damia : **2× damage multiplier rare canon Minor Enemy** Disc 1 (vs typical 1× / 1.5× canon récurrent). Implications design : Fowl Fighter elite tier Hellena Prison high damage threat ≤50%. À documenter `combat/damage-multipliers.md` (à créer/vérifier) tier mapping. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 ~Scream Party AoE Non-Elemental + 50% Fear canon NEW MAJEUR (wiki) ⭐⭐⭐** — Pattern Damia : Fear status proc ability canon Minor Enemy NEW MAJEUR + Non-Elemental ability 3ème instance Minor Enemy canon (Flying Rat Spear Frost mismatched + Forest Runner Menacing/Wooing + Fowl Fighter Scream). À documenter `combat/status-effects.md` (à créer) Fear proc canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 M-AV reduces status proc canon 4ème instance MAJEUR (wiki) ⭐⭐⭐** — Pattern Damia : M-AV reduces status chance canon récurrent 4ème confirmation cross-mob (Flabby Troll + Forest Runner Wooing/Menacing + Fowl Fighter Scream). Pattern Damia : status proc reduction stat-based canon systematic CONFIRMED 4 instances. À documenter `combat/status-effects.md` (à créer) A-AV/M-AV status proc reduction canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Counter 19 mid-density tier 2ème instance CONFIRMED + recolor inherits Counter tier canon NEW MAJEUR (wiki) ⭐⭐⭐** — Fowl Fighter Counter 19 = identical Assassin Cock parent 19. Pattern Damia : **recolor inherits Counter tier canon NEW MAJEUR pattern** — recolor mobs share parent Counter values probable. À cross-check autres recolors (Plague Rat vs Berserk Mouse / Stinger vs Crescent Bee / Specter vs Fire Spirit Counter tiers). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Self-immunity to inflicted status CONTRADICTION canon (wiki) ⭐⭐** — ⚠️ Fowl Fighter inflicts Fear via ~Scream + Fear vulnerable ✗ (NOT self-immune). Pattern Damia : **self-immunity NOT systematic canon** — Forest Runner self-immune Bewitchment + Fowl Fighter NOT self-immune Fear divergent. À investiguer Discord + cross-mob systematic. À refléter `combat/status-effects.md` (à créer) self-immunity pattern canon documentation. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Mind Purifier 8% drop Fowl Fighter canon (wiki) ⭐⭐** — Confuse/Bewitchment cure item canon (cohérent existing Erupting Chick fandom canon Mind Purifier 20G shop pattern récurrent). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Stats Fowl Fighter elite recolor scaled-up canon (wiki) ⭐⭐** — HP 100 (+33× vs Assassin Cock 3) / AT 16 (+16×) / MAT 19 (+19×) / MDF 120 match Assassin Cock canon (Forest MDF 120 mystery récurrent). Pattern Damia : **recolor mob with scaled-up stats canon NEW MAJEUR** — Fowl Fighter = elite recolor variant boss-companion canon Hellena Prison Disc 1. Source: idem.
+
+- [ ] ⭐ **🆕 "Name pun" Trivia canon Fowl Fighter (wiki) ⭐** — Fowl/Foul pun probable canon (cohérent thematic dark-villain naming). Pattern Damia : pun naming canon récurrent TLoD. À confirmer fandom Trivia. Source: idem.
+
+- [ ] ⭐ **🆕 No World Map roads canon Fowl Fighter (wiki) ⭐** — Hellena Prison-only encounter mob canon (NOT roaming). Pattern Damia : prison-locked mob canon Disc 1. Source: idem.
+
+### À décider / explorer
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

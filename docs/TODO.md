@@ -4747,6 +4747,26 @@
 
 - [ ] ⭐⭐ **🆕 Status all 8 ✔ + A-AV 20% cross-source CONFIRMED Fire Spirit (fandom) ⭐⭐** — "Immune to all Status Ailments" + "20% A-AV" canon fandom ✓ cohérent wiki. Pattern Damia cross-source validation. Source: idem.
 
+### Mobs / Flabby Troll wiki (Earth Undersea Cavern Disc 2 — M-AV reduces status proc canon NEW MAJEUR + ~Shield Thwacking 100% Fear proc NEW + Knight Shield cross-mob 2ème source CONFIRMED + Counter 0 + Mermaid partner)
+
+- [ ] ⭐⭐⭐ **🆕 M-AV reduces status proc canon NEW MAJEUR Flabby Troll (wiki) ⭐⭐⭐** — Premier ingestion **M-AV reduces ability canon Damia** (parallel pattern A-AV reduces canon récurrent Caterpillar/Crystal Golem/Earth Shaker). Pattern Damia : **M-AV reduces magic-based status proc** (vs A-AV reduces physical-based status proc) — pattern symmetric canon NEW (element-based reduction canon NEW). M-AV reduces Fear (magic-based Shield Thwacking) vs A-AV reduces Stun (physical-based Crystal Golem Clap). Pattern Damia : `MAVReducesStatusProc` mechanic canon NEW (parallel `AAVReducesStatusProc`). À documenter `combat/avoidance.md` (à créer) — A-AV/M-AV reduces status canon symmetric pattern NEW. Source: [`features/mobs/_sources/lod-wiki-flabby-troll.md`](features/mobs/_sources/lod-wiki-flabby-troll.md).
+
+- [ ] ⭐⭐⭐ **🆕 ~Shield Thwacking NEW canon ability MAJEUR Flabby Troll (wiki) ⭐⭐⭐** — 1× Non-Elemental magic Party AoE + **100% Fear proc** (M-AV reduces). Pattern Damia : `ShieldThwackingAbility { type: 'magic-party-aoe'; multiplier: 1; element: 'non-elemental'; statusProc: { type: 'Fear'; chance: 1.0 } }` data-model canon NEW. **First 100% Fear proc Party canon ingestion Damia** (vs typical 50% status proc rate). Pattern thematic "troll shield thwacks Party + induces fear". À implémenter ability `shieldThwacking` Damia. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Knight Shield 2% drop CROSS-MOB source CONFIRMED MAJEUR Flabby Troll (wiki) ⭐⭐⭐** — Cohérent existing Dragon Soldier Knight Shield 2% canon ✓ (confirmed accessory classification per fandom Dragon Soldier). Flabby Troll = **2ème source Knight Shield farming canon Damia** (Dragon Soldier Disc 3 Tower of Flanvel Earth + Flabby Troll Disc 2 Undersea Cavern Earth — pattern Earth-mob Knight Shield source canon). Pattern Damia multi-source farming canon Knight Shield. À cross-référer `items/Knight Shield.md` (à créer/vérifier) — accessory canon Damia + drop sources cross-mob. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Flabby Troll Mob canon Disc 2 Undersea Cavern (wiki) ⭐⭐** — Earth Minor Enemy. Stats US HP 560 / AT 52 / DF 60 / MAT 33 / MDF 60 / SPD 50 + Gold 30 + EXP 84. Pattern "fragile high HP slow" (HP 560 moderate-high + DF/MDF 60 low + SPD 50 slow). Status 4/4 standard. Counter 0 No counter tier. AI 2-phase ~Club/~Shield Thwacking. Knight Shield 2% drop. À documenter `mobs/Flabby Troll.md` (créé). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Counter 0 No Counter tier 5ème instance Flabby Troll (wiki) ⭐⭐** — Cohérent existing canon Air Combat / Feyrbrand / Fire Bird / Canbria Dayfly / Drake bandits. Flabby Troll = 5ème Minor Enemy no counter canon Damia. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Undersea Cavern 3 submaps location canon Flabby Troll (wiki) ⭐⭐** — 3 submaps spawn (302/303/305). Cohérent existing canon Undersea (Glare + Mermaid + Screw Shell + Sea Piranha + Lenus + Regole partners). À documenter `locations/Undersea Cavern.md` (à créer/vérifier) — Disc 2 location canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Mermaid partner mob canon NEW Undersea Cavern Flabby Troll (wiki) ⭐⭐** — Mermaid + Flabby Troll mixed formation 128 canon. À documenter `mobs/Mermaid.md` (à créer) — Undersea Cavern partner mob canon NEW. Source: idem.
+
+- [ ] ⭐ **🆕 ~Club canon name (community) Flabby Troll (wiki) ⭐** — Community approximation > 25% baseline ability. 1× physical. Pattern thematic "flabby troll club attack". Source: idem.
+
+- [ ] **🆕 JP stats Flabby Troll à confirmer fandom future ⚠️** — Wiki US only ingéré. Pattern Damia adopt JP when available (+25% HP / Gold ÷3). Source: à ingérer.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

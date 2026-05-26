@@ -241,6 +241,47 @@ Pattern **standard Minor Enemy 4/4** canon (cohérent Dragonfly + Earth Shaker +
 - **Forest Runner partner mob canon** : à ingérer Forest Runner.md (Wind partner Evergreen Forest cohérent formation 136).
 - **Recolor variant Flying Rat ?** : pattern Plague Rat vs Berserk Mouse — Flying Rat potential recolor family ? À investiguer fandom future.
 
+## Sprite Damia (art direction)
+
+![Flying Rat sprite Damia](_assets/flying-rat-sprite.png)
+
+> **Sprite officiel Damia** — [`_assets/flying-rat-sprite.png`](./_assets/flying-rat-sprite.png)
+
+### Design canon Damia
+
+- **Corps** : rat-bat hybrid brun avec fourrure blanche ventrale — body rodent canon (NOT literal "flying rat" only)
+- **Ailes** : grandes ailes membraneuses verdâtres bat-style (cohérent thematic "aerial Wind mob")
+- **Yeux** : jaune doré perçants
+- **Pattes** : 2 pattes arrière griffues visibles (posture aérienne)
+- **Pose** : voL en piqué avec gueule ouverte montrant crocs (attack-ready)
+- ⭐ **Lance/spear gold-tipped** dans dos canon — **Spear Frost ability visualisée** ⭐⭐⭐ (lance accompagnant le mob explique ability name "Spear Frost" Water magic 1.5× ≤50%)
+
+### Lance gold-tipped canon ⭐⭐⭐ MAJEUR
+
+⭐⭐⭐ **Lance gold-tipped visualisée Damia = Spear Frost ability NEW MAJEUR** :
+
+- Lance ornée tip étoile dorée portée par Flying Rat
+- **Explique visuellement** Spear Frost canon name (ability uses literal spear weapon)
+- Cohérent thematic Wind aerial mob qui charge à coups de lance
+- Pattern Damia : **mob carries weapon visible = ability tool** canon design choice NEW
+- Implication design : ability animation Damia = lance strike Water magic (frost-element strike)
+
+### Divergence vs canon wiki
+
+⚠️ **Damia art direction enrichit canon wiki** :
+
+- **Canon wiki (🥈)** : "Flying Rat" + Spear Frost ability sans description visuelle (silent appearance)
+- **Damia (Art Direction)** : **rat-bat hybrid + green wings + gold-tipped spear weapon** — design qui visualise les abilities canon (Spear Frost = lance physique gold-tipped)
+- **Justification** : design Damia renforce **Wind aerial nature** (ailes membraneuses bat-style) + **Spear Frost ability** (lance ornée visible) — coherent ability visual canon
+- Pattern Damia : **art direction visualise abilities canon** systematic (cohérent Berserk Mouse bat-wings reinforce Darkness/aggressive)
+
+### Implementation tech
+
+- **Sprite reference** : ce doc art direction reference
+- Frames individuelles à extraire futur (idle / fly / spear-strike ~Cling / spear-cast Spear Frost / death)
+- À cross-référer Aseprite/Spine sprite sheet config futur
+- **Asset path** : `public/assets/sprites/mobs/flyingRat/` (à créer, suivant pattern `berserkMouse/` existant)
+
 ## Liens transverses
 
 - [`README.md`](./README.md) — pattern général mobs canon

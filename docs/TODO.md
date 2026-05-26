@@ -5287,6 +5287,26 @@
 
 - [ ] ⭐ **🆕 No World Map roads canon Fowl Fighter (wiki) ⭐** — Hellena Prison-only encounter mob canon (NOT roaming). Pattern Damia : prison-locked mob canon Disc 1. Source: idem.
 
+### Mobs / Fowl Fighter fandom complement — Feet Sickle / Double Feet Sickle / Rooster Crow canon names officiels (CORRECTION wiki community approximations) + Red+Black recolor canon + Hellena 2nd visit + Final ascent to Fruegel pre-boss canon + Strategy "high MDF + Fire spells NOT recommended" + JP Gold 3 ÷3 + P. Attack 17 / M. Attack 22 fandom corrections
+
+- [ ] ⭐⭐⭐ **🆕 Feet Sickle / Double Feet Sickle / Rooster Crow canon names officiels CORRECTION wiki community approximations NEW MAJEUR (fandom) ⭐⭐⭐** — Wiki ~Kick/~Continuous Kick/~Scream = community approximations → fandom canon names officiels : **Feet Sickle** ("runs up + slashes target" >50%) + **Double Feet Sickle** ("slashes with both feet" 2× ≤50%) + **Rooster Crow** ("crows causing sound wave magical Fear" Party). Pattern Damia : canon ability names enrichis par fandom systématiquement (cohérent Devil Sting Dragonfly / Glide Flying Rat / Attack Forest Runner pattern récurrent fandom > wiki). À documenter `combat/enemy-abilities.md` (à créer) canon ability names list. Source: [`features/mobs/_sources/fandom-fowl-fighter.md`](features/mobs/_sources/fandom-fowl-fighter.md).
+
+- [ ] ⭐⭐⭐ **🆕 Appearance "stronger recolor of Assassin Cock with Red+Black color" canon NEW MAJEUR (fandom) ⭐⭐⭐** — Quote canon : "stronger recolored version of the Assassin Cock with **Red and Black for its color**". Pattern Damia : **Red+Black Fire-themed recolor canon CONFIRMED** + cohérent appearance wiki "bird blades equipped feet". Sprite Damia : Assassin Cock recolor Red+Black palette + blade-feet visible canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 "Final ascent to Fruegel" pre-boss positioning canon NEW MAJEUR (fandom) ⭐⭐⭐** — Quote canon : "appears with Hellena Wardens, on the **final ascent to Fruegel**". Pattern Damia : **Fowl Fighter = pre-Fruegel boss positioning canon NEW MAJEUR** Disc 1 Hellena Prison 2nd visit. Fruegel = boss canon Disc 1 Hellena (existing canon Lavitz death scene). Implications : Fowl Fighter formation 484 = final encounters before Fruegel boss fight. À refléter `bosses/Fruegel.md` (à créer/vérifier) + `quests/disc1-hellena-rescue.md` (à créer) Fruegel boss fight context canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 "Hellena Prison 2nd visit" location canon CONFIRMED + 2 visits structure canon (fandom) ⭐⭐⭐** — Quote canon : "appears in Hellena Prison during the **second visit**". Pattern Damia : **Hellena Prison = 2 visits canon Disc 1** (1st visit = Dart rescue Shana + Lavitz join + initial Hellena Warden / 2nd visit = final ascent to Fruegel Lavitz death canon). Fowl Fighter UNIQUE 2nd visit canon. À documenter `locations/Hellena Prison.md` (à créer) 2 visits structure canon + `quests/disc1-hellena-rescue.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Strategy guidance "high MDF + Fire so spells Dart acquired since last visit NOT recommended" canon NEW MAJEUR (fandom) ⭐⭐⭐** — Quote canon : "**high Magic Defense and is Fire**, so the spells Dart has acquired since his last visit are **not recommended**, especially since a **Boss battle is coming up**". Pattern Damia : strategy guidance par-mob canon NEW MAJEUR — physical attacks recommended vs Fire+MDF 120 mob. Cohérent récurrent Flying Rat/Forest Runner "use melee" strategy guidance pattern. À documenter `mobs/_strategy-guides.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 P. Attack 17 / M. Attack 22 fandom CORRECTION wiki 16/19 ⚠️ +6%/+16% (fandom) ⭐⭐⭐** — Pattern Damia probable JP higher values cohérent existing Dragonfly/Flying Rat/Forest Runner fandom CORRECTION pattern récurrent JP higher. Damia adopt fandom 17/22 probable canon JP. À refléter `mobs/Fowl Fighter.md` stats Damia adopté. Source: idem.
+
+- [ ] ⭐⭐ **🆕 JP Gold 3 ÷3 systematic CONFIRMED cross-source (fandom) ⭐⭐** — US 9 / JP 3 = ÷3 ✓ exact pattern Damia récurrent confirmé. Source: idem.
+
+- [ ] ⭐⭐ **🆕 HP 100 + Mind Purifier 8% drop CONFIRMED cross-source (fandom) ⭐⭐** — HP cross-source match no JP variant + Mind Purifier 8% drop pattern récurrent Confuse/Bewitchment cure item canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Disc 1 Monsters category + "couple of battles with Hellena Warden" canon CONFIRMED (fandom) ⭐⭐** — Cohérent existing wiki Disc 1 chain canon + multi-encounter "couple of battles" canon (formation 484 récurrent dans Hellena 2nd visit). Source: idem.
+
 ### À décider / explorer
 
 ### À décider / explorer

@@ -1,54 +1,76 @@
-# Fowl Fighter — Mob Fire Hellena Prison (Disc 1)
+# Fowl Fighter — Mob Fire Hellena Prison 2nd visit (Disc 1)
 
-> **Mob Fire element Hellena Prison Disc 1** — **Recolor of Assassin Cock canon CONFIRMED** (parent Forest Disc 1 Wind → Fowl Fighter Hellena Prison Disc 1 Fire). **Contact-only encounter formation 484** avec **Hellena Warden (2nd)** boss canon — UNIQUE submap 33 + **0% escape** (forced fight). **AI 3-phase NEW MAJEUR** : ~Kick / ~Continuous Kick (2× phys ≤50%) / **~Scream Party Non-Elemental + 50% Fear NEW MAJEUR**. Counter 19 mid-density 2ème instance.
+> **Mob Fire element Hellena Prison Disc 1 2nd visit** — **Recolor Red+Black of Assassin Cock canon CONFIRMED cross-source** (parent Forest Disc 1 Wind → Fowl Fighter Hellena Prison Disc 1 Fire). **Contact-only encounter formation 484** avec **Hellena Warden (2nd)** boss canon — UNIQUE submap 33 + **0% escape** (forced fight) — **final ascent to Fruegel boss canon NEW MAJEUR**. **AI 3-phase NEW MAJEUR** : **Feet Sickle / Double Feet Sickle (2× phys ≤50%) / Rooster Crow Party Non-Elemental + 50% Fear NEW MAJEUR** canon names officiels (fandom). Counter 19 mid-density 2ème instance.
 >
-> ⭐⭐⭐ **Recolor of Assassin Cock canon CONFIRMED Fire/Wind variant NEW MAJEUR ⭐⭐⭐** — Quote canon : "**Their model is a recolor of Assassin Cock located in Forest**". Pattern Damia : **recolor mob canon récurrent 5ème instance documenté** (cohérent Plague Rat/Berserk Mouse + Stinger/Crescent Bee + Death Purger/Death + Deadly Spider/Evil Spider + Specter/Fire Spirit + Fowl Fighter/Assassin Cock). Pattern thematic Damia : **Fire recolor variant of Wind parent canon** — element shift recolor canon NEW MAJEUR (Assassin Cock Wind → Fowl Fighter Fire). À documenter `combat/recolor-mob-families.md` (à créer) — recolor canon récurrent.
+> ⭐⭐⭐ **Feet Sickle / Double Feet Sickle / Rooster Crow canon names officiels fandom NEW MAJEUR ⭐⭐⭐** — Wiki ~Kick/~Continuous Kick/~Scream = community approximations. Fandom révèle canon names :
 >
-> ⭐⭐⭐ **Bird with blades equipped on feet for slashing kicks canon appearance NEW MAJEUR ⭐⭐⭐** — Quote canon : "**This bird has blades equipped on its feet for slashing foes with its kicks**". Pattern Damia : **Fowl Fighter = weaponized bird canon design NEW MAJEUR** (cohérent ~Kick + ~Continuous Kick abilities = blade-foot slash attacks). Implications design : sprite Fowl Fighter = Assassin Cock recolor + blade-feet visible canon. À refléter sprite design Damia.
+> - **Feet Sickle** : "runs up and slashes the target" (>50% phase)
+> - **Double Feet Sickle** : "slashes the target with both feet" (2× phys ≤50%)
+> - **Rooster Crow** : "crows causing a sound wave. This attack is magical in nature and can cause Fear" (Party Non-Elemental + 50% Fear)
+>   Pattern Damia : canon ability names enrichis par fandom systématiquement. Damia adopt canon names fandom prioritaires.
 >
-> ⭐⭐⭐ **Contact-only encounter formation 484 + Hellena Warden (2nd) boss canon NEW MAJEUR ⭐⭐⭐** — Encounter UNIQUE submap 33 Hellena Prison : **Fowl Fighter ×2 + Hellena Warden (2nd) formation 484 Contact encounter + 0% escape forced fight** canon NEW. Pattern Damia : **Contact-only encounter canon** (NOT random) — scripted forced fight canon. **Hellena Warden (2nd)** = scripted boss canon NEW MAJEUR (parent Hellena Warden = existing canon — "2nd" probable post-Hellena escape Disc 1 canon). À documenter `bosses/Hellena Warden 2nd.md` (à créer) — scripted boss canon NEW Disc 1.
+> ⭐⭐⭐ **Appearance "Red+Black recolor Assassin Cock" canon NEW MAJEUR (fandom) ⭐⭐⭐** — Quote canon : "stronger recolored version of the Assassin Cock with **Red and Black for its color**". Pattern Damia : **Red+Black Fire-themed recolor canon CONFIRMED** + cohérent appearance wiki "bird blades equipped feet kicks". Implications sprite Damia : Assassin Cock recolor Red+Black palette + blade-feet visible canon.
 >
-> ⭐⭐⭐ **AI 3-phase canon NEW MAJEUR** :
+> ⭐⭐⭐ **"Final ascent to Fruegel" canon NEW MAJEUR (fandom) ⭐⭐⭐** — Quote canon : "appears with Hellena Wardens, on the **final ascent to Fruegel**". Pattern Damia : **Fowl Fighter = pre-Fruegel boss positioning canon NEW MAJEUR** Disc 1 Hellena Prison 2nd visit. **Fruegel = boss canon Disc 1 Hellena Prison** (cohérent existing canon Lavitz death scene Hellena 2nd visit). Implications : Fowl Fighter formation 484 = final encounters before Fruegel boss fight canon. À refléter `bosses/Fruegel.md` (à créer/vérifier) + `quests/disc1-hellena-rescue.md` (à créer).
 >
-> - **HP > 50%** : ~Kick (1× phys single)
-> - **HP ≤ 50%** : **~Continuous Kick (2× phys single ⭐ NEW MAJEUR damage multiplier 2×)**
-> - **— (any phase)** : **~Scream Party Non-Elemental magic + 50% Fear chance (M-AV reduces) NEW MAJEUR**
+> ⭐⭐⭐ **"Hellena Prison 2nd visit" location canon CONFIRMED (fandom) ⭐⭐⭐** — Pattern Damia : Hellena Prison = **2 visits canon Disc 1** (1st visit = Dart rescue Shana + Lavitz join + initial Hellena Warden / 2nd visit = ? final ascent to Fruegel Lavitz death scene canon). Fowl Fighter UNIQUE 2nd visit canon — pre-Fruegel context. À documenter `locations/Hellena Prison.md` (à créer) 2 visits structure canon.
 >
-> Pattern Damia : **2× damage multiplier ≤50% canon NEW** (vs typical 1× / 1.5× canon récurrent — Continuous Kick 2× = high damage tier). **Scream Party AoE Non-Elemental + 50% Fear** = multi-target threat canon NEW MAJEUR.
+> ⭐⭐⭐ **Strategy guidance "high MDF + Fire so spells Dart acquired since last visit NOT recommended" canon NEW MAJEUR (fandom) ⭐⭐⭐** — Quote canon : "**high Magic Defense and is Fire**, so the spells Dart has acquired since his last visit are **not recommended**, especially since a **Boss battle is coming up**". Pattern Damia : **strategy guidance par-mob canon NEW MAJEUR** — physical attacks recommended vs Fire+MDF 120 mob. Cohérent recent Flying Rat/Forest Runner "use melee" strategy guidance pattern récurrent. À documenter `mobs/_strategy-guides.md` (à créer).
 >
-> ⭐⭐⭐ **~Scream Party Non-Elemental + 50% Fear canon NEW MAJEUR ⭐⭐⭐** — Pattern Damia : **Fear status proc ability canon Minor Enemy** NEW MAJEUR (cohérent existing Fear status canon). Pattern Damia récurrent : **M-AV reduces status proc canon 4ème instance** (cohérent Flabby Troll Shield Thwacking + Forest Runner Wooing/Menacing + Fowl Fighter Scream). Pattern Damia : **Non-Elemental magic damage ability** = 3ème instance Minor Enemy canon (cohérent Flying Rat Spear Frost mismatched + Forest Runner Menacing/Wooing).
+> ⭐⭐⭐ **JP Gold 3 ÷3 systematic CONFIRMED (fandom) ⭐⭐⭐** — US 9 / JP 3 = ÷3 ✓ exact pattern Damia récurrent confirmé. HP 100 CONFIRMED cross-source (no JP variant mentioned — match US/EU).
 >
-> ⭐⭐⭐ **Counter Opportunities 19 mid-density tier 2ème instance CONFIRMED canon ⭐⭐⭐** — Pattern Damia : Counter 19 mid-density tier confirmed récurrent 2ème instance après Assassin Cock 19 (cohérent parent Assassin Cock 19 recolor Fowl Fighter 19 — **recolor inherits Counter tier canon NEW MAJEUR**). 12 button-press combos détaillés (vs Flying Rat/Forest Runner 15 high-density 28-tier). Pattern Damia : recolor mob → Counter tier inherit canon récurrent probable.
+> ⭐⭐⭐ **P. Attack 17 / M. Attack 22 fandom CORRECTION wiki 16/19 ⚠️ slight divergences (fandom) ⭐⭐⭐** — Wiki US 16 AT / 19 MAT vs fandom **17 AT / 22 MAT** = +6% / +16% systematic. Pattern Damia probable JP higher values (cohérent existing Dragonfly + Flying Rat + Forest Runner fandom CORRECTION pattern récurrent JP higher). Damia adopt fandom 17/22 probable canon JP.
 >
-> ⭐⭐ **Stats Fowl Fighter vs parent Assassin Cock** :
+> ⭐⭐⭐ **Recolor of Assassin Cock canon CONFIRMED Fire/Wind variant NEW MAJEUR ⭐⭐⭐** — Wiki + fandom cross-source CONFIRMED : "stronger recolored version of Assassin Cock". Pattern Damia : **recolor mob canon récurrent 5ème instance documenté** (cohérent Plague Rat/Berserk Mouse + Stinger/Crescent Bee + Death Purger/Death + Deadly Spider/Evil Spider + Specter/Fire Spirit + Fowl Fighter/Assassin Cock). Pattern thematic Damia : **Fire recolor variant of Wind parent canon** — element shift recolor canon NEW MAJEUR (Assassin Cock Wind → Fowl Fighter Fire). À documenter `combat/recolor-mob-families.md` (à créer) — recolor canon récurrent.
+>
+> ⭐⭐⭐ **Bird with blades equipped on feet for slashing kicks canon appearance NEW MAJEUR (wiki + cohérent fandom Feet Sickle abilities) ⭐⭐⭐** — Wiki canon : "This bird has blades equipped on its feet for slashing foes with its kicks". Fandom CONFIRMS via Feet Sickle/Double Feet Sickle canon names = blade-foot slash attacks. Pattern Damia : **Fowl Fighter = weaponized bird canon design NEW MAJEUR** cross-source.
+>
+> ⭐⭐⭐ **Contact-only encounter formation 484 + Hellena Warden (2nd) boss canon NEW MAJEUR ⭐⭐⭐** — Encounter UNIQUE submap 33 Hellena Prison : **Fowl Fighter ×2 + Hellena Warden (2nd) formation 484 Contact encounter + 0% escape forced fight** canon. Fandom CONFIRMS "couple of battles with Hellena Warden" + final ascent to Fruegel context. Pattern Damia : Contact-only encounter canon scripted forced fight + **Hellena Warden (2nd) = scripted boss canon NEW MAJEUR** (parent Hellena Warden = existing canon — "2nd" = 2nd visit Hellena Prison canon). À documenter `bosses/Hellena Warden 2nd.md` (à créer).
+>
+> ⭐⭐⭐ **AI 3-phase canon NEW MAJEUR (révision fandom canon names)** :
+>
+> - **HP > 50%** : **Feet Sickle** (1× phys single — runs up + slashes target canon)
+> - **HP ≤ 50%** : **Double Feet Sickle** (2× phys single ⭐ NEW MAJEUR damage multiplier 2× — slashes with both feet canon)
+> - **— (any phase)** : **Rooster Crow Party Non-Elemental magic + 50% Fear chance (M-AV reduces) NEW MAJEUR** — crow sound wave magical canon
+>
+> Pattern Damia : **2× damage multiplier ≤50% canon NEW** (vs typical 1× / 1.5× canon récurrent — Double Feet Sickle 2× = high damage tier). **Rooster Crow Party AoE Non-Elemental + 50% Fear** = multi-target threat canon NEW MAJEUR.
+>
+> ⭐⭐⭐ **Rooster Crow Party Non-Elemental + 50% Fear canon NEW MAJEUR (fandom) ⭐⭐⭐** — Pattern Damia : **Fear status proc ability canon Minor Enemy** NEW MAJEUR. Pattern Damia récurrent : **M-AV reduces status proc canon 4ème instance** (cohérent Flabby Troll Shield Thwacking + Forest Runner Wooing/Menacing + Fowl Fighter Rooster Crow). Pattern Damia : **Non-Elemental magic damage ability** = 3ème instance Minor Enemy canon (cohérent Flying Rat Spear Frost + Forest Runner Menacing/Wooing).
+>
+> ⭐⭐⭐ **Counter Opportunities 19 mid-density tier 2ème instance CONFIRMED canon ⭐⭐⭐** — Pattern Damia : Counter 19 mid-density tier confirmed récurrent 2ème instance après Assassin Cock 19 (cohérent parent Assassin Cock 19 recolor Fowl Fighter 19 — **recolor inherits Counter tier canon NEW MAJEUR**). 12 button-press combos détaillés.
+>
+> ⭐⭐ **Stats Fowl Fighter vs parent Assassin Cock (révision fandom)** :
 >
 > - HP 100 (vs Assassin Cock 3 US) = +33× MAJEUR — Fowl Fighter scaled-up Disc 1 boss-companion canon
-> - AT 16 (vs Assassin Cock 1) = +16× MAJEUR
-> - MAT 19 (vs Assassin Cock 1) = +19× MAJEUR
+> - **AT 17 fandom** (vs Assassin Cock 1) = +17× MAJEUR
+> - **MAT 22 fandom** (vs Assassin Cock 1) = +22× MAJEUR
 > - DF 80 / MDF 120 = match Assassin Cock canon (cohérent Forest mobs MDF 120 mystery design canon récurrent)
 > - SPD 60 / A-AV 10% / M-AV 0% = different tier vs parent
 >
 > Pattern Damia : **recolor mob with scaled-up stats canon NEW MAJEUR** — Fowl Fighter = elite recolor variant boss-companion canon Hellena Prison Disc 1.
 >
-> ⭐⭐ **Mind Purifier 8% drop canon NEW ⭐⭐** — cohérent existing Erupting Chick fandom canon Mind Purifier 20G shop pattern récurrent (Mind Purifier = Confuse/Bewitchment cure item canon). Pattern Damia : Disc 1 status cure item drop pattern récurrent.
+> ⭐⭐ **Mind Purifier 8% drop canon CONFIRMED cross-source ⭐⭐** — cohérent existing Erupting Chick fandom canon Mind Purifier 20G shop pattern récurrent (Mind Purifier = Confuse/Bewitchment cure item canon). Pattern Damia : Disc 1 status cure item drop pattern récurrent.
 >
 > ⭐⭐ **Status 4/4 standard Minor Enemy canon** (Petrify/Bewitch/Arm Block/Dispirit ✔ vs Confuse/Fear/Poison/Stun ✗).
 >
-> ⭐⭐ **Self-immunity to inflicted status canon thematic NEW** — Fowl Fighter inflicts Fear via ~Scream + Fowl Fighter Fear vulnerable ✗ (Status table). ⚠️ Pattern Damia : **CONTRADICTION self-immunity thematic** vs Forest Runner self-immunity canon — Fowl Fighter NOT immune to status it inflicts. À investiguer pattern systematic (parent Assassin Cock same Fear vulnerable + similar Scream ability ?).
+> ⭐⭐ **Disc 1 Monsters category CONFIRMED fandom** — Cohérent existing wiki Hellena Prison #3 Disc 1 Serdio chain canon.
 >
-> ⭐ **"Name appears to be a pun" canon Trivia** — Fowl/Foul pun probable canon (cohérent thematic dark-villain naming + parent Assassin Cock canon pun récurrent).
+> ⭐⭐ **Self-immunity to inflicted status canon thematic NEW** — Fowl Fighter inflicts Fear via Rooster Crow + Fowl Fighter Fear vulnerable ✗ (Status table). ⚠️ Pattern Damia : **CONTRADICTION self-immunity thematic** vs Forest Runner self-immunity canon — Fowl Fighter NOT immune to status it inflicts. À investiguer pattern systematic.
+>
+> ⭐ **"Name appears to be a pun" canon Trivia (wiki)** — Fowl/Foul pun probable canon (cohérent thematic dark-villain naming + parent Assassin Cock canon pun récurrent).
 >
 > ⭐ **No World Map roads canon** — Pattern Damia : Hellena Prison-only encounter mob canon (NOT roaming canon). Cohérent Hellena Prison = #3 Disc 1 chain Serdio.
 >
-> ⭐ **"Hellena Warden (2nd)"** canon NEW MAJEUR cross-ref boss — Pattern Damia : Hellena Warden boss canon récurrent (1st existing canon Hellena Prison Disc 1 + **2nd canon NEW MAJEUR formation 484 submap 33**). Implications : 2 Hellena Warden boss encounters Disc 1 canon. À refléter `bosses/Hellena Warden.md` (à créer) + `bosses/Hellena Warden 2nd.md` (à créer/cross-ref).
+> ⭐ **"Hellena Warden (2nd)"** canon NEW MAJEUR cross-ref boss — Pattern Damia : Hellena Warden boss canon récurrent (1st existing canon Hellena Prison 1st visit Disc 1 + **2nd canon NEW MAJEUR formation 484 submap 33 2nd visit**). Implications : 2 Hellena Warden boss encounters Disc 1 canon.
 >
 > **Sources** :
 >
 > - 🥈 [`_sources/lod-wiki-fowl-fighter.md`](./_sources/lod-wiki-fowl-fighter.md) — wiki LoD tier 2 (Fire element + Counter 19 mid-density 2ème instance + Stats 100/16/80/19/120/60 + A-AV 10% / M-AV 0% + Status 4/4 standard + Yield 16 EXP / 9 Gold / Mind Purifier 8% + **AI 3-phase ~Kick / ~Continuous Kick 2× phys / ~Scream Party Non-Elemental + 50% Fear** NEW MAJEUR + **M-AV reduces status proc canon 4ème instance** + **Recolor of Assassin Cock canon CONFIRMED Fire/Wind variant NEW MAJEUR** + **Bird blades equipped feet kicks canon appearance NEW MAJEUR** + **Contact-only encounter formation 484 Hellena Warden 2nd 0% escape forced fight canon NEW** + No World Map roads + "Name pun" Trivia canon)
+> - 🥉 [`_sources/fandom-fowl-fighter.md`](./_sources/fandom-fowl-fighter.md) — fandom LoD tier 3 (⭐ **Feet Sickle / Double Feet Sickle / Rooster Crow canon names officiels NEW MAJEUR** vs wiki community approximations + ⭐ **Appearance "Red+Black recolor Assassin Cock" canon NEW MAJEUR** + ⭐ **"Hellena 2nd visit" location canon CONFIRMED** + ⭐ **"Final ascent to Fruegel" pre-boss positioning canon NEW MAJEUR** + ⭐ **Strategy guidance "high MDF + Fire spells NOT recommended" canon NEW MAJEUR** + ⭐ **JP Gold 3 ÷3 systematic CONFIRMED** + ⭐ **P. Attack 17 / M. Attack 22 fandom CORRECTION wiki 16/19 +6%/+16%** + ⭐ **HP 100 CONFIRMED cross-source** + ⭐ **Mind Purifier 8% drop CONFIRMED cross-source** + ⭐ **Disc 1 Monsters category CONFIRMED** + ⭐ **"Only found in a couple of battles with Hellena Warden" canon** + ⭐ **Recolor of Assassin Cock CONFIRMED cross-source**)
 
 ## Statut
 
-🟡 **Canon documenté wiki tier 2 uniquement** — fandom à ingérer future (appearance détaillée + JP stats + ability canon names confirmation + Hellena Warden 2nd lore).
+🟢 **Canon cross-source confirmed wiki tier 2 + fandom tier 3** — Sources convergent location/element/stats/recolor/encounter/Counter. Fandom révèle MAJEUR : ability canon names officiels (Feet Sickle / Double Feet Sickle / Rooster Crow vs wiki ~Kick/~Continuous Kick/~Scream community) + appearance Red+Black recolor canon + Hellena 2nd visit location confirmed + Final ascent to Fruegel pre-boss positioning canon NEW MAJEUR + strategy guidance "high MDF + Fire spells NOT recommended" canon + JP Gold 3 ÷3 CONFIRMED + P. Attack 17 / M. Attack 22 fandom corrections wiki 16/19 +6%/+16%.
 
 ## Identity canon ⭐⭐⭐
 
@@ -61,20 +83,21 @@
 - **Type** : Minor Enemy canon (elite recolor variant boss-companion)
 - **Pattern thematic** : weaponized blade-foot bird Fire recolor of Wind parent Assassin Cock
 
-## Stats canon
+## Stats canon (cross-source révision fandom)
 
-| Stat | Value | Notes                                                                       |
-| ---- | ----- | --------------------------------------------------------------------------- |
-| HP   | 100   | Elite recolor scaled-up (+33× vs Assassin Cock 3) canon                     |
-| AT   | 16    | Elite recolor scaled-up (+16× vs Assassin Cock 1)                           |
-| DF   | 80    | Match Assassin Cock canon (Forest MDF 120 mystery récurrent)                |
-| MAT  | 19    | Elite recolor scaled-up (+19× vs Assassin Cock 1)                           |
-| MDF  | 120   | High magic defense (cohérent Forest MDF 120 mystery design canon récurrent) |
-| SPD  | 60    | Lower than Assassin Cock SPD 45 wiki / 50 fandom — different tier           |
-| A-AV | 10%   | Moderate physical avoidance (lower than Assassin Cock 50% wiki canon)       |
-| M-AV | 0%    | No magic avoidance                                                          |
+| Stat | Wiki (US) | Fandom | Damia adopté                                                                 |
+| ---- | --------- | ------ | ---------------------------------------------------------------------------- |
+| HP   | 100       | 100    | **100** ✓ cross-source confirmed (no JP variant mentioned)                   |
+| AT   | 16        | **17** | **17 fandom** (+6% probable JP canon — cohérent pattern récurrent JP higher) |
+| DF   | 80        | 80     | **80** ✓ match                                                               |
+| MAT  | 19        | **22** | **22 fandom** (+16% probable JP canon)                                       |
+| MDF  | 120       | 120    | **120** ✓ match (Forest MDF 120 mystery récurrent canon)                     |
+| SPD  | 60        | 60     | **60** ✓ match                                                               |
+| A-AV | 10%       | —      | **10% wiki**                                                                 |
+| M-AV | 0%        | —      | **0% wiki**                                                                  |
+| Gold | 9 US      | 9/3 JP | **9 US / 3 JP** ✓ ÷3 systematic CONFIRMED cross-source canon                 |
 
-→ Pattern : **Elite recolor scaled-up stats canon NEW MAJEUR** Disc 1 boss-companion Hellena Prison tier. **MDF 120 mystery cohérent Forest mobs canon récurrent** (parent Assassin Cock inheritance).
+→ Pattern : **Elite recolor scaled-up stats canon NEW MAJEUR** Disc 1 boss-companion Hellena Prison tier. **MDF 120 mystery cohérent Forest mobs canon récurrent** (parent Assassin Cock inheritance). **Fandom +6% AT / +16% MAT corrections probable JP canon récurrent pattern**.
 
 ## Status Immunity canon ⭐ standard 4/4
 
@@ -121,36 +144,45 @@ Pattern standard Minor Enemy 4/4 canon. ⚠️ **Self-immunity to inflicted stat
 | **Very low**     | 4     | Dragonfly / Bowling                                                                             |
 | **No counter**   | 0     | Air Combat / Feyrbrand / Fire Bird / Earth Shaker / Erupting Chick / Fire Spirit / Flabby Troll |
 
-## AI canon (3-phase NEW MAJEUR)
+## AI canon (3-phase NEW MAJEUR — révision fandom canon names)
 
-| HP    | Action               | Target | Effect                                                              | Notes                                       |
-| ----- | -------------------- | ------ | ------------------------------------------------------------------- | ------------------------------------------- |
-| > 50% | **~Kick**            | Single | 1× Physical damage (community approximation name)                   |                                             |
-| ≤ 50% | **~Continuous Kick** | Single | **2× Physical damage** ⚠️ NEW MAJEUR — high damage multiplier canon |                                             |
-| —     | **~Scream**          | Party  | **1× Non-Elemental magic damage + 50% Fear chance** ⚠️ NEW MAJEUR   | Target's M-AV reduces chance status ailment |
+| HP    | Action                 | Target | Effect                                                                                          | Notes                                       |
+| ----- | ---------------------- | ------ | ----------------------------------------------------------------------------------------------- | ------------------------------------------- |
+| > 50% | **Feet Sickle**        | Single | 1× Physical damage — "runs up + slashes target" canon (fandom)                                  |                                             |
+| ≤ 50% | **Double Feet Sickle** | Single | **2× Physical damage** ⚠️ NEW MAJEUR — "slashes with both feet" canon (fandom)                  |                                             |
+| —     | **Rooster Crow**       | Party  | **1× Non-Elemental magic damage + 50% Fear chance** — "crows causing sound wave" canon (fandom) | Target's M-AV reduces chance status ailment |
 
-⭐⭐⭐ **AI 3-phase canon NEW MAJEUR Fowl Fighter** :
+⭐⭐⭐ **AI 3-phase canon NEW MAJEUR Fowl Fighter (canon names fandom officiels)** :
 
-- **~Kick >50%** = basic blade-foot slash attack canon
-- **~Continuous Kick ≤50%** = escalation 2× damage multiplier canon (vs typical 1×/1.5× canon récurrent — 2× = high tier)
-- **~Scream Party AoE** = Non-Elemental magic + 50% Fear status proc canon NEW MAJEUR (M-AV reduces)
+- **Feet Sickle >50%** = blade-foot single slash attack canon (vs wiki ~Kick community approximation)
+- **Double Feet Sickle ≤50%** = escalation 2× damage both-feet slash canon (vs wiki ~Continuous Kick — 2× = high tier rare canon)
+- **Rooster Crow Party AoE** = Non-Elemental magic + 50% Fear status proc canon NEW MAJEUR (M-AV reduces, vs wiki ~Scream)
 
-Pattern Damia : multi-target threat AoE Party canon (cohérent récurrent ability types).
+Pattern Damia : multi-target threat AoE Party canon + canon names fandom prioritaires (cohérent Devil Sting/Glide/Attack pattern récurrent fandom > wiki approximations).
 
-### ~Continuous Kick canon ⭐⭐⭐ NEW MAJEUR
+### Feet Sickle canon name officiel ⭐⭐⭐ NEW MAJEUR (fandom CORRECTION wiki ~Kick)
 
-- **~Continuous Kick** = community approximation name (NOT canon)
+- **Feet Sickle** = canon name officiel fandom (NOT community ~Kick approximation)
+- "Runs up and slashes the target" canon description fandom
+- 1× Physical damage single target > 50% phase
+- Pattern thematic : blade-foot sickle slash canon (cohérent appearance Red+Black bird blades equipped feet)
+
+### Double Feet Sickle canon name officiel ⭐⭐⭐ NEW MAJEUR (fandom CORRECTION wiki ~Continuous Kick)
+
+- **Double Feet Sickle** = canon name officiel fandom
+- "Slashes the target with both feet" canon description fandom
 - 2× Physical damage single target ≤ 50% phase
-- Pattern thematic : multi-hit blade-foot slash canon (cohérent appearance canon "blades equipped on feet")
+- Pattern thematic : dual blade-foot slash canon NEW MAJEUR
 - Pattern Damia : **2× damage multiplier rare canon Minor Enemy** Disc 1 — Fowl Fighter elite tier
 
-### ~Scream canon ⭐⭐⭐ NEW MAJEUR
+### Rooster Crow canon name officiel ⭐⭐⭐ NEW MAJEUR (fandom CORRECTION wiki ~Scream)
 
-- **~Scream** = community approximation name (NOT canon)
+- **Rooster Crow** = canon name officiel fandom
+- "Crows causing a sound wave. This attack is magical in nature and can cause Fear" canon description fandom
 - Party-target AoE ability canon NEW MAJEUR
 - **1× Non-Elemental magic damage** (cohérent Flying Rat/Forest Runner Non-Elemental abilities canon récurrent)
 - **50% Fear chance** status proc canon NEW MAJEUR (M-AV reduces)
-- Pattern thematic : terrifying bird scream causing Fear canon
+- Pattern thematic : rooster sound-wave crowing causing Fear canon (cohérent appearance bird)
 
 ⭐⭐⭐ **M-AV reduces status proc canon 4ème instance MAJEUR** :
 

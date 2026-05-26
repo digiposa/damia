@@ -5093,6 +5093,36 @@
 
 - [ ] ⭐ **🆕 Escape 30% Disc 3 Evergreen Forest mobs pattern uniform (wiki) ⭐** — Forest Runner Escape 30% cohérent Dark Elf + Flying Rat 30% existing canon. Pattern Damia : Disc 3 Evergreen Forest escape rate uniform 30% canon récurrent 3ème instance. Source: idem.
 
+### Mobs / Forest Runner fandom complement — Peacock-like bird appearance NEW MAJEUR + Attack canon name (vs ~Piercing Beak wiki) + Wooing "charm + remove from combat + AI control loss" + Dispirit removable Dragoon form NEW MAJEUR + Recovery Ball random healing item NEW MAJEUR + Healing Fog Disc 3 shop + Kill Dark Elf FIRST partner-priority CONFIRMED + Earth weakness CONFIRMED + JP HP 450 +25% CONFIRMED + JP Gold 10 ÷3 + P/M Attack 50/50 fandom corrections + A-AV 120% IMPOSSIBLE 2ème instance + Encounter rate Common
+
+- [ ] ⭐⭐⭐ **🆕 Peacock-like bird appearance Forest Runner canon NEW MAJEUR (fandom) ⭐⭐⭐** — Forest Runner "highly resembles a peacock with its colorful feathers and body structure" canon. **2 long red legs + red talons + purple claws + red beak curved downward razor sharp pickaxe-like + Red/Green/Yellow feathers**. Pattern Damia : peacock-bird design canon Wind ground-runner. Cohérent existing wiki "Piercing Beak" community approximation = "pickaxe-like beak" canon design. À refléter sprite design Damia : peacock-bird red/green/yellow plumage canon. Source: [`features/mobs/_sources/fandom-forest-runner.md`](features/mobs/_sources/fandom-forest-runner.md).
+
+- [ ] ⭐⭐⭐ **🆕 Attack canon name officiel CORRECTION wiki ~Piercing Beak NEW (fandom) ⭐⭐⭐** — Wiki ~Piercing Beak = community approximation, fandom révèle canon name = **"Attack"** ("Lunges towards a single opponent, pecking them for medium physical damage"). Pattern partial-canon naming (cohérent existing récurrent pattern fandom > wiki approximations). Damia adopt **"Attack"** canon name + description "pecking" matches Piercing Beak thematic. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Wooing "charm + remove character from combat + AI control loss" canon explanation NEW MAJEUR (fandom) ⭐⭐⭐** — Quote canon : "It has the ability to **charm an enemy, effectively removing a character from combat in one shot, and making them a danger to themselves or the other party members as well**." Pattern Damia : **Bewitchment effect canon = character AI takes over + dangerous to party** NEW MAJEUR. Pattern thematic "charm" → AI control loss canon mechanic. À documenter `combat/status-effects.md` (à créer) — Bewitchment AI control loss canon explained. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Dispirit removable Dragoon form canon NEW MAJEUR (fandom) ⭐⭐⭐** — Quote canon : "Dispirit... can be removed by Body Purifier or **simply Dragoon form**". Pattern Damia : **Dragoon form cures status ailments canon** NEW MAJEUR (cohérent récurrent pattern). À documenter `dragoons/README.md` Dragoon form status cure canon + `combat/status-effects.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Recovery Ball = random healing item canon NEW MAJEUR (fandom) ⭐⭐⭐** — Recovery Ball **"randomly choses one of the many healing items"** canon : pool Healing Potion / Healing Breeze / Healing Fog / Healing Rain possibles via random pick. Pattern Damia : **Random Healing Item canon NEW MAJEUR** — Recovery Ball ≠ fixed effect, random pool selection. Implications design data-model `RandomHealingItem { pool: HealingItemId[] }` NEW. Farming time canon 15+ minutes. À documenter `items/Recovery Ball.md` (à créer) — random healing canon NEW MAJEUR. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Healing Fog Disc 3 shop availability canon NEW (fandom) ⭐⭐⭐** — Quote canon : "you now can buy Healing Fogs as of the start of this third disc". Pattern Damia : **Healing Fog Disc 3 shop availability canon** NEW MAJEUR (cohérent existing Evergreen Forest 5 mobs canon Moss Dresser drop Healing Fog). À documenter `items/Healing Fog.md` (à créer/vérifier) — Disc 3 shop availability canon + identifier shop Disc 3 vendant Healing Fog (Furni/Deningrad probable). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 "Kill Dark Elf FIRST" partner-priority canon CONFIRMED CROSS-SOURCE (fandom) ⭐⭐⭐** — Quote canon : "Kill the Elf first, since the Dark Elf can use Petrification Arrow **anytime**, while Forest Runner can only cast 'Wooing' when at **red health**". ✓ Cohérent fandom Flying Rat "far more dangerous" reference. Pattern Damia : **partner-priority kill canon** strategy guidance confirmed cross-source — Petrification (anytime) > Wooing (red HP only). À documenter `mobs/_strategy-guides.md` (à créer) — per-mob strategy hints canon récurrent. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Earth-element weakness canon CONFIRMED cross-source (fandom) ⭐⭐⭐** — Quote canon : "**earth-element spell items and want to utilize its elemental weakness**". Pattern Damia : Wind weak Earth canon TLoD elemental wheel confirmed cross-source. À refléter `combat/elements.md` cross-source confirmation Wind weak Earth canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 JP HP 450 +25% systematic CONFIRMED canon récurrent (fandom) ⭐⭐⭐** — wiki US 360 / fandom JP 450 = +25% ✓ systematic pattern. Pattern Damia : Forest Runner CONFIRMS +25% canon (vs Flying Rat +15% anomaly + Evil Spider +67% anomaly récents). Pattern Damia : JP HP per-mob scaling — Forest Runner respects systematic canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 P. Attack 50 / M. Attack 50 fandom CORRECTION wiki 45/44 MAJEUR DIVERGENCE (fandom) ⭐⭐⭐** — Wiki US 45 AT / 44 MAT vs fandom **50 AT / 50 MAT** = +11% / +14% systematic. Pattern Damia probable JP higher values (cohérent existing Dragonfly + Flying Rat fandom CORRECTION pattern récurrent JP higher). Damia adopt fandom 50/50 probable canon JP. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 A-AV 120% IMPOSSIBLE MECHANIC fandom anomaly 2ème instance (fandom) ⭐⭐⭐** — Wiki tier 2 A-AV 10% vs fandom "high Evasion rate, **with 120% A-AV**". ⚠️ Same impossible mechanic claim as Berserk Mouse A-AV 120% anomaly récent. Pattern récurrent fandom impossible A-AV >100% claim — **wiki tier 2 prevaut canonical 10%**. Pattern Damia : fandom approximation IMPOSSIBLE A-AV >100% canon documenté 2ème instance. À investiguer Discord/Wulves authoritative source. Source: idem.
+
+- [ ] ⭐⭐ **🆕 JP Gold 10 ÷3 CONFIRMED cross-source (fandom) ⭐⭐** — wiki US 30 / fandom JP 10 = ÷3 ✓ exact pattern Damia canon récurrent confirmed. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Encounter rate "Common" canon Forest Runner (fandom) ⭐⭐** — Forest Runner encounter rate = "Common" tier canon. Pattern Damia : Evergreen Forest Common tier mob canon (8 encounter rate fandom numeric — to clarify formula). À documenter `combat/encounter-rates.md` (à créer) — encounter rate tier system canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 "Use melee + magical attacks far less effective" strategy guidance canon (fandom) ⭐⭐** — Fandom strategy : "magical attacks are far less effective than physical attacks so try to use melee". Pattern Damia : strategy guidance par-mob canon récurrent (cohérent Flying Rat MDF 120 strategy "Additions more efficient"). À documenter `mobs/_strategy-guides.md` (à créer). Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

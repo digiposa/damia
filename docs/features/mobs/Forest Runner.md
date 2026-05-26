@@ -1,6 +1,34 @@
 # Forest Runner — Mob Wind Evergreen Forest (Disc 3 Mille Seseau)
 
-> **Mob Wind element Evergreen Forest Disc 3 Mille Seseau** — Flying Rat partner formation 136 + Dark Elf partner 137 + Moss Dresser partner 139. **AI 3-phase canon NEW MAJEUR avec progressive trigger overlap** (Piercing Beak >50% → Menacing 25-50% + Wooing ≤50% → Wooing only ≤25%). Stat-archetype **physical-leaning** (AT 45 > MAT 44 — vs Flying Rat magic-leaning partner). 4 formations Evergreen Forest submaps 339-345 + 6 World Map roads Mille Seseau (asymmetric Mountain Mortal Dragon canon).
+> **Mob Wind element Evergreen Forest Disc 3 Mille Seseau** — Flying Rat partner formation 136 + Dark Elf partner 137 + Moss Dresser partner 139. **Peacock-like bird** appearance canon (red/green/yellow feathers + long red legs + purple claws + razor-sharp pickaxe-like red beak — fandom NEW MAJEUR). **AI 3-phase canon NEW MAJEUR avec progressive trigger overlap** (Attack >50% → Menacing 25-50% + Wooing ≤50% → Wooing only ≤25%). Stat-archetype **physical-leaning** (AT 50 > MAT 50 fandom CORRECTION wiki 45/44 — pattern récurrent JP higher values). 4 formations Evergreen Forest submaps 339-345 + 6 World Map roads Mille Seseau (asymmetric Mountain Mortal Dragon canon).
+>
+> ⭐⭐⭐ **Peacock-like bird appearance canon NEW MAJEUR (fandom) ⭐⭐⭐** — Forest Runner "highly resembles a peacock with its colorful feathers and body structure" canon. **2 long red legs + red talons + purple claws + red beak curved downward razor sharp pickaxe-like + Red/Green/Yellow feathers**. Pattern Damia : peacock-bird design canon Wind ground-runner. Cohérent existing wiki "Piercing Beak" community approximation = "pickaxe-like beak" canon design.
+>
+> ⭐⭐⭐ **Attack canon name officiel (vs ~Piercing Beak wiki community) NEW (fandom) ⭐⭐⭐** — Wiki ~Piercing Beak = community approximation, fandom révèle canon name = simplement **"Attack"** ("Lunges towards a single opponent, pecking them for medium physical damage"). Pattern partial-canon naming (cohérent existing récurrent pattern fandom > wiki approximations). Description fandom "pecking" matches Piercing Beak thematic mais nom canon = "Attack".
+>
+> ⭐⭐⭐ **Wooing "charm + remove character from combat" explanation canon NEW MAJEUR (fandom) ⭐⭐⭐** — Quote canon : "It has the ability to **charm an enemy, effectively removing a character from combat in one shot, and making them a danger to themselves or the other party members as well**." Pattern Damia : **Bewitchment effect canon = character AI takes over + dangerous to party** NEW MAJEUR. Pattern thematic "charm" → AI control loss canon mechanic. À documenter `combat/status-effects.md` (à créer) — Bewitchment AI control loss canon.
+>
+> ⭐⭐⭐ **Dispirit removable Dragoon form canon NEW MAJEUR (fandom) ⭐⭐⭐** — Quote canon : "Dispirit... can be removed by Body Purifier or **simply Dragoon form**". Pattern Damia : **Dragoon form cures status ailments canon** NEW MAJEUR (cohérent récurrent pattern). À documenter `dragoons/README.md` Dragoon form status cure canon + `combat/status-effects.md` (à créer).
+>
+> ⭐⭐⭐ **JP HP 450 +25% systematic CONFIRMED canon récurrent (fandom) ⭐⭐⭐** — wiki US 360 / fandom JP 450 = +25% ✓ systematic pattern. Pattern Damia : Forest Runner CONFIRMS +25% canon (vs Flying Rat +15% anomaly + Evil Spider +67% anomaly récents). Pattern Damia : JP HP per-mob scaling — Forest Runner respects systematic canon.
+>
+> ⭐⭐⭐ **JP Gold 10 ÷3 systematic CONFIRMED (fandom) ⭐⭐⭐** — wiki US 30 / fandom JP 10 = ÷3 ✓ exact pattern Damia canon récurrent confirmed.
+>
+> ⭐⭐⭐ **P. Attack 50 / M. Attack 50 fandom CORRECTION wiki 45/44 ⚠️ MAJEUR DIVERGENCE (fandom) ⭐⭐⭐** — Wiki US 45 AT / 44 MAT vs fandom **50 AT / 50 MAT** = +11% / +14% systematic. Pattern Damia probable JP higher values (cohérent existing Dragonfly + Flying Rat fandom CORRECTION pattern récurrent JP higher). Damia adopt fandom 50/50 probable canon JP.
+>
+> ⭐⭐⭐ **A-AV 120% fandom claim ⚠️⚠️ IMPOSSIBLE MECHANIC ANOMALY (fandom) ⭐⭐⭐** — Wiki tier 2 A-AV 10% vs fandom "high Evasion rate, **with 120% A-AV**". ⚠️ Same impossible mechanic claim as Berserk Mouse A-AV 120% anomaly récent. Pattern récurrent fandom impossible A-AV 120% claim — **wiki tier 2 prevaut canonical 10%**. À investiguer Discord/Wulves authoritative — pattern fandom approximation IMPOSSIBLE A-AV >100% canon documenté 2ème instance.
+>
+> ⭐⭐⭐ **Encounter rate "Common" canon (fandom) ⭐⭐⭐** — Forest Runner encounter rate = "Common" tier canon. Pattern Damia : Evergreen Forest Common tier mob canon (8 encounter rate fandom numeric — to clarify formula).
+>
+> ⭐⭐⭐ **Recovery Ball = random healing item canon NEW MAJEUR (fandom) ⭐⭐⭐** — Recovery Ball **"randomly choses one of the many healing items"** canon : Healing Potion / Healing Breeze / Healing Fog / Healing Rain possibles via random pick. Pattern Damia : **Random Healing Item canon NEW MAJEUR** — Recovery Ball ≠ fixed effect, random pool selection. Implications design data-model `RandomHealingItem { pool: HealingItemId[] }` NEW. Farming time canon 15+ minutes. À documenter `items/Recovery Ball.md` (à créer) — random healing canon NEW MAJEUR.
+>
+> ⭐⭐⭐ **Healing Fog available start Disc 3 canon NEW (fandom) ⭐⭐⭐** — Quote canon : "you now can buy Healing Fogs as of the start of this third disc". Pattern Damia : **Healing Fog Disc 3 shop availability canon** NEW MAJEUR (cohérent existing Evergreen Forest 5 mobs canon Moss Dresser drop Healing Fog). À documenter `items/Healing Fog.md` (à créer/vérifier) — Disc 3 shop availability canon.
+>
+> ⭐⭐⭐ **"Kill Dark Elf FIRST" partner-priority canon CONFIRMED CROSS-SOURCE (fandom) ⭐⭐⭐** — Quote canon : "Kill the Elf first, since the Dark Elf can use Petrification Arrow **anytime**, while Forest Runner can only cast 'Wooing' when at **red health**". ✓ Cohérent fandom Flying Rat "far more dangerous" reference. Pattern Damia : **partner-priority kill canon** strategy guidance confirmed cross-source — Petrification (anytime) > Wooing (red HP only).
+>
+> ⭐⭐⭐ **Earth-element weakness canon CONFIRMED (fandom) ⭐⭐⭐** — Quote canon : "**earth-element spell items and want to utilize its elemental weakness**". Pattern Damia : Wind weak Earth canon TLoD elemental wheel confirmed cross-source.
+>
+> ⭐⭐⭐ **Wooing canon name 100% Bewitchment NEW MAJEUR ⭐⭐⭐** — Fandom Flying Rat referenced "Wooing attack far more dangerous" — now confirmed wiki canon. **Wooing = 1× Non-Elemental magic damage + 100% Bewitchment chance** (M-AV reduces). Pattern thematic "seduction" Wooing → Bewitchment effect cohérent canon design. Pattern Damia : Wooing = **highest-threat ability Forest Runner** canon (cohérent "far more dangerous" warning fandom Flying Rat).
 >
 > ⭐⭐⭐ **Wooing canon name 100% Bewitchment NEW MAJEUR ⭐⭐⭐** — Fandom Flying Rat referenced "Wooing attack far more dangerous" — now confirmed wiki canon. **Wooing = 1× Non-Elemental magic damage + 100% Bewitchment chance** (M-AV reduces). Pattern thematic "seduction" Wooing → Bewitchment effect cohérent canon design. Pattern Damia : Wooing = **highest-threat ability Forest Runner** canon (cohérent "far more dangerous" warning fandom Flying Rat).
 >
@@ -45,35 +73,37 @@
 > **Sources** :
 >
 > - 🥈 [`_sources/lod-wiki-forest-runner.md`](./_sources/lod-wiki-forest-runner.md) — wiki LoD tier 2 (Wind element + Counter 28 high-density 15 combos détaillés + Stats 360/45/80/44/120/80 + A-AV 10% / M-AV 0% + Status 4/4 standard + Yield 88 EXP / 30 Gold / Recovery Ball 8% NEW + AI 3-phase ~Piercing Beak / **Menacing 50% Dispirit NEW MAJEUR** / **Wooing 100% Bewitchment NEW MAJEUR** + **Non-Elemental magic damage NEW MAJEUR** + **M-AV reduces status chance canon 3ème instance** + 4 formations Evergreen Forest 339-345 + **6 World Map roads Mille Seseau** + **Asymmetric Mountain Mortal Dragon encounter canon 2ème instance** + Escape 30%)
+> - 🥉 [`_sources/fandom-forest-runner.md`](./_sources/fandom-forest-runner.md) — fandom tier 3 (⭐ **Peacock-like bird appearance canon NEW MAJEUR** red/green/yellow feathers + long red legs + purple claws + pickaxe beak + ⭐ **Attack canon name officiel vs ~Piercing Beak wiki** + ⭐ **JP HP 450 +25% systematic CONFIRMED canon récurrent** + ⭐ **JP Gold 10 ÷3 CONFIRMED** + ⭐ **P. Attack 50 / M. Attack 50 CORRECTION wiki 45/44 +11%/+14%** + ⭐ **A-AV 120% IMPOSSIBLE MECHANIC fandom claim 2ème instance** vs wiki 10% canonical + ⭐ **Wooing "charm + remove character from combat" AI control loss canon NEW MAJEUR** + ⭐ **Dispirit removable Dragoon form canon NEW MAJEUR** + ⭐ **Recovery Ball = random healing item canon NEW MAJEUR** pool Healing Potion/Breeze/Fog/Rain + ⭐ **Healing Fog Disc 3 shop availability canon NEW** + ⭐ **Kill Dark Elf first partner-priority canon CONFIRMED CROSS-SOURCE** Petrification anytime vs Wooing red HP only + ⭐ **Earth-element weakness canon CONFIRMED** + ⭐ **Encounter rate Common canon** + ⭐ **Magic less effective recommendation "use melee"** strategy guidance MDF 120 cohérent)
 
 ## Statut
 
-🟡 **Canon documenté wiki tier 2 uniquement** — fandom à ingérer future (HP US/JP confirmation + appearance + JP name + ability canon names confirmation + Wooing thematic depth).
+🟢 **Canon cross-source confirmed wiki tier 2 + fandom tier 3** — Sources convergent location/element/yield/MDF/3-phase AI/Status 4/4/4 formations. Fandom révèle MAJEUR : Peacock-like bird appearance canon + Attack canon name (vs ~Piercing Beak wiki) + Wooing "charm + remove from combat AI control loss" + Dispirit removable Dragoon form canon + Recovery Ball random healing item canon + Healing Fog Disc 3 availability + Kill Dark Elf first partner-priority CONFIRMED + Earth weakness CONFIRMED + JP HP 450 +25% systematic CONFIRMED canon + JP Gold 10 ÷3 + P/M Attack +11%/14% fandom corrections + A-AV 120% IMPOSSIBLE MECHANIC anomaly 2ème instance pattern fandom approximation impossible.
 
 ## Identity canon ⭐⭐⭐
 
 - **Nom** : Forest Runner
-- **Espèce** : Probable bird-like ground runner (Piercing Beak ability suggère beak/bec) — to confirm fandom appearance
+- **Espèce** : **Peacock-like bird** canon (fandom NEW MAJEUR) — red/green/yellow colorful feathers + 2 long red legs + red talons + purple claws + razor-sharp red beak curved downward (pickaxe-like)
 - **Element** : **Wind** ⭐ (cohérent Flying Rat partner Wind formation 136)
 - **Location canon** : **Evergreen Forest** (Disc 3 Mille Seseau central woodland) submaps 339-345 + 6 World Map roads Mille Seseau
 - **Disc** : Disc 3 Mille Seseau region
 - **Type** : Minor Enemy canon
-- **Pattern thematic** : ground-running Wind mob forest temperate biome — physical-leaning archetype vs Flying Rat magic-leaning
+- **Encounter rate** : **Common** (fandom canon)
+- **Pattern thematic** : peacock-like ground-running Wind mob forest temperate biome — physical-leaning archetype vs Flying Rat magic-leaning
 
 ## Stats canon
 
-| Stat | Value | Notes                                                                 |
-| ---- | ----- | --------------------------------------------------------------------- |
-| HP   | 360   | Mid-tier Evergreen Forest (vs Flying Rat 260 low / Dark Elf 450 high) |
-| AT   | 45    | **AT 45 > MAT 44** = slightly physical-leaning archetype              |
-| DF   | 80    | Moderate defense                                                      |
-| MAT  | 44    | Lower than AT (slight magic-secondary)                                |
-| MDF  | 120   | High magic defense (cohérent Forest MDF 120 mystery design canon)     |
-| SPD  | 80    | High speed (cohérent "Runner" thematic — ground-running fast canon)   |
-| A-AV | 10%   | Lower than Flying Rat 20% (ground-running canon design)               |
-| M-AV | 0%    | No magic avoidance                                                    |
+| Stat | Wiki (US) | Fandom             | Damia adopté                                                                             |
+| ---- | --------- | ------------------ | ---------------------------------------------------------------------------------------- |
+| HP   | 360       | 360/450 JP         | **360 US / 450 JP** ✓ cross-source (+25% systematic CONFIRMED canon récurrent)           |
+| AT   | 45        | **50**             | **50 fandom** (+11% probable JP canon — cohérent Dragonfly/Flying Rat pattern récurrent) |
+| DF   | 80        | 80                 | **80** ✓ match                                                                           |
+| MAT  | 44        | **50**             | **50 fandom** (+14% probable JP canon)                                                   |
+| MDF  | 120       | 120                | **120** ✓ match (High MDF Forest mystery canon récurrent)                                |
+| SPD  | 80        | 80                 | **80** ✓ match (cohérent "Runner" thematic — ground-running fast canon)                  |
+| A-AV | 10%       | ⚠️ 120% IMPOSSIBLE | **10% wiki canonical** (fandom 120% = impossible mechanic anomaly 2ème instance)         |
+| M-AV | 0%        | —                  | **0% wiki**                                                                              |
 
-→ Pattern : **AT 45 > MAT 44** = **physical-leaning archetype** canon. **High SPD 80** cohérent "Runner" name thematic. **A-AV 10% ground-running** lower canon. **MDF 120 high** cohérent Forest mobs MDF 120 mystery design canon récurrent.
+→ Pattern : **AT 50 = MAT 50** (fandom) = **balanced stat archetype** canon (vs wiki 45/44 légèrement physical-leaning). **High SPD 80** cohérent "Runner" name thematic + peacock-like bird design canon. **MDF 120 high** cohérent Forest mobs MDF 120 mystery design canon récurrent. ⚠️ **A-AV 120% fandom = impossible mechanic anomaly 2ème instance** (cohérent Berserk Mouse anomaly récent) — wiki 10% canonical prioritaire.
 
 ## Status Immunity canon ⭐ standard 4/4
 
@@ -90,11 +120,11 @@ Pattern **standard Minor Enemy 4/4** canon (cohérent Forest Disc 1 mobs + Everg
 - Pattern Damia : **mob immune to status it inflicts canon thematic** (cohérent self-immunity design pattern)
 - À cross-check autres mobs canon (potential systematic pattern)
 
-## Yield canon
+## Yield canon (cross-source confirmed)
 
 - **EXP : 88** (mid-tier reward Evergreen Forest — vs Flying Rat 64 / Dark Elf 80)
-- **Gold : 30** (US / JP probable ÷3 = 10 à confirmer fandom)
-- **Drop : Recovery Ball 8%** — Repeat Item drop canon NEW (HP-restore probable canon)
+- **Gold : 30 US / 10 JP** ✓ ÷3 systematic CONFIRMED cross-source canon récurrent
+- **Drop : Recovery Ball 8%** — ⭐⭐⭐ **Random Healing Item canon NEW MAJEUR fandom** : "randomly chooses one of the many healing items" — pool Healing Potion / Healing Breeze / Healing Fog / Healing Rain. NOT fixed effect canon. Farming time 15+ minutes canon. Healing Fog available start Disc 3 shop canon NEW.
 
 ## Counter Opportunities ⭐⭐ 28 high-density (4ème instance)
 
@@ -102,13 +132,13 @@ Pattern **standard Minor Enemy 4/4** canon (cohérent Forest Disc 1 mobs + Everg
 
 15 button-press combos identiques Flying Rat — pattern **shared Counter combos canon partners formation 136** probable.
 
-## AI canon (3-phase progressive trigger overlap NEW MAJEUR) ⭐⭐⭐
+## AI canon (3-phase progressive trigger overlap NEW MAJEUR) ⭐⭐⭐ — révision fandom
 
-| HP           | Action         | Target | Effect                                                                | Notes                                       |
-| ------------ | -------------- | ------ | --------------------------------------------------------------------- | ------------------------------------------- |
-| > 50%        | ~Piercing Beak | Single | 1× Physical damage (community approximation name)                     |                                             |
-| ≤ 50%, > 25% | **Menacing**   | Single | **1× Non-Elemental magic damage + 50% Dispirit chance** ⚠️ NEW MAJEUR | Target's M-AV reduces chance status ailment |
-| ≤ 50%        | **Wooing**     | Single | **1× Non-Elemental magic damage + 100% Bewitchment** ⚠️ NEW MAJEUR    | Target's M-AV reduces chance status ailment |
+| HP           | Action       | Target | Effect                                                                                                                                                       | Notes                                       |
+| ------------ | ------------ | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------- |
+| > 50%        | **Attack**   | Single | 1× Physical damage (canon name officiel fandom — "lunges + pecks") — wiki ~Piercing Beak = community approximation                                           |                                             |
+| ≤ 50%, > 25% | **Menacing** | Single | **1× Non-Elemental magic damage + 50% Dispirit chance** ⚠️ NEW MAJEUR                                                                                        | Target's M-AV reduces chance status ailment |
+| ≤ 50%        | **Wooing**   | Single | **1× Non-Elemental magic damage + 100% Bewitchment** ⚠️ NEW MAJEUR — **"charm + remove character from combat + danger to self/party" AI control loss canon** | Target's M-AV reduces chance status ailment |
 
 ⭐⭐⭐ **AI 3-phase canon progressive trigger overlap NEW MAJEUR** :
 
@@ -187,39 +217,52 @@ Pattern Damia : **progressive trigger overlap canon** AI design NEW (NOT simple 
 3. Counter mechanism (Counter Opportunities 28 high-density tier — 15 combos détaillés identiques Flying Rat)
 4. Escape 30% player accessibility moderate Disc 3 forest pattern
 
-### Strategy canon recommandée
+### Strategy canon recommandée (révision fandom cross-source)
 
-- **Wind mob weak to Earth element** (canon TLoD elemental wheel)
-- ⭐⭐⭐ **Burst-kill priority HP > 50%** = prévenir Menacing/Wooing phase (Bewitchment 100% catastrophic — character lost control canon)
-- **High MDF 120 → Additions more efficient vs magic spells** canon (cohérent Flying Rat strategy guidance fandom)
+- ⭐⭐⭐ **Wind mob weak to Earth element CONFIRMED cross-source** (fandom : "earth-element spell items utilize elemental weakness")
+- ⭐⭐⭐ **Burst-kill priority HP > 50%** = prévenir Menacing/Wooing phase (Bewitchment 100% = **"charm + remove character from combat + danger to self/party" AI control loss canon**)
+- ⭐⭐⭐ **"Use melee + magical attacks far less effective" canon fandom** (cohérent MDF 120 Forest mystery design canon)
+- ⭐⭐⭐ **Kill Dark Elf FIRST formation 137 CONFIRMED cross-source** : Petrification Arrow anytime vs Wooing red HP only — partner-priority canon
 - **M-AV stacking strategy** = reduce Wooing/Menacing status proc chance canon récurrent
-- **A-AV 10% low** = physical attacks reliably hit
+- ⭐⭐⭐ **Dispirit removable via Body Purifier OR Dragoon form canon NEW MAJEUR** — Dragoon form cures status canon récurrent confirmed
+- **A-AV 10% low (wiki canonical)** = physical attacks reliably hit
 - **High SPD 80** = Forest Runner often first-strike pattern canon
 - ⭐⭐⭐ **Wooing 100% Bewitchment = priority threat** canon fandom "far more dangerous" confirmed
 - Counter Opportunities 28 = nombreux trigger windows pour player Additions
+- ⭐⭐⭐ **Recovery Ball farming 15+ min canon** mais effet random pool (gamble healing item)
 
 ## Vision Damia (implémentation)
 
-### Décisions canon à conserver
+### Décisions canon à conserver (révision fandom cross-source)
 
-1. **Stats canon wiki** : HP 360 / AT 45 / DF 80 / MAT 44 / MDF 120 / SPD 80 / A-AV 10% / M-AV 0%
+1. **Stats canon Damia adopt fandom** : HP 360 US / **450 JP** ✓ +25% systematic CONFIRMED / **AT 50** (fandom +11% vs wiki 45) / DF 80 / **MAT 50** (fandom +14% vs wiki 44) / MDF 120 / SPD 80 / A-AV 10% wiki canonical (⚠️ fandom 120% impossible) / M-AV 0%
 2. **Wind element canon** : tagging mob Damia Wind
-3. ⭐⭐⭐ **AI 3-phase progressive trigger overlap canon NEW MAJEUR** : Piercing Beak >50% / Menacing+Wooing 25-50% / Wooing only ≤25%
-4. ⭐⭐⭐ **Menacing canon name officiel + 50% Dispirit** NEW MAJEUR
-5. ⭐⭐⭐ **Wooing canon name officiel + 100% Bewitchment** NEW MAJEUR
-6. ⭐⭐⭐ **Non-Elemental magic damage Forest Runner abilities** canon NEW
-7. ⭐⭐⭐ **M-AV reduces status proc canon 3ème instance** confirmed récurrent
-8. ⭐⭐⭐ **Physical-leaning archetype** (AT 45 > MAT 44) vs Flying Rat magic-leaning partner diversity canon
-9. ⭐⭐⭐ **Self-immunity to inflicted status canon thematic** (Bewitch immune + inflicts Bewitchment / Dispirit immune + inflicts Dispirit)
-10. ⭐⭐⭐ **6 World Map roads Mille Seseau canon** identique Flying Rat (dual mob hub)
-11. ⭐⭐⭐ **Asymmetric road encounter Mountain Mortal Dragon → Evergreen excluded** canon CONFIRMED 2ème instance
-12. **Counter 28 universal multi-disc tier** 4ème instance CONFIRMED (15 combos identiques Flying Rat)
-13. **Status 4/4 standard Minor Enemy** canon
-14. **Recovery Ball 8% drop** NEW Repeat Item canon
-15. **Escape 30% Disc 3 Evergreen Forest** pattern
-16. **4 formations Evergreen Forest** : solo / + Flying Rat / + Dark Elf / ×2+Moss Dresser
-17. **Submap 340 Forest Runner hotspot** canon
-18. **High SPD 80 ground-running fast** thematic canon
+3. ⭐⭐⭐ **Peacock-like bird appearance canon NEW MAJEUR (fandom)** : red/green/yellow feathers + 2 long red legs + red talons + purple claws + pickaxe red beak
+4. ⭐⭐⭐ **Attack canon name officiel fandom** (vs ~Piercing Beak wiki community) : 1× phys single >50%
+5. ⭐⭐⭐ **AI 3-phase progressive trigger overlap canon NEW MAJEUR** : Attack >50% / Menacing+Wooing 25-50% / Wooing only ≤25%
+6. ⭐⭐⭐ **Menacing canon name officiel + 50% Dispirit** NEW MAJEUR
+7. ⭐⭐⭐ **Wooing canon name officiel + 100% Bewitchment** NEW MAJEUR + **"charm + remove character from combat + AI control loss" canon explanation**
+8. ⭐⭐⭐ **Non-Elemental magic damage Forest Runner abilities** canon NEW
+9. ⭐⭐⭐ **M-AV reduces status proc canon 3ème instance** confirmed récurrent
+10. ⭐⭐⭐ **JP HP 450 +25% systematic CONFIRMED canon récurrent (fandom)** — Forest Runner respects systematic pattern (vs récents Flying Rat/Evil Spider anomalies)
+11. ⭐⭐⭐ **JP Gold 10 ÷3 CONFIRMED cross-source** (canon récurrent confirmed)
+12. ⭐⭐⭐ **Dispirit removable Dragoon form canon NEW MAJEUR (fandom)** : Dragoon form cures status canon
+13. ⭐⭐⭐ **Recovery Ball random healing item canon NEW MAJEUR (fandom)** : pool Healing Potion/Breeze/Fog/Rain — NOT fixed effect
+14. ⭐⭐⭐ **Healing Fog Disc 3 shop availability canon NEW (fandom)**
+15. ⭐⭐⭐ **Kill Dark Elf FIRST partner-priority canon CONFIRMED cross-source (fandom)** : Petrification anytime vs Wooing red HP only
+16. ⭐⭐⭐ **Earth-element weakness CONFIRMED cross-source (fandom)**
+17. ⭐⭐⭐ **Encounter rate "Common" canon (fandom)**
+18. ⭐⭐⭐ **Self-immunity to inflicted status canon thematic** (Bewitch immune + inflicts Bewitchment / Dispirit immune + inflicts Dispirit)
+19. ⭐⭐⭐ **6 World Map roads Mille Seseau canon** identique Flying Rat (dual mob hub)
+20. ⭐⭐⭐ **Asymmetric road encounter Mountain Mortal Dragon → Evergreen excluded** canon CONFIRMED 2ème instance
+21. **Counter 28 universal multi-disc tier** 4ème instance CONFIRMED (15 combos identiques Flying Rat)
+22. **Status 4/4 standard Minor Enemy** canon
+23. **Recovery Ball 8% drop** NEW Repeat Item canon
+24. **Escape 30% Disc 3 Evergreen Forest** pattern
+25. **4 formations Evergreen Forest** : solo / + Flying Rat / + Dark Elf / ×2+Moss Dresser
+26. **Submap 340 Forest Runner hotspot** canon
+27. **High SPD 80 ground-running fast** thematic canon
+28. ⚠️ **A-AV 120% fandom IMPOSSIBLE MECHANIC 2ème instance anomaly** (wiki 10% canonical prioritaire — cohérent Berserk Mouse pattern récurrent fandom impossible)
 
 ### Implementation tech
 
@@ -252,14 +295,16 @@ Pattern Damia : **progressive trigger overlap canon** AI design NEW (NOT simple 
 
 ### Questions ouvertes
 
-- ⭐⭐⭐ **Forest Runner appearance canon** : Piercing Beak suggère bird-like — à confirmer fandom (bird/avian creature ? ostrich-like ? raptor ?).
+- ⭐⭐⭐ **A-AV 120% fandom IMPOSSIBLE MECHANIC anomaly** : 2ème instance (Berserk Mouse + Forest Runner). À investiguer Discord/Wulves source authoritative — pattern fandom approximation impossible mechanic récurrent.
 - ⭐⭐⭐ **3-phase AI trigger overlap mechanic canon** : à confirmer Discord/Wulves — confirmation logic ≤25% Wooing only vs 25-50% both eligible.
 - ⭐⭐⭐ **Self-immunity inflicted status pattern systematic ?** : autres mobs avec same pattern canon ? À cross-check récurrent.
 - ⭐⭐⭐ **Non-Elemental magic damage abilities pattern systematic ?** : autres mobs Non-Elemental abilities ? À cross-check.
-- ⭐⭐ **JP stats Forest Runner** : HP/Gold confirmations fandom future.
+- ⭐⭐⭐ **Recovery Ball random pool selection logic canon** : random uniform ? weighted ? RNG seed ? À investiguer Discord — implications data-model `RandomHealingItem { pool: [], weights?: [] }`.
+- ⭐⭐ **Bewitchment AI control loss mechanic canon** : "danger to self/party" — à confirmer Discord exact AI behavior (random target ? specific attack ? party-only ?).
 - ⭐⭐ **Moss Dresser partner canon** : Earth Evergreen Forest mob — à ingérer future.
 - ⭐⭐ **Wooing 100% Bewitchment design intent** : pourquoi 100% guaranteed proc ? Boss-tier-like Minor Enemy canon design ?
-- ⭐ **Recovery Ball item canon** : HP-restore Repeat Item — à confirmer fandom + `items/Recovery Ball.md` (à créer).
+- ⭐⭐ **Wounded Bear ingestion future** : 5ème mob Evergreen Forest canon — à ingérer.
+- ⭐ **Healing Fog Disc 3 shop location canon** : quel shop Disc 3 Mille Seseau vend Healing Fog ? À investiguer (Furni/Deningrad probable).
 - ⭐ **JP name Forest Runner** : à confirmer fandom future.
 
 ## Liens transverses

@@ -30,8 +30,6 @@
 >
 > ⭐⭐⭐ **4 elements diversity Minor Enemies canon NEW MAJEUR ⭐⭐⭐** — Forest = **only Disc 1 area with 4 elements représentés** : Berserk Mouse (Darkness) + Assassin Cock (Wind) + Trent (Earth) + Goblin (Fire). Pattern Damia : **tutorial elements area canon** — Disc 1 first dungeon exposes player aux 4 éléments majeurs (cohérent Merchant tutorial Elements canon).
 >
-> ⭐⭐⭐ **4 elements diversity Minor Enemies canon NEW MAJEUR ⭐⭐⭐** — Forest = **only Disc 1 area with 4 elements représentés** : Berserk Mouse (Darkness) + Assassin Cock (Wind) + Trent (Earth) + Goblin (Fire). Pattern Damia : **tutorial elements area canon** — Disc 1 first dungeon exposes player aux 4 éléments majeurs (cohérent Merchant tutorial Elements canon).
->
 > ⭐⭐⭐ **Goblin Fire element + Detonate Rock 10% drop canon CONFIRMED ⭐⭐⭐** — ✓ Cohérent existing TODO mention Goblin=Fire element. NEW MAJEUR canon : Detonate Rock 10% drop reveal canon Disc 1 Fire mob. Pattern Damia : Fire Repeat Item drop pattern récurrent Fire mobs Disc 1.
 >
 > ⭐⭐⭐ **Trent Earth element + Pellet 10% drop canon NEW MAJEUR ⭐⭐⭐** — Trent = Earth element (cohérent existing TODO mention Trent=Earth). NEW canon : Pellet 10% drop reveal canon Disc 1 Earth mob. Pattern Damia : Pellet = Earth-elemental Repeat Item canon NEW probable.

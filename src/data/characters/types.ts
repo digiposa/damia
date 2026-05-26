@@ -162,8 +162,17 @@ export interface DragoonArchetype {
 /** Sprite bundle for one combat form (base or dragoon). */
 export interface AvatarSpriteForm {
   idle: AssetAlias;
+  /** Static attack pose. Always set — drives the Sprite component's
+   *  `attackTextureAlias` (single-frame fallback when no
+   *  `attackFrames` are declared). */
   attack: AssetAlias;
   defend: AssetAlias;
+  /** Optional multi-frame basic attack animation. When present,
+   *  RenderSystem splits the AttackSwing duration evenly across the
+   *  array (mirrors the addition frame logic). Single source of
+   *  truth on the avatar — no caching on Sprite, so Story-mode swaps
+   *  and skin variants pick up the right frames automatically. */
+  attackFrames?: ReadonlyArray<AssetAlias>;
   /** Optional per-addition frame sequences (e.g. Dart's Double
    *  Slash second-hit frame). Slug → ordered alias list. Empty
    *  map falls back to the attack texture. */

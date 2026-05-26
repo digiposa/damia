@@ -15,7 +15,24 @@ const MANIFEST = {
   // Dart sprite (M8) — central hero shot extracted from `jau5sf...png` via rembg.
   'sprite.player.dart': { kind: 'texture', url: '/assets/sprites/player/dart.png' },
   // Attack pose used during AttackSwing — central hero shot from `htn4pr...png`.
+  // Kept as static fallback for the Sprite.attackTextureAlias field; the live
+  // 3-frame sequence below drives the actual swing animation via RenderSystem.
   'sprite.player.dart.attack': { kind: 'texture', url: '/assets/sprites/player/dart-attack.png' },
+  // 3-frame basic attack animation (stance → wind-up → slash). RenderSystem
+  // splits AttackSwing duration evenly across the array — frame 0 first
+  // third, frame 1 middle, frame 2 final third with motion-arc VFX trail.
+  'sprite.player.dart.attack.1': {
+    kind: 'texture',
+    url: '/assets/sprites/player/dart-attack-1-stance.png',
+  },
+  'sprite.player.dart.attack.2': {
+    kind: 'texture',
+    url: '/assets/sprites/player/dart-attack-2-windup.png',
+  },
+  'sprite.player.dart.attack.3': {
+    kind: 'texture',
+    url: '/assets/sprites/player/dart-attack-3-slash.png',
+  },
   // Defend pose held while the Defending component is present.
   'sprite.player.dart.defend': { kind: 'texture', url: '/assets/sprites/player/dart-defend.png' },
   // Double Slash 2nd-hit pose. The 1st hit reuses sprite.player.dart.attack.

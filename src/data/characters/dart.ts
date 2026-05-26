@@ -14,8 +14,19 @@ export const DART: CharacterAvatar = {
   sprite: {
     base: {
       idle: 'sprite.player.dart',
+      // Static fallback for the Sprite component's attackTextureAlias.
+      // The actual swing animation uses `attackFrames` below.
       attack: 'sprite.player.dart.attack',
       defend: 'sprite.player.dart.defend',
+      // 3-frame basic attack animation (TEST 2026-05-26). RenderSystem
+      // splits the AttackSwing duration evenly: stance for the first
+      // third, wind-up for the middle, slash with motion-arc trail for
+      // the final third. Sprites live in /public/assets/sprites/player/.
+      attackFrames: [
+        'sprite.player.dart.attack.1',
+        'sprite.player.dart.attack.2',
+        'sprite.player.dart.attack.3',
+      ],
       additions: {
         // Double Slash: 1st hit reuses the attack pose, 2nd hit
         // uses the dedicated sprite. RenderSystem swaps frames by

@@ -4819,6 +4819,36 @@
 
 - [ ] ⭐ **🆕 Save points 2 + 1 Vanishing Stone gated Flanvel Tower (wiki) ⭐** — Save Point 1 (tree hollow Area 5) + Save Point 2 (3-teleporter room Area 9 Vanishing Stone gated). Pattern Damia : save point gated canon NEW (cohérent Vanishing Stone gating). Source: idem.
 
+### Locations / Tower of Flanvel fandom complement — Wingly origin CONFIRMED MAJEUR + 108 races plan Emperor Diaz + Vanishing Stone origin Melbu Frahma + Spear Shooter Vellweb + Faust Commander 11,000 years + Land of Taboo + Story Disc 3/4 + JP stats 4 mobs CONFIRMED
+
+- [ ] ⭐⭐⭐ **🆕 Wingly origin CONFIRMED + suppression non-Winglies pre-Dragon Campaign canon NEW MAJEUR (fandom) ⭐⭐⭐** — "Ancient mobile fort of the Winglies, used in suppression and extermination of non-Winglies BEFORE the Dragon Campaign" canon NEW MAJEUR (oppression era pre-Dragon Campaign lore). Pattern Damia : Wingly anti-Human warfare canon pré-Dragon Campaign. Cohérent existing canon Wingly era + Tower of Flanvel "floated in sky like Wingly cities". À documenter `lore/wingly-era.md` (à créer) — oppression era canon. Source: [`features/locations/_sources/fandom-tower-of-flanvel.md`](features/locations/_sources/fandom-tower-of-flanvel.md).
+
+- [ ] ⭐⭐⭐ **🆕 108 races plan Emperor Diaz canon NEW MAJEUR (fandom) ⭐⭐⭐** — Lloyd quote canon : "**Humans = 106th in the plan / Winglies = 107th / 108th evolution = utopia final species**" canon. Pattern Damia : Soa great will + Divine Tree flow of evolution canon ✓. Emperor Diaz revolutionary plan canon = 108 races progression. À documenter `lore/108-races-plan.md` (à créer) — Emperor Diaz utopia canon Disc 3. Cohérent existing Soa + Divine Tree canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 3 Divine Moon Objects canonical terminology (fandom) ⭐⭐⭐** — Moon Gem + Moon Dagger + Moon Mirror = **"Divine Moon Objects"** canonical terminology (vs wiki "Moon items"). Lloyd gathers all 3 Tower top canon. Moon Mirror = **national treasure Mille Seseau** canon. Pattern Damia : adopter "Divine Moon Objects" terminology canonical fandom + flag "Moon items" wiki community. À cross-référer `items/Divine Moon Objects.md` (à créer) — 3 Divine Moon Objects category canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Vanishing Stone origin Melbu Frahma anti-Faust canon NEW MAJEUR (fandom) ⭐⭐⭐** — **Melbu Frahma created Vanishing Stone to vanquish Faust's apparitions** (feared Faust disloyalty). Pattern Damia : Vanishing Stone canon origin REVEAL — anti-Faust weapon Melbu Frahma created (vs Damia hypothesis Wingly artifact). À documenter `items/Vanishing Stone.md` (à créer) — origin Melbu Frahma anti-Faust canon NEW. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Spear Shooter Vellweb human weapon canon NEW MAJEUR (fandom) ⭐⭐⭐** — Human-designed weapon based Vellweb that disabled Faust's Tower of Flanvel (caused Kashua crash probable). Pattern Damia : anti-Wingly human weapon canon NEW (Vellweb origin). À documenter `items/Spear Shooter.md` (à créer) — Vellweb anti-Wingly weapon canon NEW. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Faust Commander Tower of Flanvel + 11,000+ years survival canon NEW MAJEUR (fandom) ⭐⭐⭐** — Faust = **Commander of Tower of Flanvel** during Wingly era + survived Dragon Campaign 11,000+ years + plot remobilize Flanvel + "king of world" ambition. Faust quotes complets canon. Pattern thematic : Wingly Commander immortal survivor canon. À documenter `bosses/Magician Faust.md` (à créer) — Commander Faust 11,000 years canon. Rose ageless canon CONFIRMED ✓ ("Not bad being human and being ageless" Faust acknowledgment). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Martel 50 Stardust → Vanishing Stone trade canon NEW MAJEUR (fandom) ⭐⭐⭐** — Martel NPC (Ulara probable) gives **Vanishing Stone for 50 Stardust total collection** canon (cohérent existing Stardust feature 50 = complete collection). Pattern Damia : Stardust quest reward = Vanishing Stone canon. À documenter `npcs/Martel.md` (à créer/vérifier) — Stardust collector NPC + Vanishing Stone reward canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Land of Taboo canonical terminology Disc 4 (fandom) ⭐⭐⭐** — "Land of Taboo" canon terminology = Disc 4 optional area Tower of Flanvel top accessible Vanishing Stone gated (vs wiki "Areas 8-12 post-Vanishing"). Pattern Damia : adopter "Land of Taboo" canonical terminology fandom + flag wiki "Areas 8-12" terminology. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Story canon Disc 3 lore Flanvel Tower MAJEUR (fandom) ⭐⭐⭐** — Wink protects Lloyd canon (Wink NEW character) + Setie companion canon (probable Sacred Sister Mille Seseau) + Queen Theresa Moon Mirror unseal + Lloyd surrenders Divine Moon Objects to Dart + Dart punches Lloyd canon (character growth) + Lavitz killed by Lloyd CONFIRMED ✓ + Shana taken by Emperor Diaz Deningrad canon NEW MAJEUR + Emperor Diaz requests Divine Moon Objects Vellweb canon. À documenter `npcs/Wink.md` + `npcs/Setie.md` + `npcs/Queen Theresa.md` + `bosses/Emperor Diaz.md` (tous à créer/vérifier). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Divine Dragon Dragoon Spirit resonance canon NEW (fandom) ⭐⭐⭐** — Top Tower : Divine Dragon Dragoon Spirit resonates with Dart's Red-Eye Dragon Spirit canon Disc 3. Pattern Damia : Dragoon Spirit resonance canon = Dragon Spirit detection mechanic canon NEW. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 JP stats CONFIRMED 4 mobs Flanvel Tower cross-mob (fandom) ⭐⭐⭐** — Basilisk JP HP 820 + Madman JP HP 1300 + Metal Fang JP HP 820 + Dragon Soldier JP HP 610 (all +25% pattern systematic ✓). Gold ÷3 confirmed all 4 mobs. Pattern Damia : JP stats canon CONFIRMED cross-mob Flanvel Tower mobs. ⚠️ fandom US stats divergent wiki US (Basilisk 715 vs wiki 656 / Metal Fang 715 vs wiki 656 — pattern récurrent divergence wiki/fandom US, JP base from wiki US × 1.25 canon). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Black Rain + Fatal Blizzard chests NEW canon Flanvel Tower (fandom) ⭐⭐** — 2 chests NOT in wiki 7-list (potential 9 chests total Tower). Pattern Damia : NEW chests reveal — wiki incomplete. À cross-référer wiki encounter chests précis. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Holy Ankh spelling correction ⚠️ (fandom) ⭐⭐** — Wiki "Holy Ahnk" vs fandom "Holy Ankh" (correct Egyptian symbol spelling). Pattern Damia : adopt **Holy Ankh** canon (correct spelling). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Therapy Ring sequence break canon NEW (fandom) ⭐⭐** — Possible obtain Therapy Ring pre-Vanishing Stone via careful walk avoiding Faust apparition (Land of Taboo entry). Pattern Damia : sequence break canon NEW Tower Flanvel. Source: idem.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

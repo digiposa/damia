@@ -22,13 +22,42 @@
 >
 > ⭐ **Save Points : 2** (1 tree hollow Area 5 + 2 teleporter room Area 9 Vanishing Stone gated) + **No Rest** + **No Shops**.
 >
+> ⭐⭐⭐ **Wingly origin CONFIRMED MAJEUR fandom ⭐⭐⭐** — "Ancient mobile fort of the Winglies, used in **suppression/extermination of non-Winglies BEFORE Dragon Campaign**" canon NEW MAJEUR (oppression era pre-Dragon Campaign lore). "Tower floated in the sky like Wingly cities" + "now half buried within Kashua Glacier".
+>
+> ⭐⭐⭐ **108 races plan canon NEW MAJEUR fandom Emperor Diaz ⭐⭐⭐** — Humans = 106th race / Winglies = 107th race / **108th race = utopia final fruit Divine Tree** (Emperor Diaz revolutionary plan). Pattern : Soa great will + Divine Tree flow of evolution canon ✓.
+>
+> ⭐⭐⭐ **3 Divine Moon Objects canonical terminology fandom ⭐⭐⭐** — Moon Gem + Moon Dagger + Moon Mirror = **"Divine Moon Objects"** canonical terminology (Lloyd gathers all 3 Tower top). Moon Mirror = **national treasure Mille Seseau** canon NEW.
+>
+> ⭐⭐⭐ **Vanishing Stone origin canon NEW MAJEUR fandom ⭐⭐⭐** — **Melbu Frahma created Vanishing Stone to vanquish Faust's apparitions** (feared Faust disloyalty). Pattern Damia : Vanishing Stone canon origin REVEAL — anti-Faust weapon Melbu Frahma created (vs Damia hypothesis Wingly artifact).
+>
+> ⭐⭐⭐ **Spear Shooter Vellweb human weapon canon NEW MAJEUR fandom ⭐⭐⭐** — Human-designed weapon based Vellweb that disabled Faust's Tower (caused Kashua crash probable). À documenter `items/Spear Shooter.md` (à créer) — anti-Wingly human weapon canon.
+>
+> ⭐⭐⭐ **Faust Commander Tower of Flanvel + 11,000 years survival canon NEW MAJEUR fandom ⭐⭐⭐** — Faust = Commander Tower (Wingly era) + survived Dragon Campaign 11,000+ years + plot remobilize Flanvel + "king of world" ambition. Rose ageless canon CONFIRMED ✓ ("Not bad being human and being ageless" Faust acknowledgment).
+>
+> ⭐⭐⭐ **Martel 50 Stardust → Vanishing Stone trade canon NEW MAJEUR fandom ⭐⭐⭐** — Martel NPC (Ulara probable) gives Vanishing Stone for **50 Stardust total collection** canon (cohérent existing Stardust feature).
+>
+> ⭐⭐⭐ **Land of Taboo canon NEW MAJEUR fandom ⭐⭐⭐** — Disc 4 optional area = Tower of Flanvel top accessible Vanishing Stone gated (vs wiki "Areas 8-12 post-Vanishing"). Pattern Damia : "Land of Taboo" canonical terminology.
+>
+> ⭐⭐⭐ **Story canon Disc 3 MAJEUR fandom** — Wink protects Lloyd (Lloyd surrenders Divine Moon Objects to Dart) + Shana taken by Emperor Diaz Deningrad + Lavitz killed by Lloyd CONFIRMED + Albert score Lloyd + Queen Theresa Moon Mirror unseal + Setie companion + Miranda requests Theresa keep Moon Mirror.
+>
+> ⭐⭐⭐ **Divine Dragon Dragoon Spirit resonance canon NEW** — Top Tower : Divine Dragon Dragoon Spirit resonates with Dart's Red-Eye Dragon Spirit canon.
+>
+> ⭐⭐⭐ **JP stats CONFIRMED 4 mobs Flanvel cross-mob fandom ⭐⭐⭐** — Basilisk 820 + Madman 1300 + Metal Fang 820 + Dragon Soldier 610 (all +25% pattern systematic ✓). Gold ÷3 confirmed all 4.
+>
+> ⭐⭐ **Black Rain + Fatal Blizzard chests NEW fandom** — 2 chests NOT in wiki 7-list (potential 9 chests total Tower).
+>
+> ⭐⭐ **Holy Ankh spelling correction fandom ⚠️** — Wiki "Holy Ahnk" vs fandom "Ankh" (correct Egyptian symbol spelling).
+>
+> ⭐⭐ **Therapy Ring sequence break canon NEW fandom** — Possible obtain pre-Vanishing Stone via careful walk avoiding Faust apparition.
+>
 > **Sources** :
 >
 > - 🥈 [`_sources/lod-wiki-flanvel-tower.md`](./_sources/lod-wiki-flanvel-tower.md) — wiki LoD tier 2 (mobile fortress lore 11,682 years + 2 save points + 7 chests + 2 bosses Lloyd/Magician Faust + 9 mobs (5 Kashua cross-location + 4 Flanvel-specific Metal Fang/Dragon Soldier/Basilisk/Madman) + Vanishing Stone gating Areas 8-12 + 3 Moon items Lloyd defeat + 12 areas/submaps détaillés + Magician Faust Apparition/Real CONFIRMED)
+> - 🥉 [`_sources/fandom-tower-of-flanvel.md`](./_sources/fandom-tower-of-flanvel.md) — fandom tier 3 (⭐ **Wingly origin + suppression non-Winglies pre-Dragon Campaign CONFIRMED MAJEUR** + ⭐ **108 races plan Emperor Diaz NEW MAJEUR** + ⭐ **3 Divine Moon Objects canon terminology** + ⭐ **Vanishing Stone origin Melbu Frahma anti-Faust NEW MAJEUR** + ⭐ **Spear Shooter Vellweb human weapon NEW MAJEUR** + ⭐ **Faust Commander 11,000 years survival** + ⭐ **Martel 50 Stardust trade canon** + ⭐ **Land of Taboo terminology Disc 4** + ⭐ **Story Disc 3 lore Wink/Setie/Queen Theresa/Lavitz killed Lloyd CONFIRMED/Shana Deningrad** + ⭐ **Divine Dragon Dragoon Spirit resonance** + ⭐ **JP stats 4 mobs CONFIRMED** + ⭐ **Black Rain + Fatal Blizzard chests NEW** + ⭐ **Holy Ankh spelling + Therapy Ring sequence break**)
 
 ## Statut
 
-🟡 **Canon documenté wiki tier 2 uniquement** — fandom à ingérer (Story complet + Trivia + appearance future).
+🟢 **Canon documenté wiki tier 2 + fandom tier 3 cross-source confirmé** — Wingly origin CONFIRMED + 108 races plan + Vanishing Stone Melbu Frahma origin + Spear Shooter Vellweb + Faust 11,000 years + Land of Taboo + Story Disc 3/4 + JP stats 4 mobs CONFIRMED.
 
 ## Identity canon
 

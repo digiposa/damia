@@ -37,6 +37,29 @@ Tall, slender, **long golden brown hair** in ponytail. **Yeux bleus** (fandom) ;
 - **Hellena captured** : shirtless + light brown pants + dark brown boots + white belt
 - **Dragoon form** : jade green armor (orange gem center) + jade green dragon headband + Dragoon Spear brown motif + wings pale yellow/jade green/orange. Plus slender que Lavitz Dragoon form.
 
+### Design principal Damia (art direction) ⭐⭐⭐
+
+![Albert design principal Damia](_assets/albert-design-main.png)
+
+> **Design canon Damia officiel** — [`_assets/albert-design-main.png`](./_assets/albert-design-main.png)
+> Source de référence pour la dérivation des sprites Damia.
+
+**Caractéristiques Damia confirmées** :
+
+- **Cheveux** : blond doré (mi-longs, mèche front) — ✓ cohérent canon "long golden brown hair"
+- **Cape** : vert sombre/forêt long, descendant aux mollets — ✓ cohérent travel outfit canon "dark green cape"
+- **Armor** : silver pauldron gauche ornée (forme géométrique pointée) — ✓ cohérent "silver armor (gold trim)"
+- **Tunique** : vert moyen longue-manches — ✓ cohérent "pale green tunic"
+- **Ceinture** : ornée gold buckle + accents bruns
+- **Pantalon** : light brown/khaki — ✓ cohérent canon
+- **Bottes** : marron foncé hautes + sangles dorées — ✓ cohérent canon
+- **Gants** : bruns avec accents
+- **Arme** : **Lance** (Spear weapon canon Jade Dragoon archetype) — ✓ cohérent Lavitz/Albert weapon canon TLoD
+
+**Design Damia = travel outfit canon (NOT NPC king Bale royal)** : cohérent party member combat-ready look. Pattern Damia : sprite combat design = travel outfit baseline canon.
+
+⭐⭐⭐ **Lance visible canon confirmed** — weapon design Damia respecte Jade Dragoon archetype Spear weapon canon TLoD (cohérent Lavitz/Albert spear weapon canon + Greham/Syuveil archetype pattern).
+
 ### Caractère
 
 **Generous, compassionate, level-headed king**. Modest, humble, lacking arrogance/entitlement despite royalty. Deeply loved by people and knights. Wishes to be treated as **simple friend who travels** (like Lavitz, vs traitement royal).

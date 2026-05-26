@@ -4947,6 +4947,10 @@
 
 - [ ] ⭐ **🆕 Lynn wedding Donau optional scene canon (fandom) ⭐** — Third Visit transition : option follow Lynn to Donau wedding Kate canon (optional scene). Pattern Damia : optional event sequence Disc 2 (cohérent existing Kate's Bouquet event canon return-only). À refléter `quests/disc2-platinum-shadow.md` optional branch + cross-ref `quests/lynn-kate-wedding.md` (à créer). Source: idem.
 
+### Party-members / Meru — sprite Damia art direction reference (doc Meru.md à créer ultérieurement)
+
+- [ ] ⭐⭐ **🆕 Meru sprite Damia art direction stored** — Sprite officiel Damia stored [`features/party-members/_assets/meru-sprite.jpg`](features/party-members/_assets/meru-sprite.jpg) en attendant doc canon Meru.md à créer (wiki+fandom ingestion future). **Design canon Damia** : silver/light blue hair high ponytail + blue ribbon + bikini-style gold/cream top + ornate skirt blue/white floral + gold patterns oriental + gold bracelets/anklets + ornate gold-strap sandals + **large hammer with gold ornate end** (Hammer = Meru weapon canon TLoD). Pattern thematic : **oriental aesthetic canon** cohérent existing Fletz wiki "oriental architecture" Tiberoa region + Wingly origin canon. À cross-référer `party-members/Meru.md` (à créer) + sprite frames extraction futur. Source: sprite uploaded 2026-05-26 par user.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

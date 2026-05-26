@@ -5415,6 +5415,38 @@
 
 - [ ] ⭐⭐ **🆕 Disc 2 Monsters category CONFIRMED (fandom) ⭐⭐** — Cohérent existing wiki Disc 2 Barrens chain canon. Source: idem.
 
+### Bosses / Fruegel wiki (Earth Hellena Prison Disc 1 — 2 FIGHTS canon MAJEUR 1st/2nd Visit + 5 NEW passives Untargetable/Observer/Retaliate/Final Blow 2ème/Power up + Knight Shield 100% 1st drop CROSS-SOURCE CONFIRMED + Gravity Grabber 100% 2nd drop Key Item NEW MAJEUR + Whistle summon Senior Wardens + Senior Warden/Rodriguez/Guftas NEW partners + Counter 28 7ème instance + Status 8/8 ALL IMMUNE + Stats progression ×11 HP scaled-up + Lavitz death scene 2nd Visit canon récurrent)
+
+- [ ] ⭐⭐⭐ **🆕 Fruegel 2 fights canon Disc 1 Hellena Prison NEW MAJEUR (wiki) ⭐⭐⭐** — Pattern Damia : **2-fight boss canon récurrent** Hellena Prison ecosystem 2 visits canon (cohérent récent Fowl Fighter "final ascent to Fruegel" + Hellena Warden 1st/2nd canon récurrent). 1st Visit = boss-companion Untargetable submap 15 / 2nd Visit = standalone Final Blow standalone scaled-up HP 1000 submap 36. Pattern Damia : Hellena Prison = 2-visit boss-companion ecosystem canon NEW MAJEUR Disc 1. À documenter `locations/Hellena Prison.md` (à créer) 2 visits structure canon. Source: [`features/bosses/_sources/lod-wiki-fruegel.md`](features/bosses/_sources/lod-wiki-fruegel.md).
+
+- [ ] ⭐⭐⭐ **🆕 Untargetable + Observer + Retaliate 3 passives canon NEW MAJEUR Fruegel 1st Visit (wiki) ⭐⭐⭐** — **Untargetable** (cannot be targeted Hellena Warden alive) + **Observer** (only ~Do Nothing Hellena Warden alive) + **Retaliate** (ignore turn order + ~Club on physical hit). Pattern Damia : **boss companion gating mechanic canon NEW MAJEUR** + **boss out-of-turn counter mechanic Retaliate NEW MAJEUR** différent Counter Opportunities system. À documenter `combat/boss-passives.md` (à créer) — 3 passives canon NEW MAJEUR boss-tier mechanics. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Final Blow passive canon récurrent 2ème instance Fruegel 2nd Visit (wiki) ⭐⭐⭐** — Pattern Damia : **Final Blow passive canon récurrent 2ème instance** (cohérent existing Drake Bandit Disc 1 Final Blow passive canon). Battle ends Fruegel HP 0 même avec Rodriguez/Guftas survivants. Implications : kill priority Fruegel only. À documenter `combat/boss-passives.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Power up boss reactive passive canon NEW MAJEUR both fights (wiki) ⭐⭐⭐** — **Power up** = +50% damage inflicted + −50% damage received 3 turns. Trigger : magic-target only. Auto Single Use. Pattern Damia : **boss anti-magic reactive buff canon NEW MAJEUR** récurrent both Fruegel fights. Strategy guidance : avoid magic spells vs Fruegel (Power up trigger). À documenter `combat/boss-passives.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Whistle summon ability NEW MAJEUR + Senior Warden NEW mob canon (wiki) ⭐⭐⭐** — Fruegel 1st Visit **Whistle = Summons 2 Senior Wardens Auto Single use** canon NEW MAJEUR. **Senior Warden = NEW mob canon** (différent Hellena Warden) — Hellena Prison Disc 1 ecosystem NEW. À documenter `mobs/Senior Warden.md` (à créer) — NEW mob Hellena guard variant canon Disc 1 NEW MAJEUR. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Knight Shield 100% drop 1st Visit canon CROSS-SOURCE CONFIRMED Fruegel (wiki) ⭐⭐⭐** — Pattern Damia : **Knight Shield = 4 sources canon TLoD** (Bale shop + Fletz shop + Flabby Troll 2% drop + Dragon Soldier 2% drop + **Fruegel 1st Visit 100% guaranteed drop boss-tier**). Pattern Damia : boss-tier guaranteed drop canon récurrent vs farming alternatives. À documenter `items/Knight Shield.md` (à créer) — 4 sources canon CROSS-SOURCE CONFIRMED. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Gravity Grabber 100% drop 2nd Visit canon NEW MAJEUR Key Item (wiki) ⭐⭐⭐** — Pattern Damia : **Gravity Grabber = Key Item canon NEW MAJEUR Disc 1** (probable Valley of Corrupted Gravity Disc 2 access OR Lavitz Jade Dragon Spirit unlock canon Disc 1). À documenter `items/Gravity Grabber.md` (à créer) — Key Item canon NEW MAJEUR. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Rodriguez + Guftas NEW NPC canon partners 2nd Visit NEW MAJEUR (wiki) ⭐⭐⭐** — Formation 387 partners scripted boss fight Fruegel 2nd : **Rodriguez + Guftas** = NEW NPCs canon Hellena Disc 1 (probable Gehrich Gang lieutenants canon — cohérent thematic). À documenter `npcs/Rodriguez.md` + `npcs/Guftas.md` (à créer) — Hellena Disc 1 NPCs NEW MAJEUR. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Stats progression ×11 HP scaled-up 1st→2nd Visit canon NEW MAJEUR (wiki) ⭐⭐⭐** — HP 90 → 1000 (×11) / AT 5 → 25 (×5) / MAT 3 → 19 (×6.3) / EXP 300 → 2000 (×6.7). Pattern Damia : **boss progression scaled-up canon NEW MAJEUR** same boss 2 fights structure. Implications design : Fruegel 1st = weak boss-companion (Untargetable gated) / 2nd = real challenge HP 1000 standalone. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 AI multi-action pool boss canon récurrent NEW MAJEUR (wiki) ⭐⭐⭐** — Boss AI canon récurrent : **multi-action pool** (vs Minor Enemy 3-phase HP-based AI). Fruegel 1st = 6 actions + 3 passives / 2nd = 4 actions + 1 passive. **~Slam → ~Chop variant** different ability names 1st vs 2nd canon NEW. À documenter `combat/ai-thresholds.md` (à créer) — boss multi-action pool AI canon récurrent. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Counter 28 universal multi-disc tier 7ème instance CONFIRMED bosses + Minor Enemies (wiki) ⭐⭐⭐** — Pattern Damia : Counter 28 = universal canon récurrent multi-disc Damia CONFIRMED **7 instances** (Berserk Mouse + Aqua King + Archangel + Flying Rat + Forest Runner + Freeze Knight + Frilled Lizard + Fruegel = mix bosses + Minor Enemies). Counter 28 = standard universal canon Damia confirmé bosses + Minor Enemies multi-disc. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Lavitz death scene 2nd Visit canon récurrent context (wiki) ⭐⭐⭐** — Cohérent existing récurrent Forest of Winglies fandom + Tower of Flanvel fandom canon Lloyd Dragon Buster stolen Wingly Ancestor canon + Fowl Fighter "final ascent to Fruegel" canon récent. Pattern Damia : Fruegel 2nd Visit defeat → Lloyd appears + kills Lavitz with Dragon Buster canon → Albert joins party (Jade Dragon Spirit inheritance canon récurrent). À documenter `quests/disc1-hellena-lavitz-death.md` (à créer) + `party-members/Lavitz.md` (à créer/vérifier) Lavitz death scene canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Status 8/8 ALL IMMUNE boss-tier récurrent CONFIRMED Fruegel (wiki) ⭐⭐** — Pattern Damia : all 8 status immune = boss-tier canon récurrent (cohérent Freeze Knight + Caterpillar/Crystal Golem/Drake Bandit/Earth Shaker/Fire Spirit pattern récurrent). Fruegel = N-ème confirmation cross-mob all-immune elite tier. Source: idem.
+
+- [ ] ⭐⭐ **🆕 5-mob scripted boss formation canon NEW MAJEUR Fruegel 1st Visit (wiki) ⭐⭐** — Formation 386 : Fruegel + Hellena Warden ×2 + Senior Warden ×2 = 5-mob scripted (cohérent récurrent Polter Helm/Polter Armor/Polter Sword trio Fort Magrad pattern). Pattern Damia : multi-mob boss formation canon récurrent + 0% escape forced fight. Source: idem.
+
+- [ ] ⭐⭐ **🆕 3-mob scripted boss formation Fruegel 2nd Visit (wiki) ⭐⭐** — Formation 387 : Fruegel + Rodriguez + Guftas = 3-mob scripted (cohérent pattern récurrent). Source: idem.
+
 ### À décider / explorer
 
 ### À décider / explorer

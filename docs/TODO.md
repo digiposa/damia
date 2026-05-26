@@ -4977,6 +4977,30 @@
 
 - [ ] ⭐ **🆕 Escape 30% Disc 3 Evergreen Forest mobs pattern (wiki) ⭐** — Flying Rat Escape 30% cohérent Dark Elf 30% existing canon. Pattern Damia : Disc 3 Evergreen Forest escape rate uniform 30% canon. Source: idem.
 
+### Mobs / Flying Rat fandom complement — Glide canon name (fandom CORRECTION wiki ~Cling) + Spear Frost ≤25% RED HP (fandom CORRECTION wiki ≤50% MAJEUR) + Escape 3ème ability NEW (wiki silent) + P. Attack 43 / M. Attack 61 CORRECTION wiki 38/54 +13% + High MDF strategy guidance + Partners "far more dangerous" kill-priority + sprite Damia art direction Spear ability visualisée
+
+- [ ] ⭐⭐⭐ **🆕 Glide canon name officiel fandom CORRECTION wiki ~Cling NEW MAJEUR (fandom) ⭐⭐⭐** — Wiki ~Cling = community approximation, fandom révèle **Glide** name officiel ability >25% HP (canon name 1× phys single target). Pattern récurrent fandom > wiki approximations (cohérent Devil Sting Dragonfly canon name pattern + Nibble Berserk Mouse pattern). Pattern Damia : ability canon names enrichis par fandom systématiquement. À documenter `combat/enemy-abilities.md` (à créer) canon ability names list. Source: [`features/mobs/_sources/fandom-flying-rat.md`](features/mobs/_sources/fandom-flying-rat.md).
+
+- [ ] ⭐⭐⭐ **🆕 Spear Frost trigger ≤25% RED HP fandom CORRECTION wiki ≤50% MAJEUR DIVERGENCE (fandom) ⭐⭐⭐** — Wiki tier 2 disait Spear Frost ≤ 50% HP. Fandom corrige : "**when it is at 25% or lower (red) health**". Pattern Damia : **HP-threshold ability trigger canon précis ≤ 25% RED HP** (Damia adopt fandom probable canon JP). "Red health zone" terminology = emergency boss-like ability state. À cross-référer Discord/Wulves authority confirmation + `combat/ai-thresholds.md` (à créer) — HP-threshold per-mob abilities canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Escape 3ème ability NEW canon fandom Flying Rat (wiki silent) ⭐⭐⭐** — Fandom révèle 3ème ability **Escape** (self-removal mechanic — mob fuit combat). Pattern récurrent Minor Enemies canon (3ème instance après Berserk Mouse "Run away!" + Erupting Chick "Run away!" = Flying Rat "Escape" pattern self-removal canon). Pattern thematic Flying Rat = aerial mob fuit combat (flying nature canon). Trigger conditions canon unknown à investiguer. À documenter `combat/mob-self-removal.md` (à créer) — Escape/Run away! pattern canon récurrent. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 P. Attack 43 / M. Attack 61 fandom CORRECTION wiki 38/54 +13% systematic (fandom) ⭐⭐⭐** — Wiki US 38 AT / 54 MAT vs fandom 43 AT / 61 MAT = +13% / +13% systematic. Pattern Damia probable JP higher values (cohérent existing Dragonfly AT 32→35 +9% fandom CORRECTION pattern récurrent). Damia adopt fandom 43 / 61 probable canon JP. À refléter `mobs/Flying Rat.md` stats Damia adopté. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 High MDF 120 → Additions more efficient strategy guidance canon NEW MAJEUR fandom (fandom) ⭐⭐⭐** — Strategy guidance officielle : MDF 120 high → player should prefer **physical Additions** vs magic spells. Pattern Damia : **strategy guidance par-mob canon** NEW (cohérent reveal anti-MDF stat-counter strategy canon). Implications design Damia : UI strategy tooltip per-mob hint canon NEW. À documenter `mobs/_strategy-guides.md` (à créer) — per-mob strategy hints canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Dark Elf + Forest Runner partners "far more dangerous" canon kill-priority NEW MAJEUR fandom (fandom) ⭐⭐⭐** — Pattern strategy formation kill-priority : **Dark Elf (Petrification Arrow) + Forest Runner (Wooing) > Flying Rat priority**. Pattern Damia : **partner-priority kill canon** strategy guidance NEW. Flying Rat = lowest threat formation 138 trio. Implications design : AI engagement priority indicator UI canon NEW. Cross-référer existing `mobs/Dark Elf.md` Petrification Arrow canon + `mobs/Forest Runner.md` (à créer) Wooing ability NEW canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Forest Runner Wooing ability NEW canon (fandom) ⭐⭐** — Fandom mentionne "Forest Runner Wooing attack" canon ability name NEW. Pattern Damia : Wooing ability = **status-inflicting ability probable** (Wooing thematic = charm/seduction effect — possibly Bewitchment status canon). À investiguer fandom Forest Runner page + ingérer `mobs/Forest Runner.md` (à créer) — Wind partner Evergreen Forest formation 136. Source: idem.
+
+- [ ] ⭐⭐ **🆕 HP US 260 / JP 300 +15% anomaly CONFIRMED cross-source (fandom) ⭐⭐** — wiki silent JP + fandom 300 JP + existing Evergreen Forest doc match exact. JP +15% anomaly confirmé (vs +25% systematic pattern Damia — Flying Rat anomaly canon cohérent recent Evil Spider +67% anomaly récent). Pattern Damia : mob-specific JP scaling exception canon documented 2 instances. Source: idem.
+
+- [ ] ⭐⭐ **🆕 JP Gold 8 ÷3 CONFIRMED cross-source (fandom) ⭐⭐** — wiki US 24 / fandom JP 8 ÷ 3 = 8 ✓ exact systematic JP Gold pattern Damia. Pattern Damia cohérent canon récurrent. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Disc 3 Monsters category CONFIRMED fandom (fandom) ⭐⭐** — Flying Rat = Disc 3 mob officiel fandom category. Pattern Damia : Disc 3 Mille Seseau mob ecosystem confirmation (cohérent existing Evergreen Forest Disc 3 location). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Flying Rat sprite Damia art direction canon NEW MAJEUR ⭐⭐** — Sprite officiel Damia [`features/mobs/_assets/flying-rat-sprite.png`](features/mobs/_assets/flying-rat-sprite.png) — **rat-bat hybrid brun + fourrure blanche ventrale + grandes ailes membraneuses verdâtres bat-style + yeux jaune doré + pattes griffues + crocs visibles + lance gold-tipped étoile dorée visible dans dos = Spear Frost ability visualisée canon NEW MAJEUR**. Pattern Damia confirmed : **art direction visualise abilities canon** systematic (cohérent Berserk Mouse bat-wings = Darkness/aggressive). Implications design : ability animation Damia = lance strike Water magic (frost-element strike). Source: sprite uploaded 2026-05-26 par user.
+
 ### À décider / explorer
 
 - [ ] **Multi Items mashing UX en real-time** — Canon a `Multiplier%` obtenu via mashing pendant l'animation. Pas de QTE en RT chez nous. Décision probable : `Multiplier%` constant (100% ou 200% selon item) — ou wontfix. À trancher au moment du wiring.

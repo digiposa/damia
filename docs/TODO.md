@@ -5307,6 +5307,30 @@
 
 - [ ] ⭐⭐ **🆕 Disc 1 Monsters category + "couple of battles with Hellena Warden" canon CONFIRMED (fandom) ⭐⭐** — Cohérent existing wiki Disc 1 chain canon + multi-encounter "couple of battles" canon (formation 484 récurrent dans Hellena 2nd visit). Source: idem.
 
+### Mobs / Freeze Knight wiki (Water Kashua Glacier Disc 3 — Water Immunity passive 2ème instance + Status 8/8 ALL IMMUNE elite récurrent + Spear Frost CROSS-MOB SHARED ability Flying Rat NEW MAJEUR + Fatal Blizzard Party Water magic ≤25% RED HP + self-named ability drop canon + Icicle Ball/Land Skater NEW partner mobs + MDF 160 extreme tier + Counter 28 5ème instance + Kashua Glacier→Snowfield World Map road)
+
+- [ ] ⭐⭐⭐ **🆕 Water Immunity passive canon NEW MAJEUR 2ème instance element-immunity (wiki) ⭐⭐⭐** — Quote canon : "Water-elemental magic damage is reduced to 0". Pattern Damia : **element-immunity passive canon récurrent 2ème instance** (cohérent existing Fire Spirit Fire Immunity passive). Pattern thematic : mob element ↔ element-immunity match canon (Water mob immune Water = ice knight thematic). À documenter `combat/element-immunity-passives.md` (à créer) — passive canon récurrent. Source: [`features/mobs/_sources/lod-wiki-freeze-knight.md`](features/mobs/_sources/lod-wiki-freeze-knight.md).
+
+- [ ] ⭐⭐⭐ **🆕 Spear Frost CROSS-MOB SHARED ability canon Flying Rat NEW MAJEUR (wiki) ⭐⭐⭐** — Same canon ability name as existing Flying Rat. Pattern Damia : **shared ability pool canon TLoD Damia NEW MAJEUR** — same ability reusable cross-mob avec triggers/contexts différents (Flying Rat ≤25% Wind mob mismatched / Freeze Knight 25-50% Water mob thematic match). À documenter `combat/enemy-abilities.md` (à créer) shared ability pool canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Fatal Blizzard Party AoE Water magic ≤25% RED HP canon NEW MAJEUR + self-named drop (wiki) ⭐⭐⭐** — Party AoE 1× Water magic ≤25% emergency phase + Freeze Knight drops Fatal Blizzard 8% item (self-named ability=item match). Pattern Damia : **self-named ability drop canon NEW MAJEUR** (cohérent récurrent Fairy Sun Rhapsody/Trans Light pattern). À documenter `items/Fatal Blizzard.md` (à créer) Water Repeat Item canon NEW MAJEUR. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Status 8/8 ALL IMMUNE elite Minor Enemy tier canon récurrent (wiki) ⭐⭐⭐** — Pattern Damia : all 8 status immune = boss-tier Minor Enemy elite récurrent (cohérent Caterpillar/Crystal Golem/Drake Bandit/Earth Shaker/Fire Spirit pattern). Freeze Knight = N-ème confirmation cross-mob all-immune. Implications strategy : status proc inutiles. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Icicle Ball + Land Skater NEW mobs canon partners Kashua Glacier (wiki) ⭐⭐⭐** — Formation partners NEW MAJEUR : Icicle Ball formation 165 + Land Skater formation 168. Pattern Damia : Kashua Glacier 3+ mobs ecosystem canon NEW. À documenter `mobs/Icicle Ball.md` + `mobs/Land Skater.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Kashua Glacier Disc 3 Mille Seseau location canon CONFIRMED + Kashua Glacier → Snowfield World Map road (wiki) ⭐⭐⭐** — Cohérent existing canon Kashua Glacier ↔ Intersection road (Flying Rat/Forest Runner) + Snowfield "west of Kashua Glacier". Pattern Damia : Mille Seseau ↔ Gloriano transition canon via Kashua Glacier → Snowfield road. À documenter `locations/Kashua Glacier.md` (à créer) Disc 3 location canon NEW. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 AI 3-phase clean non-overlap canon NEW (wiki) ⭐⭐⭐** — Pattern Damia : **clean phase boundaries canon NEW** (vs Forest Runner overlap pattern). **2 AI sub-patterns canon récurrent** documenté : (1) progressive trigger overlap (Forest Runner) vs (2) clean boundaries (Freeze Knight). À documenter `combat/ai-thresholds.md` (à créer) — 2 AI sub-patterns canon NEW. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 MDF 160 extreme tier canon NEW MAJEUR first instance documented (wiki) ⭐⭐⭐** — Freeze Knight MDF 160 = première instance MDF 160 Damia (cohérent Forest mobs MDF 120 mystery — Freeze Knight even higher tier). **DF 120 + MDF 160 dual-tank canon** + zero A-AV/M-AV = elite tank Minor Enemy canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Counter 28 universal multi-disc tier 5ème instance CONFIRMED Freeze Knight (wiki) ⭐⭐** — Pattern Damia : Counter 28 = universal canon récurrent multi-disc (Berserk Mouse + Aqua King + Archangel + Flying Rat + Forest Runner + Freeze Knight). Shared 15 button-press combos pattern probable systematic toutes mobs Counter 28. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Magic-leaning archetype Freeze Knight canon (wiki) ⭐⭐** — MAT 68 > AT 56 (cohérent récurrent magic-leaning archetype pattern Flying Rat). Pattern Damia : per-mob stat archetype diversity canon. Source: idem.
+
+- [ ] ⭐ **🆕 Submap 437 Freeze Knight hotspot canon (wiki) ⭐** — 3 formations sur 3 incluent submap 437. Pattern Damia : hotspot submap canon récurrent (cohérent Flying Rat 341 / Forest Runner 340). Source: idem.
+
 ### À décider / explorer
 
 ### À décider / explorer

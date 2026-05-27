@@ -6175,6 +6175,40 @@
 
 À intégrer future `public/assets/sprites/bosses/grand-jewel-*.png` + `data/bosses/grand-jewel.ts` AvatarSpriteForm + RenderSystem cycle-aware + 4-directional facing + Crystal Beam particle effect. À documenter `docs/features/bosses/_assets/grand-jewel-sprite.png` (intégré). Source: user upload Gemini Grand Jewel hovering crystalline 2026-05-27.
 
+### Bosses / Greham wiki (Wind Boss Disc 1 Nest of Dragon submap 656 — Wind Dragoon traitor + Feyrbrand wielder + Lavitz death fight + Paired Dragon-Dragoon boss NEW MAJEUR + Crucify Non-Elemental 4ème CROSS-MOB-BOSS + Counter-immune 2ème + Retaliate variant 2 physical-trigger + Wind pool CROSS-BOSS + Plate Mail early drop)
+
+- [ ] ⭐⭐⭐ **🆕 Greham = Wind Dragoon traitor + Feyrbrand wielder + Lavitz death Disc 1 canon NEW MAJEUR (wiki) ⭐⭐⭐** — Formation "Feyrbrand, Greham (393)" + Nest of Dragon 656. Pattern Damia : Greham = ex-Wind Dragoon traitor + Feyrbrand wielder = paired Dragon-Dragoon boss Disc 1 critical (cohérent récurrent TLoD Lavitz death + Wind Dragoon Spirit transfer Albert canon). À documenter `bosses/Feyrbrand.md` + `party-members/Lavitz.md` + `party-members/Albert.md`. Source: [`features/bosses/_sources/lod-wiki-greham.md`](features/bosses/_sources/lod-wiki-greham.md).
+
+- [ ] ⭐⭐⭐ **🆕 Nest of Dragon NEW MAJEUR location canon Disc 1 (wiki) ⭐⭐⭐** — "Nest of Dragon (656)" = Wind Dragon Feyrbrand lair + Lavitz death location canon récurrent. À documenter `locations/Nest of Dragon.md`. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Feyrbrand + Greham paired Dragon-Dragoon boss formation canon NEW MAJEUR Disc 1 (wiki) ⭐⭐⭐** — First documented Dragon-Dragoon paired boss canon (vs Boss Extras pattern Gehrich+Mappi/Ghost Commander+Knights récurrent). À documenter `bosses/README.md`. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Crucify 2× Non-Elemental + Non-Elemental 4ème instance CROSS-MOB-BOSS Greham (wiki) ⭐⭐⭐** — "~Crucify — 2× Non-Elemental magic damage". 4ème instance Non-Elemental CONFIRMED (Ghost Commander HP Siphon + Glare Hypnotic Gaze + Gorgaga Element + Greham Crucify). À documenter `combat/boss-abilities.md` + `combat/elements.md`. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Counter Opportunities 0 = 2ème instance Counter-immune boss canon Greham (wiki) ⭐⭐⭐** — Counter-immune boss tier canon récurrent 2ème instance CROSS-DISC (Grand Jewel Disc 3 + Greham Disc 1). Story bosses sans Counter strategy canon récurrent. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Retaliate variants canon récurrent NEW MAJEUR — Greham variant 2 physical-trigger + fixed action (wiki) ⭐⭐⭐** — Pattern Damia : Retaliate 2ème instance + variants canon : Gehrich (general + multi-action) vs Greham (physical-only + fixed Piercing Spear simpler). Sub-class Retaliate canon récurrent. À documenter `combat/boss-abilities.md`. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Wind ability pool canon récurrent CROSS-BOSS Disc 1-3 (wiki) ⭐⭐⭐** — Spinning Gale + Rave Twister used by Greham Disc 1 + Grand Jewel Disc 3 = damage scaling Disc 1→3 (1.5×→1.8× Spinning Gale + 1×→1.5× Rave Twister). Wind ability pool shared canon TLoD récurrent. À documenter `combat/spell-items.md`. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Plate Mail 30% drop Greham Disc 1 early acquisition canon (wiki) ⭐⭐⭐** — Plate Mail = Disc 2 Fueno shop 200G récurrent → Greham Disc 1 boss drop = early acquisition canon NEW MAJEUR (dual-access pattern Disc 1 drop + Disc 2 shop récurrent). À refléter `items/Plate Mail.md`. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Element-agnostic ability caster canon récurrent 3ème instance Greham (wiki) ⭐⭐⭐** — Greham Wind + casts Non-Elemental + Wind + Physical = 3 damage types. 3ème instance CONFIRMED (Gorgaga + Grand Jewel + Greham). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Status 8/8 ALL IMMUNE boss-tier 8ème instance Greham (wiki) ⭐⭐⭐** — Boss-tier full immunity canon récurrent 8ème instance confirmé. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Critical Disc 1 plot beat Lavitz death + Wind Dragoon Spirit transfer Albert canon récurrent (wiki + TLoD canon) ⭐⭐⭐** — Greham boss fight = Lavitz death scene Disc 1 + Wind Dragoon Spirit transfer Albert canon récurrent confirmé (Albert post-Lavitz Additions inherit récurrent Gangster/Gargoyle counter lists). À documenter `quests/disc1-greham-feyrbrand.md` + `party-members/Lavitz.md` + `party-members/Albert.md`. Source: idem.
+
+- [ ] ⭐⭐ **🆕 AI "if→then" boss rules canon récurrent 5ème instance Greham (wiki) ⭐⭐** — 5ème instance CROSS-BOSS CONFIRMED (Gehrich + Ghost Commander + Gorgaga + Grand Jewel + Greham). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Greham model reuse Hero Competition warriors cross-source canon récurrent (wiki + Furni récent) ⭐⭐** — Furni Disc 3 fandom récent : "warriors models reuse Hero Competition: ... Drake Bandit and Greham". Greham = SEPARATE character whose model REUSED in Hero Competition (Greham ≠ HC competitor). Production-side meta-trivia. Source: idem.
+
+- [ ] ⭐⭐ **🆕 DF 120 high tank récurrent CROSS-BOSS Disc 1-2 Greham (wiki) ⭐⭐** — DF 120 cohérent Gangster + Gehrich + Goblin + Greham pattern récurrent. Source: idem.
+
+- [ ] ⭐⭐ **🆕 HP 350 + 1200 EXP early Disc 1 boss scaling canon Greham (wiki) ⭐⭐** — Pattern : Fruegel 90 < Greham 350 < Gehrich 2000 < Grand Jewel 4500 scaling Disc 1-3. Source: idem.
+
+- [ ] ⭐ **🆕 Piercing Spear spear weapon canon Greham (wiki) ⭐** — Greham weapon = spear (cohérent ex-Wind Dragoon Lavitz/Albert spear récurrent). Source: idem.
+
 ### À décider / explorer
 
 ### À décider / explorer

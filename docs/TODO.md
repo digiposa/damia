@@ -6249,6 +6249,17 @@
 
 - [ ] ⭐⭐ **🆕 Chapter 1 Serdian War CONFIRMED CROSS-SOURCE 4/4 chapters canon (fandom) ⭐⭐** — Pattern Damia : Disc 1 Chapter 1 "Serdian War" canon CONFIRMED 4/4 chapters récurrent (Disc 1 Serdian War + Disc 2 Platinum Shadow + Disc 3 Fate and Soul + Disc 4 Moon & Fate). Source: idem.
 
+- [ ] ⭐⭐⭐ **🆕 Greham sprite Gemini boss-tier intégré canon Damia + Standard walking sub-tier NEW MAJEUR ⭐⭐⭐** — Sprite Greham canonical (2nd iteration — premier sprite rejeté non-fidèle) confirme parfaitement canon fandom récurrent : brutish humanoid + metal shoulder pauldrons + fox-skin cap + tunique brune + leather armor + **spear weapon main hand** (cohérent Spear Combo + ex-Jade Dragoon Lavitz/Albert spear récurrent) + **red cape Imperial Sandora defector colors**. Animation cycles labelés canon boss-tier NEW MAJEUR : **4 ISO angles SE+SW+NW+NE** (boss-tier 4-directional récurrent Gorgaga + Grand Jewel) + **IDLE 4-frame loop per direction** + **WALK 6-frame standard cycle per direction** ⭐ NEW pace variation + **ATTACK 1 with effect** (spear swing arc canon Spear Combo) + **DEATH frame-by-frame dissolution** (cohérent Greham vanishes fandom canon). Pattern Damia : ⭐⭐⭐ **Sprite tier élargie 4 distinct locomotion styles canon NEW MAJEUR** :
+
+| Tier                               | ISO angles          | Locomotion cycle                 |
+| ---------------------------------- | ------------------- | -------------------------------- |
+| Mob (Goblin)                       | 2 (SE+SW)           | 6-frame normal walk              |
+| Boss walking heavy (Gorgaga)       | 4 (SE+SW+NW+NE)     | 6-frame **heavy** walk           |
+| **Boss walking standard (Greham)** | **4 (SE+SW+NW+NE)** | **6-frame standard walk** ⭐ NEW |
+| Boss hovering (Grand Jewel)        | 4 (SE+SW+NW+NE)     | 6-frame heavy HOVER (MOVE)       |
+
+À intégrer future `public/assets/sprites/bosses/greham-*.png` + `data/bosses/greham.ts` AvatarSpriteForm + RenderSystem cycle-aware + 4-directional facing + spear swing arc particle effect. À documenter `docs/features/bosses/_assets/greham-sprite.png` (intégré). Source: user upload Gemini Greham canonical 2026-05-27 (2nd iteration).
+
 ### À décider / explorer
 
 ### À décider / explorer

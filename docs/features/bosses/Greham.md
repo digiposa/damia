@@ -58,6 +58,46 @@
 > - 🥈 [`_sources/lod-wiki-greham.md`](./_sources/lod-wiki-greham.md) — wiki LoD tier 2 (Boss Wind Disc 1 Nest of Dragon submap 656 + HP 350/AT 13/DF 120 high/SPD 60/MAT 15/MDF 100/A-AV/M-AV 0% + Status 8/8 ALL IMMUNE 8ème + Yield 1200 EXP/100G/Plate Mail 30% + ⚠️ Counter Opportunities 0 2ème instance Counter-immune + Scripted formation 393 Feyrbrand+Greham paired Dragon-Dragoon + Retaliate variant 2 simpler physical-trigger Piercing Spear + AI conditional ~Piercing Spear/~Crucify Non-Elemental/~Spinning Gale Wind/~Rave Twister Wind party + Wind pool CROSS-BOSS récurrent)
 > - 🥉 [`_sources/fandom-greham.md`](./_sources/fandom-greham.md) — Fandom tier 3 (**⚠️ CORRECTION MAJEURE Greham death + Lavitz survives + Jade Dragoon Spirit transfer Greham → Lavitz Disc 1** + **HP JP 500/US-EU 400 +25% Damia rule CONFIRMED 7ème instance** + **⚠️ Wiki HP 350 anomaly** + AT 15/MAT 17 +15%/+13% divergences + JP "Gurahamu" + **JADE Dragoon canon NEW MAJEUR Greham+Lavitz+Albert lineage** + **Feyrbrand Green-Tusked Wind Dragon vassal canon NEW MAJEUR** + **"Only Dragoons can manipulate Dragons" Rose quote canon NEW MAJEUR** + **Second Knighthood of Basil + Servi Slambert (Lavitz' father) canon NEW MAJEUR** + **Greham backstory jealousy/betrayal/Servi murder/Imperial Sandora defection canon récurrent** + **Emperor Doel canon NEW MAJEUR Imperial Sandora ruler gave Greham Jade Dragoon Spirit** + **Emperor Diaz 11,000+ years ago canon TLoD HISTORICAL DEEP LORE NEW MAJEUR + Doel received power/intelligence from Diaz** + **Rose disbelief Diaz canon REVELATION récurrent confirmed Rose ancient Dragon Campaign canon** + **Greham death speech redemption + Servi afterlife reunion canon NEW MAJEUR** + **Re-ignition Serdian War canon NEW MAJEUR** + Spear Combo (4-hits + fling) + Wind Magic (random) + **Dragon Crucifixion (pillar trap + 4 spears + shatter) official names CROSS-SOURCE CORRECTION** + Yield 1200 EXP/100G "with Feyrbrand" combined pair canon + Plate Mail "not guaranteed" + Fueno Disc 2 alternative shop canon + **Greham model reuse Disc 3 Furni Resident Knight Harris mercenary CROSS-SOURCE CONFIRMED 3-way** + webbed chamber Nest of Dragon canon + Chapter 1 Serdian War CONFIRMED)
 
+## Sprite canon ⭐⭐⭐ Damia integration (Gemini boss-tier Greham Jade Dragoon)
+
+> ![Greham sprite sheet](./_assets/greham-sprite.png)
+
+⭐⭐⭐ **Sprite Greham CONFIRMS canon fandom récurrent CROSS-SOURCE** :
+
+- ✅ **Brutish/imposing humanoid** canon
+- ✅ **Metal shoulder pauldrons** (silver épaulettes métalliques visibles) canon récurrent
+- ✅ **Fox-skin cap** (couvre-chef fourrure animal) canon récurrent
+- ✅ **Tunique brune + leather armor** canon récurrent
+- ✅ **Spear weapon main hand** canon (Spear Combo + ex-Jade Dragoon — Lavitz/Albert spear récurrent)
+- ✅ **Red cape** canon (Imperial Sandora defector colors récurrent)
+- ✅ **Boss-tier 4-directional ISO** canon (cohérent récurrent Gorgaga + Grand Jewel)
+
+**Animation structure prête Damia (Gemini cycles canonicaux boss-tier walking)** :
+
+| Cycle        | Frames                      | Notes canon                                                                               |
+| ------------ | --------------------------- | ----------------------------------------------------------------------------------------- |
+| **ISO SE**   | 1                           | Direction Sud-Est canon récurrent isométrique Damia                                       |
+| **ISO SW**   | 1                           | Direction Sud-Ouest canon récurrent isométrique                                           |
+| **ISO NW**   | 1                           | Direction Nord-Ouest canon (boss-tier 4-directional)                                      |
+| **ISO NE**   | 1                           | Direction Nord-Est canon (boss-tier 4-directional)                                        |
+| **IDLE**     | 4-frame loop per direction  | Standard boss idle breathing (cohérent récurrent)                                         |
+| **WALK**     | 6-frame cycle per direction | ⭐ **Standard walk** (vs Gorgaga heavy / Grand Jewel hovering — variation pace canon NEW) |
+| **ATTACK 1** | with effect                 | Spear swing arc effect (cohérent Spear Combo canon fandom)                                |
+| **DEATH**    | frame-by-frame dissolution  | Cohérent récurrent boss death + Greham vanishes fandom canon                              |
+
+Pattern Damia : ⭐⭐⭐ **Sprite Gemini boss-tier standard walking canon** — distinction sprite tier élargie :
+
+| Tier                               | ISO angles    | Locomotion cycle                                |
+| ---------------------------------- | ------------- | ----------------------------------------------- |
+| Mob (Goblin)                       | 2 (SE+SW)     | 6-frame normal walk                             |
+| Boss walking heavy (Gorgaga)       | 4 (4-dir)     | 6-frame **heavy** walk                          |
+| **Boss walking standard (Greham)** | **4 (4-dir)** | **6-frame standard walk** ⭐ NEW pace variation |
+| Boss hovering (Grand Jewel)        | 4 (4-dir)     | 6-frame heavy HOVER (MOVE)                      |
+
+Pattern Damia : **3-tier walking pace canon NEW** — mob normal / boss heavy / boss standard / boss hovering = 4 distinct locomotion styles canon récurrent.
+
+À intégrer future : `public/assets/sprites/bosses/greham-*.png` (frame-split par cycle) + `data/bosses/greham.ts` (à créer) AvatarSpriteForm pattern récurrent + `RenderSystem` cycle-aware (idle/walk/attack/death) + 4-directional facing logic + spear swing arc particle effect.
+
 ## Statut
 
 🟢 **Canon confirmed cross-source** (wiki 🥈 + fandom 🥉) — 2 sources cohérentes majoritaires + enrichissement fandom MASSIF Disc 1 :

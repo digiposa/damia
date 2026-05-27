@@ -6209,6 +6209,46 @@
 
 - [ ] ⭐ **🆕 Piercing Spear spear weapon canon Greham (wiki) ⭐** — Greham weapon = spear (cohérent ex-Wind Dragoon Lavitz/Albert spear récurrent). Source: idem.
 
+### Bosses / Greham fandom complement (Cross-source 🟢 — ⚠️ CORRECTION MAJEURE Greham death + Lavitz survives + Jade Dragoon Spirit transfer Greham→Lavitz Disc 1 + JADE Dragoon canon NEW MAJEUR + Feyrbrand Green-Tusked Wind Dragon vassal + Diaz/Doel 11,000 years DEEP LORE + Rose ancient Dragon Campaign confirmed + Servi Slambert NEW + Second Knighthood Basil + Spear Combo/Dragon Crucifixion CORRECTION + JP HP 500 +25% 7ème instance)
+
+- [ ] ⚠️⚠️⚠️ **🆕 CORRECTION MAJEURE canon Damia : Greham meurt + Lavitz survives + Jade Dragoon Spirit transfer Greham→Lavitz Disc 1 (fandom) ⚠️⚠️⚠️** — Quote canon : "Greham is fatally injured... dies from wounds + vanishes + Jade Dragoon Spirit passes on to Lavitz". Pattern Damia : ⚠️ **CORRECTION précédente canon "Lavitz death Greham fight" ERRONÉE** — c'est Greham qui meurt + Lavitz survit + devient Jade Dragoon canon récurrent. Lavitz death = LATER canon Disc 2 (Spirit transfer Albert subséquent récurrent). À corriger récurrent canon Damia. Source: [`features/bosses/_sources/fandom-greham.md`](features/bosses/_sources/fandom-greham.md).
+
+- [ ] ⭐⭐⭐ **🆕 JADE Dragoon canon NEW MAJEUR + Greham→Lavitz→Albert lineage (fandom) ⭐⭐⭐** — Quote canon : "Greham reveals himself as the Jade Dragoon and summons Feyrbrand" + "Jade Dragoon Spirit passes on to Lavitz". Pattern Damia : Jade Dragoon canon NEW MAJEUR — Wind = Jade element correspondence canon récurrent. Lineage canon : Greham (pre-game corrupt) → Lavitz Disc 1 (rightful) → Albert Disc 2+ (récurrent Wind Additions Gust of Wind Dance + Flower Storm confirmed Gangster/Gargoyle counter lists). À documenter `lore/jade-dragoon.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Feyrbrand = Green-Tusked Wind Dragon vassal canon NEW MAJEUR (fandom) ⭐⭐⭐** — Quote canon : "control Feyrbrand, the Green-Tusked Dragon" + "vassal Dragon". Pattern Damia : Feyrbrand = Green-Tusked Wind Dragon canon NEW MAJEUR + Jade Dragoon vassal canon. À documenter `bosses/Feyrbrand.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 "Only Dragoons can manipulate Dragons" canon rule NEW MAJEUR TLoD (Rose quote fandom) ⭐⭐⭐** — Quote canon Rose : "It shouldn't be a surprise. Only the Dragoons can manipulate Dragons. Behind the Dragon, there should be...". Pattern Damia : Dragon-Dragoon exclusive control rule canon NEW MAJEUR TLoD — implies all Dragon antagonists = Dragoon wielders canon récurrent. À documenter `lore/dragoon-dragon-canon.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Servi Slambert (Lavitz' father) canon NEW MAJEUR + Second Knighthood Basil (fandom) ⭐⭐⭐** — Quote canon : "former head of the Second Knighthood of Basil" + "close friend to Lavitz' father Servi Slambert". Pattern Damia : Servi Slambert = Lavitz's father full name canon NEW MAJEUR + Second Knighthood Basil knight order canon. Pre-game backstory. À documenter `npcs/Servi Slambert.md` + `lore/basil-knighthood.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Greham backstory canon récurrent : jealousy + betrayal + Servi murder + Sandora defection (fandom) ⭐⭐⭐** — Quote canon : "out of jealousy and frustration over his own limitations, he betrayed his friend Servi, killed him and sided with Imperial Sandora". Pattern Damia : Greham corruption arc canon récurrent + Servi murder canon NEW MAJEUR motivates Lavitz revenge Disc 1. À refléter `quests/disc1-greham-feyrbrand.md` + `party-members/Lavitz.md` father revenge canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Emperor Doel canon NEW MAJEUR Imperial Sandora ruler + gave Greham Jade Dragoon Spirit (fandom) ⭐⭐⭐** — Quote canon : "received the Dragoon Spirit of the Jade Dragon by Emperor Doel" + "I got from His Majesty Doel". Pattern Damia : Emperor Doel = Imperial Sandora ruler Disc 1 antagonist canon récurrent + Doel gave Greham Jade Dragoon Spirit canon. À documenter `npcs/Emperor Doel.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Emperor Diaz canon NEW MAJEUR DEEP LORE TLoD 11,000+ years ago + gave Doel power (fandom) ⭐⭐⭐** — Quote canon : "Emperor Doel received his power and intelligence from Emperor Diaz" + "Diaz was a historical figure that died over 11,000 years ago". Pattern Damia : Emperor Diaz canon NEW MAJEUR TLoD HISTORICAL DEEP LORE — 11,000+ years ago + influenced Doel current (reincarnation ? return ? Disc 4 reveal probable récurrent). Cohérent Dragon Campaign era canon récurrent. À documenter `lore/emperor-diaz.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Rose ancient Dragon Campaign canon récurrent CONFIRMED REVELATION (fandom) ⭐⭐⭐** — Quote canon : "This leaves Rose in entire disbelief, as Diaz was a historical figure that died over 11,000 years ago". Pattern Damia : Rose long-lived/ancient canon récurrent CONFIRMED CROSS-SOURCE — Rose lived during Dragon Campaign 11,000 years ago + knows Diaz personally (cohérent Rose Black Monster Disc 4 reveal récurrent + Rose immortal Wingly hybrid hypothesis récurrent + Rose smells blood Furni Disc 3 récent). À refléter `party-members/Rose.md`. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Greham redemption death speech + Servi afterlife reunion canon NEW MAJEUR Disc 1 (fandom) ⭐⭐⭐** — Quote canon : "shows regret + dying looks forward to see Servi again" + "Lavitz...live strong. Now...I can go...to be with Servi". Pattern Damia : Greham redemption death scene canon NEW MAJEUR Disc 1 emotional beat — corrupt → regret + Lavitz blessing + Servi afterlife reunion. À refléter `quests/disc1-greham-feyrbrand.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 JP HP 500 +25% canon Damia rule CONFIRMED 7ème instance CROSS-BOSS Greham + ⚠️ Wiki HP 350 anomaly (fandom) ⭐⭐⭐** — Quote canon : "HP: 400 (US/EU) / 500 (JP)". 400 × 1.25 = 500 match exact. Pattern Damia : JP HP +25% systematic CONFIRMED 7ème instance CROSS-MOB-BOSS (Gangster + Gehrich + Ghost Commander + Glare + Gnome + Goblin + Greham). ⚠️ Wiki HP 350 < fandom US-EU 400 = wiki erreur probable (cohérent Ghost Commander wiki anomaly récurrent). Damia adopts JP HP 500 canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Ability names CROSS-SOURCE official names CORRECTION Greham + detailed visuals canon (fandom) ⭐⭐⭐** — Pattern Damia : CORRECTION canon official names : ~Piercing Spear → **Spear Combo** (4-hits + fling-up + ground-slam visual) + ~Crucify → **Dragon Crucifixion** (spear-pillar trap + 4 energy spears + final shatter) + ~Spinning Gale/Rave Twister → **Wind Magic** (random Wind + spins spear + left hand release). Fandom canon official names + detailed visuals canon NEW MAJEUR. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Re-ignition Serdian War canon NEW MAJEUR (fandom) ⭐⭐⭐** — Quote canon : "leading to a shift of power towards Sandora and a re-ignition of the Serdian War". Pattern Damia : Serdian War re-ignition canon NEW MAJEUR Disc 1 backstory — Greham defection + Jade Dragoon Spirit acquisition direct cause Serdian War restart canon. À documenter `quests/disc1-serdian-war.md`. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Greham model reuse Disc 3 Furni Resident Knight Harris CROSS-SOURCE 3-way CONFIRMED (fandom + Furni récent + Gangster récurrent) ⭐⭐⭐** — Quote canon Greham fandom : "Greham's model is later re-used on Disc 3, where the mercenary group gathers around the Resident Knight Harris in Furni to hunt down Kamuy in the Forest nearby". Pattern Damia : Model reuse canon CROSS-SOURCE 3-way CONFIRMED (Greham fandom + Furni Disc 3 fandom récent + Gangster fandom récurrent). Greham = SEPARATE character whose model REUSED in Hero Competition + Disc 3 Furni mercenary canon récurrent. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Yield 1200 EXP + 100G "with Feyrbrand" combined boss pair canon (fandom) ⭐⭐** — Quote canon : "1,200 (with Feyrbrand)" + "100 (with Feyrbrand)". Pattern Damia : Yield combined boss pair canon NEW — Feyrbrand+Greham yield total pair (vs individual split). Paired Dragon-Dragoon yield canon combined. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Webbed chamber Nest of Dragon boss arena canon NEW + Plate Mail dual-access (fandom) ⭐⭐** — Quote canon : "webbed chamber" boss arena + "Plate Mail not guaranteed" + Fueno Disc 2 alternative shop 200G récurrent canon. Pattern Damia : webbed Dragon lair canon + Plate Mail Disc 1 30% drop + Disc 2 shop dual-access récurrent. Source: idem.
+
+- [ ] ⭐⭐ **🆕 AT 15/MAT 17 fandom higher anomaly récurrent Greham (fandom) ⭐⭐** — Wiki AT 13/MAT 15 + fandom AT 15/MAT 17 = +15%/+13% small divergences cohérent récurrent fandom higher anomaly. Wiki canon prevails. Source: idem.
+
+- [ ] ⭐⭐ **🆕 JP name "Gurahamu, Graham" canon Greham (fandom) ⭐⭐** — Quote canon : "グラハム, Gurahamu". Pattern Damia : JP name canon récurrent Disc 1 boss. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Chapter 1 Serdian War CONFIRMED CROSS-SOURCE 4/4 chapters canon (fandom) ⭐⭐** — Pattern Damia : Disc 1 Chapter 1 "Serdian War" canon CONFIRMED 4/4 chapters récurrent (Disc 1 Serdian War + Disc 2 Platinum Shadow + Disc 3 Fate and Soul + Disc 4 Moon & Fate). Source: idem.
+
 ### À décider / explorer
 
 ### À décider / explorer

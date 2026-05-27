@@ -5447,6 +5447,54 @@
 
 - [ ] ⭐⭐ **🆕 3-mob scripted boss formation Fruegel 2nd Visit (wiki) ⭐⭐** — Formation 387 : Fruegel + Rodriguez + Guftas = 3-mob scripted (cohérent pattern récurrent). Source: idem.
 
+### Bosses / Fruegel fandom complement — JP name Furyūgeru + Head warden Sandora commanding officer + Doel ordered Seles destruction FOUNDATIONAL LORE + Rodriguez pet bird Wind + Guftas pet dog spiked helmet + Confusion proc + Command ability + Senior Warden double voulge + Gushing Magma death-cast + Total Vanishing boss-immune NEW MAJEUR + Spark Net NEW Spell Item
+
+- [ ] ⭐⭐⭐ **🆕 Doel ordered Shana kidnapping + Fruegel ordered Seles destruction canon NEW MAJEUR FOUNDATIONAL LORE TLoD (fandom) ⭐⭐⭐** — Quote canon : "Fruegel is among the commanders given the order from **Emperor Doel** to obtain the girl named Shana from the small village Seles... giving orders to mercilessly destroy the village as well". Pattern Damia : **Seles destruction = Fruegel's brutal unit canon NEW MAJEUR FOUNDATIONAL LORE TLoD** — Dart hometown massacre directly attributable Fruegel canon. Cohérent existing Forest "leave Shana alone" childhood flashback canon récurrent. À documenter `npcs/Fruegel.md` + `quests/disc1-seles-destruction.md` (à créer) — Dart hometown massacre canon NEW MAJEUR FOUNDATIONAL. Source: [`features/bosses/_sources/fandom-fruegel.md`](features/bosses/_sources/fandom-fruegel.md).
+
+- [ ] ⭐⭐⭐ **🆕 Fruegel = Head Warden + Imperial Sandora commanding officer canon NEW MAJEUR (fandom) ⭐⭐⭐** — Pattern Damia : Fruegel = Imperial Sandora military officer canon NEW MAJEUR (NOT Gehrich Gang). Cohérent existing Sandora/Imperial Doel canon Disc 1. À documenter `npcs/Fruegel.md` (à créer) military hierarchy canon Sandora. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Great Commander of Sandora moderate faction canon NEW MAJEUR (fandom) ⭐⭐⭐** — Quote canon : "**brutal unit loyal to Fruegel. I wouldn't let them kill unnecessarily if I were there...**". Pattern Damia : **Sandora factions canon NEW** — Great Commander Sandora moderate vs Fruegel brutal unit canon. À documenter `npcs/Great Commander of Sandora.md` (à créer) — Black Castle NPC Disc 1 NEW MAJEUR. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 2nd Visit = rescue King Albert canon NEW MAJEUR CORRECTION (fandom) ⭐⭐⭐** — Quote canon : "second time you encounter Fruegel is after returning to Hellena Prison to **rescue King Albert**". Pattern Damia : **2nd Visit context = Albert prisoner Disc 1 canon NEW MAJEUR** — explains Albert join party post-Hellena 2nd Visit canon récurrent (NOT Lavitz death scene comme mon assumption initiale — Lavitz death = scène différente Disc 1). À refléter `quests/disc1-hellena-albert-rescue.md` (à créer) — Albert prisoner rescue canon NEW MAJEUR. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Rodriguez pet bird Wind element NPC canon NEW MAJEUR (fandom) ⭐⭐⭐** — **Rodriguez = Fruegel's pet bird** canon Wind element + HP 400 US / 500 JP +25% systematic CONFIRMED + AT 24 / MAT 24 / DF 100 / MDF 100 / SPD 70. Abilities : **Feather Shot** (sharp feathers single target) + **Aerial Attack** (Fruegel command — aerial drop considerable damage). À documenter `npcs/Rodriguez.md` (à créer) — Fruegel pet bird canon NEW MAJEUR. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Guftas pet dog spiked helmet NPC canon NEW MAJEUR (fandom) ⭐⭐⭐** — **Guftas = Fruegel's pet dog wears helmet with spike on top**. Abilities : **Bite** (front legs shoulders + bites) + **Howl** (Fruegel command — **deals Confusion status proc canon NEW MAJEUR**). Pattern Damia : weaponized pet dog canon + Confusion proc Disc 1 boss-companion canon. À documenter `npcs/Guftas.md` (à créer) — Fruegel pet dog canon NEW MAJEUR. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Command ability Fruegel orders pets canon NEW MAJEUR (fandom) ⭐⭐⭐** — Quote canon : "Command : Fruegel will order Guftas or Rodriguez to do a unique attack". Pattern Damia : **boss command ally ability canon NEW MAJEUR** — Fruegel orders pets unique attacks (Aerial Attack/Howl). À documenter `combat/boss-passives.md` (à créer) — Command boss ability canon NEW MAJEUR. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Gushing Magma death-cast canon Senior Warden NEW MAJEUR (fandom) ⭐⭐⭐** — Quote canon : Senior Wardens "each use Gushing Magma once they themselves are defeated". Pattern Damia : **death-cast ability canon NEW MAJEUR** — mob casts ability on death (cohérent Younger Bardel self-destruct existing récurrent). Gushing Magma = Earth/Fire Spell Item canon cross-source (cohérent Snowfield chest existing). À documenter `combat/death-cast-abilities.md` (à créer) — death-cast canon NEW MAJEUR + `items/Gushing Magma.md` (à créer/vérifier) cross-source 2 sources canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Senior Warden details canon NEW MAJEUR (fandom) ⭐⭐⭐** — "**double voulge**" weapon canon + **Power up Senior Warden 2nd canon** "second will power up and will only take half its normal damage" + death-cast Gushing Magma + quote "Huh, I may as well take you to hell with me!". Pattern Damia : Senior Warden = elite Hellena guard canon NEW MAJEUR. À documenter `mobs/Senior Warden.md` (à créer) — NEW MAJEUR mob canon Disc 1 Hellena. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Total Vanishing boss-immune Spell Item canon NEW MAJEUR + Rose's Demon's Gate same effect canon NEW MAJEUR (fandom) ⭐⭐⭐** — Quote canon : "**Total Vanishing items** from Prairie and Limestone Cave... **game does not recognize Guftas and Rodriguez as boss monsters and therefore they are not immune to Total Vanishing**. **Rose's Demon's Gate will have the same effect**". Pattern Damia : **Total Vanishing = boss-immune one-shot Spell Item canon NEW MAJEUR** + **Demon's Gate = Rose ability canon NEW MAJEUR** (probable Dragoon Magic Final Form attack canon). **Prairie + Limestone Cave NEW locations canon Disc 1** — Total Vanishing chests. À documenter `items/Total Vanishing.md` + `lore/Demon's Gate.md` + `locations/Prairie.md` + `locations/Limestone Cave.md` (à créer) — boss-immune mechanic + Rose ability canon NEW MAJEUR + NEW locations Disc 1. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Spark Net NEW Spell Item canon Disc 1 NEW MAJEUR (fandom) ⭐⭐⭐** — Quote canon strategy : "Burn Out or **Spark Net** over Additions". Pattern Damia : **Spark Net = NEW canon Spell Item Disc 1 NEW MAJEUR** (Thunder element probable cohérent Network thematic). À documenter `items/Spark Net.md` (à créer) — Thunder Spell Item canon NEW MAJEUR Disc 1. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Can Counterattack NO ⚠️ MAJOR DIVERGENCE fandom vs wiki Counter 28 (fandom) ⭐⭐⭐** — Wiki Counter 28 Yes / fandom **"Can Counterattack: No"** ⚠️ MAJOR DIVERGENCE. Pattern Damia : ambiguïté canon — wiki = static reference tier mapping vs fandom = actual gameplay behavior canon probable. À investiguer Discord/Wulves authoritative source. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 4× Healing Potion + Knight Shield 1st drops canon NEW MAJEUR multi-drop + quantity drops (fandom) ⭐⭐⭐** — Pattern Damia : **multi-drop boss canon NEW MAJEUR** + **quantity drops canon NEW MAJEUR** (4 quantity NEW). Cohérent farming-friendly boss canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Power up Atk/Def x1.5 until end 3rd turn CONFIRMED + duration clarification (fandom) ⭐⭐⭐** — Wiki 50% / fandom x1.5 = same canon different notation + **3-turn duration canon CONFIRMED**. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Ability names officiels Attack/Body Slam/Throat Chop/Command CORRECTION wiki community approximations (fandom) ⭐⭐⭐** — **1st Visit** : Attack / Body Slam / Rock Throw (CONFIRMED) / **2nd Visit** : Attack / Throat Chop / Rock Throw / Command. Pattern récurrent fandom > wiki naming canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Personality canon "sadistic brutal anger kills own men" NEW MAJEUR (fandom) ⭐⭐⭐** — Quote canon Fruegel "I will dye rest of your body with red" sadistic threat Dart + "kills own men or threatens them" anger control. Pattern Damia : Fruegel personality canon = pure brutality archetype Disc 1 antagonist. À refléter `npcs/Fruegel.md` (à créer) personality canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 JP name フリューゲル Furyūgeru "Furyugel" canon NEW (fandom) ⭐⭐⭐** — JP katakana name canon récurrent fandom enrichment. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Pets NOT boss-tier classification canon (fandom) ⭐⭐** — Guftas/Rodriguez = standard mobs (despite boss-companion role) — Total Vanishing immune classification absent. Pattern Damia : boss-tier classification ≠ boss-companion role canon NEW. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Spinning Gale Wind addition canon récurrent + "pets flee on Fruegel death" Final Blow CONFIRMED (fandom) ⭐⭐** — Spinning Gale = canon Wind party addition récurrent + Final Blow passive 2ème Visit CONFIRMED cross-source. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Shana MAT > Dart/Lavitz canon CONFIRMED Disc 1 (fandom) ⭐⭐** — Quote canon "Shana significantly better magical attack than Lavitz and Dart". Pattern Damia : Shana magic-leaning canon récurrent CONFIRMED. Source: idem.
+
+- [ ] ⭐⭐ **🆕 JP HP 125 +39% anomaly + XP 240 vs 300 -20% + Gold 20 vs 50 -60% MASSIVE DIVERGENCE (fandom) ⭐⭐** — ⚠️ Wiki/fandom stats divergences Fruegel anomaly canon. JP HP +39% vs +25% systematic récent (cohérent récurrent per-mob anomaly canon). À investiguer authoritative source. Source: idem.
+
+- [ ] ⭐⭐ **🆕 P. Attack 6 / M. Attack 4 fandom CORRECTION wiki 5/3 +20%/+33% (fandom) ⭐⭐** — Pattern Damia récurrent fandom higher numbers canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Hellena Warden "wimps" Fruegel dialogue + Senior Warden hierarchy canon (fandom) ⭐⭐** — Quote Fruegel : Hellena Wardens "wimps" → summons Senior Warden = elite warden hierarchy canon NEW. Source: idem.
+
 ### À décider / explorer
 
 ### À décider / explorer

@@ -6093,6 +6093,44 @@
 
 - [ ] ⚠️ **🆕 Damage hierarchy fandom narrative ⚠️ contradicts wiki AI Goblin (fandom anomaly) ⚠️** — Quote canon fandom narrative : "Kick — minor damage" + "Bone Club — dealing more damage than Kick". ⚠️ **CONTRADICTION** : fandom narrative dit Kick < Bone Club, mais wiki AI table dit Kick 4× phys > Bone Club 1.5× phys (Kick > Bone Club). Pattern Damia : Wiki AI multipliers prevail (tier 2 canonical formal data) — fandom narrative simplification erroneous probable. Wiki canon : Bone Club 1.5× (>50% HP) / Kick 4× (≤50% HP) = damage scaling AI-tier canon. Source: idem.
 
+### Bosses / Gorgaga wiki cross-source 🟢 (Hero Competition Round 1 Boss Disc 1 Lohan submap 638 — Non-Elemental + ZERO-yield sparring + No Traits passive NEW MAJEUR + Poison Needle multi-modifier opening + Axe Slash consecutive constraint + Chain conditional + Pellet/Dark Mist self-named pool CROSS-MOB-BOSS confirmed + Element-agnostic ability caster + M-AV récurrent 3ème instance)
+
+- [ ] ⭐⭐⭐ **🆕 Hero Competition Round 1 Boss canon CROSS-SOURCE CONFIRMED Disc 1 Lohan Gorgaga (wiki + fandom récurrent) ⭐⭐⭐** — Wiki "Lohan (638) + Disc 1 Categories" + fandom Hero Competition narrative récurrent. Pattern Damia : **Gorgaga = Hero Competition Round 1 boss canon NEW MAJEUR Disc 1 Lohan CROSS-SOURCE CONFIRMED** — first Hero Competition competitor documented stat-wise (cohérent récurrent Furni fandom Trivia "warriors models reuse Hero Competition" + Gangster fandom récurrent). À documenter `quests/disc1-hero-competition.md` + `bosses/Serfius.md` + `bosses/Danton.md` + `bosses/Atlow.md` + `bosses/Drake the Bandit.md` + `bosses/Greham.md` (à créer) — Hero Competition Disc 1 Lohan tournament canon roster NEW MAJEUR. Source: [`features/bosses/_sources/lod-wiki-gorgaga.md`](features/bosses/_sources/lod-wiki-gorgaga.md).
+
+- [ ] ⭐⭐⭐ **🆕 ⚠️ ZERO-yield boss canon NEW MAJEUR Disc 1 sparring tournament tier (wiki) ⭐⭐⭐** — Quote canon : "EXP 0 + Gold 0 + Drops Nothing". Pattern Damia : Zero-yield boss tier canon NEW MAJEUR sparring/tournament friendly fight (cohérent Boss Extras zero-yield Mappi + Ghost Knight). Tournament-tier boss canon récurrent : no XP/Gold/drops parce que friendly fight. À refléter `bosses/README.md` sparring tournament tier canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Non-Elemental boss element canon NEW MAJEUR + Element divergence wiki vs fandom (wiki) ⭐⭐⭐** — Wiki "Element Non-Elemental" vs fandom Hero Competition récurrent "Earth". Pattern Damia : ⚠️ MAJOR DIVERGENCE element — Damia wiki tier 2 prevails Non-Elemental + **Element-agnostic ability caster canon NEW MAJEUR** (Non-Elemental boss casts Earth Pellet + Darkness Dark Mist = element-agnostic ability casting canon récurrent). Premier boss documenté Non-Elemental + first element-agnostic caster pattern. À documenter `combat/elements.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 No Traits passive canon NEW MAJEUR Gorgaga first boss sans passive (wiki) ⭐⭐⭐** — Quote canon : "Passives None". Pattern Damia : First boss documented WITHOUT passive trait canon NEW MAJEUR Disc 1 (vs récurrent Power Up Fruegel + Retaliate Gehrich + Resurrect Ghost Commander/Knight). Pattern Damia : Sparring tier = no passive vs real combat tier = passive récurrent = tier variation canon NEW MAJEUR. À refléter `bosses/README.md` passive-tier canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Poison Needle multi-modifier opening ability canon NEW MAJEUR Gorgaga + cheat narrative CROSS-SOURCE (wiki + fandom récurrent) ⭐⭐⭐** — Wiki "100% Poison + Ignore turn order + immediate start + Single use + M-AV reduces" + fandom Hero Competition récurrent "cheat opener foul play rules violation + Winning is winning quote + devoid of honor + Dart advance DQ via rules violation". Pattern Damia : Multi-modifier opening + narrative cheat canon CROSS-SOURCE Disc 1 — 5 modifiers combined (Ignore turn order + immediate start + Single use + 100% Poison + M-AV reduces). Boss mechanical + narrative integration canon NEW MAJEUR. À documenter `combat/boss-abilities.md` + `quests/disc1-hero-competition.md`. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Axe Slash "max 2× in a row" constraint canon NEW MAJEUR Gorgaga (wiki) ⭐⭐⭐** — Quote canon : "Can be used no more than twice in a row". Pattern Damia : **Consecutive use limit canon NEW MAJEUR boss AI Disc 1** — premiere ability-history mechanic documenté. Anti-spam ability canon NEW MAJEUR — boss AI tracks consecutive use count. À documenter `combat/boss-abilities.md` + `combat/ai-patterns.md` history-based AI canon NEW MAJEUR. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Chain conditional "only if Axe Slash cannot" canon NEW MAJEUR Gorgaga (wiki) ⭐⭐⭐** — Quote canon : Pellet + Dark Mist "Only used if Axe Slash cannot be used". Pattern Damia : **Chain conditional ability canon NEW MAJEUR** — primary ability availability gates secondary abilities + fallback pattern canon. Decision tree AI canon NEW MAJEUR boss — primary Axe Slash → fallback Pellet OR Dark Mist (multi-choice random when triggered). À documenter `combat/ai-patterns.md` chain-conditional + decision-tree AI. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Self-named ability-item pool CROSS-MOB-BOSS CONFIRMED 7ème pattern Gorgaga (wiki) ⭐⭐⭐** — Pattern Damia : **Cross-creature shared ability canon CONFIRMED** : Pellet (Gnome Disc 3 récurrent) + Dark Mist (Gargoyle Disc 1 récurrent) used by **Gorgaga boss Disc 1**. 7ème pattern documenté CROSS-MOB-BOSS — shared TLoD ability pool design canon. À documenter `combat/spell-items.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 M-AV status-resist canon récurrent 3ème instance CROSS-MOB-BOSS Gorgaga (wiki) ⭐⭐⭐** — Pattern Damia : M-AV reduces chance canon récurrent 3ème instance CROSS-MOB-BOSS CONFIRMED (Glare Bewitchment + Gnome Stunning Hammer + Gorgaga Poison Needle). Universal M-AV status-resist mechanic canon récurrent. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Status 8/8 ALL IMMUNE boss-tier canon récurrent 6ème instance Gorgaga (wiki) ⭐⭐⭐** — Pattern Damia : Boss-tier full immunity canon récurrent CROSS-BOSS 6ème instance confirmé (Fruegel + Gehrich + Ghost Commander + Ghost Knight + Gorgaga). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 ⚠️ Stats divergence wiki vs fandom Gorgaga HP 160/AT 16 vs 200/19 (cross-source anomaly) ⭐⭐⭐** — Wiki tier 2 : HP 160 + AT 16/MAT 16. Fandom Hero Competition existant : HP 200 + AT 19/MAT 19. Pattern Damia : Wiki tier 2 canon prevails — fandom +25% HP / +19% AT/MAT divergence anomaly récurrent (cohérent récurrent fandom higher stats pattern Gangster/Gehrich/Ghost Commander/Glare/Goblin précédents). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Bulgus = Gorgaga model reuse CROSS-SOURCE confirmé Gorgaga (wiki + fandom récurrent) ⭐⭐** — Furni Disc 3 fandom récent Trivia + Gangster fandom récurrent : "Bulgus uses Gorgaga model". Pattern Damia : Model reuse production-side canon récurrent confirmé. À refléter `mobs/Bulgus.md` (à créer) + `bosses/Gorgaga.md`. Source: idem.
+
+- [ ] ⭐⭐ **🆕 AI "if→then" boss rules canon récurrent 3ème instance Gorgaga (wiki) ⭐⭐** — Pattern Damia : Boss conditional-AI canon récurrent CROSS-BOSS 3ème instance CONFIRMED (Gehrich + Ghost Commander + Gorgaga). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Lohan submap 638 Hero Competition arena Disc 1 canon CROSS-SOURCE Gorgaga (wiki) ⭐⭐** — Pattern Damia : Lohan Hero Competition arena submap 638 canon récurrent CROSS-SOURCE CONFIRMED. À refléter `locations/Lohan.md` (à créer/vérifier). Source: idem.
+
+- [ ] ⭐⭐ **🆕 HP 160 low boss-tier Disc 1 sparring + AT/MAT 16 symmetric low + DF 100/MDF 80 lighter defenses canon Gorgaga (wiki) ⭐⭐** — Pattern Damia : Sparring boss baseline stats canon NEW MAJEUR Disc 1 (low HP + symmetric AT/MAT + lighter MDF 80). Source: idem.
+
+- [ ] ⭐ **🆕 28 Counter Opportunities canon récurrent Gorgaga (wiki) ⭐** — Counter tier 28 récurrent canon. ⚠️ Counter feature non-implémenté Damia. Source: idem.
+
+### À décider / explorer
+
+### À décider / explorer
+
 ### À décider / explorer
 
 ### À décider / explorer

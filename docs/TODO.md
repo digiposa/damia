@@ -5687,6 +5687,32 @@
 
 - [ ] ⭐ **🆕 Shops canal-only access Boat License required canon (fandom) ⭐** — Quote canon : "Both of the shops are located at the **canal and require the boat licence to use them**" + "building itself accessible by land as well, but **no items can be bought**". Pattern Damia : Boat License = shop access requirement canon Furni Disc 3 gameplay gate canon NEW. Source: idem.
 
+### Mobs / Gangster wiki (Earth Minor Enemy Disc 2 Home of Giganto NEW MAJEUR location — DF 120 high tank + Power Up self CROSS-TIER pattern + Piggy + Crafty Thief NEW mobs + Bandit's Ring NEW accessory + Albert Lavitz Additions inherit confirmation)
+
+- [ ] ⭐⭐⭐ **🆕 Home of Giganto location canon NEW MAJEUR Disc 2 (wiki) ⭐⭐⭐** — Quote canon : Submaps "Home of Giganto (261, 262, 263, 264, 265)". Pattern Damia : **Home of Giganto = NEW MAJEUR location canon Disc 2** — probable **Kongol's hometown canon NEW MAJEUR** (Giganto race = Kongol's people canon récurrent "Last of the Gigantos" Disc 1+). 5 submaps Disc 2 exploration zone canon. À documenter `locations/Home of Giganto.md` (à créer) — Kongol Gigantos hometown canon NEW MAJEUR Disc 2. Source: [`features/mobs/_sources/lod-wiki-gangster.md`](features/mobs/_sources/lod-wiki-gangster.md).
+
+- [ ] ⭐⭐⭐ **🆕 Piggy + Crafty Thief NEW mobs canon Home of Giganto Disc 2 (wiki) ⭐⭐⭐** — Encounters confirment **2 NEW mob types canon Home of Giganto Disc 2** : Piggy + Crafty Thief. Pattern Damia : Home of Giganto = bandit/thief themed encounters canon NEW MAJEUR (cohérent Gangster + Crafty Thief naming criminal theme). À documenter `mobs/Piggy.md` + `mobs/Crafty Thief.md` (à créer) — NEW mobs canon Disc 2. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 DF 120 high physical tank Gangster canon Disc 2 (wiki) ⭐⭐⭐** — DF 120 = highest physical defense récent Disc 2 (cohérent récurrent Disc 2 mob tier escalation). Pattern Damia : Gangster = physical tank canon Disc 2 (DF 120 + AT 36 + Power Up self = tank-bruiser archetype NEW Disc 2). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Power Up self canon CROSS-TIER shared ability pattern NEW MAJEUR (wiki) ⭐⭐⭐** — Pattern Damia : **Power Up self = canon shared ability TLoD CROSS-TIER 2 instances CONFIRMED** : Fruegel Boss (Disc 1+2 — magic-triggered conditional Atk/Def x1.5) + Gangster Mob (Disc 2 Home of Giganto — 25% random Any-HP AI +50%/-50% 3 turns). **Boss vs Mob Power Up sub-patterns canon CROSS-TIER NEW MAJEUR pattern** : Boss = magic-triggered conditional / Mob = HP-based random AI. À documenter `combat/boss-abilities.md` (à créer) + `mobs/README.md` shared ability canon CROSS-TIER 2 instances. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Bandit's Ring NEW accessory canon Disc 2 (wiki) ⭐⭐⭐** — Drops "Bandit's Ring 2%" rare. Pattern Damia : Bandit's Ring = NEW accessory canon Disc 2 thématique bandit cohérent Gangster naming. 2% drop rare-tier récurrent. À documenter `items/Bandit's Ring.md` (à créer) — NEW accessory canon Disc 2 thématique bandit. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Albert post-Lavitz Additions inherit canon Disc 2+ confirmé Gangster (wiki) ⭐⭐⭐** — 28 counter opportunities incl. **Albert** avec **Gust of Wind Dance + Flower Storm = Lavitz Additions inherited canon post-Lavitz death**. Pattern Damia : **Albert canon Disc 2+ post-Lavitz death inherit Lavitz Additions pool canon récurrent CONFIRMED** Gangster counter list. À refléter `party-members/Albert.md` Albert Additions inherit Lavitz canon Disc 2+. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Status 4/8 immune mid-tier Gangster canon Disc 2 (wiki) ⭐⭐⭐** — Petrify + Bewitch + Arm Block + Dispirit ✔ (4 immune) vs Confuse + Fear + Poison + Stun ✗ (4 vulnerable). Pattern Damia : Mid-tier 4/8 immunity canon Disc 2 (cohérent récurrent mob mid-tier vs boss 8/8 récurrent). **Spécifique Gangster : vulnerable Confuse/Fear/Poison/Stun = strategic openings canon Disc 2**. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 28 Counter Opportunities cross-character canon riche Gangster (wiki) ⭐⭐⭐** — 15 user-Addition entries × multi-button-press = 28 total counter opportunities canon riche (Dart/Lavitz/Rose/Meru/Haschel/Albert). Cohérent Counter tier mapping universal multi-disc canon récurrent. ⚠️ Counter feature non-implémenté Damia (factual mention only). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Earth element 4ème instance Gangster récurrent canon mobs Disc 1-2 (wiki) ⭐⭐** — Earth element canon récurrent : Forest Runner + Flying Rat + Frilled Lizard + **Gangster = 4ème Earth Mob canon récurrent**. Pattern Damia : Earth mobs canon récurrent Disc 1-2 majoritaires vs autres elements minoritaires. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Gangster Yield 60 EXP + 12G ÷3 = 4G Damia conversion canon (wiki) ⭐⭐** — Gold Damia conversion ÷3 systematic récurrent. HP 280 + AT 36/DF 120 high tank stats canon Disc 2 mid-tier. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Scripted encounter formation 475 Crafty Thief x2 + Gangster Home of Giganto submap 263 (wiki) ⭐⭐** — Scripted 0% escape encounter canon récurrent (cohérent récurrent boss-arena scripted pattern). Plot beat probable Disc 2 Home of Giganto. Source: idem.
+
+- [ ] ⭐ **🆕 ~Kick basic 1× phys ability canon récurrent + Contact arrows trigger Gangster (wiki) ⭐** — ~Kick = basic single-target 1× phys canon récurrent Disc 1-2. Contact arrows = visible-encounter trigger récurrent Disc 1-2. Source: idem.
+
 ### À décider / explorer
 
 ### À décider / explorer

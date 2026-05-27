@@ -5977,6 +5977,32 @@
 
 - [ ] ⭐⭐ **🆕 Disc 2 Monsters category canon CONFIRMED CROSS-SOURCE Glare (fandom) ⭐⭐** — Pattern Damia : Disc 2 Glare canon CONFIRMED CROSS-SOURCE. Source: idem.
 
+### Mobs / Gnome wiki PARTIAL (Earth Minor Enemy Disc 3+ Kadessa — Kadessa NEW MAJEUR location + Toad Stool NEW mob + Earth Immunity passive 3ème instance récurrent + Pellet self-named pool 6ème instance + Stunning Hammer 100% Stun + M-AV récurrent 2ème instance + Spell caster archetype récurrent CROSS-MOB + Multi-choice ≤50% AI ⚠️ stats incomplets)
+
+- [ ] ⚠️⚠️⚠️ **🆕 ⚠️ Wiki Gnome source PARTIAL — stats/yield/counter manquants ⚠️⚠️⚠️** — Source wiki fournie partielle, manque : HP/AT/DF/SPD/MAT/MDF/A-AV/M-AV + Status Immunity 8 statuses + Yield EXP/Gold/Drops + Counter Opportunities table. À ingérer wiki complet OU fandom future pour compléter canon. Source: [`features/mobs/_sources/lod-wiki-gnome.md`](features/mobs/_sources/lod-wiki-gnome.md).
+
+- [ ] ⭐⭐⭐ **🆕 Kadessa NEW MAJEUR location canon Disc 3+ (wiki) ⭐⭐⭐** — Submaps 393/394/395/397/398/399/400/402/403/404/405 = 11+ unique submaps canon Kadessa NEW MAJEUR. Pattern Damia : Kadessa = large dungeon canon TLoD Disc 3+ (submap IDs haut tier 393-405 cohérent Disc 3+ Mille Seseau ou plus loin). À documenter `locations/Kadessa.md` (à créer) + investiguer disc canon Mille Seseau ou autre region. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Toad Stool NEW mob canon Kadessa Disc 3+ (wiki) ⭐⭐⭐** — Encounter formation 146 confirme Toad Stool = NEW mob canon Kadessa Disc 3+. Pattern Damia : Kadessa ecosystem canon NEW MAJEUR — Gnome + Toad Stool = forest/nature themed encounters (Earth element + mushroom theme). À documenter `mobs/Toad Stool.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Earth Immunity passive canon récurrent CROSS-MOB 3ème instance Gnome (wiki) ⭐⭐⭐** — Quote canon : "Earth Immunity — Earth-elemental magic damage reduced to 0". Pattern Damia : Element-immunity passive canon récurrent CROSS-MOB CONFIRMED 3ème instance : Fire Spirit (Fire Immunity) + Freeze Knight (Water Immunity) + **Gnome (Earth Immunity) NEW Disc 3+**. Pattern Damia : Element-immunity = canon récurrent design pattern TLoD (mob immune à son propre élément). À documenter `combat/mob-passives.md` (à créer) + `mobs/README.md` Element Immunity canon récurrent. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Pellet self-named ability-item canon récurrent 6ème instance pool Gnome (wiki) ⭐⭐⭐** — Quote canon : "Pellet — 1.5× Earth-elemental magic damage". Pattern Damia : Self-named ability-item shared pool canon récurrent CONFIRMED Gnome NEW instance (Fatal Blizzard + Pellet + Sun Rhapsody + Trans Light + Dark Mist + Pellet Gnome = 6 instances pool). Self-named ability = item drop same name canon TLoD pattern. À refléter `items/Pellet.md` (à créer/vérifier) + `combat/spell-items.md`. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Stunning Hammer 100% Stun + M-AV reduces canon NEW MAJEUR Disc 3+ Gnome (wiki) ⭐⭐⭐** — Quote canon : "Stunning Hammer — 100% chance Stun inflict — Target's M-AV reduces chance". Pattern Damia : (1) 100% Stun guaranteed inflict canon (cohérent Ghost Knight Ghost Aura récent — probable RNG 99.01% effective same code 0-100 quirk), (2) M-AV reduces chance canon récurrent 2ème instance CROSS-MOB CONFIRMED (Glare Bewitchment + Gnome Stunning Hammer = M-AV status-resist mechanic récurrent). À documenter `combat/status-effects.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Spell caster archetype canon récurrent CROSS-MOB 2ème instance Disc 3+ Gnome (wiki) ⭐⭐⭐** — ≤50% HP triggers magic (Pellet + Stunning Hammer). Pattern Damia : Spell caster mob archetype canon récurrent CROSS-MOB CONFIRMED 2ème instance (Glare ≤25% red HP + Gnome ≤50% HP). Sub-pattern threshold variation canon : spell caster tier variation (Glare lower threshold vs Gnome higher). À refléter `combat/mob-classes.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Multi-choice ≤50% AI canon NEW MAJEUR Gnome (wiki) ⭐⭐⭐** — Pattern Damia : Gnome ≤50% HP = 2 abilities eligible (Pellet OR Stunning Hammer) random selection canon NEW MAJEUR (cohérent récurrent "equal chance" rule Minor Enemy AI). Pattern : Multi-ability eligible per HP-threshold canon récurrent — AI random selection. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 AI HP-threshold clean non-overlap canon Gnome (wiki) ⭐⭐⭐** — Quote canon : ">50% ~Wheat Whack" + "≤50% Pellet + Stunning Hammer". Pattern Damia : AI sub-pattern HP-threshold clean canon récurrent CONFIRMED Gnome — distinct >50%/≤50% threshold (vs overlap Gargoyle/Glare 25-50% récurrent). À refléter `combat/ai-patterns.md`. Source: idem.
+
+- [ ] ⭐⭐ **🆕 No road encounters Gnome dungeon-bound canon Disc 3+ (wiki) ⭐⭐** — Quote canon : "On World Map Road — None". Pattern Damia : Gnome = encounter-bound Kadessa only canon (vs Glare ubiquitous road récurrent). Disc 3+ dungeon-bound mob pattern. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Wheat Whack basic 1× phys + wheat/farming theme Gnome (wiki) ⭐⭐** — Quote canon : "~Wheat Whack — 1× Physical damage". Pattern Damia : basic 1× phys canon récurrent + Wheat = crop/farming theme cohérent Gnome (mythology gnomes = earth/garden creatures). Source: idem.
+
+- [ ] ⭐ **🆕 Earth element 5ème instance Mob canon récurrent Gnome (wiki implied) ⭐** — Pattern Damia : Earth mobs canon récurrent 5ème instance CONFIRMED : Forest Runner + Flying Rat + Frilled Lizard + Gangster Disc 2 + **Gnome Disc 3+ NEW**. Earth pool canon TLoD récurrent majoritaire. Source: idem.
+
 ### À décider / explorer
 
 ### À décider / explorer

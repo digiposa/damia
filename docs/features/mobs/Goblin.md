@@ -40,6 +40,35 @@
 >
 > - 🥈 [`_sources/lod-wiki-goblin.md`](./_sources/lod-wiki-goblin.md) — wiki LoD tier 2 (Minor Enemy Fire Disc 1 Forest + **HP 4 extraordinarily low canon NEW MAJEUR** + AT 2/DF 120 high/SPD 40/MAT 1/MDF 120 high/A-AV/M-AV 0% + **asymmetric defense-HP canon NEW MAJEUR** + Status 4/8 immune mid-tier + Yield 4 EXP/6G/Detonate Rock 10% + 3 encounter formations Forest + **Assassin Cock + Trent NEW mobs** + **Detonate Rock NEW item** + **Escape 90% highest récent canon NEW MAJEUR** + AI HP-threshold clean escalating damage **>50% ~Bone Club 1.5× / ≤50% Throw Stone 3× + ~Kick 4× multi-choice NEW MAJEUR** + **Small humanoid green skin + large bone weapon appearance canon NEW MAJEUR** + **Trivia "bone too large for Forest creatures" lore mystery canon NEW MAJEUR** + 28 counter opportunities cross-character incl Albert Lavitz inherit)
 
+## Sprite canon ⭐⭐⭐ Damia integration (Gemini final)
+
+> ![Goblin sprite sheet](./_assets/goblin-sprite.png)
+
+⭐⭐⭐ **Sprite Goblin Gemini sélectionné CONFIRMS canon PS1 + wiki appearance** :
+
+- ✅ **Small humanoid** canon (taille réduite vs party members)
+- ✅ **Greenish skin** canon (teal/cyan vert-bleu cohérent PS1 reference)
+- ✅ **Pointy ears** canon
+- ✅ **Tusk/fang teeth** canon (visible)
+- ✅ **Red glowing eyes** canon PS1 reference
+- ✅ ⭐⭐⭐ **Large bone weapon (white femur) canon** — fidélité PS1 confirmée (vs alternative wood club ChatGPT moins fidèle)
+- ✅ **Brown leather tunic + gold buckle belt** canon PS1
+
+**Animation structure prête Damia (Gemini cycles canonicaux)** :
+
+| Cycle        | Frames                     | Notes canon                                                                                    |
+| ------------ | -------------------------- | ---------------------------------------------------------------------------------------------- |
+| **ISO SE**   | 1                          | Direction Sud-Est canon récurrent isométrique Damia                                            |
+| **ISO SW**   | 1                          | Direction Sud-Ouest canon récurrent isométrique                                                |
+| **IDLE**     | 4                          | 4-frame cycle canon (mouvement repos)                                                          |
+| **WALK**     | 6                          | 6-frame cycle canon (déplacement)                                                              |
+| **ATTACK 1** | + effect                   | Bone Club attack canon avec swirl visual effect                                                |
+| **DEATH**    | frame-by-frame dissolution | Death animation canon cohérent **bone mystery lore** Trivia (Goblin laisse os = lore cohérent) |
+
+Pattern Damia : ⭐⭐⭐ **Sprite Gemini animation-ready** — drop-in dans système Damia (cohérent récurrent pattern Dart attack 3-frame + Berserk Mouse + Albert + Meru + Gnome sprites précédents). **Bone weapon white-femur fidèle PS1 canon** ✓ + **2 ISO angles directional** canon récurrent ✓ + **DEATH dissolution avec bones** = lore canon cohérent Trivia "bone too large for Forest creatures" mystery.
+
+À intégrer future : `public/assets/sprites/mobs/goblin-*.png` (frame-split par cycle) + `data/mobs/goblin.ts` (à créer) AvatarSpriteForm pattern récurrent + `RenderSystem` cycle-aware (idle/walk/attack/death).
+
 ## Statut
 
 🟡 **Canon documenté wiki tier 2 uniquement** — fandom à ingérer future (Trivia depth + Gallery + Goblin lore + Detonate Rock + Assassin Cock + Trent stats).

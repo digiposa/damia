@@ -6069,6 +6069,8 @@
 
 - [ ] ⭐ **🆕 Bone Club 1.5× phys basic ability cohérent appearance Goblin (wiki) ⭐** — Quote canon : "~Bone Club 1.5× Physical damage". Pattern Damia : basic phys ability 1.5× canon Disc 1 + Bone Club = cohérent appearance (large bone weapon). Source: idem.
 
+- [ ] ⭐⭐⭐ **🆕 Goblin sprite Gemini final intégré canon Damia animation-ready ⭐⭐⭐** — Sprite Goblin Gemini sélectionné par user (vs ChatGPT moins fidèle bone weapon). Confirme PS1 reference canon : small humanoid + greenish teal skin + red eyes + tusk + **large bone weapon white femur fidèle PS1** + brown leather tunic + gold belt. Animation cycles labelés canon : **ISO SE + ISO SW** (directional isométrique récurrent Damia) + **IDLE 4-frame** + **WALK 6-frame** + **ATTACK 1 with swirl effect** (Bone Club ability visual) + **DEATH frame-by-frame dissolution** (cohérent lore Trivia bone mystery — Goblin laisse os = canon foreshadowing). Pattern Damia : drop-in animation-ready dans système Damia (cohérent récurrent pattern Dart attack 3-frame + Berserk Mouse + Albert + Meru + Gnome sprites précédents). À intégrer future `public/assets/sprites/mobs/goblin-*.png` (frame-split par cycle) + `data/mobs/goblin.ts` (à créer) AvatarSpriteForm pattern récurrent. À documenter `docs/features/mobs/_assets/goblin-sprite.png` (intégré). Source: user upload Gemini final 2026-05-27.
+
 ### À décider / explorer
 
 ### À décider / explorer

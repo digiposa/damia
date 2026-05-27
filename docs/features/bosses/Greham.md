@@ -98,6 +98,63 @@ Pattern Damia : **3-tier walking pace canon NEW** — mob normal / boss heavy / 
 
 À intégrer future : `public/assets/sprites/bosses/greham-*.png` (frame-split par cycle) + `data/bosses/greham.ts` (à créer) AvatarSpriteForm pattern récurrent + `RenderSystem` cycle-aware (idle/walk/attack/death) + 4-directional facing logic + spear swing arc particle effect.
 
+## Sprite canon ⭐⭐⭐ Damia Jade Dragoon TRANSFORMATION form (Gemini Dragoon-tier NEW MAJEUR)
+
+> ![Greham Jade Dragoon sprite sheet](./_assets/greham-dragoon-sprite.png)
+
+⭐⭐⭐ **Sprite Greham Jade Dragoon form NEW MAJEUR — Premier Dragoon transformation form documenté canon Damia** :
+
+- ✅ **Winged Jade Dragoon** canon (ailes crystallines/jade visibles) NEW MAJEUR
+- ✅ **Crystalline armor + jade green tones** canon (cohérent Jade = crystal canon récurrent + Wind element)
+- ✅ **Aerial/floating posture** canon (Dragoon transformation = flight-capable canon NEW MAJEUR)
+- ✅ **Crystal spear weapon** canon (Dragoon Spear weapon récurrent — Lavitz/Albert spear lineage canon)
+- ✅ **8 ISO angles** canon NEW MAJEUR (vs 4 boss / 2 mob — Dragoon-tier expansion ⭐⭐⭐)
+
+**Animation structure prête Damia (Gemini cycles canonicaux Dragoon transformation form)** :
+
+| Cycle        | Frames                              | Notes canon                                                                                  |
+| ------------ | ----------------------------------- | -------------------------------------------------------------------------------------------- |
+| **ISO SE**   | 1                                   | Direction Sud-Est canon Dragoon                                                              |
+| **ISO S**    | 1                                   | ⭐ Direction Sud canon NEW MAJEUR (vs 4-dir boss)                                            |
+| **ISO SW**   | 1                                   | Direction Sud-Ouest canon Dragoon                                                            |
+| **ISO W**    | 1                                   | ⭐ Direction Ouest canon NEW MAJEUR                                                          |
+| **ISO NW**   | 1                                   | Direction Nord-Ouest canon Dragoon                                                           |
+| **ISO N**    | 1                                   | ⭐ Direction Nord canon NEW MAJEUR                                                           |
+| **ISO NE**   | 1                                   | Direction Nord-Est canon Dragoon                                                             |
+| **ISO E**    | 1                                   | ⭐ Direction Est canon NEW MAJEUR                                                            |
+| **IDLE**     | **6-frame floating loop per dir**   | ⭐⭐⭐ **Floating loop NEW MAJEUR** (vs boss breathing — Dragoon = airborne idle hovering)   |
+| **MOVE**     | **8-frame aerial cycle per dir**    | ⭐⭐⭐ **Aerial flight cycle NEW MAJEUR** (vs walk/hover — Dragoon flight 8-frame elaborate) |
+| **ATTACK 2** | with effect                         | ⭐⭐⭐ **Crystal Geyser NEW MAJEUR ability name** (Jade = crystal canon)                     |
+| **DEATH**    | **Crystal Shatter + Dust particle** | ⭐⭐⭐ **Crystal Shatter Dust death NEW MAJEUR** (crystalline death cohérent Jade canon)     |
+
+⭐⭐⭐ **Sprite tier hierarchy canon EXPANSION NEW MAJEUR Damia** :
+
+| Tier                             | ISO angles    | Locomotion cycle                                  | Frame count                  |
+| -------------------------------- | ------------- | ------------------------------------------------- | ---------------------------- |
+| Mob (Goblin)                     | 2 (SE+SW)     | 6-frame normal walk                               | Standard                     |
+| Boss walking heavy (Gorgaga)     | 4 (4-dir)     | 6-frame heavy walk                                | Standard                     |
+| Boss walking standard (Greham)   | 4 (4-dir)     | 6-frame standard walk                             | Standard                     |
+| Boss hovering (Grand Jewel)      | 4 (4-dir)     | 6-frame heavy HOVER                               | Standard                     |
+| ⭐⭐⭐ **Dragoon form (Greham)** | **8 (8-dir)** | **8-frame aerial flight + 6-frame floating idle** | **Elaborate (Dragoon-tier)** |
+
+Pattern Damia : ⭐⭐⭐ **Dragoon transformation form sprite sub-class canon NEW MAJEUR Damia** — Dragoon = aerial-capable + 8-directional facing + elaborate aerial flight cycle (8-frame vs 6-frame standard) + floating idle (vs breathing idle) + crystal-themed elemental death. Premier Dragoon form sprite documenté canon Damia.
+
+⭐⭐⭐ **Crystal Geyser ATTACK 2 ability NEW MAJEUR canon (sprite)** :
+
+- Geyser canon = vertical eruption visual (crystal pillar from ground upward — cohérent Dragon Crucifixion spear-pillar visual canon récurrent ?)
+- **Jade crystal elemental theme canon récurrent** (Jade Dragoon = crystal/Wind correspondence)
+- Possible ATTACK 1 = Spear Combo (récurrent) + ATTACK 2 = Crystal Geyser Dragoon-only NEW
+- À documenter `combat/dragoon-abilities.md` (à créer) — Crystal Geyser Greham Dragoon-only ability NEW MAJEUR
+
+⭐⭐⭐ **Crystal Shatter + Dust DEATH canon NEW MAJEUR (sprite)** :
+
+- Crystalline shatter death cohérent récurrent boss death + Greham vanishes fandom canon
+- ⭐ **Jade crystal shatter visual canon NEW MAJEUR** — cohérent Jade Dragoon Spirit transfer mechanic visual (Spirit leaves crystal body → transfers Lavitz)
+- Pattern Damia : **Dragoon transformation death = elemental crystal/jade shatter** canon récurrent probable (Lavitz future Jade Dragoon death visual similar ?)
+- À refléter quests Disc 1 Greham death cinematic canon récurrent
+
+À intégrer future : `public/assets/sprites/bosses/greham-dragoon-*.png` (8-directional frame-split par cycle) + `data/bosses/greham.ts` AvatarSpriteForm dual-form (human + Jade Dragoon transformation) pattern récurrent + `RenderSystem` Dragoon-aware (8-dir + aerial locomotion + Crystal Geyser effect + Crystal Shatter Dust death particle) + Dragoon transformation trigger logic (HP threshold ? scripted ?) canon récurrent.
+
 ## Statut
 
 🟢 **Canon confirmed cross-source** (wiki 🥈 + fandom 🥉) — 2 sources cohérentes majoritaires + enrichissement fandom MASSIF Disc 1 :

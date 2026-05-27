@@ -5815,6 +5815,44 @@
 
 - [ ] ⭐⭐ **🆕 28 Counter Opportunities canon boss récurrent CROSS-MOB-BOSS Disc 2 Gehrich (wiki) ⭐⭐** — Counter tier mapping universal multi-disc CROSS-MOB-BOSS canon. Albert présent (Gust of Wind Dance + Flower Storm) = Lavitz Additions inherit canon Disc 2+ récurrent. ⚠️ Counter feature non-implémenté Damia. Source: idem.
 
+### Bosses / Gehrich fandom complement (Cross-source 🟢 — HASCHEL Rouge School master CONFIRMÉ + Princess Emille impostor plot Disc 2 + Mappi Vanish/Can't Combat + Talisman + Soul Headband stats Haschel + Deningrad NEW location + Gehrich 20 years ex-student backstory + Haschel entomb closure beat)
+
+- [ ] ⭐⭐⭐ **🆕 HASCHEL = Rouge School master canon CONFIRMÉ + Gehrich ex-student kicked 20 years ago bad attitude canon NEW MAJEUR (fandom) ⭐⭐⭐** — Quote canon : "He was once **Haschel's student in the Rouge School of Martial Arts**, but was **kicked out twenty years ago for his bad attitude**". Pattern Damia : ⭐⭐⭐ **REVELATION CANON MAJEURE** — hypothèse Haschel Rouge School master VALIDÉE par fandom canonique. Haschel = legitimate master + Gehrich = corrupt ex-student. 20 years pre-game timeline canon + bad attitude expulsion canon reason. À refléter `party-members/Haschel.md` Rouge School master canon CONFIRMED + `combat/rouge-school.md` (à créer) legitimate vs corrupt faction canon Disc 2. Source: [`features/bosses/_sources/fandom-gehrich.md`](features/bosses/_sources/fandom-gehrich.md).
+
+- [ ] ⭐⭐⭐ **🆕 Princess Emille impostor plot canon NEW MAJEUR Disc 2 Tiberoa (fandom) ⭐⭐⭐** — Quote canon : "After the fight, **Princess Emille's uncharacteristically rude behavior is explained by Gehrich's revelation: The real princess has been kidnapped and replaced by an imposter**". Pattern Damia : **Princess Emille = Tiberoa princess canon NEW MAJEUR Disc 2** + impostor plot Disc 2 narrative arc NEW MAJEUR — Gehrich Gang kidnapped real princess + replaced canon. À documenter `npcs/Princess Emille.md` + `quests/disc2-emille-impostor.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 JP HP 3000 vs US-EU 2400 +25% canon récurrent CONFIRMED Damia rule (fandom) ⭐⭐⭐** — Quote canon : "HP: 2,400 (US/EU) / **3,000 (JP)**". 2400 × 1.25 = 3000 = match exact pattern récurrent canon JP stats rule. Damia adopts JP HP 3000 boss canon. Pattern Damia : JP HP +25% systematic récurrent CONFIRMED CROSS-MOB-BOSS (Gangster + Gehrich). ⚠️ Wiki HP 2000 anomaly probable (wiki erreur ou alternate variant) — fandom canonical Damia adoption. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Gehrich Gang named bandit faction Chapter 2 Tiberoa canon NEW MAJEUR (fandom) ⭐⭐⭐** — Quote canon : "**Gehrich Gang, a group of bandits terrorizing Tiberoa during chapter 2 of the game**". Pattern Damia : Gehrich Gang = named bandit faction canon NEW MAJEUR Disc 2 Chapter 2 Tiberoa + Rouge School corrupt branch + Tiberoa terror. Cohérent CROSS-SOURCE Gangster fandom récent "elite part of his gang of bandits". À documenter `lore/gehrich-gang.md` ou `combat/rouge-school.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Gehrich death + Haschel entomb canon emotional closure beat NEW MAJEUR (fandom) ⭐⭐⭐** — Quote canon : "He **dies shortly after and is entombed by Haschel**". Pattern Damia : Gehrich death canon CONFIRMED Disc 2 + **Haschel entomb ex-student emotional beat canon NEW MAJEUR** — closure arc Haschel canon récurrent character development Disc 2. À refléter `party-members/Haschel.md` Gehrich closure canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Mappi Vanish = Untargetable self-cast + Can't Combat attack canon NEW MAJEUR CROSS-SOURCE (fandom) ⭐⭐⭐** — Quote canon : "**Mappi cannot use 'Vanish' if Gehrich is dead**" + "Mappi... due to his ability to **deal a Can't Combat attack**". Pattern Damia : **Vanish = Mappi ability canon NEW MAJEUR Disc 2** confirme **Untargetable wiki = Vanish fandom canon cross-source link** (Mappi causes own Untargetable via Vanish). **Can't Combat = NEW status canon Disc 2** Mappi-inflict + **Talisman anti-status item NEW MAJEUR**. À documenter `bosses/Mappi.md` + `combat/status-effects.md` + `items/Talisman.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Talisman anti-Can't-Combat item canon NEW MAJEUR Disc 2 (fandom) ⭐⭐⭐** — Quote canon : "**Talisman is recommendable**" vs Mappi Can't Combat attack. Pattern Damia : Talisman = NEW item canon Disc 2 — anti-status accessory vs Can't Combat (cohérent récurrent anti-status item pair pattern). À documenter `items/Talisman.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Soul Headband stats Haschel +5 DF/+2 MAT canon + Deningrad NEW MAJEUR location (fandom) ⭐⭐⭐** — Quote canon : "Soul Headband... **gives Haschel 5 more DF and two more MAT**, and is **not purchasable until Deningrad**". Pattern Damia : ⭐ **Soul Headband stats canon NEW MAJEUR Haschel-specific accessory** Headband class + early Disc 2 boss drop + Disc 3 Deningrad purchase canon. ⭐⭐⭐ **Deningrad = NEW MAJEUR location canon Disc 3 Mille Seseau** (capital probable). À documenter `items/Soul Headband.md` + `locations/Deningrad.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Deningrad NEW MAJEUR Mille Seseau Disc 3 location canon (fandom) ⭐⭐⭐** — Quote canon : "not purchasable until **Deningrad**". Pattern Damia : Deningrad = canon Mille Seseau Disc 3 location NEW MAJEUR — probable Mille Seseau capital récurrent (cohérent Disc 3 Mille Seseau + Furni gateway + Snowfield + Shrine of Shirley récents). À documenter `locations/Deningrad.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Main hall Home of Gigantos boss arena canon NEW MAJEUR (fandom) ⭐⭐⭐** — Quote canon : "Dart and the party fight him **inside the main hall**". Pattern Damia : Main hall = Home of Gigantos boss arena canon NEW MAJEUR (submap 266 wiki) — Gigantos great hall canon architecture. À refléter `locations/Home of Gigantos.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Ability official names CROSS-SOURCE canon CORRECTION : Swipe + Three Step Kick + Double Team (fandom) ⭐⭐⭐** — Wiki tilde unofficial → fandom canonical names CORRECTION : ~Knife Slash → **Swipe** + ~3-step Kick → **Three Step Kick** (3 kicks + final slam canon) + ~Team Up → **Double Team**. Pattern Damia : fandom official names canon récurrent (cohérent Rouge Kick Gangster pattern récent). À refléter ability names. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Mutual partner-state-conditional AI canon NEW MAJEUR Disc 2 (fandom) ⭐⭐⭐** — Quote canon : "He **cannot use 'Double Team' if Mappi is dead**, and **Mappi cannot use 'Vanish' if Gehrich is dead**". Pattern Damia : ⭐ Mutual partner-cooperation conditional AI canon NEW MAJEUR — Gehrich Double Team requires Mappi alive+targetable / Mappi Vanish requires Gehrich alive. Cooperation mutuelle canon Disc 2 partner-state pattern. À documenter `combat/boss-abilities.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 P.Attack 51 fandom vs wiki AT 42 +21% divergence anomaly récurrent (fandom) ⭐⭐⭐** — Wiki AT 42 + fandom P.Attack 51 = +21% divergence canon récurrent fandom higher (cohérent Gangster fandom higher pattern récent). Pattern Damia : Wiki tier 2 canon prevails AT 42. Source: idem.
+
+- [ ] ⭐⭐ **🆕 M.Attack 36 fandom vs wiki MAT 32 minor divergence (fandom) ⭐⭐** — Wiki MAT 32 + fandom 36 = +12.5% minor divergence (cohérent Gangster pattern récent). Wiki canon prevails. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Three Step Kick lore canon 3 kicks + final slam ground (fandom) ⭐⭐** — Quote canon : "Three Step Kick: Gehrich kick's a party member three times, with the **final kick slamming them to the ground**". Pattern Damia : Three Step Kick canon Rouge School martial arts ability détaillé Disc 2 — 3 kicks + final slam canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Swipe knife slash canon Gehrich (fandom) ⭐⭐** — Quote canon : "Swipe: Gehrich **slashes a party member with his knife**". Pattern Damia : Swipe = knife slash canon Gehrich + weapon canon knife (Rouge School + bandit weapon). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Rouge School comprehensive faction canon CROSS-SOURCE CONFIRMED TLoD (fandom Gehrich + Gangster fandom) ⭐⭐** — **Members canon** : Haschel (legitimate master) + Gehrich (ex-student corrupt 20 years ago) + Gangsters (elite students Gehrich) + Mappi (Gehrich Gang member) + Crafty Thief/Piggy/Berserker (gang followers). **Ability pool canon** : Three Step Kick (Gehrich) + Rouge Kick spin kick (Gangsters) + Swipe knife (Gehrich) + Double Team/Team Up (Gehrich+Mappi cooperation) + Power Up chi-based (Gangsters). À documenter `combat/rouge-school.md` (à créer) comprehensive faction canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 "Home of Gigantos" plural canon récurrent CROSS-SOURCE CONFIRMED (fandom) ⭐⭐** — Fandom Gehrich confirme "Home of Gigantos" plural (cohérent Gangster fandom pattern récurrent). Wiki singular = typo probable. Damia adopts plural canon récurrent. Source: idem.
+
 ### À décider / explorer
 
 ### À décider / explorer

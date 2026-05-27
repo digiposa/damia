@@ -6127,6 +6127,8 @@
 
 - [ ] ⭐ **🆕 28 Counter Opportunities canon récurrent Gorgaga (wiki) ⭐** — Counter tier 28 récurrent canon. ⚠️ Counter feature non-implémenté Damia. Source: idem.
 
+- [ ] ⭐⭐⭐ **🆕 Gorgaga sprite Gemini boss-tier intégré canon Damia animation-ready + 4-directional ⭐⭐⭐** — Sprite Gorgaga (Gemini probable) confirme parfaitement canon CROSS-SOURCE fandom récurrent : large brutish man + metal shoulder pauldrons + fox-skin cap + claw-like hands + large axe (both hands) + tunique brune. Animation cycles labelés canon boss-tier NEW MAJEUR : **4 ISO angles SE+SW+NW+NE** (vs mob 2 angles récent Goblin = **boss-tier 4-directional sprite canon NEW MAJEUR**) + **IDLE 4-frame breathing cycle** + **WALK 6-frame heavy cycle NEW MAJEUR** (vs normal walk = brutish boss locomotion canon) + **ATTACK 1 with effect** (axe swing visual ~Axe Slash + swirl) + **DEATH frame-by-frame dissolution** (cohérent Hero Competition DQ via rules violation narrative). Pattern Damia : **Boss-tier sprite design canon NEW MAJEUR** = 4 ISO angles + heavy walk cycle (vs mob standard récurrent). Drop-in animation-ready Damia (cohérent récurrent Goblin + Gnome + Albert + Berserk Mouse sprites précédents). À intégrer future `public/assets/sprites/bosses/gorgaga-*.png` (frame-split par cycle) + `data/bosses/gorgaga.ts` (à créer) AvatarSpriteForm + 4-directional facing logic. À documenter `docs/features/bosses/_assets/gorgaga-sprite.png` (intégré). Source: user upload Gemini Hero Competition boss 2026-05-27.
+
 ### À décider / explorer
 
 ### À décider / explorer

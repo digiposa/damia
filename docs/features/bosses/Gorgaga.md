@@ -58,6 +58,40 @@
 > - 🥈 [`_sources/lod-wiki-gorgaga.md`](./_sources/lod-wiki-gorgaga.md) — wiki LoD tier 2 (**Boss Non-Elemental Disc 1 Lohan submap 638 Hero Competition** + HP 160/AT 16/DF 100/SPD 50/MAT 16/MDF 80 + Status 8/8 ALL IMMUNE boss-tier 6ème + **ZERO-yield 0 EXP/0G/Nothing sparring tournament canon NEW MAJEUR** + Scripted formation 404 + **No Traits passive canon NEW MAJEUR** + AI conditional : **Poison Needle 100% Poison + Ignore turn order + immediate start + Single use NEW MAJEUR multi-modifier + M-AV reduces 3ème instance** / **~Axe Slash 1× phys + Max 2× in a row constraint canon NEW MAJEUR** / **Pellet 1.5× Earth + Dark Mist 1.5× Darkness chain conditional only-if-Axe-Slash-cannot canon NEW MAJEUR** + 28 counter opportunities)
 > - 🥉 [`_sources/fandom-hero-competition.md`](./_sources/fandom-hero-competition.md) — Fandom Hero Competition récurrent (JP "Gorugaga, Golgaga" + Appearance brutish + axe + brown pauldrons + fox-skin cap + claw hands + "Winning is winning" quote + "Devoid of honor" personality + Poison Needle cheat opener narrative + Dart advance DQ via rules violation + **⚠️ Element divergence Earth vs wiki Non-Elemental + HP 200/AT 19/MAT 19 divergence vs wiki 160/16/16**)
 
+## Sprite canon ⭐⭐⭐ Damia integration (Gemini Hero Competition boss)
+
+> ![Gorgaga sprite sheet](./_assets/gorgaga-sprite.png)
+
+⭐⭐⭐ **Sprite Gorgaga CONFIRMS canon CROSS-SOURCE appearance fandom récurrent + sparring tournament tier** :
+
+- ✅ **Large brutish man** canon (taille massive vs party members)
+- ✅ **Metal shoulder pauldrons** canon (épaulettes métalliques visibles)
+- ✅ **Fox-skin cap** canon (fourrure animal sur la tête)
+- ✅ **Claw-like hands** canon (mains griffues)
+- ✅ **Large axe (both hands)** canon (cohérent ~Axe Slash 1× phys + "max 2× in a row" constraint wiki)
+- ✅ Tunique/armure brune cohérent fandom description
+- ✅ Mass + posture imposante cohérent "Heavy" walk cycle
+
+**Animation structure prête Damia (Gemini cycles canonicaux)** :
+
+| Cycle        | Frames                     | Notes canon                                                                                   |
+| ------------ | -------------------------- | --------------------------------------------------------------------------------------------- |
+| **ISO SE**   | 1                          | Direction Sud-Est canon récurrent isométrique Damia                                           |
+| **ISO SW**   | 1                          | Direction Sud-Ouest canon récurrent isométrique                                               |
+| **ISO NW**   | 1                          | ⭐ Direction Nord-Ouest canon NEW (vs Goblin 2 angles seulement) — boss 4-directional         |
+| **ISO NE**   | 1                          | ⭐ Direction Nord-Est canon NEW — boss 4-directional                                          |
+| **IDLE**     | 4-frame breathing cycle    | Idle breathing canon (cohérent imposing boss presence)                                        |
+| **WALK**     | 6-frame heavy cycle        | ⭐ **Heavy walk canon NEW MAJEUR** — cohérent brutish massive boss vs Goblin standard 6-frame |
+| **ATTACK 1** | + effect                   | Axe swing canon ~Axe Slash visual avec swirl effect                                           |
+| **DEATH**    | frame-by-frame dissolution | Death animation canon (cohérent Hero Competition DQ via rules violation)                      |
+
+Pattern Damia : ⭐⭐⭐ **Sprite Gemini boss-tier animation-ready** — boss 4-directional ISO (vs mob 2-directional ISO récent Goblin) + heavy walk cycle (vs normal walk) + drop-in structure (cohérent récurrent pattern Goblin + Gnome + Berserk Mouse + Albert sprites précédents). **Boss-tier sprite design canon NEW MAJEUR** :
+
+- **4 ISO angles** (vs mob 2 angles) — boss requires omni-directional rendering
+- **Heavy walk cycle** (vs normal walk) — brutish boss locomotion canon
+
+À intégrer future : `public/assets/sprites/bosses/gorgaga-*.png` (frame-split par cycle) + `data/bosses/gorgaga.ts` (à créer) AvatarSpriteForm pattern récurrent + `RenderSystem` cycle-aware (idle/walk/attack/death) + 4-directional facing logic.
+
 ## Statut
 
 🟢 **Canon confirmed cross-source** (wiki 🥈 + fandom Hero Competition 🥉) — 2 sources cohérentes majoritaires + enrichissement narrative Hero Competition Disc 1 :

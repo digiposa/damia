@@ -6033,6 +6033,8 @@
 
 - [ ] ⚠️⚠️ **🆕 Status Immunity + A-AV/M-AV + Counter Opportunities Gnome STILL MISSING both sources ⚠️⚠️** — Wiki PARTIAL + fandom incomplete : Status Immunity 8 statuses + A-AV + M-AV + Counter Opportunities table MISSING. À ingérer wiki complet future si disponible. Source: idem.
 
+- [ ] ⭐⭐⭐ **🆕 Gnome sprite Damia integration canon CROSS-SOURCE CONFIRMED ⭐⭐⭐** — Sprite Gnome fourni par user confirme parfaitement fandom canon appearance : short humanoid + darker skin + orange overalls + pointed hat + straw bundle weapon = scarecrow canon NEW MAJEUR. Multi-frame sprite sheet (main pose + walking + attack + cast frames). Pattern Damia : sprite intégration future `public/assets/sprites/mobs/gnome-*.png` + `data/mobs/gnome.ts` (à créer) AvatarSpriteForm pattern récurrent (cohérent Dart attack 3-frame récent + Berserk Mouse + Albert + Meru sprites précédents). À documenter `docs/features/mobs/_assets/gnome-sprite.png` (intégré). Source: user upload 2026-05-27.
+
 ### À décider / explorer
 
 ### À décider / explorer

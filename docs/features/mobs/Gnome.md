@@ -46,6 +46,29 @@
 > - 🥈 [`_sources/lod-wiki-gnome.md`](./_sources/lod-wiki-gnome.md) — wiki LoD tier 2 (**PARTIAL — stats/yield/counter missing**) — Minor Enemy Earth Disc 3 Kadessa + **Earth Immunity passive 3ème instance récurrent** + 3 encounter formations Kadessa + **Toad Stool NEW mob** + AI HP-threshold clean >50% ~Wheat Whack / ≤50% **Pellet 1.5× Earth self-named pool 6ème instance + Stunning Hammer 100% Stun M-AV reduces NEW MAJEUR** + No road encounters
 > - 🥉 [`_sources/fandom-gnome.md`](./_sources/fandom-gnome.md) — Fandom tier 3 (**STATS COMPLETS** HP JP 320/US-EU 256 +25% Damia rule CONFIRMED 5ème instance + JP Gold 14 ÷3 rule CONFIRMED 3ème instance + **Forbidden Land Kadessa canon NEW MAJEUR Disc 3 CONFIRMED** + **Dragon Block Staff plot artifact canon NEW MAJEUR Disc 3** + **Scarecrow appearance canon NEW MAJEUR** (short humanoid + darker skin + orange overalls + pointed hat + straw bundle) + **Straw Whip official name CORRECTION** (wiki ~Wheat Whack) + **Pellet "Amber" ≤50% HP indicator canon NEW MAJEUR** (HP color tier system Amber/Red récurrent CROSS-SOURCE) + **Stunning Hammer red-beam no-damage canon précision fandom** + P.Attack 60 + P.Defense 160 + M.Attack 53 + M.Defense 70 + Speed 50 stats fournis + **DF 160 high physical tank + MDF 70 low magic-vulnerable asymmetric defense canon NEW MAJEUR** + Healing Potion 8% drop + 10G shop universal + Encounter rate "Very common" + Disc 3 Monsters CONFIRMED + 3 formations cohérentes CROSS-SOURCE)
 
+## Sprite canon ⭐⭐⭐ Damia integration
+
+> ![Gnome sprite sheet](./_assets/gnome-sprite.png)
+
+⭐⭐⭐ **Sprite Gnome CONFIRMS fandom canon appearance CROSS-SOURCE** :
+
+- ✅ **Short humanoid** canon
+- ✅ **Darker skin** (brown/orange tone) canon
+- ✅ **Orange overalls** canon
+- ✅ **Pointed hat** (orange/yellow) canon
+- ✅ **Straw bundle weapon** (visible main hand) canon
+- ✅ **Scarecrow appearance** canon NEW MAJEUR
+
+**Animation frames canon (multiple poses visible)** :
+
+- Big front pose (left) — neutral stance with straw bundle raised
+- Side-walking frames (4 poses) — locomotion canon
+- Attack frames with straw whip swirl (Straw Whip ability visual canon)
+- Cast frames (Pellet + Stunning Hammer probable)
+- Multiple angle views (front + side + 3/4)
+
+Pattern Damia : ⭐ **Sprite sheet multi-frame canon Damia integration** — utiliser sprites pour animations Straw Whip + Pellet + Stunning Hammer canon. À intégrer `public/assets/sprites/mobs/gnome-*.png` future + `data/mobs/gnome.ts` (à créer) AvatarSpriteForm pattern récurrent.
+
 ## Statut
 
 🟢 **Canon confirmed cross-source** (wiki 🥈 PARTIAL + fandom 🥉 STATS COMPLETS) — 2 sources cohérentes + enrichissement fandom MAJEUR Disc 3 :

@@ -5753,6 +5753,32 @@
 
 - [ ] ⭐⭐ **🆕 Disc 2 Monsters category canon CONFIRMED (fandom) ⭐⭐** — Quote canon : "Disc 2 Monsters" category. Pattern Damia : Disc 2 Gangster canon CONFIRMED CROSS-SOURCE (cohérent récurrent Disc 2 mob canon). Source: idem.
 
+### Mobs / Gargoyle wiki (Darkness Minor Enemy Disc 3 Shrine of Shirley NEW MAJEUR location — Darkness NEW element first mob + Dark Mist 1.5× self-named ability-item 5ème instance + Strong Man + Living Statue NEW mobs + MDF 160 highest récent + HP-threshold overlap AI sub-pattern + Albert Lavitz inherit confirmed)
+
+- [ ] ⭐⭐⭐ **🆕 Shrine of Shirley NEW MAJEUR location canon Disc 3 (wiki) ⭐⭐⭐** — Submaps 153/154/155/156/157/159/160 = 7 submaps canon Shrine of Shirley Disc 3 Mille Seseau probable. Pattern Damia : **Shirley = canon TLoD lore-significant character NEW MAJEUR** — probable **past Dragoon canon Disc 3+ Mille Seseau** (cohérent Shirley récurrent canon TLoD Dragoons of Old + Mille Seseau Disc 3 setting). À documenter `locations/Shrine of Shirley.md` + `lore/Shirley.md` (à créer) — Disc 3 shrine canon NEW MAJEUR + past Dragoon Shirley canonical TLoD lore. Source: [`features/mobs/_sources/lod-wiki-gargoyle.md`](features/mobs/_sources/lod-wiki-gargoyle.md).
+
+- [ ] ⭐⭐⭐ **🆕 Darkness element first Mob canon NEW MAJEUR (wiki) ⭐⭐⭐** — Quote canon : Element "Darkness". Pattern Damia : **Gargoyle = first Darkness Mob canon NEW MAJEUR** (vs récurrent Fire/Earth/Water/Wind/Thunder/Light pool). Darkness = canon TLoD element NEW MAJEUR Disc 3 — cohérent Shrine of Shirley + Rose Darkness Dragoon canon récurrent. À documenter `combat/elements.md` (à créer) Darkness element pool canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Dark Mist 1.5× Darkness magic + self-named ability-item canon 5ème instance (wiki) ⭐⭐⭐** — Quote canon : "Dark Mist — 1.5× Darkness-elemental magic damage" + drop "Dark Mist 8%". Pattern Damia : **Self-named ability-item shared pool canon récurrent CONFIRMED 5 instances** : Fatal Blizzard + Pellet + Sun Rhapsody + Trans Light + **Dark Mist NEW MAJEUR 5ème instance**. Self-named ability = item drop same name canon récurrent pattern TLoD. **1.5× damage modifier magic-boost canon** Disc 3. À documenter `items/Dark Mist.md` + `combat/spell-items.md` self-named pool canon récurrent. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Strong Man + Living Statue NEW mobs canon Shrine of Shirley Disc 3 (wiki) ⭐⭐⭐** — Encounters confirment 2 NEW mob types canon Shrine of Shirley Disc 3 : Strong Man + Living Statue. Pattern Damia : Shrine of Shirley = stone/statue themed encounters canon NEW MAJEUR (cohérent Gargoyle + Living Statue stone creatures + statue-shrine setting). À documenter `mobs/Strong Man.md` + `mobs/Living Statue.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 MDF 160 highest magic defense récent canon Disc 3 Gargoyle (wiki) ⭐⭐⭐** — MDF 160 = highest magic defense récent Disc 3 canon NEW MAJEUR (cohérent récurrent Disc 3 mob magic-tier escalation). Pattern Damia : Gargoyle = magic tank canon Disc 3 — MDF 160 outlier + DF 80 mid + Dark Mist 1.5× Darkness = magic-fortress archetype NEW. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 AI HP-threshold overlap canon récurrent sub-pattern Gargoyle (wiki) ⭐⭐⭐** — Quote canon : ">25% ~Scratch + ≤50% Dark Mist" = overlap 25-50% HP range canon (both eligible). Pattern Damia : **AI sub-pattern overlap canon récurrent CONFIRMED Gargoyle 3ème instance documenté** — vs Gangster Any-HP equal chance (no threshold) + clean non-overlap autres mobs. **HP-threshold AI sub-patterns canon CROSS-MOB documenté** : Any-HP equal + HP-threshold overlap + HP-threshold clean. À refléter `combat/ai-patterns.md` (à créer) AI sub-patterns canon CROSS-MOB. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Status 4/8 immune mid-tier canon récurrent CROSS-MOB CROSS-DISC confirmed (wiki) ⭐⭐⭐** — Pattern Damia : Mid-tier 4/8 immunity canon récurrent CROSS-MOB CROSS-DISC : Petrify/Bewitch/Arm Block/Dispirit ✔ — Confuse/Fear/Poison/Stun ✗ (cohérent Gangster Disc 2 + **Gargoyle Disc 3 même pattern** mid-tier canon CONFIRMED). Spécifique Gargoyle : strategic openings Confuse/Fear/Poison/Stun. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 28 Counter Opportunities cross-character canon récurrent CROSS-MOB CROSS-DISC Gargoyle (wiki) ⭐⭐⭐** — Counter tier mapping universal multi-disc canon récurrent (cohérent Gangster Disc 2 + Gargoyle Disc 3 = 28 same opportunities pattern CROSS-MOB CROSS-DISC). Albert présent (Gust of Wind Dance + Flower Storm) = Lavitz Additions inherit canon récurrent Disc 2+ confirmed Disc 3. ⚠️ Counter feature non-implémenté Damia. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Gargoyle glass cannon magic-focused archetype Disc 3 canon (wiki) ⭐⭐** — HP 100 low + AT 16 low + MDF 160 high + Dark Mist 1.5× Darkness = magic-specialist glass cannon archetype canon NEW Disc 3. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Random encounter % no Contact arrows Disc 3 dungeon canon (wiki) ⭐⭐** — Encounter rates 10%, 20%, 35% across submaps = random % canon (vs Disc 1-2 Contact arrows visible). Pattern Damia : indoor dungeon Disc 3 percent-encounter pattern récurrent. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Gargoyle Yield 17 EXP + 15G ÷3 = 5G Damia conversion canon (wiki) ⭐⭐** — Yield mid-tier Disc 3 + Damia Gold ÷3 systematic récurrent. Dark Mist 8% drop self-named ability-item canon. Source: idem.
+
+- [ ] ⭐ **🆕 ~Scratch basic 1× phys ability canon récurrent Gargoyle (wiki) ⭐** — ~Scratch = basic single-target 1× phys canon récurrent Disc 1-3 mobs basic attack pattern. ~ tilde = unofficial name canon récurrent. Source: idem.
+
 ### À décider / explorer
 
 ### À décider / explorer

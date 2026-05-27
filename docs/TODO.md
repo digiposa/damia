@@ -6129,6 +6129,46 @@
 
 - [ ] ⭐⭐⭐ **🆕 Gorgaga sprite Gemini boss-tier intégré canon Damia animation-ready + 4-directional ⭐⭐⭐** — Sprite Gorgaga (Gemini probable) confirme parfaitement canon CROSS-SOURCE fandom récurrent : large brutish man + metal shoulder pauldrons + fox-skin cap + claw-like hands + large axe (both hands) + tunique brune. Animation cycles labelés canon boss-tier NEW MAJEUR : **4 ISO angles SE+SW+NW+NE** (vs mob 2 angles récent Goblin = **boss-tier 4-directional sprite canon NEW MAJEUR**) + **IDLE 4-frame breathing cycle** + **WALK 6-frame heavy cycle NEW MAJEUR** (vs normal walk = brutish boss locomotion canon) + **ATTACK 1 with effect** (axe swing visual ~Axe Slash + swirl) + **DEATH frame-by-frame dissolution** (cohérent Hero Competition DQ via rules violation narrative). Pattern Damia : **Boss-tier sprite design canon NEW MAJEUR** = 4 ISO angles + heavy walk cycle (vs mob standard récurrent). Drop-in animation-ready Damia (cohérent récurrent Goblin + Gnome + Albert + Berserk Mouse sprites précédents). À intégrer future `public/assets/sprites/bosses/gorgaga-*.png` (frame-split par cycle) + `data/bosses/gorgaga.ts` (à créer) AvatarSpriteForm + 4-directional facing logic. À documenter `docs/features/bosses/_assets/gorgaga-sprite.png` (intégré). Source: user upload Gemini Hero Competition boss 2026-05-27.
 
+### Bosses / Grand Jewel wiki (Earth Boss MAJEUR Disc 3 Kadessa Forbidden Land submap 402 — Dragon Block Staff wielder + Anti-Dragoon debuff NEW MAJEUR + Level manipulation NEW MAJEUR + Counter-immune 0 first boss + AoE-heavy + Heal Self emergency + Spectral Flash NEW item + 8ème self-named pool pattern + HP 4500/EXP 9000 highest récent + MDF 160 magic-tank highest récent)
+
+- [ ] ⭐⭐⭐ **🆕 Grand Jewel = Dragon Block Staff wielder canon CROSS-SOURCE CONFIRMED Disc 3 Kadessa (wiki + Gnome récurrent) ⭐⭐⭐** — Wiki Dragon Block Staff ability + Gnome canon récurrent "creatures drawn to Dragon Block Staff energy". Pattern Damia : Grand Jewel = Dragon Block Staff wielder/guardian canon NEW MAJEUR Disc 3 Kadessa — boss possesses + uses anti-Dragoon plot artifact canon CROSS-SOURCE CONFIRMED. À documenter `items/Dragon Block Staff.md` (à créer) + `combat/boss-abilities.md`. Source: [`features/bosses/_sources/lod-wiki-grand-jewel.md`](features/bosses/_sources/lod-wiki-grand-jewel.md).
+
+- [ ] ⭐⭐⭐ **🆕 Dragon Block Staff Dragoon-debuff anti-Dragoon mechanic canon NEW MAJEUR Grand Jewel (wiki) ⭐⭐⭐** — Quote canon : "Dragoons gain 0.1× Damage Dealt + 10× Damage Received for 3 Turns. Only used when Dragoon in battle. Auto". Pattern Damia : **Anti-Dragoon class-specific debuff canon NEW MAJEUR Disc 3** — first ability that targets Dragoon class specifically (-90% dealt + +900% received 3 turns + Auto trigger when Dragoon present). Dragoon-counter design canon NEW MAJEUR Disc 3 antagonist arc (cohérent Forbidden Land Wingly territory canon récurrent). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Level manipulation boss mechanic canon NEW MAJEUR Grand Jewel (wiki) ⭐⭐⭐** — Quote canon : "Level goes down! : Decrease Level by 5 + ignore turn order + random magic" + "Level goes up! : Increase Level by 5 + ignore turn order + random magic. Must be enabled by 3× Level goes down! first" + "Level changes affect only damage calc + revert after battle". Pattern Damia : Level manipulation boss mechanic canon NEW MAJEUR — first boss ability manipulating party Level stat + 3× chain trigger requirement + ignore turn order + random magic combo + non-permanent. À documenter `combat/boss-abilities.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 ⚠️ Counter Opportunities 0 first boss canon NEW MAJEUR Grand Jewel (wiki) ⭐⭐⭐** — Quote canon : "Counter Opportunities (0)" + "Counters Additions: No". Pattern Damia : **First boss documented WITHOUT counter opportunities canon NEW MAJEUR Disc 3** (vs récurrent 28 tier universal CROSS-MOB-BOSS confirmed précédent). Anti-Counter boss design canon NEW MAJEUR — Grand Jewel = Counter-immune boss tier canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 HP 4500 highest récent + 9000 EXP highest récent boss canon Disc 3 Grand Jewel (wiki) ⭐⭐⭐** — Pattern Damia : Grand Jewel = peak HP boss canon Disc 3 (vs Fruegel + Gehrich 2000 Disc 1-2 + Ghost Commander 1700/2500 JP Disc 2 + Gorgaga 160 sparring) + 9000 EXP highest yield = late-Disc 3 climactic boss canon. Cohérent Kadessa Forbidden Land + Dragon Block Staff = major Disc 3 antagonist canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 MDF 160 highest récent magic-tank canon Disc 3 Grand Jewel (wiki) ⭐⭐⭐** — MDF 160 = highest magic defense récent documenté (cohérent Gargoyle Disc 1 MDF 160 + Glare MDF 120 + Grand Jewel = magic-tank archetype canon Disc 3 peak). Pattern Damia : peak magic-tank boss canon Disc 3 — défensif vs magic strategy. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Spectral Flash 100% drop NEW item canon Disc 3 self-named pool 8ème pattern Grand Jewel (wiki) ⭐⭐⭐** — Quote canon : "Drops Spectral Flash 100%". Pattern Damia : Spectral Flash = NEW item canon Disc 3 Light-spectral thématique + 100% guaranteed drop boss canon (cohérent Night Raid Ghost Commander récent) + **Self-named ability-item pool 8ème pattern CONFIRMED** (Spectral Flash ability = Spectral Flash item drop). À documenter `items/Spectral Flash.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Self-named ability-item pool CROSS-MOB-BOSS 8ème pattern CONFIRMED Grand Jewel (wiki) ⭐⭐⭐** — Pattern Damia : Self-named pool 8 instances CONFIRMED — Grand Jewel uses 3 self-named abilities (Pellet + Trans Light + Spectral Flash). Cross-creature shared ability pool TLoD canon récurrent confirmed Grand Jewel. À documenter `combat/spell-items.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 AoE-heavy boss canon NEW MAJEUR Disc 3 Grand Jewel (wiki) ⭐⭐⭐** — 5 party-target abilities (Rave Twister 1.5× Wind + Meteor Fall 1× Earth + Spectral Flash 3× Light + Dragon Block Staff Dragoon debuff + Level goes down/up). Pattern Damia : AoE-heavy boss canon NEW MAJEUR Disc 3 = peak threat tier — AoE force party-wide healing strategy. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Element-agnostic ability caster canon récurrent 2ème instance Grand Jewel (wiki) ⭐⭐⭐** — Grand Jewel Element Earth + casts Wind (Spinning Gale + Rave Twister) + Earth (Pellet + Meteor Fall) + Light (Trans Light + Spectral Flash) = 3 different elements. Pattern Damia : Element-agnostic ability caster canon récurrent CONFIRMED 2ème instance (cohérent Gorgaga récent Non-Elemental boss casting Earth + Darkness). À documenter `combat/elements.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Heal Self 30% (1350) HP emergency canon NEW MAJEUR Grand Jewel (wiki) ⭐⭐⭐** — Quote canon : "~Heal Self : Recover 30% (1350) HP. Single use. Auto. HP ≤20%". Pattern Damia : Boss self-heal canon NEW MAJEUR Disc 3 — emergency self-heal mechanic (30% HP + Single use + Auto + HP ≤20% threshold trigger). Cohérent boss survival mechanic canon récurrent (vs Resurrect passive Ghost Commander). À documenter `combat/boss-abilities.md`. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 3× party multiplier highest + 2.25× single multiplier highest récent canon Disc 3 Grand Jewel (wiki) ⭐⭐⭐** — Spectral Flash 3× party = highest party multiplier récent boss + Trans Light 2.25× single = highest single multiplier récent. Pattern Damia : Disc 3 peak damage multipliers canon Grand Jewel late-game boss tier. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 No Traits passive canon récurrent 2ème instance Grand Jewel + Gorgaga (wiki) ⭐⭐⭐** — Pattern Damia : "No-passive boss tier" canon récurrent CONFIRMED 2ème instance (Gorgaga + Grand Jewel). Sub-class boss canon — no passive but rich active AI vs récurrent passive bosses (Fruegel Power Up + Gehrich Retaliate + Ghost Commander Resurrect). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Status 8/8 ALL IMMUNE boss-tier canon récurrent 7ème instance Grand Jewel (wiki) ⭐⭐⭐** — Pattern Damia : Boss-tier full immunity canon récurrent CROSS-BOSS 7ème instance confirmé (Fruegel + Gehrich + Ghost Commander + Ghost Knight + Gorgaga + Grand Jewel + autres récurrent). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Kadessa submap 402 boss arena Disc 3 canon CROSS-SOURCE Grand Jewel (wiki + Gnome récurrent) ⭐⭐⭐** — Wiki "Kadessa (402)" + Gnome canon récurrent Forbidden Land Kadessa submaps 393-405. Pattern Damia : Kadessa boss arena canon CROSS-SOURCE CONFIRMED — Grand Jewel = Kadessa main boss canon NEW MAJEUR Disc 3 + Dragon Block Staff wielder canon. À documenter `locations/Kadessa.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐ **🆕 AI "if→then" boss rules canon récurrent 4ème instance Grand Jewel (wiki) ⭐⭐** — Pattern Damia : Boss conditional-AI canon récurrent CROSS-BOSS 4ème instance CONFIRMED (Gehrich + Ghost Commander + Gorgaga + Grand Jewel). Source: idem.
+
+- [ ] ⭐⭐ **🆕 HP threshold + Auto + Single use récurrent boss mechanics Grand Jewel (wiki) ⭐⭐** — Pattern Damia : HP-threshold trigger canon récurrent CROSS-BOSS (cohérent Resurrect Ghost Commander 0% HP + Spell caster ≤25% red HP Glare/Gnome + Heal Self ≤20% Grand Jewel). + Single use canon récurrent (Gorgaga Poison Needle + Grand Jewel Heal Self). Source: idem.
+
+### À décider / explorer
+
+### À décider / explorer
+
 ### À décider / explorer
 
 ### À décider / explorer

@@ -6003,6 +6003,36 @@
 
 - [ ] ⭐ **🆕 Earth element 5ème instance Mob canon récurrent Gnome (wiki implied) ⭐** — Pattern Damia : Earth mobs canon récurrent 5ème instance CONFIRMED : Forest Runner + Flying Rat + Frilled Lizard + Gangster Disc 2 + **Gnome Disc 3+ NEW**. Earth pool canon TLoD récurrent majoritaire. Source: idem.
 
+### Mobs / Gnome fandom complement (Cross-source 🟢 — Forbidden Land Kadessa Disc 3 CONFIRMED + Dragon Block Staff NEW MAJEUR plot artifact + Scarecrow appearance + Straw Whip CORRECTION + Amber HP indicator ≤50% NEW MAJEUR + DF 160/MDF 70 asymmetric defense + JP HP 320/Gold 14 Damia rules CONFIRMED 5ème/3ème + Stunning Hammer red-beam no-damage précision)
+
+- [ ] ⭐⭐⭐ **🆕 Forbidden Land Kadessa canon NEW MAJEUR Disc 3 CONFIRMED (fandom) ⭐⭐⭐** — Quote canon : "Earth element creature **only located within the Forbidden Land, Kadessa**" + Category "Disc 3 Monsters". Pattern Damia : **Kadessa = Forbidden Land alias canon NEW MAJEUR Disc 3 TLoD** — Wingly territory probable (cohérent récurrent forbidden Wingly territory canon TLoD Forest of Winglies + Wingly historical themes Disc 3 récurrent). Disc 3 CONFIRMED CROSS-SOURCE. À documenter `locations/Kadessa.md` (à créer) — Forbidden Land alias canon + Wingly connection probable. Source: [`features/mobs/_sources/fandom-gnome.md`](features/mobs/_sources/fandom-gnome.md).
+
+- [ ] ⭐⭐⭐ **🆕 Dragon Block Staff NEW MAJEUR plot artifact canon Disc 3 (fandom) ⭐⭐⭐** — Quote canon : "Creatures here might be **drawn towards the energy of the Dragon Block Staff**". Pattern Damia : **Dragon Block Staff = NEW MAJEUR plot artifact canon TLoD Disc 3** — anti-Dragoon device probable ("Block" naming = counter Dragoon Spirit) + energy attraction canon (Kadessa mobs drawn) + cohérent Wingly anti-Dragon historical canon récurrent + plot artifact Disc 3 antagonist arc probable. À documenter `items/Dragon Block Staff.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 JP HP 320 +25% canon Damia rule CONFIRMED 5ème instance CROSS-MOB Gnome (fandom) ⭐⭐⭐** — Quote canon : "HP: 256 (US/EU) / **320 (JP)**". 256 × 1.25 = 320 match exact. Pattern Damia : JP HP +25% systematic récurrent CONFIRMED 5ème instance (Gangster + Gehrich + Ghost Commander + Glare + Gnome). Damia adopts JP HP 320 canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 JP Gold 14 ÷3 canon Damia rule CONFIRMED 3ème instance CROSS-MOB Gnome (fandom) ⭐⭐⭐** — Quote canon : "Gold: 42 (US/EU) / **14 (JP)**". 42 ÷ 3 = 14 match exact. Pattern Damia : JP Gold ÷3 systematic récurrent CONFIRMED 3ème instance (Gangster + Glare + Gnome). Damia adopts JP Gold 14 canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Scarecrow appearance canon NEW MAJEUR Gnome (fandom) ⭐⭐⭐** — Quote canon : "**very short humanoid with darker skin and an orange pair of what look like overalls and a pointed hat. He wields a pile of straw; the ensemble might call to mind a scarecrow**". Pattern Damia : Gnome design canon NEW MAJEUR — scarecrow-like humanoid + short + darker skin + orange overalls + pointed hat + straw bundle weapon. Cohérent Wheat Whack/Straw Whip wheat/straw farming theme + Earth element + Kadessa Forbidden Land nature/forest setting. Sprite design Damia scarecrow canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Straw Whip = ~Wheat Whack fandom official name CORRECTION Gnome (fandom) ⭐⭐⭐** — Quote canon : "**Straw Whip** : Walks towards single target + whips with bundle of straw + medium damage". Pattern Damia : CORRECTION wiki "~Wheat Whack" tilde unofficial → fandom canon "**Straw Whip**" official name + visual canon. À refléter sprite straw-whip animation Damia. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Amber HP indicator ≤50% canon NEW MAJEUR Gnome (fandom) ⭐⭐⭐** — Quote canon : Pellet "**Can cast at 50% (Amber) HP or higher**". Pattern Damia : **HP color tier indicators canon récurrent CROSS-SOURCE CONFIRMED** : Amber ≤50% (Gnome NEW MAJEUR) + Red ≤25% (Ghost Commander + Glare récurrent). Color-coded HP tier system canon TLoD NEW MAJEUR visual UI mechanic. À documenter `combat/ui-mechanics.md` (à créer) HP color tier indicators canon récurrent. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Stunning Hammer red-beam no-damage canon précision CROSS-SOURCE (fandom) ⭐⭐⭐** — Quote canon : "Casts **red beams** towards a single target **dealing no damage**, however, inflicting Stun upon hit". Pattern Damia : CORRECTION/PRÉCISION canon fandom : (1) Red beams visual canon NEW MAJEUR, (2) No damage canon — pure status inflict (cohérent récurrent status-only abilities pattern), (3) 100% Stun + M-AV reduces récurrent 2ème instance. Pure status-only ability canon TLoD. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 DF 160 high tank + MDF 70 low magic-vulnerable asymmetric defense canon NEW MAJEUR Gnome (fandom) ⭐⭐⭐** — Stats : DF 160 high (physical tank) + MDF 70 low (magic-vulnerable). Pattern Damia : **Asymmetric defense canon NEW MAJEUR Gnome** — Magic-vulnerable tank archetype canon NEW Disc 3 (incite player magic attack strategy + cohérent Earth Immunity auto-protection compensation). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Stats fandom complets fournis Gnome wiki PARTIAL combled (fandom) ⭐⭐⭐** — Fandom stats : HP 256 US-EU / 320 JP + P.Attack 60 + P.Defense 160 + M.Attack 53 + M.Defense 70 + Speed 50. Pattern Damia : Stats fandom comblent wiki PARTIAL — Damia adopts fandom stats (cohérent JP rules confirmées + wiki absence). À refléter Gnome stats canon Damia. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Healing Potion 8% drop canon récurrent Gnome + 10G shop universal (fandom) ⭐⭐** — Quote canon : "drops **Healing Potion** 8% probability + available **all Item shops 10 gold**". Pattern Damia : Healing Potion = basic healing item canon récurrent + 10G shop universal canon. À documenter `items/Healing Potion.md` (à créer/vérifier). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Encounter rate "Very common" + slow attacker SPD 50 canon Gnome (fandom) ⭐⭐** — Encounter rate "Very common" CONFIRMED CROSS-SOURCE + "slow to attack so you will almost undoubtedly go first" SPD 50 boss-low canon. Pattern Damia : Hybrid damage mob canon Disc 3 + predictable slow turn order. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Disc 3 Monsters category canon CONFIRMED CROSS-SOURCE Gnome (fandom) ⭐⭐** — Pattern Damia : Disc 3 Gnome canon CONFIRMED CROSS-SOURCE (vs initial "Disc 3+" hypothesis wiki-only). Source: idem.
+
+- [ ] ⚠️⚠️ **🆕 Status Immunity + A-AV/M-AV + Counter Opportunities Gnome STILL MISSING both sources ⚠️⚠️** — Wiki PARTIAL + fandom incomplete : Status Immunity 8 statuses + A-AV + M-AV + Counter Opportunities table MISSING. À ingérer wiki complet future si disponible. Source: idem.
+
 ### À décider / explorer
 
 ### À décider / explorer

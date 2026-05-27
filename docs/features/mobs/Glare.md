@@ -1,273 +1,249 @@
-# Glare — Minor Enemy Water Undersea Cavern Disc 2 (HP 320)
+# Glare — Minor Enemy Water Queen Fury + Undersea Cavern Disc 2 (HP 400 JP) CROSS-SOURCE 🟢
 
-> **Water Minor Enemy Disc 2 — Undersea Cavern canon + ubiquitous road encounter Tiberoa-Mille Seseau NEW MAJEUR** ⭐⭐⭐. HP 320 + AT 33 + DF 80 + **A-AV 10% NEW MAJEUR non-zero physical evasion** + SPD 70 + MAT 47 + **MDF 120 high magic defense** + M-AV 0%. Status 4/8 immune (Petrify/Bewitch/Arm Block/Dispirit ✔ — Confuse/Fear/Poison/Stun ✗) mid-tier récurrent. **Yield 70 EXP + 18G (Damia ÷3 = 6G) + Mind Purifier 8% drop**. **2 encounter formations Undersea Cavern + ubiquitous world map road encounter Tiberoa-Mille Seseau canon NEW MAJEUR**. AI HP-threshold overlap : **>25% ~Tentacle Whipping 1× phys** / **≤50% ~Hypnotic Gaze 1× Non-Elemental magic + 50% Bewitchment NEW MAJEUR**. **Counters Additions: Yes** (19 counter opportunities — REDUCED tier vs 28 récurrent NEW MAJEUR).
+> **Water Minor Enemy Disc 2 — Queen Fury + Undersea Cavern CROSS-SOURCE locations canon NEW MAJEUR + ubiquitous road encounter Tiberoa-Mille Seseau** ⭐⭐⭐. HP **400 JP / 320 US-EU canon** (Damia adopts JP +25% systematic CONFIRMED). AT 33 (wiki) / **P.Attack 38 (fandom +15%)** + DF 80 + **A-AV 10% wiki vs ⚠️ 120% fandom IMPOSSIBLE ANOMALY 4ème instance** + SPD 70 + MAT 47 (wiki) / 53 (fandom +12.8%) + **MDF 120 high**. Status 4/8 immune mid-tier récurrent. **Yield 70 EXP + 6G JP (Damia) | 18G US-EU + Mind Purifier 8% drop**. **AI HP-threshold overlap : >25% Multiple Slaps/~Tentacle Whipping 1× phys (tentacle slap visual) / ≤50% Astonish Eye/~Hypnotic Gaze 1× Non-Elemental magic + 50% Bewitchment NEW MAJEUR**. **Spell caster archetype canon NEW MAJEUR** (≤25% red HP triggers Astonish Eye récurrent canon). **Bewitchment = mind control turn against party + self-damage canon NEW MAJEUR fandom**. **3-Glare AI strategic constraint canon NEW MAJEUR fandom** (2 Bewitched → all Glares refrain on third). **Octopus appearance + large green eye canon NEW MAJEUR fandom**. **Counters Additions: Yes** (19 counter opportunities REDUCED tier).
 >
-> ⭐⭐⭐ **Intersection NEW MAJEUR location canon Tiberoa-Mille Seseau crossroads (wiki) ⭐⭐⭐** — Quote canon : "Donau to **Intersection**" + "Fueno to **Intersection** (Ocean)" + "Furni to **Intersection**" + "Fueno to **Intersection** (Land)" + "Intersection to Undersea Cavern". Pattern Damia : ⭐⭐⭐ **Intersection = NEW MAJEUR world map crossroads location canon TLoD Disc 2** — convergent road hub Tiberoa-Mille Seseau (cohérent récurrent road network Disc 2 canon). Sea/Land variants Fueno→Intersection canon NEW MAJEUR (différents transit modes). À documenter `world-map/intersection.md` (à créer) — Disc 2 crossroads hub canon NEW MAJEUR.
+> ⭐⭐⭐ **JP HP 400 vs US-EU 320 +25% canon Damia rule CONFIRMED CROSS-MOB (fandom) ⭐⭐⭐** — Quote canon : "HP: 320 (US/EU) / **400 (JP)**". 320 × 1.25 = 400 = match exact pattern récurrent canon JP stats rule. Pattern Damia : ⭐ **JP HP +25% systematic récurrent CONFIRMED CROSS-MOB 4ème instance** (Gangster + Gehrich + Glare = même rule confirmé). **Damia adopts JP HP 400 canon Glare**. À refléter stats table Damia JP rule récurrent.
 >
-> ⭐⭐⭐ **Rouge NEW MAJEUR location canon (wiki) ⭐⭐⭐** — Quote canon : "\*Fletz to Rouge" + "Departing Rouge to Fletz" exception. Pattern Damia : ⭐⭐⭐ **Rouge = NEW MAJEUR location canon TLoD Disc 2+ probable** — connecté à Fletz (Tiberoa) + asymmetric road (Fletz→Rouge has Glare but Rouge→Fletz doesn't). **Cohérent Rouge School martial arts hypothesis canon récurrent** : Rouge = potential Haschel hometown ? Rouge School origin canon location ? À documenter `locations/Rouge.md` (à créer) — Disc 2+ NEW MAJEUR location canon + cohérent Rouge School connection Haschel hypothèse récurrent.
+> ⭐⭐⭐ **JP Gold 6 vs US-EU 18 ÷3 ratio canon Damia rule CONFIRMED (fandom) ⭐⭐⭐** — Quote canon : "Gold: 18 (US/EU) / **6 (JP)**". 18 ÷ 3 = 6 = match exact. Pattern Damia : ⭐ **JP Gold ÷3 canon rule CONFIRMED CROSS-MOB** (Gangster + Glare = même rule confirmé). **Damia adopts JP Gold 6 canon Glare**. Cohérent récurrent ÷3 rule TLoD Damia adoption JP convention.
 >
-> ⭐⭐⭐ **A-AV 10% non-zero physical evasion canon NEW MAJEUR (wiki) ⭐⭐⭐** — Quote canon : "A-AV **10%**". Pattern Damia : ⭐⭐⭐ **A-AV 10% = first mob non-zero physical evasion documenté canon NEW MAJEUR** (vs récurrent A-AV 0% mob default canon — Gargoyle + Gangster + Frilled Lizard + autres 0%). Glare = evasive mob archetype canon NEW Disc 2 — phys-dodge mechanic canon. À refléter `mobs/README.md` A-AV pool patterns canon récurrent.
+> ⭐⭐⭐ **Queen Fury location canon NEW MAJEUR + Glare fought on board (fandom) ⭐⭐⭐** — Quote canon : "**Water element creature which can be fought on board the Queen Fury and within the Undersea Cavern**". Pattern Damia : ⭐⭐⭐ **Glare = also Queen Fury encounter canon NEW MAJEUR Disc 2** — naval ship combat encounters canon NEW (cohérent récurrent Queen Fury Tiberoa naval canon Fueno/Furni + Phantom Ship boss collision récent). **Queen Fury naval combat zone canon NEW MAJEUR Disc 2** — pas seulement transit, mais also combat. À refléter `locations/Queen Fury.md` (à créer) combat zone Glare canon + cohérent récent Ghost Commander Phantom Ship Disc 2 naval arc.
 >
-> ⭐⭐⭐ **Counter Opportunities 19 REDUCED tier canon NEW MAJEUR (wiki) ⭐⭐⭐** — Quote canon : "Counterattack Opportunities (**19**)". Pattern Damia : ⭐ **Counter tier variable canon NEW MAJEUR** — Glare 19 counters vs récurrent 28 counters (Gangster + Gargoyle + Gehrich + Ghost Commander = 28 tier confirmed). 19 = REDUCED tier canon NEW (pattern : certains mobs counter-tier réduit). Notable absent : Dart Moon Strike / Lavitz Rod Typhoon / Meru Perky Step (some buttons) / Haschel Hex Hammer / Albert Lavitz inherit only 2 entries. Pattern Damia : Counter tier mapping non-uniforme canon. À documenter `mobs/README.md` Counter tier variations canon récurrent. ⚠️ Counter feature non-implémenté Damia.
+> ⭐⭐⭐ **Octopus + large green eye nearly body-size canon NEW MAJEUR appearance (fandom) ⭐⭐⭐** — Quote canon : "**Glare resembles an octopus with a large, green eye nearly the size of its body**. It uses that **enormous eye to stare at the target of its beam attack**". Pattern Damia : ⭐⭐⭐ **Glare design canon NEW MAJEUR** — octopus + giant green eye body-size. Cohérent Tentacle Whipping/Multiple Slaps tentacle + Astonish Eye/Hypnotic Gaze beam-from-eye. À refléter sprite design Damia Glare octopus + giant green eye canon NEW MAJEUR.
 >
-> ⭐⭐⭐ **Bewitchment status canon NEW MAJEUR Disc 2 (wiki) ⭐⭐⭐** — Quote canon : "**50% chance to inflict Bewitchment** — Target's M-AV reduces chance to receive status ailment". Pattern Damia : ⭐ **Bewitchment = NEW status canon Disc 2** (peut-être variant Bewitch ? OU different status entirely). Pattern Damia : **M-AV reduces chance canon NEW MAJEUR** — first M-AV status-resist instance documenté (vs A-AV récurrent universal). À documenter `combat/status-effects.md` (à créer) Bewitchment + M-AV status-resist canon NEW MAJEUR.
+> ⭐⭐⭐ **Bewitchment = mind control turn against party + self-damage canon NEW MAJEUR fandom (fandom) ⭐⭐⭐** — Quote canon : "**Astonish Eye will Bewitch a character and turn them against you (or themselves). You do a lot of damage when attacking yourself so it can get pretty bad if two of your members fall to this ailment**". Pattern Damia : ⭐⭐⭐ **Bewitchment mechanic canon NEW MAJEUR Disc 2** : (1) **Mind control turn against party** canon NEW MAJEUR — party member attacks own party canon, (2) **Self-damage canon NEW MAJEUR** — self-attack deals high damage (multiplier ?). À documenter `combat/status-effects.md` (à créer) Bewitchment full mechanic canon NEW MAJEUR.
 >
-> ⭐⭐⭐ **Non-Elemental damage CROSS-MOB-BOSS 2 instances confirmed (wiki) ⭐⭐⭐** — Pattern Damia : **Non-Elemental damage canon récurrent CROSS-MOB-BOSS Disc 2 CONFIRMED 2 instances** : Ghost Commander HP Siphon (boss) + Glare Hypnotic Gaze (mob). Cohérent Non-Elemental category NEW MAJEUR canon récurrent — element-less damage type bypass element resistances canon. À documenter `combat/elements.md` (à créer) Non-Elemental pool canon Disc 2 récurrent.
+> ⭐⭐⭐ **3-Glare AI strategic constraint canon NEW MAJEUR fandom (fandom) ⭐⭐⭐** — Quote canon : "you can **fight up to three at once**, however, once **two of your members are Bewitched, they will all refrain from using that attack on the third member**. During this time they can **still use it on the others though**". Pattern Damia : ⭐⭐⭐ **3-Glare AI constraint canon NEW MAJEUR** : 2 party Bewitched → all Glares STOP Bewitch on remaining party member (free-target restriction) BUT can still target Bewitched members. Pattern Damia : Group-AI conditional canon NEW MAJEUR — mob group cooperation logic restricting bewitchment overflow canon. À documenter `combat/mob-abilities.md` (à créer) — group-AI conditional Bewitchment constraint canon NEW MAJEUR + `combat/ai-patterns.md` group-AI patterns.
 >
-> ⭐⭐⭐ **Hypnotic Gaze Non-Elemental magic + 50% Bewitchment combo canon NEW MAJEUR (wiki) ⭐⭐⭐** — Quote canon : "~Hypnotic Gaze — Inflicts 1× Non-Elemental magic damage and 50% chance to inflict Bewitchment". Pattern Damia : ⭐ **Magic damage + status inflict combo canon NEW MAJEUR** — single ability dual-effect (damage + status). Cohérent récurrent boss status arsenal pattern. À documenter `combat/mob-abilities.md` (à créer) — combo dual-effect canon NEW.
+> ⭐⭐⭐ **Spell caster archetype canon NEW MAJEUR + ≤25% red HP trigger pattern récurrent (fandom) ⭐⭐⭐** — Quote canon : "**As with all spell casters, it will do this when it gets to or below 25% (red) health**". Pattern Damia : ⭐⭐⭐ **Spell caster archetype canon NEW MAJEUR TLoD** — mob class canon récurrent (uses magic ability at ≤25% red HP) + **Red HP indicator ≤25% canon CROSS-SOURCE CONFIRMED** (cohérent Ghost Commander red indicator canon récent fandom). Cohérent récurrent spell-caster mob design TLoD. À refléter `combat/mob-classes.md` (à créer) — Spell caster archetype canon NEW MAJEUR + `combat/ui-mechanics.md` Red HP threshold canon CROSS-SOURCE confirmé.
 >
-> ⭐⭐⭐ **Tentacle Whipping canon Glare tentacle creature canon NEW MAJEUR (wiki) ⭐⭐⭐** — Quote canon : "~Tentacle Whipping". Pattern Damia : ⭐ **Glare = tentacle creature canon NEW MAJEUR** — squid/octopus/jellyfish-like Underwater Cavern dweller. Cohérent récurrent Water element + Undersea Cavern aquatic. À refléter `mobs/Glare.md` sprite design canon Damia tentacle creature.
+> ⭐⭐⭐ **Astonish Eye = Hypnotic Gaze (wiki) fandom official name CORRECTION (fandom) ⭐⭐⭐** — Quote canon : "**Astonish Eye** — Fires a beam out from its eye towards a single target dealing low magic damage and has a 50% chance to inflict Bewitchment upon hit". Pattern Damia : ⭐ **CORRECTION canon** wiki "~Hypnotic Gaze" tilde unofficial → fandom canon **"Astonish Eye" official name** Disc 2 NEW MAJEUR. **Eye beam visual canon récit fandom détaillé**. À refléter `mobs/Glare.md` Astonish Eye canon ability name CORRECTION + sprite eye-beam animation Damia.
 >
-> ⭐⭐⭐ **Screw Shell NEW mob canon Undersea Cavern Disc 2 (wiki) ⭐⭐⭐** — Encounter formation 129 confirme **Screw Shell = NEW mob canon Undersea Cavern Disc 2 Water-themed probable**. Pattern Damia : Undersea Cavern aquatic ecosystem canon — Glare tentacle + Screw Shell shellfish-themed encounters. À documenter `mobs/Screw Shell.md` (à créer) — NEW mob canon Disc 2 Undersea Cavern.
+> ⭐⭐⭐ **Multiple Slaps = Tentacle Whipping (wiki) fandom official name CORRECTION (fandom) ⭐⭐⭐** — Quote canon : "**Multiple Slaps** : Slides towards an enemy and slaps them with all its tentacles". Pattern Damia : ⭐ **CORRECTION canon** wiki "~Tentacle Whipping" tilde unofficial → fandom canon **"Multiple Slaps" official name** + slide-then-slap visual + multiple tentacles. À refléter `mobs/Glare.md` Multiple Slaps canon ability name CORRECTION + sprite multi-tentacle slap animation Damia.
 >
-> ⭐⭐⭐ **Ubiquitous road encounter Tiberoa-Mille Seseau canon NEW MAJEUR (wiki) ⭐⭐⭐** — Pattern Damia : **Glare = most extensive road encounter mob documenté canon NEW MAJEUR Disc 2** — 7+ road segments :
+> ⭐⭐⭐ **⚠️ A-AV 120% fandom IMPOSSIBLE MECHANIC anomaly 4ème instance récurrent (fandom) ⭐⭐⭐** — Quote canon fandom : "**120% A-AV**". Pattern Damia : ⭐ **A-AV 120% IMPOSSIBLE fandom anomaly 4ème instance CONFIRMED CROSS-MOB** (cohérent Berserk Mouse + Forest Runner + Frilled Lizard récurrent — Glare = 4ème instance pattern récurrent fandom IMPOSSIBLE A-AV >100%). **Wiki canon prevails A-AV 10%** (cohérent récurrent wiki canon). Pattern Damia : fandom tier 3 IMPOSSIBLE MECHANIC anomaly récurrent canon — wiki tier 2 mathematically valid prevails.
 >
-> - Donau to Intersection (Tiberoa)
-> - Fueno to Intersection Ocean+Land (Tiberoa) — dual mode canon
-> - Furni to Intersection (Mille Seseau)
-> - Lidiera to Undersea Cavern (Tiberoa)
-> - Intersection to Undersea Cavern
-> - Fletz to Rouge (Tiberoa)
+> ⭐⭐⭐ **Encounter rate "Very common" canon NEW MAJEUR (fandom) ⭐⭐⭐** — Quote canon : "**Encounter rate: Very common**". Pattern Damia : ⭐ **Glare = highest encounter rate récent canon "Very common"** Disc 2 (vs Gangster "Uncommon" récent). Cohérent ubiquitous road encounter Tiberoa-Mille Seseau canon récurrent.
 >
-> Pattern Damia : **Ubiquitous Disc 2 road encounter canon récurrent** — Glare dominant road mob Tiberoa-Mille Seseau region.
+> ⭐⭐⭐ **Formation divergence wiki x2 Glare vs fandom x2 Screw Shell (fandom anomaly) ⭐⭐⭐** — Wiki formation 129 "**Glare x2, Screw Shell**" (2 Glare + 1 Screw Shell) vs fandom "**Glare + Screw Shell x2**" (1 Glare + 2 Screw Shell). Pattern Damia : ⚠️ **Formation composition divergence canon CROSS-SOURCE** — wiki tier 2 canon prevails (formation 129 = 2 Glare + 1 Screw Shell). Anomaly fandom formation count canon récurrent (cohérent récurrent fandom partial/erroneous formation canon récurrent).
 >
-> ⭐⭐⭐ **Asymmetric road encounters canon récurrent CONFIRMED (wiki) ⭐⭐⭐** — Quote canon : "Except if Departing from Undersea Cavern to Intersection" + "Except if Departing Rouge to Fletz". Pattern Damia : ⭐ **Asymmetric directional road encounters canon récurrent 4ème instance CONFIRMED** (cohérent récurrent Berserk Mouse + Forest Runner + Frilled Lizard asymmetric pattern récurrent) — Glare = 2 asymmetric exceptions canon Disc 2. Implications design : directional encounter logic canon récurrent Damia.
+> ⭐⭐⭐ **"Up to three Glares at once" canon NEW MAJEUR (fandom) ⭐⭐⭐** — Quote canon : "you **can fight up to three at once**". Pattern Damia : ⭐ **Multiple Glare formations up to 3 canon NEW MAJEUR** — confirme formations multi-Glare possibles (cohérent wiki formation 129 "Glare x2 + Screw Shell" = 2 Glare confirmed). Pattern Damia : group formations 3+ mob canon Disc 2 récurrent.
 >
-> ⭐⭐⭐ **Status 4/8 immune mid-tier canon récurrent CROSS-MOB Disc 1-2 (wiki) ⭐⭐⭐** — Pattern Damia : **Mid-tier 4/8 immunity canon récurrent CROSS-MOB Disc 1-2 CONFIRMED 3ème instance** (cohérent Gangster Disc 2 + Gargoyle Disc 1 + Glare Disc 2 = même status pattern récurrent). Spécifique Glare : vulnerable Confuse/Fear/Poison/Stun = strategic openings canon.
+> ⭐⭐⭐ **Mind Purifier 10G "any item store" fandom vs wiki Fueno shop 20G (cross-source divergence) ⭐⭐⭐** — Quote canon fandom : "purchased at **any item store for 10 gold**" vs Fueno wiki shop "Mind Purifier 20G". Pattern Damia : ⚠️ **Mind Purifier pricing divergence canon** — fandom "any item store 10G" vs wiki Fueno shop 20G. Possible : Fueno specific pricing 20G vs generic baseline 10G OU wiki Fueno anomaly. À investiguer pricing canon shop-specific vs baseline. À refléter `items/Mind Purifier.md` (à créer) pricing canon clarification.
 >
-> ⭐⭐⭐ **AI HP-threshold overlap canon récurrent 25-50% (wiki) ⭐⭐⭐** — Quote canon : ">25% ~Tentacle Whipping" + "≤50% ~Hypnotic Gaze" = overlap 25-50% HP range canon (both abilities eligible 25-50%). Pattern Damia : ⭐ **AI sub-pattern overlap canon récurrent CONFIRMED 4ème instance** (cohérent récurrent Gargoyle Disc 1 + Glare Disc 2 = même pattern overlap récurrent). À refléter `combat/ai-patterns.md` (à créer) AI sub-patterns canon CROSS-MOB.
+> ⭐⭐⭐ **JP name "Gureā" canon (fandom) ⭐⭐⭐** — Quote canon : "Glare (**グレアー, Gureā, lit. 'Glare'**)". Pattern Damia : JP name canon récurrent JP naming pattern Disc 2 mobs (cohérent récurrent JP naming canon).
 >
-> ⭐⭐ **MDF 120 high magic defense Glare canon (wiki) ⭐⭐** — MDF 120 high = magic-tank archetype canon (cohérent récurrent Disc 2 magic defense escalation). + DF 80 mid = balanced phys/magic tank canon Disc 2.
+> ⭐⭐ **P.Attack 38 fandom vs wiki AT 33 = +15% divergence anomaly récurrent (fandom) ⭐⭐** — Wiki AT 33 + fandom P.Attack 38 = +15% divergence canon récurrent fandom higher anomaly (cohérent Gangster +39% / Gehrich +21% / Ghost Commander +13% pattern récurrent). Pattern Damia : Wiki tier 2 canon prevails AT 33.
 >
-> ⭐⭐ **Mind Purifier 8% drop canon récurrent (wiki) ⭐⭐** — Mind Purifier = anti-Bewitchment/mental status item canon récurrent (cohérent Mind Purifier shop Fueno 20G + récurrent canon TLoD). 8% drop rate mid-tier. Cohérent thématique Glare Hypnotic Gaze Bewitchment + Mind Purifier counter-item canon.
+> ⭐⭐ **M.Attack 53 fandom vs wiki MAT 47 = +12.8% minor divergence (fandom) ⭐⭐** — Wiki MAT 47 + fandom 53 = +12.8% minor divergence canon récurrent (cohérent récurrent pattern). Pattern Damia : Wiki canon prevails MAT 47.
 >
-> ⭐⭐ **HP 320 + AT 33 + MAT 47 magic-focused canon Disc 2 (wiki) ⭐⭐** — HP 320 mid-tier Disc 2 cohérent + AT 33 low + MAT 47 high (magic-focused archetype) + MDF 120 magic tank = magic-specialist mob canon Disc 2 cohérent récurrent (cohérent Gargoyle magic specialist Disc 1).
->
-> ⭐ **Yield 70 EXP + 18G Damia 6G canon Disc 2 (wiki) ⭐** — Yield mid-tier Disc 2 cohérent récurrent. Damia Gold ÷3 = 6G systematic.
->
-> ⭐ **Water element Minor Enemy canon récurrent Disc 2 (wiki) ⭐** — Pattern Damia : Water mobs Disc 2 récurrent (cohérent Freeze Knight Disc 3 récurrent + Glare Disc 2). Water pool canon CROSS-DISC.
+> ⭐⭐ **Disc 2 Monsters category canon CONFIRMED CROSS-SOURCE (fandom + wiki) ⭐⭐** — Pattern Damia : Disc 2 Glare canon CONFIRMED CROSS-SOURCE.
 >
 > **Sources** :
 >
-> - 🥈 [`_sources/lod-wiki-glare.md`](./_sources/lod-wiki-glare.md) — wiki LoD tier 2 (Minor Enemy Water Disc 2 Undersea Cavern + HP 320/AT 33/DF 80/**A-AV 10% NEW MAJEUR**/SPD 70/MAT 47/**MDF 120 high**/M-AV 0% + Status 4/8 immune mid-tier + Yield 70 EXP/18G/Mind Purifier 8% + 2 encounter formations Undersea Cavern + **Screw Shell NEW mob** + **ubiquitous road encounter Tiberoa-Mille Seseau** + **Intersection NEW MAJEUR location** + **Rouge NEW MAJEUR location** + AI HP-threshold overlap >25% ~Tentacle Whipping / ≤50% **~Hypnotic Gaze Non-Elemental magic + 50% Bewitchment NEW MAJEUR M-AV reduces** + Counters Yes + **19 counter opportunities REDUCED tier NEW MAJEUR** incl Albert Lavitz inherit)
+> - 🥈 [`_sources/lod-wiki-glare.md`](./_sources/lod-wiki-glare.md) — wiki LoD tier 2 (Minor Enemy Water Disc 2 Undersea Cavern + HP 320/AT 33/DF 80/**A-AV 10%**/SPD 70/MAT 47/MDF 120/M-AV 0% + Status 4/8 immune + Yield 70 EXP/18G/Mind Purifier 8% + 2 encounter formations Undersea Cavern + **Screw Shell NEW mob** + **ubiquitous road encounter Tiberoa-Mille Seseau NEW MAJEUR** + **Intersection NEW MAJEUR location** + **Rouge NEW MAJEUR location** + AI HP-threshold overlap >25% ~Tentacle Whipping / ≤50% ~Hypnotic Gaze Non-Elemental + 50% Bewitchment + **19 counter opportunities REDUCED tier**)
+> - 🥉 [`_sources/fandom-glare.md`](./_sources/fandom-glare.md) — Fandom tier 3 (**HP JP 400/US-EU 320 +25% Damia rule CONFIRMED** + **JP Gold 6 ÷3 rule CONFIRMED** + **Queen Fury location NEW MAJEUR Glare combat zone** + JP "Gureā" + **Octopus + large green eye body-size appearance canon NEW MAJEUR** + **Bewitchment mind control + self-damage canon NEW MAJEUR** + **3-Glare AI strategic constraint canon NEW MAJEUR** + **Spell caster archetype canon NEW MAJEUR + ≤25% red HP trigger pattern récurrent** + **Multiple Slaps + Astonish Eye fandom official names CORRECTION** + **⚠️ A-AV 120% IMPOSSIBLE fandom anomaly 4ème instance récurrent** + **Encounter rate "Very common" NEW MAJEUR** + **Up to 3 Glares formation canon NEW MAJEUR** + **Formation divergence Glare x2 vs Screw Shell x2 cross-source anomaly** + **Mind Purifier 10G "any item store" vs Fueno wiki 20G divergence** + P.Attack 38 +15% / M.Attack 53 +12.8% divergences récurrentes + Disc 2 Monsters CONFIRMED)
 
 ## Statut
 
-🟡 **Canon documenté wiki tier 2 uniquement** — fandom à ingérer future (Trivia + Gallery + Glare lore + Bewitchment status + Intersection/Rouge locations depth).
+🟢 **Canon confirmed cross-source** (wiki 🥈 + fandom 🥉) — 2 sources cohérentes + enrichissement fandom MAJEUR :
 
-## Identity canon ⭐⭐⭐
+- **JP stats canon Damia rules CONFIRMED** (HP +25% / Gold ÷3)
+- ⭐⭐⭐ **Queen Fury combat zone + Bewitchment mind control self-damage + 3-Glare AI constraint + Spell caster archetype + Octopus appearance** canon NEW MAJEUR
+- ⚠️ A-AV 120% IMPOSSIBLE fandom anomaly 4ème instance — wiki 10% canon prevails
 
-- **Nom** : Glare
+## Identity canon ⭐⭐⭐ CROSS-SOURCE
+
+- **Nom** : Glare (JP **グレアー Gureā**)
 - **Type** : Minor Enemy
-- **Element** : Water (cohérent récurrent Water pool Disc 2-3)
-- **Disc** : Disc 2 (wiki Categories CONFIRMED)
-- **Location canon** : **Undersea Cavern submaps 301/303/304/305** Disc 2 Tiberoa + **ubiquitous world map road encounter Tiberoa-Mille Seseau NEW MAJEUR**
-- **Archetype** : Magic-specialist tentacle creature + evasive (A-AV 10%) + status-inflict (Bewitchment) canon NEW MAJEUR
-- **Counters Additions** : Yes (**19 counter opportunities REDUCED tier canon NEW MAJEUR**)
+- **Element** : Water (cohérent Water pool Disc 2-3 récurrent)
+- **Disc** : Disc 2 CONFIRMED CROSS-SOURCE
+- **Locations canon** : ⭐⭐⭐ **Queen Fury + Undersea Cavern (CROSS-SOURCE NEW MAJEUR)** Disc 2 Tiberoa + ubiquitous world map road encounter Tiberoa-Mille Seseau
+- **Archetype** : ⭐⭐⭐ **Spell caster magic-specialist + evasive (A-AV 10%) + status-inflict (Bewitchment) + group-AI conditional + octopus tentacle creature** canon NEW MAJEUR
+- **Appearance canon** : **Octopus + large green eye nearly body-size** (fandom NEW MAJEUR)
+- **Counters Additions** : Yes (19 counter opportunities REDUCED tier canon NEW MAJEUR)
+- **Encounter rate** : ⭐⭐⭐ **Very common canon (fandom NEW MAJEUR)** Disc 2
 - **Implications Damia** : Counter feature non-implémenté Damia (factual mention only)
 
-## Stats canon ⭐⭐⭐ Damia adoption
+## Stats canon ⭐⭐⭐ CROSS-SOURCE Damia adoption JP rules CONFIRMED
 
-| Stat     | Wiki canon | Damia adoption | Notes                                                                          |
-| -------- | ---------- | -------------- | ------------------------------------------------------------------------------ |
-| HP       | 320        | **320**        | Mid-tier Disc 2 cohérent                                                       |
-| AT       | 33         | **33**         | Low physical attack canon                                                      |
-| DF       | 80         | **80**         | Mid physical defense                                                           |
-| **A-AV** | **10%**    | **10%**        | ⭐⭐⭐ **First mob non-zero A-AV canon NEW MAJEUR** — evasive archetype Disc 2 |
-| SPD      | 70         | **70**         | Mid-tier                                                                       |
-| MAT      | 47         | **47**         | High magic attack canon                                                        |
-| MDF      | 120        | **120**        | ⭐⭐⭐ **High magic defense canon Disc 2** — magic-tank balanced               |
-| M-AV     | 0%         | **0%**         | No magic evasion canon                                                         |
+| Stat       | Wiki canon | Fandom canon           | Damia adoption     | Notes                                                                                                                                                    |
+| ---------- | ---------- | ---------------------- | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **HP**     | 320        | **320 US-EU / 400 JP** | **400 JP** ⭐⭐⭐  | ⭐ JP HP +25% systematic canon récurrent CONFIRMED (320 × 1.25 = 400)                                                                                    |
+| AT (P.Atk) | 33         | **38 (P.Attack)** ⚠️   | **33 wiki canon**  | ⚠️ Fandom +15% divergence anomaly récurrent — wiki tier 2 prevails                                                                                       |
+| DF (P.Def) | 80         | 80                     | **80**             | Match canon CROSS-SOURCE                                                                                                                                 |
+| **A-AV**   | **10%**    | **⚠️ 120% IMPOSSIBLE** | **10% wiki canon** | ⚠️ **4ème instance A-AV 120% IMPOSSIBLE fandom anomaly** (Berserk Mouse + Forest Runner + Frilled Lizard + Glare) — wiki mathematiquement valid prevails |
+| SPD        | 70         | 70                     | **70**             | Match canon CROSS-SOURCE                                                                                                                                 |
+| MAT        | 47         | **53** ⚠️              | **47 wiki canon**  | ⚠️ Fandom +12.8% minor divergence — wiki canon prevails                                                                                                  |
+| MDF        | 120        | 120                    | **120**            | Match canon CROSS-SOURCE high magic defense                                                                                                              |
+| M-AV       | 0%         | -                      | **0%**             | No magic evasion canon                                                                                                                                   |
 
-**Gold conversion canon Damia** : 18G ÷3 = **6G** systematic.
+**Gold conversion canon Damia CONFIRMED CROSS-MOB** ⭐⭐⭐ :
+
+| Source | US-EU  | JP    | Damia (÷3 = JP)             |
+| ------ | ------ | ----- | --------------------------- |
+| Wiki   | 18     | -     | 6 (÷3)                      |
+| Fandom | **18** | **6** | **6 JP canon CONFIRMED** ⭐ |
+
+JP Gold ÷3 = match exact CROSS-MOB (Gangster + Glare = même rule confirmé).
 
 ## Status Immunity canon ⭐⭐⭐ 4/8 immune mid-tier récurrent CROSS-MOB
 
-| Status    | Immune canon | Pattern                                |
-| --------- | ------------ | -------------------------------------- |
-| Petrify   | ✔            | Immune                                 |
-| Bewitch   | ✔            | Immune                                 |
-| Arm Block | ✔            | Immune                                 |
-| Dispirit  | ✔            | Immune                                 |
-| Confuse   | ✗            | **Strategic opening canon** vulnerable |
-| Fear      | ✗            | **Strategic opening canon** vulnerable |
-| Poison    | ✗            | **Strategic opening canon** vulnerable |
-| Stun      | ✗            | **Strategic opening canon** vulnerable |
+(Cf. wiki section — Petrify/Bewitch/Arm Block/Dispirit ✔ — Confuse/Fear/Poison/Stun ✗)
 
-Pattern Damia : Mid-tier 4/8 immunity canon récurrent CROSS-MOB CROSS-DISC — 3ème instance Disc 1-2 (Gangster + Gargoyle + Glare).
+## Yield canon CROSS-SOURCE
 
-## Yield canon
+| EXP | Gold US-EU | Gold JP / Damia    | Drops                                                |
+| --- | ---------- | ------------------ | ---------------------------------------------------- |
+| 70  | 18         | **6G canon Damia** | Mind Purifier 8% (10G shop fandom OR 20G Fueno wiki) |
 
-| EXP | Gold (wiki) | Gold (Damia ÷3) | Drops                |
-| --- | ----------- | --------------- | -------------------- |
-| 70  | 18          | **6G**          | **Mind Purifier 8%** |
+### Mind Purifier drop canon ⭐⭐⭐ CROSS-SOURCE
 
-### Mind Purifier drop canon ⭐⭐
+- **8% drop rate canon CROSS-SOURCE confirmed**
+- **Anti-Bewitchment/mental status item canon récurrent**
+- **Pricing canon divergence** : fandom "any item store 10G" vs wiki Fueno shop 20G — à investiguer shop-specific vs baseline pricing
+- À documenter `items/Mind Purifier.md` (à créer/vérifier)
 
-- 8% drop rate canon récurrent mid-tier
-- **Mind Purifier = anti-Bewitchment/mental status item canon récurrent** (cohérent Mind Purifier Fueno shop 20G récent + thématique Hypnotic Gaze counter-item canon)
+## Encounters canon Queen Fury + Undersea Cavern ⭐⭐⭐ CROSS-SOURCE expanded
 
-## Encounters canon Undersea Cavern Disc 2 ⭐⭐⭐ NEW MAJEUR road network
+### Locations canon CROSS-SOURCE
 
-### Submap Encounter Formations canon Undersea Cavern
+| Location             | Source                   | Notes                                                                         |
+| -------------------- | ------------------------ | ----------------------------------------------------------------------------- |
+| **Queen Fury**       | ⭐⭐⭐ fandom NEW MAJEUR | Naval ship combat zone canon Disc 2 (cross-source Queen Fury naval récurrent) |
+| **Undersea Cavern**  | wiki + fandom            | Submaps 301/303/304/305 Disc 2 Tiberoa                                        |
+| **Ubiquitous roads** | wiki                     | 7+ road segments Tiberoa-Mille Seseau canon                                   |
 
-| ID  | Formation                  | Submaps                     | Encounter%    | Escape% |
-| --- | -------------------------- | --------------------------- | ------------- | ------- |
-| 120 | Glare solo                 | Undersea Cavern 301         | 10%           | 30%     |
-| 129 | Glare ×2 + **Screw Shell** | Undersea Cavern 303/304/305 | 35%, 35%, 35% | 30%     |
+### Battle formations canon CROSS-SOURCE
 
-### World Map Road encounters ⭐⭐⭐ NEW MAJEUR ubiquitous canon Tiberoa-Mille Seseau
+| Source | Formation                                       | Notes                                                          |
+| ------ | ----------------------------------------------- | -------------------------------------------------------------- |
+| Wiki   | Glare solo (120) + Glare x2 + Screw Shell (129) | Formation 129 = 2 Glare + 1 Screw Shell                        |
+| Fandom | Glare + Glare + Screw Shell x2                  | ⚠️ Formation count divergence (1 Glare + 2 Screw Shell fandom) |
+| Both   | "Up to 3 Glares at once" canon                  | Multiple Glare formations canon NEW MAJEUR                     |
 
-| Road Segment canon                    | Notes                                              |
-| ------------------------------------- | -------------------------------------------------- |
-| **Donau to Intersection**             | Tiberoa road                                       |
-| **Fueno to Intersection (Ocean)**     | ⭐ **Sea variant canon NEW** Tiberoa naval         |
-| **Furni to Intersection**             | Mille Seseau road                                  |
-| **Lidiera to Undersea Cavern**        | Tiberoa road                                       |
-| **\*Intersection to Undersea Cavern** | Hub road                                           |
-| **Fueno to Intersection (Land)**      | ⭐ **Land variant canon NEW** Tiberoa              |
-| **\*Fletz to Rouge**                  | Tiberoa road — **Rouge NEW MAJEUR location canon** |
+⚠️ **Formation composition divergence** : wiki canon prevails (formation 129 = 2 Glare + 1 Screw Shell).
 
-### Asymmetric road exceptions canon ⭐⭐⭐ récurrent CONFIRMED 4ème instance
+### Asymmetric road exceptions canon ⭐⭐⭐ (wiki — cf. section précédente)
 
-- Except if **Departing from Undersea Cavern to Intersection** (reverse direction no Glare)
-- Except if **Departing Rouge to Fletz** (reverse direction no Glare)
+(Cf. wiki source pour 7+ road segments + 2 asymmetric exceptions canon récurrent 4ème instance.)
 
-Pattern Damia : ⭐⭐⭐ **Asymmetric directional road encounters canon récurrent CONFIRMED 4ème instance** (cohérent Berserk Mouse + Forest Runner + Frilled Lizard récurrent — Glare 2 exceptions ajoutées canon). Implications design : directional encounter logic canon récurrent Damia.
-
-## AI canon ⭐⭐⭐ HP-threshold overlap récurrent + combo damage+status NEW MAJEUR
+## AI canon ⭐⭐⭐ CROSS-SOURCE ability naming CORRECTION + group-AI constraint NEW MAJEUR
 
 ### AI HP-threshold (overlap 25-50% sub-pattern récurrent)
 
-| HP   | Action                 | Target | Effect canon                                                                                | Notes                                            |
-| ---- | ---------------------- | ------ | ------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| >25% | **~Tentacle Whipping** | Single | Inflicts **1× Physical damage** (tentacle whip visual)                                      | -                                                |
-| ≤50% | **~Hypnotic Gaze**     | Single | ⭐⭐⭐ **1× Non-Elemental magic damage + 50% Bewitchment NEW MAJEUR** (combo damage+status) | **M-AV reduces inflict chance canon NEW MAJEUR** |
+| Wiki name (unofficial) | Fandom official name  | Target | Effect canon                                                                        | Conditions canon                                               |
+| ---------------------- | --------------------- | ------ | ----------------------------------------------------------------------------------- | -------------------------------------------------------------- |
+| ~Tentacle Whipping     | ⭐ **Multiple Slaps** | Single | 1× Physical damage (slide + multi-tentacle slap visual)                             | >25% HP                                                        |
+| ~Hypnotic Gaze         | ⭐ **Astonish Eye**   | Single | ⭐⭐⭐ 1× Non-Elemental magic damage + **50% Bewitchment chance** (eye-beam visual) | ≤50% HP — **Spell caster trigger ≤25% red HP canon récurrent** |
 
-### HP-threshold AI overlap canon sub-pattern récurrent CONFIRMED 4ème instance
+⭐⭐⭐ **Fandom canon official names CORRECTION** : Multiple Slaps + Astonish Eye (vs wiki tilde unofficial).
 
-Pattern Damia : ⭐ **AI sub-pattern overlap canon récurrent CONFIRMED Glare 4ème instance documenté** :
+### Spell caster archetype canon ⭐⭐⭐ NEW MAJEUR (fandom)
 
-- **>25% ~Tentacle Whipping eligible**
-- **≤50% ~Hypnotic Gaze eligible**
-- **Overlap 25-50% HP range** : both abilities eligible
+Quote canon : "As with all **spell casters, it will do this when it gets to or below 25% (red) health**".
 
-Cohérent récurrent Gargoyle overlap pattern Disc 1 + Glare Disc 2 = 2 instances overlap canon récurrent.
+Pattern Damia : ⭐⭐⭐ **Spell caster mob archetype canon NEW MAJEUR TLoD** :
 
-### Hypnotic Gaze combo damage+status canon ⭐⭐⭐ NEW MAJEUR
+- Mob class canon récurrent — uses magic ability triggered at ≤25% red HP
+- ⭐⭐⭐ **Red HP indicator ≤25% canon CROSS-SOURCE CONFIRMED** (cohérent Ghost Commander red indicator récent fandom)
+- Cohérent récurrent spell-caster mob design TLoD
 
-Pattern Damia : ⭐⭐⭐ **Magic damage + status inflict combo canon NEW MAJEUR Disc 2** — single ability dual-effect (damage + Bewitchment chance). Cohérent récurrent boss status arsenal pattern. À documenter `combat/mob-abilities.md` (à créer) — combo dual-effect canon NEW.
+À refléter `combat/mob-classes.md` (à créer) — Spell caster archetype canon + `combat/ui-mechanics.md` Red HP threshold canon CROSS-SOURCE.
 
-### Non-Elemental damage CROSS-MOB-BOSS 2 instances ⭐⭐⭐
+### Bewitchment mind control + self-damage canon ⭐⭐⭐ NEW MAJEUR (fandom)
 
-Pattern Damia : **Non-Elemental damage canon récurrent CROSS-MOB-BOSS Disc 2 CONFIRMED 2 instances** :
+Quote canon : "**Astonish Eye will Bewitch a character and turn them against you (or themselves). You do a lot of damage when attacking yourself**".
 
-| Source              | Tier | Ability canon      | Effect                                   |
-| ------------------- | ---- | ------------------ | ---------------------------------------- |
-| **Ghost Commander** | Boss | HP Siphon / Absorb | 1× Non-Elemental magic + lifesteal       |
-| **Glare**           | Mob  | Hypnotic Gaze      | 1× Non-Elemental magic + 50% Bewitchment |
+Pattern Damia : ⭐⭐⭐ **Bewitchment mechanic canon NEW MAJEUR Disc 2** :
 
-Pattern Damia : Non-Elemental = canon category Disc 2 récurrent — element-less damage type bypass element resistances canon. À documenter `combat/elements.md` (à créer) Non-Elemental pool canon Disc 2.
+1. **Mind control turn against party** canon — Bewitched character attacks own party
+2. **Self-damage canon** — self-attack deals high damage (multiplier ?)
+3. **M-AV reduces inflict chance** (wiki + fandom CROSS-SOURCE)
+4. **50% inflict chance Astonish Eye** CROSS-SOURCE
 
-### Bewitchment NEW status canon ⭐⭐⭐ NEW MAJEUR Disc 2
+À documenter `combat/status-effects.md` (à créer) Bewitchment full mechanic canon NEW MAJEUR.
 
-Quote canon : "**Bewitchment** — M-AV reduces chance to receive status ailment".
+### 3-Glare AI strategic constraint canon ⭐⭐⭐ NEW MAJEUR (fandom)
 
-Pattern Damia : ⭐⭐⭐ **Bewitchment = NEW status canon Disc 2** :
+Quote canon : "you can fight **up to three at once**, however, **once two of your members are Bewitched, they will all refrain from using that attack on the third member. During this time they can still use it on the others though**".
 
-- Possible variant of "Bewitch" status (mob 4/8 immunity Bewitch canon récurrent) OU different status entirely
-- **M-AV reduces inflict chance canon NEW MAJEUR** — first M-AV status-resist instance documenté (vs A-AV récurrent universal pattern)
-- Counter-item canon : **Mind Purifier récurrent** (cohérent Fueno shop + Glare drop pair)
+Pattern Damia : ⭐⭐⭐ **3-Glare AI group constraint canon NEW MAJEUR Disc 2** :
 
-À documenter `combat/status-effects.md` (à créer) Bewitchment + M-AV status-resist canon NEW MAJEUR.
+- **2 party Bewitched → all Glares STOP Bewitch on remaining unaffected member** (free-target restriction)
+- **BUT still target already-Bewitched members** (re-Bewitch ok)
+- Pattern Damia : **Group-AI conditional canon NEW MAJEUR TLoD** — mob group cooperation logic restricting status overflow
+
+À documenter `combat/mob-abilities.md` (à créer) — group-AI conditional Bewitchment constraint canon NEW MAJEUR + `combat/ai-patterns.md` group-AI patterns.
 
 ## Counter Opportunities canon ⭐⭐⭐ 19 REDUCED tier NEW MAJEUR (wiki)
 
-⚠️ **Counter feature non-implémenté Damia** — factual tier mention only.
-
-**19 counter opportunities REDUCED tier canon NEW MAJEUR** (vs récurrent 28 tier Gangster/Gargoyle/Gehrich/Ghost Commander) :
-
-| User    | Addition           | Button Press canon |
-| ------- | ------------------ | ------------------ |
-| Dart    | Volcano            | 2                  |
-| Dart    | Crush Dance        | 2, 3               |
-| Lavitz  | Gust of Wind Dance | 2                  |
-| Lavitz  | Flower Storm       | 2, 3, 4, 5, 6      |
-| Rose    | Hard Blade         | 2                  |
-| Rose    | Demon's Dance      | 4, 5, 6            |
-| Meru    | Cool Boogie        | 3                  |
-| Meru    | Cat's Cradle       | 3                  |
-| Meru    | Perky Step         | 2                  |
-| Haschel | Summon 4 Gods      | 2                  |
-| Albert  | Gust of Wind Dance | 2                  |
-| Albert  | Flower Storm       | 2                  |
-
-⭐⭐⭐ **Counter tier variations canon récurrent NEW MAJEUR** :
-
-- **28 tier** (récurrent canon) : Gangster + Gargoyle + Gehrich + Ghost Commander
-- **19 tier (REDUCED)** : Glare = 1st REDUCED instance documenté canon
-
-Notable absent vs 28-tier : Dart Moon Strike + Lavitz Rod Typhoon + Meru Perky Step (partial buttons) + Haschel Hex Hammer + Albert Lavitz inherit only 2 entries (vs full inherit).
-
-Pattern Damia : Counter tier mapping non-uniforme canon — variable per mob. À refléter `mobs/README.md` Counter tier variations canon récurrent.
+(Cf. wiki section précédente — 19 counters REDUCED tier vs 28 récurrent)
 
 ## Vision Damia (implémentation)
 
-### Décisions canon à conserver
+### Décisions canon à conserver (CROSS-SOURCE 🟢)
 
-1. **Water Minor Enemy Disc 2 Undersea Cavern** canon
-2. ⭐⭐⭐ **Intersection NEW MAJEUR location canon** — Tiberoa-Mille Seseau crossroads hub Disc 2
-3. ⭐⭐⭐ **Rouge NEW MAJEUR location canon** — Fletz→Rouge road Disc 2 + Rouge School hypothesis canon récurrent
-4. ⭐⭐⭐ **A-AV 10% first non-zero mob physical evasion canon NEW MAJEUR** — evasive archetype canon Disc 2
-5. ⭐⭐⭐ **Counter Opportunities 19 REDUCED tier canon NEW MAJEUR** — variable counter mapping canon récurrent
-6. ⭐⭐⭐ **Bewitchment NEW status canon Disc 2 + M-AV status-resist mechanic NEW MAJEUR** (first M-AV instance)
-7. ⭐⭐⭐ **Non-Elemental damage CROSS-MOB-BOSS confirmed 2 instances** (Ghost Commander + Glare)
-8. ⭐⭐⭐ **Hypnotic Gaze combo damage+status canon NEW MAJEUR** dual-effect ability
-9. ⭐⭐⭐ **Screw Shell NEW mob canon Undersea Cavern Disc 2**
-10. ⭐⭐⭐ **Tentacle Whipping tentacle creature canon NEW MAJEUR** — Glare design squid/octopus-like
-11. ⭐⭐⭐ **Ubiquitous road encounter Tiberoa-Mille Seseau canon NEW MAJEUR** — 7+ road segments
-12. ⭐⭐⭐ **Asymmetric directional road exceptions canon récurrent 4ème instance CONFIRMED** (Undersea Cavern→Intersection + Rouge→Fletz)
-13. ⭐⭐⭐ **AI HP-threshold overlap 25-50% canon récurrent 4ème instance** (Gargoyle + Glare)
-14. ⭐⭐⭐ **Status 4/8 immune mid-tier canon récurrent CROSS-MOB 3ème instance**
-15. ⭐⭐⭐ **Fueno Sea/Land dual-mode road encounter canon NEW MAJEUR** — Fueno→Intersection Ocean+Land canon Tiberoa naval+land transit
-16. ⭐⭐ **MDF 120 high magic defense + MAT 47 high + magic-specialist archetype canon Disc 2**
-17. ⭐⭐ **Mind Purifier 8% drop canon récurrent** thématique anti-Bewitchment counter-item
-18. ⭐⭐ **HP 320 + Gold 18G ÷3 = 6G Damia conversion canon** systematic
-19. ⭐⭐ **Water element mob Disc 2** canon récurrent
+1. **Water Minor Enemy Disc 2 Queen Fury + Undersea Cavern** canon CROSS-SOURCE locations expanded
+2. ⭐⭐⭐ **JP HP 400 +25% canon Damia rule CONFIRMED CROSS-MOB** systematic récurrent
+3. ⭐⭐⭐ **JP Gold 6 ÷3 canon Damia rule CONFIRMED CROSS-MOB** systematic récurrent
+4. ⭐⭐⭐ **Queen Fury combat zone canon NEW MAJEUR** Disc 2 (naval ship not just transit, also combat zone)
+5. ⭐⭐⭐ **Octopus + large green eye body-size appearance canon NEW MAJEUR** — sprite design Damia
+6. ⭐⭐⭐ **Bewitchment mind control turn against party + self-damage canon NEW MAJEUR Disc 2**
+7. ⭐⭐⭐ **3-Glare AI strategic group constraint canon NEW MAJEUR** (2 Bewitched → STOP Bewitch on third)
+8. ⭐⭐⭐ **Spell caster archetype mob class canon NEW MAJEUR TLoD** + ≤25% red HP trigger pattern récurrent
+9. ⭐⭐⭐ **Red HP indicator ≤25% canon CROSS-SOURCE CONFIRMED** (Ghost Commander + Glare = 2 instances)
+10. ⭐⭐⭐ **Astonish Eye + Multiple Slaps fandom official names CORRECTION** (wiki tilde unofficial)
+11. ⭐⭐⭐ **Encounter rate "Very common" canon NEW MAJEUR** Disc 2
+12. ⭐⭐⭐ **Up to 3 Glares formation canon NEW MAJEUR** multi-mob group
+13. ⭐⭐⭐ **A-AV 120% IMPOSSIBLE fandom anomaly 4ème instance** récurrent CONFIRMED — wiki 10% canon prevails
+14. ⭐⭐⭐ **Intersection + Rouge NEW MAJEUR locations canon Disc 2** (wiki — cf. récurrent)
+15. ⭐⭐⭐ **Asymmetric road exceptions canon récurrent 4ème instance CONFIRMED** (wiki)
+16. ⭐⭐⭐ **AI HP-threshold overlap canon récurrent 4ème instance** (wiki — Gargoyle + Glare)
+17. ⭐⭐⭐ **Counter 19 REDUCED tier canon NEW MAJEUR** (wiki — variable counter tier)
+18. ⭐⭐⭐ **Non-Elemental CROSS-MOB-BOSS 2 instances** (Ghost Commander + Glare)
+19. ⭐⭐⭐ **Hypnotic Gaze/Astonish Eye combo damage+status canon** (wiki + fandom CROSS-SOURCE)
+20. ⭐⭐ **Status 4/8 immune mid-tier CROSS-MOB 3ème instance**
+21. ⭐⭐ **MDF 120 high magic defense + MAT 47 magic-specialist canon Disc 2**
+22. ⭐⭐ **Mind Purifier 8% drop + pricing divergence 10G fandom vs 20G Fueno wiki** à clarifier
+23. ⭐⭐ **JP name "Gureā" canon récurrent**
+24. ⭐⭐ ⚠️ **Formation composition divergence wiki x2 Glare vs fandom x2 Screw Shell** — wiki canon prevails
+25. ⭐⭐ **P.Attack 38 + M.Attack 53 fandom divergences** — wiki canon prevails
+26. ⭐⭐ **Disc 2 Monsters category CONFIRMED CROSS-SOURCE**
 
-### Questions ouvertes
+### Questions ouvertes (post cross-source)
 
-- ⭐⭐⭐ **Intersection canon depth Disc 2** : crossroads hub world map location → à investiguer fandom + world map canon
-- ⭐⭐⭐ **Rouge canon depth Disc 2+** : Rouge School hypothèse Haschel hometown ? → à investiguer fandom + Haschel.md récurrent
-- ⭐⭐⭐ **Bewitchment vs Bewitch status canon distinction Damia** : different status OU même chose ?
-- ⭐⭐⭐ **Screw Shell stats canon Disc 2 Undersea Cavern** : NEW mob → à ingérer wiki future
-- ⭐⭐⭐ **A-AV mob pool canon TLoD** : autres mobs A-AV > 0% ? Glare pattern récurrent ?
-- ⭐⭐⭐ **Counter tier 19 vs 28 mapping canon TLoD** : autres mobs REDUCED tier ?
-- ⭐⭐ **M-AV status-resist mécanique Damia implémentation** : duration + status-specific
-- ⭐⭐ **Fueno Sea/Land dual road mode canon** : Damia implémentation transit mode
-- ⭐⭐ **Undersea Cavern Disc 2 location depth** : cross-source Fueno récent canon (Pete escort canon récurrent)
-- ⭐⭐ **Glare lore canon** : squid/octopus/aquatic monster mythology ?
+- ⭐⭐⭐ **Bewitchment mechanic Damia implémentation** : mind control + self-damage multiplier + party-target logic + duration
+- ⭐⭐⭐ **3-Glare group-AI constraint Damia implémentation** : mob cooperation logic NEW MAJEUR
+- ⭐⭐⭐ **Spell caster archetype Damia mob classification** : autres spell-caster mobs récurrent à documenter
+- ⭐⭐⭐ **Red HP threshold canon Damia UI** : visual indicator implementation
+- ⭐⭐⭐ **Queen Fury combat zone Damia design** : naval ship encounter implementation
+- ⭐⭐ **Mind Purifier pricing canon clarification** : 10G générique vs Fueno 20G specific
+- ⭐⭐ **A-AV 120% pattern fandom récurrent investigation** : 4 instances now — root cause anomaly fandom ?
+- ⭐⭐ **Formation count canon TLoD** : Glare x2 + Screw Shell x1 (wiki) vs alternate compositions
 
 ## Liens transverses
 
-- [`README.md`](./README.md) — mobs canon + **Counter tier variations canon récurrent NEW MAJEUR**
-- [`Gangster.md`](./Gangster.md) — CROSS-MOB pattern 28 counters vs Glare 19 REDUCED comparison
+- [`README.md`](./README.md) — mobs canon + **Counter tier variations + Spell caster archetype NEW MAJEUR**
+- [`Gangster.md`](./Gangster.md) — CROSS-MOB JP HP +25% / Gold ÷3 rules confirmed CROSS-MOB
 - [`Gargoyle.md`](./Gargoyle.md) — AI HP-threshold overlap canon récurrent comparison
-- [`Freeze Knight.md`](./Freeze Knight.md) — Water element CROSS-DISC + Spear Frost shared pool comparison
-- [`Screw Shell.md`](./Screw Shell.md) (à créer) — NEW mob canon Undersea Cavern Disc 2 NEW MAJEUR
-- [`../bosses/Ghost Commander.md`](../bosses/Ghost Commander.md) — Non-Elemental damage CROSS-MOB-BOSS confirmed 2 instances comparison
-- [`../locations/Undersea Cavern.md`](../locations/Undersea Cavern.md) (à créer) — Disc 2 Tiberoa cross-ref Fueno récent + Glare encounter
-- [`../world-map/intersection.md`](../world-map/intersection.md) (à créer) — Disc 2 crossroads hub canon NEW MAJEUR Tiberoa-Mille Seseau
-- [`../locations/Rouge.md`](../locations/Rouge.md) (à créer) — NEW MAJEUR Disc 2+ location canon + Rouge School hypothesis Haschel
-- [`../locations/Fueno.md`](../locations/Fueno.md) — Cross-source Fueno Sea/Land road dual-mode canon NEW MAJEUR
-- [`../party-members/Haschel.md`](../party-members/Haschel.md) (à créer/vérifier) — Rouge location canon + Rouge School hypothesis récurrent
-- [`../party-members/Albert.md`](../party-members/Albert.md) — Albert post-Lavitz Additions inherit canon récurrent (partial inherit Glare 2 entries)
-- [`../items/Mind Purifier.md`](../items/Mind Purifier.md) (à créer/vérifier) — Anti-Bewitchment canon récurrent counter-item Glare drop
+- [`Freeze Knight.md`](./Freeze Knight.md) — Water element CROSS-DISC comparison
+- [`Screw Shell.md`](./Screw Shell.md) (à créer) — NEW mob Undersea Cavern Disc 2 + formation count canon
+- [`../bosses/Ghost Commander.md`](../bosses/Ghost Commander.md) — Non-Elemental CROSS-MOB-BOSS confirmed + Red HP indicator canon CROSS-SOURCE
+- [`../locations/Queen Fury.md`](../locations/Queen Fury.md) (à créer) — ⭐⭐⭐ Naval combat zone canon NEW MAJEUR Disc 2 + Item store + Glare encounters
+- [`../locations/Undersea Cavern.md`](../locations/Undersea Cavern.md) (à créer) — Disc 2 Tiberoa Glare + Screw Shell encounters
+- [`../world-map/intersection.md`](../world-map/intersection.md) (à créer) — Disc 2 crossroads hub canon NEW MAJEUR
+- [`../locations/Rouge.md`](../locations/Rouge.md) (à créer) — NEW MAJEUR Disc 2+ location + Rouge School Haschel hypothesis récurrent
+- [`../locations/Fueno.md`](../locations/Fueno.md) — Cross-source Fueno Sea/Land road dual-mode + Mind Purifier pricing canon
+- [`../party-members/Haschel.md`](../party-members/Haschel.md) (à créer/vérifier) — Rouge location Haschel hypothesis récurrent
+- [`../party-members/Albert.md`](../party-members/Albert.md) — Albert post-Lavitz Additions inherit canon récurrent (partial Glare 2 entries)
+- [`../items/Mind Purifier.md`](../items/Mind Purifier.md) (à créer/vérifier) — Anti-Bewitchment canon récurrent + pricing 10G fandom vs 20G Fueno wiki divergence
 - [`../combat/elements.md`](../combat/elements.md) (à créer) — Non-Elemental category CROSS-MOB-BOSS 2 instances canon Disc 2
-- [`../combat/status-effects.md`](../combat/status-effects.md) (à créer) — Bewitchment NEW status + M-AV status-resist mechanic NEW MAJEUR + Bewitchment vs Bewitch distinction
-- [`../combat/ai-patterns.md`](../combat/ai-patterns.md) (à créer) — AI HP-threshold overlap canon récurrent + combo damage+status canon NEW MAJEUR
-- [`../combat/mob-abilities.md`](../combat/mob-abilities.md) (à créer) — Hypnotic Gaze combo damage+status canon NEW MAJEUR
+- [`../combat/status-effects.md`](../combat/status-effects.md) (à créer) — ⭐⭐⭐ **Bewitchment mind control + self-damage canon NEW MAJEUR full mechanic** + M-AV status-resist + Bewitchment vs Bewitch distinction
+- [`../combat/mob-abilities.md`](../combat/mob-abilities.md) (à créer) — Astonish Eye combo + **3-Glare group-AI conditional constraint canon NEW MAJEUR**
+- [`../combat/mob-classes.md`](../combat/mob-classes.md) (à créer) — ⭐⭐⭐ **Spell caster archetype canon NEW MAJEUR TLoD** mob class
+- [`../combat/ai-patterns.md`](../combat/ai-patterns.md) (à créer) — AI HP-threshold overlap + spell caster ≤25% trigger + group-AI constraint canon
+- [`../combat/ui-mechanics.md`](../combat/ui-mechanics.md) (à créer) — Red HP indicator ≤25% canon CROSS-SOURCE CONFIRMED (Ghost Commander + Glare)
 
 ## Gaps / TODO
 
-Voir [TODO.md](../../TODO.md) section Glare.
+Voir [TODO.md](../../TODO.md) section Glare fandom.

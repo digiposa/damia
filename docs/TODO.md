@@ -5941,6 +5941,42 @@
 
 - [ ] ⭐ **🆕 Water element Minor Enemy canon récurrent Disc 2 Glare (wiki) ⭐** — Water mobs Disc 2 récurrent (cohérent Freeze Knight Disc 3 + Glare Disc 2). Water pool canon CROSS-DISC. Source: idem.
 
+### Mobs / Glare fandom complement (Cross-source 🟢 — JP HP 400/Gold 6 Damia rules CONFIRMED CROSS-MOB + Queen Fury combat zone NEW MAJEUR + Bewitchment mind control self-damage + 3-Glare AI strategic group constraint + Spell caster archetype + Astonish Eye/Multiple Slaps official names + Octopus appearance + A-AV 120% IMPOSSIBLE 4ème instance anomaly)
+
+- [ ] ⭐⭐⭐ **🆕 JP HP 400 +25% canon Damia rule CONFIRMED CROSS-MOB Glare (fandom) ⭐⭐⭐** — Quote canon : "HP: 320 (US/EU) / **400 (JP)**". 320 × 1.25 = 400 match exact pattern récurrent. Pattern Damia : JP HP +25% systematic récurrent CONFIRMED CROSS-MOB 4ème instance (Gangster + Gehrich + Ghost Commander + Glare). Damia adopts JP HP 400 canon. Source: [`features/mobs/_sources/fandom-glare.md`](features/mobs/_sources/fandom-glare.md).
+
+- [ ] ⭐⭐⭐ **🆕 JP Gold 6 ÷3 canon Damia rule CONFIRMED CROSS-MOB Glare (fandom) ⭐⭐⭐** — Quote canon : "Gold: 18 (US/EU) / **6 (JP)**". 18 ÷ 3 = 6 match exact. Damia rule ÷3 = JP value direct CROSS-MOB confirmé (Gangster + Glare). Damia adopts JP Gold 6 canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Queen Fury location canon NEW MAJEUR Glare combat zone Disc 2 (fandom) ⭐⭐⭐** — Quote canon : "Water element creature which can be fought **on board the Queen Fury and within the Undersea Cavern**". Pattern Damia : **Queen Fury naval combat zone canon NEW MAJEUR Disc 2** — pas seulement transit, mais aussi combat (cohérent récurrent Queen Fury Tiberoa naval canon Fueno/Furni + Phantom Ship Ghost Commander naval climax récent). À refléter `locations/Queen Fury.md` (à créer) combat zone Glare. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Octopus + large green eye body-size appearance canon NEW MAJEUR Glare (fandom) ⭐⭐⭐** — Quote canon : "Glare resembles an **octopus with a large, green eye nearly the size of its body**. It uses that enormous eye to stare at the target of its beam attack". Pattern Damia : Glare design canon NEW MAJEUR — octopus + giant green eye body-size. Sprite design Damia. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Bewitchment mind control + self-damage canon NEW MAJEUR Disc 2 (fandom) ⭐⭐⭐** — Quote canon : "**Astonish Eye will Bewitch a character and turn them against you (or themselves). You do a lot of damage when attacking yourself**". Pattern Damia : Bewitchment mechanic canon NEW MAJEUR Disc 2 : (1) Mind control turn against party + (2) Self-damage canon (multiplier ?). À documenter `combat/status-effects.md` (à créer) full mechanic. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 3-Glare AI strategic group constraint canon NEW MAJEUR (fandom) ⭐⭐⭐** — Quote canon : "fight up to three at once, however, **once two of your members are Bewitched, they will all refrain from using that attack on the third member**. During this time they can still use it on the others though". Pattern Damia : **3-Glare AI group constraint canon NEW MAJEUR Disc 2** — group-AI conditional Bewitchment restriction logic NEW MAJEUR TLoD. À documenter `combat/mob-abilities.md` + `combat/ai-patterns.md` (à créer) group-AI patterns. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Spell caster archetype canon NEW MAJEUR + ≤25% red HP trigger pattern récurrent (fandom) ⭐⭐⭐** — Quote canon : "As with all **spell casters, it will do this when it gets to or below 25% (red) health**". Pattern Damia : Spell caster archetype canon NEW MAJEUR TLoD — mob class récurrent + **Red HP indicator ≤25% canon CROSS-SOURCE CONFIRMED** (Ghost Commander + Glare = 2 instances). À documenter `combat/mob-classes.md` + `combat/ui-mechanics.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Astonish Eye + Multiple Slaps fandom official names CORRECTION Glare (fandom) ⭐⭐⭐** — Quote canon : "**Multiple Slaps** : Slides towards enemy + slaps with all tentacles" + "**Astonish Eye** : Fires beam from eye + 50% Bewitchment". Pattern Damia : CORRECTION wiki "~Tentacle Whipping" → fandom "**Multiple Slaps**" + wiki "~Hypnotic Gaze" → fandom "**Astonish Eye**". Eye-beam + multi-tentacle slap visuals canon. À refléter sprite animations Damia. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 ⚠️ A-AV 120% IMPOSSIBLE fandom anomaly 4ème instance récurrent Glare (fandom) ⭐⭐⭐** — Quote canon fandom : "**120% A-AV**". Pattern Damia : ⚠️ **A-AV 120% IMPOSSIBLE fandom anomaly 4ème instance CONFIRMED CROSS-MOB** (cohérent Berserk Mouse + Forest Runner + Frilled Lizard + Glare = 4 instances). Wiki canon prevails A-AV 10% (mathématiquement valide). Pattern Damia : fandom tier 3 IMPOSSIBLE MECHANIC anomaly récurrent — wiki tier 2 prevails. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Encounter rate "Very common" canon NEW MAJEUR Glare (fandom) ⭐⭐⭐** — Quote canon : "Encounter rate: **Very common**". Pattern Damia : Glare = highest encounter rate récent canon (vs Gangster "Uncommon"). Cohérent ubiquitous road encounter Tiberoa-Mille Seseau. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 "Up to three Glares at once" multi-mob formation canon NEW MAJEUR (fandom) ⭐⭐⭐** — Quote canon : "you can **fight up to three at once**". Pattern Damia : Multiple Glare formations up to 3 canon NEW MAJEUR (cohérent wiki formation 129 "Glare x2 + Screw Shell" = 2 Glare confirmed). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Mind Purifier pricing divergence 10G fandom vs 20G Fueno wiki (cross-source anomaly) ⭐⭐⭐** — Quote canon fandom : "purchased at **any item store for 10 gold**" vs wiki Fueno shop "Mind Purifier 20G". Pattern Damia : ⚠️ pricing canon divergence — possible Fueno specific pricing vs generic baseline 10G OU wiki Fueno anomaly. À investiguer shop-specific vs baseline canon clarification. À documenter `items/Mind Purifier.md` (à créer/vérifier). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Formation composition divergence wiki vs fandom Glare/Screw Shell (cross-source anomaly) ⭐⭐⭐** — Wiki formation 129 "Glare x2, Screw Shell" (2 Glare + 1 Screw Shell) vs fandom "Glare + Screw Shell x2" (1 Glare + 2 Screw Shell). Pattern Damia : ⚠️ Formation count divergence canon — wiki tier 2 canon prevails (formation 129 = 2 Glare + 1 Screw Shell). Anomaly fandom partial/erroneous formation count canon récurrent. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 JP name "Gureā" Glare canon récurrent (fandom) ⭐⭐⭐** — Quote canon : "**グレアー, Gureā, lit. 'Glare'**". Pattern Damia : JP name canon récurrent JP naming pattern Disc 2 mobs. Source: idem.
+
+- [ ] ⭐⭐ **🆕 P.Attack 38 fandom vs wiki AT 33 +15% divergence anomaly récurrent (fandom) ⭐⭐** — Wiki AT 33 + fandom 38 = +15% divergence canon récurrent fandom higher anomaly (cohérent récurrent). Wiki canon prevails AT 33. Source: idem.
+
+- [ ] ⭐⭐ **🆕 M.Attack 53 fandom vs wiki MAT 47 +12.8% minor divergence (fandom) ⭐⭐** — Wiki MAT 47 + fandom 53 = +12.8% minor divergence (cohérent récurrent). Wiki canon prevails. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Disc 2 Monsters category canon CONFIRMED CROSS-SOURCE Glare (fandom) ⭐⭐** — Pattern Damia : Disc 2 Glare canon CONFIRMED CROSS-SOURCE. Source: idem.
+
 ### À décider / explorer
 
 ### À décider / explorer

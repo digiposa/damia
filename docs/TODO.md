@@ -5495,6 +5495,36 @@
 
 - [ ] ⭐⭐ **🆕 Hellena Warden "wimps" Fruegel dialogue + Senior Warden hierarchy canon (fandom) ⭐⭐** — Quote Fruegel : Hellena Wardens "wimps" → summons Senior Warden = elite warden hierarchy canon NEW. Source: idem.
 
+### Locations / Fueno wiki (Disc 2 Tiberoa Suncrest Island coastal port #23 chain — World-renowned hot spring + Lidiera village + Pete + Pete's mother escort NEW MAJEUR + Pete teases Rose-Dart romance foreshadowing + Queen Fury Port 3ème instance + Meru reunion submap 312 + Gushing Magma 20G shop 3 sources CONFIRMED + 6 NEW Weapon Shop items + Hot Spring Dart armor scolded)
+
+- [ ] ⭐⭐⭐ **🆕 Suncrest Island canon NEW MAJEUR Tiberoa southern island geographic (wiki) ⭐⭐⭐** — Quote canon : "coastal port for **Suncrest Island**". Pattern Damia : **Suncrest Island = Tiberoa southern island canon NEW MAJEUR** (cohérent Fueno = coastal port + Undersea Cavern previous chain Disc 2 Tiberoa southern region). À documenter `world-map/suncrest-island.md` (à créer) — Tiberoa Suncrest Island geographic canon NEW. Source: [`features/locations/_sources/lod-wiki-fueno.md`](features/locations/_sources/lod-wiki-fueno.md).
+
+- [ ] ⭐⭐⭐ **🆕 World-renowned hot spring canon NEW MAJEUR Fueno (wiki) ⭐⭐⭐** — Quote canon : "primary claim to fame is its **world-renowned hot spring**". Pattern Damia : Fueno = hot spring resort canon Disc 2 (submap 315 + 720 = 2 hot springs canon). **Hot spring Dart scolded wearing armor canon submap 315** = comedy character beat Disc 2. À refléter `locations/Fueno.md` (créé) + character beat canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Lidiera village + Pete + Pete's mother NPCs canon NEW MAJEUR Disc 2 escort quest (wiki) ⭐⭐⭐** — Quote canon : "Dart and Rose arrive in Fueno after escorting **Pete and his mother** from their village, **Lidiera** through the **Undersea Cavern**". Pattern Damia : **Lidiera = NEW village canon Disc 2 Tiberoa** (Undersea Cavern starting point) + Pete + Pete's mother = NEW NPCs canon Disc 2 sidequest escort. À documenter `locations/Lidiera.md` + `npcs/Pete.md` + `npcs/Pete's mother.md` (à créer) — Disc 2 escort quest canon NEW MAJEUR. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Pete teases Rose-Dart romance foreshadowing canon NEW MAJEUR (wiki) ⭐⭐⭐** — Quote canon : "**Pete teasing Rose's feelings about Dart** before being darting off as Rose rushes forward to shush him". Pattern Damia : **Rose romantic feelings Dart canon foreshadowing récurrent Disc 2 NEW MAJEUR** (cohérent existing Rose-Zieg engagement Dragon Campaign canon récurrent + Dart resemblance Zieg canon récurrent). Pete = comic relief NPC outing Rose's secret. À refléter `party-members/Rose.md` Rose-Dart foreshadowing canon récurrent. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Queen Fury Port Fueno cross-source CONFIRMED 3ème instance (wiki) ⭐⭐⭐** — Submap 311 = "Port where the Queen Fury is docked". Pattern Damia : **Queen Fury naval ship Tiberoa canon CROSS-SOURCE CONFIRMED 3ème instance** (Fletz Queen Fury Port + Flabby Troll fandom naval encounters + Fueno Port). **Queen Fury route canon Disc 2** : Fletz → Donau → Fueno → Tiberoa mainland (cohérent existing Lenus chase canon). À refléter `locations/Queen Fury.md` (à créer) — Tiberoa naval ship canon récurrent. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Meru reunion Hotel lobby submap 312 canon NEW MAJEUR Disc 2 (wiki) ⭐⭐⭐** — Submap 312 canon : "Hotel lobby but only when Meru surprises Dart and the party catches up with one another". Pattern Damia : **Meru reunion scene canon Fueno NEW MAJEUR Disc 2** — Meru rejoint party post-Disc 2 separation canon récurrent. À refléter `quests/disc2-meru-reunion-fueno.md` (à créer) — Disc 2 character beat canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Gushing Magma 20G Fueno shop CROSS-SOURCE 3 sources CONFIRMED canon (wiki) ⭐⭐⭐** — Pattern Damia : **Gushing Magma = Earth/Fire Spell Item canon 3 sources CONFIRMED** : Snowfield chest existing + Senior Warden death-cast canon récent + **Fueno shop 20G NEW MAJEUR Disc 2 shop reveal**. À documenter `items/Gushing Magma.md` (à créer/vérifier) — cross-source 3 sources canon CONFIRMED. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 6 NEW Weapon Shop items canon Disc 2 Fueno (wiki) ⭐⭐⭐** — **Falchion 250G** (sword Dart probable) + **Bemusing Arrow 250G** (bow Shana probable) + **Morning Star 250G** (weapon Haschel ? probable) + **Plate Mail 200G** + **Sparkle Dress 200G** (Shana probable) + **Knight Helm 150G**. Pattern Damia : Disc 2 Weapon Shop tier 150-250G economy canon récurrent. À documenter `items/equipment.md` 6 NEW items canon Disc 2. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Hotel + Clinic 50G canon Disc 2 elevated pricing (wiki) ⭐⭐** — Pattern Damia : Disc 2 elevated service pricing canon (vs Disc 1 typically 10-20G — Fueno 50G = 2.5-5× scaled-up). Pattern récurrent Disc 2 economy progression canon. À refléter `services/rest-areas.md` (à créer) — pricing tier canon récurrent. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Fueno location chain #23 Disc 2 Tiberoa canon (wiki) ⭐⭐** — Fueno = #23 (#22 Undersea Cavern → #23 Fueno → #24 Furni) canon position chain Disc 2 Tiberoa. À refléter `locations/README.md` chain ordering canon + `world-map/tiberoa.md` (à créer/vérifier). Source: idem.
+
+- [ ] ⭐⭐ **🆕 12 submaps Fueno détaillés canon (wiki) ⭐⭐** — Hot Springs 315/720 + Clinic 316/317 + Hotel lobby 319/312 + Hotel hallway 313 + Hotel rooms 314/318 + Streets 309/310 + Queen Fury Port 311. Pattern Damia : 12 submaps Disc 2 coastal town canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 2 Stardust Fueno (#34 Clinic painting + #35 Hotel barrels) canon (wiki) ⭐⭐** — Stardust détaillés Fueno. Pattern Damia : Disc 2 Stardust system canon 2 instances. Source: idem.
+
+- [ ] ⭐ **🆕 No combat + No chests + No Goods Fueno canon safe town (wiki) ⭐** — Pattern Damia : pure rest town canon Disc 2 (services-only — no loot zone). Source: idem.
+
+- [ ] ⭐ **🆕 Hot Spring Dart scolded wearing armor canon comedy beat submap 315 (wiki) ⭐** — Pattern Damia : Disc 2 character beat canon Fueno (comedy relief). À refléter `quests/disc2-fueno-hot-springs.md` (à créer). Source: idem.
+
 ### À décider / explorer
 
 ### À décider / explorer

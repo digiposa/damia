@@ -6165,6 +6165,16 @@
 
 - [ ] ⭐⭐ **🆕 HP threshold + Auto + Single use récurrent boss mechanics Grand Jewel (wiki) ⭐⭐** — Pattern Damia : HP-threshold trigger canon récurrent CROSS-BOSS (cohérent Resurrect Ghost Commander 0% HP + Spell caster ≤25% red HP Glare/Gnome + Heal Self ≤20% Grand Jewel). + Single use canon récurrent (Gorgaga Poison Needle + Grand Jewel Heal Self). Source: idem.
 
+- [ ] ⭐⭐⭐ **🆕 Grand Jewel sprite Gemini boss-tier hovering intégré canon Damia + Hovering entity sub-class NEW MAJEUR ⭐⭐⭐** — Sprite Grand Jewel (Gemini probable) confirme parfaitement canon : crystalline gem hovering entity boss Disc 3 = grosse pierre/gemme centrale + golden spikes radiating + orange/amber luminous core + halo lumineux. Cohérent **Earth element thématique** (gem/crystal mineral) + **Light abilities visuels** (luminous core + halo cohérent Trans Light + Spectral Flash). Animation cycles canon boss-tier NEW MAJEUR : **4 ISO angles SE+SW+NW+NE** (boss-tier 4-directional récurrent Gorgaga récent) + **IDLE 4-frame Hovering cycle NEW MAJEUR** + **MOVE 6-frame Hovering heavy cycle NEW MAJEUR** (label "MOVE" pas "WALK" — entité flotte pas marche) + **ATTACK 1 Crystal Beam with effect NEW MAJEUR** (cohérent abilities magic Light/Wind/Earth beam visuals) + **DEATH Crystalline Dissolution frame-by-frame NEW MAJEUR** (gemme se brise/dissout cohérent crystalline identity). Pattern Damia : ⭐⭐⭐ **Hovering entity sub-class canon NEW MAJEUR** boss-tier — distinction additionnelle vs Gorgaga walking boss :
+
+| Tier                            | ISO angles          | Locomotion cycle                          |
+| ------------------------------- | ------------------- | ----------------------------------------- |
+| Mob (Goblin)                    | 2 (SE+SW)           | 6-frame normal walk                       |
+| Boss walking (Gorgaga)          | 4 (SE+SW+NW+NE)     | 6-frame heavy walk                        |
+| **Boss hovering (Grand Jewel)** | **4 (SE+SW+NW+NE)** | **6-frame heavy HOVER (MOVE)** ⭐⭐⭐ NEW |
+
+À intégrer future `public/assets/sprites/bosses/grand-jewel-*.png` + `data/bosses/grand-jewel.ts` AvatarSpriteForm + RenderSystem cycle-aware + 4-directional facing + Crystal Beam particle effect. À documenter `docs/features/bosses/_assets/grand-jewel-sprite.png` (intégré). Source: user upload Gemini Grand Jewel hovering crystalline 2026-05-27.
+
 ### À décider / explorer
 
 ### À décider / explorer

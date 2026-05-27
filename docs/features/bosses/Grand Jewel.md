@@ -89,6 +89,44 @@
 >
 > - 🥈 [`_sources/lod-wiki-grand-jewel.md`](./_sources/lod-wiki-grand-jewel.md) — wiki LoD tier 2 (**Boss Earth Disc 3 Kadessa submap 402 Forbidden Land** + HP 4500 highest récent + AT 41/DF 100/SPD 70/MAT 58/**MDF 160 highest récent magic-tank** + Status 8/8 ALL IMMUNE boss-tier 7ème + Yield 9000 EXP highest récent/300G/**Spectral Flash 100% drop NEW item canon Disc 3 self-named pool 8ème pattern** + Scripted formation 416 + **No Traits passive 2ème boss sans passive canon récurrent Gorgaga** + **⚠️ Counter Opportunities 0 first boss canon NEW MAJEUR anti-Counter** + AI massive arsenal NEW MAJEUR Disc 3 : Spinning Gale 1.8× Wind single + Rave Twister 1.5× Wind party AoE + Pellet 1.5× Earth single + Meteor Fall 1× Earth party AoE + Trans Light 2.25× Light single highest récent + Spectral Flash 3× Light party highest récent + **Dragon Block Staff Dragoon-debuff anti-Dragoon canon NEW MAJEUR (0.1× dealt + 10× received 3 turns)** + **Level goes down/up Level manipulation canon NEW MAJEUR (5 decrease/3× trigger increase 5)** + **Heal Self 30%(1350) HP Auto HP≤20% Single use canon NEW MAJEUR**)
 
+## Sprite canon ⭐⭐⭐ Damia integration (Gemini boss-tier crystalline hovering entity)
+
+> ![Grand Jewel sprite sheet](./_assets/grand-jewel-sprite.png)
+
+⭐⭐⭐ **Sprite Grand Jewel CONFIRMS canon NEW MAJEUR** — crystalline gem hovering entity boss Disc 3 :
+
+- ✅ **Grand Jewel literal canon** — large gem/crystal centerpiece + golden spikes radiating (gemme cristalline géométrique)
+- ✅ **Earth element thématique** cohérent (gem/crystal = mineral/rock theme)
+- ✅ **Floating/hovering creature** canon NEW MAJEUR (vs walking creatures récurrent — gem entity flotte)
+- ✅ Orange/amber luminous core + radiant halo cohérent **Light element abilities** (Trans Light + Spectral Flash 3× Light party + halo visual)
+- ✅ Geometric crystalline form cohérent **Crystal Beam attack visual** canon
+- ✅ Boss-tier 4-directional ISO angles canon (cohérent Gorgaga récent boss-tier pattern)
+
+**Animation structure prête Damia (Gemini cycles canonicaux boss-tier)** :
+
+| Cycle        | Frames                                     | Notes canon                                                                                                                                                           |
+| ------------ | ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **ISO SE**   | 1                                          | Direction Sud-Est canon récurrent isométrique Damia                                                                                                                   |
+| **ISO SW**   | 1                                          | Direction Sud-Ouest canon récurrent isométrique                                                                                                                       |
+| **ISO NW**   | 1                                          | Direction Nord-Ouest canon (boss-tier 4-directional)                                                                                                                  |
+| **ISO NE**   | 1                                          | Direction Nord-Est canon (boss-tier 4-directional)                                                                                                                    |
+| **IDLE**     | 4-frame **Hovering cycle**                 | ⭐⭐⭐ **Hovering idle canon NEW MAJEUR** — gem entity floats (vs Gorgaga breathing/Goblin walking)                                                                   |
+| **MOVE**     | 6-frame **Hovering heavy cycle**           | ⭐⭐⭐ **Hovering MOVE canon NEW MAJEUR** — boss flotte avec mouvement massif (cohérent heavy boss-tier locomotion + sprite labelé "MOVE" pas "WALK")                 |
+| **ATTACK 1** | **Crystal Beam** with effect               | ⭐⭐⭐ **Crystal Beam visual canon NEW MAJEUR** — cohérent abilities magic Light/Wind/Earth beam attacks (Spinning Gale + Trans Light + Spectral Flash + Meteor Fall) |
+| **DEATH**    | frame-by-frame **Crystalline Dissolution** | ⭐⭐⭐ **Crystalline Dissolution death canon NEW MAJEUR** — gemme se brise/dissout (cohérent crystalline gem identity)                                                |
+
+Pattern Damia : ⭐⭐⭐ **Sprite Gemini boss-tier hovering canon NEW MAJEUR** — distinction additionnelle vs Gorgaga walking boss :
+
+| Tier                            | ISO angles          | Locomotion cycle                                 |
+| ------------------------------- | ------------------- | ------------------------------------------------ |
+| Mob (Goblin)                    | 2 (SE+SW)           | 6-frame normal walk                              |
+| Boss walking (Gorgaga)          | 4 (SE+SW+NW+NE)     | 6-frame heavy walk                               |
+| **Boss hovering (Grand Jewel)** | **4 (SE+SW+NW+NE)** | **6-frame heavy HOVER (MOVE labelé)** ⭐⭐⭐ NEW |
+
+Pattern Damia : **Hovering entity sub-class canon NEW MAJEUR** — boss flottants distincts walking (gem/crystal/spirit entities probable récurrent canon future).
+
+À intégrer future : `public/assets/sprites/bosses/grand-jewel-*.png` (frame-split par cycle) + `data/bosses/grand-jewel.ts` (à créer) AvatarSpriteForm pattern récurrent + `RenderSystem` cycle-aware (idle/move-hovering/attack/death) + 4-directional facing logic + Crystal Beam particle effect.
+
 ## Statut
 
 🟡 **Canon documenté wiki tier 2 uniquement** — fandom à ingérer future (Story complet + Kadessa lore + Dragon Block Staff plot context + Grand Jewel character backstory).

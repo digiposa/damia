@@ -5905,6 +5905,42 @@
 
 - [ ] ⭐ **🆕 28 Counter Opportunities canon boss récurrent (wiki) ⭐** — Pattern récurrent Counter tier mapping universal CROSS-MOB-BOSS canon. Albert Lavitz inherit Disc 2+ récurrent confirmé. ⚠️ Counter feature non-implémenté Damia. Source: idem.
 
+### Mobs / Glare wiki (Water Minor Enemy Disc 2 Undersea Cavern — Intersection NEW MAJEUR location + Rouge NEW MAJEUR location + A-AV 10% first non-zero + Counter 19 REDUCED tier + Bewitchment NEW status + M-AV status-resist + Non-Elemental CROSS-MOB-BOSS + Hypnotic Gaze combo damage+status + Screw Shell NEW mob + ubiquitous road encounter Tiberoa-Mille Seseau + AI HP overlap récurrent 4ème)
+
+- [ ] ⭐⭐⭐ **🆕 Intersection NEW MAJEUR location canon Tiberoa-Mille Seseau crossroads (wiki) ⭐⭐⭐** — Quote canon : "Donau to Intersection" + "Fueno to Intersection (Ocean/Land)" + "Furni to Intersection" + "Intersection to Undersea Cavern". Pattern Damia : **Intersection = NEW MAJEUR world map crossroads hub canon TLoD Disc 2** — convergent road hub Tiberoa-Mille Seseau (cohérent récurrent road network Disc 2). Sea/Land variants Fueno→Intersection canon NEW MAJEUR (différents transit modes). À documenter `world-map/intersection.md` (à créer). Source: [`features/mobs/_sources/lod-wiki-glare.md`](features/mobs/_sources/lod-wiki-glare.md).
+
+- [ ] ⭐⭐⭐ **🆕 Rouge NEW MAJEUR location canon Disc 2+ (wiki) ⭐⭐⭐** — Quote canon : "\*Fletz to Rouge" + "Departing Rouge to Fletz" exception. Pattern Damia : **Rouge = NEW MAJEUR location canon TLoD Disc 2+ probable** — connecté à Fletz (Tiberoa) + asymmetric road. **Cohérent Rouge School martial arts hypothesis canon récurrent** : Rouge = potential Haschel hometown ? Rouge School origin canon location ? À documenter `locations/Rouge.md` (à créer) — Rouge School connection Haschel hypothèse récurrent. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 A-AV 10% first mob non-zero physical evasion canon NEW MAJEUR (wiki) ⭐⭐⭐** — Quote canon : "A-AV 10%". Pattern Damia : **First mob non-zero A-AV canon NEW MAJEUR** (vs récurrent A-AV 0% mob default — Gargoyle/Gangster/Frilled Lizard 0%). Glare = evasive mob archetype canon NEW Disc 2 — phys-dodge mechanic canon. À refléter `mobs/README.md` A-AV pool patterns. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Counter Opportunities 19 REDUCED tier canon NEW MAJEUR (wiki) ⭐⭐⭐** — Quote canon : "Counterattack Opportunities (19)". Pattern Damia : **Counter tier variable canon NEW MAJEUR** — Glare 19 vs récurrent 28 tier (Gangster/Gargoyle/Gehrich/Ghost Commander = 28). 19 = REDUCED tier canon NEW. Notable absent : Dart Moon Strike + Lavitz Rod Typhoon + Haschel Hex Hammer + Albert partial inherit. Pattern Damia : Counter tier mapping non-uniforme canon. À documenter `mobs/README.md` Counter tier variations canon récurrent. ⚠️ Counter feature non-implémenté Damia. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Bewitchment NEW status canon + M-AV status-resist mechanic NEW MAJEUR Disc 2 (wiki) ⭐⭐⭐** — Quote canon : "50% chance to inflict Bewitchment — Target's M-AV reduces chance to receive status ailment". Pattern Damia : **Bewitchment = NEW status canon Disc 2** (variant Bewitch ? OU different status) + **M-AV reduces inflict chance canon NEW MAJEUR** — first M-AV status-resist instance documenté (vs A-AV récurrent universal). À documenter `combat/status-effects.md` (à créer) Bewitchment + M-AV mechanic. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Non-Elemental damage CROSS-MOB-BOSS 2 instances CONFIRMED (wiki) ⭐⭐⭐** — Pattern Damia : Non-Elemental damage canon récurrent CROSS-MOB-BOSS Disc 2 CONFIRMED 2 instances : Ghost Commander HP Siphon (boss) + Glare Hypnotic Gaze (mob). Cohérent Non-Elemental category NEW MAJEUR canon récurrent — element-less damage type bypass element resistances. À documenter `combat/elements.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Hypnotic Gaze combo damage+status canon NEW MAJEUR (wiki) ⭐⭐⭐** — Quote canon : "1× Non-Elemental magic damage and 50% chance to inflict Bewitchment". Pattern Damia : Magic damage + status inflict combo canon NEW MAJEUR Disc 2 — single ability dual-effect. Cohérent boss status arsenal pattern. À documenter `combat/mob-abilities.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Screw Shell NEW mob canon Undersea Cavern Disc 2 (wiki) ⭐⭐⭐** — Encounter formation 129 confirme Screw Shell = NEW mob canon Undersea Cavern Disc 2 Water-themed probable. Pattern Damia : Undersea Cavern aquatic ecosystem canon. À documenter `mobs/Screw Shell.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Ubiquitous road encounter Tiberoa-Mille Seseau canon NEW MAJEUR (wiki) ⭐⭐⭐** — Glare = most extensive road encounter mob documenté canon Disc 2 — 7+ road segments : Donau/Fueno/Furni/Lidiera/Intersection/Fletz-Rouge. Pattern Damia : Ubiquitous Disc 2 road encounter canon récurrent — Glare dominant road mob Tiberoa-Mille Seseau region. **Fueno Sea/Land dual-mode road canon NEW MAJEUR** transit modes. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Asymmetric directional road exceptions canon récurrent 4ème instance CONFIRMED Glare (wiki) ⭐⭐⭐** — Quote canon : "Except if Departing from Undersea Cavern to Intersection" + "Except if Departing Rouge to Fletz". Pattern Damia : Asymmetric directional road encounters canon récurrent 4ème instance CONFIRMED (cohérent Berserk Mouse + Forest Runner + Frilled Lizard récurrent — Glare 2 exceptions ajoutées). Directional encounter logic canon récurrent Damia. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 AI HP-threshold overlap canon récurrent 4ème instance CONFIRMED Glare (wiki) ⭐⭐⭐** — Quote canon : ">25% ~Tentacle Whipping + ≤50% ~Hypnotic Gaze" = overlap 25-50% HP range. Pattern Damia : AI sub-pattern overlap canon récurrent CONFIRMED 4ème instance (cohérent Gargoyle Disc 1 + Glare Disc 2 = 2 instances overlap pattern). À refléter `combat/ai-patterns.md`. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Tentacle Whipping tentacle creature canon NEW MAJEUR Glare (wiki) ⭐⭐⭐** — Quote canon : "~Tentacle Whipping". Pattern Damia : Glare = tentacle creature canon NEW MAJEUR (squid/octopus/jellyfish-like Underwater Cavern dweller). Cohérent Water element + Undersea Cavern aquatic. À refléter sprite design Damia. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Status 4/8 immune mid-tier canon récurrent CROSS-MOB 3ème instance Glare (wiki) ⭐⭐⭐** — Pattern Damia : Mid-tier 4/8 immunity canon récurrent CROSS-MOB Disc 1-2 CONFIRMED 3ème instance (Gangster + Gargoyle + Glare). Spécifique Glare : strategic openings Confuse/Fear/Poison/Stun. Source: idem.
+
+- [ ] ⭐⭐ **🆕 MDF 120 high magic defense + MAT 47 magic-specialist canon Glare Disc 2 (wiki) ⭐⭐** — Magic-tank balanced (DF 80 mid + MDF 120 high) + magic-focused archetype (MAT 47 high). Cohérent récurrent Disc 2 magic defense escalation. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Mind Purifier 8% drop canon récurrent anti-Bewitchment counter-item Glare (wiki) ⭐⭐** — Mind Purifier = anti-Bewitchment/mental status item canon récurrent (cohérent Fueno shop 20G récent). Thématique counter-item Hypnotic Gaze Bewitchment pair canon. À documenter `items/Mind Purifier.md` (à créer/vérifier). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Glare Yield 70 EXP + 18G ÷3 = 6G Damia conversion canon Disc 2 (wiki) ⭐⭐** — Mid-tier Disc 2 cohérent récurrent + Damia Gold ÷3 systematic. Source: idem.
+
+- [ ] ⭐ **🆕 Water element Minor Enemy canon récurrent Disc 2 Glare (wiki) ⭐** — Water mobs Disc 2 récurrent (cohérent Freeze Knight Disc 3 + Glare Disc 2). Water pool canon CROSS-DISC. Source: idem.
+
 ### À décider / explorer
 
 ### À décider / explorer

@@ -6035,6 +6035,40 @@
 
 - [ ] ⭐⭐⭐ **🆕 Gnome sprite Damia integration canon CROSS-SOURCE CONFIRMED ⭐⭐⭐** — Sprite Gnome fourni par user confirme parfaitement fandom canon appearance : short humanoid + darker skin + orange overalls + pointed hat + straw bundle weapon = scarecrow canon NEW MAJEUR. Multi-frame sprite sheet (main pose + walking + attack + cast frames). Pattern Damia : sprite intégration future `public/assets/sprites/mobs/gnome-*.png` + `data/mobs/gnome.ts` (à créer) AvatarSpriteForm pattern récurrent (cohérent Dart attack 3-frame récent + Berserk Mouse + Albert + Meru sprites précédents). À documenter `docs/features/mobs/_assets/gnome-sprite.png` (intégré). Source: user upload 2026-05-27.
 
+### Mobs / Goblin wiki (Fire Minor Enemy Disc 1 Forest — HP 4 paper-HP NEW MAJEUR + DF 120/MDF 120 asymmetric defense + Escalating damage 1.5×→3×→4× NEW MAJEUR + Escape 90% highest récent + Detonate Rock NEW item + Assassin Cock + Trent NEW mobs + Bone mystery Forest lore NEW MAJEUR + Small humanoid green skin + bone weapon appearance)
+
+- [ ] ⭐⭐⭐ **🆕 HP 4 extraordinarily low paper-HP canon NEW MAJEUR Goblin Disc 1 (wiki) ⭐⭐⭐** — Quote canon : "HP 4". Pattern Damia : Goblin = lowest HP récent canon Disc 1 — paper-HP archetype (4 HP = 1-2 hits kill). Pattern Damia : tutorial-tier mob HP canon Disc 1 early-game (cohérent récurrent Forest Disc 1 starting area). Asymmetric stats canon NEW MAJEUR (DF 120 high tank vs HP 4 paper) = anti-cheese OU AI escalating damage compensation. À refléter `mobs/README.md` HP tier patterns canon. Source: [`features/mobs/_sources/lod-wiki-goblin.md`](features/mobs/_sources/lod-wiki-goblin.md).
+
+- [ ] ⭐⭐⭐ **🆕 Asymmetric stats DF 120 + MDF 120 high vs HP 4 paper canon NEW MAJEUR Goblin (wiki) ⭐⭐⭐** — Pattern Damia : Asymmetric defense-HP canon NEW MAJEUR — DF 120 + MDF 120 high (cohérent Disc 2+ scaling MAIS Disc 1 mob = anomaly) vs HP 4 paper. Possible design : (1) anti-cheese (high def reduce dmg + low HP intentional fragility), (2) AI escalating compensation, (3) glass-cannon défensif unusual archetype. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Escalating damage AI multipliers canon NEW MAJEUR Goblin (wiki) ⭐⭐⭐** — Quote canon : ">50% ~Bone Club 1.5× phys" + "≤50% Throw Stone 3× phys" + "~Kick 4× phys". Pattern Damia : Escalating damage multipliers canon NEW MAJEUR — 1.5× → 3× → 4× progressive damage scaling AI. Pattern Damia : HP-threshold AI escalation canon NEW — low HP triggers higher damage abilities (panic/desperate damage spike). Multi-choice ≤50% (Throw Stone OR Kick random). À documenter `combat/ai-patterns.md` (à créer) escalating damage AI canon NEW MAJEUR. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Assassin Cock + Trent NEW mobs canon Forest Disc 1 Goblin (wiki) ⭐⭐⭐** — Encounter formations confirment 2 NEW mobs canon Forest Disc 1 : Assassin Cock (formation 4) + Trent (formation 9). Pattern Damia : Forest Disc 1 ecosystem expanded canon NEW MAJEUR — Goblin + Assassin Cock (chicken/bird themed) + Trent (tree-creature themed cohérent Forest setting). À documenter `mobs/Assassin Cock.md` + `mobs/Trent.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Detonate Rock 10% drop NEW item canon Disc 1 Goblin (wiki) ⭐⭐⭐** — Quote canon : "Drops Detonate Rock 10%". Pattern Damia : Detonate Rock = NEW item canon Disc 1 thématique Fire/explosive (cohérent Goblin Fire element + bone-weapon + rock-throwing AI). 10% drop rate mid-tier récurrent. À documenter `items/Detonate Rock.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Escape 90% canon NEW MAJEUR Disc 1 highest récent Goblin (wiki) ⭐⭐⭐** — Quote canon : "Escape% 90%". Pattern Damia : Goblin = highest escape rate récent canon Disc 1 NEW MAJEUR (vs récurrent 30-40% mob escape). Disc 1 easy-escape canon Forest tutorial-area design (cohérent low XP/Gold yield + low HP paper-tier). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Trivia "bone too large for Forest creatures" lore mystery canon NEW MAJEUR Goblin (wiki) ⭐⭐⭐** — Quote canon Trivia : "size of the bone... calls into question what other animals dwell in the Forest. The bone is much too large to belong to anything that Dart encounters". Pattern Damia : Lore mystery canon Forest Disc 1 NEW MAJEUR — bone weapon source = unknown larger creature (cohérent Forest of Winglies ancient creatures canon ? OU dragons pre-game ?). Lore depth canon TLoD mystery foreshadowing. À refléter `locations/Forest.md` (à créer/vérifier) bone mystery canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Small humanoid green skin + large bone weapon appearance canon NEW MAJEUR Goblin (wiki) ⭐⭐⭐** — Quote canon : "small humanoid with greenish skin that carries a large bone as a weapon". Pattern Damia : Goblin design canon NEW MAJEUR — small humanoid + green skin + large bone weapon. Cohérent fantasy goblin mythology + bone weapon Bone Club ability. Sprite design Damia. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Status 4/8 immune mid-tier canon récurrent CROSS-MOB 4ème instance Goblin (wiki) ⭐⭐⭐** — Pattern Damia : Mid-tier 4/8 immunity canon récurrent CROSS-MOB CONFIRMED 4ème instance Disc 1-3 (Gangster + Gargoyle + Glare + Goblin). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 AI HP-threshold clean + multi-choice ≤50% canon récurrent Goblin (wiki) ⭐⭐⭐** — Quote canon : ">50% ~Bone Club" + "≤50% Throw Stone + ~Kick multi-choice". Pattern Damia : AI HP-threshold clean canon récurrent + multi-choice ≤50% canon récurrent 2ème instance (Gnome + Goblin). À refléter `combat/ai-patterns.md`. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Throw Stone 3× phys + ~Kick 4× phys NEW MAJEUR highest récent multipliers Goblin (wiki) ⭐⭐⭐** — Pattern Damia : Throw Stone = NEW ability canon (rock-throwing cohérent Detonate Rock drop) + ~Kick 4× = highest mob phys multiplier récent. Pattern Damia : Disc 1 mob escalating damage compensation paper HP canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 MDF 120 high magic defense + MAT 1 nil magic attack canon Goblin (wiki) ⭐⭐** — MDF 120 high (cohérent Disc 2-3 magic-tank canon) + MAT 1 nil = magic-defensive but magic-passive mob canon Disc 1. Pattern Damia : Goblin = anti-magic phys-only mob archetype canon NEW Disc 1 (no magic abilities). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Forest Disc 1 location confirmed Goblin canon récurrent (wiki) ⭐⭐** — Quote canon : "Forest (6, 7, 624, 625)". Pattern Damia : Forest Disc 1 récurrent CONFIRMED. Submap IDs 6/7 (très bas tier Disc 1 early) + 624/625 (haut tier late-Forest probable). Investigation submap range Forest canon. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Fire element Mob canon récurrent Disc 1+ Goblin (wiki) ⭐⭐** — Goblin Fire element canon Disc 1. Pattern Damia : Fire mob pool canon récurrent CROSS-DISC (cohérent Fire Spirit + autres Fire mobs canon TLoD). Source: idem.
+
+- [ ] ⭐ **🆕 Goblin Yield 4 EXP + 6G ÷3 = 2G Damia conversion canon Disc 1 (wiki) ⭐** — Low yield Disc 1 tutorial-area + Damia Gold ÷3 systematic. Pattern Damia : Goblin = low-value Disc 1 mob canon. Source: idem.
+
+- [ ] ⭐ **🆕 Bone Club 1.5× phys basic ability cohérent appearance Goblin (wiki) ⭐** — Quote canon : "~Bone Club 1.5× Physical damage". Pattern Damia : basic phys ability 1.5× canon Disc 1 + Bone Club = cohérent appearance (large bone weapon). Source: idem.
+
 ### À décider / explorer
 
 ### À décider / explorer

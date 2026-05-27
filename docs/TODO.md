@@ -5713,6 +5713,46 @@
 
 - [ ] ⭐ **🆕 ~Kick basic 1× phys ability canon récurrent + Contact arrows trigger Gangster (wiki) ⭐** — ~Kick = basic single-target 1× phys canon récurrent Disc 1-2. Contact arrows = visible-encounter trigger récurrent Disc 1-2. Source: idem.
 
+### Mobs / Gangster fandom complement (Cross-source 🟢 — JP HP 350 +25% + JP Gold 6 ÷3 canon Damia rules CONFIRMED + Gehrich Rouge School master Disc 2 antagonist NEW MAJEUR + Rouge School martial arts faction + Rouge Kick CORRECTION + chi-based Power Up + 2 NEW Home of Gigantos mobs (Berserker + Rock Firefly) + Energy Girdle Haschel Vest + Sachet + Bandit's Ring superlative + "Home of Gigantos" plural CORRECTION)
+
+- [ ] ⭐⭐⭐ **🆕 JP HP 350 +25% canon Damia adoption CONFIRMED (fandom) ⭐⭐⭐** — Quote canon : "HP: 280 (US/EU) / **350 (JP)**". 280 × 1.25 = 350 = match exact pattern récurrent canon JP stats adoption rule Damia. Damia adopts JP HP 350 canon. Source: [`features/mobs/_sources/fandom-gangster.md`](features/mobs/_sources/fandom-gangster.md).
+
+- [ ] ⭐⭐⭐ **🆕 JP Gold 6 ÷3 ratio canon Damia rule CONFIRMED CROSS-SOURCE (fandom) ⭐⭐⭐** — Quote canon : "Gold: 18 (US/EU) / **6 (JP)**". 18 ÷ 3 = 6 = match exact. **Damia rule ÷3 = JP value direct canon CONFIRMED**. ⚠️ Wiki Gold 12 anomaly possible wiki error/avg — fandom source canonical Damia adoption JP Gold 6 canon (cohérent ÷3 rule récurrent). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 P.Attack 50 fandom vs wiki AT 36 +39% MAJOR DIVERGENCE anomaly (fandom) ⭐⭐⭐** — Wiki AT 36 + fandom P.Attack 50 = +39% divergence canon récurrent fandom higher anomaly (cohérent récurrent Frilled Lizard P.Attack 6 fandom inverse +-divergence pattern). Pattern Damia : Wiki tier 2 canon prevails AT 36 + factual fandom 50 mention as tier-3 anomaly. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 "Home of Gigantos" plural canon CORRECTION CROSS-SOURCE (fandom) ⭐⭐⭐** — Quote canon fandom : "Home of Gigantos" (plural récurrent) vs wiki "Home of Giganto" (singular). Pattern Damia : **"Home of Gigantos" plural canon CORRECTED** (cohérent Gigantos race plural canon — Kongol "Last of the Gigantos" récurrent). Wiki singular = typo probable. Damia adopts "Home of Gigantos" plural canon. À corriger `locations/Home of Gigantos.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Gehrich Rouge School master Disc 2 antagonist canon NEW MAJEUR (fandom) ⭐⭐⭐** — Quote canon : "Gangsters are all **students to Gehrich** and his teachings in the Rouge School style of martial arts. They are the **elite part of his gang of bandits**". Pattern Damia : **Gehrich = Disc 2 Tiberoa antagonist canon NEW MAJEUR** — gang leader + Rouge School master + Gangsters/Crafty Thieves/Piggies/Berserkers gang followers. À documenter `bosses/Gehrich.md` (à créer) — Disc 2 antagonist canon NEW MAJEUR + Rouge School lore. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Rouge School martial arts canon NEW MAJEUR TLoD (fandom) ⭐⭐⭐** — Quote canon : "Rouge style of martial arts" + "Rouge School style". Pattern Damia : **Rouge = martial arts school canon NEW MAJEUR TLoD** — cohérent récurrent Haschel martial arts canon (Haschel = legitimate Rouge master canon récurrent hypothesis ?). Chi-based + Rouge Kick spin kick techniques canon. À investiguer `quests/disc2-rouge-school.md` (à créer) + `party-members/Haschel.md` Rouge School connection canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Gangster human appearance canon red pants + top knot + Rouge martial arts (fandom) ⭐⭐⭐** — Quote canon : "**human opponent who wears red pants, has a top knot, and fights with the Rouge style of martial arts**". Pattern Damia : Gangster = human bandit canon Disc 2 (not creature/monster — explicitly human) + appearance NEW MAJEUR. À refléter sprite design Damia human red pants + top knot. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Rouge Kick official name CORRECTION canon (fandom) ⭐⭐⭐** — Quote canon : "**Rouge Kick** — Gangster runs up and **spin kicks** the target". Pattern Damia : **CORRECTION canon** wiki "~Kick" tilde unofficial → fandom canon **"Rouge Kick" official name + spin kick animation** Disc 2 NEW MAJEUR. À refléter `mobs/Gangster.md` Rouge Kick canon + sprite animation Damia. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Power Up chi-based mechanic canon NEW MAJEUR (fandom) ⭐⭐⭐** — Quote canon : "**uses their chi to strengthen themselves**, raising attack and defense to **1.5 times normal for 3 turns**". Pattern Damia : Power Up = chi-based self-buff canon NEW MAJEUR — Rouge School chi lore canon Disc 2. Cohérent Eastern martial arts chi récurrent (Haschel chi connection ?). À refléter `combat/boss-abilities.md` (à créer) chi-based Power Up canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Scripted "great door" boss fight + 2 Crafty Thieves canon Disc 2 plot context (fandom) ⭐⭐⭐** — Quote canon : "**scripted boss fight in front of the great door with two Crafty Thieves**". Pattern Damia : Scripted formation 475 = "great door boss fight" Disc 2 plot beat canon — **Great door = Home of Gigantos canonical landmark NEW MAJEUR** (probable Gigantos sealed entrance ?). À refléter `quests/disc2-home-of-gigantos.md` (à créer) — Disc 2 plot beat canon NEW MAJEUR. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Berserker NEW mob Home of Gigantos Disc 2 + Energy Girdle Haschel Vest canon NEW MAJEUR (fandom) ⭐⭐⭐** — Quote canon : "**Berserkers in the area drop Energy Girdle, a very tough Vest for Haschel**, much earlier than he might otherwise obtain it". Pattern Damia : **Berserker = NEW mob canon Home of Gigantos Disc 2** + **Energy Girdle = Haschel-specific Vest canon NEW MAJEUR Disc 2** early-access farming. À documenter `mobs/Berserker.md` + `items/Energy Girdle.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Rock Firefly HP/MP regeneration entity canon NEW MAJEUR (fandom) ⭐⭐⭐** — Quote canon : "**Rock Fireflies are available to regenerate the characters' health and MP for nothing**". Pattern Damia : **Rock Firefly = healing-type mob canon NEW MAJEUR** Disc 2 — "for nothing" implies free heal entity (passive/friendly OR specific no-cost mechanic). À documenter `mobs/Rock Firefly.md` (à créer) — Disc 2 healing entity canon NEW MAJEUR. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Sachet NEW item canon Piggy drop (fandom) ⭐⭐⭐** — Quote canon : "**Piggies here drop the useful Sachet**". Pattern Damia : Sachet = NEW item canon Disc 2 — "useful" descriptor (probable status protection ? aroma item ?). À documenter `items/Sachet.md` (à créer) — NEW item canon Disc 2 Piggy drop. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Home of Gigantos farming ecosystem canon NEW MAJEUR Disc 2 (fandom) ⭐⭐⭐** — Quote canon : "This area **rewards a lot of patience and slow 'farming' with very powerful items**" + Bandit's Ring 30min-1h30 average farming. Pattern Damia : **Home of Gigantos = farming zone canon Disc 2 NEW MAJEUR** — 4 mobs (Gangster + Piggy + Crafty Thief + Berserker + Rock Firefly) ecosystem canon + farming-tier rare drops design récurrent. À refléter `locations/Home of Gigantos.md` (à créer) — farming area canon Disc 2. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Bandit's Ring "superlative" descriptor canon CROSS-SOURCE (fandom) ⭐⭐** — Quote canon : "drop the **superlative Bandit's Ring**". Pattern Damia : Bandit's Ring = canon high-tier Disc 2 accessory ("superlative" = top-tier descriptor canon) + 30min-1h30 farming canon. À documenter `items/Bandit's Ring.md` (à créer) — Disc 2 superlative accessory canon CROSS-SOURCE. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Encounter rate "Uncommon" + "Faster than usual" characterization canon (fandom) ⭐⭐** — Quote canon : "Encounter rate: Uncommon" + "Gangsters are **faster than usual**" + "Powered Up is 50% stronger". Pattern Damia : Gangster = canon rare spawn Home of Gigantos Disc 2 + SPD 70 "faster than usual" cohérent + Power Up 1.5× confirmation. Source: idem.
+
+- [ ] ⭐⭐ **🆕 M.Attack 36 fandom vs wiki MAT 32 minor divergence anomaly (fandom) ⭐⭐** — Wiki MAT 32 + fandom M.Attack 36 = +12.5% minor divergence (possible fandom transposition wiki AT 36 → labels swapped). Pattern Damia : Wiki canon prevails MAT 32 + factual mention. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Battle formations 2 fandom vs 3 wiki partial canon (fandom anomaly) ⭐⭐** — Fandom liste 2 formations (Gangster solo + Gangster+Piggy x2) — wiki documente 3 formations incl. Crafty Thief x2 scripted 475. Pattern Damia : Wiki canon comprehensive prevails (scripted "great door" narrative-only in fandom). Anomaly fandom partial canon récurrent. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Disc 2 Monsters category canon CONFIRMED (fandom) ⭐⭐** — Quote canon : "Disc 2 Monsters" category. Pattern Damia : Disc 2 Gangster canon CONFIRMED CROSS-SOURCE (cohérent récurrent Disc 2 mob canon). Source: idem.
+
 ### À décider / explorer
 
 ### À décider / explorer

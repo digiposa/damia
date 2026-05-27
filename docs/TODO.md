@@ -6071,6 +6071,32 @@
 
 - [ ] ⭐⭐⭐ **🆕 Goblin sprite Gemini final intégré canon Damia animation-ready ⭐⭐⭐** — Sprite Goblin Gemini sélectionné par user (vs ChatGPT moins fidèle bone weapon). Confirme PS1 reference canon : small humanoid + greenish teal skin + red eyes + tusk + **large bone weapon white femur fidèle PS1** + brown leather tunic + gold belt. Animation cycles labelés canon : **ISO SE + ISO SW** (directional isométrique récurrent Damia) + **IDLE 4-frame** + **WALK 6-frame** + **ATTACK 1 with swirl effect** (Bone Club ability visual) + **DEATH frame-by-frame dissolution** (cohérent lore Trivia bone mystery — Goblin laisse os = canon foreshadowing). Pattern Damia : drop-in animation-ready dans système Damia (cohérent récurrent pattern Dart attack 3-frame + Berserk Mouse + Albert + Meru + Gnome sprites précédents). À intégrer future `public/assets/sprites/mobs/goblin-*.png` (frame-split par cycle) + `data/mobs/goblin.ts` (à créer) AvatarSpriteForm pattern récurrent. À documenter `docs/features/mobs/_assets/goblin-sprite.png` (intégré). Source: user upload Gemini final 2026-05-27.
 
+### Mobs / Goblin fandom complement (Cross-source 🟢 — JP HP 5/Gold 2 Damia rules CONFIRMED 6ème/4ème instance + Mob average SPD 60 baseline TLoD + Appearance CROSS-SOURCE CONFIRMED + Single-target focus + Ability names CROSS-SOURCE + ⚠️ damage hierarchy fandom narrative contradiction)
+
+- [ ] ⭐⭐⭐ **🆕 JP HP 5 +25% canon Damia rule CONFIRMED 6ème instance CROSS-MOB Goblin (fandom) ⭐⭐⭐** — Quote canon : "HP: 4 (US/EU) / **5 (JP)**". 4 × 1.25 = 5 match exact (rounded). Pattern Damia : JP HP +25% systematic CONFIRMED 6ème instance CROSS-MOB (Gangster + Gehrich + Ghost Commander + Glare + Gnome + Goblin). Damia adopts JP HP 5 canon. Source: [`features/mobs/_sources/fandom-goblin.md`](features/mobs/_sources/fandom-goblin.md).
+
+- [ ] ⭐⭐⭐ **🆕 JP Gold 2 ÷3 canon Damia rule CONFIRMED 4ème instance CROSS-MOB Goblin (fandom) ⭐⭐⭐** — Quote canon : "Gold: 6 (US/EU) / **2 (JP)**". 6 ÷ 3 = 2 match exact. Pattern Damia : JP Gold ÷3 systematic CONFIRMED 4ème instance CROSS-MOB (Gangster + Glare + Gnome + Goblin). Damia adopts JP Gold 2 canon. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Mob average SPD 60 canon NEW MAJEUR baseline TLoD (fandom) ⭐⭐⭐** — Quote canon : "uncommonly low Speed of 40, with **enemies averaging 60**". Pattern Damia : **Mob baseline SPD 60 canon NEW MAJEUR TLoD** — première benchmark documenté canon TLoD mob speed average. Goblin SPD 40 = -33% below average canon (slow archetype confirmed). À documenter `combat/mob-stats-baselines.md` (à créer) — average mob SPD 60 canon NEW MAJEUR baseline TLoD. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Appearance canon CROSS-SOURCE CONFIRMED Goblin (fandom) ⭐⭐⭐** — Quote canon : "small humanoid enemy with **green skin and red eyes**. The goblin **wears a brown tunic and carries a club made of bone**". Pattern Damia : CROSS-SOURCE CONFIRMED appearance canon (wiki + fandom + sprite Gemini intégré récent) — small humanoid + green skin + red eyes + brown tunic + bone club. Sprite Gemini fidèle PS1 + canon écrit CONFIRMED 3-way cross-source. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Single-target focus canon CROSS-SOURCE Goblin (fandom) ⭐⭐⭐** — Quote canon : "**focuses only on single targets**". Pattern Damia : Goblin = single-target only mob canon (cohérent wiki abilities Bone Club/Throw Stone/Kick all "Single" target). Pas d'AoE canon Disc 1 Goblin. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Ability names CROSS-SOURCE wiki vs fandom Goblin (fandom) ⭐⭐⭐** — Bone Club + Kick = CROSS-SOURCE same names (no tilde correction needed). **Throw Stone canonical** (wiki + fandom Gallery match) vs fandom narrative variant "Rock Throw" (minor inconsistency dans fandom même — Gallery match wiki). Source: idem.
+
+- [ ] ⭐⭐ **🆕 M.Attack 3 fandom vs wiki MAT 1 small-value divergence (fandom) ⭐⭐** — Wiki MAT 1 + fandom M.Attack 3 = +200% MAIS small-value (1→3 misleading %). Pattern Damia : Wiki tier 2 canon prevails MAT 1 (cohérent nil magic attack archetype Goblin). Source: idem.
+
+- [ ] ⭐⭐ **🆕 JP name "Goburin" canon Goblin (fandom) ⭐⭐** — Quote canon : "ゴブリン, **Goburin**". Pattern Damia : JP name canon récurrent JP naming pattern Disc 1 mobs. Source: idem.
+
+- [ ] ⭐⭐ **🆕 Battle formations CROSS-SOURCE confirmed + Disc 1 Monsters CONFIRMED Goblin (fandom) ⭐⭐** — Fandom liste 3 formations cohérent wiki (Goblin solo + Goblin+Trent + Goblin+Assassin Cock) + Disc 1 Monsters category CONFIRMED CROSS-SOURCE. Source: idem.
+
+- [ ] ⚠️ **🆕 Damage hierarchy fandom narrative ⚠️ contradicts wiki AI Goblin (fandom anomaly) ⚠️** — Quote canon fandom narrative : "Kick — minor damage" + "Bone Club — dealing more damage than Kick". ⚠️ **CONTRADICTION** : fandom narrative dit Kick < Bone Club, mais wiki AI table dit Kick 4× phys > Bone Club 1.5× phys (Kick > Bone Club). Pattern Damia : Wiki AI multipliers prevail (tier 2 canonical formal data) — fandom narrative simplification erroneous probable. Wiki canon : Bone Club 1.5× (>50% HP) / Kick 4× (≤50% HP) = damage scaling AI-tier canon. Source: idem.
+
+### À décider / explorer
+
+### À décider / explorer
+
 ### À décider / explorer
 
 ### À décider / explorer

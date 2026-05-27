@@ -1,6 +1,6 @@
-# Goblin — Minor Enemy Fire Forest Disc 1 (HP 4)
+# Goblin — Minor Enemy Fire Forest Disc 1 (HP 5 JP) CROSS-SOURCE 🟢
 
-> **Fire Minor Enemy Disc 1 Forest canon récurrent** ⭐⭐⭐. ⚠️ **HP 4 extraordinarily low canon NEW MAJEUR** + AT 2 + **DF 120 high physical tank canon** + SPD 40 + MAT 1 + **MDF 120 high magic defense** + A-AV/M-AV 0%. **Asymmetric stats canon NEW MAJEUR** : extreme paper-HP vs high defenses (DF 120/MDF 120 vs HP 4) — anti-cheese mob design canon ? Status 4/8 immune mid-tier récurrent. **Yield 4 EXP + 6G (Damia ÷3 = 2G) + Detonate Rock 10% drop NEW item canon**. **3 encounter formations Forest Disc 1** : solo (3) + Assassin Cock (4) + Trent (9). AI HP-threshold clean **escalating damage canon NEW MAJEUR** : **>50% ~Bone Club 1.5× phys / ≤50% Throw Stone 3× phys + ~Kick 4× phys (multi-choice)**. **Escape 90% canon NEW MAJEUR** = highest escape récent Disc 1. **Counters Additions: Yes** (28 counter opportunities). **Small humanoid greenish skin + large bone weapon canon NEW MAJEUR fandom-tier appearance**.
+> **Fire Minor Enemy Disc 1 Forest canon CROSS-SOURCE** ⭐⭐⭐. ⚠️ **HP 5 JP / 4 US-EU canon paper-HP** (Damia adopts JP +25% systematic CONFIRMED 6ème instance CROSS-MOB) + AT 2 CROSS-SOURCE + **DF 120 high physical tank canon** + SPD 40 + MAT 1 (wiki) / 3 (fandom +200% small-value divergence) + **MDF 120 high magic defense** + A-AV/M-AV 0%. **Asymmetric stats canon NEW MAJEUR** (DF 120/MDF 120 vs HP 5 paper). Status 4/8 immune mid-tier récurrent. **Yield 4 EXP + 2G JP (Damia) | 6G US-EU + Detonate Rock 10% drop**. **3 encounter formations Forest Disc 1** : solo (3) + Assassin Cock (4) + Trent (9) CROSS-SOURCE. AI HP-threshold escalating canon : **>50% Bone Club 1.5× phys / ≤50% Rock Throw/Throw Stone 3× phys + Kick 4× phys (multi-choice)**. **Escape 90% canon NEW MAJEUR**. **Counters Additions: Yes** (28 counter opportunities). **Small humanoid + green skin + red eyes + brown tunic + bone club appearance canon CROSS-SOURCE CONFIRMED**. **SPD 40 uncommonly low vs mob average 60 canon NEW MAJEUR fandom**. **Single-target focus canon CROSS-SOURCE**. **JP name "Goburin"**.
 >
 > ⭐⭐⭐ **HP 4 extraordinarily low canon NEW MAJEUR (wiki) ⭐⭐⭐** — Quote canon : "HP **4**". Pattern Damia : ⭐⭐⭐ **Goblin = lowest HP récent canon Disc 1 NEW MAJEUR** — paper-HP archetype canon (4 HP = 1-2 hits kill canon). Pattern Damia : tutorial-tier mob HP canon Disc 1 early-game (cohérent récurrent Disc 1 starting area Forest). Asymmetric stats canon NEW MAJEUR (DF 120 high tank vs HP 4 paper) = anti-cheese ? OU AI escalating damage compensation (>50% threshold rarely triggered). À refléter `mobs/README.md` HP tier patterns canon récurrent.
 >
@@ -36,9 +36,40 @@
 >
 > ⭐ **28 Counter Opportunities canon récurrent (wiki) ⭐** — Pattern récurrent Counter tier mapping universal CROSS-MOB canon (28 tier confirmé Gangster/Gargoyle/Gehrich/Ghost Commander). ⚠️ Counter feature non-implémenté Damia.
 >
+> ⭐⭐⭐ **JP HP 5 +25% canon Damia rule CONFIRMED 6ème instance CROSS-MOB Goblin (fandom) ⭐⭐⭐** — Quote canon : "HP: 4 (US/EU) / **5 (JP)**". 4 × 1.25 = 5 = match exact (rounded). Pattern Damia : **JP HP +25% systematic récurrent CONFIRMED 6ème instance** (Gangster + Gehrich + Ghost Commander + Glare + Gnome + Goblin = 6 instances). Damia adopts JP HP 5 canon Goblin (paper-HP archetype confirmé).
+>
+> ⭐⭐⭐ **JP Gold 2 ÷3 canon Damia rule CONFIRMED 4ème instance CROSS-MOB Goblin (fandom) ⭐⭐⭐** — Quote canon : "Gold: 6 (US/EU) / **2 (JP)**". 6 ÷ 3 = 2 = match exact. Pattern Damia : **JP Gold ÷3 systematic récurrent CONFIRMED 4ème instance** (Gangster + Glare + Gnome + Goblin). Damia adopts JP Gold 2 canon.
+>
+> ⭐⭐⭐ **Mob average SPD 60 canon NEW MAJEUR (fandom) ⭐⭐⭐** — Quote canon : "uncommonly low Speed of 40, with **enemies averaging 60**". Pattern Damia : ⭐⭐⭐ **Mob baseline SPD 60 canon NEW MAJEUR TLoD** — première benchmark documenté canon TLoD mob speed average. Goblin SPD 40 = -33% below average canon (slow archetype confirmed). À documenter `combat/mob-stats-baselines.md` (à créer) — average mob SPD 60 canon NEW MAJEUR baseline TLoD.
+>
+> ⭐⭐⭐ **Appearance canon CROSS-SOURCE CONFIRMED (fandom) ⭐⭐⭐** — Quote canon : "small humanoid enemy with **green skin and red eyes**. The goblin **wears a brown tunic and carries a club made of bone**". Pattern Damia : CROSS-SOURCE CONFIRMED appearance canon (wiki + fandom + sprite Gemini intégré récent) — small humanoid + green skin + red eyes + brown tunic + bone club. Sprite Gemini fidèle PS1 + canon écrit CONFIRMED.
+>
+> ⭐⭐⭐ **Single-target focus canon CROSS-SOURCE (fandom) ⭐⭐⭐** — Quote canon : "**focuses only on single targets**". Pattern Damia : Goblin = single-target only mob canon (cohérent wiki abilities Bone Club/Throw Stone/Kick all "Single" target). Pas d'AoE canon Disc 1 Goblin.
+>
+> ⭐⭐⭐ **Ability names CROSS-SOURCE wiki vs fandom Goblin (fandom) ⭐⭐⭐** — Pattern Damia : ⭐ **Names cross-source comparison** :
+>
+> | Wiki name (tilde) | Fandom narrative name | Fandom Gallery name (match wiki) | Damia canonical                              |
+> | ----------------- | --------------------- | -------------------------------- | -------------------------------------------- |
+> | ~Bone Club        | **Bone Club**         | Bone Club                        | **Bone Club** ✓                              |
+> | ~Kick             | **Kick**              | Kick                             | **Kick** ✓                                   |
+> | Throw Stone       | **Rock Throw** ⚠️     | Throw Stone                      | **Throw Stone** ✓ (wiki + Gallery consensus) |
+>
+> Pattern Damia : Bone Club + Kick = CROSS-SOURCE same names (no tilde correction needed). **Throw Stone canonical** (wiki + fandom Gallery match) vs fandom narrative variant "Rock Throw" (minor inconsistency dans fandom même).
+>
+> ⭐⭐ **M.Attack 3 fandom vs wiki MAT 1 = +200% divergence small-value (fandom anomaly) ⭐⭐** — Wiki MAT 1 + fandom M.Attack 3 = +200% divergence MAIS small-value (1→3) — pourcentage misleading. Pattern Damia : Wiki tier 2 canon prevails MAT 1 (cohérent nil magic attack archetype Goblin). Possible fandom round-up OR alternate variant.
+>
+> ⭐⭐ **JP name "Goburin" canon (fandom) ⭐⭐** — Quote canon : "ゴブリン, **Goburin**". Pattern Damia : JP name canon récurrent JP naming pattern Disc 1 mobs.
+>
+> ⭐⭐ **Battle formations CROSS-SOURCE confirmed (fandom) ⭐⭐** — Fandom liste 3 formations : Goblin solo + Goblin+Trent + Goblin+Assassin Cock = cohérent wiki 3 formations Forest Disc 1. Source CROSS-SOURCE confirmed.
+>
+> ⭐⭐ **Disc 1 Monsters category canon CONFIRMED CROSS-SOURCE (fandom) ⭐⭐** — Pattern Damia : Disc 1 Goblin canon CONFIRMED CROSS-SOURCE.
+>
+> ⭐⭐ **Damage hierarchy Kick < Bone Club narrative fandom ⚠️ contradicts wiki AI (fandom) ⭐⭐** — Quote canon fandom : "Kick — kicks them for **minor damage**" + "Bone Club — **dealing more damage than the Kick attack**". ⚠️ **CONTRADICTION** : fandom narrative dit Kick < Bone Club, mais wiki AI table dit Kick 4× phys > Bone Club 1.5× phys (Kick > Bone Club). Pattern Damia : ⚠️ **Wiki AI multipliers prevail** (tier 2 canonical formal data) — fandom narrative simplification erroneous probable. Wiki canon : Bone Club 1.5× (>50%) / Kick 4× (≤50%) = damage scaling AI-tier canon.
+>
 > **Sources** :
 >
 > - 🥈 [`_sources/lod-wiki-goblin.md`](./_sources/lod-wiki-goblin.md) — wiki LoD tier 2 (Minor Enemy Fire Disc 1 Forest + **HP 4 extraordinarily low canon NEW MAJEUR** + AT 2/DF 120 high/SPD 40/MAT 1/MDF 120 high/A-AV/M-AV 0% + **asymmetric defense-HP canon NEW MAJEUR** + Status 4/8 immune mid-tier + Yield 4 EXP/6G/Detonate Rock 10% + 3 encounter formations Forest + **Assassin Cock + Trent NEW mobs** + **Detonate Rock NEW item** + **Escape 90% highest récent canon NEW MAJEUR** + AI HP-threshold clean escalating damage **>50% ~Bone Club 1.5× / ≤50% Throw Stone 3× + ~Kick 4× multi-choice NEW MAJEUR** + **Small humanoid green skin + large bone weapon appearance canon NEW MAJEUR** + **Trivia "bone too large for Forest creatures" lore mystery canon NEW MAJEUR** + 28 counter opportunities cross-character incl Albert Lavitz inherit)
+> - 🥉 [`_sources/fandom-goblin.md`](./_sources/fandom-goblin.md) — Fandom tier 3 (**HP JP 5/US-EU 4 +25% Damia rule CONFIRMED 6ème instance** + **JP Gold 2 ÷3 rule CONFIRMED 4ème instance** + **Mob average SPD 60 canon NEW MAJEUR baseline TLoD** + JP "Goburin" + **Appearance canon CROSS-SOURCE CONFIRMED** (small humanoid + green skin + red eyes + brown tunic + bone club) + **Single-target focus canon CROSS-SOURCE** + Ability names CROSS-SOURCE (Bone Club + Kick same wiki + Throw Stone canonical wiki+Gallery vs fandom narrative "Rock Throw") + M.Attack 3 +200% small-value divergence (wiki MAT 1 prevails) + Battle formations CROSS-SOURCE confirmed + Disc 1 Monsters CONFIRMED + ⚠️ damage hierarchy fandom narrative contradiction (Kick > Bone Club selon wiki AI but fandom narrative inverse — wiki AI prevails)
 
 ## Sprite canon ⭐⭐⭐ Damia integration (Gemini final)
 
@@ -71,7 +102,12 @@ Pattern Damia : ⭐⭐⭐ **Sprite Gemini animation-ready** — drop-in dans sys
 
 ## Statut
 
-🟡 **Canon documenté wiki tier 2 uniquement** — fandom à ingérer future (Trivia depth + Gallery + Goblin lore + Detonate Rock + Assassin Cock + Trent stats).
+🟢 **Canon confirmed cross-source** (wiki 🥈 + fandom 🥉) — 2 sources cohérentes + enrichissement fandom :
+
+- **JP stats canon Damia rules CONFIRMED 6ème/4ème instance** (HP +25% + Gold ÷3)
+- ⭐⭐⭐ **Mob average SPD 60 canon NEW MAJEUR** baseline TLoD
+- ⭐⭐⭐ **Appearance canon CROSS-SOURCE CONFIRMED** (sprite Gemini intégré récent matche canon)
+- ⚠️ **Damage hierarchy fandom narrative contradiction** (Kick < Bone Club narrative vs wiki AI Kick 4× > Bone Club 1.5×) — wiki AI canonical prevails
 
 ## Identity canon ⭐⭐⭐
 

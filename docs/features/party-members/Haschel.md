@@ -257,6 +257,83 @@ Pattern Damia : ⭐⭐⭐ **D'levels canon CROSS-PARTY confirmé** (cohérent Al
 - ⭐⭐ **Haschel sprite + design Damia** : appearance + animation cycles — à concevoir future
 - ⭐⭐ **Mastery-unlock Omni-Sweep pattern récurrent** : autres party-members ultimate Additions canon probable récurrent
 
+## Design principal Damia (art direction) ⭐⭐⭐
+
+> ![Haschel design principal Damia](_assets/haschel-design-main.png)
+
+> **Design canon Damia officiel** — [`_assets/haschel-design-main.png`](./_assets/haschel-design-main.png)
+> Source de référence pour la dérivation des sprites Damia.
+
+⭐⭐⭐ **Caractéristiques Damia CONFIRMED CROSS-SOURCE (sprite + fandom récurrent) ⭐⭐⭐** :
+
+- ✅ **Long black hair tied back** canon récurrent (fandom : "long black hair")
+- ✅ **Thin laced red headband** canon récurrent (fandom : "thin laced headband" + wiki "red headband")
+- ✅ **Thin-shaped eyes** canon récurrent (fandom : "thin shaped eyes that look closed")
+- ✅ **Purple sleeveless martial arts garb** canon récurrent (fandom : "purple sleeveless martial arts garb with black designs")
+- ✅ **Silver metal shoulder pauldrons + breastplate** canon NEW MAJEUR (cohérent récurrent armored martial artist canon)
+- ✅ **Red belt with center tied knot** canon récurrent (fandom : "red belt which tuck into his garb")
+- ✅ **Red wristbands both wrists** canon récurrent (fandom : "red wristbands in both of his wrists")
+- ✅ **Purple martial arts pants** canon récurrent (fandom)
+- ⚠️ **Silver/grey martial arts boots with metal bands** (slight divergence vs fandom "black boots" — Damia art direction choice canon)
+- ⭐⭐⭐ **Blue/turquoise martial gauntlets with glow effect** canon NEW MAJEUR Damia (possible Thunder/Violet Dragoon Spirit hint canon NEW)
+- ✅ **Muscular elderly body type** canon récurrent (fandom : "physique of a young man" + 70 years old)
+- ✅ **Combat stance posture** fists raised dynamic pose canon
+
+## Sprite sheet canon ⭐⭐⭐ Damia integration (full extended remake sprite sheet)
+
+> ![Haschel sprite sheet FULL EXTENDED](./_assets/haschel-sprite-sheet.png)
+
+⭐⭐⭐ **Sprite sheet Haschel FULL EXTENDED canon NEW MAJEUR Damia** — "Legend of Dragoon Remake" sprite sheet labelisé français :
+
+| Cycle                                   | Frames                   | Notes canon                                                                                                 |
+| --------------------------------------- | ------------------------ | ----------------------------------------------------------------------------------------------------------- |
+| **POSITION NEUTRE** (Stand)             | 4 frames                 | Standard idle pose canon récurrent                                                                          |
+| **POSITION NEUTRE avec effet Sprint**   | 4 frames                 | ⭐⭐⭐ Stand + sprint effect canon NEW MAJEUR (cohérent récurrent Haschel high-speed 3rd cast)              |
+| **MARCHE**                              | Multi-direction frames   | Walking cycle per direction canon                                                                           |
+| **SPRINT / ROULADE (SE)**               | 4 frames + unique pose   | ⭐⭐⭐ **Sprint-roll canon NEW MAJEUR** + "+5 P. Rage Barre Perce" hint (battle effect canon ?)             |
+| **ATTAQUE Combo Additions Multi-coups** | 10 frames + effect       | ⭐⭐⭐ **Double Punch + 5 Ring Sweep combo canon CROSS-SOURCE** (cohérent récurrent Additions wiki)         |
+| **COUPE D'EFFET CRITIQUE**              | 4 frames + impact effect | ⭐⭐⭐ **Critical strike effect canon NEW MAJEUR** — boss-extended damage feedback canon                    |
+| **BLESSURE**                            | Hurt reaction frames     | ⭐⭐⭐ **DAMAGE/Blessure canon récurrent extended** (cohérent Fruegel boss extended + Guillotine récurrent) |
+| **5 POINTS DE VIE CRITIQUES**           | Critical HP animation    | ⭐⭐⭐ **Critical HP state canon NEW MAJEUR** — Dispirited posture canon récurrent fandom Trivia            |
+| **DEATH (SE, Collapse + Dissolution)**  | 8 frames                 | Standard party-member death + collapse + dissolution canon                                                  |
+
+⭐⭐⭐ **Party-member extended sprite sub-tier canon NEW MAJEUR Damia 11ème tier expansion** :
+
+| Tier                                           | ISO angles    | Animation suite                                                                                       |
+| ---------------------------------------------- | ------------- | ----------------------------------------------------------------------------------------------------- |
+| Mob standard (Goblin)                          | 2             | Standard 4 cycles                                                                                     |
+| Minor Enemy extended LOW (Guftas)              | 1 sample      | Extended 7 cycles                                                                                     |
+| Minor Enemy extended MID baseline (Harpy)      | 4             | Baseline 4 cycles                                                                                     |
+| Minor Enemy extended MID extended (Guillotine) | 4             | Extended 6 cycles                                                                                     |
+| Boss walking heavy (Gorgaga)                   | 4             | Standard 4 cycles                                                                                     |
+| Boss walking standard (Greham)                 | 4             | Standard 4 cycles                                                                                     |
+| Boss hovering (Grand Jewel)                    | 4             | Standard 4 cycles                                                                                     |
+| Dragoon form (Greham)                          | 8             | Elaborate Dragoon-tier                                                                                |
+| Vassal Dragon (Feyrbrand)                      | 1 sample      | Standard 4 cycles                                                                                     |
+| Boss extended (Fruegel)                        | 7-8           | Extended 7 cycles                                                                                     |
+| ⭐⭐⭐ **Party-member extended (Haschel)**     | **Multi-dir** | ⭐⭐⭐ **Ultra-extended 9 cycles + Stand-with-effect variant + Sprint-Roll + Critical-HP NEW MAJEUR** |
+
+Pattern Damia : ⭐⭐⭐ **Party-member extended sprite sub-tier canon NEW MAJEUR Damia 11ème tier** — Party members (Dart + Albert + Haschel + autres récurrent) get ultra-extended sprite suite (9+ cycles + Stand-with-effect variants + Sprint-Roll mobility + Critical-HP state animations) = highest tier sprite canon récurrent.
+
+⭐⭐⭐ **ATTAQUE Combo Additions Multi-coups CROSS-SOURCE canon (sprite Damia + wiki récurrent) ⭐⭐⭐** :
+
+- Sprite labelisation : "Double Punch + 5 Ring Sweep" (cohérent récurrent wiki Additions : Double Punch initial + 5-Ring Shattering L22)
+- 10-frame combo animation = multi-hit combo visual canon récurrent (cohérent récurrent Additions multi-input canon récurrent)
+- Pattern Damia : Sprite confirme Additions wiki canon récurrent
+
+⭐⭐⭐ **Sprint-Roulade + "+5 P. Rage Barre Perce" canon NEW MAJEUR (sprite Damia) ⭐⭐⭐** :
+
+- Sprint-roll movement canon NEW MAJEUR — high-mobility traversal canon
+- "+5 P. Rage Barre Perce" = probable Damia-specific Rage/Resource bar gameplay canon NEW MAJEUR (à reconfirmer Damia gameplay design)
+- Pattern Damia : ⭐⭐⭐ **Sprint-Roulade + Rage Bar canon NEW MAJEUR Damia gameplay** — distinct vs récurrent canon TLoD original. À documenter `combat/rage-bar.md` (à créer) Damia-specific gameplay canon.
+
+⭐⭐⭐ **Critical HP state animation canon NEW MAJEUR (sprite Damia "5 Points de Vie Critiques") ⭐⭐⭐** :
+
+- Critical HP state animation = visual feedback HP threshold canon (cohérent fandom Trivia "Critical Health : slouches forward + knees bent + holds stomach right arm")
+- Pattern Damia : ⭐⭐⭐ **Critical HP visual state canon récurrent extended sprite** — boss-extended + party-member extended canon récurrent
+
+À intégrer future : `public/assets/sprites/party-members/haschel-*.png` (frame-split par cycle + multi-directional) + `data/party-members/haschel.ts` (à créer) AvatarSpriteForm Party-member extended ultra-tier + `RenderSystem` cycle-aware ultra-extended (Stand/Stand-effect/Walk/Sprint-Roll/Attack-Combo/Critical-Effect/Damage/Critical-HP/Death) + Rage Bar canon Damia gameplay + critical strike effect particle + Sprint-Roll high-mobility traversal logic + Combo Additions chain visualization.
+
 ## Liens transverses
 
 - [`README.md`](./README.md) — party-members canon + **Haschel Violet Dragoon NEW MAJEUR 7ème party member**

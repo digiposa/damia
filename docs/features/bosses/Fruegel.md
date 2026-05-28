@@ -353,6 +353,89 @@ Pattern Damia : all 8 status immune = boss-tier canon récurrent (cohérent Free
 - ⭐⭐ **Fruegel appearance canon** : large warden boss probable — à confirmer fandom + sprite design Damia.
 - ⭐⭐ **Fruegel Gehrich Gang affiliation canon** : Fruegel = Gehrich Gang member ? À confirmer.
 
+## Sprite canon ⭐⭐⭐ Damia integration (Gemini boss-tier EXTENDED suite + 7-8 ISO angles + full animation suite NEW MAJEUR)
+
+### Concept art canonical
+
+> ![Fruegel concept art](./_assets/fruegel-concept.png)
+
+⭐⭐⭐ **Concept art Fruegel canonical CROSS-SOURCE CONFIRMED** :
+
+- ✅ **Brutish massive humanoid** canon (gros ventre rond doré + corpulence imposing canon)
+- ✅ **Stone block helmet** canon NEW MAJEUR (cohérent récurrent boss design TLoD + pet Guftas helmet with spike récurrent canon récent fandom)
+- ✅ **Horn-like spikes near forehead** canon (cohérent récurrent demon/ogre warden design)
+- ✅ **Spiked shoulder pauldron + metal armor** canon (silver/grey armor + spikes)
+- ✅ **Purple cape + gold trim** canon (warden/officer dignitary colors)
+- ✅ **Club/Hammer weapon (massive)** canon (cohérent récurrent fandom "Fruegel hits a party member with his club")
+- ✅ **Red pants + gold buckle + stone boots** canon
+- ✅ **Single belt with central gold buckle** + leather straps
+- ✅ **Slanted eyes/menacing expression** canon (warden brute)
+
+### Animation suite EXTENDED (full cycle reference)
+
+> ![Fruegel animations suite](./_assets/fruegel-animations.png)
+
+⭐⭐⭐ **Animation suite Fruegel EXTENDED canon NEW MAJEUR Damia** — premier boss "full animation suite" documenté Damia :
+
+| Cycle             | Frames                           | Notes canon NEW MAJEUR                                                              |
+| ----------------- | -------------------------------- | ----------------------------------------------------------------------------------- |
+| **IDLE**          | 6-frame loop                     | Standard boss idle breathing                                                        |
+| **WALK**          | 6-frame cycle                    | Standard locomotion                                                                 |
+| **ATTACK 1**      | ⭐⭐⭐ **8-frame Heavy Smash**   | Club downward smash visual (cohérent fandom "Attack: Fruegel hits with his club")   |
+| **ATTACK 2**      | ⭐⭐⭐ **10-frame Shockwave**    | Ground shockwave AoE visual canon NEW MAJEUR (cohérent récurrent boss multi-attack) |
+| **DAMAGE**        | ⭐⭐⭐ **6-frame hurt reaction** | Hit reaction NEW canon — boss-tier expressive damage feedback NEW MAJEUR            |
+| **DEATH**         | 8-frame felling                  | Boss death collapse                                                                 |
+| **TAUNT / LAUGH** | ⭐⭐⭐ **8-frame**               | ⭐⭐⭐ **Taunt/Laugh animation canon NEW MAJEUR** — boss expressive emote canon     |
+
+⭐⭐⭐ **Boss-tier extended animation suite canon NEW MAJEUR Damia** — 7 distinct animation cycles (vs 4 récurrent IDLE/WALK/ATTACK/DEATH) :
+
+- ⭐⭐⭐ **DAMAGE 6-frame canon NEW MAJEUR** — hit reaction feedback animation distinct (Damia récurrent boss damage = sprite flash only) ⭐
+- ⭐⭐⭐ **TAUNT/LAUGH 8-frame canon NEW MAJEUR** — boss emote/expressive animation NEW (cohérent Fruegel personality canon "much stronger" + arrogant warden boss canon)
+- ⭐⭐⭐ **ATTACK multi-variant canon NEW MAJEUR** — Heavy Smash (single-target club) + Shockwave (AoE ground) = 2 distinct ATTACK animations (vs ATTACK 1 récurrent boss-tier)
+
+### Boss-tier 7-8 ISO directional sprite sheet
+
+> ![Fruegel directional sprite sheet](./_assets/fruegel-sprite.png)
+
+⭐⭐⭐ **Sprite Fruegel directional 7-8 ISO angles canon NEW MAJEUR Damia** :
+
+| Cycle             | ISO angles          | Frame count                     | Notes canon                                                               |
+| ----------------- | ------------------- | ------------------------------- | ------------------------------------------------------------------------- |
+| **ISO_SE/S/SW**   | 3 angles top row    | 1 frame each                    | Front-facing 3-directional canon                                          |
+| **ISO_NW/N/NE/E** | 4 angles bottom row | 1 frame each                    | Rear-facing 4-directional canon                                           |
+| **IDLE**          | per direction       | **4-frame breathing cycle**     | Standard boss-tier breathing                                              |
+| **WALK**          | per direction       | **6-frame heavy walking cycle** | ⭐ **Heavy walk pace canon récurrent** (cohérent récurrent Gorgaga heavy) |
+| **ATTACK 2**      | per direction       | (without effect — Heavy Swing)  | ATTACK 2 directional variant canon NEW                                    |
+| **DEATH**         | per direction       | **Frame-by-frame dissolution**  | Boss death récurrent                                                      |
+
+⭐⭐⭐ **Sprite tier hierarchy canon EXPANSION 7 tiers NEW MAJEUR Damia** :
+
+| Tier                               | ISO angles          | Locomotion          | Animation suite                                                    |
+| ---------------------------------- | ------------------- | ------------------- | ------------------------------------------------------------------ |
+| Mob (Goblin)                       | 2 (SE+SW)           | 6-frame normal      | Standard (4 cycles)                                                |
+| Boss walking heavy (Gorgaga)       | 4 (4-dir)           | 6-frame heavy       | Standard (4 cycles)                                                |
+| Boss walking standard (Greham)     | 4 (4-dir)           | 6-frame standard    | Standard (4 cycles)                                                |
+| Boss hovering (Grand Jewel)        | 4 (4-dir)           | 6-frame heavy HOVER | Standard (4 cycles)                                                |
+| Dragoon form (Greham)              | 8 (8-dir)           | 8-frame aerial      | Elaborate (Dragoon-tier)                                           |
+| Vassal Dragon (Feyrbrand)          | 1 (sample)          | (large body)        | Standard (4 cycles)                                                |
+| ⭐⭐⭐ **Boss extended (Fruegel)** | **7-8 (NSEW+diag)** | **6-frame heavy**   | ⭐⭐⭐ **Extended 7 cycles (IDLE/WALK/ATK1/ATK2/DMG/DEATH/TAUNT)** |
+
+Pattern Damia : ⭐⭐⭐ **Boss extended sprite sub-tier canon NEW MAJEUR Damia** — Boss-tier with full extended animation suite (DAMAGE + TAUNT/LAUGH + multi-ATTACK) + 7-8 ISO angles. Cohérent récurrent Fruegel "much stronger" 2nd Visit canon + expressive personality "Power Up after magic hit" canon récurrent. Probable pattern récurrent **named/recurring bosses** (Fruegel récurrent 1st+2nd Visit + récurrent boss bosses canon) get extended sprite suite vs one-shot bosses récurrent.
+
+⭐⭐⭐ **Heavy Smash + Shockwave dual-ATTACK canon NEW MAJEUR (sprites)** :
+
+- ATTACK 1 **Heavy Smash 8-frame** = club downward smash single-target (cohérent fandom récurrent "Attack: Fruegel hits with his club")
+- ATTACK 2 **Shockwave 10-frame** = ground AoE wave (cohérent récurrent boss AoE pattern + Rock Throw fandom canon possible mapping ?)
+- Pattern Damia : Fruegel multi-ATTACK canon NEW MAJEUR (vs single-attack boss récurrent) — boss-tier extended capability canon récurrent named boss
+
+⭐⭐⭐ **DAMAGE + TAUNT/LAUGH expressive emote animations canon NEW MAJEUR (sprites)** :
+
+- DAMAGE 6-frame = hit reaction feedback distinct (vs sprite flash récurrent default) — boss expressive vulnerability canon NEW
+- TAUNT/LAUGH 8-frame = boss emote/personality canon NEW MAJEUR (cohérent Fruegel arrogant warden personality + Power Up gloating possible)
+- Pattern Damia : **Boss expressive animation suite canon NEW MAJEUR** — personality-driven boss sprites canon récurrent named bosses (probable Gehrich + Greham + Lloyd + récurrent canon future)
+
+À intégrer future : `public/assets/sprites/bosses/fruegel-*.png` (frame-split par cycle + 7-8 ISO angles) + `data/bosses/fruegel.ts` (à créer) AvatarSpriteForm extended boss-tier + `RenderSystem` cycle-aware (IDLE/WALK/ATK1 Heavy Smash/ATK2 Shockwave/DAMAGE/DEATH/TAUNT) + 7-8 directional facing logic + Heavy Smash club arc + Shockwave AoE particle effect + Taunt expressive emote animation + Command ability triggers pet attacks (récurrent Guftas Howl + Rodriguez Aerial Attack) + Power Up self-buff visual + paired 2nd Visit formation 387 with Rodriguez+Guftas canon récurrent.
+
 ## Liens transverses
 
 - [`README.md`](./README.md) — pattern général bosses canon

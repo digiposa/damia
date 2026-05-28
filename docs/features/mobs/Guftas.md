@@ -1,45 +1,70 @@
-# Guftas — Minor Enemy Darkness Hellena Prison Disc 1 — Fruegel 2nd Visit paired Rodriguez (Minor Enemy mob-classified with boss-tier stats + 100% Confusion caller) 🟡
+# Guftas — Fruegel's pet DOG Darkness Hellena Prison Disc 1 — Fruegel 2nd Visit (rescue King Albert) paired Rodriguez pet bird (Howl Confusion + helmet with spike) CROSS-SOURCE 🟢
 
-> **Minor Enemy Darkness Hellena Prison submap 36 — Fruegel (2nd Visit) + Rodriguez + Guftas paired formation 387 scripted Disc 1 récurrent canon** ⭐⭐⭐. HP 500 (Damia JP +25% = 625 systematic à confirmer fandom) + AT 23 high + DF 120 + SPD 50 + MAT 17 + MDF 60 + A-AV/M-AV 0%. **Status 8/8 ALL IMMUNE boss-tier 9ème instance CROSS-MOB** (récurrent Minor Enemy boss-tier stats pattern). **Yield 0 EXP / 0G / Nothing drop canon** — pooled with Fruegel canon récurrent (Boss Extras pattern). **Counter Opportunities 28 HIGH récurrent** — vs Counter-immune Greham/Grand Jewel 0 récurrent (Minor Enemy = counter-friendly canon). **Counters Additions: Yes**. **NEW MAJEUR : Pandemonium Immunity + Charm Immunity dual passives canon** (boss-side trinket/item neutralization récurrent — Pandemonium Spell+Charm Potion party-side combat tools). AI canon CROSS-BOSS récurrent : **~Do nothing + ~Bite 1× phys + Guftas, Attack! 100% Confusion (A-AV reduces)** — 100% Confusion guaranteed-but-evadable récurrent pattern. **⚠️ Trivia ⭐⭐⭐ : "Guftas, Attack!" appears called out by Fruegel mais en réalité = Guftas' OWN turn action canon NEW MAJEUR** — impossible si Fruegel defeated (auto-ends battle).
+> ⚠️ **CORRECTION MAJEURE CROSS-SOURCE** : Précédent canon Damia "Minor Enemy boss-tier stats" était PARTIELLEMENT ERRONÉ. Fandom confirme : **"The game does NOT recognize Guftas and Rodriguez as boss monsters and therefore they are not immune to Total Vanishing"** — Minor Enemy ≠ Boss canon CONFIRMED + **Total Vanishing instant-kill applicable** (vs Fruegel boss immune). Status 8/8 ALL IMMUNE = stats anti-status only, PAS boss-monster classification game-engine canon.
 >
-> ⭐⭐⭐ **Hellena Prison Disc 1 2nd Visit canon NEW MAJEUR (wiki) ⭐⭐⭐** — Quote canon : "Fruegel (2nd Visit), Rodriguez, Guftas (387) — Hellena Prison (36)". Pattern Damia : ⭐⭐⭐ **Hellena Prison Disc 1 2nd Visit canon NEW MAJEUR boss formation** — Fruegel récurrent canon Hellena Prison Disc 1 1st Visit (Dart-Lavitz rescue Shana récurrent) + **2nd Visit Disc 1 canon NEW MAJEUR** avec Rodriguez + Guftas reinforcements (cohérent récurrent Fruegel boss Hellena Prison Disc 1 canon). À documenter `quests/disc1-hellena-2nd-visit.md` (à créer) — Hellena 2nd Visit canon récurrent NEW MAJEUR Disc 1. À refléter `locations/Hellena Prison.md` (à créer/vérifier) + `bosses/Fruegel.md` 2nd Visit context canon.
+> ⭐⭐⭐ **Guftas = Fruegel's pet DOG canon NEW MAJEUR (fandom) ⭐⭐⭐** — Quote canon : "**Guftas is Fruegel's pet dog. He wears a helmet with a spike on top of it**". Pattern Damia : ⭐⭐⭐ **Guftas = canine pet quadruped Fruegel canon NEW MAJEUR** — 4-legged dog (vs anthropomorphic mob assumption) + **helmet with spike on top canon NEW MAJEUR** (cohérent récurrent Fruegel boss design stone block helmet + armor theme récurrent — pet matches master). Visual canon : "Guftas runs up to a party member, puts his **front legs on their shoulders**, and bites" — quadruped canine standing on hind legs to bite. À refléter `mobs/Guftas.md` appearance canon NEW MAJEUR + sprite future (dog with spiked helmet). À documenter `mobs/Rodriguez.md` (à créer) — pet bird Fruegel paired pattern récurrent.
 >
-> ⭐⭐⭐ **Boss Extras pattern récurrent CROSS-DISC CONFIRMED Fruegel+Rodriguez+Guftas (wiki) ⭐⭐⭐** — Pattern Damia : ⭐⭐⭐ **Boss Extras pattern canon récurrent CROSS-DISC** (Gehrich+Mappi récurrent + Ghost Commander+4 Ghost Knights récurrent + Greham+Feyrbrand paired Dragon-Dragoon récurrent + **Fruegel+Rodriguez+Guftas 3-enemy formation canon NEW**). First documented **3-enemy boss formation** (vs 2-enemy paired récurrent). À documenter `bosses/README.md` Boss Extras pattern updated 3-enemy. À documenter `mobs/Rodriguez.md` (à créer) + crosslink Fruegel 2nd Visit canon récurrent.
+> ⭐⭐⭐ **Howl official ability name CORRECTION CROSS-SOURCE (fandom) ⭐⭐⭐** — Quote canon : "**Howl: When called by his master, he unleashes a loud howl to deal confusion to a party member**". Pattern Damia : ⭐⭐⭐ **CORRECTION official name CROSS-SOURCE** : wiki "Guftas, Attack!" (command-shout style) = fandom **"Howl"** official name canon (canine vocalization — cohérent récurrent ability names CORRECTION pattern Greham récent Spear Combo/Dragon Crucifixion + récurrent fandom official names récurrent). Howl = loud canine vocalization → Confusion effect canon NEW MAJEUR.
 >
-> ⭐⭐⭐ **Pandemonium Immunity + Charm Immunity dual passives canon NEW MAJEUR (wiki) ⭐⭐⭐** — Quote canon : "Pandemonium Immunity — Unaffected by Pandemonium" + "Charm Immunity — Unaffected by Charm Potion". Pattern Damia : ⭐⭐⭐ **Pandemonium Immunity canon NEW MAJEUR passive** — Pandemonium = probable party-side Spell/Item attack canon récurrent (à investiguer canon name + effect) + **Charm Immunity canon NEW MAJEUR passive** — Charm Potion = party-side item canon récurrent (probable consumable Charm enemy attempt récurrent). Dual passives = boss-side party-tool neutralization canon. À documenter `combat/boss-passives.md` (à créer) — Pandemonium/Charm Immunity NEW MAJEUR + `items/consumables.md` (à créer/vérifier) — Charm Potion canon récurrent. **First documented Pandemonium reference Damia + first Charm Potion canon**.
+> ⭐⭐⭐ **Hellena 2nd Visit = rescue King Albert canon NEW MAJEUR (fandom) ⭐⭐⭐** — Quote canon : "The second time you encounter Fruegel is **after returning to Hellena Prison to rescue King Albert**". Pattern Damia : ⭐⭐⭐ **Hellena Prison 2nd Visit Disc 1 narrative context canon NEW MAJEUR** — King Albert captured by Imperial Sandora canon récurrent + party returns to Hellena to rescue him (cohérent récurrent Albert join party Disc 1 Hellena rescue canon récurrent + Jade Dragoon Spirit Lavitz transfer pre-rescue Greham Nest of Dragon timeline canon récurrent). À refléter `quests/disc1-hellena-2nd-visit.md` (à créer) — Albert rescue narrative canon NEW MAJEUR Disc 1 + `party-members/Albert.md` capture Disc 1 backstory canon récurrent.
 >
-> ⭐⭐⭐ **"Guftas, Attack!" misleading call-out canon NEW MAJEUR trivia (wiki) ⭐⭐⭐** — Quote canon Trivia : "**Despite appearing to be called out by Fruegel, the 'Guftas, Attack!' action only occurs on Guftas' turns. It is impossible for this move to be used while Fruegel is defeated, since his defeat automatically ends the battle**". Pattern Damia : ⭐⭐⭐ **Misleading boss call-out visual canon NEW MAJEUR** — visual dialogue shows Fruegel commands Guftas mais mechanically c'est Guftas' OWN turn action (Fruegel passive/idle). Cohérent récurrent **Fruegel defeat = auto-battle-end canon** (récurrent Fruegel boss leader formation pattern — defeat leader = win battle, similar récurrent Boss Extras pattern). À refléter `combat/boss-abilities.md` — visual-vs-mechanical mismatch canon récurrent + `bosses/Fruegel.md` defeat = auto-win canon récurrent.
+> ⭐⭐⭐ **Total Vanishing canon NEW MAJEUR + Prairie + Limestone Cave locations canon NEW MAJEUR (fandom) ⭐⭐⭐** — Quote canon : "If you saved the **Total Vanishing items you could obtain from the Prairie and Limestone Cave**, you can use them on the pets to deal with them instantly". Pattern Damia : ⭐⭐⭐ **Total Vanishing canon NEW MAJEUR item — instant-kill non-boss enemies** + **Prairie canon NEW MAJEUR location Disc 1** + **Limestone Cave canon NEW MAJEUR location Disc 1**. Cohérent récurrent Total Vanishing = consumable item pool early Disc 1 récurrent. À documenter `items/Total Vanishing.md` (à créer) — instant-kill item canon NEW MAJEUR + `locations/Prairie.md` (à créer) + `locations/Limestone Cave.md` (à créer) — Disc 1 locations canon NEW MAJEUR.
 >
-> ⭐⭐⭐ **100% Confusion guaranteed-but-evadable canon récurrent CROSS-MOB-BOSS (wiki) ⭐⭐⭐** — Quote canon : "Guftas, Attack! — 100% chance to inflict Confusion (Target's A-AV reduces chance to receive status ailment)". Pattern Damia : ⭐ **100% status guaranteed-but-evadable canon récurrent CROSS-MOB-BOSS** (cohérent récurrent Feyrbrand Status Slime 100% Fear/Poison/Stun + Greham Wind Magic + récurrent boss-tier status proc canon — A-AV target reduces chance). À documenter `combat/status-mechanics.md` — guaranteed status + A-AV reduction formula récurrent canon.
+> ⭐⭐⭐ **Demon's Gate Rose Dragoon ability canon récurrent CONFIRMED (fandom) ⭐⭐⭐** — Quote canon : "**Rose's Demon's Gate** will have the same effect and can be done in one turn if you've managed to learn it by this point". Pattern Damia : ⭐⭐⭐ **Demon's Gate Rose Dark Dragoon Spirit ability canon récurrent CONFIRMED** — instant-kill/banishment Dragoon Magic Rose (cohérent récurrent Rose Dark Dragoon canon récurrent + récent Rose ancient Dragon Campaign canon Greham fandom récurrent). À documenter `dragoons/dark-dragoon.md` (à créer) — Demon's Gate Rose Dragoon Magic ability canon NEW MAJEUR.
 >
-> ⭐⭐⭐ **Status 8/8 ALL IMMUNE Minor Enemy boss-tier stats canon NEW MAJEUR (wiki) ⭐⭐⭐** — Pattern Damia : ⭐⭐⭐ **Minor Enemy classification + boss-tier full Status Immunity canon NEW MAJEUR** — Guftas = Minor Enemy classified (wiki "Guftas is a Minor Enemy") MAIS Status 8/8 ALL IMMUNE = boss-tier pattern récurrent. **9ème instance Status 8/8 ALL IMMUNE CROSS-MOB-BOSS** (Fruegel + Gangster + Gargoyle + Gehrich + Ghost Commander + Glare + Gnome + Goblin + Greham + Guftas). Pattern : Minor Enemies = mob classification mais Hellena Prison Disc 1 scripted = boss-tier mechanics canon (cohérent récurrent Fruegel paired Boss Extras canon). À refléter `combat/enemy-classification.md` (à créer) — Minor Enemy ≠ Mob standard canon récurrent (Minor Enemy = boss-tier stats + 0 yield + scripted).
+> ⭐⭐⭐ **Pets flee when Fruegel defeated canon CROSS-SOURCE CONFIRMED (fandom) ⭐⭐⭐** — Quote canon : "**Once he's defeated, his pets will flee**". Pattern Damia : ⭐⭐⭐ **Pets flee mechanic canon récurrent CONFIRMED** — visual narrative pets flee = mechanically auto-battle-end Fruegel leader canon récurrent (cohérent wiki Trivia "Fruegel defeated automatically ends the battle" CROSS-SOURCE confirmed). À refléter `combat/boss-mechanics.md` (à créer) — leader-defeated cascade canon récurrent.
 >
-> ⭐⭐⭐ **High counter opportunities 28 = anti-Counter-immune contrast récurrent (wiki) ⭐⭐⭐** — Pattern Damia : 28 counter opportunities HIGH récurrent (vs Greham/Grand Jewel 0 Counter-immune récurrent). **Minor Enemy = counter-friendly canon pattern récurrent** (cohérent récurrent Gangster/Gargoyle counter lists). Wind Additions (Lavitz Gust of Wind Dance + Flower Storm) + Albert Wind Additions présent canon. À investiguer pattern 28 vs autres Minor Enemies récurrent.
+> ⭐⭐⭐ **Fruegel Command ability canon NEW MAJEUR (fandom) ⭐⭐⭐** — Quote canon : "**Command: Fruegel will order Guftas or Rodriguez to do a unique attack**". Pattern Damia : ⭐⭐⭐ **Fruegel "Command" ability canon NEW MAJEUR** — boss-tier party-coordination ability + triggers Guftas Howl / Rodriguez Aerial Attack canon. **⚠️ Visual-mechanical clarification cohérent récurrent wiki Trivia "Guftas, Attack!" misleading call-out** : Fruegel Command = visual ability fired on Fruegel's turn + Guftas/Rodriguez "unique attack" triggered on THEIR own turn (wiki Trivia). Pattern Damia : Visual coordination canon + mechanical independent turns récurrent. À refléter `bosses/Fruegel.md` Command ability canon NEW MAJEUR.
 >
-> ⭐⭐⭐ **Albert Wind Additions counter list canon CONFIRMED 4ème instance (wiki) ⭐⭐⭐** — Quote canon : "Albert | Gust of Wind Dance | 2" + "Albert | Flower Storm | 2". Pattern Damia : ⭐ **Albert Wind Additions canon récurrent CONFIRMED 4ème instance counter list CROSS-MOB-BOSS** (Gangster + Gargoyle + ? + Guftas) — Albert hérite Jade Dragoon Spirit canon récurrent post-Lavitz death canon récurrent. Cohérent récurrent **Jade Dragoon lineage Greham→Lavitz→Albert canon récurrent confirmé** (Greham récent canon NEW MAJEUR).
+> ⭐⭐⭐ **HP 560 US-EU / 700 JP +25% canon Damia rule CONFIRMED 8ème instance CROSS-MOB-BOSS (fandom) ⭐⭐⭐** — Quote canon : "**HP: 560 (US/EU) / 700 (JP)**". 560 × 1.25 = 700 = match exact pattern récurrent canon JP stats rule. Pattern Damia : ⭐ **JP HP +25% systematic récurrent CONFIRMED 8ème instance CROSS-MOB-BOSS** (Gangster + Gehrich + Ghost Commander + Glare + Gnome + Goblin + Greham + Guftas). ⚠️ **Wiki HP 500 anomaly** : wiki 500 < fandom US-EU 560 = wiki erreur probable (cohérent récurrent Greham wiki anomaly + Ghost Commander wiki anomaly récurrent). **Damia adopts JP HP 700 canon Guftas**.
 >
-> ⭐⭐ **AT 23 high Minor Enemy + Darkness element (wiki) ⭐⭐** — AT 23 = high relative Disc 1 Hellena Prison context (cohérent Hellena Prison Darkness mob theme récurrent — Prison cells + dungeon Disc 1). Pattern Damia : Minor Enemy = high stats canon récurrent (vs standard mob lower AT). Cohérent récurrent Darkness mob Hellena Prison context.
+> ⭐⭐⭐ **Stats divergences fandom higher récurrent + Damia wiki canon prevails NEW (fandom) ⭐⭐⭐** — Stats fandom vs wiki :
 >
-> ⭐⭐ **Counters Additions: Yes — Counter-able Minor Enemy canon récurrent (wiki) ⭐⭐** — Counter-friendly canon récurrent Minor Enemy (vs Counter-immune Greham/Grand Jewel boss récurrent canon). Pattern Damia : Minor Enemy = counter-friendly canon récurrent.
+> | Stat   | Wiki canon | Fandom canon       | Divergence    | Damia adoption    |
+> | ------ | ---------- | ------------------ | ------------- | ----------------- |
+> | HP     | 500 ⚠️     | 560 US-EU / 700 JP | Wiki anomaly  | ⭐⭐⭐ **JP 700** |
+> | AT     | 23         | **26**             | +13% fandom   | Wiki 23 prevails  |
+> | MAT    | 17         | **20**             | +17.6% fandom | Wiki 17 prevails  |
+> | DF/MDF | 120 / 60   | 120 / 60           | Match         | Match             |
+> | SPD    | 50         | 50                 | Match         | Match             |
 >
-> ⭐⭐ **DF 120 high + MDF 60 low canon imbalance (wiki) ⭐⭐** — DF 120 high (cohérent récurrent DF 120 récurrent CROSS-BOSS Gangster + Gehrich + Goblin + Greham récent + Guftas pattern) + MDF 60 low (magic-vulnerable canon). Pattern Damia : Guftas physical-tank + magic-weak imbalance canon récurrent.
+> Pattern Damia : Wiki tier 2 canon prevails stats numériques + factual fandom mention récurrent (cohérent récurrent Greham/Feyrbrand divergence pattern).
 >
-> ⭐⭐ **No World Map encounter canon (wiki) ⭐⭐** — Quote canon : "None — None — N/A — N/A" world map. Pattern Damia : Hellena Prison-locked scripted formation canon (no world map roaming).
+> ⭐⭐⭐ **CORRECTION CRITIQUE : Minor Enemy ≠ Boss canon CONFIRMED (fandom) ⭐⭐⭐** — Quote canon : "**The game does NOT recognize Guftas and Rodriguez as boss monsters and therefore they are not immune to Total Vanishing**". Pattern Damia : ⚠️ **CORRECTION canon Damia "Minor Enemy boss-tier"** précédente nuance : Minor Enemy = mob classification game-engine + **Status 8/8 ALL IMMUNE = stats anti-status only**, PAS boss-monster flag canon. **Total Vanishing instant-kill applicable Minor Enemy** (vs Fruegel boss immune). Pattern récurrent : **Boss flag canon distinct Status Immunity canon** — bosses ont boss flag (Total Vanishing immune) + Status full immune; Minor Enemies ont Status full immune SEUL (pas boss flag). À documenter `combat/enemy-classification.md` (à créer) — Boss flag canon distinct Status Immunity canon NEW MAJEUR.
 >
-> ⭐⭐ **~Do nothing canon récurrent Minor Enemy stalling pattern (wiki) ⭐⭐** — "~Do nothing — Does nothing" AI action canon récurrent stalling pattern (cohérent récurrent boss-tier idle/stalling canon). Pattern Damia : Minor Enemy stalling AI canon récurrent.
+> ⭐⭐⭐ **Spinning Gale strategy canon CONFIRMED CROSS-SOURCE (fandom + Greham) ⭐⭐⭐** — Quote canon : "**using Spinning Gales on Fruegel with all party members will deal significant damage and end the fight soon**". Pattern Damia : ⭐ **Spinning Gale = Wind ability item récurrent canon CROSS-BATTLE** (cohérent récurrent Greham wiki ~Spinning Gale Wind ability + Grand Jewel récurrent + récurrent Wind pool canon). Spinning Gale = consumable Wind item party-spam strategy boss-kill canon NEW. À documenter `items/Spinning Gale.md` (à créer) — Wind consumable item canon récurrent.
+>
+> ⭐⭐ **Rodriguez = Fruegel's pet BIRD canon NEW MAJEUR (fandom) ⭐⭐** — Quote canon : "**Rodriguez is Fruegel's pet bird**". Abilities : Feather Shot (sharp feathers from wings) + Aerial Attack (aerial drop attack from master command). Pattern Damia : ⭐⭐⭐ **Fruegel pet pair canon NEW MAJEUR Hellena 2nd Visit** : Rodriguez bird + Guftas dog (avian + canine pets — visual narrative theme canon récurrent boss-with-pets). À documenter `mobs/Rodriguez.md` (à créer) — pet bird Fruegel canon NEW MAJEUR Disc 1.
+>
+> ⭐⭐ **Fruegel 2nd Visit "much stronger" + stat scaling canon (fandom) ⭐⭐** — Quote canon : "albeit **much stronger**". Pattern Damia : Fruegel 2nd Visit = enhanced stats vs 1st Visit canon récurrent (boss rematch scaling canon récurrent). Fruegel Power Up : "+50% offenses and defenses" récurrent canon confirmed.
+>
+> ⭐⭐ **Pet attack frequency canon (fandom) ⭐⭐** — Quote canon : "with all three of them alive, **they attack much more frequently and will easily whittle down your team**". Pattern Damia : 3-enemy formation = higher action density canon récurrent (Boss Extras attack frequency canon).
 >
 > **Sources** :
 >
-> - 🥈 [`_sources/lod-wiki-guftas.md`](./_sources/lod-wiki-guftas.md) — wiki LoD tier 2 (Minor Enemy Darkness Hellena Prison submap 36 Fruegel 2nd Visit + HP 500 + AT 23 high + DF 120 + SPD 50 + MAT 17 + MDF 60 + A-AV/M-AV 0% + Status 8/8 ALL IMMUNE 9ème instance + Yield 0 EXP/0G/Nothing drop pooled Fruegel + **Counter Opportunities 28 HIGH counter-friendly + Counters Additions: Yes** + **Pandemonium Immunity + Charm Immunity dual passives NEW MAJEUR** + AI ~Do nothing + ~Bite phys + **Guftas, Attack! 100% Confusion A-AV reduces** + **Trivia "Guftas, Attack!" misleading call-out by Fruegel ≠ Guftas OWN turn canon NEW MAJEUR** + Fruegel defeat = auto-battle-end canon récurrent + Scripted formation 387 3-enemy Boss Extras NEW + Albert Wind Additions counter list 4ème + Darkness Hellena Prison mob theme récurrent + DF 120 high récurrent CROSS-MOB-BOSS)
+> - 🥈 [`_sources/lod-wiki-guftas.md`](./_sources/lod-wiki-guftas.md) — wiki LoD tier 2 (Minor Enemy Darkness + HP 500 ⚠️ wiki anomaly + AT 23 + DF 120 + SPD 50 + MAT 17 + MDF 60 + Status 8/8 ALL IMMUNE + Yield 0/0/Nothing + Counter 28 HIGH + Pandemonium Immunity + Charm Immunity + ~Do nothing + ~Bite + Guftas, Attack! 100% Confusion + Scripted formation 387 + Hellena Prison submap 36 + Trivia misleading call-out)
+> - 🥉 [`_sources/fandom-guftas.md`](./_sources/fandom-guftas.md) — Fandom tier 3 (**Guftas = Fruegel's pet DOG canon NEW MAJEUR + helmet with spike on top** + **Howl official ability name CORRECTION** Confusion + Bite "runs up + front legs on shoulders + bites" detailed visual + **HP 560 US-EU / 700 JP +25% Damia rule CONFIRMED 8ème instance** + ⚠️ Wiki HP 500 anomaly + AT 26 / MAT 20 fandom higher divergence récurrent + DF 120 / MDF 60 / SPD 50 match + **Hellena 2nd Visit = rescue King Albert canon NEW MAJEUR** + **⚠️ CORRECTION Minor Enemy ≠ Boss canon CONFIRMED** Total Vanishing applicable + **Total Vanishing canon NEW MAJEUR item Prairie + Limestone Cave Disc 1 locations NEW** + **Demon's Gate Rose Dark Dragoon ability canon récurrent CONFIRMED** + **Pets flee when Fruegel defeated canon CROSS-SOURCE CONFIRMED** + **Fruegel Command ability canon NEW MAJEUR** + Rodriguez = pet bird Feather Shot + Aerial Attack + Spinning Gale Wind strategy canon récurrent + Fruegel 2nd Visit much stronger + 3-enemy higher attack frequency canon)
 
 ## Statut
 
-🟡 **Draft post-ingestion wiki LoD seul** — fandom à ingérer (Trivia 1 entry minor — Gallery vide + page short).
+🟢 **Canon confirmed cross-source** (wiki 🥈 + fandom 🥉) — 2 sources cohérentes + enrichissement fandom MASSIF Disc 1 Hellena 2nd Visit :
+
+- ⚠️ **CORRECTION CRITIQUE : Minor Enemy ≠ Boss monster game-engine canon CONFIRMED** (Total Vanishing applicable Minor Enemies vs Fruegel boss immune)
+- ⭐⭐⭐ **Guftas = Fruegel's pet DOG canon NEW MAJEUR + helmet with spike on top**
+- ⭐⭐⭐ **Howl official ability name CORRECTION CROSS-SOURCE** (vs wiki ~Guftas, Attack! community)
+- ⭐⭐⭐ **Hellena 2nd Visit = rescue King Albert canon NEW MAJEUR narrative context Disc 1**
+- ⭐⭐⭐ **Total Vanishing item canon NEW MAJEUR + Prairie + Limestone Cave Disc 1 locations canon NEW**
+- ⭐⭐⭐ **Demon's Gate Rose Dark Dragoon ability canon récurrent CONFIRMED**
+- ⭐⭐⭐ **Fruegel Command ability canon NEW MAJEUR boss-pet coordination**
+- ⚠️ Stats divergence wiki HP 500 anomaly (fandom US-EU 560 canonical) + JP HP 700 canon Damia 8ème instance
+- ⭐⭐ Pets flee when Fruegel defeated CROSS-SOURCE CONFIRMED (vs wiki Trivia auto-battle-end same mechanism)
 
 ## Identity canon ⭐⭐⭐
 
 - **Nom** : **Guftas**
-- **Type** : ⭐⭐⭐ **Minor Enemy Darkness Hellena Prison Disc 1 — Fruegel 2nd Visit paired** (Minor Enemy classification + boss-tier mechanics CROSS pattern récurrent NEW)
+- **Type** : ⭐⭐⭐ **Fruegel's pet DOG canon NEW MAJEUR — quadruped canine Minor Enemy Darkness** (NOT boss-monster game-engine canon CONFIRMED — Total Vanishing applicable)
+- **Appearance canon NEW MAJEUR** : ⭐⭐⭐ **Helmet with spike on top of head** + 4-legged canine (bite visual : "runs up + front legs on party member's shoulders + bites")
+- **Paired pet** : ⭐⭐⭐ **Rodriguez = Fruegel's pet bird canon NEW MAJEUR** (paired avian + canine pets theme)
 - **Element** : Darkness (cohérent récurrent Hellena Prison Darkness mob theme + Disc 2 Phantom Ship Darkness theme récurrent)
 - **Disc** : Disc 1 — Hellena Prison 2nd Visit canon NEW MAJEUR
 - **Location canon** : ⭐⭐⭐ **Hellena Prison submap 36 — 2nd Visit boss arena canon NEW MAJEUR**
@@ -47,18 +72,18 @@
 - **Yield** : 0 EXP / 0G / Nothing drop — pooled with Fruegel canon récurrent
 - **Counter-friendly** : ⭐ 28 opportunities (vs Counter-immune Greham/Grand Jewel récurrent)
 
-## Stats canon ⭐⭐⭐ (wiki seul — fandom à ingérer JP variant)
+## Stats canon ⭐⭐⭐ CROSS-SOURCE Damia adoption JP rule CONFIRMED 8ème instance
 
-| Stat   | Value | Notes                                                                                            |
-| ------ | ----- | ------------------------------------------------------------------------------------------------ |
-| **HP** | 500   | ⭐ Damia adopts JP +25% systematic CONFIRMED 7+ instances — JP 625 probable (à confirmer fandom) |
-| AT     | 23    | High (cohérent Minor Enemy boss-tier stats récurrent CROSS-DISC)                                 |
-| DF     | 120   | ⭐ High récurrent CROSS-MOB-BOSS canon (Gangster + Gehrich + Goblin + Greham + Guftas)           |
-| A-AV   | 0%    | No evasion                                                                                       |
-| SPD    | 50    | Mid baseline                                                                                     |
-| MAT    | 17    | Modéré                                                                                           |
-| MDF    | 60    | ⚠️ Low — magic-vulnerable imbalance canon récurrent Minor Enemy                                  |
-| M-AV   | 0%    | No magic evasion                                                                                 |
+| Stat   | Wiki canon | Fandom canon           | Damia adoption    | Notes                                                                       |
+| ------ | ---------- | ---------------------- | ----------------- | --------------------------------------------------------------------------- |
+| **HP** | 500 ⚠️     | **560 US-EU / 700 JP** | **700 JP** ⭐⭐⭐ | ⭐ JP HP +25% canon récurrent CONFIRMED 8ème instance + ⚠️ wiki 500 anomaly |
+| AT     | 23         | **26** ⚠️              | **23 wiki canon** | ⚠️ Fandom +13% divergence anomaly récurrent — wiki tier 2 prevails          |
+| DF     | 120        | 120                    | **120**           | Match CROSS-SOURCE — high récurrent CROSS-MOB-BOSS                          |
+| A-AV   | 0%         | -                      | **0%**            | No evasion                                                                  |
+| SPD    | 50         | 50                     | **50**            | Match CROSS-SOURCE — mid baseline                                           |
+| MAT    | 17         | **20** ⚠️              | **17 wiki canon** | ⚠️ Fandom +17.6% divergence — wiki canon prevails                           |
+| MDF    | 60         | 60                     | **60**            | ⚠️ Low — magic-vulnerable imbalance canon récurrent Minor Enemy             |
+| M-AV   | 0%         | -                      | **0%**            | No magic evasion                                                            |
 
 **Gold canon Damia** : 0G (Damia ÷3 N/A — pooled Fruegel canon récurrent).
 
@@ -89,15 +114,17 @@
 
 ⭐⭐⭐ **Boss-side party-tool neutralization canon NEW MAJEUR** : dual passives neutralize party combat tools (Pandemonium + Charm Potion) — early canon récurrent pattern probable récurrent boss-tier future.
 
-## AI canon ⭐⭐⭐ Minor Enemy HP-based + Guftas, Attack! 100% Confusion misleading
+## AI canon ⭐⭐⭐ CROSS-SOURCE official names CORRECTION + Howl + Bite detailed visuals NEW MAJEUR
 
-### Guftas Abilities canon récurrent
+### Guftas Abilities canon CROSS-SOURCE
 
-| HP  | Action                     | Target | Effect canon                                                                | Visual notes                                              |
-| --- | -------------------------- | ------ | --------------------------------------------------------------------------- | --------------------------------------------------------- |
-| Any | ⭐ **~Do nothing**         | N/A    | Does nothing — stalling AI canon récurrent                                  | Minor Enemy stalling pattern récurrent                    |
-|     | ⭐ **~Bite**               | Single | 1× Physical damage                                                          | Basic phys attack canon                                   |
-|     | ⭐⭐⭐ **Guftas, Attack!** | Single | **100% Confusion (A-AV reduces)** — guaranteed-but-evadable canon récurrent | ⚠️ Misleading call-out by Fruegel visual canon NEW MAJEUR |
+| Wiki name (unofficial) | Fandom official name canon | Target | Effect canon                                                                | Visual canon (fandom)                                                                 |
+| ---------------------- | -------------------------- | ------ | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| ~Do nothing            | (idle/stalling)            | N/A    | Does nothing — stalling AI canon récurrent                                  | Minor Enemy stalling pattern                                                          |
+| ~Bite                  | ⭐⭐⭐ **Bite**            | Single | 1× Physical damage                                                          | **Runs up to party member + puts front legs on shoulders + bites** (canine quadruped) |
+| Guftas, Attack!        | ⭐⭐⭐ **Howl**            | Single | **100% Confusion (A-AV reduces)** — guaranteed-but-evadable canon récurrent | **Loud howl** when called by master Fruegel (canine vocalization)                     |
+
+⭐⭐⭐ **Fandom official names CORRECTION CROSS-SOURCE** : Bite + **Howl** (vs wiki tilde unofficial). Cohérent récurrent ability names CORRECTION pattern (Greham Spear Combo/Dragon Crucifixion récurrent canon).
 
 ⭐⭐⭐ **"Guftas, Attack!" misleading call-out canon NEW MAJEUR trivia** : Visual dialogue shows Fruegel commands Guftas mais MECHANICALLY c'est Guftas' OWN turn action. Impossible si Fruegel defeated (auto-ends battle canon récurrent). Pattern Damia : **Visual-mechanical mismatch canon récurrent** + **Fruegel defeat = auto-battle-end canon récurrent**.
 
@@ -129,14 +156,30 @@
 
 ⭐ **Albert Wind Additions canon récurrent CONFIRMED CROSS-MOB-BOSS** (Gust of Wind Dance + Flower Storm) — cohérent **Jade Dragoon lineage Greham→Lavitz→Albert canon récurrent confirmé** (récent Greham canon NEW MAJEUR).
 
-## Story canon ⭐⭐⭐ Hellena Prison 2nd Visit Disc 1 NEW MAJEUR
+## Story canon ⭐⭐⭐ Hellena Prison 2nd Visit Disc 1 = rescue King Albert CROSS-SOURCE NEW MAJEUR
 
-### Hellena Prison 2nd Visit context canon (wiki seul — fandom à ingérer)
+### Hellena Prison 2nd Visit context canon CROSS-SOURCE (fandom)
 
 - ⭐⭐⭐ **Hellena Prison 1st Visit canon récurrent** : Dart-Lavitz rescue Shana canon récurrent Disc 1 (cohérent récurrent Fruegel 1st boss canon)
-- ⭐⭐⭐ **Hellena Prison 2nd Visit canon NEW MAJEUR Disc 1** : Fruegel + Rodriguez + Guftas formation 387 scripted (revisit Disc 1)
-- ⚠️ **Context Hellena 2nd Visit narrative beat** à investiguer fandom récurrent (probable post-Volcano Villude récurrent canon ?)
-- Pattern récurrent : Hellena Prison Disc 1 location répétée canon
+- ⭐⭐⭐ **Hellena Prison 2nd Visit = rescue King Albert canon NEW MAJEUR (fandom)** : King Albert captured by Imperial Sandora canon récurrent + party returns to Hellena to rescue him
+- ⭐⭐⭐ **Fruegel + Rodriguez + Guftas formation 387 scripted** — Fruegel rematch "much stronger" + pets
+- ⭐⭐⭐ **Albert joins party Disc 1 post-rescue canon récurrent** — Jade Dragoon Spirit Lavitz inherit Greham récurrent timeline canon
+- ⭐⭐⭐ **Pet pair canon NEW MAJEUR** : Rodriguez bird + Guftas dog (avian + canine theme)
+- Pattern récurrent : Hellena Prison Disc 1 location répétée canon (rescue Shana 1st + rescue Albert 2nd)
+
+### Fruegel Command + Pet AI coordination canon (fandom)
+
+- ⭐⭐⭐ **Fruegel Command ability canon NEW MAJEUR** : Fruegel orders Guftas/Rodriguez "to do a unique attack" on his turn
+- ⭐⭐⭐ **Pets attack visual narrative récurrent** : Guftas Howl (Confusion) + Rodriguez Aerial Attack (drop attack damage) triggered by Command
+- ⚠️ **Visual-mechanical clarification CROSS-SOURCE** : Command = visual narrative + unique pet attacks triggered on pets' OWN turn (cohérent wiki Trivia misleading call-out)
+- ⭐⭐⭐ **Pets flee when Fruegel defeated canon CONFIRMED** : leader-defeated cascade canon récurrent
+
+### Strategy canon (fandom)
+
+- ⭐⭐⭐ **Total Vanishing instant-kill on pets** : items from **Prairie + Limestone Cave Disc 1 NEW MAJEUR locations canon** — applicable Minor Enemies (NOT Fruegel boss)
+- ⭐⭐⭐ **Rose's Demon's Gate same effect** : Dark Dragoon Spirit ability instant-kill récurrent canon CONFIRMED
+- ⭐⭐⭐ **Spinning Gale spam Fruegel** : all party Wind items damage strategy canon récurrent (cohérent Greham Wind ability récurrent)
+- 3-enemy formation = higher attack frequency canon "easily whittle down team"
 
 ## Vision Damia (implémentation)
 
@@ -185,8 +228,15 @@
 - [`../combat/enemy-classification.md`](../combat/enemy-classification.md) (à créer) — ⭐⭐⭐ **Minor Enemy ≠ standard mob canon récurrent** (boss-tier stats + 0 yield + scripted)
 - [`../items/consumables.md`](../items/consumables.md) (à créer/vérifier) — ⭐⭐⭐ **Charm Potion canon NEW MAJEUR + Pandemonium canon récurrent first references**
 - [`../combat/elements.md`](../combat/elements.md) (à créer) — Darkness element Hellena Prison mob theme récurrent
-- [`../party-members/Albert.md`](../party-members/Albert.md) — ⭐⭐⭐ **Jade Dragoon Spirit inherit canon récurrent** + Gust of Wind Dance + Flower Storm 4ème instance counter list récurrent
+- [`../party-members/Albert.md`](../party-members/Albert.md) — ⭐⭐⭐ **Jade Dragoon Spirit inherit canon récurrent + Hellena 2nd Visit rescue NEW MAJEUR** + Gust of Wind Dance + Flower Storm 4ème instance counter list récurrent
+- [`../party-members/Rose.md`](../party-members/Rose.md) (à créer/vérifier) — ⭐⭐⭐ **Demon's Gate Dark Dragoon ability canon récurrent CONFIRMED**
+- [`../dragoons/dark-dragoon.md`](../dragoons/dark-dragoon.md) (à créer) — ⭐⭐⭐ **Demon's Gate Rose Dragoon Magic instant-kill canon NEW MAJEUR**
+- [`../items/Total Vanishing.md`](../items/Total Vanishing.md) (à créer) — ⭐⭐⭐ **Total Vanishing instant-kill item canon NEW MAJEUR (Prairie + Limestone Cave Disc 1)**
+- [`../items/Spinning Gale.md`](../items/Spinning Gale.md) (à créer) — Spinning Gale Wind consumable strategy canon récurrent
+- [`../locations/Prairie.md`](../locations/Prairie.md) (à créer) — ⭐⭐⭐ **Prairie Disc 1 location canon NEW MAJEUR + Total Vanishing item source**
+- [`../locations/Limestone Cave.md`](../locations/Limestone Cave.md) (à créer) — ⭐⭐⭐ **Limestone Cave Disc 1 location canon NEW MAJEUR + Total Vanishing item source**
+- [`../combat/enemy-classification.md`](../combat/enemy-classification.md) (à créer) — ⭐⭐⭐ ⚠️ **CORRECTION : Minor Enemy ≠ Boss monster game-engine canon CONFIRMED** (Total Vanishing applicable distinction)
 
 ## Gaps / TODO
 
-Voir [TODO.md](../../TODO.md) section Guftas wiki.
+Voir [TODO.md](../../TODO.md) section Guftas fandom.

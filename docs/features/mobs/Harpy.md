@@ -179,6 +179,66 @@ Pattern Damia : ⭐⭐⭐ **Desperate AoE escalation sub-25% HP canon NEW MAJEUR
 - ⭐⭐ **Talon Scratch visual canon** : avian talons strike — à confirmer fandom official name
 - ⭐⭐ **Same-type dual-formation Harpy x2 visual canon** : 2 identical sprites encounter — à investiguer rendering
 
+## Sprite canon ⭐⭐⭐ Damia integration (Gemini Minor Enemy extended MID baseline — avian winged humanoid + 4 ISO + aerial flight locomotion NEW MAJEUR)
+
+> ![Harpy sprite sheet](./_assets/harpy-sprite.png)
+
+⭐⭐⭐ **Sprite Harpy CONFIRMS canon récurrent CROSS-SOURCE wiki + Guillotine récurrent hypothesis** :
+
+- ✅ **Avian winged humanoid bird-creature** canon (canonical harpy mythology + Wingly avian Zenebatos canon)
+- ✅ **Wings** (blue-white feathered wings prominent) canon (cohérent récurrent Wind avian + flight-capable + A-AV 10% non-zero evasion canon récurrent récent)
+- ✅ **Horned/spiked head decoration** canon (Wingly avian thematic ornement)
+- ✅ **Bird talons** canon (cohérent récurrent Talon Scratch ability + avian feet)
+- ✅ **Golden/yellow body** canon (Wingly Disc 4 color palette possible)
+- ✅ **4 ISO directional angles SE/SW/NW/NE** canon (Minor Enemy extended MID tier récurrent Guillotine récent confirmé)
+
+**Animation structure prête Damia (Gemini cycles canonicaux Minor Enemy extended MID baseline 4-cycle)** :
+
+| Cycle      | Frames                                | Notes canon                                                                                                      |
+| ---------- | ------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| **IDLE**   | Breathing cycle per direction         | ⭐ Standard breathing/hovering idle canon avian (cohérent récurrent IDLE breathing)                              |
+| **MOVE**   | ⭐⭐⭐ **Flight cycle** per direction | ⭐⭐⭐ **Aerial flight locomotion canon NEW MAJEUR Minor Enemy** — distinct vs wheeled/quadruped/biped récurrent |
+| **ATTACK** | ⭐⭐⭐ **Pique/Talon** per direction  | ⭐⭐⭐ **Talon Scratch = "Pique/Talon" official sprite name CORRECTION CROSS-SOURCE**                            |
+| **DEATH**  | Dissolution sequence per direction    | Standard Minor Enemy death dissolution canon                                                                     |
+
+⭐⭐⭐ **Pique/Talon ATTACK = Talon Scratch canon mapping NEW MAJEUR (sprite Gemini)** :
+
+- ATTACK Pique/Talon = avian talons strike visual canon
+- ⭐⭐⭐ **Talon Scratch = Pique/Talon official sprite name CORRECTION CROSS-SOURCE** : wiki "~Talon Scratch" (community approximation) = sprite **"Pique/Talon"** official canon mapping (cohérent récurrent ability names CORRECTION pattern Greham/Guftas/Guillotine récurrent)
+- ⚠️ **Spinning Gale + Rave Twister Wind magic visuals NOT shown** (single ATTACK cycle sprite — Wind ability spell-cast probable separate animations future)
+- À refléter `combat/mob-abilities.md` Pique/Talon official ability name canon CROSS-SOURCE
+
+⭐⭐⭐ **Aerial flight locomotion canon NEW MAJEUR (sprite Gemini)** :
+
+- MOVE = Flight cycle (vs wheeled Guillotine récent + quadruped Guftas récent + biped récurrent)
+- ⭐⭐⭐ **Premier aerial flight Minor Enemy locomotion documenté Damia** — cohérent A-AV 10% non-zero physical evasion canon récent (avian/flying mob A-AV pattern récurrent)
+- Pattern Damia : Locomotion type canon récurrent EXPANSION (biped + quadruped + wheeled + **aerial flight** + hover récurrent boss tier + aerial Dragoon Greham récurrent)
+- À implémenter `RenderSystem` aerial flight locomotion logic Minor Enemy NEW MAJEUR
+
+⭐⭐⭐ **Sprite tier hierarchy refinement Minor Enemy extended sub-tiers NEW MAJEUR Damia** :
+
+| Tier                                                 | ISO angles          | Locomotion          | Animation suite                                               |
+| ---------------------------------------------------- | ------------------- | ------------------- | ------------------------------------------------------------- |
+| Mob standard (Goblin)                                | 2 (SE+SW)           | 6-frame normal      | Standard 4 cycles                                             |
+| Minor Enemy extended LOW (Guftas)                    | 1 sample            | 6-frame quad        | Extended 7 cycles (IDLE/MOVE/CHARGE/BITE/DAMAGED/DEATH/TAUNT) |
+| Minor Enemy extended MID extended (Guillotine)       | 4 (SE+SW+NW+NE)     | 6-frame wheeled     | Extended 6 cycles (IDLE/MOVE/SLASH/DAMAGE/DEATH/TAUNT)        |
+| ⭐⭐⭐ **Minor Enemy extended MID baseline (Harpy)** | **4 (SE+SW+NW+NE)** | **Aerial flight**   | ⭐⭐⭐ **Baseline 4 cycles (IDLE/MOVE/ATTACK/DEATH)**         |
+| Boss walking heavy (Gorgaga)                         | 4 (4-dir)           | 6-frame heavy       | Standard 4 cycles                                             |
+| Boss walking standard (Greham)                       | 4 (4-dir)           | 6-frame standard    | Standard 4 cycles                                             |
+| Boss hovering (Grand Jewel)                          | 4 (4-dir)           | 6-frame heavy HOVER | Standard 4 cycles                                             |
+| Dragoon form (Greham)                                | 8 (8-dir)           | 8-frame aerial      | Elaborate Dragoon-tier                                        |
+| Vassal Dragon (Feyrbrand)                            | 1 (sample)          | (large body)        | Standard 4 cycles                                             |
+| Boss extended (Fruegel)                              | 7-8 (NSEW+diag)     | 6-frame heavy       | Extended 7 cycles                                             |
+
+Pattern Damia : ⭐⭐⭐ **Minor Enemy extended MID sub-tier refinement canon NEW MAJEUR** — Minor Enemy extended MID baseline (Harpy 4-cycle baseline) vs Minor Enemy extended MID extended (Guillotine 6-cycle extended). Sprite tier hierarchy 10 tiers canon NEW MAJEUR (vs 9 récent — Harpy MID baseline sub-variant NEW).
+
+⭐⭐⭐ **Avian winged humanoid visual canon CONFIRMED tri-source (sprite Gemini + wiki Wind element + Guillotine récurrent hypothesis) ⭐⭐⭐** :
+
+- Sprite confirme parfaitement Wind avian Wingly mob hypothesis canon récurrent Guillotine récent CONFIRMED
+- Pattern Damia : ⭐⭐⭐ **Sprite-wiki visual canon CROSS-SOURCE CONFIRMED** Harpy canonical avian design Damia (winged + horned + golden body + talons + blue-white wings)
+
+À intégrer future : `public/assets/sprites/mobs/harpy-*.png` (frame-split par cycle + 4 ISO angles) + `data/mobs/harpy.ts` (à créer) AvatarSpriteForm Minor Enemy extended MID baseline + `RenderSystem` cycle-aware (IDLE/MOVE flight/ATTACK Pique-Talon/DEATH) + **aerial flight locomotion logic NEW MAJEUR** + Spinning Gale + Rave Twister Wind magic spell-cast separate animations + Wind party-AoE Rave Twister visual effect + 4 ISO directional facing + Harpy x2 same-type dual-formation rendering canon récurrent récent.
+
 ## Liens transverses
 
 - [`README.md`](./README.md) — mobs Disc 4 + **Zenebatos Law City Wingly judicial city mob pool canon récurrent**

@@ -1,4 +1,55 @@
-# Guillotine — Minor Enemy Darkness Zenebatos Law City Disc 4 — Midnight Terror Fear caster + paired Harpy/Death Purger Wingly judicial city mob 🟡
+# Guillotine — Sentient guillotine apparatus Darkness Zenebatos Law City Disc 4 — Midnight Terror PARTY-WIDE Fear AoE + Guile Edge rolling blade + horned undead torso construct CROSS-SOURCE 🟢
+
+> ⭐⭐⭐ **Guillotine appearance canon NEW MAJEUR (fandom) ⭐⭐⭐** — Quote canon : "**apparatus designed for beheading people**: this particular contraption has **wheels** and is **animated by dark magic or due to an evil spirit**. On the top of this object, a **heavy and large blade rests, prepared to fall upon its next victim**. This guillotine has **several spikes along each side and many on the uppermost rim**. **Several chains can be seen hanging off this structure**. A **horned skeleton-like torso is fused into the top of the guillotine and launches the blade onto its foes**". Pattern Damia : ⭐⭐⭐ **Guillotine = mobile sentient guillotine apparatus canon NEW MAJEUR** — wheeled execution device + dark magic/evil spirit animated + spiked rim + chains + horned undead torso fused on top (launches blade). Confirms my probable visual canon "sentient guillotine blade-machine" récent. Cohérent récurrent Wingly Law City execution-themed mob pool canon récurrent. À refléter `mobs/Guillotine.md` appearance canon NEW MAJEUR + sprite future (wheeled guillotine + horned undead torso fusion + chains + spikes).
+>
+> ⭐⭐⭐ **Guile Edge official ability name CORRECTION CROSS-SOURCE + rolling blade visual NEW MAJEUR (fandom) ⭐⭐⭐** — Quote canon : "**Guile Edge — Rolls towards an individual target, smashing down upon them with its blade dealing high physical damage**". Pattern Damia : ⭐⭐⭐ **CORRECTION official name CROSS-SOURCE** : wiki "~Guillotine" (community approximation) = fandom **"Guile Edge"** official name canon. Visual canon NEW MAJEUR : **rolling charge toward target + blade smash downward** (cohérent récurrent wheels appearance canon + heavy blade canon). Cohérent récurrent ability names CORRECTION pattern fandom (Greham Spear Combo/Dragon Crucifixion + Guftas Howl récurrent récent). À refléter `combat/boss-abilities.md` Guile Edge official name + rolling blade attack canon NEW MAJEUR.
+>
+> ⭐⭐⭐ **⚠️ MAJOR DIVERGENCE : Midnight Terror PARTY-WIDE AoE Fear canon (fandom vs wiki single) ⭐⭐⭐** — Quote canon : "**Fear upon all targets simultaneously**" + "**given probability to inflict all targets with Fear upon hit**" + "even if it is alone since it will strike hard then". Pattern Damia : ⭐⭐⭐ ⚠️ **DIVERGENCE MAJEURE wiki vs fandom** : wiki "Single target" / fandom **"All targets simultaneously"** party-wide AoE Fear. **Damia adopts fandom canon party-wide AoE Fear** — cohérent récurrent fandom = actual gameplay behavior vs wiki = static reference (récurrent canon pattern). Pattern : **AoE party-wide Fear caster boss-tier Minor Enemy canon NEW MAJEUR** — Guillotine = AoE threat même solo encounter. À refléter `combat/status-mechanics.md` AoE Fear party-wide canon NEW MAJEUR.
+>
+> ⭐⭐⭐ **"Construct with undead torso" lore-justified Status Immunity canon NEW MAJEUR (fandom) ⭐⭐⭐** — Quote canon : "Due to it **not being a standard living monster and instead a construct with an undead torso attached to it**, all status ailments are impossible to hit". Pattern Damia : ⭐⭐⭐ **Lore-justified Status Immunity canon NEW MAJEUR** — in-lore explanation for Status 8/8 ALL IMMUNE récurrent (construct + undead nature). Pattern récurrent : Status immune mob/boss = construct/undead/elemental nature canon récurrent justified (probable récurrent other Zenebatos mobs + Wingly machines canon récurrent). À documenter `combat/status-mechanics.md` lore-justified immunity canon NEW MAJEUR + `combat/enemy-classification.md` construct/undead/living distinction canon NEW.
+>
+> ⭐⭐⭐ **Light-element weakness canon récurrent CONFIRMED Darkness↔Light opposition (fandom) ⭐⭐⭐** — Quote canon : "**weaker towards magical damage rather than physical damage** so try and use **Light-element spell items if available to get the elemental weakness bonus damage added**". Pattern Damia : ⭐⭐⭐ **Darkness weak to Light elemental opposition canon récurrent CONFIRMED TLoD** (cohérent récurrent Wind↔Earth + Light↔Darkness opposing pairs canon récurrent). + **Magic-vulnerable canon** (DF 150 > MDF 120) confirmed. À documenter `combat/elements.md` (à créer) — Light↔Darkness opposition canon récurrent CONFIRMED.
+>
+> ⭐⭐⭐ **HP JP 777 +25% canon Damia rule CONFIRMED 9ème instance CROSS-MOB-BOSS (fandom) ⭐⭐⭐** — Quote canon : "**HP: 622 (US/EU) / 777 (JP)**". 622 × 1.25 = 777.5 ≈ 777 = match exact pattern récurrent canon JP stats rule. Pattern Damia : ⭐ **JP HP +25% systematic récurrent CONFIRMED 9ème instance CROSS-MOB-BOSS** (Gangster + Gehrich + Ghost Commander + Glare + Gnome + Goblin + Greham + Guftas + Guillotine). ⚠️ **Wiki HP 621 minor anomaly +1** : wiki 621 < fandom US-EU 622 = wiki rounding probable. **Damia adopts JP HP 777 canon Guillotine**.
+>
+> ⭐⭐⭐ **Gold JP 13 = Damia ÷3 rule ALIGNMENT confirmed 5ème instance CROSS-MOB-BOSS (fandom) ⭐⭐⭐** — Quote canon : "**Gold: 41 (US/EU) / 13 (JP)**". 41 ÷ 3 = 13.67 ≈ 13 = ⭐⭐⭐ **EXACT match Damia ÷3 systematic rule = JP value alignment canon récurrent CONFIRMED**. Pattern Damia : **Damia ÷3 rule = JP Gold value alignment canon récurrent CONFIRMED 5ème instance** (cohérent récurrent JP Gold variant canon — Damia adopts JP variant systematically across stats + Gold). ⚠️ **Wiki Gold 39 minor anomaly** vs fandom US-EU 41 (wiki rounding probable). **Damia adopts JP Gold 13G canon Guillotine** (déjà appliqué via ÷3 rule récurrent).
+>
+> ⭐⭐⭐ **⚠️ MAJOR DIVERGENCE : AT 110 fandom vs wiki 65 (+69% wiki anomaly MASSIVE) (fandom) ⭐⭐⭐** — Pattern Damia : ⚠️ **MAJOR DIVERGENCE wiki tier 2 vs fandom tier 3** : wiki AT 65 / fandom **AT 110** = +69% massive divergence. ⚠️ **Wiki AT 65 anomaly MASSIVE probable** — cohérent récurrent Wiki anomaly récurrent pattern (Greham wiki HP 350 anomaly + Guftas wiki HP 500 anomaly + Ghost Commander wiki anomaly récurrent). **Damia investigation requise** : wiki tier 2 prevails (récurrent rule) OR fandom canon plus authoritative gameplay (cohérent récurrent fandom = actual canon). Probable **fandom AT 110 canon authoritative** (cohérent récurrent gameplay accuracy + Zenebatos late-game high stats canon récurrent). À reconfirmer Discord/Wulves canon source.
+>
+> ⭐⭐ **MAT 93 fandom vs wiki 83 (+12% fandom higher anomaly récurrent) (fandom) ⭐⭐** — Wiki MAT 83 + fandom MAT 93 = +12% small divergence cohérent récurrent fandom higher anomaly récurrent. Wiki canon prevails per Damia rule (récurrent pattern). MAT 93 fandom probable factual.
+>
+> ⭐⭐⭐ **"Mostly the highest stats in this location" Zenebatos canon NEW (fandom) ⭐⭐⭐** — Quote canon : "**This monsters stats are mostly the highest in this location**". Pattern Damia : ⭐⭐⭐ **Guillotine = strongest Minor Enemy Zenebatos Law City Disc 4 canon NEW MAJEUR** — Wingly Law City top mob stats canon (vs Death Purger + Professor + Harpy lower). Cohérent récurrent fandom DF 150 + MDF 120 + AT 110 (fandom) = highest stats Zenebatos pool canon.
+>
+> ⭐⭐⭐ **"Use Midnight Terror often" HP-conditional behavior canon récurrent CONFIRMED (fandom) ⭐⭐⭐** — Quote canon : "once its health has dropped below half way, **it will then use Midnight Terror often**". Pattern Damia : ⭐⭐⭐ **HP ≤50% Midnight Terror frequent usage canon récurrent CONFIRMED CROSS-SOURCE** (cohérent récurrent wiki HP-conditional AI canon "≤50% : Midnight Terror"). "Often" = high-priority action sub-50% HP canon NEW MAJEUR (vs equal-chance Minor Enemy AI récurrent baseline). À refléter `combat/mob-ai-rules.md` HP-conditional priority weighting canon NEW.
+>
+> ⭐⭐⭐ **Healing Breeze shop 30G + ~15 min farming canon NEW MAJEUR (fandom) ⭐⭐⭐** — Quote canon : "**They can be bought for 30 gold**" + "**The average time to obtain this is in roughly 15 minutes**". Pattern Damia : ⭐⭐⭐ **Healing Breeze canon NEW MAJEUR ITEM** : shop price 30G + 15min farming Zenebatos drop rate 8% canon. À documenter `items/Healing Breeze.md` (à créer) — Wind mass-heal spell item + shop 30G canon récurrent + Zenebatos farming pool canon récurrent (cohérent récurrent Total Vanishing Death Purger farming récurrent).
+>
+> ⭐⭐⭐ **"Two can perform Can't Combat" Zenebatos canon NEW MAJEUR (fandom) ⭐⭐⭐** — Quote canon : "**Zenebatos opponents deal plenty enough damage and two can perform Can't Combat**". Pattern Damia : ⭐⭐⭐ **Can't Combat ability canon récurrent Zenebatos** — 2 Zenebatos mobs partagent Can't Combat ability canon (cohérent récurrent Death Purger Can't Combat canon récurrent + 1 autre mob — probable Professor récurrent ou Harpy NEW à confirmer). **Can't Combat = disable target combat actions canon récurrent** (cohérent récurrent boss/mob status proc canon récurrent). À refléter `combat/boss-abilities.md` Can't Combat ability canon récurrent + crosslink Death Purger Can't Combat.
+>
+> ⭐⭐⭐ **Encounter rate "Common" canon récurrent (fandom) ⭐⭐⭐** — Quote canon : "Encounter rate: **Common**". Pattern Damia : Encounter rate "Common" = simplified fandom labeling (vs wiki specific percentages 10%/35%/20%/35% récurrent). Cohérent récurrent Common = frequent random encounter canon Zenebatos pool.
+>
+> ⭐⭐ **Battle pairing simplified canon récurrent (fandom) ⭐⭐** — Quote canon : "Guillotine / Guillotine + Harpy / Guillotine + Death Purger" 3 formations confirmed. Pattern Damia : 3 formations canon récurrent CROSS-SOURCE CONFIRMED (cohérent wiki récurrent 3 formations 241/245/246).
+>
+> **Sources** :
+>
+> - 🥈 [`_sources/lod-wiki-guillotine.md`](./_sources/lod-wiki-guillotine.md) — wiki LoD tier 2 (Minor Enemy Darkness Zenebatos Law City Disc 4 + HP 621 ⚠️ wiki minor anomaly + AT 65 ⚠️ MAJOR wiki anomaly + DF 150 + SPD 60 + MAT 83 + MDF 120 + Status 8/8 ALL IMMUNE + Yield 160 EXP/39G/Healing Breeze 8% drop + Counter 28 standard list + 3 formations 241/245/246 + HP-conditional AI ~Guillotine/Midnight Terror + Single target Midnight Terror ⚠️ wiki erreur)
+> - 🥉 [`_sources/fandom-guillotine.md`](./_sources/fandom-guillotine.md) — Fandom tier 3 (**Guillotine appearance canon NEW MAJEUR** wheeled apparatus + dark magic animated + heavy blade top + spikes/chains + **horned undead torso fused launches blade** + **Guile Edge official ability name CORRECTION** rolling charge + blade smash + ⚠️ **MAJOR DIVERGENCE Midnight Terror PARTY-WIDE AoE Fear** vs wiki single + ⭐⭐⭐ **"Construct with undead torso" lore-justified Status Immunity canon NEW MAJEUR** + **Light-element weakness canon récurrent CONFIRMED Darkness↔Light opposition** + **JP HP 777 +25% Damia rule CONFIRMED 9ème instance** ⚠️ wiki HP 621 minor anomaly + **JP Gold 13 = Damia ÷3 rule ALIGNMENT confirmed 5ème instance** ⚠️ wiki Gold 39 minor anomaly + ⚠️ **AT 110 fandom vs wiki 65 +69% MASSIVE divergence wiki anomaly probable** + MAT 93 fandom +12% small divergence + **"Mostly highest stats Zenebatos location" canon NEW** + **"HP ≤50% Midnight Terror often" HP-conditional priority weighting canon récurrent CONFIRMED** + **Healing Breeze shop 30G + ~15 min farming canon NEW MAJEUR** + **"Two Zenebatos mobs Can't Combat" canon NEW** + Encounter rate Common + Battle pairing simplified)
+
+## Statut
+
+🟢 **Canon confirmed cross-source** (wiki 🥈 + fandom 🥉) — 2 sources cohérentes + enrichissement fandom MASSIF Disc 4 Zenebatos :
+
+- ⭐⭐⭐ **Guillotine = sentient wheeled guillotine apparatus + horned undead torso fused canon NEW MAJEUR appearance**
+- ⭐⭐⭐ **Guile Edge official ability name CORRECTION + rolling blade visual NEW MAJEUR**
+- ⭐⭐⭐ **⚠️ MAJOR DIVERGENCE Midnight Terror PARTY-WIDE AoE Fear** (fandom vs wiki single — Damia adopts fandom)
+- ⭐⭐⭐ **"Construct with undead torso" lore-justified Status Immunity canon NEW MAJEUR**
+- ⭐⭐⭐ **Light↔Darkness opposition canon récurrent CONFIRMED** + magic-vulnerable Guillotine
+- ⭐⭐⭐ **JP HP 777 +25% canon Damia rule CONFIRMED 9ème instance** + wiki 621 minor anomaly
+- ⭐⭐⭐ **JP Gold 13 = Damia ÷3 alignment 5ème instance CONFIRMED**
+- ⭐⭐⭐ **⚠️ AT 110 fandom vs wiki 65 +69% MASSIVE divergence — wiki anomaly probable**
+- ⭐⭐⭐ **"Mostly highest stats Zenebatos location" canon NEW**
+- ⭐⭐⭐ **HP ≤50% Midnight Terror "often" priority weighting canon récurrent CONFIRMED**
+- ⭐⭐⭐ **Healing Breeze shop 30G + 15min farming + Can't Combat 2-mobs canon Zenebatos NEW MAJEUR**
 
 > **Minor Enemy Darkness Zenebatos Law City Disc 4 — submaps 529/530/717/718 (Wingly judicial city canon récurrent Death Purger récurrent) — Midnight Terror Fear 100% caster + paired formations canon récurrent** ⭐⭐⭐. HP 621 (Damia JP +25% à confirmer fandom — 776 probable) + AT 65 HIGH late-game + DF 150 HIGH récurrent + SPD 60 baseline + MAT 83 HIGH magic-capable + MDF 120 HIGH + A-AV/M-AV 0%. **Status 8/8 ALL IMMUNE Minor Enemy 10ème instance CROSS-MOB-BOSS** (récurrent Wingly judicial mob pattern Death Purger récurrent + Guftas récent + Greham/etc). **Yield 160 EXP + 39G (Damia ÷3 = 13G) + Healing Breeze 8% drop canon NEW MAJEUR** — Wind healing item drop (cohérent récurrent Healing Breeze = mass-heal Wind canon TLoD récurrent). **Counter Opportunities 28 HIGH counter-friendly canon récurrent CROSS-MOB CONFIRMED** (identical list Guftas récurrent — Albert Wind Additions 5ème instance counter list). **Counters Additions: Yes**. **3 encounter formations canon récurrent** : solo Guillotine 241 (10%/30%) + Guillotine+Harpy 245 (35%/20%/35%/30%) + Death Purger+Guillotine 246 (35%/35%/20%/30%). **AI HP-conditional canon récurrent** : **~Guillotine 1× phys HP>25% + Midnight Terror 100% Fear M-AV reduces HP≤50%** (overlap HP 26-50% both eligible). **Escape 30% canon canon Zenebatos récurrent**.
 >
@@ -42,35 +93,34 @@
 >
 > - 🥈 [`_sources/lod-wiki-guillotine.md`](./_sources/lod-wiki-guillotine.md) — wiki LoD tier 2 (Minor Enemy Darkness Zenebatos Law City Disc 4 submaps 529/530/717/718 + HP 621 + AT 65 high + DF 150 high + SPD 60 + MAT 83 high + MDF 120 high + A-AV/M-AV 0% + Status 8/8 ALL IMMUNE 10ème instance + Yield 160 EXP / 39G / **Healing Breeze 8% drop NEW MAJEUR Wind heal item** + **Counter Opportunities 28 HIGH identical Guftas standard counter list récurrent CONFIRMED** + Counters Additions: Yes + 3 formations : solo 241 + Guillotine+Harpy 245 NEW + **Death Purger+Guillotine 246 récurrent CROSS-SOURCE CONFIRMED** + AI HP-conditional : ~Guillotine 1× phys HP>25% + **Midnight Terror 100% Fear M-AV reduces HP≤50% NEW MAJEUR magic-typed status NEW sub-pattern** + Escape 30% Zenebatos baseline récurrent + Harpy NEW MAJEUR mob paired)
 
-## Statut
-
-🟡 **Draft post-ingestion wiki LoD seul** — fandom à ingérer (Gallery + Trivia probable + JP HP variant confirmation).
-
 ## Identity canon ⭐⭐⭐
 
 - **Nom** : **Guillotine**
 - **Type** : ⭐⭐⭐ **Minor Enemy Darkness Zenebatos Law City Disc 4 — execution-themed Wingly judicial city mob canon NEW MAJEUR**
-- **Appearance probable canon** : Sentient guillotine blade-machine mob — anthropomorphic execution device (cohérent récurrent Wingly Law City judicial mob pool thematic)
+- **Appearance canon CONFIRMED (fandom)** : ⭐⭐⭐ **Wheeled sentient guillotine apparatus + horned undead torso fused on top + spikes (sides + uppermost rim) + chains hanging + heavy blade ready to fall + dark magic/evil spirit animated** — execution-themed Wingly Law City mob canon NEW MAJEUR
+- **Nature canon** : ⭐⭐⭐ **Construct with undead torso attached** (lore-justified Status Immunity canon NEW MAJEUR — NOT standard living monster)
+- **Stats highest in Zenebatos location canon NEW** (fandom)
+- **Elemental weakness canon** : ⭐⭐⭐ **Light-element bonus damage (Darkness↔Light opposition canon récurrent CONFIRMED)** + magic-vulnerable (MDF 120 < DF 150)
 - **Element** : Darkness (cohérent récurrent Zenebatos Darkness mob theme + Death Purger récurrent)
 - **Disc** : Disc 4 — Zenebatos Law City Wingly judicial city canon récurrent
 - **Location canon** : ⭐⭐⭐ **Zenebatos Law City submaps 529, 530, 717, 718** (Wingly judicial city canon récurrent CROSS-MOB Death Purger)
 - **Classification** : Minor Enemy (récurrent Wingly Law City mob class)
 - **Formations** : Solo 241 / Guillotine+Harpy 245 NEW / Death Purger+Guillotine 246 récurrent
 
-## Stats canon ⭐⭐⭐ (wiki seul — fandom à ingérer JP variant)
+## Stats canon ⭐⭐⭐ CROSS-SOURCE Damia adoption JP rule CONFIRMED 9ème instance HP + 5ème instance Gold
 
-| Stat   | Value | Notes                                                                           |
-| ------ | ----- | ------------------------------------------------------------------------------- |
-| **HP** | 621   | ⭐ Damia JP +25% systematic à confirmer fandom — 776 probable                   |
-| AT     | 65    | High late-game canon récurrent Disc 4 Zenebatos                                 |
-| DF     | 150   | ⭐ Very high récurrent CROSS-MOB-BOSS (vs DF 120 récurrent — late-game scaling) |
-| A-AV   | 0%    | No evasion                                                                      |
-| SPD    | 60    | Mid baseline canon récurrent                                                    |
-| MAT    | 83    | ⭐ HIGH magic-capable Minor Enemy canon récurrent                               |
-| MDF    | 120   | HIGH late-game canon récurrent                                                  |
-| M-AV   | 0%    | No magic evasion                                                                |
+| Stat   | Wiki canon | Fandom canon           | Damia adoption       | Notes                                                                                              |
+| ------ | ---------- | ---------------------- | -------------------- | -------------------------------------------------------------------------------------------------- |
+| **HP** | 621 ⚠️     | **622 US-EU / 777 JP** | **777 JP** ⭐⭐⭐    | ⭐ JP HP +25% canon récurrent CONFIRMED 9ème instance + ⚠️ wiki 621 minor anomaly                  |
+| AT     | 65 ⚠️⚠️    | **110** ⚠️ MASSIVE     | ⚠️ **À reconfirmer** | ⚠️⚠️ MASSIVE DIVERGENCE +69% — wiki AT 65 anomaly probable, fandom 110 plus authoritative gameplay |
+| DF     | 150        | 150                    | **150**              | Match CROSS-SOURCE — very high late-game récurrent                                                 |
+| A-AV   | 0%         | -                      | **0%**               | No evasion                                                                                         |
+| SPD    | 60         | 60                     | **60**               | Match CROSS-SOURCE — mid baseline                                                                  |
+| MAT    | 83         | **93** ⚠️              | **83 wiki canon**    | ⚠️ Fandom +12% divergence — wiki tier 2 prevails                                                   |
+| MDF    | 120        | 120                    | **120**              | Match CROSS-SOURCE — high late-game                                                                |
+| M-AV   | 0%         | -                      | **0%**               | No magic evasion                                                                                   |
 
-**Gold canon Damia** : 39G ÷3 = **13G** systematic récurrent.
+**Gold canon Damia** : Wiki 39G / **Fandom US-EU 41G + JP 13G**. ⭐⭐⭐ **Damia ÷3 rule = JP 13G EXACT match canon récurrent CONFIRMED 5ème instance** (41 ÷ 3 = 13.67 ≈ 13 = JP value alignment Damia rule récurrent confirmed). ⚠️ Wiki 39G minor anomaly.
 
 ## Status Immunity canon ⭐⭐⭐ 8/8 ALL IMMUNE 10ème instance CROSS-MOB-BOSS
 
@@ -82,12 +132,14 @@
 | --- | --------------- | -------------------------------------------- | ------------------------------------------------------------------------------- |
 | 160 | **13G** (÷3)    | ⭐⭐⭐ **Healing Breeze 8% drop NEW MAJEUR** | Wind mass-heal spell item canon récurrent TLoD + 8% rare canon Disc 4 Zenebatos |
 
-### Healing Breeze drop canon ⭐⭐⭐ NEW MAJEUR
+### Healing Breeze drop canon ⭐⭐⭐ NEW MAJEUR CROSS-SOURCE
 
 - **8% rare drop rate** Zenebatos canon Disc 4
+- ⭐⭐⭐ **Shop price 30 Gold canon NEW MAJEUR (fandom)** — Healing Breeze purchasable Zenebatos shop
+- ⭐⭐⭐ **Average farming time ~15 min canon (fandom)** — drop-vs-shop dual-access canon récurrent
 - **Wind healing spell item** canon récurrent TLoD (mass-party-heal Wind item)
-- Pattern Damia : Late-game Healing Breeze acquisition canon récurrent farming-optional Zenebatos
-- À refléter `items/Healing Breeze.md` (à créer) — Wind mass-heal spell item canon NEW MAJEUR
+- Pattern Damia : Late-game Healing Breeze acquisition canon récurrent farming-optional Zenebatos (cohérent récurrent Total Vanishing Death Purger farming récurrent — Zenebatos farming pool canon récurrent)
+- À refléter `items/Healing Breeze.md` (à créer) — Wind mass-heal spell item canon NEW MAJEUR + shop 30G canon CROSS-SOURCE
 
 ## Encounters canon Zenebatos Disc 4 Law City ⭐⭐⭐ 3 formations canon récurrent
 
@@ -101,23 +153,33 @@
 
 ⭐⭐⭐ **3 encounter formations canon NEW MAJEUR** — solo + Harpy paired + Death Purger paired. Pattern Damia : Multi-formation random encounter mob diversity canon récurrent.
 
-## AI canon ⭐⭐⭐ HP-conditional + Midnight Terror Fear magic-typed status NEW MAJEUR
+## AI canon ⭐⭐⭐ CROSS-SOURCE official names CORRECTION + Guile Edge rolling + Midnight Terror PARTY-WIDE AoE Fear NEW MAJEUR
 
-### Guillotine Abilities canon récurrent
+### Guillotine Abilities canon CROSS-SOURCE
 
-| HP   | Action                     | Target | Effect canon                                                                   | Visual notes                                                        |
-| ---- | -------------------------- | ------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------- |
-| >25% | ⭐ **~Guillotine**         | Single | 1× Physical damage                                                             | Basic phys attack canon (execution blade swing probable visual)     |
-| ≤50% | ⭐⭐⭐ **Midnight Terror** | Single | **100% Fear (M-AV reduces)** — magic-typed status canon NEW MAJEUR sub-pattern | ⭐⭐⭐ Darkness-themed Fear proc (Midnight + Terror night-darkness) |
+| Wiki name (unofficial) | Fandom official name canon | HP   | Target (CROSS-SOURCE)                           | Effect canon                                                                                                         | Visual canon (fandom)                                                                     |
+| ---------------------- | -------------------------- | ---- | ----------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| ~Guillotine            | ⭐⭐⭐ **Guile Edge**      | >25% | Single                                          | High physical damage                                                                                                 | ⭐⭐⭐ **Rolls toward target + smashes down with blade** (wheeled apparatus visual canon) |
+| Midnight Terror        | ⭐⭐⭐ **Midnight Terror** | ≤50% | ⚠️ **Party-wide AoE** (fandom) vs Single (wiki) | **Probability inflict Fear all targets simultaneously** (Damia adopts fandom AoE canon) — magic-typed (M-AV reduces) | ⭐⭐⭐ Darkness party-wide Fear AoE proc (Gallery confirmed)                              |
 
-⭐⭐⭐ **HP-conditional AI canon récurrent + overlap HP 26-50% both eligible** : Guillotine = early HP >25% phys + late HP ≤50% Fear caster. Overlap range HP 26-50% = both actions eligible (equal-chance Minor Enemy AI canon récurrent wiki note).
+⭐⭐⭐ **Fandom canon official names CORRECTION CROSS-SOURCE** : Guile Edge (rolling blade visual) + Midnight Terror PARTY-WIDE AoE Fear. Cohérent récurrent ability names CORRECTION pattern (Greham récent + Guftas récent).
 
-### NEW MAJEUR canon mechanics
+⭐⭐⭐ **HP-conditional AI canon récurrent + "often" priority weighting NEW MAJEUR CONFIRMED CROSS-SOURCE** :
 
-1. ⭐⭐⭐ **Midnight Terror Fear ability canon NEW MAJEUR** — Darkness-themed Fear caster + magic-typed status (M-AV reduces NOT A-AV)
-2. ⭐⭐⭐ **Magic-typed vs Physical-typed status canon sub-pattern NEW MAJEUR** — Midnight Terror M-AV reduces (vs Howl Guftas A-AV reduces + Status Slime Feyrbrand A-AV reduces récurrent) = dual-typed status canon NEW
-3. ⭐⭐⭐ **HP-conditional AI overlap range canon récurrent** — both actions eligible HP 26-50% (equal-chance Minor Enemy AI récurrent)
-4. ⭐⭐⭐ **Death Purger LACKS Midnight Terror canon récurrent CROSS-SOURCE CONFIRMED** — Wingly mobs partagent canon some abilities + distinct others canon récurrent (Death Purger fandom "Does NOT share Fear" récurrent CONFIRMED)
+- HP >25% : Guile Edge phys baseline
+- HP ≤50% : Midnight Terror "**use often**" — high-priority frequent usage canon NEW MAJEUR (vs equal-chance baseline récurrent)
+- Overlap range HP 26-50% : both actions eligible — fandom confirms Midnight Terror weighted higher canon NEW
+
+### NEW MAJEUR canon mechanics CROSS-SOURCE
+
+1. ⭐⭐⭐ **Guile Edge rolling blade attack canon NEW MAJEUR** — official ability name + wheeled apparatus visual (rolls + smashes down)
+2. ⭐⭐⭐ **Midnight Terror PARTY-WIDE AoE Fear canon NEW MAJEUR ⚠️ DIVERGENCE wiki single** — Damia adopts fandom AoE (récurrent canon pattern fandom = actual gameplay)
+3. ⭐⭐⭐ **"Construct with undead torso" lore-justified Status Immunity canon NEW MAJEUR** — in-lore explanation Status 8/8 ALL IMMUNE (Damia adopts construct/undead/living distinction canon NEW)
+4. ⭐⭐⭐ **Light↔Darkness elemental opposition canon récurrent CONFIRMED** — magic-vulnerable Guillotine + Light bonus damage (cohérent récurrent Wind↔Earth + Light↔Darkness pairs)
+5. ⭐⭐⭐ **Magic-typed vs Physical-typed status canon sub-pattern NEW MAJEUR** — Midnight Terror M-AV reduces (vs Howl Guftas A-AV reduces + Status Slime Feyrbrand A-AV reduces récurrent) = dual-typed status canon NEW
+6. ⭐⭐⭐ **HP-conditional AI priority weighting "often" canon NEW MAJEUR** — frequency boost sub-50% HP (vs equal-chance Minor Enemy AI récurrent baseline)
+7. ⭐⭐⭐ **Death Purger LACKS Midnight Terror canon récurrent CROSS-SOURCE CONFIRMED** — Wingly mobs partagent canon some abilities + distinct others (Death Purger fandom "Does NOT share Fear" récurrent)
+8. ⭐⭐⭐ **"Two Zenebatos mobs Can't Combat" canon NEW MAJEUR** — Can't Combat ability shared 2 mobs (Death Purger + ? probable Professor récurrent ou Harpy NEW)
 
 ## Counter Opportunities canon ⭐⭐⭐ 28 HIGH identical Guftas standard counter list récurrent CONFIRMED
 
@@ -172,10 +234,12 @@
 - [`../combat/status-mechanics.md`](../combat/status-mechanics.md) (à créer) — ⭐⭐⭐ **Magic-typed (M-AV) vs Physical-typed (A-AV) status proc canon sub-pattern NEW MAJEUR** + Midnight Terror Fear magic-typed
 - [`../combat/mob-ai-rules.md`](../combat/mob-ai-rules.md) (à créer) — HP-conditional AI + overlap range canon récurrent NEW
 - [`../combat/counter-list-canon.md`](../combat/counter-list-canon.md) (à créer) — ⭐⭐⭐ **Single canonical counter list shared CROSS-MOB-BOSS récurrent canon NEW MAJEUR**
-- [`../items/Healing Breeze.md`](../items/Healing Breeze.md) (à créer) — ⭐⭐⭐ **Wind mass-heal spell item canon NEW MAJEUR + 8% Guillotine drop Disc 4 Zenebatos**
-- [`../combat/elements.md`](../combat/elements.md) (à créer) — Darkness element Zenebatos Law City mob theme récurrent
+- [`../items/Healing Breeze.md`](../items/Healing Breeze.md) (à créer) — ⭐⭐⭐ **Wind mass-heal spell item canon NEW MAJEUR + 8% Guillotine drop + shop 30G + ~15min farming canon CROSS-SOURCE Disc 4 Zenebatos**
+- [`../combat/elements.md`](../combat/elements.md) (à créer) — ⭐⭐⭐ **Light↔Darkness elemental opposition canon récurrent CONFIRMED** + Darkness element Zenebatos Law City mob theme récurrent
+- [`../combat/enemy-classification.md`](../combat/enemy-classification.md) (à créer) — ⭐⭐⭐ **Construct/undead/living distinction canon NEW MAJEUR** + lore-justified Status Immunity canon
+- [`../combat/boss-abilities.md`](../combat/boss-abilities.md) (à créer) — ⭐⭐⭐ **Guile Edge rolling blade + Midnight Terror PARTY-WIDE AoE Fear + Can't Combat canon récurrent**
 - [`../party-members/Albert.md`](../party-members/Albert.md) — Wind Additions counter list 5ème instance Jade Dragoon lineage récurrent confirmé
 
 ## Gaps / TODO
 
-Voir [TODO.md](../../TODO.md) section Guillotine wiki.
+Voir [TODO.md](../../TODO.md) section Guillotine fandom.

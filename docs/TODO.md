@@ -6678,6 +6678,36 @@ Pattern Damia : ⭐⭐⭐ **Dragoon transformation form sprite sub-class canon N
 
 - [ ] ⭐⭐ **🆕 NO Crystal-themed ATTACK ability Haschel Dragoon canon DIVERGENCE vs Greham/Feyrbrand (sprite Haschel Dragoon) ⭐⭐** — Pattern Damia : Haschel Dragoon = Thunder-themed Dragoon Magic (cohérent récurrent fandom "Thunder element double-edged sword no crystal-stretch") vs Greham Crystal Geyser + Feyrbrand Crystal Beam récurrent récent. Pattern Damia : **Dragoon abilities themed per element** (Jade=crystal vs Violet=thunder) canon récurrent. Source: idem.
 
+### Mobs / Hell Hound wiki (Minor Enemy Fire canine Black Castle Disc 1 — Sandora military pet + Knight of Sandora paired 480 + Contact x3 encounter NEW MAJEUR + Run away! self-flee NEW MAJEUR + Burn Out ability-item collision 7ème instance + Living 4/8 PARTIAL 2-instance + MDF 160 magic-tank 2-instance + Counter list 28 4-way CONFIRMED)
+
+- [ ] ⭐⭐⭐ **🆕 Hell Hound = Fire canine Sandora military pet canon NEW MAJEUR Disc 1 Black Castle (wiki) ⭐⭐⭐** — Quote canon : "Knight of Sandora, Hell Hound (480) — Black Castle". Pattern Damia : Hell Hound = Imperial Sandora military canine pet canon NEW MAJEUR (cohérent récurrent Fruegel + Guftas Hellena Prison Disc 1 canine pets canon récurrent — Sandora military theme canine pets CROSS-DISC 1). À documenter `locations/Black Castle.md` (à créer/vérifier) + `mobs/Knight of Sandora.md` (à créer). Source: [`features/mobs/_sources/lod-wiki-hell-hound.md`](features/mobs/_sources/lod-wiki-hell-hound.md).
+
+- [ ] ⭐⭐⭐ **🆕 "Run away!" self-flee cowardly mob ability canon NEW MAJEUR + no-reward punishment (wiki Hell Hound) ⭐⭐⭐** — Quote canon : "≤25% : Run away! — Self — Removes target from combat — Does not award EXP, gold, or item". Pattern Damia : **Self-flee ability canon NEW MAJEUR Minor Enemy** — first documented cowardly mob behavior Damia. HP ≤25% threshold + self-removal + no rewards punishment canon (cohérent récurrent late-game mob escape mechanics canon). **Cowardly mob class canon NEW MAJEUR** — pattern probable autres canine/animal mobs. À documenter `combat/mob-ai-rules.md` self-flee + `combat/yield-mechanics.md` (à créer) no-reward escape. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Burn Out ability-item NAME COLLISION canon récurrent CONFIRMED 7ème instance self-named pool (wiki Hell Hound) ⭐⭐⭐** — Quote canon : ability "Burn Out — 1.5× Fire-elemental magic damage" + drop "Burn Out 8%". Pattern Damia : **Self-named ability-item pool canon récurrent CONFIRMED 7ème instance** (Fatal Blizzard + Pellet + Sun Rhapsody + Trans Light + Dark Mist + Spectral Flash + **Burn Out** récurrent canon). **Burn Out = Fire spell item canon NEW MAJEUR**. À documenter `items/Burn Out.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Contact x3 encounter type canon NEW MAJEUR (wiki Hell Hound) ⭐⭐⭐** — Quote canon : "Contact x3". Pattern Damia : **Contact encounter type canon NEW MAJEUR** — first documented Contact Damia (vs scripted/random% récurrent). Probable visible mob world-map/dungeon contact-triggered encounter (cohérent récurrent visible mobs canon TLoD Disc 1 dungeon mechanics). À documenter `combat/encounter-types.md` (à créer) — Contact + Scripted + Random% encounter types canon NEW MAJEUR. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Knight of Sandora + Hell Hound paired formation 480 canon NEW MAJEUR Disc 1 Black Castle (wiki) ⭐⭐⭐** — Quote canon : "Knight of Sandora, Hell Hound (480) — Black Castle (187, 189, 192) — Contact x3 / 0%". Pattern Damia : **Sandora military + canine pet paired formation canon NEW MAJEUR Disc 1** (cohérent Fruegel pet pair Hellena récurrent — Sandora military pets thematic CROSS-FORMATION Disc 1). À documenter `mobs/Knight of Sandora.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Status 4/8 PARTIAL Living dichotomy canon récurrent CONFIRMED 2-instance Hell Hound (wiki + Harpy récurrent) ⭐⭐⭐** — Quote canon : "Confuse: X / Fear: X / Poison: X / Stun: X" VULNERABLE + Petrify/Bewitch/Arm Block/Dispirit IMMUNE = 4/8 PARTIAL. Pattern Damia : **Living vs Construct/Undead status immunity dichotomy canon récurrent CONFIRMED 2-instance NEW MAJEUR** — Hell Hound living canine + Harpy living avian = same 4/8 partial pattern. À refléter `combat/status-mechanics.md` + `combat/enemy-classification.md` Living class canon récurrent CONFIRMED. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 A-AV 5% canine quadruped intermediate canon NEW MAJEUR (wiki Hell Hound) ⭐⭐⭐** — Quote canon : "A-AV: 5%". Pattern Damia : **A-AV tier by mob type canon récurrent NEW MAJEUR** : Standard mob 0% / **Canine quadruped 5%** / Avian 10% (Harpy récurrent) / Glare A-AV 120% anomaly récurrent. À documenter `combat/mechanics.md` A-AV mob-type tier canon récurrent NEW. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 MDF 160 HIGH magic-tank canon récurrent CONFIRMED 2ème instance Hell Hound (wiki + Harpy récurrent) ⭐⭐⭐** — Pattern Damia : **MDF 160 HIGH magic-tank canon récurrent CONFIRMED 2-instance** (Harpy + Hell Hound) — pattern Damia : **Living mob = MDF 160 magic-tank canon récurrent** probable récurrent. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Counter Opportunities 28 HIGH IDENTICAL standard counter list canon récurrent 4-way CONFIRMED Hell Hound (wiki) ⭐⭐⭐** — Pattern Damia : **Counter list 28 entries IDENTICAL Guftas + Guillotine + Harpy + Hell Hound canon récurrent CONFIRMED 4-way CROSS-MOB**. **Single canonical counter list shared CROSS-MOB-BOSS récurrent canon HYPOTHESIS CONFIRMED 4-way Damia rule canon NEW MAJEUR**. À documenter `combat/counter-list-canon.md` 4-way confirmation. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 AI 3-phase HP-conditional escalation canon récurrent CONFIRMED 2-instance Hell Hound (wiki + Harpy récurrent) ⭐⭐⭐** — Quote canon : ">50% : ~Bite / ≤50% : Burn Out / ≤25% : Run away!". Pattern Damia : **3-phase HP-conditional AI canon récurrent CONFIRMED 2-instance** + **HP escalation severity canon récurrent** — phys baseline → magic mid → desperate/flee critical canon récurrent. ⚠️ Distinct behavior canon Harpy ≤25% party-AoE last-stand vs Hell Hound ≤25% self-flee cowardly. Source: idem.
+
+- [ ] ⭐⭐⭐ **🆕 Black Castle Disc 1 submaps 187/189/192 canon NEW MAJEUR (wiki Hell Hound) ⭐⭐⭐** — Quote canon : "Black Castle (187, 189, 192)". Pattern Damia : **Black Castle Disc 1 dungeon submaps canon NEW MAJEUR** — Doel Emperor Imperial Sandora capital canon récurrent récent Haschel (Disc 1 Doel battle + Violet Dragoon acquisition récent). À documenter `locations/Black Castle.md` (à créer). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Albert Wind Additions counter list 7ème instance CROSS-MOB-BOSS Jade Dragoon lineage récurrent Hell Hound (wiki) ⭐⭐** — Pattern Damia : Albert Wind Additions canon récurrent CONFIRMED **7ème instance CROSS-MOB-BOSS** counter list. Source: idem.
+
+- [ ] ⭐⭐ **🆕 EXP 20 / Gold 9 ÷3 = 3G Damia rule récurrent + Disc 1 early baseline Hell Hound (wiki) ⭐⭐** — Pattern Damia : Gold ÷3 systematic Damia rule récurrent appliqué = 3G. EXP 20 Disc 1 early baseline canon récurrent. HP 150 Disc 1 early baseline LOW (vs Disc 4 Zenebatos HP 600+ récent). Source: idem.
+
+- [ ] ⭐⭐ **🆕 Escape 0% scripted + No World Map Black Castle dungeon-locked Hell Hound (wiki) ⭐⭐** — Pattern Damia : Escape 0% scripted formation canon récurrent + Black Castle-locked dungeon mob canon récurrent. Source: idem.
+
 ### À décider / explorer
 
 ### À décider / explorer

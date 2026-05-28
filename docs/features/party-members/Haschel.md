@@ -334,6 +334,67 @@ Pattern Damia : ⭐⭐⭐ **Party-member extended sprite sub-tier canon NEW MAJE
 
 À intégrer future : `public/assets/sprites/party-members/haschel-*.png` (frame-split par cycle + multi-directional) + `data/party-members/haschel.ts` (à créer) AvatarSpriteForm Party-member extended ultra-tier + `RenderSystem` cycle-aware ultra-extended (Stand/Stand-effect/Walk/Sprint-Roll/Attack-Combo/Critical-Effect/Damage/Critical-HP/Death) + Rage Bar canon Damia gameplay + critical strike effect particle + Sprint-Roll high-mobility traversal logic + Combo Additions chain visualization.
 
+## Dragoon form sprite canon ⭐⭐⭐ Damia integration (Violet Dragoon transformation 8 ISO + barehanded Fist Attack + Five Rings Dance Special)
+
+### Dragoon design canonical
+
+> ![Haschel Violet Dragoon design canonical](./_assets/haschel-dragoon-design.png)
+
+⭐⭐⭐ **Dragoon design canonical Damia CONFIRMS canon fandom récurrent CROSS-SOURCE** :
+
+- ✅ **Violet/purple Dragoon armor** canon récurrent (fandom : "violet Dragoon armor")
+- ✅ **Sky blue/cyan accents** canon récurrent (fandom)
+- ✅ **Green/jade gem center chest** canon récurrent (fandom : "green gem at the center")
+- ✅ **Crystalline jade-cyan wings + violet outlines** canon récurrent (fandom : "Dragoon wings on his back is a lighter shade of yellow and violet with sky blue outlines" — slight color but cohérent crystal theme récurrent Greham récent)
+- ✅ **Bulky violet gauntlets** canon récurrent (fandom : "matching violet gauntlets which are bulkier")
+- ✅ **Violet dragon headband** canon récurrent (fandom)
+- ⚠️ **White pants + violet/white knee-high boots** canon récurrent (vs design Damia art-direction variation possible)
+- ✅ **Fights barehanded** canon récurrent (fandom : "fights barehanded" — no spear/weapon visible, fists ready)
+- ✅ **Bare muscular arms** canon récurrent (martial artist Dragoon form canon récurrent)
+
+### Dragoon sprite sheet (8 ISO + special abilities)
+
+> ![Haschel Violet Dragoon sprite sheet](./_assets/haschel-dragoon-sprite-sheet.png)
+
+⭐⭐⭐ **Sprite Haschel Violet Dragoon form canon récurrent CONFIRMED 2ème Dragoon transformation documenté Damia** :
+
+| Cycle                                          | Frames                  | Notes canon                                                                                                                                        |
+| ---------------------------------------------- | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Idle Loop (8 Directions)**                   | 8 ISO angles            | ⭐⭐⭐ **8 ISO Dragoon-tier canon CONFIRMED 2ème instance** (cohérent récurrent Greham Dragoon 8-dir récent)                                       |
+| **Basic 'Fist' Attack** (Forward SE View)      | Multi-frame combo       | ⭐⭐⭐ **Barehanded Fist Attack Dragoon canon NEW MAJEUR** (vs Greham Spear Dragoon récurrent récent — martial artist Dragoon distinct)            |
+| **'Five Rings Dance' Special Attack** (S View) | Multi-frame with effect | ⭐⭐⭐ **"Five Rings Dance" Dragoon Special canon NEW MAJEUR** (possible 5-Ring Shattering Dragoon form variant OR Damia-specific Dragoon ability) |
+| **Hit/Damage** (SE View)                       | Hurt reaction frames    | Standard Dragoon damage feedback canon                                                                                                             |
+| **Defeated/KO** (SE View)                      | Death/KO animation      | Standard Dragoon death canon                                                                                                                       |
+
+⭐⭐⭐ **NEW MAJEUR canon mechanics Dragoon form (sprite Gemini Haschel)** :
+
+1. ⭐⭐⭐ **8 ISO Dragoon-tier canon récurrent CONFIRMED 2ème instance Damia** (cohérent récurrent Greham Jade Dragoon 8-dir + Haschel Violet Dragoon 8-dir = pattern Damia Dragoon = 8 directional facing canon NEW MAJEUR)
+2. ⭐⭐⭐ **Barehanded Fist Attack Dragoon canon NEW MAJEUR** — martial artist Dragoon distinct vs spear-wielder Greham récurrent récent (Haschel Dragoon = fists weapon canon, cohérent récurrent fandom "fights barehanded")
+3. ⭐⭐⭐ **"Five Rings Dance" Dragoon Special Attack canon NEW MAJEUR** — sprite-labelisé ability NOT in wiki/fandom Dragoon Magic canon. Possible interprétations :
+   - 5-Ring Shattering Addition Dragoon form variant (cohérent récurrent Addition Dragoon form usage canon récurrent)
+   - Damia-specific Dragoon ability (cohérent récurrent Damia gameplay additions canon récurrent récent)
+   - À reconfirmer canon Damia design + crosslink Additions
+4. ⭐⭐⭐ **Crystalline cyan-violet wings canon CONFIRMED cross-Dragoon récurrent** — cohérent récurrent Greham Jade Dragoon crystal wings récurrent récent (pattern Dragoon transformation crystal theme canon récurrent CROSS-PARTY)
+5. ⭐⭐ **NO Crystal-themed ability Haschel Dragoon** (vs Greham Crystal Geyser + Feyrbrand Crystal Beam récurrent récent) — Haschel Violet Dragoon = Thunder-themed (cohérent récurrent fandom Thunder element double-edged sword no crystal-stretch)
+
+⭐⭐⭐ **Sprite tier hierarchy refinement Dragoon form canon récurrent CONFIRMED 2ème instance (sprite Haschel + Greham récurrent récent) ⭐⭐⭐** :
+
+| Tier                                       | ISO angles | Locomotion     | Animation suite                                                                                |
+| ------------------------------------------ | ---------- | -------------- | ---------------------------------------------------------------------------------------------- |
+| Party-member extended ultra-tier (Haschel) | Multi-dir  | Standard       | Ultra-extended 9+ cycles                                                                       |
+| Dragoon form Greham (Jade)                 | 8 ISO      | 8-frame aerial | IDLE floating 6f + MOVE aerial 8f + Crystal Geyser + Crystal Shatter Dust                      |
+| ⭐⭐⭐ **Dragoon form Haschel (Violet)**   | **8 ISO**  | (idle loop)    | ⭐⭐⭐ **Idle Loop 8-dir + Fist Attack + Five Rings Dance Special + Hit/Damage + Defeated/KO** |
+
+Pattern Damia : ⭐⭐⭐ **Dragoon form sprite sub-tier canon récurrent CONFIRMED Damia 2-instance pattern** — 8 ISO directional facing systematic Dragoon transformation canon récurrent + élément-themed visual theme canon récurrent (Jade=crystal Greham vs Violet=thunder/Kanzas Haschel).
+
+⭐⭐⭐ **Dragoon dual-form AvatarSpriteForm canon récurrent CONFIRMED party-member 2-instance (sprite Haschel) ⭐⭐⭐** :
+
+- Haschel canon dual sprite forms : **human form** (`haschel-design-main.png` + `haschel-sprite-sheet.png` ultra-extended récent) + **Violet Dragoon transformation form** (`haschel-dragoon-design.png` + `haschel-dragoon-sprite-sheet.png` NEW)
+- Cohérent récurrent Greham récent dual-form pattern (human boss form + Jade Dragoon transformation)
+- Pattern Damia : ⭐⭐⭐ **Dual-form AvatarSpriteForm canon récurrent party-member + boss pattern CONFIRMED 2-instance Damia** — Dragoon transformations = 2 sprite forms canon récurrent (probable récurrent autres party-members Dart Albert Rose Shana Meru Kongol Miranda Dragoon forms future)
+
+À intégrer future : `public/assets/sprites/party-members/haschel-dragoon-*.png` (frame-split par cycle + 8 ISO angles) + `data/party-members/haschel.ts` AvatarSpriteForm dual-form (human extended + Violet Dragoon transformation) + `RenderSystem` Dragoon-aware (8-dir + Fist Attack + Five Rings Dance Special + Hit/Damage + Defeated/KO) + Thunder elemental effect Dragoon Magic (Atomic Mind + Thunder Kid + Thunder God + Violet Dragon Dragoon Magic canon récurrent) + Dragoon transformation trigger logic (SP threshold canon récurrent D'L1-5).
+
 ## Liens transverses
 
 - [`README.md`](./README.md) — party-members canon + **Haschel Violet Dragoon NEW MAJEUR 7ème party member**

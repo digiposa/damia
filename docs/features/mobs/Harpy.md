@@ -1,4 +1,33 @@
-# Harpy — Minor Enemy Wind avian Zenebatos Law City Disc 4 — 3-phase HP-conditional AI escalation + first partial-immunity Minor Enemy + Panic Bell 8% drop 🟡
+# Harpy — Minor Enemy Wind avian Zenebatos Law City Disc 4 — Fear synergy Guillotine + 3-phase HP escalation + first partial-immunity Minor Enemy + Disc 4 confirmed CROSS-SOURCE 🟢
+
+> ⭐⭐⭐ **Law City Zenebatos canon CROSS-SOURCE CONFIRMED 4-way (fandom Harpy) ⭐⭐⭐** — Quote canon : "It can be found in **Zenebatos**" + "**Law City, Zenebatos**". Pattern Damia : ⭐⭐⭐ **Law City Zenebatos canon CROSS-SOURCE CONFIRMED 4-way** (Death Purger fandom + Guillotine fandom + Harpy fandom + Wingly judicial city canon récurrent). Pattern récurrent : Tous Zenebatos mobs = Disc 4 Monsters category canon CONFIRMED.
+>
+> ⭐⭐⭐ **Disc 4 Monsters category CONFIRMED Harpy (fandom) ⭐⭐⭐** — Quote canon : "Categories: **Disc 4 Monsters**". Pattern Damia : ⭐ **Disc 4 Monsters Zenebatos canon CONFIRMED CROSS-SOURCE** (cohérent récurrent Death Purger Disc 4 récurrent + Guillotine récent récurrent + Harpy CONFIRMED).
+>
+> ⭐⭐⭐ **⚠️ Fear synergy mechanic Harpy + Guillotine canon NEW MAJEUR (fandom Harpy) ⭐⭐⭐** — Quote canon : "It appears with the **Fear-casting Guillotine sometimes, and its already high potential for Magic Damage can be doubled by the Fear effect**". Pattern Damia : ⭐⭐⭐ **Fear synergy mechanic canon NEW MAJEUR** — Fear effect = magic damage AMPLIFIER ×2 récipient (cohérent récurrent Fear status mechanic canon TLoD). **Strategic combo Guillotine Midnight Terror PARTY-AoE Fear + Harpy Spinning Gale/Rave Twister Wind magic doubled damage** = devastating Disc 4 Zenebatos canon NEW MAJEUR. Cohérent récurrent boss-tier combo mechanics canon. À documenter `combat/status-mechanics.md` Fear ×2 magic damage amplifier mechanic canon NEW MAJEUR + `combat/mob-ai-rules.md` paired formation Fear synergy canon NEW MAJEUR. Pattern Damia : **Fear = magic damage doubled status canon NEW MAJEUR récurrent** (probable récurrent canon TLoD à reconfirmer Fear mechanics canon récurrent).
+>
+> ⭐⭐⭐ **Strategy Harpy priority over Fear deal-after canon NEW MAJEUR (fandom Harpy) ⭐⭐⭐** — Quote canon : "**Probably best to get rid of the Harpy first, and deal with the Fear after**". Pattern Damia : ⭐⭐⭐ **Strategy Harpy priority canon NEW MAJEUR** — Harpy = highest threat (Wind magic + Fear synergy multiplier) Guillotine+Harpy formation 245 canon. Cohérent récurrent magic-caster priority kill canon récurrent boss-tier strategy. À refléter `combat/strategy-canon.md` (à créer) Harpy priority strategy canon NEW.
+>
+> ⭐⭐⭐ **HP JP 750 +25% canon Damia rule CONFIRMED 10ème instance CROSS-MOB-BOSS (fandom Harpy) ⭐⭐⭐** — Quote canon : "**HP: 600 (US/EU) / 750 (JP)**". 600 × 1.25 = 750 = EXACT match pattern récurrent canon JP stats rule. Pattern Damia : ⭐ **JP HP +25% systematic récurrent CONFIRMED 10ème instance CROSS-MOB-BOSS** (Gangster + Gehrich + Ghost Commander + Glare + Gnome + Goblin + Greham + Guftas + Guillotine + Harpy). Wiki + fandom Harpy HP MATCH (600 wiki = 600 US-EU fandom) — pas d'anomaly wiki canon. **Damia adopts JP HP 750 canon Harpy**.
+>
+> ⭐⭐⭐ **Gold JP 16 = Damia ÷3 rule ALIGNMENT EXACT confirmed 6ème instance CROSS-MOB-BOSS (fandom Harpy) ⭐⭐⭐** — Quote canon : "**Gold: 48 (US/EU) / 16 (JP)**". 48 ÷ 3 = 16 = ⭐⭐⭐ **EXACT match Damia ÷3 systematic rule = JP value alignment canon récurrent CONFIRMED 6ème instance**. Pattern Damia : **Damia ÷3 rule = JP Gold value alignment canon récurrent CONFIRMED 6ème instance** (Damia adopts JP variant systematically). Wiki + fandom MATCH (48 wiki = 48 US-EU fandom) — pas d'anomaly canon. **Damia adopts JP Gold 16G canon Harpy** (déjà appliqué via ÷3 rule récurrent).
+>
+> ⭐⭐⭐ **Talon Scratch official ability name CROSS-SOURCE CONFIRMED (fandom Harpy) ⭐⭐⭐** — Quote canon : "**Talon Scratch** — normal attack" (sans tilde fandom = official). Pattern Damia : ⭐⭐⭐ **Talon Scratch official ability name CROSS-SOURCE CONFIRMED** — wiki "~Talon Scratch" tilde marker = community approximation pour quelques mobs but fandom drops tilde = canonical confirmed (cohérent canon Talon Scratch official). Sprite "Pique/Talon" = shorthand sprite labelisation (Pique = thrust/stab French + Talon = avian talons = combined attack visual). À refléter `combat/mob-abilities.md` Talon Scratch official name CROSS-SOURCE confirmed.
+>
+> ⭐⭐⭐ **"Medium-high Defense + high Magic Defense" canon CROSS-SOURCE CONFIRMED magic-tank Harpy (fandom) ⭐⭐⭐** — Quote canon : "It has **medium-high Defense and high Magic Defense**". Pattern Damia : ⭐⭐⭐ **Magic-tank canon CROSS-SOURCE CONFIRMED** — DF 120 medium-high + MDF 160 high récurrent magic-tank canon récurrent. Cohérent récurrent Wind mob = magic-tank canon (probable récurrent autres Wind mobs).
+>
+> ⭐⭐ **AT 85 + MAT 80 fandom higher anomaly récurrent (fandom Harpy) ⭐⭐** — Wiki AT 76/MAT 71 + fandom AT 85/MAT 80 = +12%/+13% small divergence cohérent récurrent fandom higher anomaly récurrent (Greham + Feyrbrand + Guftas + Guillotine + Harpy pattern récurrent). Wiki canon prevails per Damia rule. À reconfirmer Discord canonical source si possible.
+>
+> ⭐⭐ **Battle pairing CROSS-SOURCE CONFIRMED 3 formations Harpy (fandom) ⭐⭐** — Quote canon : "Harpy / Harpy x2 / Harpy + Guillotine" 3 formations confirmed CROSS-SOURCE (cohérent wiki récurrent 3 formations 242/248/245). Pattern Damia : 3 formations canon récurrent CROSS-SOURCE CONFIRMED.
+>
+> ⭐⭐ **Abilities CROSS-SOURCE confirmed Talon Scratch + Spinning Gale + Rave Twister (fandom Harpy) ⭐⭐** — Quote canon : "Talon Scratch — normal attack + Spinning Gale — single target Wind damage + Rave Twister — multiple target Wind damage". Pattern Damia : 3 abilities canon CROSS-SOURCE CONFIRMED (récurrent wiki ~Talon Scratch + Spinning Gale + Rave Twister).
+>
+> ⭐⭐ **JP "ハーピー" Harpy probable JP name canon récurrent (fandom Harpy) ⭐⭐** — Fandom does NOT provide JP name explicit. À investiguer JP name récurrent canon mobs pattern.
+>
+> **Sources** :
+>
+> - 🥈 [`_sources/lod-wiki-harpy.md`](./_sources/lod-wiki-harpy.md) — wiki LoD tier 2 (Minor Enemy Wind Zenebatos Law City Disc 4 + HP 600 + AT 76 + DF 120 + A-AV 10% NEW MAJEUR + SPD 60 + MAT 71 + MDF 160 + ⚠️ Status 4/8 PARTIAL NEW MAJEUR + Yield 192 EXP/48G/Panic Bell 8% + Counter 28 standard list + 3 formations 242/245/248 + AI 3-phase HP-conditional)
+> - 🥉 [`_sources/fandom-harpy.md`](./_sources/fandom-harpy.md) — Fandom tier 3 (**HP JP 750 +25% Damia rule CONFIRMED 10ème instance** + wiki match no anomaly + **JP Gold 16 = Damia ÷3 ALIGNMENT EXACT 6ème instance** + wiki match no anomaly + AT 85 +12% fandom higher / MAT 80 +13% fandom higher anomaly récurrent + **Law City Zenebatos CONFIRMED 4-way** + **Disc 4 Monsters category CONFIRMED** + ⭐⭐⭐ **Fear synergy mechanic Harpy + Guillotine canon NEW MAJEUR** Magic Damage doubled by Fear effect + **Strategy Harpy priority over Fear deal-after canon NEW MAJEUR** + **Talon Scratch official ability name CROSS-SOURCE CONFIRMED** + **"Medium-high Defense + high Magic Defense" magic-tank canon CROSS-SOURCE CONFIRMED** + Battle pairing 3 formations CROSS-SOURCE confirmed + Abilities CROSS-SOURCE Talon Scratch/Spinning Gale/Rave Twister)
 
 > **Minor Enemy Wind avian Zenebatos Law City Disc 4 — submaps 530/532/717/529/718 (Wingly judicial city canon récurrent Death Purger + Guillotine récurrent) — Talon Scratch / Spinning Gale / Rave Twister 3-phase HP escalation canon NEW MAJEUR** ⭐⭐⭐. HP 600 (Damia JP +25% à confirmer fandom — 750 probable) + AT 76 high + DF 120 récurrent + SPD 60 baseline + MAT 71 + **MDF 160 HIGHEST récurrent magic-tank** + A-AV **10% NEW MAJEUR** (vs récurrent A-AV 0% CROSS-MOB-BOSS) + M-AV 0%. ⚠️⚠️⚠️ **CORRECTION MAJEURE Status Immunity** : **4/8 PARTIAL canon NEW MAJEUR** — Petrify/Bewitch/Arm Block/Dispirit immune + **Confuse/Fear/Poison/Stun VULNERABLE** (NOT 8/8 ALL IMMUNE récurrent pattern!) — premier partial-immunity Minor Enemy documenté Damia. **Yield 192 EXP + 48G (Damia ÷3 = 16G) + Panic Bell 8% drop canon NEW MAJEUR** — probable Fear-related item (Panic = Fear theme). **Counter Opportunities 28 HIGH counter-friendly canon récurrent CROSS-MOB CONFIRMED 3ème instance** (identical list Guftas + Guillotine récurrent — single canonical counter list shared CROSS-MOB-BOSS récurrent canon récurrent CONFIRMED). **Counters Additions: Yes**. **3 encounter formations canon** : solo 242 (10%/30%) + Guillotine+Harpy 245 récurrent (35%/20%/35%/30%) + **Harpy x2 248 NEW MAJEUR same-type formation** (20%/35%/35%/30%). **AI 3-phase HP-conditional escalation canon NEW MAJEUR** : ~Talon Scratch 1× phys HP>50% + **Spinning Gale 1.5× Wind magic** single HP ≤50% >25% + **Rave Twister 1× Wind magic PARTY-AoE last-stand** HP ≤25%. **Escape 30% canon Zenebatos récurrent**.
 >
@@ -33,14 +62,20 @@
 > ⭐⭐ **Submaps Zenebatos 529/530/532/717/718 canon récurrent CROSS-MOB CONFIRMED Harpy (wiki) ⭐⭐** — Submaps Harpy 530/532/717/529/718. Pattern Damia : ⭐⭐⭐ **Zenebatos submap pool canon récurrent CROSS-MOB CONFIRMED 3-way** (Death Purger + Guillotine + Harpy submaps 529/530/532/717/718 récurrent). À documenter `locations/Zenebatos.md` (à créer) Zenebatos submap pool canon récurrent confirmé.
 >
 > ⭐⭐ **3-phase no-overlap canon NEW MAJEUR vs Guillotine 2-phase overlap récent (wiki Harpy) ⭐⭐** — Pattern Damia : 3-phase no-overlap (HP >50% / ≤50%,>25% / ≤25%) vs Guillotine 2-phase overlap (HP >25% / ≤50% — both eligible HP 26-50%). Pattern Damia : **Mob AI complexity diversity canon récurrent NEW** — Harpy = 3-phase distinct + Guillotine = 2-phase overlap.
->
-> **Sources** :
->
-> - 🥈 [`_sources/lod-wiki-harpy.md`](./_sources/lod-wiki-harpy.md) — wiki LoD tier 2 (Minor Enemy Wind Zenebatos Law City Disc 4 submaps 529/530/532/717/718 + HP 600 + AT 76 + DF 120 récurrent + **A-AV 10% NEW MAJEUR premier non-zero physical evasion** + SPD 60 + MAT 71 + **MDF 160 HIGHEST récurrent magic-tank NEW** + M-AV 0% + ⚠️⚠️ **CORRECTION MAJEURE Status Immunity 4/8 PARTIAL canon NEW MAJEUR premier partial-immunity Minor Enemy documenté Damia** + Petrify/Bewitch/Arm Block/Dispirit immune + **Confuse/Fear/Poison/Stun VULNERABLE** + Yield 192 EXP/48G/**Panic Bell 8% drop NEW MAJEUR Fear-themed item** + **Counter 28 HIGH identical Guftas + Guillotine 3ème instance standard counter list récurrent CONFIRMED** + Counters Additions: Yes + 3 formations : solo 242 + Guillotine+Harpy 245 récurrent + **Harpy x2 248 same-type dual-formation NEW MAJEUR** + **AI 3-phase HP-conditional escalation NEW MAJEUR** ~Talon Scratch >50% + **Spinning Gale ≤50%>25% single 1.5× Wind magic récurrent** + **Rave Twister ≤25% PARTY-AoE 1× Wind magic last-stand récurrent CROSS-MOB-BOSS Wind pool CONFIRMED** + Escape 30% Zenebatos baseline récurrent + Wind avian Wingly mob canon CONFIRMED hypothesis Guillotine récent)
 
 ## Statut
 
-🟡 **Draft post-ingestion wiki LoD seul** — fandom à ingérer (Gallery + Trivia + appearance canon visual + JP HP variant confirmation).
+🟢 **Canon confirmed cross-source** (wiki 🥈 + fandom 🥉) — 2 sources cohérentes + enrichissement fandom Disc 4 Zenebatos :
+
+- ⭐⭐⭐ **Fear synergy mechanic Harpy + Guillotine canon NEW MAJEUR** — Magic Damage doubled by Fear effect (Guillotine Midnight Terror PARTY-AoE Fear + Harpy Wind magic = devastating combo)
+- ⭐⭐⭐ **Strategy Harpy priority over Fear deal-after canon NEW MAJEUR**
+- ⭐⭐⭐ **JP HP 750 +25% Damia rule CONFIRMED 10ème instance** + wiki match no anomaly
+- ⭐⭐⭐ **JP Gold 16 = Damia ÷3 ALIGNMENT EXACT 6ème instance** + wiki match no anomaly
+- ⭐⭐⭐ **Talon Scratch official ability name CROSS-SOURCE CONFIRMED**
+- ⭐⭐⭐ **Law City Zenebatos canon CROSS-SOURCE CONFIRMED 4-way**
+- ⭐⭐⭐ **Disc 4 Monsters category CONFIRMED**
+- ⭐⭐⭐ **Magic-tank canon CONFIRMED** (medium-high Defense + high Magic Defense)
+- ⚠️ AT 85 / MAT 80 fandom +12%/+13% small divergence récurrent (wiki canon prevails)
 
 ## Identity canon ⭐⭐⭐
 
@@ -54,20 +89,20 @@
 - **Classification** : Minor Enemy (récurrent Wingly Law City mob class)
 - **Formations** : Solo 242 / Guillotine+Harpy 245 récurrent / **Harpy x2 248 same-type NEW MAJEUR**
 
-## Stats canon ⭐⭐⭐ (wiki seul — fandom à ingérer JP variant)
+## Stats canon ⭐⭐⭐ CROSS-SOURCE Damia adoption JP rule CONFIRMED 10ème HP + 6ème Gold ALIGNMENT EXACT
 
-| Stat     | Value          | Notes                                                                                      |
-| -------- | -------------- | ------------------------------------------------------------------------------------------ |
-| **HP**   | 600            | ⭐ Damia JP +25% systematic à confirmer fandom — 750 probable                              |
-| AT       | 76             | High late-game canon récurrent Disc 4 Zenebatos                                            |
-| DF       | 120            | Récurrent CROSS-MOB-BOSS                                                                   |
-| **A-AV** | **10%** ⭐⭐⭐ | ⭐⭐⭐ **Premier non-zero A-AV Minor Enemy NEW MAJEUR** — avian/aerial mob canon récurrent |
-| SPD      | 60             | Mid baseline canon récurrent                                                               |
-| MAT      | 71             | Modéré (balanced phys-magic canon)                                                         |
-| **MDF**  | **160** ⭐⭐⭐ | ⭐⭐⭐ **HIGHEST récurrent magic-tank canon NEW MAJEUR Disc 4 Zenebatos**                  |
-| M-AV     | 0%             | No magic evasion                                                                           |
+| Stat     | Wiki canon     | Fandom canon           | Damia adoption    | Notes                                                                                                  |
+| -------- | -------------- | ---------------------- | ----------------- | ------------------------------------------------------------------------------------------------------ |
+| **HP**   | 600            | **600 US-EU / 750 JP** | **750 JP** ⭐⭐⭐ | ⭐ JP HP +25% canon récurrent CONFIRMED 10ème instance CROSS-MOB-BOSS — wiki + fandom MATCH no anomaly |
+| AT       | 76             | **85** ⚠️              | **76 wiki canon** | ⚠️ Fandom +12% small divergence anomaly récurrent — wiki tier 2 prevails                               |
+| DF       | 120            | 120                    | **120**           | Match CROSS-SOURCE — medium-high canon confirmed                                                       |
+| **A-AV** | **10%** ⭐⭐⭐ | -                      | **10%** ⭐⭐⭐    | ⭐⭐⭐ **Premier non-zero A-AV Minor Enemy NEW MAJEUR** — avian/aerial mob canon récurrent             |
+| SPD      | 60             | 60                     | **60**            | Match CROSS-SOURCE — mid baseline                                                                      |
+| MAT      | 71             | **80** ⚠️              | **71 wiki canon** | ⚠️ Fandom +13% small divergence anomaly récurrent — wiki canon prevails                                |
+| **MDF**  | **160** ⭐⭐⭐ | 160                    | **160** ⭐⭐⭐    | Match CROSS-SOURCE — high Magic Defense canon CONFIRMED magic-tank                                     |
+| M-AV     | 0%             | -                      | **0%**            | No magic evasion                                                                                       |
 
-**Gold canon Damia** : 48G ÷3 = **16G** systematic récurrent.
+**Gold canon Damia** : Wiki 48G / **Fandom US-EU 48G + JP 16G**. ⭐⭐⭐ **Damia ÷3 rule = JP 16G EXACT match canon récurrent CONFIRMED 6ème instance** (48 ÷ 3 = 16 EXACT = JP value alignment). Wiki + fandom MATCH (48 wiki = 48 US-EU fandom) — pas d'anomaly canon.
 
 ## Status Immunity canon ⚠️⚠️⚠️ CORRECTION MAJEURE 4/8 PARTIAL NEW MAJEUR — premier partial-immunity Minor Enemy documenté Damia
 
@@ -111,13 +146,15 @@ Pattern Damia : ⭐⭐⭐ **Living vs Construct/Undead status immunity dichotomy
 
 ## AI canon ⭐⭐⭐ 3-phase HP-conditional escalation NEW MAJEUR + Wind ability pool récurrent CROSS-MOB-BOSS CONFIRMED
 
-### Harpy Abilities canon récurrent
+### Harpy Abilities canon CROSS-SOURCE official names CONFIRMED
 
-| HP        | Action                   | Target        | Effect canon                                                            | Visual notes                                                                     |
-| --------- | ------------------------ | ------------- | ----------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| >50%      | ⭐ **~Talon Scratch**    | Single        | 1× Physical damage                                                      | Basic phys attack canon (avian talons strike probable)                           |
-| ≤50% >25% | ⭐⭐⭐ **Spinning Gale** | Single        | **1.5× Wind-elemental magic damage** récurrent CROSS-MOB-BOSS Wind pool | Wind magic single canon récurrent (cohérent Greham wiki + Grand Jewel récurrent) |
-| ≤25%      | ⭐⭐⭐ **Rave Twister**  | **Party-AoE** | **1× Wind-elemental magic damage** récurrent CROSS-MOB-BOSS Wind pool   | ⭐⭐⭐ **Party-AoE Wind magic last-stand canon NEW MAJEUR** desperate sub-25% HP |
+| Wiki name      | Fandom official name CONFIRMED | HP        | Target        | Effect canon                                                            | Visual notes                                                                       |
+| -------------- | ------------------------------ | --------- | ------------- | ----------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| ~Talon Scratch | ⭐⭐⭐ **Talon Scratch**       | >50%      | Single        | 1× Physical damage                                                      | Avian talons strike (sprite "Pique/Talon" shorthand visual canon récurrent récent) |
+| Spinning Gale  | ⭐⭐⭐ **Spinning Gale**       | ≤50% >25% | Single        | **1.5× Wind-elemental magic damage** récurrent CROSS-MOB-BOSS Wind pool | Wind magic single canon récurrent (cohérent Greham wiki + Grand Jewel récurrent)   |
+| Rave Twister   | ⭐⭐⭐ **Rave Twister**        | ≤25%      | **Party-AoE** | **1× Wind-elemental magic damage** récurrent CROSS-MOB-BOSS Wind pool   | ⭐⭐⭐ **Party-AoE Wind magic last-stand canon NEW MAJEUR** desperate sub-25% HP   |
+
+⭐⭐⭐ **Talon Scratch official ability name CROSS-SOURCE CONFIRMED** : Fandom drops tilde marker = canonical confirmed (vs wiki tilde community marker). Cohérent récurrent ability names CONFIRMED pattern récurrent.
 
 ⭐⭐⭐ **3-phase HP-conditional AI escalation canon NEW MAJEUR + no-overlap distinct phases** :
 
@@ -134,6 +171,20 @@ Pattern Damia : ⭐⭐⭐ **Desperate AoE escalation sub-25% HP canon NEW MAJEUR
 3. ⭐⭐⭐ **Wind ability pool canon récurrent CROSS-MOB-BOSS CONFIRMED** — Spinning Gale + Rave Twister shared canon (Greham + Grand Jewel + Harpy récurrent)
 4. ⭐⭐⭐ **Talon Scratch avian phys attack canon NEW** (probable visual avian talons strike)
 5. ⭐⭐⭐ **Living vs Construct status dichotomy canon NEW MAJEUR** — Harpy living = 4/8 vulnerable (mental + Poison + Stun)
+6. ⭐⭐⭐ **Fear ×2 magic damage amplifier mechanic canon NEW MAJEUR CROSS-SOURCE** — Fear effect doubles magic damage received (fandom canon)
+
+## Fear synergy mechanic canon ⭐⭐⭐ NEW MAJEUR (fandom) — Guillotine + Harpy devastating combo Disc 4 Zenebatos
+
+Quote canon fandom : "It appears with the **Fear-casting Guillotine sometimes, and its already high potential for Magic Damage can be doubled by the Fear effect**. **Probably best to get rid of the Harpy first, and deal with the Fear after**".
+
+⭐⭐⭐ **Fear synergy mechanic canon NEW MAJEUR** :
+
+- **Fear effect = magic damage AMPLIFIER ×2** récipient canon (cohérent récurrent Fear status mechanic canon TLoD probable)
+- **Strategic combo formation 245 Guillotine + Harpy** : Guillotine Midnight Terror PARTY-AoE Fear (cast HP ≤50%) + Harpy Spinning Gale/Rave Twister Wind magic ×2 damage doubled = **devastating Disc 4 Zenebatos boss-tier combo** canon NEW
+- ⭐⭐⭐ **Strategy canon : Harpy priority kill first** (highest threat — Wind magic + Fear synergy multiplier) puis Fear removal après
+- Pattern Damia : Fear = magic damage doubled status canon NEW MAJEUR récurrent à reconfirmer canon TLoD général
+
+À documenter `combat/status-mechanics.md` Fear ×2 magic damage amplifier mechanic canon NEW MAJEUR + `combat/mob-ai-rules.md` paired formation Fear synergy canon NEW MAJEUR + `combat/strategy-canon.md` Harpy priority strategy canon NEW.
 
 ## Counter Opportunities canon ⭐⭐⭐ 28 HIGH identical Guftas + Guillotine 3ème instance standard counter list récurrent CONFIRMED
 

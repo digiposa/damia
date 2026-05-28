@@ -221,6 +221,66 @@
 
 → **Wiki tier 2 prévaut pour stats numériques** (AT 18, MAT 12). **Fandom prévaut pour names + color-status mapping** (plus précis canon in-game).
 
+## Sprite canon ⭐⭐⭐ Damia integration (Gemini vassal Dragon-tier — Crystal Beam confirmation Jade=crystal theme CROSS-BOSS)
+
+> ![Feyrbrand sprite sheet](./_assets/feyrbrand-sprite.png)
+
+⭐⭐⭐ **Sprite Feyrbrand CONFIRMS canon fandom récurrent CROSS-SOURCE** :
+
+- ✅ **Praying mantis shape canon** (insectoid dragon body + mantis-like limbs visibles) — cohérent récurrent fandom "praying mantis shape" canon
+- ✅ **Green body + jade scales** canon (Wind = Jade element correspondence canon récurrent)
+- ✅ **Tusks visibles** canon (Green-Tusked Dragon moniker canon JP/EN 緑牙竜)
+- ✅ **Wings + aerial-capable** canon (vassal Dragon flight canon récurrent)
+- ✅ **Crystal/jade visual theme** canon (cohérent récurrent Jade = crystal theme + Greham Crystal Geyser Dragoon ability canon récurrent)
+
+**Animation structure prête Damia (Gemini cycles canonicaux vassal Dragon-tier)** :
+
+| Cycle        | Frames                       | Notes canon                                                                             |
+| ------------ | ---------------------------- | --------------------------------------------------------------------------------------- |
+| **ISO_SE**   | 1 angle shown                | ⭐ **Single ISO angle sample** — vassal Dragon sub-tier sprite probable (à confirmer)   |
+| **IDLE**     | **4-frame breathing cycle**  | Standard boss-tier breathing idle (cohérent récurrent boss IDLE 4-frame)                |
+| **ATTACK 1** | **Crystal Beam with effect** | ⭐⭐⭐ **Crystal Beam ability NEW MAJEUR** (Jade crystal theme cohérent Greham Geyser)  |
+| **DEATH**    | **6-frame felling**          | ⭐ **Frame-by-frame felling canon NEW** — Dragon collapse death visual (vs vanish/dust) |
+
+⭐⭐⭐ **Crystal Beam ATTACK 1 canon NEW MAJEUR (sprite)** :
+
+- Beam canon = horizontal/directional projectile visual (vs Crystal Geyser vertical eruption Greham Dragoon canon récurrent)
+- ⭐⭐⭐ **Jade crystal elemental theme canon CROSS-BOSS CONFIRMED** — Feyrbrand Crystal Beam + Greham Dragoon Crystal Geyser = paired Dragon-Dragoon shared Jade crystal visual canon récurrent
+- Possible mapping : Crystal Beam = sprite-canon ability + wiki Tusk Attack/Slime Shot fandom official names = 3-ability roster Feyrbrand
+- Cohérent Wind element + Jade Dragon Tribe canon (Wind = Jade crystal correspondence récurrent)
+- À documenter `combat/boss-abilities.md` (à créer) — Crystal Beam Feyrbrand ability NEW MAJEUR
+
+⭐⭐⭐ **DEATH frame-by-frame felling canon NEW MAJEUR (sprite)** :
+
+- Felling = Dragon collapses to ground visual (vs vanish/dust récurrent boss death + Greham Crystal Shatter Dragoon canon récurrent)
+- ⭐ **Dragon felling death canon NEW** — distinct boss death style "large creature collapse" vs humanoid vanish récurrent
+- Cohérent canon : Feyrbrand defeated body REMAINS post-fight (vs Greham vanishes fandom canon) — Lavitz inherits Jade Dragoon Spirit via eye merge on Greham's corpse récurrent canon
+- À refléter `quests/disc1-greham-feyrbrand.md` Dragon body remains post-fight visual canon
+
+⭐⭐⭐ **Sprite tier hierarchy canon EXPANSION NEW Damia — vassal Dragon-tier sub-class** :
+
+| Tier                             | ISO angles        | Locomotion cycle                       | Special                                              |
+| -------------------------------- | ----------------- | -------------------------------------- | ---------------------------------------------------- |
+| Mob (Goblin)                     | 2 (SE+SW)         | 6-frame normal walk                    | Standard                                             |
+| Boss walking heavy (Gorgaga)     | 4 (4-dir)         | 6-frame heavy walk                     | Standard                                             |
+| Boss walking standard (Greham)   | 4 (4-dir)         | 6-frame standard walk                  | Standard                                             |
+| Boss hovering (Grand Jewel)      | 4 (4-dir)         | 6-frame heavy HOVER                    | Standard                                             |
+| Dragoon form (Greham)            | 8 (8-dir)         | 8-frame aerial + 6-frame floating idle | Elaborate Dragoon-tier                               |
+| ⭐ **Vassal Dragon (Feyrbrand)** | **1 (SE sample)** | **4-frame breathing IDLE**             | ⭐ **Large creature + felling death + Crystal Beam** |
+
+Pattern Damia : ⭐⭐⭐ **Vassal Dragon sprite sub-tier canon NEW Damia** — vassal Dragons (Feyrbrand + Regole + Divine Dragon + Mortal Dragon récurrent pattern) = large creature sprite + minimal directional facing (1 angle sample → probable 2-4 angles full + body-anchored attacks vs walking locomotion). Cohérent récurrent "first of several vassal Dragons" canon fandom + Dragon body proportions = larger sprite per direction. Pattern probable récurrent tous vassal Dragons future.
+
+⭐⭐⭐ **Jade crystal elemental visual theme canon CROSS-BOSS CONFIRMED** :
+
+| Boss               | Jade crystal ability canon                       | Form          |
+| ------------------ | ------------------------------------------------ | ------------- |
+| **Greham Dragoon** | ⭐⭐⭐ **Crystal Geyser** (vertical eruption)    | Dragoon form  |
+| **Feyrbrand**      | ⭐⭐⭐ **Crystal Beam** (directional projectile) | Vassal Dragon |
+
+Pattern Damia : ⭐⭐⭐ **Jade Dragoon Spirit + Jade Dragon = crystal visual theme canon CROSS-BOSS CONFIRMED** — paired Dragon-Dragoon Disc 1 share crystal ability visual canon récurrent (cohérent Jade = crystal correspondence canon récurrent + Wind element). Probable pattern Lavitz/Albert future Jade Dragoon transformations = crystal-themed abilities canon récurrent (Wind Additions Gust of Wind + Flower Storm + probable crystal-themed Dragoon Magic).
+
+À intégrer future : `public/assets/sprites/bosses/feyrbrand-*.png` (frame-split par cycle) + `data/bosses/feyrbrand.ts` (à créer) AvatarSpriteForm vassal Dragon-tier pattern récurrent + `RenderSystem` Dragon-aware (large creature + body-anchored attacks + felling death animation) + Crystal Beam directional projectile particle effect + paired encounter formation 393 with Greham canon récurrent.
+
 ## Liens transverses
 
 - [`../locations/Nest of Dragon.md`](../locations/Nest of Dragon.md) — location canon encounter

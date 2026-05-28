@@ -212,6 +212,70 @@
 - ⭐⭐ **Guftas appearance + sprite canon** : pas de Gallery wiki — à ingérer fandom/sprite future
 - ⭐⭐ **Fruegel 2nd Visit stats canon** : vs Fruegel 1st Visit récurrent — à investiguer
 
+## Sprite canon ⭐⭐⭐ Damia integration (Gemini Minor Enemy extended initial — approximation à raffiner future)
+
+> ![Guftas sprite sheet](./_assets/guftas-sprite.png)
+
+> ⚠️ **NOTE user 2026-05-28** : "ils sont pas parfait mais on verra plus tard pour les refaire plus fidèles" — sprite initial approximation Gemini, à raffiner future fidélité canonical (helmet spike + canine proportions + couleur Hellena Darkness theme).
+
+⭐⭐⭐ **Sprite Guftas CONFIRMS canon fandom récurrent CROSS-SOURCE** :
+
+- ✅ **Quadruped canine 4-legged dog** canon (cohérent récurrent fandom "Guftas is Fruegel's pet dog")
+- ✅ **Helmet with spike on top** canon (cohérent récurrent fandom "He wears a helmet with a spike on top of it")
+- ✅ **Dark brown/black coat** canon (Hellena Darkness mob theme récurrent)
+- ⚠️ **1 direction shown** (sample initial — à étendre future 2 ISO mob-tier ou 4 ISO Minor Enemy extended ?)
+
+**Animation structure prête Damia (Gemini cycles canonicaux Minor Enemy extended suite)** :
+
+| Cycle             | Frames                    | Notes canon                                                                                                                                         |
+| ----------------- | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **IDLE**          | 6-frame loop              | ⭐ Standard breathing/panting idle (canine récurrent)                                                                                               |
+| **MOVE**          | 6-frame cycle             | ⭐ Quadruped walking/trotting locomotion canon NEW                                                                                                  |
+| **ATTACK-CHARGE** | **8-frame**               | ⭐⭐⭐ **NEW MAJEUR ability variant** — charge attack (cohérent fandom Bite "runs up" rush)                                                         |
+| **ATTACK-BITE**   | **5-frame**               | ⭐⭐⭐ **Bite official fandom ability** — front legs on shoulders + bite visual canon                                                               |
+| **DAMAGED**       | **4-frame hurt reaction** | ⭐⭐⭐ **DAMAGED canon NEW MAJEUR Minor Enemy** (cohérent Fruegel DAMAGE récent boss extended)                                                      |
+| **DEATH**         | 7-frame                   | Minor Enemy death dissolution canon                                                                                                                 |
+| **TAUNT**         | ⭐⭐⭐ **6-frame**        | ⭐⭐⭐ **TAUNT canon NEW MAJEUR Minor Enemy** — boss-tier emote extend to Minor Enemy (cohérent Fruegel TAUNT/LAUGH récurrent récent boss extended) |
+
+⭐⭐⭐ **NEW MAJEUR canon mechanics (sprite Gemini)** :
+
+1. ⭐⭐⭐ **ATTACK-CHARGE + ATTACK-BITE dual canon NEW MAJEUR Guftas** — 2 distinct attack animations (vs fandom récurrent Bite + Howl). Possible mapping :
+   - **ATTACK-CHARGE 8-frame** = visual rush phase before Bite (cohérent fandom "Guftas runs up to a party member") canon NEW
+   - **ATTACK-BITE 5-frame** = bite contact phase official Bite ability
+   - ⚠️ **Howl ability sprite NOT shown** (vocalization audio + visual emote — peut-être TAUNT cycle reusable ? à investiguer future)
+2. ⭐⭐⭐ **DAMAGED + TAUNT extended cycles canon NEW MAJEUR Minor Enemy** — Minor Enemy = boss-tier extended animation suite canon récurrent (cohérent Fruegel boss extended récent canon) — Fruegel pets héritent extended suite pattern canon NEW MAJEUR.
+
+⭐⭐⭐ **Minor Enemy extended sprite suite canon NEW MAJEUR — sprite tier hierarchy EXPANSION (Guftas) ⭐⭐⭐** :
+
+| Tier                                     | ISO angles        | Locomotion            | Animation suite                                                          |
+| ---------------------------------------- | ----------------- | --------------------- | ------------------------------------------------------------------------ |
+| Mob standard (Goblin)                    | 2 (SE+SW)         | 6-frame normal        | Standard 4 cycles (IDLE/WALK/ATTACK/DEATH)                               |
+| ⭐⭐⭐ **Minor Enemy extended (Guftas)** | 1 sample (canine) | **6-frame quad MOVE** | ⭐⭐⭐ **Extended 7 cycles (IDLE/MOVE/CHARGE/BITE/DAMAGED/DEATH/TAUNT)** |
+| Boss walking heavy (Gorgaga)             | 4 (4-dir)         | 6-frame heavy         | Standard 4 cycles                                                        |
+| Boss walking standard (Greham)           | 4 (4-dir)         | 6-frame standard      | Standard 4 cycles                                                        |
+| Boss hovering (Grand Jewel)              | 4 (4-dir)         | 6-frame heavy HOVER   | Standard 4 cycles                                                        |
+| Dragoon form (Greham)                    | 8 (8-dir)         | 8-frame aerial        | Elaborate Dragoon-tier                                                   |
+| Vassal Dragon (Feyrbrand)                | 1 (sample)        | (large body)          | Standard 4 cycles                                                        |
+| Boss extended (Fruegel)                  | 7-8 (NSEW+diag)   | 6-frame heavy         | ⭐⭐⭐ Extended 7 cycles                                                 |
+
+Pattern Damia : ⭐⭐⭐ **Minor Enemy extended sprite sub-tier canon NEW MAJEUR Damia** — Minor Enemies paired boss formation (Guftas + Rodriguez Fruegel pets canon récurrent) héritent extended animation suite pattern from master (Fruegel boss extended récurrent). Sprite tier hierarchy 8 tiers canon NEW MAJEUR. Cohérent thematic pet-master visual consistency canon récurrent (Guftas helmet spike matches Fruegel stone block helmet récurrent).
+
+⭐⭐⭐ **Quadruped canine locomotion canon NEW MAJEUR (sprite Gemini)** :
+
+- 4-legged MOVE 6-frame cycle = quadruped trot/walk distinct biped récurrent
+- ATTACK-CHARGE charge rush + ATTACK-BITE quadruped-rises-front-legs-on-shoulders visual cohérent fandom récurrent
+- ⭐⭐⭐ **First quadruped canine sprite documenté canon Damia** — Pattern récurrent probable future canine bosses/mobs (Kamuy Disc 3 récurrent quadruped + autres canine enemies récurrent canon TLoD).
+
+⚠️ **Sprite Guftas à raffiner future (note user)** :
+
+- Helmet spike fidélité canonical à améliorer (référence fandom canon récurrent helmet récurrent boss Fruegel design theme)
+- Canine proportions à confirmer (dog vs wolf-like ? — fandom "pet dog" canon récurrent)
+- Color palette Hellena Darkness theme à valider (cohérent récurrent Darkness mob Hellena Prison theme)
+- ISO angles extension future (1 sample → 2-4 angles minimum Minor Enemy)
+- Howl ability visual canon à dériver (vocalization + emote — TAUNT reusable ? distinct ?)
+
+À intégrer future : `public/assets/sprites/mobs/guftas-*.png` (frame-split par cycle) + `data/mobs/guftas.ts` (à créer) AvatarSpriteForm Minor Enemy extended pattern + `RenderSystem` cycle-aware (IDLE/MOVE/CHARGE/BITE/DAMAGED/DEATH/TAUNT) + quadruped canine locomotion logic + Howl vocalization audio + Confusion proc visual effect + paired formation 387 with Fruegel + Rodriguez canon récurrent + ⚠️ sprite refresh canonical (helmet spike + canine proportions + Hellena Darkness palette) future.
+
 ## Liens transverses
 
 - [`README.md`](./README.md) — mobs Disc 1 + **Minor Enemy boss-tier classification canon NEW + Boss Extras 3-enemy first formation**

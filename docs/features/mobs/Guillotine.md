@@ -221,6 +221,74 @@
 - ⭐⭐ **Wingly Law City mob pool complet** : Death Purger + Guillotine + Harpy + Professor récurrent + other mobs ? à investiguer
 - ⭐⭐ **Single canonical counter list shared CROSS-MOB-BOSS récurrent canon hypothesis** : à valider plus de mobs/bosses comparaison
 
+## Sprite canon ⭐⭐⭐ Damia integration (Gemini Minor Enemy extended 2 sprites — 4 ISO directional + extended animation suite + 2 color variants approximation)
+
+### Sprite 1 : 4 ISO directional sheet (purple-violet variant)
+
+> ![Guillotine ISO directional sprite sheet](./_assets/guillotine-iso-sprite.png)
+
+⭐⭐⭐ **Sprite Guillotine ISO directional CONFIRMS canon fandom récurrent CROSS-SOURCE** :
+
+- ✅ **Wheeled sentient guillotine apparatus** canon (cohérent récurrent fandom "wheels" canon)
+- ✅ **Horned skeleton-like torso fused on top** canon (cohérent récurrent fandom canon NEW MAJEUR)
+- ✅ **Heavy large blade** canon (top blade visible canon)
+- ✅ **Several spikes uppermost rim + sides** canon
+- ✅ **Chains hanging** canon
+- ✅ **Dark magic/evil spirit animated** visual (purple-violet glow + dark color palette)
+- ⭐⭐⭐ **4 ISO directional angles SE/SW/NW/NE** canon NEW MAJEUR (vs Guftas Minor Enemy 1 sample récurrent récent — Guillotine = higher directional tier)
+
+### Sprite 2 : Extended animation suite (blue-cyan variant)
+
+> ![Guillotine extended animation suite](./_assets/guillotine-animations.png)
+
+⭐⭐⭐ **Sprite Guillotine extended animation suite canon NEW MAJEUR Damia** :
+
+| Cycle              | Frames                | Notes canon                                                                                                                      |
+| ------------------ | --------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| **IDLE**           | 6-frame loop          | ⭐ Standard idle pulsing (dark magic animation cohérent)                                                                         |
+| **MOVE**           | 6-frame cycle         | ⭐ Wheeled rolling locomotion canon (cohérent récurrent wheels appearance canon)                                                 |
+| **ATTACK - SLASH** | ⭐⭐⭐ **8-frame**    | ⭐⭐⭐ **Blade slash visual** = sprite shorthand for **Guile Edge** official fandom canon                                        |
+| **DAMAGE**         | 4-frame hurt reaction | ⭐⭐⭐ **DAMAGE canon récurrent Minor Enemy extended** (cohérent Guftas DAMAGED 4f récent)                                       |
+| **DEATH**          | 7-frame dissolution   | ⭐ Construct death visual canon                                                                                                  |
+| **TAUNT**          | 6-frame               | ⭐⭐⭐ **TAUNT canon récurrent Minor Enemy extended 3ème instance** (cohérent Fruegel boss + Guftas Minor Enemy extended récent) |
+
+⭐⭐⭐ **2 color variants canon Damia (sprite 1 vs sprite 2)** :
+
+- Sprite 1 = **purple-violet variant** (dark magic + evil spirit theme dominant)
+- Sprite 2 = **blue-cyan variant** (Wingly Law City Disc 4 palette ?)
+- ⚠️ **Approximation initial Gemini** — final canonical à raffiner future (cohérent récurrent Guftas note user "pas parfait" récent)
+
+⭐⭐⭐ **Sprite tier hierarchy refinement Minor Enemy extended canon NEW MAJEUR Damia** :
+
+| Tier                                             | ISO angles          | Locomotion               | Animation suite                                                                       |
+| ------------------------------------------------ | ------------------- | ------------------------ | ------------------------------------------------------------------------------------- |
+| Mob standard (Goblin)                            | 2 (SE+SW)           | 6-frame normal           | Standard 4 cycles                                                                     |
+| Minor Enemy extended low (Guftas)                | 1 sample            | 6-frame quad MOVE        | Extended 7 cycles (IDLE/MOVE/CHARGE/BITE/DAMAGED/DEATH/TAUNT)                         |
+| ⭐⭐⭐ **Minor Enemy extended mid (Guillotine)** | **4 (SE+SW+NW+NE)** | **6-frame wheeled MOVE** | ⭐⭐⭐ **Extended 6 cycles (IDLE/MOVE/SLASH/DAMAGE/DEATH/TAUNT) + 4-directional NEW** |
+| Boss walking heavy (Gorgaga)                     | 4 (4-dir)           | 6-frame heavy            | Standard 4 cycles                                                                     |
+| Boss walking standard (Greham)                   | 4 (4-dir)           | 6-frame standard         | Standard 4 cycles                                                                     |
+| Boss hovering (Grand Jewel)                      | 4 (4-dir)           | 6-frame heavy HOVER      | Standard 4 cycles                                                                     |
+| Dragoon form (Greham)                            | 8 (8-dir)           | 8-frame aerial           | Elaborate Dragoon-tier                                                                |
+| Vassal Dragon (Feyrbrand)                        | 1 (sample)          | (large body)             | Standard 4 cycles                                                                     |
+| Boss extended (Fruegel)                          | 7-8 (NSEW+diag)     | 6-frame heavy            | Extended 7 cycles                                                                     |
+
+Pattern Damia : ⭐⭐⭐ **Minor Enemy extended sub-tier hierarchy refined NEW MAJEUR Damia** — Minor Enemy extended LOW (Guftas 1 sample) vs Minor Enemy extended MID (Guillotine 4 ISO) — pet-master visual hierarchy canon (Guftas pet boss Fruegel = 1 sample / Guillotine Zenebatos standalone formation = 4 ISO higher tier). Cohérent récurrent Minor Enemy classification = sub-tier diversity canon NEW MAJEUR.
+
+⭐⭐⭐ **ATTACK-SLASH = Guile Edge canon mapping NEW MAJEUR (sprite Gemini)** :
+
+- ATTACK-SLASH 8-frame = blade slash visual = **Guile Edge official fandom ability** récurrent canon (cohérent fandom "Rolls toward target + smashes down with blade dealing high physical damage" — sprite SLASH = blade smash phase visual)
+- ⚠️ **Midnight Terror PARTY-WIDE AoE Fear visual NOT shown** (single ATTACK cycle — fandom AoE Fear might map to expanded/separate sprite ?)
+- Cohérent récurrent ability sprite-vs-fandom-name mapping canon récurrent (Guftas CHARGE+BITE = Bite official récent)
+
+⭐⭐⭐ **Construct + horned skull torso + dark magic confirmed visual canon NEW MAJEUR (sprite Gemini)** :
+
+- Sprite confirms parfaitement fandom appearance canon NEW MAJEUR (wheeled apparatus + horned undead torso + spikes + chains + blade)
+- Pattern Damia : Sprite-fandom-wiki tri-source visual canon CROSS-SOURCE CONFIRMED Guillotine canonical design Damia
+
+À intégrer future : `public/assets/sprites/mobs/guillotine-*.png` (frame-split par cycle + 4 ISO angles) + `data/mobs/guillotine.ts` (à créer) AvatarSpriteForm Minor Enemy extended mid + `RenderSystem` cycle-aware (IDLE/MOVE/SLASH/DAMAGE/DEATH/TAUNT) + wheeled locomotion logic + Guile Edge rolling charge + blade smash particle effect + Midnight Terror PARTY-WIDE AoE Fear visual effect canon + ⚠️ canonical color refresh future (purple-violet vs blue-cyan variant validation Wingly Disc 4 palette).
+
+⚠️ **Note user 2026-05-28** : Approximations initiales Gemini — final canonical à raffiner future (cohérent récurrent Guftas récent — sprite-refresh-roadmap future).
+
 ## Liens transverses
 
 - [`README.md`](./README.md) — mobs Disc 4 + **Zenebatos Law City Wingly judicial city mob pool canon récurrent**

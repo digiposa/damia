@@ -206,6 +206,76 @@ Pattern Damia : ⭐⭐⭐ **Living vs Construct/Undead status immunity dichotomy
 - ⭐⭐ **JP HP 188 +25% Hell Hound** : à confirmer fandom 11ème instance probable
 - ⭐⭐ **Hell Hound sprite + appearance canon** : demonic canine — à concevoir future
 
+## Sprite canon ⭐⭐⭐ Damia integration (Gemini Minor Enemy extended HIGH sub-tier NEW MAJEUR — 8 ISO + 9-cycle ultra-extended + Run + Guard + Lava Jump)
+
+> ![Hell Hound sprite sheet](./_assets/hell-hound-sprite.png)
+
+⭐⭐⭐ **Sprite Hell Hound CONFIRMS canon fandom récurrent tri-source CROSS-SOURCE** :
+
+- ✅ **Brown-furred quadruped canine** canon (fandom récurrent "brown furred guard dog")
+- ✅ **Pointed horn on head** canon (fandom récurrent "pointed horn upon its head")
+- ✅ **Medium-sized tail** canon (fandom récurrent)
+- ✅ **Glowing red eye accents** canon (fandom récurrent "glowing red eyes")
+- ✅ **Quadruped canine stance** canon (cohérent récurrent canine Guftas récurrent récent + canine A-AV 120% high-mobility canon récurrent récent CONFIRMED)
+- ⚠️ **Spiked collar visible** (Damia art direction NEW — cohérent récurrent Sandora military guard dog War Dog équipement canon récurrent récent fandom)
+
+**Animation structure prête Damia (Gemini cycles canonicaux Minor Enemy extended HIGH 9-cycle suite)** :
+
+| Cycle                          | Frames                           | Notes canon                                                                                                                                                                 |
+| ------------------------------ | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Repos (8 Directions)**       | 8 ISO idle Loop                  | ⭐⭐⭐ **8 ISO Minor Enemy extended HIGH canon NEW MAJEUR** (vs Guftas LOW 1-sample / Harpy MID 4 ISO / Guillotine MID extended 4 ISO)                                      |
+| **Walk (Marche)**              | 6-frame walking cycle per dir    | Standard quadruped canine walking récurrent récent Guftas + canine baseline                                                                                                 |
+| **Run (Course)**               | ⭐⭐⭐ Multi-frame running cycle | ⭐⭐⭐ **Run cycle canon NEW MAJEUR Minor Enemy** — high-mobility locomotion (cohérent récurrent A-AV 120% canine high-mobility canon récurrent récent fandom)              |
+| **Attaque 1 : Morsure**        | Multi-frame bite                 | ⭐⭐⭐ **Bite Slash official ability canon récurrent récent fandom CONFIRMED** (lunge + throat-bite visual canon)                                                           |
+| **Attaque 2 : Souffle de Feu** | Multi-frame fire breath effect   | ⭐⭐⭐ **Burn Out face-ball-cast canon récurrent récent fandom CONFIRMED visual** (Fire breath from face — horn-channel probable)                                           |
+| **Guard (Défense)**            | Defensive stance frames          | ⭐⭐⭐ **Guard pose canon NEW MAJEUR Minor Enemy** — defensive stance animation NEW (cohérent récurrent boss extended Fruegel defense récurrent)                            |
+| **Hit/Damage (Dégâts)**        | Multi-frame hurt reaction        | ⭐⭐⭐ **DAMAGE canon récurrent Minor Enemy extended** (cohérent récurrent Guftas DAMAGED 4f + Guillotine récent)                                                           |
+| **KO (SE View)**               | Death/KO animation               | Standard Minor Enemy death canon                                                                                                                                            |
+| **Le saut de lave**            | ⭐⭐⭐ Multi-frame lava jump     | ⭐⭐⭐ **Lava Jump canon NEW MAJEUR Damia gameplay** — Fire/lava traversal canon (cohérent récurrent Disc 1 Volcano Villude probable + Fire element + canine high-mobility) |
+
+⭐⭐⭐ **NEW MAJEUR canon mechanics (sprite Gemini)** :
+
+1. ⭐⭐⭐ **8 ISO directional Minor Enemy extended HIGH sub-tier canon NEW MAJEUR Damia** — Hell Hound 8 ISO + 9-cycle ultra-extended = highest Minor Enemy sprite tier yet documented Damia (vs récurrent récent Guftas LOW + Harpy MID baseline + Guillotine MID extended)
+2. ⭐⭐⭐ **Run (Course) cycle canon NEW MAJEUR Minor Enemy** — running locomotion canon NEW (cohérent A-AV 120% canine high-mobility canon récurrent récent CONFIRMED)
+3. ⭐⭐⭐ **Attaque 2 Souffle de Feu = Burn Out face-ball-cast visual CONFIRMED tri-source** (sprite + fandom récurrent récent + ability canon récurrent)
+4. ⭐⭐⭐ **Attaque 1 Morsure = Bite Slash visual CONFIRMED tri-source** (sprite + fandom récurrent récent)
+5. ⭐⭐⭐ **Guard (Défense) pose canon NEW MAJEUR Minor Enemy** — defensive stance animation NEW (cohérent boss extended Fruegel defense récurrent fandom Trivia)
+6. ⭐⭐⭐ **Lava Jump canon NEW MAJEUR Damia gameplay** — Fire/lava traversal canon (Disc 1 Volcano Villude probable récurrent)
+
+⭐⭐⭐ **Sprite tier hierarchy refinement Minor Enemy extended sub-tiers NEW MAJEUR Damia 12-tier expansion** :
+
+| Tier                                              | ISO angles      | Locomotion               | Animation suite                                                                                      |
+| ------------------------------------------------- | --------------- | ------------------------ | ---------------------------------------------------------------------------------------------------- |
+| Mob standard (Goblin)                             | 2 (SE+SW)       | 6-frame normal           | Standard 4 cycles                                                                                    |
+| Minor Enemy extended LOW (Guftas)                 | 1 sample        | 6-frame quad MOVE        | Extended 7 cycles                                                                                    |
+| Minor Enemy extended MID baseline (Harpy)         | 4 (4-dir)       | Aerial flight            | Baseline 4 cycles                                                                                    |
+| Minor Enemy extended MID extended (Guillotine)    | 4 (4-dir)       | 6-frame wheeled          | Extended 6 cycles                                                                                    |
+| ⭐⭐⭐ **Minor Enemy extended HIGH (Hell Hound)** | **8 (8-dir)**   | **Walk + Run quadruped** | ⭐⭐⭐ **Ultra-extended 9 cycles (Repos/Walk/Run/Morsure/Souffle de Feu/Guard/Damage/KO/Lava Jump)** |
+| Boss walking heavy (Gorgaga)                      | 4 (4-dir)       | 6-frame heavy            | Standard 4 cycles                                                                                    |
+| Boss walking standard (Greham)                    | 4 (4-dir)       | 6-frame standard         | Standard 4 cycles                                                                                    |
+| Boss hovering (Grand Jewel)                       | 4 (4-dir)       | 6-frame heavy HOVER      | Standard 4 cycles                                                                                    |
+| Dragoon form (Greham/Haschel)                     | 8 (8-dir)       | 8-frame aerial           | Elaborate Dragoon-tier                                                                               |
+| Vassal Dragon (Feyrbrand)                         | 1 sample        | Large body               | Standard 4 cycles                                                                                    |
+| Boss extended (Fruegel)                           | 7-8 (NSEW+diag) | 6-frame heavy            | Extended 7 cycles                                                                                    |
+| Party-member extended ultra-tier (Haschel)        | Multi-dir       | Standard                 | Ultra-extended 9+ cycles                                                                             |
+
+Pattern Damia : ⭐⭐⭐ **Minor Enemy extended HIGH sub-tier canon NEW MAJEUR Damia** — Hell Hound = highest Minor Enemy sprite tier yet documented (8 ISO + 9-cycle ultra-extended) — cohérent récurrent A-AV 120% high-mobility canon récurrent récent (high-mobility mob = elaborate sprite tier canon NEW). Sprite tier hierarchy EXPANSION 12 tiers canon NEW MAJEUR.
+
+⭐⭐⭐ **High-mobility canine visual canon CONFIRMED tri-source (sprite + fandom A-AV 120% + canine quadruped)** :
+
+- Sprite Run cycle + Lava Jump confirme A-AV 120% high-mobility canon récurrent récent fandom CONFIRMED
+- Quadruped canine + horn + brown fur + red eyes = canonical "demonic War Dog Sandora military" design tri-source
+- Pattern Damia : ⭐⭐⭐ **High-mobility canine visual canon récurrent CROSS-SOURCE CONFIRMED**
+
+⭐⭐⭐ **Lava Jump canon NEW MAJEUR Damia-specific gameplay (sprite Gemini Hell Hound) ⭐⭐⭐** :
+
+- Lava Jump = Damia-specific Fire/lava traversal canon NEW MAJEUR (canine over lava jumping pose)
+- Cohérent récurrent Disc 1 Volcano Villude probable récurrent canon + Fire element Hell Hound + canine high-mobility
+- Pattern Damia : Environmental traversal canon NEW MAJEUR Damia gameplay (vs récurrent canon TLoD original) — cohérent récurrent Haschel Sprint-Roulade récent + Damia mobility gameplay canon récurrent récent
+- À documenter `combat/environmental-traversal.md` (à créer) Damia-specific gameplay canon NEW MAJEUR
+
+À intégrer future : `public/assets/sprites/mobs/hell-hound-*.png` (frame-split par cycle + 8 ISO angles) + `data/mobs/hell-hound.ts` (à créer) AvatarSpriteForm Minor Enemy extended HIGH ultra-tier + `RenderSystem` cycle-aware ultra-extended (Repos 8-dir/Walk/Run/Morsure/Souffle de Feu/Guard/Damage/KO/Lava Jump) + quadruped canine locomotion logic + Bite Slash lunge-throat visual + Burn Out face-ball-cast Fire particle effect + Guard defensive stance trigger + Lava Jump environmental traversal logic + Escape (Run away!) AI trigger HP ≤25% + 8-directional facing logic.
+
 ## Liens transverses
 
 - [`README.md`](./README.md) — mobs Disc 1 + **Sandora military pets canon récurrent** (Guftas + Hell Hound)

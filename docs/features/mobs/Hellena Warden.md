@@ -293,6 +293,65 @@ Pattern Damia : ⭐⭐⭐ **Minor Enemy extended HIGH humanoid hybrid sub-tier c
 
 À intégrer future : `public/assets/sprites/mobs/hellena-warden-*.png` (frame-split par cycle + 8 ISO IDLE + 4 ISO MOVE) + `data/mobs/hellena-warden.ts` (à créer) AvatarSpriteForm Minor Enemy extended HIGH humanoid 3-instance + `RenderSystem` cycle-aware hybrid directional (8 ISO IDLE/4 ISO MOVE/ATTACK Mace Swing/DEATH) + Mallet Mash run-toward-target + mace-smash particle effect + Spark Net reverse-item-cast probable animation séparée + 3-instance stat block resolution per scripted context.
 
+## Sprite alternatif canon ⭐⭐⭐ Damia integration (Gemini Minor Enemy extended ULTRA-HIGH humanoid 7-cycle ultra-extended — concept art + JP "ヘルライナ監獄" labelisé + ATTACK 3-variant Thrust/Wide Sweep/Overhead Smash + Spear weapon NEW MAJEUR)
+
+> ![Hellena Warden sprite alternatif](./_assets/hellena-warden-sprite-alt.png)
+
+⭐⭐⭐ **Sprite alternatif Hellena Warden CONFIRMS canon récurrent récent + EXTEND visual canon NEW MAJEUR** :
+
+- ✅ **Concept art canonical visible** (left side) — full body humanoid Sandora military guard
+- ⭐⭐⭐ **JP labelisé "ヘルライナ監獄" canon récurrent récent CONFIRMED 4-source** (Heruraina Kangoku récent + Heruraina-hei récent récurrent)
+- ⭐⭐⭐ **Spear/Polearm weapon canon NEW MAJEUR (vs sprite 1 mace/mallet weapon)** — alternate weapon variant canon récurrent récent (cohérent récurrent récent canon 3-instance same-name same-sprite distinct stats — possible weapon variant per instance OR alternate design Damia)
+- ✅ **Bald/short-haired humanoid + leather armor + Sandora military uniform** canon récurrent récent
+
+**Animation structure prête Damia (Gemini cycles canonicaux Minor Enemy extended ULTRA-HIGH humanoid 7-cycle ultra-extended sprite alternatif)** :
+
+| Cycle                                    | Frames                  | Notes canon                                                                                                                                             |
+| ---------------------------------------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **IDLE (6 frames)**                      | 6-frame breathing loop  | ⭐ Standard breathing récurrent récent                                                                                                                  |
+| **MOVE (6 frames)**                      | 6-frame walking cycle   | ⭐ Standard walking récurrent récent (vs sprite 1 8-frame elaborate — alt-sprite simpler MOVE)                                                          |
+| **ATTACK 1 — Thrust (8 frames)**         | 8-frame spear thrust    | ⭐⭐⭐ **Thrust spear attack canon NEW MAJEUR** (vs sprite 1 Mace Swing — distinct weapon variant)                                                      |
+| **ATTACK 2 — Wide Sweep (8 frames)**     | 8-frame spear sweep arc | ⭐⭐⭐ **Wide Sweep AoE-like spear attack canon NEW MAJEUR** — multi-target sweeping arc visual                                                         |
+| **ATTACK 3 — Overhead Smash (8 frames)** | 8-frame overhead smash  | ⭐⭐⭐ **Overhead Smash canon NEW MAJEUR** — vertical heavy smash (cohérent récurrent Mallet Mash récurrent récent + Burn Out launch context probable)  |
+| **HURT (4 frames)**                      | 4-frame hurt reaction   | ⭐⭐⭐ **HURT canon NEW MAJEUR Minor Enemy extended ULTRA-HIGH** (cohérent Fruegel boss extended récurrent récent + Hell Hound canine récurrent récent) |
+| **DEATH (8 frames)**                     | 8-frame dissolution     | ⭐ Standard Minor Enemy death récurrent récent                                                                                                          |
+
+⭐⭐⭐ **NEW MAJEUR canon mechanics (sprite alternatif Gemini Hellena Warden)** :
+
+1. ⭐⭐⭐ **3-variant ATTACK canon NEW MAJEUR Minor Enemy** — Thrust (single-target) + Wide Sweep (AoE-like) + Overhead Smash (heavy) — first documented 3-variant ATTACK Minor Enemy Damia (vs récurrent récent boss extended Fruegel 2-variant Heavy Smash/Shockwave + Hell Hound 2-variant Charge/Bite + Guillotine 1-variant SLASH récent)
+2. ⭐⭐⭐ **Spear/Polearm weapon variant canon NEW MAJEUR** — alternate weapon vs sprite 1 mace/mallet (probable per-instance weapon variant canon récurrent récent 3-instance same-name distinct stats — Sandora military weapon variety)
+3. ⭐⭐⭐ **HURT cycle canon NEW MAJEUR Minor Enemy extended ULTRA-HIGH humanoid** (cohérent récurrent récent extended sprite tier multi-instance Fruegel/Guftas/Guillotine/Hell Hound HURT cycle)
+4. ⭐⭐⭐ **Concept art-integrated sprite sheet canon NEW MAJEUR** — left-side concept art reference + animation cycles right-side = Damia production-style sprite sheet (cohérent récurrent récent Fruegel concept art sprite récent)
+
+⭐⭐⭐ **Sprite tier hierarchy refinement Minor Enemy extended ULTRA-HIGH humanoid sub-tier NEW MAJEUR Damia 14-tier expansion** :
+
+| Tier                                                                            | ISO angles               | Locomotion                | Animation suite                                                                                                   |
+| ------------------------------------------------------------------------------- | ------------------------ | ------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Mob standard (Goblin)                                                           | 2 (SE+SW)                | 6-frame normal            | Standard 4 cycles                                                                                                 |
+| Minor Enemy extended LOW (Guftas)                                               | 1 sample                 | 6-frame quad              | Extended 7 cycles                                                                                                 |
+| Minor Enemy extended MID baseline (Harpy)                                       | 4 (4-dir)                | Aerial flight             | Baseline 4 cycles                                                                                                 |
+| Minor Enemy extended MID extended (Guillotine)                                  | 4 (4-dir)                | 6-frame wheeled           | Extended 6 cycles                                                                                                 |
+| Minor Enemy extended HIGH canine (Hell Hound)                                   | 8 (8-dir)                | Walk + Run                | Ultra-extended 9 cycles                                                                                           |
+| Minor Enemy extended HIGH humanoid hybrid (Hellena Warden sprite 1)             | 8 IDLE + 4 MOVE hybrid   | 8-frame walking elaborate | 5 cycles hybrid                                                                                                   |
+| ⭐⭐⭐ **Minor Enemy extended ULTRA-HIGH humanoid (Hellena Warden sprite alt)** | **Multi (likely 8 ISO)** | **6-frame walking**       | ⭐⭐⭐ **Ultra-extended 7 cycles + 3-variant ATTACK (Thrust/Wide Sweep/Overhead Smash) + concept art integrated** |
+| Boss walking heavy (Gorgaga)                                                    | 4 (4-dir)                | 6-frame heavy             | Standard 4 cycles                                                                                                 |
+| Boss walking standard (Greham)                                                  | 4 (4-dir)                | 6-frame standard          | Standard 4 cycles                                                                                                 |
+| Boss hovering (Grand Jewel)                                                     | 4 (4-dir)                | 6-frame heavy HOVER       | Standard 4 cycles                                                                                                 |
+| Dragoon form (Greham/Haschel)                                                   | 8 (8-dir)                | 8-frame aerial            | Elaborate Dragoon-tier                                                                                            |
+| Vassal Dragon (Feyrbrand)                                                       | 1 sample                 | Large body                | Standard 4 cycles                                                                                                 |
+| Boss extended (Fruegel)                                                         | 7-8 (NSEW+diag)          | 6-frame heavy             | Extended 7 cycles                                                                                                 |
+| Party-member extended ultra-tier (Haschel)                                      | Multi-dir                | Standard                  | Ultra-extended 9+ cycles                                                                                          |
+
+Pattern Damia : ⭐⭐⭐ **Minor Enemy extended ULTRA-HIGH humanoid sub-tier canon NEW MAJEUR Damia** — Hellena Warden sprite alt = humanoid Sandora military guard 7-cycle ultra-extended + 3-variant ATTACK = highest Minor Enemy sprite tier yet documented Damia (vs sprite 1 humanoid hybrid 5-cycle baseline). **Sprite tier hierarchy EXPANSION 14 tiers canon NEW MAJEUR**.
+
+⭐⭐⭐ **Dual-sprite variant canon NEW MAJEUR Damia** :
+
+- Sprite 1 (`hellena-warden-sprite.png`) : 8 ISO IDLE + 4 ISO MOVE + Mace Swing + DEATH (5 cycles hybrid)
+- ⭐⭐⭐ Sprite alt (`hellena-warden-sprite-alt.png`) : Multi-cycle ultra-extended + 3-variant ATTACK (Thrust/Wide Sweep/Overhead Smash) + HURT + Spear weapon + concept art
+- Pattern Damia : ⭐⭐⭐ **Dual-sprite variant canon NEW MAJEUR Damia** — cohérent récurrent récent 3-instance same-name canon (1st Visit/Fruegel formation/2nd Visit) + dual-sprite weapon variants canon récurrent (mace vs spear) probable per-instance OR alternate design exploration récurrent récent canon Damia art direction iteration
+
+À intégrer future : `public/assets/sprites/mobs/hellena-warden-alt-*.png` (frame-split par cycle + Multi ISO) + `data/mobs/hellena-warden-alt.ts` AvatarSpriteForm Minor Enemy extended ULTRA-HIGH humanoid + `RenderSystem` cycle-aware ultra-extended (IDLE/MOVE/Thrust/Wide Sweep/Overhead Smash/HURT/DEATH) + spear thrust/sweep/smash particle effects + 3-instance weapon variant resolution per scripted context (mace sprite 1 + spear sprite alt).
+
 ## Liens transverses
 
 - [`README.md`](./README.md) — mobs Disc 1 + **3-instance same-name canon NEW MAJEUR Hellena Warden + Sandora Soldier**

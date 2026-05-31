@@ -234,3 +234,46 @@
 ## Gaps / TODO
 
 Voir [TODO.md](../../TODO.md) section Icicle Ball wiki.
+
+---
+
+## Sprite canon ⭐⭐⭐⭐⭐ Sea-Urchin-spider Mille Seseau Disc 3 — user-selected (Gemini)
+
+⭐⭐⭐⭐⭐ **Sprite canon CANONICAL FAITHFUL CONFIRMED 2-source** — [`_assets/icicle-ball-sprite.png`](./_assets/icicle-ball-sprite.png)
+
+⭐⭐⭐⭐⭐ **Sprite CONFIRMS fandom canon EXACT** :
+
+- **Visual design** : ⭐⭐⭐⭐⭐ **Yellow eyeball center + spindly legs + aposematic stripes** canon CONFIRMED 2-source EXACT match fandom
+  - ✅ **Central yellow eyeball** (large glowing eye)
+  - ✅ **Spindly legs** extending radially from body (Sea-Urchin-spider hybrid canon)
+  - ✅ **Aposematic striped colors** : blue + red/orange + yellow alternating stripes on body/limbs (fandom "blue, red, and yellow" EXACT match)
+  - ✅ **Sea-Urchin-spider hybrid design** — sea urchin spiky body + spider-leg appendages
+- **Color palette** : Dark background + bright blue/red/yellow aposematic warning + golden eye = poisonous mimicry visual canon récurrent récent CONFIRMED
+
+### Sprite sheet animations canon ⭐⭐⭐⭐ Damia-tier production-ready
+
+| Animation             | Frames | Notes canon                                                                                                                                 |
+| --------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Hero pose (title)** | 1      | Large showcase hero pose — central eye + radial spindly legs                                                                                |
+| **IDLE**              | 6      | Spindly-leg idle stance canon récurrent — slight pulsing animation                                                                          |
+| **WALK**              | 6      | ⭐⭐⭐⭐ **Spindly-leg walk cycle** canon NEW MAJEUR (4+ spindly legs animated)                                                             |
+| **ATTACK**            | 6      | ⭐⭐⭐⭐⭐ **Head Swing animation** canon CONFIRMED OFFICIAL fandom — "walks towards + swings head" visual = ATTACK frames show head-thrust |
+| **HURT**              | 3      | Damage reaction frames                                                                                                                      |
+| **DEATH**             | 5      | Collapse + final death pose canon récurrent récent                                                                                          |
+
+**Total** : **~27 frames** = Damia-tier production-ready ultra-comprehensive sprite sheet canon récurrent récent.
+
+### Sprite ↔ Canon fidelity ⭐⭐⭐⭐⭐ EXACT CROSS-SOURCE match
+
+| Fandom canon CONFIRMED                     | Sprite visual                                      | Match                                   |
+| ------------------------------------------ | -------------------------------------------------- | --------------------------------------- |
+| Yellow eyeball                             | ✅ Central bright golden/yellow eye                | ⭐⭐⭐⭐⭐ EXACT match                  |
+| 4 spindly legs                             | ✅ Multiple spindly leg appendages (radial)        | ⭐⭐⭐⭐⭐ EXACT match (4+ visible)     |
+| Aposematic blue/red/yellow stripes         | ✅ Blue + red/orange + yellow alternating stripes  | ⭐⭐⭐⭐⭐ EXACT match canon            |
+| Sea-Urchin body + spider legs hybrid       | ✅ Spiky body + radial leg arrangement             | ⭐⭐⭐⭐⭐ EXACT match canon            |
+| Head Swing OFFICIAL "walks + swings head"  | ✅ ATTACK 6 frames showing head-thrust             | ⭐⭐⭐⭐⭐ EXACT match canon            |
+| Water element + Glacier biome              | ✅ Cool color palette undertones + dark backdrop   | ⭐⭐⭐⭐ Match thematic                 |
+| Aposematism biology lore                   | ✅ Vivid warning colors poisonous mimicry visual   | ⭐⭐⭐⭐⭐ EXACT match canon NEW MAJEUR |
+| Spider Urchin "weaker counterpart" lineage | ✅ Spider-urchin hybrid design + recolor candidate | ⭐⭐⭐⭐ Match canon récurrent          |
+
+⭐⭐⭐⭐⭐ **CANONICAL FAITHFUL sprite selected canon NEW MAJEUR** — fandom-aligned Sea-Urchin-spider hybrid design + 5 animations Damia production-ready + EXACT match canon récurrent récent CONFIRMED 2-source + **aposematic warning colors biology canon NEW MAJEUR visually CONFIRMED**.

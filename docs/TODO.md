@@ -7210,6 +7210,8 @@ Pattern Damia : ⭐⭐⭐ **Dragoon transformation form sprite sub-class canon N
 
 - [ ] ⭐⭐⭐ **🆕 Haschel target Gallery CONFIRMED 2-instance Mille Seseau Disc 3 party canon récurrent CONFIRMED (fandom Icicle Ball) ⭐⭐⭐** — Quote canon : Gallery "Head Swing on Haschel". Pattern Damia : **Haschel target Gallery canon récurrent récent CONFIRMED 2-instance** (Hyper Skeleton + Icicle Ball = Mille Seseau/Mayfil Disc 3-4 party canon récurrent récent Haschel present CONFIRMED 2-source). À refléter `party-members/Haschel.md` Mille Seseau Disc 3 party canon récurrent. Source: idem.
 
+- [ ] ⭐⭐⭐⭐⭐ **🆕 Icicle Ball sprite canon Damia — CANONICAL FAITHFUL Sea-Urchin-spider user-selected (sprite Gemini) ⭐⭐⭐⭐⭐** — Visual canon CONFIRMS fandom EXACT : yellow eyeball center + spindly legs radial + aposematic stripes blue/red/yellow alternating + Sea-Urchin-spider hybrid design + dark cool color palette undertones. **5 animations Damia production-ready (~27 frames)** : Hero pose + IDLE 6 frames + WALK 6 frames (spindly-leg walk cycle) + ATTACK 6 frames (Head Swing animation OFFICIAL fandom — head-thrust visual) + HURT 3 frames + DEATH 5 frames. Pattern Damia : **Sprite EXACT match canon récurrent récent CONFIRMED 2-source** + **Aposematic warning colors biology canon visually CONFIRMED** + **Head Swing OFFICIAL visual canon CONFIRMED** + Damia-tier ultra-comprehensive sprite sheet. À refléter `mobs/Icicle Ball.md` Sprite canon section CANONICAL FAITHFUL CONFIRMED. Source: [`features/mobs/_assets/icicle-ball-sprite.png`](features/mobs/_assets/icicle-ball-sprite.png).
+
 ### À décider / explorer
 
 ### À décider / explorer

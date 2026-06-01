@@ -237,3 +237,54 @@
 ## Gaps / TODO
 
 Voir [TODO.md](../../TODO.md) section Jelly wiki.
+
+---
+
+## Sprite canon ⭐⭐⭐⭐⭐ literal jellyfish Magic City Aglis Disc 4 — 2 variants à arbitrer user (Gemini)
+
+### Sprite variant 1 (floating ethereal jellyfish CANONICAL FAITHFUL) — [`_assets/jelly-sprite.png`](./_assets/jelly-sprite.png)
+
+⭐⭐⭐⭐⭐ **Sprite variant 1 = floating ethereal jellyfish CANONICAL FAITHFUL fandom EXACT match** :
+
+- **Visual design** : ⭐⭐⭐⭐⭐ **Literal jellyfish canon EXACT match fandom** :
+  - ✅ **Purple glow spotlighting translucent body** (fandom EXACT)
+  - ✅ **Red internal structure visible** (fandom "stomach/brain organ visible")
+  - ✅ **Opaque white joints** (fandom EXACT)
+  - ✅ **Tendrils extending downward** (cohérent Jelly Sting "tips of tendrils")
+  - ✅ **Floating ethereal magical aesthetic** (cohérent Magic City Aglis Wingly hidden city)
+- **Animations** :
+  - **Hero pose** + **IDLE 8 frames** + **FLOAT 8 frames** (vertical float canon NEW MAJEUR) + **ATTACK 8 frames** + **HURT 8 frames** + **DEATH 8 frames** = **~40 frames Damia ultra-comprehensive**
+- ⭐⭐⭐⭐⭐ **CANONICAL FAITHFUL match fandom 2-source** : purple glow + translucent + red organ + tendrils-tip Jelly Sting = EXACT fandom canon
+
+### Sprite variant 2 (gelatinous octopoid "Species Gelatinous Animination") — [`_assets/jelly-sprite-alt.png`](./_assets/jelly-sprite-alt.png)
+
+⭐⭐⭐⭐ **Sprite variant 2 = gelatinous octopoid variant** :
+
+- **Title sheet** : "Species Gelatinous Animination"
+- **Visual design** :
+  - ✅ Purple translucent body with red internal glow (cohérent fandom)
+  - ⚠️ **Multi-tentacle octopoid structure** (ground-based vs floating) — distinct from canon jellyfish floating
+  - ⭐⭐⭐⭐ Detailed gelatinous appendages
+- **Animations** :
+  - **Hero pose** + **IDLE 5 frames** + **WALK/MOVE 5 frames** + **ATTACK 1 — Tentacle Swipe 8 frames** + **ATTACK 2 — Gelatinous Slam 8 frames** + **HURT 6 frames** + **DEATH 8 frames** = **~40 frames**
+- ⭐⭐⭐⭐ **Multi-attack variant** : Tentacle Swipe (cohérent Jelly Sting "stings with tendrils") + Gelatinous Slam (additional canon-extension)
+
+### Arbitrage canon Damia (à arbitrer user)
+
+| Critère canon                                   | Variant 1 (floating jellyfish)  | Variant 2 (gelatinous octopoid)        |
+| ----------------------------------------------- | ------------------------------- | -------------------------------------- |
+| Match fandom "literal jellyfish"                | ✅ ⭐⭐⭐⭐⭐ EXACT match canon | ⚠️ Octopoid (similar but distinct)     |
+| Match fandom "purple glow translucent body"     | ✅ ⭐⭐⭐⭐⭐ EXACT             | ✅ ⭐⭐⭐⭐ Match                      |
+| Match fandom "red internal organ stomach/brain" | ✅ ⭐⭐⭐⭐⭐ EXACT             | ✅ ⭐⭐⭐⭐ Match                      |
+| Match fandom "floating" + Aglis Magic City      | ✅ ⭐⭐⭐⭐⭐ FLOAT animation   | ⚠️ Walk/Move (ground-based)            |
+| Tendrils-tip Jelly Sting visual                 | ✅ ⭐⭐⭐⭐⭐ Tendrils canon    | ⭐⭐⭐⭐ Tentacle Swipe                |
+| Multi-attack canon (single ATTACK only)         | ⭐⭐⭐ Single ATTACK 8          | ✅ ⭐⭐⭐⭐ Dual ATTACK (Swipe + Slam) |
+| Frame count                                     | ⭐⭐⭐⭐ 40 frames              | ⭐⭐⭐⭐ 40 frames                     |
+| Showcase / atmosphere                           | ⭐⭐⭐⭐⭐ Ethereal magical     | ⭐⭐⭐⭐ Detailed gelatinous           |
+
+⭐⭐⭐⭐⭐ **Recommandation Damia** :
+
+- **Variant 1 floating jellyfish** = **CANONICAL FAITHFUL** EXACT match fandom canon (literal jellyfish + floating + purple glow + red organ + tendrils) — recommandé pour fidélité canon
+- **Variant 2 gelatinous octopoid** = expressivité visuelle riche + dual-ATTACK (Tentacle Swipe + Gelatinous Slam) MAIS écart canon "literal jellyfish floating"
+
+À arbitrer user selon priorité Damia : **fidélité canon fandom (variant 1) vs richesse visuelle dual-attack (variant 2)**.

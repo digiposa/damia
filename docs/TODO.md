@@ -7350,6 +7350,8 @@ Pattern Damia : ⭐⭐⭐ **Dragoon transformation form sprite sub-class canon N
 
 - [ ] ⭐⭐⭐⭐ **🆕 DIVERGENCE INVERSE P.Attack fandom 51 LOWER vs wiki 60 + MAT 89 higher vs 79 11ème instance (fandom Jelly) ⭐⭐⭐⭐** — Quote canon : P.Attack 51 fandom vs wiki 60 + MAT 89 fandom vs wiki 79. Pattern Damia : ⚠️ **First inverse fandom-LOWER P.Attack canon NEW MAJEUR** (-15% vs récurrent récent 10-instance fandom higher pattern) + **MAT 89 fandom higher 11ème instance fandom higher MAT anomaly récurrent CONFIRMED**. Wiki canon prevails per Damia rule. À reconfirmer canon source authoritative. Source: idem.
 
+- [ ] ⭐⭐⭐⭐⭐ **🆕 Jelly 2 sprites variants à arbitrer user (sprite Gemini) ⭐⭐⭐⭐⭐** — Variant 1 floating jellyfish CANONICAL FAITHFUL : purple glow translucent body + red internal organ + opaque white joints + tendrils + FLOAT animation 8 frames + IDLE 8 + ATTACK 8 + HURT 8 + DEATH 8 = ~40 frames EXACT match fandom canon "literal jellyfish purple glow". Variant 2 gelatinous octopoid "Species Gelatinous Animination" : multi-tentacle ground-based + dual ATTACK (Tentacle Swipe + Gelatinous Slam) + WALK/MOVE 5 + ~40 frames. Pattern Damia : **Variant 1 CANONICAL FAITHFUL EXACT match fandom 2-source recommended** + **Variant 2 dual-attack expressivité alternative**. À arbitrer user selon priorité : fidélité canon fandom (variant 1) vs richesse visuelle dual-attack (variant 2). À refléter `mobs/Jelly.md` Sprite canon section 2 variants. Source: [`features/mobs/_assets/jelly-sprite.png`](features/mobs/_assets/jelly-sprite.png) + [`features/mobs/_assets/jelly-sprite-alt.png`](features/mobs/_assets/jelly-sprite-alt.png).
+
 ### À décider / explorer
 
 ### À décider / explorer

@@ -297,3 +297,29 @@
 ## Gaps / TODO
 
 Voir [TODO.md](../../TODO.md) section Kanzas wiki + Kanzas fandom.
+
+## Sprite Damia canon
+
+**Sprite IA-generated intégré** — `_assets/kanzas-sprite.png` (1536×1024) :
+
+- Hero shot Dragoon form
+- **Idle (8 Directions)**
+- **Walk (8 Directions)**
+- **Basic Attack (forward)** — punch projectile énergie violette
+- ⭐⭐⭐⭐⭐ **Special Attack — "Five Rings Dance"** — 5 anneaux violets séquentiels canon NEW MAJEUR FIRST documented Damia
+- **Hit / Damage**
+- **Defeated / KO**
+- **Jump** + **Landing**
+- **Death** — shatter cristallin violet
+
+**Observations canon NEW MAJEUR Damia** :
+
+- ⭐⭐⭐⭐⭐ **Visual design Damia Violet Dragoon form canon NEW MAJEUR** : armure violette/lilas + ailes translucides vert-jade + bandeau frontal + musculature martiale = Kanzas Violet/Thunder Dragoon archetype visual canon NEW MAJEUR (cohérent récurrent récent Haschel martial arts Violet/Thunder Archetype + Avatar pattern canon récurrent CONFIRMED — base réutilisable Haschel Dragoon form palette swap probable)
+- ⭐⭐⭐⭐⭐ **"Five Rings Dance" special attack name canon NEW MAJEUR FIRST documented Damia** = probable **Miyamoto Musashi 五輪書 Book of Five Rings cultural reference canon NEW MAJEUR** (cohérent récurrent récent cultural references CONFIRMED 5-instance expansion : Rancor Star Wars + Midsummer Shakespeare + Ainu Kamuy + Spanish numerals Cuarto/Segundo + **Miyamoto Musashi Five Rings Kanzas**) + **Haschel addition canon récurrent récent probable CONFIRMED** (cohérent récurrent récent Haschel/Kanzas Dragoon Addition share + martial arts archetype + Five Rings Dance = Haschel official addition name canon NEW MAJEUR FIRST documented Damia probable à investiguer wiki Haschel)
+- ⭐⭐⭐⭐⭐ **8-direction Idle + Walk sprite sheets canon NEW MAJEUR Damia** = top-down/isométrique 8-way movement canon récurrent récent (cohérent récurrent récent Damia 2D iso pattern canon récurrent CONFIRMED — Kanzas 8-direction full coverage canon NEW MAJEUR base réutilisable Haschel Dragoon form)
+- ⭐⭐⭐⭐⭐ **Death = shatter cristallin violet canon NEW MAJEUR** = cohérent thematic Violet/Thunder Dragoon + crystal-shatter (probable récurrent autres Dragoons death animations crystal-shatter par-element canon NEW MAJEUR)
+- ⭐⭐⭐⭐ **Basic Attack punch + projectile énergie violette canon NEW MAJEUR** = Kanzas martial arts archetype + Thunder energy projectile (cohérent récurrent récent Haschel martial arts canon récurrent — punch + energy projectile canon NEW MAJEUR)
+- ⭐⭐⭐⭐ **Jump + Landing sprites séparés canon NEW MAJEUR Damia** = vertical movement animation canon récurrent récent (cohérent récurrent récent Damia 3D-ish vertical traversal récurrent — Kanzas Jump/Landing canon NEW MAJEUR)
+- ⭐⭐⭐⭐ **Defeated/KO state ≠ Death** canon NEW MAJEUR Damia = KO state intermediate canon NEW MAJEUR (cohérent récurrent récent KO vs death dichotomy canon NEW MAJEUR — Kanzas KO recoverable + Death final)
+
+**Canon Damia adoption** : Visual base IA réutilisable + **"Five Rings Dance" special attack name canon NEW MAJEUR FIRST CONFIRMED Damia** + ⚠️ vérifier wiki Haschel pour OFFICIAL addition name confirmation (probable récurrent canon Damia Haschel/Kanzas share addition canon récurrent récent CONFIRMED).

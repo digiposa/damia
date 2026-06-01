@@ -6,12 +6,17 @@
 
 ## Statut
 
-| Aspect                                | Fichier            | Statut                     |
-| ------------------------------------- | ------------------ | -------------------------- |
-| **Equipment (5 slots, master canon)** | **`equipment.md`** | **🟡 draft (wiki ingéré)** |
-| Consommables / Repeat Items           | (à créer)          | ⚪ pas encore créé         |
-| Key Items                             | (à créer)          | ⚪ pas encore créé         |
-| Stardust / Martel rewards             | (à créer)          | ⚪ pas encore créé         |
+| Aspect                                     | Fichier            | Statut                     |
+| ------------------------------------------ | ------------------ | -------------------------- |
+| **Items master canon (Used + Goods)**      | **`items.md`**     | **🟡 draft (wiki ingéré)** |
+| **Equipment (5 slots, master canon)**      | **`equipment.md`** | **🟡 draft (wiki ingéré)** |
+| Consommables Recovery (11 items)           | (à créer per-item) | ⚪ pas encore créé         |
+| Random Items (Recovery Ball + Attack Ball) | (à créer)          | ⚪ pas encore créé         |
+| Attack Items (21 items 8-element)          | (à créer)          | ⚪ pas encore créé         |
+| Repeat Items (10 items + Mayfil PNR)       | (à créer)          | ⚪ pas encore créé         |
+| Miscellaneous Items (7 items)              | (à créer)          | ⚪ pas encore créé         |
+| Key Items / Goods (Dragoon Spirits)        | (à créer)          | ⚪ pas encore créé         |
+| Stardust / Martel rewards                  | (à créer)          | ⚪ pas encore créé         |
 
 ## Vue d'ensemble système canon
 

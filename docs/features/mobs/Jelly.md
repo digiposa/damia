@@ -1,4 +1,26 @@
-# Jelly — Water jellyfish-like mob Aglis Wingly hidden city Disc 4 — ⭐⭐⭐⭐⭐ Counter Opportunities 13 SHORTER POOL canon NEW MAJEUR + Spear Frost self-named pool mob ability canon récurrent CONFIRMED + HP recovers self-heal ≤25% canon NEW MAJEUR + ULTRA HIGH MDF 250 magic-tank highest documented Damia + 4-formation Aglis multi-mob Scud Shark + Minotaur paired + Living 4/8 PARTIAL canon récurrent CONFIRMED 4-instance + Healing Fog 10% drop NEW MAJEUR 🟡
+# Jelly — Water LITERAL jellyfish "Magic City Aglis" Disc 4 — ⭐⭐⭐⭐⭐ Magic City Aglis official name + Jelly Sting OFFICIAL + HP Recovers OFFICIAL CONFIRMED 2-source + Spear Frost ice-shards-rain visual + JP +25% HP 800 + JP ÷3 Gold 8 CONFIRMED + MDF 250 "one of the highest if not the highest" CONFIRMED + Fire-element + Psyche Bomb X exception strategy + No shops Aglis + 8 min farm Healing Fog + Counter 13 SHORTER POOL + purple glow translucent jellyfish design CONFIRMED 🟢
+
+> ⭐⭐⭐⭐⭐ **REVELATION MAJEURE Damia : "The Magic City, Aglis" official name + Jelly literal jellyfish visual CONFIRMED canon NEW MAJEUR (fandom Jelly) ⭐⭐⭐⭐⭐** — Quote canon fandom : "Jelly is a Water-element based monster which is located within **The Magic City, Aglis**" + "Jelly appears as a **literal jellyfish with the look of a purple glow spotlighting a translucent body**. Its **joints are a more opaque white** and it has a **red internal structure, perhaps its stomach or its brain or some other organ, visible inside the body**. Connected to the body are **little brown items spanning throughout the legs**". Pattern Damia : ⭐⭐⭐⭐⭐ **"The Magic City Aglis" official name canon NEW MAJEUR** (cohérent récurrent récent "The Death City Mayfil" canon récurrent récent fandom Human Hunter + Hyper Skeleton — **City-thematic Wingly hidden cities canon NEW MAJEUR Damia récurrent** : Magic City Aglis + Death City Mayfil + Hidden City Ulara canon récurrent récent) + ⭐⭐⭐⭐⭐ **Jelly = literal jellyfish visual canon CONFIRMED 2-source NEW MAJEUR** : purple glow + translucent body + opaque white joints + red internal organ (stomach/brain) + brown items along legs — extremely detailed visual canon. À refléter URGENT `locations/Aglis.md` (à créer/vérifier) "Magic City" official name canon NEW MAJEUR + `mobs/Jelly.md` literal jellyfish design CONFIRMED 2-source.
+>
+> ⭐⭐⭐⭐⭐ **REVELATION MAJEURE Damia : Jelly Sting + HP Recovers + Spear Frost OFFICIAL ability names CONFIRMED (fandom Jelly Battle) ⭐⭐⭐⭐⭐** — Quote canon fandom : "**Jelly Sting** — Stings a single target with the ends of its tendrils dealing medium physical damage" + "**HP Recovers** — Heals 30% of max HP: **US 192, JAP 240 HP**" + "**Spear Frost** — Massive shards of ice rain down upon a single target dealing medium to high water-element magical damage" + Galleries "Jelly Sting on Rose" + "Jelly uses HP Recovers" + "Jelly uses Spear Frost". Pattern Damia : ⭐⭐⭐⭐⭐ **OFFICIAL ability names CONFIRMED fandom 3-ability set** :
+>
+> - ⚠️ **Wiki community-named "~Tentacle Smack" → fandom OFFICIAL "Jelly Sting"** = "stings with ends of tendrils medium physical" visual canon CONFIRMED + tendrils-tip stinging mechanic canon NEW MAJEUR
+> - ✅ **HP Recovers OFFICIAL canon CONFIRMED 2-source** = "Heals 30% max HP US 192 JAP 240" + ⭐⭐⭐⭐⭐ **JP 240 HP CONFIRMS JP HP 800** (240 = 30% × 800 JP HP CONFIRMED) — récurrent récent JP +25% HP rule canon récurrent CONFIRMED 20ème instance via HP Recovers calculation
+> - ✅ **Spear Frost OFFICIAL canon CONFIRMED 2-source** = "massive shards of ice rain down upon single target medium to high water-element magic" visual canon NEW MAJEUR + Spear Frost item-mob shared canon récurrent récent CONFIRMED
+>
+> À refléter URGENT `mobs/Jelly.md` AI table Jelly Sting + HP Recovers + Spear Frost OFFICIAL CONFIRMED canon. Source: idem.
+>
+> ⭐⭐⭐⭐⭐ **REVELATION MAJEURE Damia : JP +25% HP 800 CONFIRMED + JP ÷3 Gold 8 CONFIRMED — 20ème HP / 17ème Gold instance (fandom Jelly) ⭐⭐⭐⭐⭐** — Quote canon fandom : "HP **640 (US/EU)** / **800 (JP)**" + "Gold **24 (US/EU)** / **8 (JP)**". Pattern Damia : ⭐⭐⭐⭐⭐ **JP +25% HP CONFIRMED Jelly** : 640 × 1.25 = 800 EXACT = **20ème instance JP +25% HP rule** canon récurrent récent CONFIRMED universal CROSS-DISC expansion (cohérent toutes Disc 1-2-3-4 CONFIRMED multi-instance) + ⭐⭐⭐⭐⭐ **JP ÷3 Gold CONFIRMED Jelly** : 24 ÷ 3 = 8 EXACT = **17ème instance JP ÷3 Gold rule** canon récurrent récent CONFIRMED + ⭐⭐⭐⭐⭐ **HP Recovers JP 240 secondary CONFIRMATION** : 240 / 800 = 30% EXACT matching JP HP 800 (vs US 192/640 = 30% EXACT) = double-CONFIRMED canon via HP Recovers value scaling. À refléter `combat/jp-stats-rule.md` (à créer) universal rule 20+ HP / 17+ Gold instances CONFIRMED. Source: idem.
+>
+> ⭐⭐⭐⭐⭐ **REVELATION MAJEURE Damia : MDF 250 "one of the highest if not the highest in the game" CONFIRMED 2-source + Fire-element + Psyche Bomb X exception strategy canon NEW MAJEUR (fandom Jelly Battle) ⭐⭐⭐⭐⭐** — Quote canon fandom : "Its **Magic Defense is one of the highest, if not the highest, in the game**" + "do not attempt to defeat this creature with magic since its magical defence is 250; **unless maybe you use a fire-element spell or the Psychedelic Bomb X**. Their **physical defence is very low** so a few strikes at most should be enough". Pattern Damia : ⭐⭐⭐⭐⭐ **MDF 250 "one of the highest if not the highest" CONFIRMED 2-source** récurrent récent wiki + fandom EXPLICIT canon highest-MDF status canon NEW MAJEUR Damia + ⭐⭐⭐⭐⭐ **Fire-element exception strategy canon NEW MAJEUR** = ×2 damage vs Water-element Jelly (cohérent récurrent récent Magical Attack Items wiki Items + fandom Items "×2 vs opposite element" Fire vs Water canon récurrent récent CONFIRMED expansion) + ⭐⭐⭐⭐⭐ **Psyche Bomb X exception canon CONFIRMED 2-source** = Non-Elemental Psyche Bomb X ×2 vs all-non-NE elements canon récurrent récent CONFIRMED Items wiki + fandom + Jelly strategy. À refléter `combat/boss-strategy-magic-weakness.md` (à créer/vérifier) Fire-element vs Water-Jelly + Psyche Bomb X universal canon CONFIRMED 2-source. Source: idem.
+>
+> ⭐⭐⭐⭐⭐ **REVELATION MAJEURE Damia : No shops Aglis canon NEW MAJEUR + Healing Fog drop welcome reward (fandom Jelly Drops) ⭐⭐⭐⭐⭐** — Quote canon fandom : "Healing Fog ... **welcome reward here, due to there being no shops within this location** and the enemies being far more powerful than previous locations". Pattern Damia : ⭐⭐⭐⭐⭐ **No shops Aglis canon NEW MAJEUR** = Wingly hidden city no-shop canon NEW MAJEUR (cohérent récurrent récent Wingly isolation canon récurrent récent — Aglis no-merchant + Ulara probable no-shop pattern récurrent canon NEW MAJEUR) + ⭐⭐⭐⭐ **Healing Fog drop welcome reward Aglis economy compensation canon NEW MAJEUR** = drop-based economy Aglis canon NEW MAJEUR + 8 min farm avg + ⭐⭐⭐⭐ **"Enemies far more powerful than previous locations" Aglis canon NEW MAJEUR** = Aglis tier-elite power-scaling canon NEW MAJEUR. À documenter URGENT `locations/Aglis.md` (à créer/vérifier) no-shops + drop-economy canon NEW MAJEUR + `lore/wingly-cities-isolation.md` (à créer) Wingly hidden cities no-shop canon NEW MAJEUR.
+>
+> ⭐⭐⭐⭐ **Encounter rate "Very common" Aglis Jelly CONFIRMED 2-source + 4 formations CONFIRMED CROSS-SOURCE (fandom Jelly Battle pairing) ⭐⭐⭐⭐** — Quote canon fandom : "Encounter rate: **Very common**" + 4 formations (Jelly + Jelly x2 + Jelly + Scud Shark + Jelly + Minotaur). Pattern Damia : ⭐⭐⭐⭐ **Very common encounter rate Aglis canon récurrent récent CONFIRMED 2-source** + **4 formations CONFIRMED 2-source CROSS-SOURCE** wiki + fandom. **Encounter rate spectrum canon récurrent récent CONFIRMED** : Common (Hell Hound) + Uncommon (Icicle Ball Mille Seseau) + Rare (Human Hunter Mayfil) + **Very common NEW (Jelly Aglis)** = 4-tier encounter rate spectrum canon NEW MAJEUR.
+>
+> ⭐⭐⭐⭐ **Stat divergence fandom P.Attack 51 LOWER vs wiki 60 + MAT 89 higher vs wiki 79 — 11ème instance fandom higher MAT anomaly récurrent CONFIRMED (fandom Jelly) ⭐⭐⭐⭐** — Quote canon fandom : P. Attack **51** + M. Attack **89** vs wiki AT 60 + MAT 79. Pattern Damia : ⚠️ **DIVERGENCE INVERSE P. Attack fandom LOWER 51 vs wiki 60 (-15%) canon NEW MAJEUR** = **first inverse fandom-LOWER P.Attack canon NEW MAJEUR** (vs récurrent récent fandom higher anomaly 10-instance CONFIRMED) — à reconfirmer canon source authoritative + **MAT 89 fandom higher vs wiki 79 (+12.6%) = 11ème instance fandom higher MAT anomaly récurrent récent CONFIRMED**. Wiki AT 60 canon prevails per Damia rule OR fandom actual-gameplay lower observation (atypical inverse divergence).
+>
+> ⭐⭐⭐⭐ **DF 80 "very low" + Magic Defense 250 "one of highest" canon CONFIRMED 2-source inverse stat profile (fandom Jelly Battle) ⭐⭐⭐⭐** — Quote canon fandom : "Their **physical defence is very low**" + "**Magic Defense ... one of the highest if not the highest in the game**". Pattern Damia : ⭐⭐⭐⭐ **Inverse stat profile CONFIRMED 2-source** wiki + fandom : magic-immune physical-vulnerable canon NEW MAJEUR + strategy implication canon récurrent récent CONFIRMED (Additions/physical attacks kill Jelly + magic-strategy inefficient sauf Fire/Psyche Bomb X exception).
 
 > ⭐⭐⭐⭐⭐ **REVELATION MAJEURE Damia : Counter Opportunities 13 SHORTER POOL canon NEW MAJEUR (wiki Jelly) ⭐⭐⭐⭐⭐** — Quote canon : "Counterattack Opportunities (13)" + only **9 entries** in counter table (Dart Volcano + Crush Dance + Lavitz Gust of Wind Dance + Flower Storm + Rose Hard Blade + Demon's Dance + Meru Perky Step + Albert Gust of Wind Dance + Flower Storm — pas Meru Cool Boogie/Cat's Cradle + pas Haschel Summon 4 Gods/Hex Hammer + pas Dart Moon Strike + pas Lavitz Rod Typhoon). Pattern Damia : ⭐⭐⭐⭐⭐ **Counter pool 13 SHORTER variant canon NEW MAJEUR Damia** = first documented non-28-standard counter pool ! ⚠️ **CRITICAL CORRECTION canon Damia "single canonical 28-counter list shared CROSS-MOB CONFIRMED 7-way"** : Jelly = NEW 13-counter variant NEW MAJEUR = **multiple counter pool variants canon NEW MAJEUR** (vs récurrent récent hypothesis "single canonical list"). Pattern Damia : ⭐⭐⭐⭐⭐ **2 counter pool variants canon NEW MAJEUR** :
 >
@@ -36,11 +58,41 @@
 > **Sources** :
 >
 > - 🥈 [`_sources/lod-wiki-jelly.md`](./_sources/lod-wiki-jelly.md) — wiki LoD tier 2 (Jelly Minor Enemy Aglis Wingly hidden city Disc 4 + Water + HP 640 + AT 60 + DF 80 LOW physical-vulnerable + SPD 70 + MAT 79 + ⭐⭐⭐⭐⭐ **MDF 250 ULTRA HIGH magic-tank highest documented Damia** + A-AV/M-AV 0% + ⭐⭐⭐⭐ **Living 4/8 PARTIAL status dichotomy CONFIRMED 4-instance expansion** + EXP 120 + Gold 24 + ⭐⭐⭐⭐ **Healing Fog 10% drop canon NEW MAJEUR** + ⭐⭐⭐⭐⭐ **Counter Opportunities 13 SHORTER POOL canon NEW MAJEUR** vs récurrent 28-pool (multiple counter pool variants canon NEW MAJEUR) + 4 formations Jelly solo (231) + Jelly + Scud Shark (235) + Jelly x2 (237) + Jelly + Minotaur (239) Aglis 11+ submaps + 30% escape standard CONFIRMED 5-instance + ⭐⭐⭐⭐⭐ **AI 3-phase HP-conditional + ~Tentacle Smack 1× physical + Spear Frost 1.5× Water spell-spam ≤50% + HP recovers 30% self-heal ≤25% canon NEW MAJEUR**)
-> - 🥉 fandom Jelly — **à ingérer** (Jelly visual depth + jellyfish design + Aglis Wingly hidden city context + Scud Shark + Minotaur paired-mobs depth canon NEW MAJEUR + JP variants confirmation probable)
+> - 🥉 [`_sources/fandom-jelly.md`](./_sources/fandom-jelly.md) — Fandom tier 3 (⭐⭐⭐⭐⭐ **"The Magic City Aglis" official name canon NEW MAJEUR** + ⭐⭐⭐⭐⭐ **Jelly literal jellyfish visual CONFIRMED 2-source** : purple glow + translucent body + opaque white joints + red internal organ + brown items legs + ⭐⭐⭐⭐⭐ **OFFICIAL ability names CONFIRMED** : Jelly Sting (vs wiki ~Tentacle Smack) tendrils-tip sting + HP Recovers OFFICIAL 30% HP US 192/JP 240 + Spear Frost OFFICIAL ice-shards-rain visual + ⭐⭐⭐⭐⭐ **JP +25% HP CONFIRMED 20ème** (640→800 EXACT) + **JP ÷3 Gold CONFIRMED 17ème** (24→8 EXACT) + HP Recovers JP 240 secondary CONFIRMS JP HP 800 + ⭐⭐⭐⭐⭐ **MDF 250 "one of highest if not the highest" CONFIRMED 2-source** + ⭐⭐⭐⭐⭐ **Fire-element exception + Psyche Bomb X strategy canon CONFIRMED 2-source** + ⭐⭐⭐⭐⭐ **No shops Aglis canon NEW MAJEUR** + drop-economy + 8 min farm + "enemies far more powerful than previous locations" Aglis tier-elite + ⭐⭐⭐⭐ **Encounter rate Very common CONFIRMED 2-source** + 4 formations CONFIRMED 2-source CROSS-SOURCE + ⭐⭐⭐⭐ **DIVERGENCE INVERSE P.Attack fandom 51 LOWER vs wiki 60** first inverse + MAT 89 higher 11ème pattern récurrent CONFIRMED + inverse stat profile CONFIRMED 2-source magic-immune physical-vulnerable)
 
 ## Statut
 
-🟡 **Canon wiki seul (en attente fandom Jelly)** — Source unique : wiki LoD 🥈 :
+🟢 **Canon confirmed cross-source** (wiki 🥈 + fandom 🥉) — 2 sources cohérentes + ⚠️ **CORRECTIONS + EXTENSIONS fandom** :
+
+- ⭐⭐⭐⭐⭐ **"The Magic City Aglis" official name canon NEW MAJEUR** (cohérent récurrent récent "Death City Mayfil" pattern City-thematic Wingly hidden cities)
+- ⭐⭐⭐⭐⭐ **Jelly literal jellyfish visual CONFIRMED 2-source** : purple glow translucent body + opaque white joints + red internal organ + brown items legs
+- ⭐⭐⭐⭐⭐ **Jelly Sting OFFICIAL** (vs wiki ~Tentacle Smack community) — "stings with ends of tendrils medium physical"
+- ⭐⭐⭐⭐⭐ **HP Recovers OFFICIAL CONFIRMED 2-source** — 30% HP restore (US 192 / JP 240 — JP 240 CONFIRMS JP HP 800)
+- ⭐⭐⭐⭐⭐ **Spear Frost OFFICIAL CONFIRMED 2-source** — "massive shards of ice rain down" visual canon NEW
+- ⭐⭐⭐⭐⭐ **JP +25% HP 800 CONFIRMED 20ème instance** (640→800 EXACT) + **JP ÷3 Gold 8 CONFIRMED 17ème instance** (24→8 EXACT)
+- ⭐⭐⭐⭐⭐ **MDF 250 "one of the highest if not the highest in the game" CONFIRMED 2-source**
+- ⭐⭐⭐⭐⭐ **Fire-element + Psyche Bomb X exception strategy CONFIRMED 2-source** (×2 opposite element + Non-Elemental ×2 vs all)
+- ⭐⭐⭐⭐⭐ **No shops Aglis canon NEW MAJEUR** + drop-economy compensation + "enemies far more powerful" tier-elite
+- ⭐⭐⭐⭐⭐ **Counter Opportunities 13 SHORTER POOL canon NEW MAJEUR** — multiple counter pool variants (28 standard vs 13 Jelly)
+- ⭐⭐⭐⭐⭐ **Spear Frost self-named pool item-mob 10-instance CONFIRMED expansion**
+- ⭐⭐⭐⭐⭐ **HP Recovers self-heal ≤25% HP survival-AI canon CONFIRMED 2-source**
+- ⭐⭐⭐⭐ **Encounter rate "Very common" CONFIRMED 2-source** — 4-tier encounter spectrum NEW (Very common + Common + Uncommon + Rare)
+- ⭐⭐⭐⭐ **4 formations CONFIRMED 2-source** : Jelly solo + Jelly x2 + Jelly + Scud Shark + Jelly + Minotaur
+- ⭐⭐⭐⭐ **Aglis 11+ submaps + Scud Shark + Minotaur paired-mobs canon NEW MAJEUR**
+- ⭐⭐⭐⭐ **Healing Fog 10% drop CONFIRMED 2-source** + 8 min farm avg (wiki Items + wiki Jelly + fandom Jelly = triple-CONFIRMED)
+- ⭐⭐⭐⭐ **DIVERGENCE INVERSE P.Attack fandom 51 LOWER vs wiki 60** — first inverse fandom-LOWER canon NEW MAJEUR (vs récurrent 10-instance fandom higher)
+- ⭐⭐⭐⭐ **MAT 89 fandom higher vs wiki 79** — 11ème instance fandom higher MAT anomaly récurrent CONFIRMED
+- ⭐⭐⭐⭐ **Inverse stat profile CONFIRMED 2-source** : magic-immune physical-vulnerable (DF 80 + MDF 250)
+- ⭐⭐⭐⭐ **Living 4/8 PARTIAL status dichotomy CONFIRMED 4-instance** (Harpy + Hell Hound + Icicle Ball + Jelly)
+- ⭐⭐⭐⭐ **AI 3-phase HP-conditional survival-AI canon NEW MAJEUR**
+- ⭐⭐⭐ **30% Escape Aglis standard CONFIRMED 5-instance CROSS-LOCATION**
+
+> ⚠️ **CORRECTIONS canon Damia** :
+>
+> - ⚠️ **Wiki community-named "~Tentacle Smack" → fandom OFFICIAL "Jelly Sting"** (tendrils-tip sting mechanic CONFIRMED)
+> - ⚠️ **First inverse P.Attack divergence** : fandom LOWER 51 vs wiki 60 (vs récurrent fandom higher pattern 10-instance)
+
+### Statut précédent (wiki seul 🟡) — décisions canon conservées :
 
 - ⭐⭐⭐⭐⭐ **Counter Opportunities 13 SHORTER POOL canon NEW MAJEUR** — first non-28-standard counter pool (multiple counter pool variants canon NEW MAJEUR)
 - ⭐⭐⭐⭐⭐ **Spear Frost mob ability + self-named pool 10-instance CONFIRMED expansion** (Fatal Blizzard + Pellet + Sun Rhapsody + Trans Light + Dark Mist + Spectral Flash + Burn Out + Sparknet + Gushing Magma + Spear Frost NEW)
@@ -122,15 +174,17 @@
 
 ⭐⭐⭐⭐ **30% Escape Aglis standard CONFIRMED 5-instance CROSS-LOCATION** (Mayfil + Mille Seseau + Aglis pattern récurrent récent).
 
-## AI canon ⭐⭐⭐⭐⭐ 3-phase HP-conditional survival-AI
+## AI canon ⭐⭐⭐⭐⭐ 3-phase HP-conditional survival-AI — OFFICIAL names CONFIRMED 2-source
 
-| HP Threshold | Action                     | Target | Effect                                | Notes                                                                |
-| ------------ | -------------------------- | ------ | ------------------------------------- | -------------------------------------------------------------------- |
-| **>25%**     | **~Tentacle Smack**        | Single | 1× Physical damage                    | Community-named (~) — jellyfish-tentacle visual canon NEW MAJEUR     |
-| **≤50%**     | **Spear Frost**            | Single | **1.5× Water-elemental magic damage** | OFFICIAL canon — self-named pool item-mob ability CONFIRMED          |
-| **≤25%**     | ⭐⭐⭐⭐⭐ **HP recovers** | Self   | ⭐⭐⭐⭐⭐ **Restores 30% (192) HP**  | First documented mob self-heal canon NEW MAJEUR — survival-AI design |
+⚠️ **CORRECTION canon Damia** : wiki community-named "~Tentacle Smack" ÉCARTÉ → fandom OFFICIAL **Jelly Sting** + HP Recovers + Spear Frost OFFICIAL CONFIRMED 2-source.
 
-⭐⭐⭐⭐⭐ **3-phase HP-conditional survival-AI canon NEW MAJEUR Jelly** :
+| HP Threshold | Action                                       | Target | Effect                                                                                        | Notes                                                                                 |
+| ------------ | -------------------------------------------- | ------ | --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| **>25%**     | ⭐⭐⭐⭐⭐ **Jelly Sting** (OFFICIAL fandom) | Single | "**Stings a single target with the ends of its tendrils dealing medium physical damage**"     | OFFICIAL fandom (vs wiki ~Tentacle Smack community-named) — tendrils-tip sting visual |
+| **≤50%**     | ⭐⭐⭐⭐⭐ **Spear Frost** (OFFICIAL)        | Single | "**Massive shards of ice rain down upon a single target medium to high water-element magic**" | OFFICIAL CONFIRMED 2-source — self-named pool item-mob ability + 1.5× Water magic     |
+| **≤25%**     | ⭐⭐⭐⭐⭐ **HP Recovers** (OFFICIAL)        | Self   | **Restores 30% of max HP — US 192 / JP 240 HP** (CONFIRMS JP HP 800)                          | OFFICIAL CONFIRMED 2-source — first documented mob self-heal canon NEW MAJEUR         |
+
+⭐⭐⭐⭐⭐ **3-phase HP-conditional survival-AI canon NEW MAJEUR Jelly + OFFICIAL names CONFIRMED 2-source** :
 
 - **>25% HP** : Tentacle Smack physical attack standard
 - **≤50% HP spike** : Spear Frost magic spell-spam canon récurrent récent CONFIRMED (1.5× Water)

@@ -269,15 +269,17 @@
 
 ## Sprite Damia canon
 
-⚠️ **Sprite Gemini-generated en attente intégration** — Sprite sheet 42 frames (Idle 6 + Walk 8 + Attack 1 Lunge 8 + Attack 2 **Ice Breath** 8 + Hurt 4 + Death 8) + hero shot + 3 portraits.
+⚠️ **Sprite IA-generated en attente intégration disque** — Sprite sheet 42 frames (Idle 6 + Walk 8 + Attack 1 Lunge 8 + Attack 2 Ice Breath 8 + Hurt 4 + Death 8) + hero shot + 3 portraits close-up.
 
-**Observations sprite canon NEW MAJEUR Damia** :
+**Observations sprite Damia** :
 
-- ⭐⭐⭐⭐⭐ **Visual design Damia : massive porcupine-spined white wolf + glowing red eyes + vicious teeth canon NEW MAJEUR** (cohérent récurrent récent Ainu Kamuy wolf-god + savage mutated form canon NEW MAJEUR)
-- ⭐⭐⭐⭐⭐ **DIVERGENCE Damia sprite : Attack 2 = "Ice Breath" vs canon Wind "Spirit Wolf" canon NEW MAJEUR** = sprite ré-interprétation Damia liberté artistique canon NEW MAJEUR (Damia décision : conserver canon Wind "Spirit Wolf" gameplay + Ice Breath = sprite-only visual variant probable OR reframer Wind → Ice Damia canon à acter)
-- ⭐⭐⭐⭐⭐ **Death animation = ice shatter canon NEW MAJEUR** = cohérent Ice Breath sprite redesign + thematic frozen-soul-shatter canon NEW MAJEUR
-- ⭐⭐⭐⭐ **3 portraits close-up = pre-revival savage state probable canon NEW MAJEUR** (cohérent récurrent récent character emotion frames récurrent)
-- ⭐⭐⭐⭐ **42 frames total complexe boss sprite canon NEW MAJEUR** = high-fidelity boss sprite Damia rule (cohérent récurrent récent boss sprite frames récurrent)
+- ⭐⭐⭐⭐⭐ **Visual design Damia : massive porcupine-spined white wolf + glowing red eyes + vicious teeth** — cohérent récurrent Ainu Kamuy wolf-god mutated savage form canon récurrent CONFIRMED
+- ⭐⭐⭐⭐⭐ **Canon Damia = jeu original — Wind "Spirit Wolf" CONSERVÉ** — sprite "Ice Breath" = **artefact IA temporaire** (générations IA produisent parfois incohérences animation), à retravailler/régénérer si besoin lors de l'intégration in-engine Damia
+- ⭐⭐⭐⭐⭐ **Death = ice shatter** = artefact IA cohérent Ice Breath erroné — à retravailler vers thematic Wind-Spirit Wolf canon original (probable wind-dispersal animation)
+- ⭐⭐⭐⭐ **Hero shot + 3 portraits close-up savage state** = base réutilisable
+- ⭐⭐⭐⭐ **42 frames complexe boss sprite base** = high-fidelity sprite source Damia
+
+**Statut sprite** : Base IA Damia → adaptation in-engine future. **Aucune modification canon gameplay** — canon Wind "Spirit Wolf" intact tier 2 wiki + tier 3 fandom CONFIRMED 2-source.
 
 ## Gaps / TODO
 

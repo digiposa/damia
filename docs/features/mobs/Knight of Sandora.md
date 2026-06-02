@@ -237,4 +237,28 @@
 
 ## Gaps / TODO
 
-Voir [TODO.md](../../TODO.md) section Knight of Sandora wiki.
+Voir [TODO.md](../../TODO.md) section Knight of Sandora wiki + fandom.
+
+## Sprite Damia canon
+
+**Sprite IA-generated intégré** — `_assets/knight-of-sandora-sprite.png` (1536×1024) :
+
+- Hero shot
+- **Idle (6 frames)**
+- **Walk (6 frames)**
+- **Attack (7 frames)** — sword slash sequence
+- **Hurt (5 frames)**
+- **Death (6 frames)**
+
+**Observations canon Damia** :
+
+- ⭐⭐⭐⭐⭐ **Visual design CONFIRME canon 2-source** : **armored human + crouching low at the ready + wields sword right hand** = fandom appearance CONFIRMED visuel 3-source (wiki + fandom + sprite Damia)
+- ⭐⭐⭐⭐⭐ **One-sided plate armor canon NEW MAJEUR CONFIRMED visuel** : métal plate armor front (helmet + chest + shoulders + leg plates) + **orange/brown fur trim back exposed visible** (cohérent récurrent récent "front facing limbs and chest protected + back exposed" canon récurrent récent CONFIRMED visual)
+- ⭐⭐⭐⭐⭐ **Sandora military aesthetic CONFIRMED visuel** : Conquistador-style helmet + dark metal plate + orange/brown leather/fur + red bandages legs = Sandora distinctive design canon NEW MAJEUR (cohérent récurrent récent Sandora empire military aesthetic canon récurrent expansion)
+- ⭐⭐⭐⭐⭐ **Attack animation = Sword Slash sequence canon NEW MAJEUR Damia CONFIRMED visuel** = wiki "~Sword Slash" CONFIRMED visuel (DIVERGENCE fandom "Dagger Swipe" écartée — wiki adopted CONFIRMED visual canon Damia)
+- ⭐⭐⭐⭐ **5-animation set Idle/Walk/Attack/Hurt/Death canon récurrent CONFIRMED expansion** = standard mob animation set récurrent
+- ⭐⭐⭐⭐ **Death animation lying-down 6 frames canon récurrent CONFIRMED**
+- ⭐⭐⭐⭐ **No Hover/Fly animations canon flightless human knight CONFIRMED** = sprite CONFORME canon (contraste sprites Kamuy Ice Breath + Killer Bird Fly DIVERGENCES canon NEW MAJEUR — Knight = first IA sprite fully CONFORME canon Damia FIRST documented)
+- ⭐⭐⭐⭐ **Sprite single-visual covers both Seles + Black Castle variants** (cohérent récurrent recolor mob design canon récurrent — Black Castle variant probable palette/equipment-shift à investiguer)
+
+**Canon Damia adoption** : ✅ **Visual base IA pleinement CONFIRME canon jeu original** — sprite réutilisable directement intégration in-engine = **canon NEW MAJEUR FIRST documented Damia "sprite IA fully canon-conform"** (vs sprites précédents Kamuy/Killer Bird DIVERGENCES canon retouchés).

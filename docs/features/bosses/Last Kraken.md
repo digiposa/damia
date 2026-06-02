@@ -39,11 +39,61 @@
 - ⭐⭐⭐⭐ **Lavitz DORMANT 7-instance canon récurrent expansion**
 - ⭐⭐⭐⭐ **Aglis Wingly Magic City Disc 4 + Signet Sphere boss CONFIRMED canon récurrent récent**
 
-## Sprite canon ⭐⭐⭐⭐⭐ Sprite IA fully canon-conform Last Kraken
+## Sprite canon ⭐⭐⭐⭐⭐ 2-variant Sprite IA fully canon-conform Last Kraken
 
-![Last Kraken sprite + animations](./_assets/last-kraken-sprite.png)
+### Variant 1 — Eldritch tentacle-wrapped organic design
 
-⭐⭐⭐⭐⭐ **REVELATION SPRITE Damia : Last Kraken sprite IA fully canon-conform + 5-animation set IDLE/WALK/ATTACK/HURT/DEATH FIRST documented Damia + multi-eye eldritch kraken design Water Aglis boss + tentacle-wrapped body Tentacle Smack thematic CONFIRMED + 6-instance Sprite IA fully canon-conform expansion (sprite Last Kraken) ⭐⭐⭐⭐⭐** — Sprite IA caractéristiques observées :
+![Last Kraken sprite variant 1 + animations](./_assets/last-kraken-sprite.png)
+
+### Variant 2 — Armored cephalopod-crustacean hybrid design
+
+![Last Kraken sprite variant 2 + animations](./_assets/last-kraken-sprite-alt.png)
+
+⭐⭐⭐⭐⭐ **REVELATION SPRITE Damia : Last Kraken 2-variant Sprite IA fully canon-conform + Variant 1 eldritch tentacle-wrapped organic + Variant 2 armored cephalopod-crustacean hybrid + DIVERGENCE intra-Sprite-IA same-boss 2-design variants canon NEW MAJEUR FIRST documented Damia + 5-animation set IDLE/WALK/ATTACK/HURT/DEATH CONFIRMED 2-variant + 7-instance Sprite IA fully canon-conform expansion (2 sprites Last Kraken) ⭐⭐⭐⭐⭐**
+
+⭐⭐⭐⭐⭐ **2-variant intra-Sprite-IA same-boss design DIVERGENCE canon NEW MAJEUR Damia FIRST documented** = same Last Kraken boss generated 2 distinct visual interpretations (organic vs armored) = canon NEW MAJEUR FIRST documented Damia rule sprite-IA pluralisme design + à trancher implémentation finale.
+
+### Variant 1 — Eldritch tentacle-wrapped organic (sprite original)
+
+- ⭐⭐⭐⭐⭐ **Multi-eye eldritch kraken design canon NEW MAJEUR FIRST** : 3-4 visible glowing purple/red eyes en bulb cluster sur corps + tête sans structure céphalique standard = eldritch Lovecraftian Wingly creation thematic FIRST
+- ⭐⭐⭐⭐⭐ **Tentacle-wrapped serpentine body + Tentacle Smack ability thematic CONFIRMED** : long tentacles encircling le corps + bulb-clusters (probable Cleone summon-sites organique)
+- ⭐⭐⭐⭐⭐ **Dark purplish-grey body palette + organic alien texture canon NEW MAJEUR FIRST** : purple-grey neutre eldritch Water boss palette FIRST (DIVERGENCE Water récurrent blue/cyan)
+- ⭐⭐⭐⭐⭐ **5-animation set IDLE + WALK + ATTACK + HURT + DEATH FIRST documented Damia sprite-system**
+
+### Variant 2 — Armored cephalopod-crustacean hybrid (sprite alt) ⭐⭐⭐⭐⭐ NEW MAJEUR FIRST
+
+- ⭐⭐⭐⭐⭐ **Armored carapace shell-top design canon NEW MAJEUR FIRST documented Damia Variant 2** : heavy plated dark teal/cyan helmet-shell + Wingly mechanical-engineered armored guardian design FIRST = Aglis magical engineered guardian thematic CONFIRMED visual layer
+- ⭐⭐⭐⭐⭐ **3-eye-node front-face purple glowing canon NEW MAJEUR FIRST** : 3 round purple eye-nodes en triangular cluster sur le front armored = eldritch Wingly aesthetic CONFIRMED 2-variant
+- ⭐⭐⭐⭐⭐ **Tentacle-face mouth multi-tentacle Cthulhu-mouth canon NEW MAJEUR FIRST** : visage tentacules en grappe (Cthulhu-Lovecraftian) = Wingly magical creation eldritch thematic CONFIRMED 2-variant Variant 2 + Tentacle Smack ability sprite-coherent CONFIRMED 2-variant
+- ⭐⭐⭐⭐⭐ **Crab-like clawed limb design canon NEW MAJEUR FIRST documented Damia Variant 2** : multiple crustacean legs/claws below armored body = crustacean-cephalopod hybrid + WALK animation cohérent crab-locomotion FIRST
+- ⭐⭐⭐⭐⭐ **Teal/cyan + purple palette canon NEW MAJEUR FIRST Variant 2** : teal/cyan plated armor + purple eye-nodes = Wingly-magic palette CONFIRMED Variant 2 (vs Variant 1 purple-grey eldritch) = 2-palette Water boss DIVERGENCE FIRST
+- ⭐⭐⭐⭐⭐ **5-animation set IDLE + WALK + ATTACK + HURT + DEATH CONFIRMED 2-variant Damia rule expansion**
+
+### Comparaison 2-variant intra-Sprite-IA
+
+| Aspect             | Variant 1 (sprite original)              | Variant 2 (sprite alt)                                |
+| ------------------ | ---------------------------------------- | ----------------------------------------------------- |
+| **Design global**  | Eldritch organique tentacules-encircling | Armored carapace + crustacean-cephalopod hybrid       |
+| **Palette**        | Purple-grey neutre                       | Teal/cyan + purple                                    |
+| **Eyes**           | 3-4 glowing purple/red bulb-cluster      | 3 purple eye-nodes triangular front-face              |
+| **Body structure** | Tentacle-wrapped serpentine              | Heavy plated carapace + crab-limbs                    |
+| **Face/Mouth**     | No standard céphalique                   | Tentacle-mouth multi-tentacle Cthulhu-grappe          |
+| **Locomotion**     | Tentacle-glide implied                   | Crustacean crab-walk WALK animation                   |
+| **Thematic**       | Eldritch Lovecraftian Wingly organic     | Armored mechanical Wingly magical engineered guardian |
+| **Cleone summon**  | Bulb-clusters body-attached summon-sites | Carapace-attached summon-pods probable                |
+| **Aglis lore**     | Wingly organic guardian (raw eldritch)   | Wingly engineered armored guardian (magical-mecha)    |
+
+⭐⭐⭐⭐⭐ **DIVERGENCE 2-variant intra-Sprite-IA same-boss = canon NEW MAJEUR FIRST documented Damia** = Sprite IA fully canon-conform pluralisme design (les 2 sprites canon-conform avec wiki "Last Kraken Aglis Wingly boss") + **à trancher implémentation finale** (choisir Variant 1 organic OR Variant 2 armored OR hybrid des 2).
+
+⭐⭐⭐⭐⭐ **Sprite IA fully canon-conform 7-instance CONFIRMED canon récurrent récent expansion** (Knight of Sandora + Kongol Dragoon + Kubila + Land Skater + Kongol armor + Last Kraken V1 + **Last Kraken V2** = 7-instance) Damia rule expansion.
+
+⭐⭐⭐⭐⭐ **Both variants sprite-coherent Predictable Actions + Summon Cleones x2 + Tentacle Smack + Aglis Signet Sphere protector Wingly magical guardian mechanic** = both visual interpretations support boss-mechanic narrative thematic.
+
+⭐ **Canon Damia status sprite final** : à trancher Variant 1 OR Variant 2 OR hybrid implémentation. Recommandation : **Variant 2 armored cephalopod-crustacean hybrid plus Wingly-engineered magical guardian Aglis thematic** (cohérent récurrent Wingly Magic City Signet Sphere mechanical-magic engineered creation) OU **maintien Variant 1 eldritch organic plus Lovecraftian Wingly raw magical creation** (cohérent récurrent Wingly magical aberration). Décision implémentation reportée.
+
+---
+
+### Variant 1 sprite caractéristiques détaillées :
 
 - ⭐⭐⭐⭐⭐ **Multi-eye eldritch kraken design canon NEW MAJEUR FIRST documented Damia** : 3-4 visible glowing purple/red eyes en bulb cluster sur corps + tête sans structure céphalique standard = eldritch Lovecraftian Wingly creation thematic FIRST (cohérent récurrent Aglis Wingly Magic City Disc 4 + Signet Sphere protector = magical engineered guardian creature)
 - ⭐⭐⭐⭐⭐ **Tentacle-wrapped serpentine body canon NEW MAJEUR FIRST + Tentacle Smack ability thematic CONFIRMED** : long tentacles encircling le corps + bulb-clusters (probable Cleone summon-sites organique) = Tentacle Smack ability physical strike sprite-coherent

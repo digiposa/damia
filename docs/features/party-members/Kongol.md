@@ -248,3 +248,56 @@
 ## Gaps / TODO
 
 Voir [TODO.md](../../TODO.md) section Kongol wiki.
+
+## Sprite Damia canon
+
+**2 Sprites IA-generated intégrés** — `_assets/kongol-sprite.png` (Normal) + `_assets/kongol-armored-sprite.png` (Armored Indora Armor) — Dragoon form à venir.
+
+### Sprite #1 — Kongol Normal (party member base form)
+
+`_assets/kongol-sprite.png` (1536×1024) :
+
+- Hero shot
+- **Idle (6 frames)**
+- **Walk (6 frames)**
+- **Attack (7 frames)** — axe swing canon NEW MAJEUR
+- **Hurt (5 frames)**
+- **Death (6 frames)**
+
+**Observations canon Damia** :
+
+- ⭐⭐⭐⭐⭐ **Visual design Damia CONFIRMED canon Giganto species** : muscular shirtless humanoid + mohawk hairstyle + red war paint face + brown shoulder pad + leather cross-harness + furred kilt + brown leg wraps + large battle axe right hand canon NEW MAJEUR FIRST documented Damia visual Giganto
+- ⭐⭐⭐⭐⭐ **Battle axe weapon CONFIRMED visual** = cohérent récurrent récent wiki Axe Slash + canon Sandora/Giganto warrior canon récurrent récent CONFIRMED visual (cohérent wiki "Axe Slash" 1x physical Hoax = visual axe weapon CONFIRMED)
+- ⭐⭐⭐⭐⭐ **Mohawk + red war paint face Giganto tribal warrior aesthetic canon NEW MAJEUR FIRST documented Damia** = Giganto tribal culture canon NEW MAJEUR (cohérent récurrent récent Giganto tribal species canon récurrent récent expansion)
+- ⭐⭐⭐⭐⭐ **Bare-chest + leather harness + furred kilt = primitive Giganto warrior canon NEW MAJEUR FIRST** = thematic contrast vs Sandora military uniform armor canon NEW MAJEUR
+- ⭐⭐⭐⭐ **5-animation standard set + Attack = axe swing = wiki Axe Slash CONFIRMED visual** canon récurrent
+
+### Sprite #2 — Kongol Armored (Indora Armor) — Boss form
+
+`_assets/kongol-armored-sprite.png` (1536×1024) :
+
+- Hero shot Armored
+- **Idle (6 frames)**
+- **Walk (8 frames)**
+- **Attack 1 - Claw Slash (8 frames)**
+- **Attack 2 - Double Claw Rush (8 frames)**
+- **Hurt (4 frames)**
+- **Death (8 frames)**
+
+**Observations canon Damia** :
+
+- ⭐⭐⭐⭐⭐ **"Indora Armor" canon NEW MAJEUR FIRST documented Damia** = Kongol porte l'armure de son frère Indora comme boss form canon NEW MAJEUR (cohérent récurrent récent Indora = Kongol's brother Disc 4 Death Frontier canon récurrent récent + Indora's Axe boss-named weapon CONFIRMED 6-instance canon récurrent — **Indora Armor = boss-named armor canon NEW MAJEUR FIRST documented Damia** = brother-relationship armor inheritance/wearing canon NEW MAJEUR FIRST)
+- ⭐⭐⭐⭐⭐ **Visual design : ornate golden plate armor + spiked pauldrons + skull motifs (knee plates + helm motifs) + dark feathered/spiked cape + giant golden claws hand-weapons + bare arms + mohawk visible canon NEW MAJEUR FIRST documented Damia** = Giganto royal/ceremonial armor canon NEW MAJEUR
+- ⭐⭐⭐⭐⭐ **Claw weapons Armored form canon NEW MAJEUR FIRST documented Damia** = "Claw Slash" + "Double Claw Rush" = NEW ability naming visual canon NEW MAJEUR (DIVERGENCE sprite Claw Slash/Double Claw Rush vs wiki Axe Slash/Lariat/Double Combo = sprite Armored form weapon switch claw-based canon NEW MAJEUR FIRST + cohérent wiki "Need no Weapon" mechanism disabling Axe Slash → enables non-axe Lariat/Double Combo = visual Indora Armor claws = "Need no Weapon" alternate form probable canon NEW MAJEUR FIRST documented Damia)
+- ⭐⭐⭐⭐⭐ **"Indora Armor = Need no Weapon armor switch canon NEW MAJEUR FIRST documented Damia probable mechanic** = Kongol HP <70% triggers Need no Weapon → switches to Indora Armor + claws + Lariat/Double Combo abilities canon NEW MAJEUR FIRST documented Damia hypothesis (cohérent récurrent récent wiki "Need no Weapon HP <70% Auto Enable Lariat+Double Combo Disable Axe Slash" canon récurrent récent + sprite Indora Armor = HP <70% triggered Damia)
+- ⭐⭐⭐⭐⭐ **Indora's gear thematic Giganto family-bond canon NEW MAJEUR FIRST documented Damia** = Kongol wears Indora's armor = brother-relationship lore canon NEW MAJEUR (cohérent récurrent récent Indora Death Frontier Disc 4 boss + Kongol Hoax/Black Castle Disc 1 boss = brother sibling rivalry lore canon NEW MAJEUR FIRST)
+- ⭐⭐⭐⭐ **8-direction Walk + 8-frame Attack canon NEW MAJEUR Damia** = high-fidelity Armored boss sprite + 2-attack variants Claw Slash + Double Claw Rush canon NEW MAJEUR
+- ⭐⭐⭐⭐ **Death cristallin gold + black armor shatter canon NEW MAJEUR** = boss death thematic Indora Armor canon NEW MAJEUR
+
+### Canon Damia adoption — 2-form Kongol design
+
+⭐⭐⭐⭐⭐ **2-form Kongol sprite design canon NEW MAJEUR FIRST documented Damia** : **Normal form** (party member base + axe + bare-chest) + **Armored Indora Armor form** (boss HP <70% Need no Weapon trigger + claws + golden plate) — cohérent récurrent récent wiki "Need no Weapon HP <70% Auto enables Lariat + Double Combo disables Axe Slash" canon récurrent récent CONFIRMED expansion canon NEW MAJEUR Damia + **Indora Armor = brother's gear** canon NEW MAJEUR FIRST documented Damia.
+
+**Canon Damia stays jeu original** : abilities canon wiki Axe Slash + Lariat + Double Combo + Fanged Punch + Wall Beatdown + Need no Weapon + Magic Barrier — sprite "Claw Slash" / "Double Claw Rush" = visual variant naming Armored form claws weapon design = peuvent être adaptées canon Damia comme **Lariat (1.5x physical)** + **Double Combo (2x physical multi-target)** Armored form visual ré-interprétation acceptable (cohérent récurrent récent canon Damia stays original + sprite IA artistic variant à retravailler in-engine).
+
+**Sprite Dragoon Form Gold Dragon à venir** = utilisateur générera 3ème sprite Dragoon form Gold Dragon DS canon NEW MAJEUR Damia (Grand Stream + Meteor Strike + Golden Dragon multi-target spells visual).

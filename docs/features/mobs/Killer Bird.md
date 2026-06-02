@@ -219,4 +219,30 @@
 
 ## Gaps / TODO
 
-Voir [TODO.md](../../TODO.md) section Killer Bird wiki.
+Voir [TODO.md](../../TODO.md) section Killer Bird wiki + fandom.
+
+## Sprite Damia canon
+
+**Sprite IA-generated intégré** — `_assets/killer-bird-sprite.png` :
+
+- Hero shot
+- **Idle (8 Directions)**
+- **Fly (8 Directions)**
+- **Hover (4 frames)**
+- **Pulse (4 frames)** — probable Ultrasonic visual
+- **Attack - Dive (6 frames)** — probable Quick Pick beak-attack
+- **Attack - Star (6 frames)** — probable Blood Sucking ou Ultrasonic
+- **Hurt (4 frames)**
+- **Defeated (6 frames)**
+
+**Observations canon Damia** :
+
+- ⭐⭐⭐⭐⭐ **Visual design Damia : bat-demon hybrid + huge pointed beak + glowing red eyes + dark purple/black body + bat wings + red claws/talons canon NEW MAJEUR** — cohérent récurrent récent **purple fur + red talons** fandom CONFIRMED 2-source + **Darkness=purple element-color correlation canon NEW MAJEUR FIRST** confirmé visuel
+- ⭐⭐⭐⭐⭐ **DIVERGENCE sprite vs canon : flightless vs flying canon NEW MAJEUR** — fandom canon "**small bird incapable of flight**" mais sprite Damia montre **Fly + Hover** animations = sprite artefact IA divergence canon NEW MAJEUR (cohérent récurrent récent canon Damia stays original game + sprite IA artistic interpretation à retravailler in-engine integration)
+- ⭐⭐⭐⭐⭐ **"Pulse" animation = Ultrasonic visual probable canon NEW MAJEUR** = sonic wave visualization canon NEW MAJEUR (cohérent récurrent récent Ultrasonic CONFIRMED 2-source ability + sprite pulse animation = visual hint mécanique)
+- ⭐⭐⭐⭐ **"Dive" attack = Quick Pick beak-peck OFFICIAL ability visual canon NEW MAJEUR** = "**Runs towards target + picks with beak**" fandom description match visual Dive
+- ⭐⭐⭐⭐ **"Star" attack ambigu Blood Sucking ou Ultrasonic à acter** canon NEW MAJEUR
+- ⭐⭐⭐⭐ **8-direction Idle + Fly sprite coverage** canon récurrent récent (cohérent récurrent récent 8-direction sprite Damia rule expansion)
+- ⭐⭐⭐⭐ **Bat-demon aesthetic vs flightless-bird canon DIVERGENCE** = sprite IA artistic liberty canon NEW MAJEUR (acceptable per user directive — canon Damia stays jeu original, sprite IA à retravailler intégration future)
+
+**Canon Damia adoption** : Visual base IA réutilisable + canon jeu original CONSERVÉ (flightless bird + 3 abilities Quick Pick/Blood Sucking/Ultrasonic + Darkness=purple element-color CONFIRMED) + sprite Fly/Hover animations = IA divergence à retravailler intégration in-engine.

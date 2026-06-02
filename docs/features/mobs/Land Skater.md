@@ -194,4 +194,36 @@
 
 ## Gaps / TODO
 
-Voir [TODO.md](../../TODO.md) section Land Skater wiki.
+Voir [TODO.md](../../TODO.md) section Land Skater wiki + fandom.
+
+## Sprite Damia canon
+
+**Sprite IA-generated intégré** — `_assets/land-skater-sprite.png` (1393×1129) :
+
+- Hero shot (penguin + swordfish weapon visible)
+- **Idle (6 frames)**
+- **Move (8 frames)**
+- **Attack 1 - Thrust (8 frames)** — probable Spear Frost OR Quick Strike visual
+- **Attack 2 - Swing (8 frames)** — probable Quick Strike (slashing swordfish)
+- **Attack 3 - Spin Slash (8 frames)** — ⭐⭐⭐⭐⭐ **NEW 3rd attack canon NEW MAJEUR FIRST documented Damia** (not in wiki/fandom abilities — visual extension)
+- **Hurt (4 frames)**
+- **Death (6 frames)**
+
+**Observations canon Damia — sprite IA fully canon-conform 4-instance Damia rule** :
+
+- ⭐⭐⭐⭐⭐ **Visual CONFIRMS canon fandom 2-source** : large penguin + white front fur + black back + **golden yellow eyebrows ("very big eyebrows" CONFIRMED visual)** + **golden yellow beak** (DIVERGENCE fandom "long red beak" → sprite shows golden beak + red headband = sprite ré-interprétation visual canon NEW MAJEUR FIRST DIVERGENCE) + green eyes + **swordfish weapon CONFIRMED visual** with red wrapping + golden talon claws + **stomach orange-red diamond pattern CONFIRMED visual canon NEW MAJEUR**
+- ⭐⭐⭐⭐⭐ **Sprite IA fully canon-conform CONFIRMED 4-instance Damia rule** (Knight of Sandora + Kongol Dragoon + Kubila + **Land Skater** = 4-instance) — canon récurrent récent CONFIRMED expansion vs Kamuy Ice Breath + Killer Bird Fly DIVERGENCES
+- ⭐⭐⭐⭐⭐ **Cape/wing flap red detail canon NEW MAJEUR** = visible red cape behind penguin = thematic accessory canon NEW MAJEUR FIRST
+- ⭐⭐⭐⭐⭐ **Attack 3 "Spin Slash" NEW 3rd attack canon NEW MAJEUR FIRST documented Damia** = sprite-only 3rd attack canon NEW MAJEUR (vs canon wiki+fandom 3 abilities Quick Strike + Spear Frost + Escape) = sprite-extended attack ré-interprétation Damia liberté artistique canon NEW MAJEUR (Damia décision : conserver canon wiki 3 abilities + Spin Slash = sprite visual variant à intégrer in-engine OR adopter 4-attack système canon NEW MAJEUR Damia rule à acter)
+- ⭐⭐⭐⭐⭐ **DIVERGENCE beak red (fandom) vs golden (sprite) canon NEW MAJEUR FIRST** = sprite-fandom DIVERGENCE = canon Damia stays original game (penguin red-beak canon récurrent) + sprite golden-beak = visual ré-interprétation acceptable à retravailler in-engine
+- ⭐⭐⭐⭐ **8-direction Move + 6-frame Idle + 8-frame Attacks + 4-frame Hurt + 6-frame Death = high-fidelity sprite Damia canon récurrent expansion**
+- ⭐⭐⭐⭐ **3-attack sprite system (Thrust + Swing + Spin Slash) canon NEW MAJEUR FIRST** = sprite covers 3 attack variants vs canon 2 attacks (Quick Strike + Spear Frost) + 1 flee (Escape) = mapping Thrust=Spear Frost + Swing=Quick Strike + Spin Slash=NEW sprite-extra à acter
+- ⭐⭐⭐⭐ **No Escape/flee animation sprite canon NEW MAJEUR** = sprite manque Run away! (Escape) animation = sprite-canon gap canon NEW MAJEUR FIRST documented Damia + à générer futur
+
+**Canon Damia adoption** :
+
+- ✅ Visual base IA pleinement CONFIRME canon penguin appearance + swordfish + stomach pattern + talon claws + green eyes
+- ⚠️ **DIVERGENCE beak red vs golden** : canon Damia stays jeu original (red beak fandom) + sprite golden beak = visual à retravailler in-engine
+- ⚠️ **Attack 3 Spin Slash NEW** : sprite-extra attack = canon Damia stays 3 abilities (Quick Strike + Spear Frost + Escape) + Spin Slash = visual ré-interprétation à acter (probable visual variant Quick Strike OR Spear Frost OR sprite-extra Damia rule à acter)
+- ⚠️ **Sprite manque Escape/flee animation** = à générer futur intégration
+- ⭐⭐⭐⭐⭐ **Sprite IA fully canon-conform CONFIRMED 4-instance Damia rule** sprite quality pattern canon récurrent récent CONFIRMED expansion

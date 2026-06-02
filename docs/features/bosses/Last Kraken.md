@@ -39,6 +39,23 @@
 - ⭐⭐⭐⭐ **Lavitz DORMANT 7-instance canon récurrent expansion**
 - ⭐⭐⭐⭐ **Aglis Wingly Magic City Disc 4 + Signet Sphere boss CONFIRMED canon récurrent récent**
 
+## Sprite canon ⭐⭐⭐⭐⭐ Sprite IA fully canon-conform Last Kraken
+
+![Last Kraken sprite + animations](./_assets/last-kraken-sprite.png)
+
+⭐⭐⭐⭐⭐ **REVELATION SPRITE Damia : Last Kraken sprite IA fully canon-conform + 5-animation set IDLE/WALK/ATTACK/HURT/DEATH FIRST documented Damia + multi-eye eldritch kraken design Water Aglis boss + tentacle-wrapped body Tentacle Smack thematic CONFIRMED + 6-instance Sprite IA fully canon-conform expansion (sprite Last Kraken) ⭐⭐⭐⭐⭐** — Sprite IA caractéristiques observées :
+
+- ⭐⭐⭐⭐⭐ **Multi-eye eldritch kraken design canon NEW MAJEUR FIRST documented Damia** : 3-4 visible glowing purple/red eyes en bulb cluster sur corps + tête sans structure céphalique standard = eldritch Lovecraftian Wingly creation thematic FIRST (cohérent récurrent Aglis Wingly Magic City Disc 4 + Signet Sphere protector = magical engineered guardian creature)
+- ⭐⭐⭐⭐⭐ **Tentacle-wrapped serpentine body canon NEW MAJEUR FIRST + Tentacle Smack ability thematic CONFIRMED** : long tentacles encircling le corps + bulb-clusters (probable Cleone summon-sites organique) = Tentacle Smack ability physical strike sprite-coherent
+- ⭐⭐⭐⭐⭐ **Dark purplish-grey body palette + organic alien texture canon NEW MAJEUR FIRST** : palette purple-grey neutre Water-element (vs récurrent Water sprites blue/cyan Land Skater + Freeze Knight + Icicle Ball — Last Kraken Water purple-grey eldritch palette FIRST DIVERGENCE Water palette canon NEW MAJEUR) = boss-tier Water eldritch palette FIRST canon NEW MAJEUR (cohérent Disc 4 boss tier dark eldritch design)
+- ⭐⭐⭐⭐⭐ **5-animation set IDLE + WALK + ATTACK + HURT + DEATH canon NEW MAJEUR FIRST documented Damia sprite-system** = full boss animation system FIRST documented (cohérent récurrent boss sprite multi-anim — Last Kraken = 5-animation complete sprite-sheet FIRST documented)
+- ⭐⭐⭐⭐⭐ **6-instance Sprite IA fully canon-conform CONFIRMED canon récurrent récent expansion** (Knight of Sandora + Kongol Dragoon + Kubila + Land Skater + Kongol armor + Last Kraken = 6-instance) Damia rule
+- ⭐⭐⭐⭐ **DIVERGENCE potentielle wiki "kraken" sea-cephalopod thematic vs sprite "eldritch multi-eye creature" abstract design** : wiki simple "Kraken" naming → sprite eldritch elaborated Wingly magical creation design canon NEW MAJEUR FIRST documented Damia (sprite enrichit wiki thematic Wingly magical guardian)
+- ⭐⭐⭐⭐ **Boss sprite design coherent Predictable Actions + Summon Cleones x2 mechanic** : bulb-cluster organique sur corps = probable Cleone summon-sites organique + body-attached eggs/pods thematic canon NEW MAJEUR FIRST documented Damia
+- ⭐⭐⭐⭐ **Aglis Wingly Magic City Disc 4 Signet Sphere protector visual lore canon NEW MAJEUR FIRST** : creature design supports Wingly magical engineered guardian Aglis canon récurrent récent expansion
+
+⭐ **Canon Damia status sprite** : ⭐⭐⭐⭐⭐ **Sprite IA fully canon-conform 6-instance CONFIRMED** — Last Kraken sprite peut servir base visuelle. Légère adaptation possible (palette Water tonalité cyan/teal pour cohérence Water-element récurrent OR maintien purple-grey pour eldritch Wingly Disc 4 thematic). À trancher implémentation.
+
 ## Identity canon ⭐⭐⭐⭐⭐ Wiki 🟡
 
 - **Nom** : **Last Kraken** (parent boss) + **Cleone x2** (sub-bosses summoned)

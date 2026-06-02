@@ -301,3 +301,42 @@ Voir [TODO.md](../../TODO.md) section Kongol wiki.
 **Canon Damia stays jeu original** : abilities canon wiki Axe Slash + Lariat + Double Combo + Fanged Punch + Wall Beatdown + Need no Weapon + Magic Barrier — sprite "Claw Slash" / "Double Claw Rush" = visual variant naming Armored form claws weapon design = peuvent être adaptées canon Damia comme **Lariat (1.5x physical)** + **Double Combo (2x physical multi-target)** Armored form visual ré-interprétation acceptable (cohérent récurrent récent canon Damia stays original + sprite IA artistic variant à retravailler in-engine).
 
 **Sprite Dragoon Form Gold Dragon à venir** = utilisateur générera 3ème sprite Dragoon form Gold Dragon DS canon NEW MAJEUR Damia (Grand Stream + Meteor Strike + Golden Dragon multi-target spells visual).
+
+### Sprite #3 — Kongol Dragoon Form (Gold Dragon) — Party member ultimate form
+
+`_assets/kongol-dragoon-sprite.png` (1536×1024) :
+
+- Hero shot Dragoon Form
+- **Idle (6 frames)**
+- **Walk (8 frames)**
+- **Attack 1 - Axe Swing (8 frames)**
+- **Attack 2 - Horizontal Charge (8 frames)**
+- **Hurt (4 frames)**
+- **Death (8 frames)**
+
+**Observations canon Damia — sprite IA fully canon-conform 2nd-instance après Knight of Sandora** :
+
+- ⭐⭐⭐⭐⭐ **Visual design CONFIRME canon fandom 3-source (fandom + sprite + Belzac resemblance)** : **gold heavy armor + indigo blue accents + green gem center chest + v-shaped dragon headband visible + mohawk visible above headband + red face paint cross-nose + skull motif chest + light/white feather-pattern Dragoon wings + large Dragoon Axe steel motif gold-trimmed + gold gauntlets + gold knee-high boots** = visual MATCH parfait fandom description canon NEW MAJEUR FIRST CONFIRMED 2-instance canon récurrent récent "sprite IA fully canon-conform" Damia rule (cohérent récurrent récent Knight of Sandora sprite IA conforme canon + Kongol Dragoon = 2-instance Damia rule canon récurrent récent CONFIRMED expansion)
+- ⭐⭐⭐⭐⭐ **Dragoon Axe steel motif gold-trimmed canon NEW MAJEUR CONFIRMED visual fandom 2-source** = "**giant axe transformed into a large Dragoon Axe in a steel motif**" CONFIRMED visual (cohérent fandom description CONFIRMED) — Indora's Axe Dragoon-transformed canon NEW MAJEUR à investiguer (probable Kongol's normal Axe → Dragoon Axe transformation in-Dragoon-form canon NEW MAJEUR FIRST)
+- ⭐⭐⭐⭐⭐ **V-shaped dragon headband canon NEW MAJEUR CONFIRMED visual fandom 2-source** = forehead dragon-shaped headband visible canon NEW MAJEUR
+- ⭐⭐⭐⭐⭐ **Light/white feather-pattern Dragoon wings canon NEW MAJEUR FIRST documented Damia** = wings appear feather-like + light cream/yellow/gold metallic outlines (cohérent fandom "Dragoon wings are light orange, light yellow and gold with black metallic outlines" CONFIRMED visual)
+- ⭐⭐⭐⭐⭐ **Mohawk + red face paint preserved Dragoon form canon NEW MAJEUR FIRST** = Giganto identity preserved through Dragoon transformation = character continuity canon NEW MAJEUR (cohérent récurrent récent character identity Dragoon form récurrent — Kongol mohawk + red paint = preserved Dragoon canon NEW MAJEUR FIRST)
+- ⭐⭐⭐⭐⭐ **Skull motif chest preserved Dragoon armor canon NEW MAJEUR FIRST** = Giganto skull thematic récurrent (cohérent récurrent récent Kongol Normal cross-belt skull insignia + Dragoon form skull motif chest = thematic consistency canon NEW MAJEUR FIRST)
+- ⭐⭐⭐⭐⭐ **"Belzac's Dragoon form resemblance" canon NEW MAJEUR FIRST documented Damia visual** = sprite confirms gold heavy armor aesthetic shared Belzac probable (Belzac = Gold Dragon Original Dragon Campaign canon récurrent récent — Kongol Gold Dragon archetype shares visual identity canon NEW MAJEUR FIRST) — Belzac Gold Dragoon original canon récurrent CONFIRMED expansion + ⚠️ **CORRECTION canon NEW MAJEUR Damia** : Belzac = Gold Dragoon Original Dragon Campaign (vs antérieur récurrent récent "Lohan/Moon Kongol" canon récurrent — Belzac = original Gold Dragon Dragon Campaign canon récurrent récent CONFIRMED canon NEW MAJEUR FIRST documented + chain Belzac → Lohan/Indora → Kongol canon NEW MAJEUR FIRST)
+- ⭐⭐⭐⭐ **Attack 1 Axe Swing canon NEW MAJEUR Damia FIRST** = Dragoon form Axe Swing visual = Dragoon Addition (4-count probable) canon NEW MAJEUR (cohérent récurrent fandom "4-count Dragoon addition Kongol" canon récurrent CONFIRMED) — Axe Swing 4-input probable Dragoon Addition canon NEW MAJEUR FIRST
+- ⭐⭐⭐⭐ **Attack 2 Horizontal Charge canon NEW MAJEUR Damia FIRST** = Dragoon Magic visual probable (Grand Stream + Meteor Strike + Gold Dragon multi-target Earth spells) ou Dragoon Addition 2nd attack canon NEW MAJEUR FIRST
+- ⭐⭐⭐⭐ **5-animation set Dragoon form canon récurrent** = Idle/Walk/Attack 1/Attack 2/Hurt/Death
+
+### Canon Damia adoption — 3-form Kongol sprite complete
+
+⭐⭐⭐⭐⭐ **3-form Kongol sprite complete canon NEW MAJEUR Damia FIRST documented Damia** :
+
+| Form        | Sprite file                 | Context                                      | Element/Aesthetic                                                                   |
+| ----------- | --------------------------- | -------------------------------------------- | ----------------------------------------------------------------------------------- |
+| **Normal**  | `kongol-sprite.png`         | Party member base + boss Hoax >70% HP        | Giganto tribal warrior + axe right hand + mohawk + red paint                        |
+| **Armored** | `kongol-armored-sprite.png` | Boss Black Castle + Hoax <70% Need no Weapon | **Indora Armor** Dragon bones + claws + skull motif + gold/black                    |
+| **Dragoon** | `kongol-dragoon-sprite.png` | Party member ultimate Gold Dragon DS         | Gold heavy armor + indigo + green gem + light wings + dragon headband + Dragoon Axe |
+
+**Canon NEW MAJEUR FIRST documented Damia "3-form character sprite system"** = Kongol = first party-member with 3 visually distinct forms documented Damia (Normal + Boss-armor + Dragoon) — probable récurrent autres party members Dart 2-form (Normal + Dragoon) standard canon NEW MAJEUR à investiguer.
+
+**Sprite IA fully canon-conform CONFIRMED 2-instance Damia rule** (Knight of Sandora + Kongol Dragoon = 2-instance "fully canon-conform" sprite quality canon récurrent récent CONFIRMED expansion vs Kamuy Ice Breath + Killer Bird Fly DIVERGENCES).

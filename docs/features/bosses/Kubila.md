@@ -192,3 +192,48 @@
 ## Gaps / TODO
 
 Voir [TODO.md](../../TODO.md) section Kubila wiki.
+
+## Sprite Damia canon
+
+**2 Sprites IA-generated intégrés** :
+
+- `_assets/kubila-design.png` — character design hero shot
+- `_assets/kubila-sprite.png` — sprite sheet animations
+
+### Sprite #1 — Kubila Design (hero shot)
+
+Visual canon NEW MAJEUR FIRST documented Damia :
+
+- ⭐⭐⭐⭐⭐ **Grim-reaper Wingly judge canon NEW MAJEUR CONFIRMED visual** : tall figure + tonsured/bald head + pale skin + ornate dark robes green/black + skull-decorated chest + spike pauldrons
+- ⭐⭐⭐⭐⭐ **Massive black scythe weapon CONFIRMED visual** = wiki "Double Scythe" 1x Physical + Scythe grim-reaper Wingly judge thematic canon récurrent CONFIRMED visuel (cohérent récurrent récent fandom Kubila Scythe canon récurrent + Rose Demon's Dance scythe canon récurrent — Kubila Scythe = grim-reaper Wingly executioner FIRST documented)
+- ⭐⭐⭐⭐⭐ **Spellbook left hand canon NEW MAJEUR FIRST documented Damia** = Wingly judge tome/spellbook canon NEW MAJEUR (cohérent récurrent récent Zenebatos Wingly Law City + Wingly magic-court thematic canon récurrent — Kubila wields spellbook + scythe = judge-executioner dual-tool FIRST)
+- ⭐⭐⭐⭐⭐ **Dark feathered/spiked cape-wings canon NEW MAJEUR** = Wingly wings dark-feathered aesthetic canon NEW MAJEUR (cohérent récurrent récent Wingly winged species canon récurrent — Kubila dark wings = corrupted/judge Wingly aesthetic canon NEW MAJEUR FIRST)
+- ⭐⭐⭐⭐⭐ **Green-black ornate robes + skull motifs canon NEW MAJEUR** = thematic death-judge Wingly canon NEW MAJEUR FIRST documented Damia
+- ⭐⭐⭐⭐ **Glowing purple eyes canon NEW MAJEUR** = Wingly magical-eye glow canon NEW MAJEUR
+- ⭐⭐⭐⭐ **Spiked staff scythe handle decorated** = ornate weapon canon NEW MAJEUR
+
+### Sprite #2 — Kubila Sprite Sheet (boss animations)
+
+`_assets/kubila-sprite.png` (probable 1536×1024 or similar) :
+
+- **Idle (6 frames)**
+- **Walk (6 frames)**
+- **Attack 1 - Scythe Slash (6 frames)** — CONFIRMED wiki "Double Scythe" 1x Physical
+- **Attack 2 - Book of Darkness (6 frames)** — probable **Frog Bubbles** (wiki) Darkness Party 2x magic visual DIVERGENCE naming sprite "Book of Darkness" vs wiki "Frog Bubbles"
+- **Hurt (6 frames)**
+- **Death (6 frames)**
+
+**Observations canon Damia** :
+
+- ⭐⭐⭐⭐⭐ **Attack 1 "Scythe Slash" sprite naming CONFIRMS wiki "Double Scythe" 1x Physical visual** = scythe physical attack canon NEW MAJEUR FIRST CONFIRMED 2-source (wiki + sprite)
+- ⭐⭐⭐⭐⭐ **Attack 2 "Book of Darkness" sprite naming DIVERGENCE vs wiki "Frog Bubbles" Darkness Party 2x magic canon NEW MAJEUR FIRST** = sprite spellbook-magic ré-interprétation vs frog-magic thematic (cohérent récurrent récent canon Damia stays original game + sprite IA artistic variant à retravailler — Damia décision : conserver canon "Frog Bubbles" wiki tier 2 priority OR adopter sprite "Book of Darkness" = à acter probable canon = wiki Frog Bubbles)
+- ⭐⭐⭐⭐⭐ **Spellbook weapon canon récurrent CONFIRMED 2-source visual + sprite** = Wingly judge dual-tool canon NEW MAJEUR FIRST CONFIRMED + Book of Darkness = darkness-school magic via spellbook canon NEW MAJEUR
+- ⭐⭐⭐⭐ **6-frame animation set Idle/Walk/Attack1/Attack2/Hurt/Death** = standard boss sprite Damia canon récurrent expansion
+- ⭐⭐⭐⭐ **No Spark Net + Thunderbolt + Can't Combat sprite animations** = sprite covers Physical + Darkness only (vs wiki 5 abilities) = sprite-canon gap canon NEW MAJEUR FIRST documented Damia + Thunder abilities + Instant Death à acter probable spell-cast generic animation reuse
+
+**Canon Damia adoption** :
+
+- ✅ **Visual base IA pleinement CONFIRME canon** : grim-reaper Wingly judge + scythe + spellbook + dark wings + green robes + skull motifs + glowing eyes = canon CONFIRMED visual
+- ⚠️ **DIVERGENCE naming "Book of Darkness" sprite vs wiki "Frog Bubbles"** : canon Damia stays jeu original = **conserver "Frog Bubbles" wiki tier 2 priority** + sprite Book of Darkness = visual variant Wingly spellbook-magic à retravailler in-engine integration
+- ⭐⭐⭐⭐⭐ **Sprite IA fully canon-conform CONFIRMED 3-instance Damia rule** (Knight of Sandora + Kongol Dragoon + **Kubila**) = sprite quality pattern canon récurrent récent CONFIRMED expansion Damia rule
+- ⚠️ **Sprite covers 2/5 abilities** (Scythe Slash + Book of Darkness) — manque Spark Net + Thunderbolt + Can't Combat (Instant Death Tombstone Engraving) animations à générer futur

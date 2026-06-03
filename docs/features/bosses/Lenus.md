@@ -60,6 +60,61 @@
 
 ⭐ **Sprite Lenus humanoid directement utilisable** = Wingly Female anti-heroine villainess sans ailes volienne déployée + razor fans dual-weapon CONFIRMED fandom + 5-animation complete + ATTACK Water-magic cyan-slash sprite-coherent Bubble Burst probable + cohérent canon narrative Twin Castle Fletz humanoid-form 1ère bataille + **à compléter ultérieurement avec sprite Blue Sea Dragoon-form 2ème bataille Prison Island** (Dragoon transformation + ailes Dragoon + Pillar Break visual probable).
 
+## Sprite canon ⭐⭐⭐⭐⭐ Sprite IA Lenus humanoid Wingly form (AVEC ailes voliennes déployées) — 12-instance CONFIRMED expansion
+
+![Lenus humanoid Wingly avec ailes voliennes sprite + animations](./_assets/lenus-sprite-wings.png)
+
+⭐⭐⭐⭐⭐ **REVELATION SPRITE Damia : Lenus humanoid Wingly form AVEC ailes voliennes déployées sprite IA + Sprite IA fully canon-conform 12-instance CONFIRMED + 2-variant Lenus humanoid wings-undeployed-disguise vs wings-deployed-revealed canon NEW MAJEUR FIRST + Wings-deployment-state mechanic FIRST documented Damia + Cyan/teal magical energy Wingly wings palette canon NEW MAJEUR FIRST + Post-Wingly-reveal humanoid form Prison Island pre-Dragoon-transformation FIRST documented Damia (sprite Lenus AVEC ailes voliennes) ⭐⭐⭐⭐⭐**
+
+### Caractéristiques sprite Lenus humanoid Wingly AVEC ailes voliennes déployées
+
+- ⭐⭐⭐⭐⭐ **Cyan/teal magical energy Wingly wings translucent canon NEW MAJEUR FIRST documented Damia** = NEW Wingly wing-design + energy-magic-translucent vs feathered angelic style (Lavitz Dragoon DIVERGENCE) = cohérent Wingly magical-aerial-creature thematic FIRST + cyan-teal Water-element coherent Lenus Sea Dragoon FIRST
+- ⭐⭐⭐⭐⭐ **Ailes voliennes flowing energy aura wings canon NEW MAJEUR FIRST** = wings flow as energy-aura behind character vs structured-feathered = Wingly magical-flight technology FIRST + non-physical energy-wing design FIRST (vs Lavitz angelic-feathered wings DIVERGENCE)
+- ⭐⭐⭐⭐⭐ **Wings present in ALL 5 animations IDLE/WALK/ATTACK/HURT/DEATH canon NEW MAJEUR FIRST** = post-Wingly-reveal permanent state-mode + wings-deployment-state-locked sprite-coherence FIRST
+- ⭐⭐⭐⭐⭐ **Same outfit + same razor fans + same hair + same accessories as V1 = identity-coherence cross-variant CONFIRMED** = wings-only DIVERGENCE between V1 (undeployed) and V2 (deployed) = state-toggle visual mechanic FIRST
+- ⭐⭐⭐⭐⭐ **Cyan ATTACK slash from razor fan + cyan wings aura = double-cyan Water-magic thematic CONFIRMED** = sprite + ailes coherent Water Wingly Sea Dragoon palette FIRST
+- ⭐⭐⭐⭐⭐ **5-animation set IDLE + WALK + ATTACK + HURT + DEATH avec wings sprite-system FIRST documented Damia**
+
+### 2-variant Lenus humanoid wings-state canon NEW MAJEUR FIRST ⭐⭐⭐⭐⭐ Damia rule
+
+| Variant | State                    | Lore context                                                                  | Sprite                   |
+| ------- | ------------------------ | ----------------------------------------------------------------------------- | ------------------------ |
+| **V1**  | **Sans ailes volienne**  | **Twin Castle/Fletz pre-Wingly-reveal disguise**                              | `lenus-sprite.png`       |
+| **V2**  | **Avec ailes voliennes** | **Post-Wingly-reveal Prison Island humanoid form pre-Dragoon-transformation** | `lenus-sprite-wings.png` |
+
+⭐⭐⭐⭐⭐ **2-variant Lenus wings-state canon NEW MAJEUR FIRST documented Damia narrative-coherent** :
+
+- **V1 = Twin Castle 1ère bataille** : Lenus pose as Princess Emille disguise + post-reveal humanoid 1ère bataille pre-jumps-from-tower
+- **V2 = Prison Island 2ème bataille humanoid** : Lenus reveals identity + flies off + arrives Prison Island humanoid + wings deployed visible + before Dragoon transformation
+- **V3 (à générer) = Blue Sea Dragoon Prison Island 2ème bataille Dragoon-form** : transformed Dragoon avec ailes Dragoon + Pillar Break visual
+
+⭐⭐⭐⭐⭐ **Wings-deployment state-toggle visual mechanic canon NEW MAJEUR FIRST documented Damia** = Wingly disguise→reveal state-machine sprite-system FIRST + Lenus-jumps-from-tower-flies-off = state-transition moment narrative-coherent.
+
+### 12-instance Sprite IA fully canon-conform Damia rule expansion
+
+| #   | Entity                                    | Tier                              | Notes                                                            |
+| --- | ----------------------------------------- | --------------------------------- | ---------------------------------------------------------------- |
+| 1   | **Knight of Sandora**                     | Mob                               | Mille Soldat Sandora                                             |
+| 2   | **Kongol Dragoon**                        | Party-Dragoon Earth               | Gold Dragon                                                      |
+| 3   | **Kubila**                                | Boss                              | Zenebatos Wingly trio                                            |
+| 4   | **Land Skater**                           | Mob                               | Penguin Water Kashua                                             |
+| 5   | **Kongol armored**                        | Party normal                      | Indora Armor boss-form                                           |
+| 6   | **Last Kraken V1**                        | Boss eldritch                     | Tentacle-wrapped organic                                         |
+| 7   | **Last Kraken V2**                        | Boss armored                      | Crustacean-cephalopod Wingly-engineered                          |
+| 8   | **Lavitz normal**                         | Party-Member                      | Wind Dragoon Bale Knight noble-knight                            |
+| 9   | **Lavitz Dragoon**                        | Party-Dragoon Wind                | Jade Dragon (wings REWORK requis)                                |
+| 10  | **Lavitz Spirit possédé**                 | Event boss possessed              | Wind ghost Mayfil Zackwell-corruption                            |
+| 11  | **Lenus humanoid Wingly (V1 sans ailes)** | Boss Wingly Female humanoid       | Twin Castle Wingly Female anti-heroine                           |
+| 12  | **Lenus humanoid Wingly (V2 avec ailes)** | Boss Wingly Female wings-deployed | ⭐⭐⭐⭐⭐ **Post-reveal Prison Island cyan-energy-wings FIRST** |
+
+⭐⭐⭐⭐⭐ **Sprite IA fully canon-conform 12-instance CONFIRMED canon récurrent récent expansion Damia rule** + **2-variant same-character sprite wings-state canon NEW MAJEUR FIRST documented Damia** (vs Last Kraken V1/V2 different-design = Lenus V1/V2 same-design wings-state-toggle = NEW Damia rule 2-variant mechanic).
+
+### Décision implémentation Damia 2-variant
+
+⭐ **Sprite Lenus V1 + V2 directement utilisables** = wings-deployment state-toggle visual narrative-coherent + V1 Twin Castle disguise + V2 Prison Island humanoid post-reveal + **à compléter V3 Blue Sea Dragoon Dragoon-form** Prison Island 2ème bataille Dragoon-transformation (Pillar Break + Bubble Burst Dragoon visual) ultérieurement.
+
+⭐⭐⭐⭐⭐ **NB DIVERGENCE Wingly wings canon Damia** : Lenus V2 = cyan/teal magical energy-aura wings (flowing translucent magical-energy) cohérent Wingly magical-aerial-flight thematic + DIFFÉRENT vs Lavitz Dragoon feathered angelic wings (DIVERGENCE REWORK requise) = **Lenus V2 Wingly wings = canon-coherent visual model pour future Lavitz Dragoon rework probable** (Wind Dragoon Lavitz dragonfly/translucent-energy wings ressemble + non-feathered design canon récurrent récent Wingly aesthetics).
+
 ## Statut
 
 🟢 **Canon CONFIRMED cross-source** — Wiki LoD 🥈 + Fandom 🥉 :

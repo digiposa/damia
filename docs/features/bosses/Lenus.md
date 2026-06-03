@@ -115,6 +115,79 @@
 
 ⭐⭐⭐⭐⭐ **NB DIVERGENCE Wingly wings canon Damia** : Lenus V2 = cyan/teal magical energy-aura wings (flowing translucent magical-energy) cohérent Wingly magical-aerial-flight thematic + DIFFÉRENT vs Lavitz Dragoon feathered angelic wings (DIVERGENCE REWORK requise) = **Lenus V2 Wingly wings = canon-coherent visual model pour future Lavitz Dragoon rework probable** (Wind Dragoon Lavitz dragonfly/translucent-energy wings ressemble + non-feathered design canon récurrent récent Wingly aesthetics).
 
+## Sprite canon ⭐⭐⭐⭐⭐ Sprite IA Lenus Blue Sea Dragoon (V3 Dragoon-form Prison Island Disc 3) — 13-instance CONFIRMED expansion
+
+![Lenus Blue Sea Dragoon sprite + 7-animation set](./_assets/lenus-dragoon-sprite.png)
+
+⭐⭐⭐⭐⭐ **REVELATION SPRITE Damia : Lenus Blue Sea Dragoon V3 Dragoon-form Prison Island 2ème bataille sprite IA fully canon-conform + Sprite IA fully canon-conform 13-instance CONFIRMED + Party-Dragoon Wingly Female tier sprite NEW MAJEUR FIRST + 7-animation set IDLE/WALK/ATTACK 1 Chakram Slash/ATTACK 2 Ice Steak/ATTACK 3 Front Strike/HURT/DEATH MOST-COMPLEX sprite-system Damia FIRST + 3-distinct ATTACK variants Dragoon-form FIRST + Sprite-team OFFICIAL ability names DIVERGENCE wiki Kick Slash/Double Ring/Drowning/Underwater Dancing vs sprite Chakram Slash/Ice Steak/Front Strike canon NEW MAJEUR FIRST documented Damia (sprite Lenus Blue Sea Dragoon) ⭐⭐⭐⭐⭐**
+
+### Caractéristiques sprite Lenus Blue Sea Dragoon V3
+
+- ⭐⭐⭐⭐⭐ **Blue Sea Dragoon transformation Lenus Dragoon-form canon NEW MAJEUR FIRST documented Damia** = transformed Dragoon-form Prison Island 2ème bataille + cohérent fandom "turning herself into the Dragoon of the Blue Sea Dragon"
+- ⭐⭐⭐⭐⭐ **Silver/light-blue armor + cyan/teal accent canon NEW MAJEUR FIRST** = Blue Sea Dragoon palette + ice/water thematic + light-blue noble-Dragoon Wingly aesthetic FIRST
+- ⭐⭐⭐⭐⭐ **2-pair translucent dragon wings cyan-blue Wingly Dragoon canon NEW MAJEUR FIRST** = quadruple-wing design Sea-Dragon thematic + translucent wing-membrane cohérent V2 Wingly energy-aura wings + Wingly Dragoon-flight aesthetic FIRST
+- ⭐⭐⭐⭐⭐ **Crown/circlet on head + ornate headpiece canon NEW MAJEUR FIRST** = noble Wingly-aristocrat Dragoon crown + lord-of-the-sea regal aesthetic FIRST
+- ⭐⭐⭐⭐⭐ **Armored bodice/torso + cyan crystals/gems chest canon NEW MAJEUR FIRST** = Wingly Dragoon armor design Lenus-specific + cyan-gem Sea Dragoon-Spirit-anchor visual FIRST
+- ⭐⭐⭐⭐⭐ **Long flowing skirt/dress lower body canon NEW MAJEUR FIRST** = feminine Wingly Dragoon design noble-aristocrat + flowing fabric mobility-design FIRST
+- ⭐⭐⭐⭐⭐ **Razor fans enhanced Dragoon-form weapons canon NEW MAJEUR FIRST** = sprite shows enhanced razor-fan crystalline-blade Dragoon-form variant + dual-wield maintained cross-form CONFIRMED 3-source (fandom + sprite V1 + sprite V3) + Dragoon-form weapon-upgrade FIRST
+- ⭐⭐⭐⭐⭐ **7-animation set IDLE + WALK + ATTACK 1 + ATTACK 2 + ATTACK 3 + HURT + DEATH MOST-COMPLEX sprite-system canon NEW MAJEUR FIRST documented Damia** = 7-animation sprite-sheet (vs récurrent 5-animation) + Dragoon-form complex-AI sprite system FIRST
+- ⭐⭐⭐⭐⭐ **3-distinct ATTACK variants Chakram Slash + Ice Steak + Front Strike canon NEW MAJEUR FIRST documented Damia** = multi-attack-variant sprite-system Dragoon-form Lenus FIRST + 3-action attack-pool sprite FIRST
+
+### ⚠️ DIVERGENCE sprite ATTACK names vs wiki canon abilities
+
+⭐⭐⭐⭐⭐ **DIVERGENCE sprite-team ability names vs wiki canon NEW MAJEUR FIRST documented Damia** :
+
+| Sprite ATTACK              | Wiki Undersea Cavern ability (probable match)                                         | Notes canon DIVERGENCE                                             |
+| -------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| **ATTACK 1 Chakram Slash** | **~Double Ring** (1.5x Physical Single) probable                                      | ⭐ Razor-fan-chakram circular thematic = Double Ring sprite-rename |
+| **ATTACK 2 Ice Steak**     | **~Drowning** (1x Water Party) OR **~Underwater Dancing** (1.5x Water Party) probable | ⭐ Ice-themed sprite-rename Water-magic abilities                  |
+| **ATTACK 3 Front Strike**  | **~Kick Slash** (1x Physical Single) probable                                         | ⭐ Front-kick sprite-rename = Kick Slash                           |
+
+⭐⭐⭐⭐⭐ **Sprite-team ability-naming DIVERGENCE wiki canon canon NEW MAJEUR FIRST documented Damia** = sprite-team créatif rename probable + à clarifier implémentation Damia : adopter wiki canon (Kick Slash + Double Ring + Drowning + Underwater Dancing) ou sprite-names (Chakram Slash + Ice Steak + Front Strike) + reconciliation par sprite-design-coherence + wiki-canon-priority probable adopter wiki + sprite-names = visual-attack-labels-créatifs.
+
+⭐⭐⭐⭐⭐ **Lenus Dragoon abilities CONFIRMED 4-source canon NEW MAJEUR FIRST documented Damia** :
+
+- **Bubble Burst** (fandom Dragoon Magic razor-fan + water-portal + slam + beam) — probable spell-magic
+- **Pillar Break** (fandom Dragoon Magic water-pillars + drown-barrier + heel-smash) — probable spell-magic
+- **Wiki 4 abilities** (Kick Slash + Double Ring + Drowning + Underwater Dancing) — D'attack/physical-magic-Dragoon
+- **Sprite 3 attacks** (Chakram Slash + Ice Steak + Front Strike) — sprite-team renamed-3-out-of-4 wiki abilities
+
+### 3-variant Lenus sprite-states canon NEW MAJEUR FIRST ⭐⭐⭐⭐⭐ Damia rule
+
+| Variant | State                             | Lore context                                                                        | Sprite                     |
+| ------- | --------------------------------- | ----------------------------------------------------------------------------------- | -------------------------- |
+| **V1**  | **Humanoid sans ailes volienne**  | **Twin Castle/Fletz pre-Wingly-reveal disguise**                                    | `lenus-sprite.png`         |
+| **V2**  | **Humanoid avec ailes voliennes** | **Post-Wingly-reveal Prison Island humanoid form pre-Dragoon-transformation**       | `lenus-sprite-wings.png`   |
+| **V3**  | **Blue Sea Dragoon-form**         | **Prison Island 2ème bataille Dragoon-form post-transformation + Regole companion** | `lenus-dragoon-sprite.png` |
+
+⭐⭐⭐⭐⭐ **3-variant Lenus sprite-progression canon NEW MAJEUR FIRST documented Damia narrative-coherent** = Princess Emille disguise → Wingly-reveal → Sea Dragoon transformation 3-stage character-arc visual progression FIRST documented Damia + **MOST-COMPLEX 3-variant same-character sprite-progression Damia rule expansion canon NEW MAJEUR FIRST**.
+
+### 13-instance Sprite IA fully canon-conform Damia rule expansion
+
+| #   | Entity                           | Tier                              | Notes                                                            |
+| --- | -------------------------------- | --------------------------------- | ---------------------------------------------------------------- |
+| 1   | **Knight of Sandora**            | Mob                               | Mille Soldat Sandora                                             |
+| 2   | **Kongol Dragoon**               | Party-Dragoon Earth               | Gold Dragon                                                      |
+| 3   | **Kubila**                       | Boss                              | Zenebatos Wingly trio                                            |
+| 4   | **Land Skater**                  | Mob                               | Penguin Water Kashua                                             |
+| 5   | **Kongol armored**               | Party normal                      | Indora Armor boss-form                                           |
+| 6   | **Last Kraken V1**               | Boss eldritch                     | Tentacle-wrapped organic                                         |
+| 7   | **Last Kraken V2**               | Boss armored                      | Crustacean-cephalopod Wingly-engineered                          |
+| 8   | **Lavitz normal**                | Party-Member                      | Wind Dragoon Bale Knight noble-knight                            |
+| 9   | **Lavitz Dragoon**               | Party-Dragoon Wind                | Jade Dragon (wings REWORK requis)                                |
+| 10  | **Lavitz Spirit possédé**        | Event boss possessed              | Wind ghost Mayfil Zackwell-corruption                            |
+| 11  | **Lenus humanoid V1 sans ailes** | Boss Wingly Female humanoid       | Twin Castle disguise                                             |
+| 12  | **Lenus humanoid V2 avec ailes** | Boss Wingly Female wings-deployed | Post-reveal Prison Island                                        |
+| 13  | **Lenus Blue Sea Dragoon V3**    | Party-Dragoon Wingly Female Water | ⭐⭐⭐⭐⭐ **MOST-COMPLEX 7-anim + 3-ATTACK Dragoon-form FIRST** |
+
+⭐⭐⭐⭐⭐ **Sprite IA fully canon-conform 13-instance CONFIRMED canon récurrent récent expansion Damia rule** + **Party-Dragoon Wingly Female tier sprite canon NEW MAJEUR FIRST documented Damia** (vs récurrent boss/mob/Dragoon Earth/Party-Member/Party-Dragoon Wind/Event-boss-possessed/Boss-Wingly-Female-humanoid — Lenus V3 = first Party-Dragoon-Wingly-Female-Water Sea Dragoon tier FIRST) + **MOST-COMPLEX 7-animation sprite-system + 3-distinct ATTACK variants sprite-system canon NEW MAJEUR FIRST documented Damia**.
+
+### Décision implémentation Damia
+
+⭐ **Sprite Lenus V3 Blue Sea Dragoon directement utilisable** = MOST-COMPLEX 7-animation set + 3-distinct ATTACKs + Wingly Dragoon Sea-thematic visual + cohérent canon narrative Prison Island Dragoon-transformation 2ème bataille + à reconcilier sprite-attack-names avec wiki canon (Kick Slash/Double Ring/Drowning/Underwater Dancing) probable wiki-priority + sprite-names visual-labels.
+
+⭐⭐⭐⭐⭐ **Lenus V3 Wingly Dragoon wings = canon-coherent visual model pour Lavitz Dragoon rework** (Wingly Wind Dragoon Lavitz dragonfly/translucent-energy wings similar non-feathered design canon récurrent Wingly aesthetics — Lenus V3 wings = template).
+
 ## Statut
 
 🟢 **Canon CONFIRMED cross-source** — Wiki LoD 🥈 + Fandom 🥉 :

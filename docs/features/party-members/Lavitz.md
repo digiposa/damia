@@ -139,6 +139,53 @@
 
 ⭐ **Sprite Lavitz directement utilisable** = ALL fandom Character Design specifications validated par sprite + brown eyes DIVERGENCE résolue (sprite CONFIRME brown vs wiki blue-grey = adopter brown) + sprite-ready normal-form base visuelle + à compléter ultérieurement avec sprite Dragoon-form (jade green armor + reddish brown trim + red gem upper chest + jade green dragon headband + Dragoon Spear brown motif — à générer).
 
+## Sprite Dragoon-form canon ⭐⭐⭐⭐⭐ Sprite IA Lavitz Jade Dragoon — 9-instance CONFIRMED expansion
+
+![Lavitz Dragoon sprite + animations](./_assets/lavitz-dragoon-sprite.png)
+
+⭐⭐⭐⭐⭐ **REVELATION SPRITE Damia : Lavitz Dragoon-form sprite IA + Sprite IA fully canon-conform 9-instance CONFIRMED canon récurrent récent expansion + Party-member Dragoon-form tier sprite NEW MAJEUR FIRST + 5-animation set IDLE/WALK/ATTACK/HURT/DEATH Dragoon-form FIRST + ATTACK Wind magic green-blast spear-tip CONFIRMED + DIVERGENCE intra-Sprite-IA ailes plumées angéliques vs canon récurrent dragonfly/leaf-style FLAG REWORK requis ⭐⭐⭐⭐⭐**
+
+### Caractéristiques sprite Lavitz Dragoon validées fandom Canon
+
+- ⭐⭐⭐⭐⭐ **Spiky blonde hair maintained Dragoon-form CONFIRMED** (fandom : "spiky ends on front" + Dragoon design consistency)
+- ⭐⭐⭐⭐⭐ **Jade green Dragoon armor CONFIRMED canon** (fandom : "jade green Dragoon armor in a reddish brown trim")
+- ⭐⭐⭐⭐⭐ **Reddish brown trim accents armor CONFIRMED canon** (fandom : "reddish brown trim")
+- ⭐⭐⭐⭐⭐ **Red/orange gem upper chest CONFIRMED canon** (fandom : "red gem was embedded on his upper chest")
+- ⭐⭐⭐⭐⭐ **Brown pants CONFIRMED canon** (fandom : "black pants" DIVERGENCE intra-fandom — sprite affiche brown — résolution probable brown CONFIRMED visual)
+- ⭐⭐⭐⭐⭐ **Jade green Dragoon armor boots CONFIRMED canon** (fandom : "jade green Dragoon armor boots with a brown gem at the center")
+- ⭐⭐⭐⭐⭐ **Jade green dragon headband forehead CONFIRMED canon** (fandom : "jade green dragon headband on his forehead with brown studs")
+- ⭐⭐⭐⭐⭐ **Spear → Dragoon Spear transformation brown motif CONFIRMED canon** (fandom : "spear also transforms into a Dragoon Spear in a brown motif")
+- ⭐⭐⭐⭐⭐ **Wind elemental ATTACK green-blast spear-tip canon NEW MAJEUR FIRST documented** = Wing Blaster/D'Attack Wind magic sprite-coherent CONFIRMED (cohérent récurrent Wind Dragoon attack element CONFIRMED)
+- ⭐⭐⭐⭐⭐ **Pauldrons large reddish brown design CONFIRMED canon** (fandom : "pauldrons from his Dragoon armor had three reddish brown designs")
+- ⭐⭐⭐⭐⭐ **5-animation set IDLE + WALK + ATTACK + HURT + DEATH Dragoon-form party-member-tier canon NEW MAJEUR FIRST documented Damia**
+
+### ⚠️ DIVERGENCE ailes — REWORK REQUIS canon NEW MAJEUR FIRST
+
+⭐⭐⭐⭐⭐ **DIVERGENCE Sprite IA ailes plumées angéliques (sprite) vs canon récurrent dragonfly/translucent/leaf-style (canon original LoD)** :
+
+- **Sprite actuel** : Large feathered angelic wings (style angel/seraph) = sprite IA déviation
+- **Canon original LoD** : Dragoon wings normalement dragonfly/insect-like translucent OU stylisé leaf/feather Wind-thematic
+- **Lore canon** : "covered in a giant tornado to unveil both his Dragoon outfit and weapon and makes a pose being **embedded with wind and green leaves**" = Wind + green leaves thematic NOT feathered-bird-wings
+- **À rework** : Convertir feathered angelic wings → dragonfly/leaf-style Wind-thematic transparent ou stylisé green leaves Wind embedded canon-coherent
+
+⭐ **Décision Damia** : ⭐⭐⭐⭐⭐ **Sprite Lavitz Dragoon-form base visuelle utilisable AVEC rework ailes obligatoire** = corps + armor + spear + animations OK + ailes à retravailler pour respecter canon Wind+green-leaves thematic original LoD. À noter implémentation : ailes dragonfly translucent OR leaves-stylized Wind-thematic à générer post-rework.
+
+### 9-instance Sprite IA fully canon-conform Damia rule expansion
+
+| #   | Entity                | Tier                | Notes                                                    |
+| --- | --------------------- | ------------------- | -------------------------------------------------------- |
+| 1   | **Knight of Sandora** | Mob                 | Mille Soldat Sandora                                     |
+| 2   | **Kongol Dragoon**    | Party-Dragoon Earth | Gold Dragon                                              |
+| 3   | **Kubila**            | Boss                | Zenebatos Wingly trio                                    |
+| 4   | **Land Skater**       | Mob                 | Penguin Water Kashua                                     |
+| 5   | **Kongol armored**    | Party normal        | Indora Armor boss-form                                   |
+| 6   | **Last Kraken V1**    | Boss eldritch       | Tentacle-wrapped organic                                 |
+| 7   | **Last Kraken V2**    | Boss armored        | Crustacean-cephalopod Wingly-engineered                  |
+| 8   | **Lavitz normal**     | Party-Member        | Wind Dragoon Bale Knight noble-knight                    |
+| 9   | **Lavitz Dragoon**    | Party-Dragoon Wind  | ⭐⭐⭐⭐⭐ **Jade Dragon + REWORK wings required FIRST** |
+
+⭐⭐⭐⭐⭐ **Sprite IA fully canon-conform 9-instance CONFIRMED canon récurrent récent expansion Damia rule** + **Party-member Dragoon-form tier sprite NEW MAJEUR FIRST documented Damia** (vs Lavitz normal-form Party-member tier + Kongol Dragoon Party-Dragoon Earth — Lavitz Dragoon = Party-Dragoon Wind tier FIRST).
+
 ## Identity canon ⭐⭐⭐⭐⭐ Cross-source 🟢
 
 - **Nom** : **Lavitz Slambert** (JP : **ラヴィッツ・スラムバート** Ravittsu Suramubāto)

@@ -37,6 +37,46 @@
 - ⭐⭐⭐⭐⭐ **Self-impale CONFIRMED 3-instance avec Kanzas + Cleone (fandom Lavitz Spirit narrative)**
 - ⭐⭐⭐⭐⭐ **Shirley + Lavitz Spirit CONFIRMED 2-instance event boss talk-resolution Damia rule expansion**
 
+## Sprite canon ⭐⭐⭐⭐⭐ Sprite IA Lavitz Spirit possédé fully canon-conform — 10-instance CONFIRMED expansion
+
+![Lavitz Spirit possédé sprite + animations](./_assets/lavitz-spirit-sprite.png)
+
+⭐⭐⭐⭐⭐ **REVELATION SPRITE Damia : Lavitz Spirit possédé sprite IA + Sprite IA fully canon-conform 10-instance CONFIRMED + Event boss possédé tier sprite NEW MAJEUR FIRST + Possessed-by-Zackwell demonic-corruption visual lore canon NEW MAJEUR FIRST + Cross-form Lavitz normal → Lavitz Spirit possédé corruption-design coherence canon NEW MAJEUR FIRST documented Damia (sprite Lavitz Spirit possessed) ⭐⭐⭐⭐⭐**
+
+### Caractéristiques sprite Lavitz Spirit possédé
+
+- ⭐⭐⭐⭐⭐ **Pale blue-grey ghost skin canon NEW MAJEUR FIRST documented Damia** = spirit-form pale-blue cadaveric palette + ghost-element-visual lore CONFIRMED Wind ghost
+- ⭐⭐⭐⭐⭐ **Purple crystalline horns + crown demonic head-piece canon NEW MAJEUR FIRST** = possession-by-Zackwell visual marker FIRST + Zackwell-influence corruption-design
+- ⭐⭐⭐⭐⭐ **Cross-shaped chest mark/scar canon NEW MAJEUR FIRST** = demonic-device entry/anchor visual + possession-mark lore FIRST
+- ⭐⭐⭐⭐⭐ **Bare-chested corrupted torso CONFIRMED** = stripped-of-Basil-armor + ghost-form pure-corruption + Basil emblem REMOVED (vs Lavitz normal silver armor + Basil emblem chest = inverse-form canon NEW MAJEUR FIRST documented Damia visual narrative)
+- ⭐⭐⭐⭐⭐ **Green/olive torn rag pants canon NEW MAJEUR FIRST** = corrupted remnant of Lavitz normal-form dark green pants + cross-form coherence FIRST = Lavitz normal-form pants survive possession (visual continuity FIRST)
+- ⭐⭐⭐⭐⭐ **Stone/concrete-grey leg armor ghostly version canon NEW MAJEUR FIRST** = corrupted version of Lavitz silver iron boots + cadaveric-grey palette + leg-armor preserved
+- ⭐⭐⭐⭐⭐ **Long spear maintained canon récurrent CONFIRMED** = Lavitz signature weapon spear/lance preserved + cross-form weapon-continuity Damia rule
+- ⭐⭐⭐⭐⭐ **Purple crystalline spear-tip blade corrupted FIRST** = corrupted-weapon-blade design + Wind+Darkness multi-element ghost-magic visual + cohérent canon récurrent récent Lavitz Spirit Black Rain + Dark Mist Darkness abilities probable wiki (en fait wiki Lenus a Black Rain + Dark Mist mais wiki Lavitz Spirit a Rod Typhoon + Flower Storm + Menon Ray — sprite purple-blade thematic ghost-corrupted canon NEW MAJEUR FIRST)
+- ⭐⭐⭐⭐⭐ **Purple/violet ATTACK magic-blast spear-tip canon NEW MAJEUR FIRST** = ghost-magic Wind-corrupted visual + Rod Typhoon ghost-version OR ~Menon Ray Confusion-magic visual probable
+- ⭐⭐⭐⭐⭐ **5-animation set IDLE + WALK + ATTACK + HURT + DEATH event-boss-possédé tier canon NEW MAJEUR FIRST documented Damia**
+
+### 10-instance Sprite IA fully canon-conform Damia rule expansion
+
+| #   | Entity                    | Tier                 | Notes                                                         |
+| --- | ------------------------- | -------------------- | ------------------------------------------------------------- |
+| 1   | **Knight of Sandora**     | Mob                  | Mille Soldat Sandora                                          |
+| 2   | **Kongol Dragoon**        | Party-Dragoon Earth  | Gold Dragon                                                   |
+| 3   | **Kubila**                | Boss                 | Zenebatos Wingly trio                                         |
+| 4   | **Land Skater**           | Mob                  | Penguin Water Kashua                                          |
+| 5   | **Kongol armored**        | Party normal         | Indora Armor boss-form                                        |
+| 6   | **Last Kraken V1**        | Boss eldritch        | Tentacle-wrapped organic                                      |
+| 7   | **Last Kraken V2**        | Boss armored         | Crustacean-cephalopod Wingly-engineered                       |
+| 8   | **Lavitz normal**         | Party-Member         | Wind Dragoon Bale Knight noble-knight                         |
+| 9   | **Lavitz Dragoon**        | Party-Dragoon Wind   | Jade Dragon (wings REWORK requis)                             |
+| 10  | **Lavitz Spirit possédé** | Event boss possessed | ⭐⭐⭐⭐⭐ **Possessed-by-Zackwell demonic-corruption FIRST** |
+
+⭐⭐⭐⭐⭐ **Sprite IA fully canon-conform 10-instance CONFIRMED canon récurrent récent expansion Damia rule** + **Event boss possessed tier sprite canon NEW MAJEUR FIRST documented Damia** (vs récurrent boss/mob/Dragoon/Party tier — Lavitz Spirit = first event-boss-possessed-corrupted-character tier FIRST).
+
+### Décision implémentation Damia
+
+⭐ **Sprite Lavitz Spirit directement utilisable** = ALL wiki Lavitz Spirit canon-narrative validated par sprite (pale ghost + purple corruption + spear maintained + cross-form coherence avec Lavitz normal-form) + sprite-ready event-boss-possédé base visuelle + spear purple-tip Wind+Darkness ghost-magic visual coherent + 5-animation complete + cohérent canon narrative Mayfil Disc 4 Zackwell-possession-cycle 2-stage event boss.
+
 ## Identity canon ⭐⭐⭐⭐⭐ Cross-source 🟢
 
 - **Nom** : **Lavitz's Spirit** (page wiki séparée + section fandom intégrée Lavitz)

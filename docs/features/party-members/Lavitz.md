@@ -99,6 +99,46 @@
 - ⭐⭐⭐⭐⭐ **Lone-survivor platoon + King's most trusted + compassion-for-enemy noble-knight archetype FIRST**
 - ⭐⭐⭐⭐⭐ **Hellena Prison rescue Shana + Fruegel first confrontation + bridge horseback escape canon récurrent CONFIRMED**
 
+## Sprite canon ⭐⭐⭐⭐⭐ Sprite IA fully canon-conform Lavitz normal form — 8-instance CONFIRMED expansion
+
+![Lavitz sprite + animations](./_assets/lavitz-sprite.png)
+
+⭐⭐⭐⭐⭐ **REVELATION SPRITE Damia : Lavitz sprite IA fully canon-conform normal-form + Sprite IA fully canon-conform 8-instance CONFIRMED canon récurrent récent expansion + 5-animation set IDLE/WALK/ATTACK/HURT/DEATH party-member-tier FIRST + ALL fandom Character Design specifications validated canon NEW MAJEUR FIRST (sprite Lavitz normal) ⭐⭐⭐⭐⭐**
+
+### Caractéristiques sprite Lavitz validées fandom Canon
+
+- ⭐⭐⭐⭐⭐ **Spiky blonde hair styled spiky-ends-front CONFIRMED canon récurrent récent expansion** (fandom : "short blonde hair which is styled in spiky ends on front")
+- ⭐⭐⭐⭐⭐ **Brown eyes CONFIRMED canon récurrent récent expansion** (fandom : "brown eyes" vs wiki "blue-grey eyes" DIVERGENCE résolue par sprite = brown CONFIRMED FIRST)
+- ⭐⭐⭐⭐⭐ **Silver plate armor + gold/copper trim + Basil emblem (winged crest) on chest front CONFIRMED canon NEW MAJEUR FIRST** (fandom : "silver armor with gold designs and a Basil emblem on front")
+- ⭐⭐⭐⭐⭐ **Dark green olive turtleneck visible at neck CONFIRMED** (fandom : "dark green turtleneck")
+- ⭐⭐⭐⭐⭐ **Dark green olive pants matching turtleneck CONFIRMED** (fandom : "matching pants")
+- ⭐⭐⭐⭐⭐ **Brown leather belt + gold buckles + hanging side-strap canon NEW MAJEUR FIRST** = utility-belt detail
+- ⭐⭐⭐⭐⭐ **Silver knee-high iron boots + gold trim leg armor CONFIRMED canon récurrent** (fandom : "silver knee-high iron boots with gold designs")
+- ⭐⭐⭐⭐⭐ **Silver iron gauntlets + brown leather glove right-hand CONFIRMED canon NEW MAJEUR FIRST** (fandom : "silver iron gauntlets with a gold trim")
+- ⭐⭐⭐⭐⭐ **Long spear weapon CONFIRMED + Spear stat 4 starter weapon canon récurrent** (fandom : "wields the spear" + Weapon Spear Initial)
+- ⭐⭐⭐⭐⭐ **Determined warrior stance + chivalrous noble-knight pose CONFIRMED canon récurrent récent expansion** (fandom : "selfless, loyal, kind, chivalrous")
+- ⭐⭐⭐⭐⭐ **Age 34 mature adult male appearance CONFIRMED** (fandom : "34 years old" + 8 years older than Albert)
+- ⭐⭐⭐⭐⭐ **5-animation set IDLE + WALK + ATTACK + HURT + DEATH party-member-tier canon NEW MAJEUR FIRST documented Damia + party-member 5-anim sprite-system FIRST**
+
+### 8-instance Sprite IA fully canon-conform Damia rule expansion
+
+| #   | Entity                | Tier          | Notes                                                      |
+| --- | --------------------- | ------------- | ---------------------------------------------------------- |
+| 1   | **Knight of Sandora** | Mob           | Mille Soldat Sandora                                       |
+| 2   | **Kongol Dragoon**    | Party-Dragoon | Gold Dragon Earth                                          |
+| 3   | **Kubila**            | Boss          | Zenebatos Wingly trio                                      |
+| 4   | **Land Skater**       | Mob           | Penguin Water Kashua                                       |
+| 5   | **Kongol armored**    | Party normal  | Indora Armor boss-form                                     |
+| 6   | **Last Kraken V1**    | Boss eldritch | Tentacle-wrapped organic                                   |
+| 7   | **Last Kraken V2**    | Boss armored  | Crustacean-cephalopod Wingly-engineered                    |
+| 8   | **Lavitz normal**     | Party-Member  | ⭐⭐⭐⭐⭐ **Wind Dragoon Bale Knight noble-knight FIRST** |
+
+⭐⭐⭐⭐⭐ **Sprite IA fully canon-conform 8-instance CONFIRMED canon récurrent récent expansion Damia rule** + **Party-member tier sprite NEW MAJEUR FIRST** (vs récurrent boss/mob/Dragoon — Lavitz = first party-member-tier normal-form sprite FIRST documented Damia).
+
+### Décision implémentation Damia
+
+⭐ **Sprite Lavitz directement utilisable** = ALL fandom Character Design specifications validated par sprite + brown eyes DIVERGENCE résolue (sprite CONFIRME brown vs wiki blue-grey = adopter brown) + sprite-ready normal-form base visuelle + à compléter ultérieurement avec sprite Dragoon-form (jade green armor + reddish brown trim + red gem upper chest + jade green dragon headband + Dragoon Spear brown motif — à générer).
+
 ## Identity canon ⭐⭐⭐⭐⭐ Cross-source 🟢
 
 - **Nom** : **Lavitz Slambert** (JP : **ラヴィッツ・スラムバート** Ravittsu Suramubāto)

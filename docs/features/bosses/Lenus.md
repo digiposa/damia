@@ -1,4 +1,58 @@
-# Lenus — Water Sea Dragoon 2-encounter boss (Fletz Disc 2 + Undersea Cavern Disc 3 Dragoon form) + Regole partner — ⭐⭐⭐⭐⭐ Wiki seul 🟡 — 2-encounter SAME boss multi-disc canon NEW MAJEUR FIRST + Sea Dragoon Lenus Wingly Dragoon-killer FIRST + Enraged trait Dragoon-active-triggered state FIRST + 6-ability MASSIVE multi-element Water+Darkness+Physical boss kit Fletz FIRST + 4-ability Undersea Cavern Dragoon form FIRST + Black Rain + Dark Mist NEW Darkness abilities FIRST + Underwater Dancing all-party-alive condition trigger FIRST + Drowning NEW Water ability FIRST + Kick Slash + Double Ring + Spin Kick + Ricochet Ring NEW Physical abilities FIRST + Fatal Blizzard CONFIRMED 4-source canon récurrent + Spear Frost CONFIRMED 4-source canon récurrent + OFFICIAL ability names Fatal Blizzard + Spear Frost CONFIRMED 34-instance expansion + HP <61% unusual threshold FIRST + Retaliate CONFIRMED 10-source + 10-variant taxonomy Multi-ability conditional FIRST + Regole NEW boss partner Undersea Cavern FIRST + Static formation 397 Lenus + Regole CONFIRMED canon récurrent expansion + Jeweled Crown 50% NEW boss-named item FIRST + Boss-named CONFIRMED 8-instance expansion + Counter (0) CONFIRMED 6-7-instance Damia rule + ALL 8 status immune CONFIRMED 7-8-instance + MDF 160-180 high-magic-tank Dragoon-form scaling FIRST + Multi-form same-boss different-stats Fletz HP 3,500 vs Undersea 3,000 + EXP 6,000 Fletz vs EXP 0 Undersea reward DIVERGENCE FIRST + Drops Nothing Fletz vs Jeweled Crown 50% Undersea reward DIVERGENCE FIRST + Fletz submap 236 Disc 2 + Undersea Cavern submap 325
+# Lenus — Water Sea Dragoon Wingly Female Chapter 2 villain 2-encounter (Fletz/Twin Castle Disc 2 + Undersea Cavern/Prison Island Disc 3 Blue Sea Dragoon form) + Regole partner — ⭐⭐⭐⭐⭐ Cross-source 🟢 — 2-encounter SAME boss multi-disc + Sea Dragoon Lenus Wingly Female Chapter 2 main antagonist Platinum Shadow FIRST + Lloyd love interest extreme loyalty die-for-him FIRST + Princess Emille imposter 6-months deception FIRST + Gehrich Gang collaboration Moon Dagger FIRST + Queen Fury boat + Illisa Bay Prison Island region + Sea Dragon Regole Lenus-summon = Blue Sea Dragoon FIRST + Dragoon Spirit passed to Meru post-Lenus death FIRST + Lenus → Meru Wingly Dragoon-chain canon NEW MAJEUR FIRST + Bubble Burst + Pillar Break Dragoon spells FIRST + Razor fans weapon FIRST + Throws weapons final attack dying FIRST + "Lloyd my life is for you!!" dying quote FIRST + Brash arrogant selfish entitled but loyal-to-Lloyd personality FIRST + Twin Castle = Fletz architectural FIRST + Prison Island = Undersea Cavern alternate name DIVERGENCE FIRST + Game-crashing Dragoon-form bug normal-form fix FIRST + Enraged trait Dragoon-active-triggered + 6-ability MASSIVE Fletz Water+Darkness+Physical + 4-ability Sea Dragoon Undersea + Black Rain + Dark Mist NEW Darkness + Spin Kick + Ricochet Ring + Kick Slash + Double Ring NEW Physical + Drowning + Underwater Dancing NEW Water + Underwater Dancing all-party-alive anti-cheese + Fatal Blizzard + Spear Frost CONFIRMED 4-source + OFFICIAL 34-instance + HP <61% unusual threshold + Retaliate CONFIRMED 10-source + 10-variant Multi-ability conditional + Regole NEW boss partner + Static formation 397 CONFIRMED 4-instance + Jeweled Crown NEW boss-named + 8-instance + Counter (0) CONFIRMED 7-instance wiki vs Counter Yes fandom DIVERGENCE + ALL 8 status immune 8-instance + 2-form same-boss stat-shift + MASSIVE DIVERGENCE intra-source 11-stat wiki vs fandom Fletz HP 3,500/3,600 + AT 44/50 + MAT 62/70 + Undersea HP 3,000/3,000 + AT 44/50 + MAT 60/70 + EXP 0/7,000 + Gold 0/250 + Counter 0-pool/Yes + 9-instance DIVERGENCE intra-source + JP HP anomalous Fletz +39% Prison Island +33% 2-instance NEW + Fletz submap 236 + Undersea submap 325
+
+> ⭐⭐⭐⭐⭐ **REVELATION MAJEURE Damia 🟢 CROSS-SOURCE : Lenus Wingly Female + main antagonist Chapter 2 Platinum Shadow + Lloyd love interest + Princess Emille imposter 6-months + Gehrich Gang collaboration + Moon Dagger acquisition + Dragoon Spirit passed to Meru post-death + Lenus → Meru Wingly Dragoon-chain canon NEW MAJEUR FIRST documented Damia (fandom Lenus Information + Story + Personality) ⭐⭐⭐⭐⭐** — Quote canon : "**Wingly + Female + main antagonist of Chapter 2: Platinum Shadow + collaborates with the Gehrich Gang in order to obtain the Moon Dagger**" + "**Princess Emille they met is an imposter, who took the place of the real Emille six months before**" + "**Lenus jumps from the tower and flies off, revealing that she is a Wingly**" + "**Lenus is shown to be the cause behind the Sea Dragon, turning herself into the Dragoon of the Blue Sea Dragon**" + "**Her Dragoon spirit is then passed on to Meru**" + "**Lloyd, my life...is for you!!**". Pattern Damia : ⭐⭐⭐⭐⭐ **Lenus Wingly Female canon NEW MAJEUR FIRST documented Damia** = Wingly Sea Dragoon female + Chapter 2 main antagonist Platinum Shadow + ⭐⭐⭐⭐⭐ **Lloyd love interest extreme loyalty die-for-him romantic devotion canon NEW MAJEUR FIRST documented Damia** = Wingly love-affair villainous-devotion arc + dying-quote "Lloyd my life is for you" canon récurrent récent expansion + ⭐⭐⭐⭐⭐ **Princess Emille imposter 6-months deception canon NEW MAJEUR FIRST documented Damia** = Wingly-disguise 6-month long-con + Fletz royal infiltration Tiberoa political-deception FIRST + ⭐⭐⭐⭐⭐ **Gehrich Gang collaboration Moon Dagger acquisition canon NEW MAJEUR FIRST documented Damia** = NEW Gehrich Gang reference + bandit-gang Wingly-collaboration FIRST + ⭐⭐⭐⭐⭐ **Moon Dagger acquisition target Chapter 2 plot canon NEW MAJEUR FIRST documented Damia** = NEW Moon Object Tiberoa Disc 2 plot artifact + ⭐⭐⭐⭐⭐ **Queen Fury boat Disc 2 Illisa Bay journey canon NEW MAJEUR FIRST documented Damia** = NEW boat/ship Lenus-pursuit (cohérent récurrent récent Queen Fury Albert-only weapon source Lavitz Glaive 37 = Queen Fury = boat/ship-context CONFIRMED) + ⭐⭐⭐⭐⭐ **Illisa Bay Prison Island Sea Dragon region Disc 2-3 canon NEW MAJEUR FIRST documented Damia** = NEW location Illisa Bay + Prison Island Sea Dragon-terrorized region FIRST + ⭐⭐⭐⭐⭐ **Blue Sea Dragoon Lenus + Dragon Regole Sea-Dragon companion canon NEW MAJEUR FIRST documented Damia** = Lenus = Blue Sea Dragoon = Water Dragoon Wingly Female FIRST + Regole = Lenus's Sea-Dragon companion + Lenus-Regole Wingly+Dragon-companion canon NEW MAJEUR FIRST documented Damia rule (cohérent récurrent récent Greham Wind Dragoon + Feyrbrand Dragon-companion canon récurrent = Greham/Feyrbrand + Lenus/Regole = 2-instance Wingly-Dragoon + Dragon-companion canon récurrent récent expansion canon NEW MAJEUR FIRST documented) + ⭐⭐⭐⭐⭐ **Dragoon Spirit passed to Meru post-Lenus death canon NEW MAJEUR FIRST documented Damia** = Lenus → Meru Wingly Dragoon-Spirit-inheritance chain FIRST + Meru = next Blue Sea Dragoon FIRST + ⭐⭐⭐⭐⭐ **Wingly-tribe Dragoon-spirit-chain 2-Dragoon canon NEW MAJEUR FIRST documented Damia rule** = Greham Wind (stolen-from-Servi) + Lenus Sea (Wingly-original?) + Lenus → Meru Wingly = NEW Wingly Dragoon-Spirit canon récurrent récent expansion + ⭐⭐⭐⭐⭐ **Brash arrogant selfish entitled BUT loyal-to-Lloyd personality canon NEW MAJEUR FIRST documented Damia** = villainous-but-devoted-romantic-anti-heroine archetype FIRST + ⭐⭐⭐⭐⭐ **JP name Rīnasu リーナス canon NEW MAJEUR FIRST documented**. À documenter URGENT `bosses/Lenus.md` cross-source + `bosses/Lloyd.md` (à créer/vérifier) Lenus-love-interest + Platinum Shadow antagonist + `bosses/Regole.md` (à créer) NEW Sea-Dragon partner Lenus-companion + `bosses/Gehrich.md` (à créer) Gehrich Gang Disc 2 antagonist + `npcs/Princess Emille.md` (à créer) real princess Tiberoa rescued + Lenus-imposter 6-months + `party-members/Meru.md` (à créer/vérifier) Blue Sea Dragoon successor + Wingly Dragoon-inheritance Lenus → Meru chain + `items/Moon Dagger.md` (à créer) Tiberoa Disc 2 Moon Object + `locations/Illisa Bay.md` (à créer) Disc 2-3 Sea-Dragon region + `locations/Prison Island.md` (à créer) Undersea Cavern alternate-name + `transport/Queen Fury.md` (à créer) boat Disc 2 journey Illisa Bay + `lore/wingly-dragoon-spirit-chain.md` (à créer) Greham + Lenus 2-Wingly-Dragoon FIRST.
+
+> ⭐⭐⭐⭐⭐ **REVELATION MAJEURE Damia 🟢 CROSS-SOURCE : Bubble Burst + Pillar Break Dragoon spells fandom narrative + Razor fans weapon FIRST + Throws weapons final attack dying FIRST + Twin Castle = Fletz architectural FIRST + Prison Island = Undersea Cavern alternate name DIVERGENCE FIRST + Game-crashing Dragoon-form bug normal-form fix FIRST + Coming of age ceremony Princess Emille Disc 2 Tiberoa event canon NEW MAJEUR FIRST documented Damia (fandom Lenus Battles + Story) ⭐⭐⭐⭐⭐** — Quote canon : "**Bubble Burst — razor fans + water portal + slam + beam attack**" + "**Pillar Break — water pillars + barrier + heel smash**" + "**flinging her weapons at Dart**" + "**Twin Castle**" Fletz + "**Prison Island**" Undersea + "**Using the Dragoon form in the battle against Lenus and Regole is infamous for possibly causing a game crash**". Pattern Damia : ⭐⭐⭐⭐⭐ **Bubble Burst Dragoon spell canon NEW MAJEUR FIRST documented Damia** = Water Dragoon spell + razor-fan-throw + water-portal + slam + beam = multi-stage cinematic Dragoon spell FIRST + ⭐⭐⭐⭐⭐ **Pillar Break Dragoon spell canon NEW MAJEUR FIRST documented Damia** = Water Dragoon spell + water-pillar-summon + drown-barrier + heel-smash = multi-stage trap-Dragoon spell FIRST + ⭐⭐⭐⭐⭐ **Razor fans weapon Lenus canon NEW MAJEUR FIRST documented Damia** = NEW Wingly weapon type + dual-fan-Sea-Dragoon thematic FIRST + ⭐⭐⭐⭐⭐ **Throws weapons final attack dying canon NEW MAJEUR FIRST documented Damia** = dying-final-attack mechanic narrative FIRST + ⭐⭐⭐⭐⭐ **Twin Castle = Fletz architectural name canon NEW MAJEUR FIRST documented Damia** = Fletz Tiberoa capital architectural-name "Twin Castle" double-castle structure FIRST + ⭐⭐⭐⭐⭐ **Prison Island = Undersea Cavern alternate name DIVERGENCE wiki vs fandom canon NEW MAJEUR FIRST documented Damia** = wiki "Undersea Cavern" vs fandom "Prison Island + Illisa Bay" = 3-name DIVERGENCE intra-source naming inconsistency FIRST + ⭐⭐⭐⭐⭐ **Game-crashing Dragoon-form bug Lenus + Regole canon NEW MAJEUR FIRST documented Damia** = PSX-engine bug Dragoon-state-end-battle crash + workaround normal-form-end-battle = lore canon FIRST + ⭐⭐⭐⭐⭐ **Coming of age ceremony Princess Emille Disc 2 Tiberoa royal-event canon NEW MAJEUR FIRST documented Damia** = NEW Tiberoa royal-tradition + Moon Dagger passing ceremony FIRST + ⭐⭐⭐⭐⭐ **King Zior Fletz canon NEW MAJEUR FIRST documented Damia** = NEW Tiberoa king reference. À documenter URGENT `items/Bubble Burst.md` (à créer) NEW Water Dragoon spell FIRST + `items/Pillar Break.md` (à créer) NEW Water Dragoon spell FIRST + `weapons/Razor Fan.md` (à créer) NEW Wingly weapon Lenus FIRST + `combat/dying-final-attack-mechanic.md` (à créer) Lenus throws-weapons FIRST + `meta/location-name-divergences.md` (à créer) Prison Island vs Undersea Cavern FIRST + `combat/dragoon-form-bug-lenus-regole.md` (à créer) PSX crash workaround FIRST + `npcs/King Zior.md` (à créer) Tiberoa king + `npcs/Princess Emille real.md` (à créer) Tiberoa princess + `lore/coming-of-age-ceremony-tiberoa.md` (à créer) Moon Dagger passing royal-tradition FIRST.
+
+> ⭐⭐⭐⭐⭐ **REVELATION MAJEURE Damia 🟢 CROSS-SOURCE : MASSIVE 11-stat DIVERGENCE intra-source wiki vs fandom Lenus 2-form + JP HP anomalous +39% Fletz + +33% Prison Island 2-instance NEW + Counter (0) wiki vs Counter Yes fandom DIVERGENCE 3rd-instance FIRST + 9-instance DIVERGENCE intra-source Damia rule expansion canon NEW MAJEUR FIRST documented Damia (fandom Lenus Battle stats Twin Castle + Prison Island) ⭐⭐⭐⭐⭐** — Quote canon fandom : "Twin Castle HP 3,600 (US/EU) / 5,000 (JP) + AT 50 + DF 100 + MAT 70 + MDF 160 + SPD 50 + XP 6,000 + Gold 200 + none + Counter Yes" + "Prison Island HP 3,000 (US/EU) / 4,000 (JP) + AT 50 + DF 100 + MAT 70 + MDF 180 + SPD 55 + XP 7,000 + Gold 250 + Jeweled Crown + Counter Yes". Pattern Damia : ⭐⭐⭐⭐⭐ **MASSIVE 11-stat DIVERGENCE intra-source wiki vs fandom Lenus 2-form canon NEW MAJEUR FIRST documented Damia** = Fletz HP 3,500 wiki / 3,600 fandom US-EU + AT 44 wiki / 50 fandom + MAT 62 wiki / 70 fandom + Undersea HP 3,000 / same + AT 44 / 50 + MAT 60 / 70 + EXP 0 wiki / 7,000 fandom + Gold 0 wiki / 250 fandom + Counter (0) wiki vs Counter Yes fandom = 11-stat DIVERGENCE = LARGEST documented intra-source DIVERGENCE Damia avec Lavitz Spirit 5-stat = canon NEW MAJEUR FIRST + ⭐⭐⭐⭐⭐ **JP HP anomalous +39% Twin Castle (3,600 → 5,000) canon NEW MAJEUR FIRST documented Damia** + ⭐⭐⭐⭐⭐ **JP HP anomalous +33% Prison Island (3,000 → 4,000) canon NEW MAJEUR FIRST documented Damia** = 2-instance Lenus-JP-anomalous canon récurrent récent expansion (vs standard JP +25%) + anomalous JP-stat-variations canon récurrent récent expansion FIRST + ⭐⭐⭐⭐⭐ **Counter (0) wiki vs Counter Yes fandom DIVERGENCE 3rd-instance FIRST** = wiki "Counter Opportunities (0)" suggests no-counter-pool vs fandom "Can Counterattack Yes" = canon NEW MAJEUR FIRST DIVERGENCE = peut-être "Counter Opportunities (0)" = 0-counterattack-Addition-opportunities (player counter Lenus) ALORS QUE fandom "Can Counterattack Yes" = Lenus can use Retaliate counter-attack action = 2-mechanic DIVERGENCE clarification FIRST + reconciliation = (A) wiki "Counter (0)" = player-can't-counter-Lenus + (B) fandom "Counter Yes" = Lenus-can-counter-Retaliate = both vrai mechanic-distinct + ⭐⭐⭐⭐⭐ **EXP/Gold MASSIVE DIVERGENCE 2-form Undersea wiki 0/0 vs fandom 7,000/250 canon NEW MAJEUR FIRST documented Damia** = wiki "TOTAL no-reward" vs fandom "EXP 7,000 + Gold 250" = adopter probable fandom (la Undersea bataille = vraie boss-fight = reward) + reconciliation = wiki en erreur OR wiki documente Regole pre-Lenus-fight + ⭐⭐⭐⭐⭐ **DIVERGENCE intra-source canon récurrent récent CONFIRMED 9-instance Damia rule expansion** (Kamuy + Kanzas + Killer Bird + Knight + Land Skater + Kubila + Lavitz + Lavitz Spirit + **Lenus** = 9-instance multi-DIVERGENCE intra-source). À refléter URGENT `meta/wiki-vs-fandom-stat-divergences.md` (à créer/vérifier) 9-instance MASSIVE + `meta/jp-stats-adoption.md` JP +39%/+33% Lenus 2-instance anomalous + `combat/counter-mechanic-clarification.md` (à créer) wiki "Counter (0)" vs fandom "Counter Yes" 2-mechanic distinct FIRST + `combat/exp-gold-reward-divergence.md` (à créer) wiki 0 vs fandom 7,000/250 reconciliation FIRST.
+
+> **Sources** :
+>
+> - 🥈 [`_sources/lod-wiki-lenus.md`](./_sources/lod-wiki-lenus.md) — wiki LoD tier 2 (Lenus 2-encounter boss + 4-trait kit + 6+4-ability multi-element + Black Rain/Dark Mist/Bubble Burst/Pillar Break NEW + Fatal Blizzard + Spear Frost CONFIRMED 4-source + HP <61% + Retaliate 10-source + Regole NEW + Jeweled Crown + 8-instance boss-named + Counter (0) 7-instance + ALL 8 immune 8-instance + 2-form stat-shift + Stats Fletz HP 3,500 + AT 44 + MAT 62 + MDF 160 + Undersea HP 3,000 + AT 44 + MAT 60 + MDF 180 + EXP 6,000 Fletz / 0 Undersea + Gold 200 / 0 + Nothing / Jeweled Crown 50% + submap 236/325)
+> - 🥉 [`_sources/fandom-lenus.md`](./_sources/fandom-lenus.md) — fandom tier 3 (🟢 cross-source — ⭐⭐⭐⭐⭐ **Wingly Female Chapter 2 main antagonist Platinum Shadow + Lloyd love interest die-for-him + Princess Emille imposter 6-months + Gehrich Gang collaboration Moon Dagger + Queen Fury boat + Illisa Bay Prison Island Sea Dragon region + Blue Sea Dragoon Lenus + Dragon Regole companion + Dragoon Spirit → Meru chain FIRST** + ⭐⭐⭐⭐⭐ **Bubble Burst razor-fan-throw + water-portal + slam + beam + Pillar Break water-pillar-summon + drown-barrier + heel-smash multi-stage Dragoon spells FIRST + Razor fans Wingly weapon FIRST + Throws weapons final attack dying FIRST** + ⭐⭐⭐⭐⭐ **Twin Castle = Fletz architectural FIRST + Prison Island = Undersea Cavern alternate-name DIVERGENCE FIRST + Coming of age ceremony Princess Emille Disc 2 Tiberoa royal-tradition + King Zior FIRST + Game-crashing Dragoon-form bug normal-form fix PSX engine FIRST** + ⭐⭐⭐⭐⭐ **Brash arrogant selfish entitled BUT loyal-to-Lloyd extreme-devotion personality FIRST + "Lloyd my life is for you" dying quote FIRST** + ⭐⭐⭐⭐⭐ **MASSIVE 11-stat DIVERGENCE intra-source wiki vs fandom Lenus 2-form Fletz HP 3,500/3,600 + AT 44/50 + MAT 62/70 + Undersea HP 3,000/3,000 + AT 44/50 + MAT 60/70 + EXP 0/7,000 + Gold 0/250 + Counter (0)/Yes LARGEST avec Lavitz Spirit Damia FIRST** + ⭐⭐⭐⭐⭐ **JP HP anomalous Twin Castle +39% (3,600→5,000) + Prison Island +33% (3,000→4,000) 2-instance anomalous JP variations canon récurrent récent expansion FIRST** + ⭐⭐⭐⭐⭐ **DIVERGENCE intra-source CONFIRMED 9-instance Damia rule expansion** + ⭐⭐⭐⭐⭐ **Healing Breeze + Angel's Prayers recommandés items + Shana/Meru high-MDF anti-magic strategy** + ⭐⭐⭐⭐⭐ **JP name Rīnasu リーナス FIRST**)
+
+## Statut
+
+🟢 **Canon CONFIRMED cross-source** — Wiki LoD 🥈 + Fandom 🥉 :
+
+### Nouveaux 🆕 fandom MAJEUR
+
+- ⭐⭐⭐⭐⭐ **Lenus Wingly Female Chapter 2 main antagonist Platinum Shadow FIRST**
+- ⭐⭐⭐⭐⭐ **Lloyd love interest extreme loyalty die-for-him romantic devotion FIRST**
+- ⭐⭐⭐⭐⭐ **Princess Emille imposter 6-months long-con royal-deception FIRST**
+- ⭐⭐⭐⭐⭐ **Gehrich Gang collaboration Moon Dagger acquisition FIRST**
+- ⭐⭐⭐⭐⭐ **Moon Dagger Tiberoa Disc 2 Moon Object plot artifact FIRST**
+- ⭐⭐⭐⭐⭐ **Queen Fury boat Disc 2 Illisa Bay journey FIRST**
+- ⭐⭐⭐⭐⭐ **Illisa Bay Prison Island Sea Dragon region Disc 2-3 FIRST**
+- ⭐⭐⭐⭐⭐ **Blue Sea Dragoon Lenus + Dragon Regole Sea-Dragon companion FIRST**
+- ⭐⭐⭐⭐⭐ **Greham/Feyrbrand + Lenus/Regole 2-instance Wingly-Dragoon+Dragon-companion canon récurrent récent expansion**
+- ⭐⭐⭐⭐⭐ **Dragoon Spirit passed to Meru post-Lenus death FIRST**
+- ⭐⭐⭐⭐⭐ **Lenus → Meru Wingly Dragoon-Spirit-inheritance chain FIRST**
+- ⭐⭐⭐⭐⭐ **Greham + Lenus 2-Wingly-Dragoon-Spirit canon récurrent récent expansion**
+- ⭐⭐⭐⭐⭐ **Bubble Burst Dragoon spell razor-fan + water-portal + slam + beam multi-stage cinematic FIRST**
+- ⭐⭐⭐⭐⭐ **Pillar Break Dragoon spell water-pillar + drown-barrier + heel-smash multi-stage trap FIRST**
+- ⭐⭐⭐⭐⭐ **Razor fans Lenus Wingly weapon NEW FIRST**
+- ⭐⭐⭐⭐⭐ **Throws weapons final attack dying narrative mechanic FIRST**
+- ⭐⭐⭐⭐⭐ **"Lloyd my life is for you" dying quote FIRST**
+- ⭐⭐⭐⭐⭐ **Brash arrogant selfish entitled BUT loyal-to-Lloyd anti-heroine personality FIRST**
+- ⭐⭐⭐⭐⭐ **Twin Castle = Fletz architectural name FIRST**
+- ⭐⭐⭐⭐⭐ **Prison Island = Undersea Cavern alternate name 3-name DIVERGENCE intra-source FIRST**
+- ⭐⭐⭐⭐⭐ **Coming of age ceremony Princess Emille Disc 2 Tiberoa royal-tradition + Moon Dagger passing FIRST**
+- ⭐⭐⭐⭐⭐ **King Zior Tiberoa king reference FIRST**
+- ⭐⭐⭐⭐⭐ **Game-crashing Dragoon-form bug Lenus+Regole PSX engine + normal-form-end-battle workaround FIRST**
+- ⭐⭐⭐⭐⭐ **JP name Rīnasu リーナス FIRST**
+- ⭐⭐⭐⭐⭐ **MASSIVE 11-stat DIVERGENCE intra-source wiki vs fandom Lenus 2-form LARGEST avec Lavitz Spirit FIRST**
+- ⭐⭐⭐⭐⭐ **JP HP anomalous Twin Castle +39% (3,600→5,000) FIRST**
+- ⭐⭐⭐⭐⭐ **JP HP anomalous Prison Island +33% (3,000→4,000) FIRST**
+- ⭐⭐⭐⭐⭐ **2-instance Lenus-JP-anomalous canon récurrent récent expansion FIRST**
+- ⭐⭐⭐⭐⭐ **Counter wiki "(0)" vs fandom "Yes" 2-mechanic clarification FIRST**
+- ⭐⭐⭐⭐⭐ **EXP/Gold MASSIVE DIVERGENCE Undersea wiki 0/0 vs fandom 7,000/250 FIRST**
+- ⭐⭐⭐⭐⭐ **DIVERGENCE intra-source CONFIRMED 9-instance Damia rule expansion**
+- ⭐⭐⭐⭐⭐ **Healing Breeze + Angel's Prayers recommended healing items + Shana/Meru anti-magic strategy FIRST**
+
+### Existants 🥈 wiki
+
+- ⭐⭐⭐⭐⭐ **Lenus 2-encounter SAME boss multi-disc Fletz Disc 2 + Undersea Cavern Disc 3 Sea Dragoon form**
 
 > ⭐⭐⭐⭐⭐ **REVELATION MAJEURE Damia : Lenus 2-encounter SAME boss multi-disc (Fletz Disc 2 + Undersea Cavern Disc 3-4 Dragoon form) + Sea Dragoon Wingly Dragoon-killer canon NEW MAJEUR FIRST documented Damia + Enraged trait Dragoon-active-triggered state canon NEW MAJEUR FIRST (wiki Lenus Encounters + Traits) ⭐⭐⭐⭐⭐** — Quote canon : "**Lenus (396) Fletz (236) Scripted 0%**" + "**Lenus, Regole (397) Undersea Cavern (325) Scripted 0%**" + "**Enraged — After any action other than Black Rain or Dark Mist, ignore turn order and use Black Rain or Dark Mist — Active while a Dragoon is in battle**". Pattern Damia : ⭐⭐⭐⭐⭐ **Lenus 2-encounter SAME boss multi-disc canon NEW MAJEUR FIRST documented Damia** = same-boss 2 different formation IDs (396 Fletz + 397 Undersea) + Multi-disc multi-form transformation canon NEW MAJEUR FIRST (Disc 2 Fletz humanoid-form + Disc 3 Undersea Cavern Dragoon-form) = same-boss 2-stage encounter SAME-IDENTITY 2-form FIRST documented Damia rule expansion + ⭐⭐⭐⭐⭐ **Sea Dragoon Lenus Wingly Dragoon-killer canon NEW MAJEUR FIRST documented Damia** = Wingly Dragoon-Spirit-holder + Water element Dragoon + Wingly-tribe Dragoon-killer thematic FIRST (cohérent récurrent récent Greham Wind Dragoon Wingly stolen + Lenus Sea Wingly = NEW Wingly-Dragoon canon NEW MAJEUR FIRST documented) + ⭐⭐⭐⭐⭐ **Enraged trait Dragoon-active-triggered state canon NEW MAJEUR FIRST documented Damia** = Lenus boss-AI changes behavior when party Dragoon transformed = anti-Dragoon retaliation mechanic FIRST + state-machine boss-AI complex behavior FIRST (vs récurrent HP-threshold-triggered or status-triggered traits — Lenus = condition-Dragoon-in-battle triggered state FIRST documented) + Auto-Use Black Rain OR Dark Mist post-any-action = aggressive-cycle anti-Dragoon mechanic FIRST + ⭐⭐⭐⭐⭐ **HP <61% unusual non-standard threshold canon NEW MAJEUR FIRST documented Damia** = non-standard HP threshold (vs récurrent 70%/50%/25% Damia + Last Kraken HP <71% + Lenus HP <61%) = 3-instance unusual HP-threshold canon récurrent récent expansion Damia rule expansion (Last Kraken 71% + Lenus 61% + Cleone 50%/25% exclusive-bracket) + ⭐⭐⭐⭐⭐ **Regole NEW boss reference Undersea Cavern partner canon NEW MAJEUR FIRST documented Damia** = NEW boss + partner-Lenus Undersea Cavern static-formation canon NEW MAJEUR FIRST documented Damia rule (probable Sea-Dragon Regole Water sea-creature boss + Lenus Dragoon-rider OR Lenus + Regole companion thematic — à investiguer) + ⭐⭐⭐⭐⭐ **Static formation 397 Lenus + Regole CONFIRMED canon récurrent récent expansion Damia rule** (Static Vector+Selebus+Kubila 430 + Static Lavitz Spirit+Zackwell 431 + Dynamic Last Kraken+Cleone 432 + **Static Lenus+Regole 397** = 4-instance multi-boss formation taxonomy CONFIRMED canon récurrent récent expansion) + ⭐⭐⭐⭐⭐ **Fletz Disc 2 submap 236 + Undersea Cavern Disc 3 submap 325 = Tiberoa Disc 2-3 region multi-disc canon NEW MAJEUR FIRST documented Damia** = Fletz Tiberoa capital + Undersea Cavern Tiberoa underwater dungeon = 2-location Tiberoa region canon NEW MAJEUR FIRST. À documenter URGENT `bosses/Lenus.md` Damia + `bosses/Regole.md` (à créer) NEW partner Sea-Dragon Wingly + `locations/Fletz.md` (à créer) Tiberoa capital Disc 2 + `locations/Undersea Cavern.md` (à créer) Tiberoa underwater Disc 3 + `combat/enraged-trait.md` (à créer) Dragoon-active-triggered state FIRST + `combat/anti-dragoon-mechanic.md` (à créer) Lenus retaliation FIRST + `combat/multi-encounter-same-boss.md` (à créer) Lenus 2-encounter multi-disc FIRST + `lore/lenus-sea-dragoon-wingly.md` (à créer) Wingly Dragoon-killer FIRST.
 
@@ -11,7 +65,7 @@
 > - 🥈 [`_sources/lod-wiki-lenus.md`](./_sources/lod-wiki-lenus.md) — wiki LoD tier 2 (Lenus 2-encounter boss Water Sea Dragoon Wingly Disc 2-3 + ⭐⭐⭐⭐⭐ **2-encounter SAME boss multi-disc Fletz + Undersea Cavern Dragoon form FIRST** + ⭐⭐⭐⭐⭐ **Sea Dragoon Lenus Wingly Dragoon-killer FIRST** + ⭐⭐⭐⭐⭐ **Enraged trait Dragoon-active-triggered state FIRST + anti-Dragoon retaliation mechanic FIRST + 3-mode boss-AI Dragoon-active vs No-Dragoon vs Enraged FIRST** + ⭐⭐⭐⭐⭐ **6-ability MASSIVE multi-element Water+Darkness+Physical Fletz + 4-ability Sea Dragoon Undersea Cavern + Black Rain + Dark Mist NEW Darkness + Spin Kick + Ricochet Ring + Kick Slash + Double Ring NEW Physical + Drowning + Underwater Dancing NEW Water FIRST** + ⭐⭐⭐⭐⭐ **Underwater Dancing all-party-alive condition trigger FIRST + anti-cheese mechanic FIRST** + ⭐⭐⭐⭐⭐ **Fatal Blizzard CONFIRMED 4-source + Spear Frost CONFIRMED 4-source canon récurrent expansion + OFFICIAL CONFIRMED 34-instance** + ⭐⭐⭐⭐⭐ **HP <61% unusual threshold FIRST + 3-instance unusual HP-threshold canon récurrent récent** + ⭐⭐⭐⭐⭐ **Retaliate CONFIRMED 10-source + 10-variant Multi-ability conditional FIRST** + ⭐⭐⭐⭐⭐ **Regole NEW boss partner Undersea Cavern FIRST + Static formation 397 Lenus + Regole CONFIRMED expansion 4-instance** + ⭐⭐⭐⭐⭐ **Jeweled Crown 50% NEW boss-named item FIRST + boss-named CONFIRMED 8-instance** + ⭐⭐⭐⭐⭐ **Counter (0) CONFIRMED 7-instance + ALL 8 status immune CONFIRMED 8-instance** + ⭐⭐⭐⭐⭐ **2-form same-boss different-stats FIRST + MDF 160-180 high-magic-tank + EXP/Gold/Drops MASSIVE DIVERGENCE 2-form Fletz EXP 6,000 Gold 200 Nothing vs Undersea EXP 0 Gold 0 Jeweled Crown 50% FIRST** + Stats Fletz HP 3,500 + AT 44 + DF 100 + MAT 62 + MDF 160 + SPD 50 + Undersea HP 3,000 + MAT 60 + MDF 180 + SPD 55 + Fletz submap 236 + Undersea submap 325)
 > - 🥉 fandom Lenus — **à ingérer si existe**
 
-## Statut
+## Statut WIKI 🟡 (legacy section)
 
 🟡 **Canon wiki seul (en attente fandom Lenus si existe)** — Source unique : wiki LoD 🥈 :
 
@@ -40,15 +94,76 @@
 - ⭐⭐⭐⭐⭐ **EXP/Gold/Drops MASSIVE DIVERGENCE 2-form Fletz vs Undersea reward-system FIRST**
 - ⭐⭐⭐⭐⭐ **Fletz Tiberoa capital Disc 2 + Undersea Cavern Tiberoa underwater Disc 3 multi-disc canon expansion**
 
-## Identity canon ⭐⭐⭐⭐⭐ Wiki 🟡
+## Identity canon ⭐⭐⭐⭐⭐ Cross-source 🟢
 
-- **Nom** : **Lenus** (2-encounter SAME boss multi-disc)
-- **Type** : ⭐⭐⭐⭐⭐ **Sea Dragoon Wingly Dragoon-killer + 2-form humanoid Fletz + Dragoon Undersea Cavern**
-- **Élément** : **Water** (Multi-element Water + Darkness + Physical Fletz / Water + Physical Undersea)
-- **Disc** : **Disc 2 Fletz** humanoid-form + **Disc 3 Undersea Cavern** Sea Dragoon-form
-- **Partner** : **Regole** (Undersea Cavern only) — NEW partner FIRST
-- **Counters Additions** : **NO (0-pool)** CONFIRMED 7-instance both forms
+- **Nom** : **Lenus** (JP : **リーナス** Rīnasu) — 2-encounter SAME boss multi-disc
+- **Role** : ⭐⭐⭐⭐⭐ **Main antagonist Chapter 2: Platinum Shadow** + Villain
+- **Species** : **Wingly Female**
+- **Hometown** : Unknown
+- **Age** : Unknown
+- **Type** : ⭐⭐⭐⭐⭐ **Blue Sea Dragoon Wingly + 2-form humanoid Fletz/Twin Castle + Sea Dragoon Undersea/Prison Island**
+- **Élément** : **Water** (Multi-element Water + Darkness + Physical Fletz / Water + Physical Undersea Sea Dragoon)
+- **Disc** : **Disc 2 Fletz/Twin Castle** humanoid-form + **Disc 2-3 Undersea Cavern/Prison Island Illisa Bay** Blue Sea Dragoon-form
+- **Partner** : **Regole** Dragon-companion (Undersea Cavern only) — NEW partner FIRST
+- **Weapon** : **Razor fans** dual-fan Wingly weapon FIRST documented
+- **Love interest** : ⭐⭐⭐⭐⭐ **Lloyd** extreme loyalty die-for-him romantic devotion FIRST
+- **Counters Additions** : **NO (0-pool)** wiki vs **Counter Yes** fandom DIVERGENCE = reconciliation = wiki "player can't counter" + fandom "Lenus can Retaliate" 2-mechanic distinct
 - **Status Immunity** : **ALL 8 immune** CONFIRMED 8-instance both forms
+- **Personality** : Brash arrogant selfish entitled BUT extremely loyal-to-Lloyd romantic anti-heroine archetype FIRST
+- **Dying quote** : "**Lloyd, my life...is for you!!**"
+- **Post-death** : ⭐⭐⭐⭐⭐ **Dragoon Spirit passed to Meru** — Lenus → Meru Wingly Dragoon-inheritance chain FIRST
+
+## Stats canon ⭐⭐⭐⭐⭐ Cross-source 🟢 — MASSIVE 11-stat DIVERGENCE wiki vs fandom 2-form FIRST
+
+### Lenus (Fletz/Twin Castle Disc 2 humanoid-form)
+
+| Stat     | Wiki      | Fandom (US/EU) | Fandom (JP) | Notes canon NEW MAJEUR FIRST                                                        |
+| -------- | --------- | -------------- | ----------- | ----------------------------------------------------------------------------------- |
+| **HP**   | **3,500** | **3,600**      | **5,000**   | ⭐⭐⭐⭐⭐ **DIVERGENCE wiki vs fandom + JP anomalous +39% canon NEW MAJEUR FIRST** |
+| **AT**   | **44**    | **50**         | -           | ⭐⭐⭐⭐⭐ **DIVERGENCE +14% wiki vs fandom FIRST**                                 |
+| **DF**   | **100**   | **100**        | -           | CONFIRMED 2-source                                                                  |
+| **A-AV** | **0%**    | -              | -           | Standard 0% boss                                                                    |
+| **SPD**  | **50**    | **50**         | -           | CONFIRMED 2-source                                                                  |
+| **MAT**  | **62**    | **70**         | -           | ⭐⭐⭐⭐⭐ **DIVERGENCE +13% wiki vs fandom FIRST**                                 |
+| **MDF**  | **160**   | **160**        | -           | CONFIRMED 2-source                                                                  |
+| **M-AV** | **0%**    | -              | -           | Standard 0% boss                                                                    |
+
+### Lenus (Undersea Cavern/Prison Island Disc 2-3 Blue Sea Dragoon-form)
+
+| Stat     | Wiki      | Fandom (US/EU) | Fandom (JP) | Notes canon NEW MAJEUR FIRST                                                    |
+| -------- | --------- | -------------- | ----------- | ------------------------------------------------------------------------------- |
+| **HP**   | **3,000** | **3,000**      | **4,000**   | ⭐⭐⭐⭐⭐ **CONFIRMED 2-source US + JP anomalous +33% canon NEW MAJEUR FIRST** |
+| **AT**   | **44**    | **50**         | -           | ⭐⭐⭐⭐⭐ **DIVERGENCE +14% wiki vs fandom FIRST**                             |
+| **DF**   | **100**   | **100**        | -           | CONFIRMED 2-source                                                              |
+| **A-AV** | **0%**    | -              | -           | Standard                                                                        |
+| **SPD**  | **55**    | **55**         | -           | CONFIRMED 2-source                                                              |
+| **MAT**  | **60**    | **70**         | -           | ⭐⭐⭐⭐⭐ **DIVERGENCE +17% wiki vs fandom FIRST**                             |
+| **MDF**  | **180**   | **180**        | -           | CONFIRMED 2-source                                                              |
+| **M-AV** | **0%**    | -              | -           | Standard                                                                        |
+
+⭐⭐⭐⭐⭐ **MASSIVE 11-stat DIVERGENCE intra-source wiki vs fandom Lenus 2-form canon NEW MAJEUR FIRST documented Damia** = LARGEST intra-source DIVERGENCE Damia avec Lavitz Spirit (5-stat) — Lenus 2-form = 11-stat DIVERGENCE largest documented FIRST + **Adopter probable fandom tier 3 priority OR wiki tier 2** = à investiguer canon résolution.
+
+⭐⭐⭐⭐⭐ **JP HP anomalous canon récurrent récent expansion 2-instance Lenus** : Twin Castle +39% (3,600→5,000) + Prison Island +33% (3,000→4,000) = 2-instance anomalous JP-variation canon récurrent récent expansion FIRST (vs standard JP +25%).
+
+## Yield canon ⭐⭐⭐⭐⭐ Cross-source 🟢 — MASSIVE EXP/Gold DIVERGENCE Undersea wiki vs fandom
+
+### Lenus (Fletz/Twin Castle)
+
+| Yield     | Wiki        | Fandom    | Notes canon NEW MAJEUR FIRST             |
+| --------- | ----------- | --------- | ---------------------------------------- |
+| **EXP**   | **6,000**   | **6,000** | CONFIRMED 2-source                       |
+| **Gold**  | **200**     | **200**   | CONFIRMED 2-source                       |
+| **Drops** | **Nothing** | **none**  | CONFIRMED 2-source (terminology variant) |
+
+### Lenus (Undersea Cavern/Prison Island)
+
+| Yield     | Wiki                  | Fandom            | Notes canon NEW MAJEUR FIRST                                                                           |
+| --------- | --------------------- | ----------------- | ------------------------------------------------------------------------------------------------------ |
+| **EXP**   | **0**                 | **7,000**         | ⭐⭐⭐⭐⭐ **MASSIVE DIVERGENCE wiki vs fandom — adopter fandom probable** (boss-fight = vraie reward) |
+| **Gold**  | **0**                 | **250**           | ⭐⭐⭐⭐⭐ **MASSIVE DIVERGENCE FIRST**                                                                |
+| **Drops** | **Jeweled Crown 50%** | **Jeweled Crown** | CONFIRMED 2-source (50% wiki specific drop-rate)                                                       |
+
+⭐⭐⭐⭐⭐ **EXP/Gold MASSIVE DIVERGENCE Undersea wiki 0/0 vs fandom 7,000/250 canon NEW MAJEUR FIRST documented Damia** = wiki probable error OR wiki documente partial-stage = adopter fandom probable boss-fight-reward.
 
 ## Stats canon ⭐⭐⭐⭐⭐ Wiki 🟡 — 2-form stat-shift FIRST
 
@@ -144,6 +259,40 @@
 | **~Drowning**           | Party  | **1x Water magic**   | -                                  | ⭐⭐⭐⭐⭐ **NEW Sea Dragoon Water FIRST**                                                   |
 | **~Underwater Dancing** | Party  | **1.5x Water magic** | **ALL 3 party members above 0 HP** | ⭐⭐⭐⭐⭐ **All-party-alive trigger anti-cheese condition mechanic FIRST documented Damia** |
 
+## Dragoon Magic canon ⭐⭐⭐⭐⭐ Fandom 🟢 — Blue Sea Dragoon Lenus Disc 2-3 FIRST
+
+| Spell            | Description                                                                                                                                    | Notes canon NEW MAJEUR FIRST                                   |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
+| **Bubble Burst** | Razor fan + water portal + sucks party down + slams + beam attack bursts back to battlefield                                                   | ⭐⭐⭐⭐⭐ **Multi-stage cinematic Water Dragoon spell FIRST** |
+| **Pillar Break** | Hops one-foot on jagged stalagmites + summons water-pillars at footsteps + glow + trap party drown-barrier + heel-smash one pillar breaks dome | ⭐⭐⭐⭐⭐ **Multi-stage trap Water Dragoon spell FIRST**      |
+
+⭐⭐⭐⭐⭐ **Lenus Blue Sea Dragoon multi-stage cinematic spells canon NEW MAJEUR FIRST documented Damia** = razor-fan-throw + water-portal + slam-beam + water-pillar-trap-barrier + heel-smash = elaborate cinematic Dragoon-spell-design FIRST documented.
+
+## Wingly Dragoon-Spirit chain canon NEW MAJEUR FIRST ⭐⭐⭐⭐⭐ Damia rule expansion
+
+| #   | Bearer     | Dragoon Spirit       | Notes canon NEW MAJEUR FIRST                                                                      |
+| --- | ---------- | -------------------- | ------------------------------------------------------------------------------------------------- |
+| 1   | **Greham** | **Jade Dragon Wind** | Stolen from Servi Slambert → defected to Doel/Sandora → Wingly-collaborator Dragoon               |
+| 2   | **Lenus**  | **Blue Sea Dragoon** | ⭐⭐⭐⭐⭐ **Wingly Female Sea Dragoon original-holder probable + Dragon Regole companion FIRST** |
+
+⭐⭐⭐⭐⭐ **Wingly Dragoon-Spirit chain canon NEW MAJEUR FIRST documented Damia** = 2-instance Wingly-Dragoon canon récurrent récent expansion = Greham + Lenus (Wingly Dragoon holders) + Greham/Feyrbrand + Lenus/Regole = 2-instance Wingly+Dragon-companion pattern canon récurrent récent CONFIRMED.
+
+## Dragoon-Spirit-inheritance chain Lenus → Meru canon ⭐⭐⭐⭐⭐
+
+| #   | From      | To       | Spirit               | Death trigger                                             |
+| --- | --------- | -------- | -------------------- | --------------------------------------------------------- |
+| 1   | **Lenus** | **Meru** | **Blue Sea Dragoon** | Lenus dying at Prison Island after losing to Dart's group |
+
+⭐⭐⭐⭐⭐ **Lenus → Meru Wingly Dragoon-Spirit-inheritance chain canon NEW MAJEUR FIRST documented Damia** + **Meru = next Blue Sea Dragoon successor** + **Meru Wingly female Dragoon canon récurrent récent expansion**.
+
+## Lloyd love-interest Lenus canon NEW MAJEUR FIRST ⭐⭐⭐⭐⭐ Damia rule
+
+- ⭐⭐⭐⭐⭐ **Lloyd = Lenus love-interest extreme loyalty + romantic devotion + die-for-him FIRST**
+- ⭐⭐⭐⭐⭐ **Lloyd Wingly-collaborator Chapter 2 antagonist + Moon Dagger receiver FIRST**
+- ⭐⭐⭐⭐⭐ **"Lloyd, my life...is for you!!" Lenus dying quote FIRST**
+- ⭐⭐⭐⭐⭐ **Lenus candidly shows romantic interest in Lloyd at Prison Island FIRST**
+- ⭐⭐⭐⭐⭐ **Lenus brash/arrogant/selfish/entitled BUT loyal-to-Lloyd anti-heroine archetype FIRST**
+
 ## Retaliate variants taxonomy canon récurrent CONFIRMED 10-source 10-variant Damia rule ⭐⭐⭐⭐⭐
 
 | #   | Boss              | Variant Type                           | Actions                                                                           |
@@ -190,7 +339,27 @@
 ## Liens transverses
 
 - [`README.md`](./README.md) — bosses + **Lenus 2-encounter Sea Dragoon Wingly multi-disc NEW MAJEUR FIRST**
-- [`Regole.md`](./Regole.md) (à créer) — ⭐⭐⭐⭐⭐ **NEW partner Undersea Cavern Sea-Dragon Wingly FIRST**
+- [`Regole.md`](./Regole.md) (à créer) — ⭐⭐⭐⭐⭐ **NEW partner Undersea Cavern Sea-Dragon Lenus-companion Wingly FIRST**
+- [`Lloyd.md`](./Lloyd.md) (à créer/vérifier) — ⭐⭐⭐⭐⭐ **Lenus love-interest + Chapter 2 antagonist + Moon Dagger receiver FIRST**
+- [`Gehrich.md`](./Gehrich.md) (à créer) — Gehrich Gang Disc 2 antagonist + Lenus collaborator FIRST
+- [`../party-members/Meru.md`](../party-members/Meru.md) (à créer/vérifier) — ⭐⭐⭐⭐⭐ **Blue Sea Dragoon successor Lenus → Meru chain + Wingly female Dragoon FIRST**
+- [`../npcs/Princess Emille Real.md`](../npcs/Princess Emille Real.md) (à créer) — Tiberoa princess rescued + Lenus-imposter victim FIRST
+- [`../npcs/King Zior.md`](../npcs/King Zior.md) (à créer) — Tiberoa king + Moon Dagger passing ceremony FIRST
+- [`../items/Moon Dagger.md`](../items/Moon Dagger.md) (à créer) — ⭐⭐⭐⭐⭐ **Tiberoa Disc 2 Moon Object plot artifact FIRST**
+- [`../items/Bubble Burst.md`](../items/Bubble Burst.md) (à créer) — ⭐⭐⭐⭐⭐ **NEW Water Dragoon spell multi-stage cinematic FIRST**
+- [`../items/Pillar Break.md`](../items/Pillar Break.md) (à créer) — ⭐⭐⭐⭐⭐ **NEW Water Dragoon spell multi-stage trap FIRST**
+- [`../weapons/Razor Fan.md`](../weapons/Razor Fan.md) (à créer) — ⭐⭐⭐⭐⭐ **NEW Wingly Lenus dual-fan weapon FIRST**
+- [`../locations/Illisa Bay.md`](../locations/Illisa Bay.md) (à créer) — Disc 2-3 Sea-Dragon region + Queen Fury journey FIRST
+- [`../locations/Prison Island.md`](../locations/Prison Island.md) (à créer) — Undersea Cavern alternate name + Lenus + Regole Sea Dragon-island FIRST
+- [`../transport/Queen Fury.md`](../transport/Queen Fury.md) (à créer) — Disc 2 boat/ship Lenus-pursuit + Glaive 37 weapon-source CONFIRMED
+- [`../lore/wingly-dragoon-spirit-chain.md`](../lore/wingly-dragoon-spirit-chain.md) (à créer) — Greham Wind + Lenus Sea 2-Wingly-Dragoon FIRST
+- [`../lore/dragoon-spirit-inheritance-chain.md`](../lore/dragoon-spirit-inheritance-chain.md) (à créer/vérifier) — Lenus → Meru Wingly Dragoon-inheritance FIRST
+- [`../lore/coming-of-age-ceremony-tiberoa.md`](../lore/coming-of-age-ceremony-tiberoa.md) (à créer) — Princess Emille Moon Dagger passing royal-tradition FIRST
+- [`../meta/location-name-divergences.md`](../meta/location-name-divergences.md) (à créer) — Prison Island vs Undersea Cavern 3-name DIVERGENCE FIRST
+- [`../meta/jp-stats-adoption.md`](../meta/jp-stats-adoption.md) (à créer/vérifier) — Lenus JP anomalous +39%/+33% 2-instance expansion FIRST
+- [`../combat/dying-final-attack-mechanic.md`](../combat/dying-final-attack-mechanic.md) (à créer) — Lenus throws-razor-fans-final-attack-dying FIRST
+- [`../combat/counter-mechanic-clarification.md`](../combat/counter-mechanic-clarification.md) (à créer) — wiki Counter (0) vs fandom Counter Yes 2-mechanic distinct FIRST
+- [`../combat/dragoon-form-bug-lenus-regole.md`](../combat/dragoon-form-bug-lenus-regole.md) (à créer) — PSX crash normal-form-end-battle workaround FIRST
 - [`Last Kraken.md`](./Last Kraken.md) — **Aglis Disc 4 Water boss + HP <71% threshold avec Lenus HP <61% 3-instance**
 - [`Lavitz Spirit.md`](./Lavitz Spirit.md) — **Counter (0) + Retaliate 10-source + ALL 8 immune 8-instance**
 - [`Kubila.md`](./Kubila.md) — **Multi-element Darkness boss avec Lenus Water+Darkness**

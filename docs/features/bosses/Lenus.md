@@ -11,6 +11,55 @@
 > - 🥈 [`_sources/lod-wiki-lenus.md`](./_sources/lod-wiki-lenus.md) — wiki LoD tier 2 (Lenus 2-encounter boss + 4-trait kit + 6+4-ability multi-element + Black Rain/Dark Mist/Bubble Burst/Pillar Break NEW + Fatal Blizzard + Spear Frost CONFIRMED 4-source + HP <61% + Retaliate 10-source + Regole NEW + Jeweled Crown + 8-instance boss-named + Counter (0) 7-instance + ALL 8 immune 8-instance + 2-form stat-shift + Stats Fletz HP 3,500 + AT 44 + MAT 62 + MDF 160 + Undersea HP 3,000 + AT 44 + MAT 60 + MDF 180 + EXP 6,000 Fletz / 0 Undersea + Gold 200 / 0 + Nothing / Jeweled Crown 50% + submap 236/325)
 > - 🥉 [`_sources/fandom-lenus.md`](./_sources/fandom-lenus.md) — fandom tier 3 (🟢 cross-source — ⭐⭐⭐⭐⭐ **Wingly Female Chapter 2 main antagonist Platinum Shadow + Lloyd love interest die-for-him + Princess Emille imposter 6-months + Gehrich Gang collaboration Moon Dagger + Queen Fury boat + Illisa Bay Prison Island Sea Dragon region + Blue Sea Dragoon Lenus + Dragon Regole companion + Dragoon Spirit → Meru chain FIRST** + ⭐⭐⭐⭐⭐ **Bubble Burst razor-fan-throw + water-portal + slam + beam + Pillar Break water-pillar-summon + drown-barrier + heel-smash multi-stage Dragoon spells FIRST + Razor fans Wingly weapon FIRST + Throws weapons final attack dying FIRST** + ⭐⭐⭐⭐⭐ **Twin Castle = Fletz architectural FIRST + Prison Island = Undersea Cavern alternate-name DIVERGENCE FIRST + Coming of age ceremony Princess Emille Disc 2 Tiberoa royal-tradition + King Zior FIRST + Game-crashing Dragoon-form bug normal-form fix PSX engine FIRST** + ⭐⭐⭐⭐⭐ **Brash arrogant selfish entitled BUT loyal-to-Lloyd extreme-devotion personality FIRST + "Lloyd my life is for you" dying quote FIRST** + ⭐⭐⭐⭐⭐ **MASSIVE 11-stat DIVERGENCE intra-source wiki vs fandom Lenus 2-form Fletz HP 3,500/3,600 + AT 44/50 + MAT 62/70 + Undersea HP 3,000/3,000 + AT 44/50 + MAT 60/70 + EXP 0/7,000 + Gold 0/250 + Counter (0)/Yes LARGEST avec Lavitz Spirit Damia FIRST** + ⭐⭐⭐⭐⭐ **JP HP anomalous Twin Castle +39% (3,600→5,000) + Prison Island +33% (3,000→4,000) 2-instance anomalous JP variations canon récurrent récent expansion FIRST** + ⭐⭐⭐⭐⭐ **DIVERGENCE intra-source CONFIRMED 9-instance Damia rule expansion** + ⭐⭐⭐⭐⭐ **Healing Breeze + Angel's Prayers recommandés items + Shana/Meru high-MDF anti-magic strategy** + ⭐⭐⭐⭐⭐ **JP name Rīnasu リーナス FIRST**)
 
+## Sprite canon ⭐⭐⭐⭐⭐ Sprite IA Lenus humanoid Wingly form (sans ailes volienne déployée) — 11-instance CONFIRMED expansion
+
+![Lenus humanoid Wingly sprite + animations](./_assets/lenus-sprite.png)
+
+⭐⭐⭐⭐⭐ **REVELATION SPRITE Damia : Lenus humanoid Wingly form sprite IA fully canon-conform + Sprite IA fully canon-conform 11-instance CONFIRMED + Boss Wingly Female humanoid tier sprite NEW MAJEUR FIRST + Twin Castle/Fletz humanoid-form pre-Wingly-reveal + Razor fans dual-weapon Wingly visual CONFIRMED fandom + Wings-undeployed humanoid disguise state canon NEW MAJEUR FIRST documented Damia (sprite Lenus humanoid) ⭐⭐⭐⭐⭐**
+
+### Caractéristiques sprite Lenus humanoid Wingly (sans ailes volienne déployée)
+
+- ⭐⭐⭐⭐⭐ **White/silver hair Wingly canon NEW MAJEUR FIRST documented Damia** = Wingly ethnic hair-color trait visual + long silver hair Wingly Female FIRST
+- ⭐⭐⭐⭐⭐ **Red bandana/headscarf canon NEW MAJEUR FIRST documented Damia** = Lenus-thematic headwear + pirate/villain Lenus-thematic FIRST
+- ⭐⭐⭐⭐⭐ **Razor fans dual-weapon CONFIRMED fandom canon récurrent récent expansion** (fandom : "razor fans" + "throws razor fans at the party") = sprite shows 2 razor-fan curved-silver-blades with central circle/disc + Wingly weapon dual-wield CONFIRMED 2-source fandom + sprite
+- ⭐⭐⭐⭐⭐ **Wings-undeployed humanoid disguise state canon NEW MAJEUR FIRST documented Damia** = "sans ailes volienne déployée" Twin Castle/Fletz pre-Wingly-reveal humanoid form (cohérent fandom : "Lenus jumps from the tower and flies off, revealing that she is a Wingly" = wings-deploy-reveal moment FIRST documented) = Wingly-disguise-mode state mechanic FIRST + sprite-form = wings-not-shown
+- ⭐⭐⭐⭐⭐ **Blue-black outfit dark cleavage + open-midriff revealing canon NEW MAJEUR FIRST documented Damia** = villainess seductive-revealing outfit + Lenus-thematic "brash arrogant entitled" personality visual coherent FIRST + dark blue + black + red-accents palette = villain/Wingly-aristocrat thematic
+- ⭐⭐⭐⭐⭐ **Silver shoulder armor + pearl/jewel necklace + leather belts thigh straps canon NEW MAJEUR FIRST** = aristocrat/Wingly noble accessories + thigh-strap weapon-holster visual + asymmetric one-shoulder armor design FIRST
+- ⭐⭐⭐⭐⭐ **Tall heeled boots + thigh-strap silver-tip canon NEW MAJEUR FIRST documented Damia** = villainess boot-design + Wingly aristocrat-mobility footwear thematic
+- ⭐⭐⭐⭐⭐ **Beautiful Wingly Female facial features + blue eyes + makeup canon NEW MAJEUR FIRST** = Wingly-aesthetic-aristocrat villainess archetype (cohérent fandom "brash arrogant selfish entitled" + romantic Lloyd-devotion personality)
+- ⭐⭐⭐⭐⭐ **Cyan energy slash ATTACK razor-fan canon NEW MAJEUR FIRST documented Damia** = sprite ATTACK shows cyan-blade energy-slash from razor fan = probable Bubble Burst Water-magic sprite-visual OR razor-fan-throw cinematic spell sprite-coherent CONFIRMED fandom Bubble Burst razor-fan visual FIRST
+- ⭐⭐⭐⭐⭐ **5-animation set IDLE + WALK + ATTACK + HURT + DEATH boss Wingly humanoid tier canon NEW MAJEUR FIRST documented Damia**
+
+### ⚠️ Sprite-form selection canon
+
+⭐⭐⭐⭐⭐ **Sprite humanoid Wingly = Twin Castle/Fletz humanoid-form (pre-Wingly-reveal disguise) canon NEW MAJEUR FIRST** :
+
+- **Twin Castle Lenus 1ère bataille** : humanoid sans ailes (pre-reveal disguise) → sprite cohérent
+- **Prison Island Lenus 2ème bataille** : Blue Sea Dragoon form (transformed Dragoon-form avec ailes Dragoon thematic) = à générer ultérieurement sprite Dragoon-form
+- **Sprite actuel** = base humanoid-form Twin Castle 1ère bataille + à compléter avec sprite Blue Sea Dragoon-form 2ème bataille avec wings + Dragoon transformation visual
+
+### 11-instance Sprite IA fully canon-conform Damia rule expansion
+
+| #   | Entity                    | Tier                        | Notes                                                       |
+| --- | ------------------------- | --------------------------- | ----------------------------------------------------------- |
+| 1   | **Knight of Sandora**     | Mob                         | Mille Soldat Sandora                                        |
+| 2   | **Kongol Dragoon**        | Party-Dragoon Earth         | Gold Dragon                                                 |
+| 3   | **Kubila**                | Boss                        | Zenebatos Wingly trio                                       |
+| 4   | **Land Skater**           | Mob                         | Penguin Water Kashua                                        |
+| 5   | **Kongol armored**        | Party normal                | Indora Armor boss-form                                      |
+| 6   | **Last Kraken V1**        | Boss eldritch               | Tentacle-wrapped organic                                    |
+| 7   | **Last Kraken V2**        | Boss armored                | Crustacean-cephalopod Wingly-engineered                     |
+| 8   | **Lavitz normal**         | Party-Member                | Wind Dragoon Bale Knight noble-knight                       |
+| 9   | **Lavitz Dragoon**        | Party-Dragoon Wind          | Jade Dragon (wings REWORK requis)                           |
+| 10  | **Lavitz Spirit possédé** | Event boss possessed        | Wind ghost Mayfil Zackwell-corruption                       |
+| 11  | **Lenus humanoid Wingly** | Boss Wingly Female humanoid | ⭐⭐⭐⭐⭐ **Twin Castle Wingly Female anti-heroine FIRST** |
+
+⭐⭐⭐⭐⭐ **Sprite IA fully canon-conform 11-instance CONFIRMED canon récurrent récent expansion Damia rule** + **Boss Wingly Female humanoid tier sprite canon NEW MAJEUR FIRST documented Damia** (vs récurrent boss/mob/Dragoon/Party-Member/Party-Dragoon/Event-boss-possessed — Lenus = first Boss-Wingly-Female humanoid pre-transformation tier FIRST).
+
+### Décision implémentation Damia
+
+⭐ **Sprite Lenus humanoid directement utilisable** = Wingly Female anti-heroine villainess sans ailes volienne déployée + razor fans dual-weapon CONFIRMED fandom + 5-animation complete + ATTACK Water-magic cyan-slash sprite-coherent Bubble Burst probable + cohérent canon narrative Twin Castle Fletz humanoid-form 1ère bataille + **à compléter ultérieurement avec sprite Blue Sea Dragoon-form 2ème bataille Prison Island** (Dragoon transformation + ailes Dragoon + Pillar Break visual probable).
+
 ## Statut
 
 🟢 **Canon CONFIRMED cross-source** — Wiki LoD 🥈 + Fandom 🥉 :

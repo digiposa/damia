@@ -395,6 +395,52 @@ Pattern Damia : ⭐⭐⭐ **Dragoon form sprite sub-tier canon récurrent CONFIR
 
 À intégrer future : `public/assets/sprites/party-members/haschel-dragoon-*.png` (frame-split par cycle + 8 ISO angles) + `data/party-members/haschel.ts` AvatarSpriteForm dual-form (human extended + Violet Dragoon transformation) + `RenderSystem` Dragoon-aware (8-dir + Fist Attack + Five Rings Dance Special + Hit/Damage + Defeated/KO) + Thunder elemental effect Dragoon Magic (Atomic Mind + Thunder Kid + Thunder God + Violet Dragon Dragoon Magic canon récurrent) + Dragoon transformation trigger logic (SP threshold canon récurrent D'L1-5).
 
+## Human form sprite ALT canon ⭐⭐⭐⭐⭐ Sprite IA Haschel Human V2 raccord avec V2 Dragoon — 17-instance CONFIRMED expansion + MOST-COMPLEX 7-animation 3-ATTACK martial-arts sprite-system
+
+![Haschel Human Form V2 sprite + 7-animation set](./_assets/haschel-sprite-alt.png)
+
+⭐⭐⭐⭐⭐ **REVELATION SPRITE Damia : Haschel Human Form V2 ALT sprite IA + raccord avec V2 Dragoon sprite-set canon NEW MAJEUR FIRST + Sprite IA fully canon-conform 17-instance CONFIRMED + 2-variant Haschel human-form sprite-progression V1 (existing main design + sheet) + V2 (NEW alt raccord avec V2 Dragoon) + Paired 2-variant SET V2 (Human V2 + Dragoon V2) canon NEW MAJEUR FIRST documented Damia (sprite Haschel Human V2 alt) ⭐⭐⭐⭐⭐**
+
+### Caractéristiques sprite Haschel Human Form V2
+
+- ⭐⭐⭐⭐⭐ **Mature martial-arts warrior identity-coherence cross-variant V1/V2 CONFIRMED 2-source** = older bearded warrior + dark hair pulled back braided + mustache + chinstrap beard canon récurrent CONFIRMED expansion
+- ⭐⭐⭐⭐⭐ **Bare chest + belt + star tattoo canon NEW MAJEUR FIRST V2** = NEW chest-tattoo detail (probable Rouge School martial-arts insignia) + bare-chested martial-arts traditional warrior aesthetic FIRST
+- ⭐⭐⭐⭐⭐ **Blue/violet pants + white wrap belt canon NEW MAJEUR FIRST V2** = martial-arts traditional outfit + violet palette = raccord V2 Dragoon Violet Dragoon palette CONFIRMED visual identity-coherence FIRST + paired-set V2 canon NEW MAJEUR FIRST
+- ⭐⭐⭐⭐⭐ **Bracers + arm guards + heeled boots canon NEW MAJEUR FIRST V2** = combat-ready martial-artist equipment + practical training gear FIRST
+- ⭐⭐⭐⭐⭐ **7-animation set IDLE + WALK + ATTACK 1 Fierce Punch + ATTACK 2 Tiger Rush + ATTACK 3 Dragon Uppercut + HURT + DEATH MOST-COMPLEX sprite-system canon NEW MAJEUR FIRST documented Damia** = MOST-COMPLEX 7-animation 5-instance avec Lenus V3 + Damia Normal + Damia Dragoon + Haschel Dragoon V2 + **Haschel Human V2** = 5-instance MOST-COMPLEX 7-animation sprite-system Damia rule expansion FIRST
+- ⭐⭐⭐⭐⭐ **3-distinct ATTACK variants Fierce Punch + Tiger Rush + Dragon Uppercut ALL martial-arts thematic + Thunder purple/violet energy effects canon NEW MAJEUR FIRST** = martial-arts fist-Tiger-Dragon thematic sprite-coherent Rouge School + Thunder-magic ATTACK visual sprite-coherent FIRST + paired sprite-coherence avec V2 Dragoon Dragon Fist/Rush/Sweep thematic-consistency FIRST
+
+### ⚠️ DIVERGENCE sprite ATTACK names vs wiki canon Haschel Additions
+
+⭐⭐⭐⭐⭐ **DIVERGENCE sprite-team ability names vs wiki canon Haschel Additions canon NEW MAJEUR FIRST documented Damia** :
+
+| Sprite ATTACK                | Wiki Haschel canon Addition (probable match)       | Notes canon DIVERGENCE                                  |
+| ---------------------------- | -------------------------------------------------- | ------------------------------------------------------- |
+| **ATTACK 1 Fierce Punch**    | **Double Punch** OR **Hand Smash** wiki probable   | ⭐ Sprite rename martial-arts punch addition            |
+| **ATTACK 2 Tiger Rush**      | **Flurry of Styx** OR **Hex Hammer** wiki probable | ⭐ Sprite rename rush-attack martial-arts               |
+| **ATTACK 3 Dragon Uppercut** | **Summon 4 Gods** OR **Omni-Sweep** wiki probable  | ⭐ Sprite rename dragon-themed uppercut Master Addition |
+
+⭐⭐⭐⭐⭐ **Sprite-team Haschel Human ability-naming DIVERGENCE wiki canon canon NEW MAJEUR FIRST documented Damia** = MARTIAL-ARTS-FIST-THEMATIC Fierce Punch/Tiger Rush/Dragon Uppercut sprite-team creative-rename + Rouge School martial-arts thematic cohérent + wiki canon-priority probable adopter Haschel 6-Addition kit + sprite-names visual-attack-labels martial-arts.
+
+### Paired 2-variant SET V2 (Human + Dragoon) canon NEW MAJEUR FIRST ⭐⭐⭐⭐⭐ Damia rule
+
+| Form        | V1                                                                      | V2 (NEW paired SET raccord)                                                    |
+| ----------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| **Human**   | `haschel-design-main.png` + `haschel-sprite-sheet.png` ultra-extended   | `haschel-sprite-alt.png` ⭐ **NEW 7-anim 3-ATTACK martial-arts FIRST**         |
+| **Dragoon** | `haschel-dragoon-design.png` + `haschel-dragoon-sprite-sheet.png` 8 ISO | `haschel-dragoon-sprite-alt.png` ⭐ **NEW 7-anim 3-ATTACK MOST-COMPLEX FIRST** |
+
+⭐⭐⭐⭐⭐ **Paired 2-variant SET V2 canon NEW MAJEUR FIRST documented Damia** = Human V2 + Dragoon V2 paired-set raccord-visual-identity (violet palette coherence + martial-arts thematic + 7-animation MOST-COMPLEX + 3-ATTACK Dragon-themed/Tiger-themed) = **first paired-sprite-set canon NEW MAJEUR FIRST documented Damia** (vs récurrent single-form sprite-variant) + raccord-set Human ↔ Dragoon transformation visual-narrative FIRST.
+
+### 17-instance Sprite IA fully canon-conform Damia rule expansion
+
+⭐⭐⭐⭐⭐ **Sprite IA fully canon-conform 17-instance CONFIRMED canon récurrent récent expansion Damia rule** (16 prior + **Haschel Human V2** = 17-instance) + **MOST-COMPLEX 7-animation sprite-system 5-instance** (Lenus V3 + Damia Normal + Damia Dragoon + Haschel Dragoon V2 + Haschel Human V2) + **Martial-arts thematic 3-ATTACK sprite-system Damia rule expansion** = Fierce Punch + Tiger Rush + Dragon Uppercut Human V2 + Dragon Fist + Dragon Rush + Dragon Sweep Dragoon V2 = 6-ATTACK martial-arts sprite-team-rename canon NEW MAJEUR FIRST.
+
+### Décision implémentation Damia
+
+⭐ **Sprite Haschel Human V2 directement utilisable + paired SET V2 (Human + Dragoon) FIRST** = MOST-COMPLEX 7-animation + 3-distinct ATTACK martial-arts + raccord visual-identity V2 Human ↔ V2 Dragoon transformation cohérent + à reconcilier sprite-attack-names (Fierce Punch/Tiger Rush/Dragon Uppercut + Dragon Fist/Rush/Sweep) avec wiki canon Haschel 6-Addition kit probable wiki-priority + sprite-names martial-arts visual-labels.
+
+⭐⭐⭐⭐⭐ **Haschel V2 paired SET = canon-coherent visual model namesake project priorité implementation** (raccord visual-identity + MOST-COMPLEX sprite-system + martial-arts Rouge School thematic + Violet Dragoon Thunder palette) FIRST documented Damia.
+
 ## Dragoon form sprite ALT canon ⭐⭐⭐⭐⭐ Sprite IA Haschel Violet Dragoon V2 — 16-instance CONFIRMED expansion + MOST-COMPLEX 7-animation 3-ATTACK sprite-system
 
 ![Haschel Violet Dragoon V2 sprite + 7-animation set](./_assets/haschel-dragoon-sprite-alt.png)

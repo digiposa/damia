@@ -151,6 +151,68 @@
 - ⭐⭐⭐⭐⭐ **Shrine of Shirley location dedicated** : à ingérer wiki/fandom (Lavitz Wind Dragoon trial + Dart-Lavitz test + Shirley character)
 - ⭐⭐⭐⭐⭐ **Detonate Rock item depth** : Earth-thematic CONFIRMED + effect exact à investiguer
 
+## Sprite canon ⭐⭐⭐⭐⭐ Sprite IA Living Statue 2-variant Stone Norman Sergeant knight-style + 7-animation MOST-COMPLEX 3-ATTACK — 19-instance CONFIRMED expansion + Spear+Shield equipment FIRST
+
+### Variant 1 — Living Statue NORMAN SERGEANT lighter stone (V1)
+
+![Living Statue V1 lighter stone Norman Sergeant + 7-animation set](./_assets/living-statue-sprite.png)
+
+### Variant 2 — Living Statue NORMAN SERGEANT darker armored stone (V2)
+
+![Living Statue V2 darker armored stone + cloak + 7-animation set](./_assets/living-statue-sprite-alt.png)
+
+⭐⭐⭐⭐⭐ **REVELATION SPRITE MAJEURE Damia : Living Statue 2-variant Sprite IA fully canon-conform + Stone Norman Sergeant knight-soldier design CONFIRMED fandom 3-source (fandom lore + sprite V1 + sprite V2) + Spear + Shield equipment FIRST documented sprite + 7-animation MOST-COMPLEX sprite-system + 3-distinct ATTACK variants Spear Thrust + Shield Bash + Overhead Strike + Sprite IA fully canon-conform 19-instance CONFIRMED + JP name リビングステチュー (Ribingu Suchichū) sprite V1 FIRST canon NEW MAJEUR FIRST documented Damia (sprites Living Statue V1 + V2) ⭐⭐⭐⭐⭐**
+
+### Caractéristiques sprite V1 NORMAN SERGEANT lighter stone
+
+- ⭐⭐⭐⭐⭐ **Norman Sergeant knight-style stone-soldier CONFIRMED 3-source canon récurrent récent expansion fandom + sprite V1 + sprite V2** = stone warrior + crown helm + medieval knight armor + spear+shield = stone-soldier mimicking real-Norman-Sergeant lore VISUAL CONFIRMED FIRST
+- ⭐⭐⭐⭐⭐ **White/light-grey stone marble palette canon NEW MAJEUR FIRST V1** = lighter aged-stone aesthetic + statue-marble palette + cohérent fandom "Stone versions" Earth-thematic
+- ⭐⭐⭐⭐⭐ **Crown helm + cuirass + leg armor knight-design canon NEW MAJEUR FIRST V1** = noble-soldier statue aesthetic + medieval knight-class visual
+- ⭐⭐⭐⭐⭐ **Spear + Shield dual-weapon canon NEW MAJEUR FIRST sprite V1 + V2** = NEW weapon-equipment Shield addition (NOT in wiki/fandom abilities — sprite-team expansion FIRST) + cohérent wiki ~Spear Bash + fandom Stone Spear OFFICIAL
+- ⭐⭐⭐⭐⭐ **JP name リビングステチュー (Ribingu Suchichū) sprite V1 caption canon NEW MAJEUR FIRST documented Damia** = NEW JP name + sprite-confirmed katakana rendering FIRST (LoD-style English-loanword JP naming)
+- ⭐⭐⭐⭐⭐ **7-animation set IDLE + WALK + ATTACK 1 Spear Thrust + ATTACK 2 Shield Bash + ATTACK 3 Overhead Strike + HURT + DEATH canon NEW MAJEUR FIRST documented Damia** = MOST-COMPLEX 7-animation 6-instance avec Lenus V3 + Damia Normal + Damia Dragoon + Haschel Dragoon V2 + Haschel Human V2 + **Living Statue V1**
+
+### Caractéristiques sprite V2 NORMAN SERGEANT darker armored stone
+
+- ⭐⭐⭐⭐⭐ **Darker grey-stone heavily armored + cloak/cape canon NEW MAJEUR FIRST V2** = darker weathered-stone aesthetic + more heavy-plate armor + cloak-cape royal-guardian visual FIRST
+- ⭐⭐⭐⭐⭐ **Ornate kite shield with elaborate engravings canon NEW MAJEUR FIRST V2** = ornate-decorative shield + heraldic-engraving Norman Sergeant noble-rank visual FIRST
+- ⭐⭐⭐⭐⭐ **Hood + crown helm + elaborate armor knight-design canon NEW MAJEUR FIRST V2** = darker-knight elite-soldier aesthetic + cloak/hood-detail FIRST
+- ⭐⭐⭐⭐⭐ **"LIVING STATUE - THE LEGEND OF DRAGOON" polished branding canon NEW MAJEUR FIRST V2** = official-branding sprite-set V2 polished-final-design FIRST
+- ⭐⭐⭐⭐⭐ **7-animation set IDLE + WALK + ATTACK 1 + ATTACK 2 + ATTACK 3 + HURT + DEATH canon récurrent récent expansion CONFIRMED 2-variant** = both V1 + V2 7-animation MOST-COMPLEX
+
+### ⚠️ DIVERGENCE sprite ATTACK names vs wiki canon abilities
+
+⭐⭐⭐⭐⭐ **DIVERGENCE sprite-team ability names vs wiki canon NEW MAJEUR FIRST documented Damia** :
+
+| Sprite ATTACK                | Wiki canon ability (probable match)                                       | Notes canon                                                                                    |
+| ---------------------------- | ------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| **ATTACK 1 Spear Thrust**    | **~Spear Bash** wiki / **Stone Spear** fandom OFFICIAL CONFIRMED 2-source | ⭐ Sprite rename CONFIRMED 3-source spear-thematic                                             |
+| **ATTACK 2 Shield Bash**     | N/A (NOT in wiki/fandom abilities)                                        | ⭐⭐⭐⭐⭐ **NEW sprite-team Shield Bash invention FIRST + Shield equipment expansion**        |
+| **ATTACK 3 Overhead Strike** | N/A (NOT in wiki/fandom abilities)                                        | ⭐⭐⭐⭐⭐ **NEW sprite-team Overhead Strike invention FIRST + Spear overhead-attack variant** |
+
+⭐⭐⭐⭐⭐ **Sprite-team ATTACK expansion canon NEW MAJEUR FIRST documented Damia** = sprite-team 3-ATTACK pattern Damia rule pattern (cohérent Damia Blue Sea Dragon + Lenus Sea Dragoon + Haschel Dragoon + Haschel Human + **Living Statue** = 5-instance 3-ATTACK Dragoon/Mob-form sprite-system Damia rule récurrent récent CONFIRMED expansion canon NEW MAJEUR FIRST) + **Shield Bash + Overhead Strike sprite-team-invention add-ons** vs wiki Power Up = à reconcilier implémentation : adopt wiki canon abilities (Spear Bash/Stone Spear + Power Up) OR adopt sprite-team 3-ATTACK (Spear Thrust + Shield Bash + Overhead Strike + Power Up trait separate) probable hybrid implementation.
+
+### Stone Norman Sergeant fandom lore CONFIRMED 3-source visual ⭐⭐⭐⭐⭐
+
+⭐⭐⭐⭐⭐ **Stone Norman Sergeant lore CONFIRMED 3-source canon récurrent récent expansion Damia rule FIRST documented Damia** = fandom narrative "look like Stone versions of a Norman Sergeant" + sprite V1 + sprite V2 = 3-source CONFIRMED Norman Sergeant knight-class stone-soldier-mimic visual lore FIRST + cohérent stone-version-of-existing-mob template canon récurrent récent expansion.
+
+### 2-variant Living Statue stone-palette dichotomy canon NEW MAJEUR FIRST ⭐⭐⭐⭐⭐
+
+| Variant | Palette                         | Aesthetic                                                      | Sprite                         |
+| ------- | ------------------------------- | -------------------------------------------------------------- | ------------------------------ |
+| **V1**  | **White/light-grey marble**     | Fresh-stone + crown helm + simple knight equipment             | `living-statue-sprite.png`     |
+| **V2**  | **Darker grey weathered stone** | Aged-stone + heavy plate + cloak/cape + ornate engraved shield | `living-statue-sprite-alt.png` |
+
+⭐⭐⭐⭐⭐ **2-variant Living Statue stone-palette dichotomy canon NEW MAJEUR FIRST documented Damia** = light-fresh-stone V1 vs darker-aged-stone V2 = 2 aesthetic interpretations Earth-stone-thematic + à trancher implémentation finale (V1 lighter vs V2 darker polished-branded) + **V2 polished-branded probable priorité implémentation** (cohérent "LIVING STATUE - THE LEGEND OF DRAGOON" official-branding).
+
+### 19-instance Sprite IA fully canon-conform Damia rule expansion
+
+⭐⭐⭐⭐⭐ **Sprite IA fully canon-conform 19-instance CONFIRMED canon récurrent récent expansion Damia rule** (17 prior + **Living Statue V1** + **Living Statue V2** = 19-instance) + **MOST-COMPLEX 7-animation sprite-system 7-instance** (Lenus V3 + Damia Normal + Damia Dragoon + Haschel Dragoon V2 + Haschel Human V2 + **Living Statue V1** + **Living Statue V2**) + **5-instance 3-ATTACK Dragoon/Mob-form sprite-system Damia rule récurrent expansion** + **First Mob-Earth-Stone-Knight-Norman-Sergeant tier sprite NEW MAJEUR FIRST documented Damia** (vs récurrent boss/Dragoon/Party/Wingly tiers — Living Statue = first Mob-Earth-Stone-Knight tier FIRST).
+
+### Décision implémentation Damia
+
+⭐ **Sprites Living Statue V1 + V2 directement utilisables 2-variant** = MOST-COMPLEX 7-animation + 3-distinct ATTACKs + Stone Norman Sergeant lore VISUAL CONFIRMED 3-source + Spear+Shield equipment + à trancher V1 lighter vs V2 darker polished-branded implementation final + à reconcilier sprite-attack-names (Spear Thrust + Shield Bash + Overhead Strike) avec wiki canon (Stone Spear + Power Up) probable hybrid implementation (wiki Stone Spear OFFICIAL + sprite Shield Bash + Overhead Strike sprite-team-invention add-ons + Power Up trait separate canon récurrent récent expansion).
+
 ## Liens transverses
 
 - [`README.md`](./README.md) — mobs + **Living Statue Earth Shrine of Shirley Disc 1 NEW MAJEUR FIRST**

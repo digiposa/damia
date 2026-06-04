@@ -7,11 +7,30 @@
 > **Sources** :
 >
 > - 🥈 [`_sources/lod-wiki-living-statue.md`](./_sources/lod-wiki-living-statue.md) — wiki LoD tier 2 (Living Statue Earth Shrine of Shirley Disc 1 minor enemy + ⭐⭐⭐⭐⭐ **DF 160 HIGH defensive-tank-mob CONFIRMED + ALL 8 status immune CONFIRMED 6-instance mob-tier Damia rule + Power Up 25% Self 3-turn +50%/-50% boost trait CONFIRMED 3-instance avec Lavitz Blossom Storm + Icicle Ball + Living Statue FIRST** + ⭐⭐⭐⭐⭐ **~Spear Bash NEW Physical 1x Single 75% probability mob-action FIRST + 28-pool SHARED CONFIRMED 14-instance + Lavitz DORMANT 14-instance + Counter Yes mob-tier récurrent + Detonate Rock 8% drop CONFIRMED 2-source avec Limestone Cave chest FIRST** + ⭐⭐⭐⭐⭐ **Gargoyle + Strong Man NEW partner mobs Shrine of Shirley FIRST + 3 formations 64/68/69 + Shrine of Shirley submaps 155/156/159/160 4-submap coverage + 40% escape easy-flee FIRST** + Stats HP 51 + AT 14 + DF 160 + MAT 13 + MDF 80 + SPD 50 + EXP 20 + Gold 12 + standard Disc 1 mob yield)
-> - 🥉 fandom Living Statue — **à ingérer si existe**
+> - 🥉 [`_sources/fandom-living-statue.md`](./_sources/fandom-living-statue.md) — fandom tier 3 (🟢 cross-source — ⭐⭐⭐⭐⭐ **Living Statue look like Stone versions of Norman Sergeant lore canon NEW MAJEUR FIRST + Norman Sergeant NEW lore reference FIRST + Stone-version-of-existing-mob template FIRST** + ⭐⭐⭐⭐⭐ **JP HP 64 (vs 51 US) = JP +25% standard CONFIRMED canon récurrent récent expansion 26+ instances UNIVERSAL + JP Gold 4 (vs 12 US) = JP ÷3 CONFIRMED canon récurrent récent expansion 26+ UNIVERSAL** + ⭐⭐⭐⭐⭐ **P. Attack 15 (vs wiki 14) DIVERGENCE intra-source +7% + M. Attack 15 (vs wiki 13) DIVERGENCE intra-source +15% canon récurrent récent expansion DIVERGENCE 10-instance Damia rule** + ⭐⭐⭐⭐⭐ **Power Up = Attack and Defense stats multiplied by 1.5 until end of caster's third turn = FORMULATION DIFFERENT vs wiki +50%/-50% 3-turn = MATHEMATIQUEMENT ÉQUIVALENT CONFIRMED 2-source formula clarification FIRST + ×1.5 AT + ×1.5 DF formulation FIRST** + ⭐⭐⭐⭐⭐ **Stone Spear OFFICIAL fandom ability name = wiki ~Spear Bash CONFIRMED 2-source spear-thematic ability stone-warrior FIRST** + ⭐⭐⭐⭐⭐ **"Uses its spear to attack an alley" + "high-defense low-hitpoints" lore confirmation cohérent récurrent récent DF-tank class** + Stats HP 51/64 + AT 15 + DF 160 + MAT 15 + MDF 80 + SPD 50 + Gold 12/4)
 
 ## Statut
 
-🟡 **Canon wiki seul (en attente fandom Living Statue si existe)** — Source unique : wiki LoD 🥈 :
+🟢 **Canon CONFIRMED cross-source** — Wiki LoD 🥈 + Fandom 🥉 :
+
+### Nouveaux 🆕 fandom MAJEUR
+
+- ⭐⭐⭐⭐⭐ **Living Statue look like Stone versions of Norman Sergeant lore canon NEW MAJEUR FIRST documented Damia** = NEW Norman Sergeant reference + Stone-version-of-existing-mob template canon NEW MAJEUR FIRST documented Damia + statue-creature-mimics-soldier visual-design lore FIRST
+- ⭐⭐⭐⭐⭐ **Norman Sergeant NEW lore reference canon NEW MAJEUR FIRST documented Damia** = NEW Norman Sergeant mob/NPC class probable Sandora/military thematic + à investiguer dedicated entry
+- ⭐⭐⭐⭐⭐ **Stone-version-of-existing-mob template canon NEW MAJEUR FIRST documented Damia** = NEW Stone Living Statue = animated-stone-version of existing Norman Sergeant mob = NEW design-template lore FIRST + cohérent récurrent récent statue-creature-shrine-guardian Earth thematic
+- ⭐⭐⭐⭐⭐ **JP HP 64 (vs 51 US) = +25% standard JP HP variation CONFIRMED canon récurrent récent expansion 26+ instances UNIVERSAL** = Living Statue confirme JP +25% standard récurrent expansion (vs Limestone Cave Evil Spider JP +67% anomalous LARGEST)
+- ⭐⭐⭐⭐⭐ **JP Gold 4 (vs 12 US) = JP ÷3 CONFIRMED canon récurrent récent expansion 26+ instances UNIVERSAL** = Living Statue confirme JP ÷3 Gold universal canon récurrent expansion
+- ⭐⭐⭐⭐⭐ **AT 15 fandom (vs wiki 14) DIVERGENCE intra-source +7% canon récurrent récent expansion + MAT 15 fandom (vs wiki 13) DIVERGENCE intra-source +15% canon récurrent récent expansion** = DIVERGENCE intra-source CONFIRMED 10-instance Damia rule expansion (Kamuy + Kanzas + Killer Bird + Knight + Land Skater + Kubila + Lavitz + Lavitz Spirit + Lenus + **Living Statue** = 10-instance multi-DIVERGENCE intra-source Damia rule)
+- ⭐⭐⭐⭐⭐ **Power Up formulation DIFFERENT vs wiki canon NEW MAJEUR FIRST documented Damia** :
+  - Wiki : "+50% damage-inflict + -50% damage-received 3 turns"
+  - Fandom : "Attack and Defense stats multiplied by 1.5 until end of caster's third turn"
+  - **MATHEMATIQUEMENT ÉQUIVALENT** : ×1.5 AT = +50% damage-output + ×1.5 DF ≈ ÷1.5 damage-input ≈ -33% damage-received (proche -50%) ≈ +50% damage-effective-reduction = équivalence formula CONFIRMED 2-source clarification FIRST
+  - **×1.5 AT + ×1.5 DF formulation NEW MAJEUR FIRST** = stat-multiplier-formulation Power Up CONFIRMED 2-source + alternative-formulation Damia rule expansion FIRST
+- ⭐⭐⭐⭐⭐ **Stone Spear OFFICIAL fandom ability name CONFIRMED 2-source spear-thematic ability canon récurrent récent expansion FIRST** = wiki ~Spear Bash community-name + fandom **Stone Spear** OFFICIAL fandom-name = CONFIRMED 2-source spear-thematic + stone-warrior lore-coherent FIRST + OFFICIAL ability name canon récurrent récent expansion FIRST
+- ⭐⭐⭐⭐⭐ **"Uses its spear to attack an alley" gameplay-lore CONFIRMED 2-source** = wiki + fandom CONFIRMED spear-Single-target-attack mechanic Damia rule récurrent
+- ⭐⭐⭐⭐⭐ **"High-defense and low-hitpoints monster" lore confirmation canon récurrent récent expansion** = wiki DF 160 HIGH + low HP 51 = fandom CONFIRMED 2-source DF-tank low-HP mob class canon récurrent récent expansion FIRST
+
+### Existants 🥈 wiki
 
 - ⭐⭐⭐⭐⭐ **Living Statue Earth Shrine of Shirley Disc 1 minor enemy FIRST**
 - ⭐⭐⭐⭐⭐ **DF 160 HIGH defensive-tank-mob canon récurrent CONFIRMED expansion**

@@ -7,11 +7,41 @@
 > **Sources** :
 >
 > - 🥈 [`_sources/lod-wiki-lidiera.md`](./_sources/lod-wiki-lidiera.md) — wiki LoD tier 2 (Lidiera coastal fishing village shipwreck-architecture + ⭐⭐⭐⭐⭐ **Island between Tiberoa and Mille Seseau border FIRST + Undersea Cavern water-level mechanism gameplay puzzle FIRST + Disc 2 location #21 sequence Phantom Ship→Lidiera→Undersea Cavern FIRST + 9-submap detailed map system FIRST** + ⭐⭐⭐⭐⭐ **Dart+Rose campfire night intimate scene + Pete+Pooch NEW NPCs + Mayor cards-playing + Pete's house + Tilted house architectural detail FIRST** + ⭐⭐⭐⭐⭐ **Healing Potion + Healing Rain + Healing Fog 3 chests + Stardust #33 Mayor's house top-right ladder + No-shop No-mob peaceful village FIRST** + Submaps 297 village exterior + 298 Mayor's house save + 299 tilted house + 300 Pete's house + 364 Pete+Pooch find Dart+Rose + 365 ocean terrace Mayor cards + 366 close-up entering + 630 cave water-control + 678 Dart+Rose campfire night)
-> - 🥉 fandom Lidiera — **à ingérer si existe**
+> - 🥉 [`_sources/fandom-lidiera.md`](./_sources/fandom-lidiera.md) — fandom tier 3 (🟢 cross-source — ⭐⭐⭐⭐⭐ **Illisa Bay confirmed location + Fueno NEW location next-area + Drippy unique character NEW + 3-visible-houses smallest-town-game FIRST** + ⭐⭐⭐⭐⭐ **Rose's Memory Cutscene 6 Dragon Campaign final battle MAJEURE FIRST documented + 11,000 years timegap CONFIRMED** + ⭐⭐⭐⭐⭐ **Kanzas self-destructs giant creature CONFIRMED 4-instance self-destruct + Zieg vs Melbu Frahma duel + Dragon Buster Melbu wielded + Zieg pierces Melbu + petrification spell + plunges together depths + Floating Palace sky final-battle location + Belzac dies saving Shirley + Virage claw + Shirley arrow Virage eye laser likely kills both + Rose finds petrified Zieg ruins FIRST** + ⭐⭐⭐⭐⭐ **Pete child + Pooch dog CONFIRMED + Pete's mother sick + Fueno biggest nearby town + Monster blocked Undersea Cavern + Rose "annihilate the monster" line FIRST** + ⭐⭐⭐⭐⭐ **Mayor tide-gates mechanism + closed Prison Island route post-monster + "We need to see the monster" correct answer + "Danger is my middle name" funny refusal-answer + Valve permanent-lock one-way puzzle FIRST** + ⭐⭐⭐⭐⭐ **Dart + Rose washed-ashore Phantom Ship sinks ocean-fall night Queen Fury can't find FIRST** + Healing Rain + Healing Fog gated-cave permanent-lock-after-valve FIRST + Stardust 33 cupboard tent save point + 3 NPCs cards Mayor + 2 card players FIRST)
 
 ## Statut
 
-🟡 **Canon wiki seul (en attente fandom Lidiera si existe)** — Source unique : wiki LoD 🥈 :
+🟢 **Canon CONFIRMED cross-source** — Wiki LoD 🥈 + Fandom 🥉 :
+
+### Nouveaux 🆕 fandom MAJEUR
+
+- ⭐⭐⭐⭐⭐ **Illisa Bay region CONFIRMED 2-source canon récurrent récent expansion** = wiki "Tiberoa/Mille Seseau border" + fandom "Illisa Bay" = SAME geography region
+- ⭐⭐⭐⭐⭐ **Fueno NEW location revealed canon NEW MAJEUR FIRST** = biggest nearby town + Pete's mother sick destination + Disc 2 next-area-via-Undersea-Cavern FIRST
+- ⭐⭐⭐⭐⭐ **Sequence Phantom Ship → Lidiera → Fueno (via Undersea Cavern) → Lidiera (return) → Prison Island canon NEW MAJEUR FIRST** = 5-location-traversal canon récurrent récent expansion FIRST
+- ⭐⭐⭐⭐⭐ **Drippy unique character NEW NPC canon NEW MAJEUR FIRST** = 4th Lidiera NPC
+- ⭐⭐⭐⭐⭐ **3-visible-houses smallest-town-game canon NEW MAJEUR FIRST documented Damia**
+- ⭐⭐⭐⭐⭐ **Rose's Memory Cutscene 6 Dragon Campaign final battle MAJEURE canon NEW MAJEUR FIRST documented Damia**
+- ⭐⭐⭐⭐⭐ **11,000 years timegap Dragon Campaign → current era CONFIRMED 2-source canon récurrent récent expansion** (Damia Ancient-Dragoon canon-existing + Rose Memory Cutscene 6 = 2-source CONFIRMED)
+- ⭐⭐⭐⭐⭐ **Kanzas self-destructs giant creature canon récurrent récent expansion CONFIRMED 4-instance self-destruct Damia rule** (Kanzas + Cleone + Lavitz Spirit + Kanzas Cutscene = wait, Kanzas SAME instance — let me recount : Kanzas Dragoon + Cleone mob + Lavitz Spirit + **Kanzas Cutscene 6 fandom confirmed source 2-source Kanzas** = **CONFIRMED 2-source Kanzas self-destruct + 3-instance overall self-destruct mechanic** Damia rule expansion)
+- ⭐⭐⭐⭐⭐ **Zieg vs Melbu Frahma final-duel canon NEW MAJEUR FIRST documented Damia** = one-on-one duel + Zieg slays Melbu + petrification spell + plunges depths
+- ⭐⭐⭐⭐⭐ **Dragon Buster wielded by Melbu Frahma canon NEW MAJEUR FIRST documented Damia** = CONFIRMED 2-source canon récurrent récent expansion avec Man-in-Hood-Hellena-2 Dragon Buster kills Lavitz = Dragon Buster anti-Dragoon legendary weapon Melbu-Frahma-original-wielder FIRST
+- ⭐⭐⭐⭐⭐ **Petrification spell Melbu Frahma + Zieg petrified canon NEW MAJEUR FIRST documented Damia** = NEW status-magic mechanic Melbu Frahma + Petrify status canon récurrent récent expansion
+- ⭐⭐⭐⭐⭐ **Floating Palace sky Dragon Campaign final-battle location canon NEW MAJEUR FIRST documented Damia** = NEW location-lore Dragon Campaign FIRST
+- ⭐⭐⭐⭐⭐ **Belzac dies saving Shirley canon NEW MAJEUR FIRST documented Damia** = Belzac death + Virage claw pierce + roof collapse saving Shirley + martyr-death FIRST
+- ⭐⭐⭐⭐⭐ **Shirley arrow Virage-eye + laser Virage kills both Dragoons canon NEW MAJEUR FIRST documented Damia** = Shirley + Belzac potentially dies same scene + Virage laser final-blow FIRST
+- ⭐⭐⭐⭐⭐ **Rose finds petrified Zieg + Zieg tells Rose save herself canon NEW MAJEUR FIRST documented Damia** = NEW Rose lore moment + Zieg-Rose final scene FIRST
+- ⭐⭐⭐⭐⭐ **Pete child + Pooch dog CONFIRMED 2-source canon récurrent récent expansion** = wiki "Pete + Pooch find" + fandom "young boy named Pete and his dog Pooch"
+- ⭐⭐⭐⭐⭐ **Pete's mother sick + Fueno biggest-nearby-town pretext canon NEW MAJEUR FIRST** = lore Pete-mother-illness + journey-pretext narrative arc FIRST
+- ⭐⭐⭐⭐⭐ **Monster blocked Undersea Cavern + Rose "annihilate the monster" line + blank stares Pete/Pooch/Dart canon NEW MAJEUR FIRST** = Rose dark-humor canon récurrent récent expansion + comic-relief blank-stare moment FIRST
+- ⭐⭐⭐⭐⭐ **Tide gates mechanism Mayor controls + closed Prison Island route post-monster canon NEW MAJEUR FIRST** = Mayor protective-blocking mechanism + Sea Dragon protection-village context FIRST
+- ⭐⭐⭐⭐⭐ **"We need to see the monster" correct dialogue answer + "Danger is my middle name" funny refusal answer canon NEW MAJEUR FIRST** = dialogue-choice mechanic + funny-answer Mayor refusal FIRST
+- ⭐⭐⭐⭐⭐ **Valve permanent-lock one-way puzzle gate-permanently-locked-after-valve canon NEW MAJEUR FIRST** = one-way-puzzle gameplay mechanic FIRST + missable-treasure mechanic FIRST
+- ⭐⭐⭐⭐⭐ **Healing Rain + Healing Fog gated-cave permanent-lock missable FIRST** = locked-after-valve missable items lore FIRST
+- ⭐⭐⭐⭐⭐ **Dart + Rose washed-ashore Phantom Ship sinks ocean-fall night Queen Fury can't find canon NEW MAJEUR FIRST** = Dart+Rose isolated-pair Disc 2 plot-device + Queen Fury crew separation FIRST
+- ⭐⭐⭐⭐⭐ **Stardust 33 cupboard tent save-point location DIVERGENCE wiki "Mayor's house top-right after ladder" vs fandom "cupboard tent save point" canon NEW MAJEUR FIRST** = location-detail DIVERGENCE intra-source FIRST
+- ⭐⭐⭐⭐⭐ **3 NPCs cards Mayor + 2 card players CONFIRMED 2-source canon récurrent récent expansion** = wiki "Mayor playing cards" + fandom "Mayor and other two card players"
+
+### Existants 🥈 wiki
 
 - ⭐⭐⭐⭐⭐ **Lidiera coastal fishing village shipwreck-architecture island Disc 2 FIRST**
 - ⭐⭐⭐⭐⭐ **Island between Tiberoa and Mille Seseau border canon NEW MAJEUR FIRST**

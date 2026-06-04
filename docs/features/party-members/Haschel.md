@@ -395,6 +395,54 @@ Pattern Damia : ⭐⭐⭐ **Dragoon form sprite sub-tier canon récurrent CONFIR
 
 À intégrer future : `public/assets/sprites/party-members/haschel-dragoon-*.png` (frame-split par cycle + 8 ISO angles) + `data/party-members/haschel.ts` AvatarSpriteForm dual-form (human extended + Violet Dragoon transformation) + `RenderSystem` Dragoon-aware (8-dir + Fist Attack + Five Rings Dance Special + Hit/Damage + Defeated/KO) + Thunder elemental effect Dragoon Magic (Atomic Mind + Thunder Kid + Thunder God + Violet Dragon Dragoon Magic canon récurrent) + Dragoon transformation trigger logic (SP threshold canon récurrent D'L1-5).
 
+## Dragoon form sprite ALT canon ⭐⭐⭐⭐⭐ Sprite IA Haschel Violet Dragoon V2 — 16-instance CONFIRMED expansion + MOST-COMPLEX 7-animation 3-ATTACK sprite-system
+
+![Haschel Violet Dragoon V2 sprite + 7-animation set](./_assets/haschel-dragoon-sprite-alt.png)
+
+⭐⭐⭐⭐⭐ **REVELATION SPRITE Damia : Haschel Violet Dragoon Form V2 ALT sprite IA + Sprite IA fully canon-conform 16-instance CONFIRMED + Party-Dragoon Thunder MOST-COMPLEX 7-animation 3-ATTACK sprite-system + 2-variant same-character Dragoon-form sprite-progression V1 (existing sprite sheet) + V2 (new alt) canon NEW MAJEUR FIRST documented Damia (sprite Haschel Dragoon V2) ⭐⭐⭐⭐⭐**
+
+### Caractéristiques sprite Haschel Violet Dragoon V2
+
+- ⭐⭐⭐⭐⭐ **Violet/purple armor + glowing-energy details Dragoon-form canon récurrent CONFIRMED 2-source** (cohérent V1 design canonical + fandom)
+- ⭐⭐⭐⭐⭐ **Older bearded warrior 60+ ans Haschel canon CONFIRMED cross-sprite** = identity-coherence cross-variant V1/V2 (cohérent fandom Hero Competition Haschel oldest party member)
+- ⭐⭐⭐⭐⭐ **Large angular dark-purple wings energy-edges canon NEW MAJEUR FIRST V2** = NEW Violet Dragoon wings-design + Thunder energy-tipped angular-wings FIRST documented (DIVERGENCE V1 wings-design potential)
+- ⭐⭐⭐⭐⭐ **Crown/headpiece ornate Dragoon noble aesthetic canon NEW MAJEUR FIRST V2** = noble-Dragoon-warrior 60+ ans aesthetic
+- ⭐⭐⭐⭐⭐ **Dark purple/violet armor + cyan/blue energy accents canon NEW MAJEUR FIRST V2** = Violet Dragoon Thunder palette + Thunder lightning energy-detail FIRST
+- ⭐⭐⭐⭐⭐ **Holding staff/weapon Dragoon-form canon NEW MAJEUR FIRST V2** = NEW weapon-design V2 (DIVERGENCE V1 barehanded Fist Attack canon-coherent — V2 weapon-design à clarifier)
+- ⭐⭐⭐⭐⭐ **7-animation set IDLE + WALK + ATTACK 1 Dragon Fist + ATTACK 2 Dragon Rush + ATTACK 3 Dragon Sweep + HURT + DEATH MOST-COMPLEX sprite-system canon NEW MAJEUR FIRST documented Damia** = 7-animation MOST-COMPLEX 4-instance avec Lenus V3 + Damia Normal + Damia Dragoon + **Haschel Dragoon V2** = 4-instance MOST-COMPLEX 7-animation sprite-system Damia rule expansion FIRST
+- ⭐⭐⭐⭐⭐ **3-distinct ATTACK variants Dragon Fist + Dragon Rush + Dragon Sweep canon NEW MAJEUR FIRST documented Damia** = ALL martial-arts fist-thematic ATTACK-names sprite-coherent Rouge School martial arts canon récurrent + Dragon-themed attack-name pattern canon récurrent récent expansion (Damia Dragoon "Blue Sea Dragon" + Lenus Dragoon "Chakram Slash/Ice Steak/Front Strike" + **Haschel Dragoon "Dragon Fist/Rush/Sweep"** = 3-instance 3-ATTACK Dragoon-form sprite-system Damia rule expansion FIRST) + cyan/violet ATTACK energy-slash sprite-coherent Thunder-magic FIRST
+
+### ⚠️ DIVERGENCE sprite ATTACK names vs wiki canon abilities
+
+⭐⭐⭐⭐⭐ **DIVERGENCE sprite-team ability names vs wiki canon NEW MAJEUR FIRST documented Damia** :
+
+| Sprite ATTACK             | Wiki Haschel canon Dragoon ability (probable match)        | Notes canon DIVERGENCE                                             |
+| ------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------ |
+| **ATTACK 1 Dragon Fist**  | **Atomic Mind** wiki Thunder probable                      | ⭐ Sprite rename Atomic Mind → Dragon Fist (martial-arts thematic) |
+| **ATTACK 2 Dragon Rush**  | **Thunder Kid** wiki Thunder probable                      | ⭐ Sprite rename Thunder Kid → Dragon Rush (rush-attack thematic)  |
+| **ATTACK 3 Dragon Sweep** | **Thunder God** OR **Violet Dragon** wiki Thunder probable | ⭐ Sprite rename Thunder God / Violet Dragon → Dragon Sweep        |
+
+⭐⭐⭐⭐⭐ **Sprite-team Haschel ability-naming DIVERGENCE wiki canon canon NEW MAJEUR FIRST documented Damia** = MARTIAL-ARTS-THEMATIC Dragon-Fist/Rush/Sweep sprite-team creative-rename + Rouge School martial-arts thematic cohérent + wiki canon-priority probable adopter Atomic Mind/Thunder Kid/Thunder God/Violet Dragon + sprite-names visual-attack-labels martial-arts.
+
+### 2-variant Haschel Dragoon-form sprite-progression canon NEW MAJEUR FIRST ⭐⭐⭐⭐⭐ Damia rule
+
+| Variant | Sprite                                                            | Notes                                                                                        |
+| ------- | ----------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| **V1**  | `haschel-dragoon-sprite-sheet.png` + `haschel-dragoon-design.png` | 8 ISO angles + Fist Attack + Five Rings Dance Special (existing canon design)                |
+| **V2**  | `haschel-dragoon-sprite-alt.png` (NEW)                            | ⭐⭐⭐⭐⭐ **7-animation MOST-COMPLEX + Dragon Fist/Rush/Sweep 3-ATTACK martial-arts FIRST** |
+
+⭐⭐⭐⭐⭐ **2-variant Haschel Dragoon-form sprite-progression canon NEW MAJEUR FIRST documented Damia** = V1 8-ISO-angle Dragoon-design + V2 7-animation MOST-COMPLEX 3-ATTACK = 2-variant same-character Dragoon-form sprite-set FIRST + à trancher implémentation finale (V1 vs V2 vs hybrid).
+
+### 16-instance Sprite IA fully canon-conform Damia rule expansion
+
+⭐⭐⭐⭐⭐ **Sprite IA fully canon-conform 16-instance CONFIRMED canon récurrent récent expansion Damia rule** (15 prior + **Haschel Dragoon V2** = 16-instance) + **MOST-COMPLEX 7-animation sprite-system 4-instance** (Lenus V3 + Damia Normal + Damia Dragoon + Haschel Dragoon V2) + **Dragon-themed 3-ATTACK Dragoon-form sprite-system 3-instance Damia rule** (Damia Blue Sea Dragon + Lenus Sea Dragoon Chakram-Ice Steak-Front Strike + Haschel Violet Dragoon Dragon-Fist-Rush-Sweep).
+
+### Décision implémentation Damia
+
+⭐ **Sprite Haschel Dragoon V2 directement utilisable** = MOST-COMPLEX 7-animation + 3-distinct ATTACKs + martial-arts thematic Rouge School cohérent + Violet Dragoon palette CONFIRMED 2-source + à reconcilier sprite-attack-names (Dragon Fist/Rush/Sweep) avec wiki canon (Atomic Mind/Thunder Kid/Thunder God/Violet Dragon) probable wiki-priority + sprite-names martial-arts visual-labels.
+
+⭐⭐⭐⭐⭐ **Haschel V2 large angular wings = canon-coherent visual model alternative pour Violet Dragoon Thunder thematic** (dark angular energy-tipped wings vs traditional feathered = NEW Wingly-magical-energy aesthetic récurrent récent expansion canon NEW MAJEUR FIRST).
+
 ## Liens transverses
 
 - [`README.md`](./README.md) — party-members canon + **Haschel Violet Dragoon NEW MAJEUR 7ème party member**

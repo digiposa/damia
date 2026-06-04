@@ -13,6 +13,101 @@
 
 🟡 **draft** — data canon ingérée. Aucune impl Damia (le code). 2ᵉ boss documenté (après Belzac).
 
+## Sprite canon ⭐⭐⭐⭐⭐ Sprite IA Damia 2-variant (Normal Form invention canon-gap + Dragoon Form canon) — 15-instance CONFIRMED expansion + Namesake project FIRST
+
+### Variant 1 — Damia NORMAL FORM (half human-mermaid invention canon-gap)
+
+![Damia Normal Form sprite + 7-animation set](./_assets/damia-normal-sprite.png)
+
+> ⚠️ **Note canon Damia** : **"C'est une invention car on ne la voit pas comme ça dans le jeu PS1"** — Damia n'apparaît jamais en forme normale half human-mermaid dans le jeu PS1 original (uniquement Dragoon-form Vellweb Disc 4 tower). Cette forme NORMALE = **invention canon-gap Damia fan-game** pour étoffer le personnage namesake du projet + lore mermaid heritage visualisé FIRST.
+
+### Variant 2 — Damia DRAGOON FORM (Blue Sea Dragoon canon)
+
+![Damia Blue Sea Dragoon sprite + 7-animation set](./_assets/damia-dragoon-sprite.png)
+
+⭐⭐⭐⭐⭐ **REVELATION SPRITE MAJEURE Damia : 2-variant Damia sprite IA + 1 invention canon-gap (Normal Form half human-mermaid) + 1 canon Dragoon (Blue Sea Dragoon) + Sprite IA fully canon-conform 15-instance CONFIRMED + Namesake project Damia 2-variant sprite-set FIRST documented Damia + 7-animation set MOST-COMPLEX 3-instance avec Lenus V3 + 3-distinct ATTACK variants both forms FIRST + 2-encounter narrative-gap-filled Normal Form FIRST documented Damia (sprites Damia Normal + Dragoon) ⭐⭐⭐⭐⭐**
+
+### Caractéristiques sprite V1 NORMAL FORM (canon-gap invention)
+
+- ⭐⭐⭐⭐⭐ **Half human-mermaid heritage VISUALIZED canon-gap invention FIRST documented Damia** = canon fandom dit "half Human / half Mermaid" + jamais montré PS1 = sprite VISUALIZE pour la première fois Damia heritage mixte canon NEW MAJEUR FIRST
+- ⭐⭐⭐⭐⭐ **Blue/teal long flowing hair canon NEW MAJEUR FIRST documented** = water-thematic mermaid-aesthetic + jeune fille 15 ans cohérent
+- ⭐⭐⭐⭐⭐ **Mermaid-scaled blue dress/outfit canon NEW MAJEUR FIRST** = scaled-fabric mermaid-skin thematic + Water-element visual + half-mermaid heritage visible
+- ⭐⭐⭐⭐⭐ **Long staff/hammer weapon with crystal head canon NEW MAJEUR FIRST** = NEW Damia weapon design + staff-like polearm + crystal-blue thematic Water-element
+- ⭐⭐⭐⭐⭐ **Young 15-ans appearance + petite stature 147cm CONFIRMED canon** = cohérent fandom Official Guidebook
+- ⭐⭐⭐⭐⭐ **7-animation set IDLE + WALK + ATTACK 1 Wave Strike + ATTACK 2 Tidal Spike + ATTACK 3 Ocean Whirl + HURT + DEATH canon NEW MAJEUR FIRST documented Damia** = MOST-COMPLEX 7-animation sprite-system 2-instance avec Lenus V3
+- ⭐⭐⭐⭐⭐ **3-distinct ATTACK variants Wave Strike + Tidal Spike + Ocean Whirl ALL Water-thematic FIRST** = sprite-team invention Damia normal-form abilities canon-gap fill FIRST
+
+### Caractéristiques sprite V2 DRAGOON FORM (Blue Sea Dragoon canon)
+
+- ⭐⭐⭐⭐⭐ **Blue Sea Dragoon transformation canon CONFIRMED 2-source (canon wiki + sprite) FIRST** = Damia Blue Sea Dragoon Water Vellweb Disc 4 canon récurrent expansion
+- ⭐⭐⭐⭐⭐ **Dark blue/teal hair maintained cross-form Normal → Dragoon canon NEW MAJEUR FIRST** = identity-coherence Normal → Dragoon cross-form transformation FIRST
+- ⭐⭐⭐⭐⭐ **Silver/blue Dragoon armor + cyan accent canon NEW MAJEUR FIRST** = Blue Sea Dragoon palette + ice/water thematic + noble-Dragoon aesthetic
+- ⭐⭐⭐⭐⭐ **Large angelic/Dragon wings dark-feathered with blue tips canon NEW MAJEUR FIRST** = Sea-Dragon wings Damia Dragoon-form + DIVERGENCE Lenus V3 cyan-translucent-wings = different Dragoon wings-design Damia
+- ⭐⭐⭐⭐⭐ **Crown/headpiece tiara canon NEW MAJEUR FIRST** = noble Dragoon aesthetic + 15-ans Dragoon-princess thematic
+- ⭐⭐⭐⭐⭐ **Long staff/hammer Dragoon-form enhanced weapon CONFIRMED 2-source (sprite V1 + V2) cross-form weapon-continuity Damia signature staff-weapon FIRST**
+- ⭐⭐⭐⭐⭐ **7-animation set IDLE + WALK + ATTACK 1 Tidal Smash + ATTACK 2 Icicle Crush + ATTACK 3 Blue Sea Dragon + HURT + DEATH canon NEW MAJEUR FIRST documented Damia**
+- ⭐⭐⭐⭐⭐ **ATTACK 3 Blue Sea Dragon CONFIRMED wiki canon ultimate ability 4x Water Single = sprite + wiki 2-source CONFIRMED FIRST**
+
+### ⚠️ DIVERGENCE sprite ATTACK names vs wiki canon abilities
+
+⭐⭐⭐⭐⭐ **DIVERGENCE sprite-team ability names vs wiki canon NEW MAJEUR FIRST documented Damia** :
+
+| Sprite Form | Sprite ATTACK       | Wiki Damia canon ability                           | Notes canon                                                            |
+| ----------- | ------------------- | -------------------------------------------------- | ---------------------------------------------------------------------- |
+| **NORMAL**  | **Wave Strike**     | N/A (Normal form invention canon-gap)              | ⭐ NEW Damia Normal Water-thematic ability sprite-team invention       |
+| **NORMAL**  | **Tidal Spike**     | N/A (Normal form invention canon-gap)              | ⭐ NEW Damia Normal Water-thematic ability sprite-team invention       |
+| **NORMAL**  | **Ocean Whirl**     | N/A (Normal form invention canon-gap)              | ⭐ NEW Damia Normal Water-thematic ability sprite-team invention       |
+| **DRAGOON** | **Tidal Smash**     | **Freezing Ring** wiki 2x Water Single probable    | ⭐ Sprite rename Freezing Ring → Tidal Smash                           |
+| **DRAGOON** | **Icicle Crush**    | **Diamond Dust** wiki 2x Water Party probable      | ⭐ Sprite rename Diamond Dust → Icicle Crush                           |
+| **DRAGOON** | **Blue Sea Dragon** | **Blue-sea Dragon** wiki 4x Water Single CONFIRMED | ⭐⭐⭐⭐⭐ **CONFIRMED 2-source sprite + wiki ultimate ability FIRST** |
+
+⭐⭐⭐⭐⭐ **Sprite-team Damia ability-naming DIVERGENCE wiki canon + Blue Sea Dragon ultimate CONFIRMED 2-source FIRST documented Damia** = wiki canon-priority probable adopter + sprite-names visual-attack-labels + ultimate Blue Sea Dragon CONFIRMED.
+
+### 2-encounter Damia narrative-gap-filled canon NEW MAJEUR FIRST ⭐⭐⭐⭐⭐ Damia rule
+
+| Encounter      | Form             | Lore context                                                                                                                          | Sprite                                               |
+| -------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| **Pre-fight**  | **Normal Form**  | ⭐⭐⭐⭐⭐ **Vellweb Disc 4 pre-combat cinematic Damia reveal half human-mermaid identity FIRST + Rose scene quote canon NEW MAJEUR** | `damia-normal-sprite.png` (invention canon-gap fill) |
+| **Boss fight** | **Dragoon Form** | **Vellweb Disc 4 boss fight Blue Sea Dragoon canon récurrent CONFIRMED**                                                              | `damia-dragoon-sprite.png` (canon Blue Sea Dragoon)  |
+
+⭐⭐⭐⭐⭐ **2-encounter Damia narrative-gap-filled canon NEW MAJEUR FIRST documented Damia** = pre-fight Normal Form cinematic reveal + boss-fight Dragoon Form combat = NEW 2-phase Damia encounter narrative-coherent canon NEW MAJEUR FIRST (vs canon PS1 unique-Dragoon-form-only encounter) = canon-gap-fill invention sprite-team FIRST + lore mermaid heritage VISUALIZED.
+
+### 15-instance Sprite IA fully canon-conform Damia rule expansion
+
+| #   | Entity                            | Tier                               | Notes                                                                                               |
+| --- | --------------------------------- | ---------------------------------- | --------------------------------------------------------------------------------------------------- |
+| 1   | **Knight of Sandora**             | Mob                                | Mille Soldat Sandora                                                                                |
+| 2   | **Kongol Dragoon**                | Party-Dragoon Earth                | Gold Dragon                                                                                         |
+| 3   | **Kubila**                        | Boss                               | Zenebatos Wingly trio                                                                               |
+| 4   | **Land Skater**                   | Mob                                | Penguin Water Kashua                                                                                |
+| 5   | **Kongol armored**                | Party normal                       | Indora Armor boss-form                                                                              |
+| 6   | **Last Kraken V1**                | Boss eldritch                      | Tentacle-wrapped organic                                                                            |
+| 7   | **Last Kraken V2**                | Boss armored                       | Crustacean-cephalopod Wingly-engineered                                                             |
+| 8   | **Lavitz normal**                 | Party-Member                       | Wind Dragoon Bale Knight noble-knight                                                               |
+| 9   | **Lavitz Dragoon**                | Party-Dragoon Wind                 | Jade Dragon (wings REWORK requis)                                                                   |
+| 10  | **Lavitz Spirit possédé**         | Event boss possessed               | Wind ghost Mayfil Zackwell-corruption                                                               |
+| 11  | **Lenus humanoid V1 sans ailes**  | Boss Wingly Female humanoid        | Twin Castle disguise                                                                                |
+| 12  | **Lenus humanoid V2 avec ailes**  | Boss Wingly Female wings-deployed  | Post-reveal Prison Island                                                                           |
+| 13  | **Lenus Blue Sea Dragoon V3**     | Party-Dragoon Wingly Female Water  | MOST-COMPLEX 7-anim + 3-ATTACK Dragoon-form                                                         |
+| 14  | **Damia Normal Form**             | Boss-Dragoon-pre half-mermaid      | ⭐⭐⭐⭐⭐ **Invention canon-gap namesake project FIRST + Mermaid heritage VISUALIZED FIRST**       |
+| 15  | **Damia Dragoon Form (Blue Sea)** | Boss-Dragoon Ancient-Dragoon Water | ⭐⭐⭐⭐⭐ **Blue Sea Dragoon CONFIRMED canon + Blue Sea Dragon ultimate CONFIRMED 2-source FIRST** |
+
+⭐⭐⭐⭐⭐ **Sprite IA fully canon-conform 15-instance CONFIRMED canon récurrent récent expansion Damia rule** + **Namesake project Damia 2-variant sprite-set canon NEW MAJEUR FIRST documented Damia** + **MOST-COMPLEX 7-animation sprite-system 3-instance** (Lenus V3 + Damia Normal + Damia Dragoon = 3-instance 7-anim).
+
+### Blue Sea Dragoon trans-era 3-bearer chain canon NEW MAJEUR FIRST ⭐⭐⭐⭐⭐
+
+| #   | Bearer    | Era                                   | Notes canon NEW MAJEUR FIRST                                                       |
+| --- | --------- | ------------------------------------- | ---------------------------------------------------------------------------------- |
+| 1   | **Damia** | Dragon Campaign (~11k ans)            | ⭐⭐⭐⭐⭐ **Original Ancient-Dragoon Blue Sea Spirit + half human-mermaid FIRST** |
+| 2   | **Lenus** | Current-era Disc 2 Wingly             | ⭐⭐⭐⭐⭐ **Wingly Blue Sea Dragoon current-era FIRST**                           |
+| 3   | **Meru**  | Current-era Disc 2 (post-Lenus death) | ⭐⭐⭐⭐⭐ **Inherits Blue Sea Spirit post-Lenus death Wingly Disc 2 FIRST**       |
+
+⭐⭐⭐⭐⭐ **Blue Sea Dragoon 3-bearer trans-era Spirit chain canon NEW MAJEUR FIRST documented Damia** = Damia Ancient-Dragoon → Lenus Wingly current-era → Meru Wingly Disc 2 successor = 3-bearer chain canon récurrent récent expansion + **Damia Dragoon-form sprite + Lenus V3 sprite = 2-instance Blue Sea Dragoon Dragoon-form visual reference canon récurrent récent CONFIRMED**.
+
+### Décision implémentation Damia (la game)
+
+⭐ **Sprites Damia V1 + V2 directement utilisables** = 2-variant character-defining sprite-set namesake project + Normal Form pre-fight cinematic visual canon-gap fill + Dragoon Form boss-fight canon Blue Sea Dragoon + 7-animation sets complete + 3-distinct ATTACK variants both forms + à reconcilier sprite-attack-names avec wiki canon (Freezing Ring/Diamond Dust/Blue-sea Dragon) probable wiki-priority + Blue Sea Dragon CONFIRMED 2-source.
+
 ## Profil
 
 | Attribut          | Valeur                                                                                                                                                    |

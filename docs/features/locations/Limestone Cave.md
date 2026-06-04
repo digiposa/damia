@@ -7,11 +7,33 @@
 > **Sources** :
 >
 > - 🥈 [`_sources/lod-wiki-limestone-cave.md`](./_sources/lod-wiki-limestone-cave.md) — wiki LoD tier 2 (Limestone Cave Disc 1 #5 natural cavern Serdio mountain-range + ⭐⭐⭐⭐⭐ **Urobolus Earth poisonous boss + Wargod's Amulet 100% boss-named CONFIRMED 9-instance FIRST + Rock Fireflies free-HP/MP rest mechanic FIRST + Save Point pre-boss + Scripted formation 414 submap 53 FIRST** + ⭐⭐⭐⭐⭐ **16-chest MASSIVE Disc 1 + 5-mob diverse Earth/Darkness/Wind roster Evil Spider/Orc/Screaming Bat/Slime/Ugly Balloon + 10-submap detailed system 45-54** + ⭐⭐⭐⭐⭐ **Dart catches Lavitz stepping-stones waterfall scene CONFIRMED 2-source canon récurrent + Bandana DUPLICATE Sallet swap technique FIRST + Rock fireflies scene missable if Urobolus defeated FIRST + Frog creature chase Poison Guard chest mechanic FIRST** + ⭐⭐⭐⭐⭐ **Dark Mist Orc drop CONFIRMED 2-source avec Lenus FIRST + Spark Net chest CONFIRMED 3-source avec Kubila + Last Kraken + Healing Potion CONFIRMED 4-source + Body Purifier CONFIRMED 2-source + Angel's Prayer CONFIRMED canon récurrent expansion** + NEW items Detonate Rock + Total Vanishing + Burn Out + Charm Potion + Poison Guard + Wargod's Amulet + Bastard Sword + Bandana + Sallet)
-> - 🥉 fandom Limestone Cave — **à ingérer si existe**
+> - 🥉 [`_sources/fandom-limestone-cave.md`](./_sources/fandom-limestone-cave.md) — fandom tier 3 (🟢 cross-source — ⭐⭐⭐⭐⭐ **JP name 鍾乳洞 Shōnyūdō FIRST + Bale ↔ eastern Basil Seles geography CONFIRMED 2-source + Insectoid Urobolus species FIRST + Rumored guardian-of-cave lore FIRST** + ⭐⭐⭐⭐⭐ **Shana light vaporizes Urobolus post-fight = MASSIVE Shana Light Dragoon Spirit foreshadowing canon NEW MAJEUR FIRST + Urobolus springs back targets Shana + Dart-Lavitz baffled FIRST** + ⭐⭐⭐⭐⭐ **Dart-Lavitz "long lasting friendship" promise scene + Shana feels left out emotional moment + Dart-Lavitz teach Shana Rock Fireflies healing-power lore FIRST** + ⭐⭐⭐⭐⭐ **JP HP variations 5-mob anomalous + JP Gold ÷3 5-mob CONFIRMED canon récurrent récent expansion + Evil Spider JP +67% LARGEST anomalous + Orc +15% + Screaming Bat/Slime/Ugly Balloon +25% standard JP** + ⭐⭐⭐⭐⭐ **Walkthrough detail water slides chests + frog creature catch jumping circles + Urobolus hissing sounds approach FIRST** + Gallery Lavitz almost falling + Rock fireflies + frog creature + Urobolus attacks scenes)
 
 ## Statut
 
-🟡 **Canon wiki seul (en attente fandom Limestone Cave si existe)** — Source unique : wiki LoD 🥈 :
+🟢 **Canon CONFIRMED cross-source** — Wiki LoD 🥈 + Fandom 🥉 :
+
+### Nouveaux 🆕 fandom MAJEUR
+
+- ⭐⭐⭐⭐⭐ **JP name 鍾乳洞 (Shōnyūdō) "limestone cave" canon NEW MAJEUR FIRST documented Damia**
+- ⭐⭐⭐⭐⭐ **Bale ↔ eastern areas Kingdom of Basil where Seles lies CONFIRMED 2-source geography canon récurrent récent expansion** (wiki "Seles-Bale travel corridor" + fandom CONFIRMED)
+- ⭐⭐⭐⭐⭐ **Insectoid Urobolus species canon NEW MAJEUR FIRST documented Damia** = Urobolus insect-creature lore + Earth poisonous insectoid thematic FIRST
+- ⭐⭐⭐⭐⭐ **Rumored "guardian" of the cave Urobolus lore canon NEW MAJEUR FIRST documented Damia** = NEW guardian-creature lore + cave-protector thematic
+- ⭐⭐⭐⭐⭐ **Shana light vaporizes Urobolus post-fight = MASSIVE Shana Light Dragoon Spirit foreshadowing canon NEW MAJEUR FIRST documented Damia** = NEW Shana White-Silver Dragoon Light Spirit early-foreshadowing Disc 1 + bright-light-from-Shana vaporize-ability FIRST + Dart-Lavitz baffled-witness scene FIRST + Disc 1 light-magic-foreshadowing canon récurrent récent expansion
+- ⭐⭐⭐⭐⭐ **Urobolus springs back post-defeat + targets Shana + Shana defends-herself FIRST** = NEW post-boss scene + monster-revival + Shana protective-light awakening canon NEW MAJEUR FIRST
+- ⭐⭐⭐⭐⭐ **Dart-Lavitz "long lasting friendship" promise scene + Shana feels left out emotional moment canon NEW MAJEUR FIRST documented Damia** = NEW Dart-Lavitz friendship-deepening + Shana-marginalized emotional-moment Disc 1 character-development FIRST
+- ⭐⭐⭐⭐⭐ **Dart-Lavitz teach Shana Rock Fireflies healing-power lore canon NEW MAJEUR FIRST** = NEW teaching-scene + party-knowledge-sharing FIRST
+- ⭐⭐⭐⭐⭐ **JP HP variations 5-mob anomalous canon NEW MAJEUR FIRST documented Damia** :
+  - **Evil Spider JP +67% (30→50) LARGEST anomalous Earth-mob 6-instance JP-anomalous expansion** (Puck +15% + Land Skater +14% + Killer Bird +43% + Knight BC +11% + Knight Seles -20% INVERSE + Kongol Hoax +25% standard + Lenus Twin Castle +39% + Lenus Prison Island +33% + **Evil Spider +67% LARGEST** = 9-instance anomalous JP-variation canon récurrent récent expansion FIRST)
+  - **Orc JP +15% anomalous** + **Screaming Bat JP +25% standard** + **Slime JP +25% standard** + **Ugly Balloon JP +25% standard**
+- ⭐⭐⭐⭐⭐ **JP Gold ÷3 5-mob CONFIRMED canon récurrent récent expansion 25+ instance UNIVERSAL** (Evil Spider 12→4 + Orc 6→2 + Screaming Bat 6→2 + Slime 6→2 + Ugly Balloon 9→3 = all ÷3 CONFIRMED canon récurrent récent expansion)
+- ⭐⭐⭐⭐⭐ **Mob HP values FIRST documented Damia (wiki silent HP mobs)** = Evil Spider 30/50 + Orc 26/30 + Screaming Bat 12/15 + Slime 20/25 + Ugly Balloon 36/45 FIRST
+- ⭐⭐⭐⭐⭐ **Walkthrough water slides re-climb-to-slide-again mechanic + frog creature catch jumping circles + Urobolus hissing sounds approach canon NEW MAJEUR FIRST documented Damia** = NEW gameplay-detail water-slide-chest navigation + frog-puzzle exact mechanic + boss-approach audio-cue FIRST
+- ⭐⭐⭐⭐⭐ **Gallery scenes Lavitz almost falling + Rock fireflies + frog creature + Urobolus attacks canon NEW MAJEUR FIRST documented Damia** = NEW cinematic-scenes documented + 4 key Disc 1 Limestone Cave moments FIRST
+
+### Existants 🥈 wiki
+
+- ⭐⭐⭐⭐⭐ **Limestone Cave Disc 1 #5 natural cavern Serdio mountain-range Seles-Bale travel corridor FIRST**
 
 - ⭐⭐⭐⭐⭐ **Limestone Cave Disc 1 #5 natural cavern Serdio mountain-range Seles-Bale travel corridor FIRST**
 - ⭐⭐⭐⭐⭐ **Serdio mountain-range north geography lore canon NEW MAJEUR FIRST**

@@ -9,11 +9,31 @@
 > **Sources** :
 >
 > - 🥈 [`_sources/lod-wiki-lizard-man.md`](./_sources/lod-wiki-lizard-man.md) — wiki LoD tier 2 (Lizard Man Earth Nest of Dragon Disc 1 mob + ⭐⭐⭐⭐⭐ **DF 160 HIGH defensive-tank-mob CONFIRMED 2-instance avec Living Statue + MDF 40 LOW magic-vulnerable dichotomous tank-class FIRST + 4/8 status partial immunity CONFIRMED 4-instance Damia rule + Physical Attack Barrier 25% Self damage-immunity-1-turn trait NEW MAJEUR FIRST + Memory leak crash bug Physical Attack Barrier CONFIRMED 2-instance PSX crash bugs avec Lenus+Regole + DAK secret texture easter egg FIRST** + ⭐⭐⭐⭐⭐ **Counter 13-pool reduced template + Lavitz DORMANT 13-pool 2-Addition partial + 13-pool vs 28-pool 3-tier dichotomy FIRST + 2-tier HP behavioral 50% threshold ~Scratch 1x + ~Rotation 2x + Stun 50% chance + A-AV dual-purpose status-resistance CONFIRMED 2-source avec Lavitz Spirit Menon Ray FIRST** + ⭐⭐⭐⭐⭐ **Mandrake + Run Fast NEW partner mobs Nest of Dragon FIRST + 4 formations 52/56/58/59 + Nest of Dragon submaps 130-135 6-submap coverage + 4 World Map roads Lohan/Shrine of Shirley/Intersection + 50% escape rate moderate + Beast Fang 2% drop NEW item FIRST** + Stats HP 40 + AT 14 + DF 160 + MAT 12 + MDF 40 + SPD 50 + EXP 18 + Gold 15)
-> - 🥉 fandom Lizard Man — **à ingérer si existe**
+> - 🥉 [`_sources/fandom-lizard-man.md`](./_sources/fandom-lizard-man.md) — fandom tier 3 (🟢 cross-source — ⭐⭐⭐⭐⭐ \*\*JP name リザードマン (Rizādoman) FIRST + JP HP 50/40 +25% standard CONFIRMED + JP Gold 5/15 ÷3 CONFIRMED 27+ UNIVERSAL + AT 17/14 +21% MAT 14/12 +17% DIVERGENCE intra-source 11-instance + Slash OFFICIAL fandom ability name CONFIRMED 2-source = wiki ~Scratch + Rolling Attack OFFICIAL fandom = wiki ~Rotation CONFIRMED 2-source + "bouncing effect" detail + Beast Fang = Haschel weapon Stun-on-hit early-access farming-exploit canon NEW MAJEUR FIRST + Physical Attack Barrier "immune to melee + magic-vulnerable + Additions-farming exploit" leveling-tool canon NEW MAJEUR FIRST + "Impervious to Additions" during Barrier mechanic FIRST + Air-spin animation gallery FIRST + 4 formations CONFIRMED 2-source)
 
 ## Statut
 
-🟡 **Canon wiki seul (en attente fandom Lizard Man si existe)** — Source unique : wiki LoD 🥈 :
+🟢 **Canon CONFIRMED cross-source** — Wiki LoD 🥈 + Fandom 🥉 :
+
+### Nouveaux 🆕 fandom MAJEUR
+
+- ⭐⭐⭐⭐⭐ **JP name リザードマン (Rizādoman) "Lizard Man" canon NEW MAJEUR FIRST documented Damia**
+- ⭐⭐⭐⭐⭐ **JP HP 50 (vs 40 US) = +25% standard JP HP CONFIRMED canon récurrent récent expansion 27+ instances UNIVERSAL**
+- ⭐⭐⭐⭐⭐ **JP Gold 5 (vs 15 US) = ÷3 JP Gold CONFIRMED canon récurrent récent expansion 27+ instances UNIVERSAL**
+- ⭐⭐⭐⭐⭐ **AT 17 fandom (vs wiki 14) DIVERGENCE intra-source +21% + MAT 14 fandom (vs wiki 12) DIVERGENCE +17% canon récurrent récent expansion 11-instance Damia rule** (Kamuy + Kanzas + Killer Bird + Knight + Land Skater + Kubila + Lavitz + Lavitz Spirit + Lenus + Living Statue + **Lizard Man** = 11-instance multi-DIVERGENCE intra-source)
+- ⭐⭐⭐⭐⭐ **Slash OFFICIAL fandom ability name CONFIRMED 2-source canon récurrent récent expansion** = wiki ~Scratch community-name + fandom **Slash** OFFICIAL = CONFIRMED 2-source + "rolls towards a character and slashes" rolling-attack-design lore FIRST
+- ⭐⭐⭐⭐⭐ **Rolling Attack OFFICIAL fandom ability name CONFIRMED 2-source canon récurrent récent expansion** = wiki ~Rotation community-name + fandom **Rolling Attack** OFFICIAL = CONFIRMED 2-source + "bouncing effect" detail FIRST + 50% Stun chance CONFIRMED 2-source
+- ⭐⭐⭐⭐⭐ **Beast Fang = Haschel weapon Stun-on-hit canon NEW MAJEUR FIRST documented Damia** = Beast Fang Haschel weapon class + Stun-on-hit weapon-proc mechanic CONFIRMED 2-source FIRST (cohérent récurrent récent Lavitz Spear of Terror Fear-chance proc + Beast Fang Stun-on-hit proc canon récurrent récent expansion 2-instance status-proc weapons Damia rule)
+- ⭐⭐⭐⭐⭐ **Beast Fang early-access farming-exploit canon NEW MAJEUR FIRST documented Damia** = "much earlier than it can be bought" + Disc 1 mob-drop pre-shop early-access strategy + 2% drop rate farming-target FIRST
+- ⭐⭐⭐⭐⭐ **Physical Attack Barrier "immune to melee + magic-vulnerable" clarification CONFIRMED 2-source canon récurrent récent expansion** = wiki "Reduces physical damage to 0 until next turn" + fandom "immune to melee attack, but still can be harmed by magic" = 2-source CONFIRMED selective-physical-immunity-magic-vulnerable mechanic canon NEW MAJEUR FIRST documented Damia
+- ⭐⭐⭐⭐⭐ **Physical Attack Barrier Additions-farming exploit leveling-tool canon NEW MAJEUR FIRST documented Damia** = farming-target mob + Additions-leveling exploit + monster-doesn't-take-damage during Barrier + repeated-attack Additions-EXP-grinding canon récurrent strategy FIRST (cohérent récurrent récent Lavitz Spirit Talk-mechanic non-combat resolution + Lizard Man Barrier farming-exploit = NEW 2-instance non-standard-resolution-mechanic FIRST)
+- ⭐⭐⭐⭐⭐ **"Impervious to Additions" during Barrier mechanic canon NEW MAJEUR FIRST documented Damia** = Lizard Man Counter Yes BUT Physical Attack Barrier active = no-damage-from-Additions paradox + Counter-Yes only-when-Barrier-inactive probable mechanic FIRST
+- ⭐⭐⭐⭐⭐ **Air-spin animation gallery FIRST documented Damia** = NEW gallery animation reference + rolling-attack visual FIRST
+- ⭐⭐⭐⭐⭐ **Lizard Man "quite common enemy" lore confirmation canon récurrent récent expansion** = Disc 1 farming-friendly mob CONFIRMED
+
+### Existants 🥈 wiki
+
+- ⭐⭐⭐⭐⭐ **Lizard Man Earth Nest of Dragon Disc 1 reptilian-creature FIRST**
 
 - ⭐⭐⭐⭐⭐ **Lizard Man Earth Nest of Dragon Disc 1 reptilian-creature FIRST**
 - ⭐⭐⭐⭐⭐ **DF 160 HIGH defensive-tank-mob CONFIRMED 2-instance avec Living Statue**

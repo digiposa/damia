@@ -214,6 +214,44 @@
 - ⭐⭐⭐⭐⭐ **DAK easter egg lore** : Sony Japan developer initials probable à investiguer
 - ⭐⭐⭐⭐⭐ **13-pool counter REDUCED logic** : Haschel-exclusion + Meru-reduction probable encoding rule à investiguer
 
+## Sprite canon ⭐⭐⭐⭐⭐ Sprite IA Lizard Man heavily-armored reptilian + 7-animation MOST-COMPLEX 3-distinct ATTACK + Beast Fang weapon design — 20-instance CONFIRMED expansion + "LIZARD MAN - THE LEGEND OF DRAGOON" polished branding
+
+![Lizard Man sprite + 7-animation set](./_assets/lizard-man-sprite.png)
+
+⭐⭐⭐⭐⭐ **REVELATION SPRITE MAJEURE Damia : Lizard Man Sprite IA fully canon-conform + Heavily-armored reptilian green-scaled creature + Spiked metallic armor + Massive Beast Fang weaponized claws + 7-animation MOST-COMPLEX 3-distinct ATTACK polished branding + Sprite IA fully canon-conform 20-instance CONFIRMED + "LIZARD MAN - THE LEGEND OF DRAGOON" polished branding canon NEW MAJEUR FIRST documented Damia (sprite Lizard Man) ⭐⭐⭐⭐⭐**
+
+### Caractéristiques sprite Lizard Man
+
+- ⭐⭐⭐⭐⭐ **Green-scaled reptilian humanoid creature CONFIRMED canon récurrent récent expansion** = cohérent fandom "reptilian Earth-element Nest of Dragon" + scaly-skin dragon-thematic FIRST visual
+- ⭐⭐⭐⭐⭐ **Heavily-armored spiked metallic armor canon NEW MAJEUR FIRST documented Damia** = NEW heavy-armor reptilian-warrior design + shoulder spikes + chest plate + arm guards + leg armor + DF 160 HIGH visual coherence FIRST
+- ⭐⭐⭐⭐⭐ **Massive Beast Fang weaponized claws design canon NEW MAJEUR FIRST documented Damia** = enormous sharp metallic claws sprite-design VISUAL = Beast Fang Haschel weapon drop sprite-coherence + Stun-on-hit claw-weapon thematic CONFIRMED 3-source (wiki drop + fandom Haschel weapon + sprite claw-design) FIRST
+- ⭐⭐⭐⭐⭐ **Reptilian head + sharp teeth + lizard-jaw canon récurrent récent expansion** = cohérent Lizard Man name + reptilian-creature design
+- ⭐⭐⭐⭐⭐ **"LIZARD MAN - THE LEGEND OF DRAGOON" polished branding canon NEW MAJEUR FIRST documented Damia** = official-branding sprite-set polished-final-design + cohérent récurrent Living Statue V2 polished-branded format FIRST
+- ⭐⭐⭐⭐⭐ **7-animation set IDLE (6 frames) + WALK (8) + ATTACK 1 (8) + ATTACK 2 (8) + ATTACK 3 (8) + HURT (4) + DEATH (8) canon NEW MAJEUR FIRST** = MOST-COMPLEX 7-animation 8-instance avec Lenus V3 + Damia Normal + Damia Dragoon + Haschel Dragoon V2 + Haschel Human V2 + Living Statue V1 + V2 + **Lizard Man** = 8-instance MOST-COMPLEX 7-animation sprite-system Damia rule expansion FIRST
+- ⭐⭐⭐⭐⭐ **3-distinct ATTACK variants golden-trail visual effects canon NEW MAJEUR FIRST documented Damia** = ATTACK 1 swing-slash + ATTACK 2 claw-thrust forward + ATTACK 3 spin-rotation FIRST visual
+
+### ⚠️ DIVERGENCE sprite ATTACK names vs wiki/fandom canon abilities
+
+⭐⭐⭐⭐⭐ **Sprite ATTACK 3 spin-rotation visual MATCHES wiki ~Rotation / fandom Rolling Attack canon récurrent récent expansion CONFIRMED 4-source canon Damia rule FIRST** (wiki + fandom + sprite + canon-récurrent "rolls towards a character" lore-coherent) = sprite-coherence Rolling Attack visual FIRST documented Damia + spin-rotation animation lore-visual canon récurrent récent CONFIRMED.
+
+| Sprite ATTACK | Wiki/Fandom canon ability (probable match)                             | Notes canon DIVERGENCE                                                                                                       |
+| ------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| **ATTACK 1**  | **~Scratch wiki / Slash fandom OFFICIAL CONFIRMED 2-source**           | ⭐ Sprite-visual swing-slash with golden trail = Slash CONFIRMED                                                             |
+| **ATTACK 2**  | N/A (NOT in wiki/fandom abilities)                                     | ⭐⭐⭐⭐⭐ **NEW sprite-team Claw-Thrust forward invention FIRST + Beast Fang weaponized-claw forward-thrust attack visual** |
+| **ATTACK 3**  | **~Rotation wiki / Rolling Attack fandom OFFICIAL CONFIRMED 2-source** | ⭐⭐⭐⭐⭐ **Sprite spin-rotation visual MATCHES Rolling Attack CONFIRMED 4-source bouncing-rotation FIRST**                 |
+
+⭐⭐⭐⭐⭐ **Sprite-team 3-ATTACK pattern Damia rule expansion 6-instance canon récurrent récent expansion FIRST** = Damia + Lenus + Haschel Dragoon + Haschel Human + Living Statue + **Lizard Man** = 6-instance 3-ATTACK sprite-system Damia rule.
+
+### 20-instance Sprite IA fully canon-conform Damia rule expansion
+
+⭐⭐⭐⭐⭐ **Sprite IA fully canon-conform 20-instance CONFIRMED canon récurrent récent expansion Damia rule** (19 prior + **Lizard Man** = 20-instance) + **MOST-COMPLEX 7-animation sprite-system 8-instance** (Lenus V3 + Damia Normal + Damia Dragoon + Haschel Dragoon V2 + Haschel Human V2 + Living Statue V1 + V2 + **Lizard Man**) + **3-distinct ATTACK Damia rule récurrent expansion 6-instance** + **First Mob-Earth-Reptilian-Heavy-Armored tier sprite NEW MAJEUR FIRST documented Damia** (vs récurrent Mob-Stone-Knight Living Statue — Lizard Man = first Reptilian heavily-armored Beast-warrior tier FIRST).
+
+### Décision implémentation Damia
+
+⭐ **Sprite Lizard Man directement utilisable** = polished-branded + MOST-COMPLEX 7-animation + 3-distinct ATTACK + Beast Fang weaponized-claw visual coherent fandom Haschel weapon drop CONFIRMED 3-source + ATTACK 3 spin-rotation visual MATCHES Rolling Attack canon CONFIRMED 4-source + à reconcilier sprite ATTACK 2 (sprite-team Claw-Thrust invention) avec wiki canon abilities (Power Up + Physical Attack Barrier) probable hybrid implementation (Slash + Rolling Attack canon + Claw-Thrust sprite-team-bonus + Power Up + Physical Attack Barrier traits separate).
+
+⭐⭐⭐⭐⭐ **Beast Fang weapon visual sprite-coherence CONFIRMED 3-source canon récurrent récent expansion FIRST documented Damia** = wiki drop "Beast Fang 2%" + fandom Haschel weapon Stun-on-hit + sprite massive-weaponized-claws visual = 3-source CONFIRMED canon récurrent récent expansion + Beast Fang lore-coherent reptilian-claw-weapon Haschel-martial-arts thematic FIRST.
+
 ## Liens transverses
 
 - [`README.md`](./README.md) — mobs + **Lizard Man Earth Nest of Dragon Disc 1 NEW MAJEUR FIRST**

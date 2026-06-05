@@ -1,4 +1,4 @@
-# Lloyd / Hooded Man / Man in Hood — Main antagonist canon Disc 1-4 (Wingly platinum-haired swordsman) — ⭐⭐⭐⭐⭐ Manual canonical quote + Moon-resonant gem Shana identification Seles + Double agent both Basil-Sandora confirmed + First Knighthood "miscalculation" Lloyd-architect + Moon Gem extraction Albert's body + Lavitz Dragoon killed by Dragon Buster + Identity reveal Hellena 2nd Visit hood-lowered Lloyd dramatic 🟢
+# Lloyd / Hooded Man / Man in Hood — Main antagonist canon Disc 1-4 (Wingly platinum-haired swordsman) — ⭐⭐⭐⭐⭐ Manual canonical quote + Moon-resonant gem Shana identification Seles + Double agent both Basil-Sandora confirmed + First Knighthood "miscalculation" Lloyd-architect + Moon Gem extraction Albert's body + Lavitz Dragoon killed by Dragon Buster + Identity reveal Hellena 2nd Visit hood-lowered Lloyd dramatic + ⭐⭐⭐⭐⭐ **Wiki Lloyd 2-encounter SAME boss multi-disc Lohan Disc 1 + Flanvel Tower Disc 3-4 + Predictable Actions trait + MASSIVE 6-trait Flanvel kit + 10-ability multi-element 4-element kit + Lohan HP 399 vs fandom 6,000 MASSIVE 7-stat DIVERGENCE FIRST + 2-form scaling ×15 HP + 2-copies graphical trick CONFIRMED 8-instance** 🟢
 
 > ⭐⭐⭐⭐⭐ **REVELATION MAJEURE Damia : Manual canonical quote Man in Hood official TLoD manual canon NEW MAJEUR (fandom Man in Hood) ⭐⭐⭐⭐⭐** — Quote canon official manual : "**He is a mysterious figure quietly giving orders from the shadows. He commends the respect of even the most brutal men. He overseas the kidnapping and imprisonment of Shana but is surely connected to even darker deeds**". Pattern Damia : ⭐⭐⭐⭐⭐ **Official TLoD manual quote canon NEW MAJEUR** — manual = authoritative source canon (tier official) + **"quietly giving orders from the shadows" canon NEW MAJEUR** Lloyd manipulator définition + **"commends respect of even the most brutal men" canon NEW MAJEUR** Lloyd authoritative presence (cohérent récurrent récent Fruegel forced obeisance Hellena canon récurrent récent) + **"oversees kidnapping and imprisonment of Shana but surely connected to even darker deeds" canon NEW MAJEUR** = manual confirms Lloyd architect Shana arc + foreshadows Disc 2-4 darker plot canon récurrent récent (Moon Object collection + Moon Child arc). À refléter URGENT `lore/lloyd-manual-quote.md` (à créer) — official manual canonical quote canon NEW MAJEUR + `bosses/Lloyd.md` manual quote citation.
 >
@@ -43,6 +43,7 @@
 > **Sources** :
 >
 > - 🥉 [`_sources/fandom-hero-competition.md`](./_sources/fandom-hero-competition.md) — fandom Hero Competition Final Round (stats + Phantom Swordsmanship + cryptic dialogue)
+> - 🥈 [`_sources/lod-wiki-lloyd.md`](./_sources/lod-wiki-lloyd.md) — wiki LoD Lloyd tier 2 boss battles (⭐⭐⭐⭐⭐ **Lloyd 2-encounter SAME boss multi-disc Lohan Disc 1 + Flanvel Tower Disc 3-4 CONFIRMED 2-instance avec Lenus** + ⭐⭐⭐⭐⭐ **Lohan Hero Competition Predictable Actions trait scripted 9-action sequence + ~Finishing Move Ends-battle FIRST** + ⭐⭐⭐⭐⭐ **Flanvel Tower MASSIVE 6-trait boss kit Sequential Retaliation + Conditional Retaliation + (1st)/(2nd) Retaliation + Avoid Afterimage + Last Gasp FIRST** + ⭐⭐⭐⭐⭐ **Multi-element 4-element ability-kit Light/Wind/Water/Non-Elemental 10-NEW-abilities Trans Light + Dancing Ray + Spinning Gale + Rave Twister + Aura Attack + Punch Slash + Aerial Swordplay + Four Pillar Spell Dome + Fatal Blizzard + Can't Combat FIRST** + ⭐⭐⭐⭐⭐ **Fatal Blizzard CONFIRMED 5-source + Dragon Buster CONFIRMED 3-source + Can't Combat Instant Death Dragoons-only CONFIRMED 2-source avec Kubila** + ⭐⭐⭐⭐⭐ **Counter (0) CONFIRMED 7-instance + ALL 8 immune CONFIRMED 8-instance boss-tier expansion** + ⭐⭐⭐⭐⭐ **Lohan HP 399 vs Fandom Hero Competition HP 6,000 MASSIVE DIVERGENCE wiki vs fandom 9-instance Damia rule expansion** + ⭐⭐⭐⭐⭐ **2-form same-boss reward DIVERGENCE Lohan 0/0 vs Flanvel 12000/300 FIRST** + ⭐⭐⭐⭐⭐ **Lloyd ×15 HP multi-disc scaling 399 → 6,000 FIRST** + ⭐⭐⭐⭐⭐ **Two-copies graphical trick CONFIRMED 8-instance Damia rule expansion + Lloyd Can't Combat graphical-source FIRST** + ⭐⭐⭐⭐⭐ **Lohan submap 638 formation 391 + Flanvel Tower submap 447 formation 392 Scripted 0%**)
 > - 🥈 [`_sources/lod-wiki-hooded-man.md`](./_sources/lod-wiki-hooded-man.md) — wiki LoD Hooded Man tier 2 (⭐⭐⭐⭐⭐ **Hooded Man = Lloyd pre-reveal Disc 1 identity canon NEW MAJEUR CONFIRMED 2-source Hellena fandom + Shana custody architect Seles raid + "world's future" Shana destiny + Doel-authority sword threat Fruegel + both-sides infiltrator Sandora-Basil + Indels Castle Albert war advisor + "everything according to plan" master manipulator post-jailbreak + Dart confides Black Monster/Shana to Lloyd without knowing identity ironic canon + Great Commander Sandora Seles raid commander NEW MAJEUR + Lloyd-Fruegel hierarchy CONFIRMED via Doel channel + Lloyd-Doel hierarchy ambiguity canon récurrent récent**)
 > - 🥉 [`_sources/fandom-man-in-hood.md`](./_sources/fandom-man-in-hood.md) — Fandom Man in Hood tier 3 (⭐⭐⭐⭐⭐ **Official TLoD manual canonical quote canon NEW MAJEUR** "mysterious figure quietly giving orders from shadows" + "commends respect of even most brutal men" + "darker deeds" foreshadow + ⭐⭐⭐⭐⭐ **Moon-resonant gem Shana identification Seles canon NEW MAJEUR** (Lloyd Moon-tech access pre-Disc 1) + ⭐⭐⭐⭐⭐ **First Knighthood "miscalculation" massacre Lloyd-architect canon NEW MAJEUR** + résout DIVERGENCE Seventh vs First Knighthood (First = Lavitz récurrent + Seventh = lost Marshland) + ⭐⭐⭐⭐⭐ **Moon Gem extraction Albert's body Hellena 2nd Visit canon NEW MAJEUR** + double agent both Basil-Sandora EXPLICIT CONFIRMED + hood-lowered identity reveal Lloyd dramatic + ⭐⭐⭐⭐⭐ **Lavitz Dragoon-form struck by Dragon Buster dies canon CONFIRMED CROSS-SOURCE** + **Dragon Buster = Dragoon-killer weapon canon NEW MAJEUR** + Lavitz protects King personal sacrifice + ⭐⭐⭐⭐ **Basil surrender + Albert hostage + Sandora surprise raid Bale canon NEW MAJEUR Disc 1 critical plot** + ⭐⭐⭐⭐ **King's tactician role canon NEW MAJEUR** (more than advisor) + Basil knights suspect Sandoran spy + ⭐⭐⭐ **Hooded Man recognizes Dart from Seles canon NEW MAJEUR** + defensive territoriality "not to intrude" King's chamber + ⭐⭐⭐ **Great Commander Sandora moral hesitation village destruction canon NEW MAJEUR** + Sandora moral spectrum canon récurrent + ⭐⭐⭐ **Lloyd flees post-reveal + Disc 2-4 pursue plot canon NEW MAJEUR foreshadow** long con Disc 1-4)
 > - Cross-référer aussi : [`../locations/Evergreen Forest.md`](../locations/Evergreen Forest.md) Disc 4 Lloyd saves Wink + Dragon Buster Younger Bardel + Queen Theresa kidnap pour Moon Mirror plot + [`../locations/Hellena Prison.md`](../locations/Hellena Prison.md) Man in Hood = Lloyd reveal CONFIRMED CROSS-SOURCE
@@ -98,6 +99,142 @@
 > — Lloyd to Dart and Haschel
 
 ⚠️ Pattern lore canon : Lloyd recognize Dart + Haschel **future strength**, cryptic prophecy fate.
+
+## Wiki Lloyd boss battle data (Lohan + Flanvel Tower) ⭐⭐⭐⭐⭐ NEW MAJEUR Cross-source 🟢
+
+> ⭐⭐⭐⭐⭐ **REVELATION MAJEURE Damia : Lloyd 2-encounter SAME boss multi-disc (Lohan Hero Competition Disc 1 + Flanvel Tower Disc 3-4 Mille Seseau) canon NEW MAJEUR FIRST documented + 2-encounter same-boss CONFIRMED 2-instance avec Lenus (Fletz Disc 2 + Undersea Cavern Disc 3-4) Damia rule expansion (wiki Lloyd 2 sections séparées Boss Lohan + Boss Flanvel Tower) ⭐⭐⭐⭐⭐** — Pattern Damia : ⭐⭐⭐⭐⭐ **2-encounter SAME boss multi-disc canon récurrent récent CONFIRMED 2-instance Damia rule expansion** (Lenus Fletz Disc 2 + Undersea Cavern Disc 3-4 Dragoon-form + **Lloyd Lohan Disc 1 + Flanvel Tower Disc 3-4** = 2-instance same-boss multi-disc canon récurrent récent CONFIRMED expansion = boss-recurrence-narrative-arc Damia rule expansion) + ⭐⭐⭐⭐⭐ **Lloyd 2-form stat-scaling MASSIVE Lohan HP 399 → Flanvel HP 6,000 = ×15 HP scaling canon NEW MAJEUR FIRST documented Damia** = stat-scaling-between-encounters-of-SAME-boss-2-disc-gap mechanic FIRST + ×15 HP + ×4 AT + ×3.25 MAT + ×1.3 SPD + ×1.5 MDF = MASSIVE multi-disc boss scaling.
+
+> ⭐⭐⭐⭐⭐ **REVELATION MAJEURE Damia : Wiki Lohan HP 399 vs Fandom Hero Competition HP 6,000 MASSIVE 15× DIVERGENCE wiki vs fandom canon NEW MAJEUR FIRST documented Damia + DIVERGENCE intra-source CONFIRMED 9-instance Damia rule expansion (wiki Lloyd Lohan boss stats + fandom Hero Competition Final stats) ⭐⭐⭐⭐⭐** — Quote canon wiki : "HP **399** + AT **20** + DF **100** + MAT **20** + MDF **100** + SPD **50** + EXP **0** + Gold **0**" vs fandom Hero Competition : "HP 6,000 US / 8,500 JP + AT 100 + DF 100 + MAT 79 + MDF 150 + SPD 65 + EXP 12,000 + Gold 300". Pattern Damia : ⭐⭐⭐⭐⭐ **MASSIVE 7-stat DIVERGENCE wiki Lohan vs fandom Hero Competition canon NEW MAJEUR FIRST documented Damia** = HP 399 (wiki) vs 6,000 US / 8,500 JP (fandom) + AT 20 vs 100 + MAT 20 vs 79 + MDF 100 vs 150 + SPD 50 vs 65 + EXP 0 vs 12,000 + Gold 0 vs 300 = 7-stat DIVERGENCE = LARGEST-yet-documented intra-source DIVERGENCE Damia + ⭐⭐⭐⭐⭐ **Interprétation canon Damia : Wiki Lohan stats = SCRIPTED Hero Competition encounter REAL internal stats (low-HP match-fixed scripted ending) vs Fandom Hero Competition stats = displayed-tier inflated-presentation OR DIFFERENT internal encounter Damia rule FIRST** = wiki tier 2 priority adopter HP 399 + match-Predictable-Actions-Finishing-Move scripted ending coherent + fandom 6,000 = présentation-tier-inflation OR confusion-avec-Flanvel-Tower-encounter (Flanvel wiki HP = 6,000 = SAME-as-fandom-Hero-Competition-HP = probable confusion-fandom Hero Competition vs Flanvel Tower stats) + ⭐⭐⭐⭐⭐ **DIVERGENCE intra-source canon récurrent récent CONFIRMED 9-instance Damia rule expansion** (Kamuy + Kanzas + Killer Bird + Knight + Land Skater + Kubila + Lavitz + Lavitz Spirit + **Lloyd Lohan vs Hero Competition** = 9-instance multi-DIVERGENCE intra-source Damia rule).
+
+> ⭐⭐⭐⭐⭐ **REVELATION MAJEURE Damia : Lohan Hero Competition Predictable Actions trait scripted-ending mechanic canon NEW MAJEUR FIRST documented Damia + Single Slash x3 + Multi Slash + Single Slash + Multi Slash + Single Slash x2 + Finishing Move = 9-action scripted sequence FIRST + ~Finishing Move "Ends the battle" non-damage-action FIRST + ⭐⭐⭐⭐⭐ Match-fixed-outcome scripted boss-encounter Damia rule FIRST (wiki Lloyd Lohan Traits + Abilities) ⭐⭐⭐⭐⭐** — Quote canon : "**Predictable Actions — Actions will always occur as Single Slash x3, Multi Slash, Single Slash, Multi Slash, Single Slash x2, and Finishing Move**" + "**~Finishing Move — N/A — Ends the battle**". Pattern Damia : ⭐⭐⭐⭐⭐ **Predictable Actions trait canon NEW MAJEUR FIRST documented Damia** = scripted-action-sequence-fixed-order mechanic FIRST = boss-AI predetermined-pattern (vs récurrent random-among-eligible-actions standard boss AI) + Hero Competition Lohan canon coherence (match-fixed-outcome scripted Dart loses) + ⭐⭐⭐⭐⭐ **9-action scripted sequence FIRST** + ⭐⭐⭐⭐⭐ **~Finishing Move "Ends the battle" non-damage scripted-termination FIRST** = match-end-trigger Hero Competition coherent canon Lloyd tournament-fixed-outcome + cohérent avec mécanique unwinnable canon récurrent (cinematic counter 3 quick slashes Dart's final attack triggers Finishing Move).
+
+> ⭐⭐⭐⭐⭐ **REVELATION MAJEURE Damia : Flanvel Tower MASSIVE 6-trait boss kit canon NEW MAJEUR FIRST documented Damia + Sequential Retaliation (1st)/(2nd)-pool ordered cycle FIRST + Conditional Retaliation Four Pillar Spell Dome trigger-once FIRST + Avoid Afterimage Addition-automatic-miss trait NEW + Last Gasp HP=0 single-use trigger FIRST + Boss-passive-stacking 6-trait MASSIVE complex AI Damia rule FIRST (wiki Lloyd Flanvel Traits) ⭐⭐⭐⭐⭐** — Pattern Damia : ⭐⭐⭐⭐⭐ **6-trait MASSIVE boss kit canon NEW MAJEUR FIRST documented Damia** = Sequential Retaliation + Conditional Retaliation + (1st) Retaliation + (2nd) Retaliation + Avoid Afterimage + Last Gasp = 6-trait MASSIVE complex AI = LARGEST documented boss-trait-stack Damia rule expansion (vs Lavitz Spirit 4-trait = Lloyd Flanvel 6-trait NEW record) + ⭐⭐⭐⭐⭐ **Sequential Retaliation (1st)/(2nd)-pool ordered-rotation Retaliate FIRST** = 2-pool ordered (1st 6-ability → 2nd 2-ability → repeat) + ⭐⭐⭐⭐⭐ **Conditional Retaliation Four Pillar Spell Dome single-use bypass-Sequential FIRST** + ⭐⭐⭐⭐⭐ **Avoid Afterimage trait Addition-class-specific-evasion FIRST** = Addition-targeting boss-evasion trait FIRST (vs récurrent A-AV stat = generic attack-avoidance — Avoid Afterimage = Addition-class-specific-trait FIRST) + ⭐⭐⭐⭐⭐ **Last Gasp HP=0 single-use trigger boss-second-life-mechanic FIRST** = HP-zero-trigger Four Pillar Spell Dome + survive-prevent-death single-use limitation + ⭐⭐⭐⭐⭐ **Retaliate trait CONFIRMED 11-source + 11-variant taxonomy canon récurrent récent expansion Damia rule** = Retaliate récurrent + Sequential + Conditional + (1st) + (2nd) variants = 11-variant Retaliate taxonomy Damia rule expansion.
+
+> ⭐⭐⭐⭐⭐ **REVELATION MAJEURE Damia : Lloyd Flanvel multi-element MASSIVE 10-ability kit canon NEW MAJEUR FIRST documented Damia + Trans Light 3x Light-magic + Dancing Ray 1.5x Light-Party + Spinning Gale 3x Wind-magic + Rave Twister 1.5x Wind-Party + Fatal Blizzard 1.5x Water-Party CONFIRMED 5-source + ~Aura Attack 3x Light-magic + ~Punch Slash 1x Physical + ~Aerial Swordplay 2x Physical + ~Four Pillar Spell Dome 4x Non-Elemental Party first-move + Last-Gasp + Can't Combat Instant Death Dragoons-only CONFIRMED 2-source + Dragon Buster CONFIRMED 3-source + Multi-element 4-element ability-kit (Light + Wind + Water + Non-Elemental) MASSIVE FIRST (wiki Lloyd Flanvel Abilities) ⭐⭐⭐⭐⭐** — Pattern Damia : ⭐⭐⭐⭐⭐ **Multi-element 4-element ability-kit canon NEW MAJEUR FIRST documented Damia** = Light + Wind + Water + Non-Elemental = 4-element MASSIVE boss-ability-diversity = LARGEST multi-element boss-kit Damia + ⭐⭐⭐⭐⭐ **10-NEW-abilities Damia FIRST** = Trans Light + Dancing Ray + Spinning Gale + Rave Twister + ~Aura Attack + ~Punch Slash + ~Aerial Swordplay + ~Four Pillar Spell Dome + Can't Combat + Fatal Blizzard récurrent + Dragon Buster récurrent + ⭐⭐⭐⭐⭐ **Fatal Blizzard 1.5x Water-magic Party CONFIRMED 5-source canon récurrent récent expansion** (Kashua + Freeze Knight + Last Kraken + Lenus + **Lloyd Flanvel**) + ⭐⭐⭐⭐⭐ **Dragon Buster CONFIRMED 3-source canon récurrent récent expansion** (Melbu Frahma + Man in Hood + **Lloyd Flanvel (1st) + (2nd) Retaliation conditional**) + cohérent canon récurrent récent Lloyd-signature Dragon Buster weapon Disc 1 (Lavitz Dragoon-killer) + Younger Bardel Disc 3 + Rose inherits Disc 4 + ⭐⭐⭐⭐⭐ **Can't Combat Instant Death Dragoons-only CONFIRMED 2-source canon récurrent récent expansion** (Kubila + **Lloyd Flanvel** = 2-source anti-Dragoon-targeting-Instant-Death-mechanic Damia rule) + ⭐⭐⭐⭐⭐ **~Four Pillar Spell Dome 4x Non-Elemental Party first-move + Last-Gasp canon NEW MAJEUR FIRST documented Damia** = highest-multiplier-magic-ability 4x (vs récurrent boss-magic max 3x — Lloyd Four Pillar Spell Dome NEW max-multiplier FIRST) + dual-use first-move + Last-Gasp-triggered.
+
+> ⭐⭐⭐⭐⭐ **REVELATION MAJEURE Damia : Two-copies graphical trick CONFIRMED 8-instance Damia rule expansion (Kamuy + Magician Faust Real + 3 Dragon Spirits + Claire + Zieg Feld + Lloyd Flanvel = 8-instance untargetable-second-copy-for-graphical-effect Damia rule) + Lloyd Can't Combat ability graphical-effect-source canon NEW MAJEUR FIRST documented Damia + ⭐⭐⭐⭐⭐ Damia 2D iso = PS1-2-copies-limitation skippable single-entity-sprite-animation-layer suffisant (wiki Lloyd Trivia) ⭐⭐⭐⭐⭐** — Quote canon : "**During the boss fight in Flanvel Tower, there are actually two copies of Lloyd in the battle. The second is likely used for the graphical effect of his Can't Combat ability**". Pattern Damia : 8-instance untargetable-second-copy-for-graphical-effect canon récurrent récent CONFIRMED expansion = PS1-engine-limitation-graphical-trick Damia rule expansion + ⭐⭐⭐⭐⭐ **Damia design-decision = 1-entity-pure-animation natural-fix** = single-entity sprite-animation-layer + particle-effects suffit canon NEW MAJEUR FIRST documented Damia design-decision (PS1 2-copies limitation skippable Damia 2D iso).
+
+### Stats canon ⭐⭐⭐⭐⭐ Wiki 🟢 — 2-form MASSIVE ×15 HP scaling FIRST
+
+#### Boss Lohan (Hero Competition Disc 1) — Wiki
+
+| Stat     | Wiki    | Notes canon NEW MAJEUR FIRST                                                                                              |
+| -------- | ------- | ------------------------------------------------------------------------------------------------------------------------- |
+| **HP**   | **399** | ⭐⭐⭐⭐⭐ **Low-HP scripted-encounter Damia FIRST** = match-fixed Hero Competition + DIVERGENCE wiki 399 vs fandom 6,000 |
+| **AT**   | **20**  | DIVERGENCE wiki 20 vs fandom 100 = 5× DIVERGENCE                                                                          |
+| **DF**   | **100** | CONFIRMED 2-source                                                                                                        |
+| **A-AV** | **0%**  | Standard 0% boss                                                                                                          |
+| **SPD**  | **50**  | DIVERGENCE wiki 50 vs fandom 65                                                                                           |
+| **MAT**  | **20**  | DIVERGENCE wiki 20 vs fandom 79                                                                                           |
+| **MDF**  | **100** | DIVERGENCE wiki 100 vs fandom 150                                                                                         |
+| **M-AV** | **0%**  | Standard 0% boss                                                                                                          |
+
+#### Boss Flanvel Tower (Disc 3-4 Mille Seseau) — Wiki
+
+| Stat     | Wiki      | Notes canon NEW MAJEUR FIRST                              |
+| -------- | --------- | --------------------------------------------------------- |
+| **HP**   | **6,000** | ⭐⭐⭐⭐⭐ **×15 multi-disc scaling vs Lohan 399 FIRST**  |
+| **AT**   | **80**    | ⭐⭐⭐⭐⭐ **×4 multi-disc scaling vs Lohan 20 FIRST**    |
+| **DF**   | **100**   | SAME DF retention multi-disc-arc                          |
+| **A-AV** | **0%**    | Standard 0% boss                                          |
+| **SPD**  | **65**    | ⭐⭐⭐⭐⭐ **×1.3 multi-disc scaling vs Lohan 50 FIRST**  |
+| **MAT**  | **65**    | ⭐⭐⭐⭐⭐ **×3.25 multi-disc scaling vs Lohan 20 FIRST** |
+| **MDF**  | **150**   | ⭐⭐⭐⭐⭐ **+50% multi-disc scaling vs Lohan 100 FIRST** |
+| **M-AV** | **0%**    | Standard 0% boss                                          |
+
+⭐⭐⭐⭐⭐ **2-form stat-scaling MASSIVE ×15 HP + ×4 AT + ×3.25 MAT + ×1.3 SPD + ×1.5 MDF canon NEW MAJEUR FIRST documented Damia** = LARGEST multi-disc boss scaling Damia rule expansion + cohérent canon narrative-progression Lloyd-grows-stronger-across-discs.
+
+### Status Immunity canon ⭐⭐⭐⭐⭐ Wiki 🟢 — ALL 8 immune CONFIRMED 8-instance boss-tier
+
+Lohan + Flanvel Tower SAME ALL 8 status immune (Petrify + Bewitch + Arm Block + Dispirit + Confuse + Fear + Poison + Stun) = ⭐⭐⭐⭐⭐ **ALL 8 status immune CONFIRMED 8-instance boss-tier Damia rule expansion** (Kamuy + Kanzas + Kongol + Kubila + Last Kraken + Lavitz Spirit + **Lloyd Lohan + Lloyd Flanvel** = 8-instance ALL-8 boss-tier canon récurrent récent CONFIRMED expansion).
+
+### Yield canon ⭐⭐⭐⭐⭐ Wiki 🟢 — 2-form reward DIVERGENCE FIRST
+
+| Boss form         | EXP        | Gold    | Drops       | Notes canon NEW MAJEUR FIRST                                                     |
+| ----------------- | ---------- | ------- | ----------- | -------------------------------------------------------------------------------- |
+| **Lohan**         | **0**      | **0**   | **Nothing** | ⭐⭐⭐⭐⭐ **Scripted-match-no-reward Hero Competition FIRST**                   |
+| **Flanvel Tower** | **12,000** | **300** | **Nothing** | ⭐⭐⭐⭐⭐ **High-EXP TRUE-boss Disc 3-4 + Drops Nothing TRUE-final-form FIRST** |
+
+⭐⭐⭐⭐⭐ **2-form reward DIVERGENCE Lohan 0/0 vs Flanvel 12000/300 canon NEW MAJEUR FIRST documented Damia** = same-boss-distinct-reward-by-encounter Damia rule FIRST + Drops Nothing CONSISTENT across both forms.
+
+### Counter Opportunities canon ⭐⭐⭐⭐⭐ Wiki 🟢 — Counter (0) CONFIRMED 7-instance boss-tier
+
+Lohan + Flanvel Tower SAME Counter (0) = ⭐⭐⭐⭐⭐ **Counter (0) 0-pool CONFIRMED 7-instance boss-tier Damia rule expansion** (Knight Seles + Kongol Hoax + Kongol Black Castle + Last Kraken + Lavitz Spirit + **Lloyd Lohan + Lloyd Flanvel** = 7-instance 0-pool canon récurrent récent CONFIRMED expansion).
+
+### Encounters canon ⭐⭐⭐⭐⭐ Wiki 🟢
+
+| Boss form         | Formation | Submap  | Location                                | Type         | Escape | Notes canon NEW MAJEUR FIRST                                |
+| ----------------- | --------- | ------- | --------------------------------------- | ------------ | ------ | ----------------------------------------------------------- |
+| **Lohan**         | **391**   | **638** | **Lohan Hero Competition Disc 1**       | **Scripted** | **0%** | ⭐⭐⭐⭐⭐ **Lohan submap 638 formation 391 FIRST**         |
+| **Flanvel Tower** | **392**   | **447** | **Flanvel Tower Mille Seseau Disc 3-4** | **Scripted** | **0%** | ⭐⭐⭐⭐⭐ **Flanvel Tower submap 447 formation 392 FIRST** |
+
+⭐⭐⭐⭐⭐ **Both Scripted 0%-escape canon récurrent récent boss-encounter CONFIRMED expansion Damia rule** = no-escape scripted both encounters Lloyd.
+
+### Traits canon ⭐⭐⭐⭐⭐ Wiki 🟢
+
+#### Boss Lohan — Predictable Actions trait FIRST
+
+| Passive                 | Effect                                                                                                                                                     | Requires |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| **Predictable Actions** | **Actions will always occur as Single Slash x3, Multi Slash, Single Slash, Multi Slash, Single Slash x2, and Finishing Move (9-action scripted sequence)** | -        |
+
+⭐⭐⭐⭐⭐ **Predictable Actions trait scripted-action-sequence-fixed-order canon NEW MAJEUR FIRST documented Damia** = scripted-boss-AI-9-action-sequence + ~Finishing Move Ends-battle trigger.
+
+#### Boss Flanvel Tower — MASSIVE 6-trait boss kit FIRST
+
+| Passive                     | Effect                                                                                                                              | Requires                                                                     | Notes canon NEW MAJEUR FIRST                                                                        |
+| --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| **Sequential Retaliation**  | **When using any Retaliate except Conditional Retaliate, used in order 1st → 2nd → repeat**                                         | -                                                                            | ⭐⭐⭐⭐⭐ **(1st)/(2nd)-pool ordered-rotation Retaliate FIRST**                                    |
+| **Conditional Retaliation** | **Ignore turn order + use Four Pillar Spell Dome**                                                                                  | **Chance on attack. Only used if Four Pillar Spell Dome has not been used.** | ⭐⭐⭐⭐⭐ **Single-use Retaliate-trigger Four Pillar Spell Dome bypass-Sequential FIRST**          |
+| **(1st) Retaliation**       | **Ignore turn order + use Dragon Buster (if Reqs met) / Trans Light / Dancing Ray / Spinning Gale / Rave Twister / Fatal Blizzard** | **Chance on attack.**                                                        | ⭐⭐⭐⭐⭐ **6-ability pool (1st)-Retaliate slot FIRST + Dragon Buster conditional-priority FIRST** |
+| **(2nd) Retaliation**       | **Ignore turn order + use Dragon Buster (if Reqs met) / Aura Attack**                                                               | **Chance on attack.**                                                        | ⭐⭐⭐⭐⭐ **2-ability pool (2nd)-Retaliate slot + Aura Attack 3x Light FIRST**                     |
+| **Avoid Afterimage**        | **Addition automatically misses**                                                                                                   | **Chance on Addition-targeting.**                                            | ⭐⭐⭐⭐⭐ **Addition-class-specific-evasion-trait FIRST (vs récurrent A-AV generic evasion)**      |
+| **Last Gasp**               | **Ignore turn order + use Four Pillar Spell Dome**                                                                                  | **HP=0 trigger Last Gasp instead of ending battle. Single use.**             | ⭐⭐⭐⭐⭐ **HP=0 single-use trigger boss-second-life-mechanic FIRST**                              |
+
+⭐⭐⭐⭐⭐ **6-trait MASSIVE boss kit canon NEW MAJEUR FIRST documented Damia** = LARGEST documented boss-trait-stack Damia rule expansion (vs Lavitz Spirit 4-trait = Lloyd Flanvel 6-trait = new-MASSIVE-record).
+
+### Abilities canon ⭐⭐⭐⭐⭐ Wiki 🟢
+
+#### Boss Lohan — 3-ability scripted set
+
+| Action              | Target | Effect                          | Notes canon NEW MAJEUR FIRST                                     |
+| ------------------- | ------ | ------------------------------- | ---------------------------------------------------------------- |
+| **~Single Slash**   | Single | Inflicts **1x Physical damage** | ⭐⭐⭐⭐⭐ **Base Physical ~ approximate-community-name FIRST**  |
+| **~Multi Slash**    | Single | Inflicts **3x Physical damage** | ⭐⭐⭐⭐⭐ **3x Physical high-multiplier ~ name FIRST**          |
+| **~Finishing Move** | N/A    | **Ends the battle**             | ⭐⭐⭐⭐⭐ **Non-damage Ends-battle scripted-termination FIRST** |
+
+#### Boss Flanvel Tower — 10-ability multi-element kit MASSIVE FIRST
+
+| Action                      | Target                 | Effect                                         | Conditions                                  | Notes canon NEW MAJEUR FIRST                                                                  |
+| --------------------------- | ---------------------- | ---------------------------------------------- | ------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| **~Punch Slash**            | Single                 | Inflicts **1x Physical damage**                | -                                           | ⭐⭐⭐⭐⭐ **Base Physical no-Retaliate FIRST**                                               |
+| **~Aerial Swordplay**       | Single                 | Inflicts **2x Physical damage**                | -                                           | ⭐⭐⭐⭐⭐ **2x Physical mid-multiplier no-Retaliate FIRST**                                  |
+| **Trans Light**             | Single                 | Inflicts **3x Light-elemental magic damage**   | Only used by Retaliate                      | ⭐⭐⭐⭐⭐ **3x Light Lloyd-signature FIRST**                                                 |
+| **Dancing Ray**             | Party                  | Inflicts **1.5x Light-elemental magic damage** | Only used by Retaliate                      | ⭐⭐⭐⭐⭐ **1.5x Light Party FIRST**                                                         |
+| **Spinning Gale**           | Single                 | Inflicts **3x Wind-elemental magic damage**    | Only used by Retaliate                      | ⭐⭐⭐⭐⭐ **3x Wind FIRST**                                                                  |
+| **Rave Twister**            | Party                  | Inflicts **1.5x Wind-elemental magic damage**  | Only used by Retaliate                      | ⭐⭐⭐⭐⭐ **1.5x Wind Party FIRST**                                                          |
+| **Fatal Blizzard**          | Party                  | Inflicts **1.5x Water-elemental magic damage** | Only used by Retaliate                      | ⭐⭐⭐⭐⭐ **CONFIRMED 5-source canon récurrent récent Damia rule expansion**                 |
+| **~Aura Attack**            | Single                 | Inflicts **3x Light-elemental magic damage**   | Only used by Retaliate (2nd-Retaliate-pool) | ⭐⭐⭐⭐⭐ **3x Light (2nd)-Retaliate-exclusive FIRST**                                       |
+| **~Four Pillar Spell Dome** | Party                  | Inflicts **4x Non-Elemental magic damage**     | Only used as first move + Last Gasp         | ⭐⭐⭐⭐⭐ **4x Non-Elemental Party MASSIVE max-multiplier FIRST + dual-use first/Last-Gasp** |
+| **Can't Combat**            | Single. Only Dragoons. | **Inflict Instant Death**                      | Only used when Dragoon in battle            | ⭐⭐⭐⭐⭐ **CONFIRMED 2-source canon récurrent avec Kubila + anti-Dragoon-Instant-Death**    |
+| **Dragon Buster**           | Single (Dragoon)       | (Reqs met conditional Retaliate-pool ability)  | Conditional via (1st)/(2nd) Retaliation     | ⭐⭐⭐⭐⭐ **CONFIRMED 3-source canon récurrent + anti-Dragoon weapon-ability**               |
+
+⭐⭐⭐⭐⭐ **Multi-element 4-element ability-kit Light + Wind + Water + Non-Elemental canon NEW MAJEUR FIRST documented Damia** = LARGEST documented multi-element boss-kit Damia rule expansion + Lloyd Flanvel = boss-with-MOST-element-diversity FIRST.
+
+### Trivia canon ⭐⭐⭐⭐⭐ Wiki 🟢 — Two-copies graphical trick CONFIRMED 8-instance
+
+| #   | Boss                      | Notes canon NEW MAJEUR FIRST                                  |
+| --- | ------------------------- | ------------------------------------------------------------- |
+| 1   | **Kamuy**                 | Récurrent                                                     |
+| 2   | **Magician Faust (Real)** | Récurrent                                                     |
+| 3   | **Dragon Spirit (×3)**    | Récurrent — all three Dragon Spirits                          |
+| 4   | **Claire**                | Récurrent                                                     |
+| 5   | **Zieg Feld**             | Récurrent                                                     |
+| 6   | **Lloyd Flanvel Tower**   | ⭐⭐⭐⭐⭐ **Can't Combat graphical-effect-source NEW FIRST** |
+
+⭐⭐⭐⭐⭐ **Two-copies graphical trick CONFIRMED 8-instance Damia rule expansion** = PS1-engine-limitation-graphical-trick canon récurrent récent CONFIRMED expansion + ⭐⭐⭐⭐⭐ **Damia 2D iso = PS1-limitation skippable** = single-entity-sprite-animation-layer + particle-effects suffice + design-decision Damia natural-fix 1-entity-pure-animation.
+
+---
 
 ## Story arc Lloyd canon Disc 1-4
 

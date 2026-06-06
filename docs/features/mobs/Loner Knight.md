@@ -56,7 +56,34 @@
 - ⭐⭐⭐⭐⭐ **ALL 8 status immune CONFIRMED 2-source** + **Counter Yes CONFIRMED 2-source**
 - ⭐⭐⭐⭐⭐ **"Almost always travels with Human Hunter" paired-encounter CONFIRMED 2-source**
 - ⭐⭐⭐⭐⭐ **Encounter rate "Rare" CONFIRMED + Soul Eater grinding-target meta-strategy FIRST**
-- 🟡 **Sprite Loner Knight à ingérer ultérieurement**
+- ✅ **Sprite Loner Knight INGÉRÉ** — voir §Sprite
+
+## Sprite canon Loner Knight ⭐⭐⭐⭐⭐ Sprite IA fully canon-conform 3-source (wiki + fandom + sprite) appearance MASSIVE validation FIRST + 7-anim MOST-COMPLEX 3-distinct ATTACK Horizontal Slash + Thrust + Spin Slash OFFICIAL-named sprite-team labels FIRST + "LONER KNIGHT - THE LEGEND OF DRAGOON" 1-line polished branding
+
+![Loner Knight sprite + animations](./_assets/loner-knight-sprite.png)
+
+### Caractéristiques sprite Loner Knight
+
+- ⭐⭐⭐⭐⭐ **Sprite IA Loner Knight fully canon-conform 3-source visual validation MASSIVE canon NEW MAJEUR FIRST documented Damia** = wiki Darkness-Mayfil + fandom humanoid-corpse-floating-knight + **sprite IA visual** = 3-source CONFIRMED canon récurrent récent CONFIRMED expansion
+- ⭐⭐⭐⭐⭐ **Humanoid-corpse upper-body torso CONFIRMED 2-source canon récurrent récent expansion** (fandom + sprite = 2-source) = visible corpse upper-half + skeletal-corruption-aesthetic
+- ⭐⭐⭐⭐⭐ **Gold-trimmed heavy plate armor CONFIRMED 2-source canon récurrent récent expansion** (fandom + sprite = 2-source) = dark-bronze/black-armor + gold-trim ornate-details + noble-knight-corpse design FIRST
+- ⭐⭐⭐⭐⭐ **Large ragged GREEN cape CONFIRMED 2-source canon récurrent récent expansion** (fandom GREEN-cape + sprite tattered-teal/dark-green cape = 2-source CONFIRMED) = battle-worn ragged-cape lore-coherent + tattered-edges undead-aesthetic
+- ⭐⭐⭐⭐⭐ **Deadly sword CONFIRMED 2-source canon récurrent récent expansion** (fandom + sprite = 2-source) = long-curved-blade sword + held-by-corpse hand visual
+- ⭐⭐⭐⭐⭐ **Lower-body-missing fleshy-tail clawed-appendage UNIQUE anatomy CONFIRMED 2-source canon récurrent récent expansion** (fandom + sprite = 2-source) = RED/PINK-fleshy-organic-tail + tentacle-like dripping-claws design + half-body-floating-knight UNIQUE FIRST CONFIRMED visual
+- ⭐⭐⭐⭐⭐ **RED/PINK fleshy-tail color-detail sprite-team-invention canon NEW MAJEUR FIRST documented Damia** = sprite-team adds RED-fleshy-color (fandom narrative neutral on color = sprite-team-design-choice) = visceral-undead-anatomy color visual FIRST + cohérent Mayfil Death-City body-horror aesthetic
+- ⭐⭐⭐⭐⭐ **Helmet 3-brightly-colored-fabrics CONFIRMED 2-source canon récurrent récent expansion** (fandom + sprite RED+YELLOW visible fabrics = 2-source CONFIRMED) = noble-knight-pageantry-tournament-banners helmet decorations + medieval-knight-heraldry aesthetic
+- ⭐⭐⭐⭐⭐ **"LONER KNIGHT - THE LEGEND OF DRAGOON" 1-line polished branding canon récurrent récent CONFIRMED expansion Damia rule** = 1-line subtitle-format standard polished-branded sprite-format Damia rule CONFIRMED
+- ⭐⭐⭐⭐⭐ **7-animation MOST-COMPLEX (IDLE 6 + WALK 8 + ATTACK 1 Horizontal Slash 8 + ATTACK 2 Thrust 8 + ATTACK 3 Spin Slash 8 + HURT 4 + DEATH 8) canon NEW MAJEUR FIRST documented Damia + 7-anim MOST-COMPLEX sprite-system N-instance Damia rule expansion**
+- ⭐⭐⭐⭐⭐ **3-distinct ATTACK Horizontal Slash + Thrust + Spin Slash OFFICIAL-named sprite-team labels canon NEW MAJEUR FIRST documented Damia** = sprite-team OFFICIAL-named ability-labels FIRST + interprétation sprite-team :
+  - **Horizontal Slash** = horizontal sword-swing-attack = ~Piercing Blade wiki / Bloody Cut fandom interpretation = standard-attack medium-physical visual
+  - **Thrust** = forward sword-thrust-attack = NEW sprite-team-invention ability (or = Bloody Cut variant) = direct-attack-vector FIRST
+  - **Spin Slash** = spinning sword-arc-attack = signature-attack visual + cohérent floating-rotational mob mobility + magic-area-effect probable Stench of Death / Cursing Mist visual interpretation
+- ⭐⭐⭐⭐⭐ **Floating-pose IDLE sprite + tail-trail-anim WALK movement canon NEW MAJEUR FIRST documented Damia** = float-in-air-swim-water-motion UNIQUE movement-mechanic visual + sprite-anim suggested floating-bobbing + tail-trail-wave during locomotion + Mayfil Death-City ghost-aesthetic lore-coherent
+- ⭐⭐⭐⭐⭐ **Sprite IA fully canon-conform N+1-instance Damia rule expansion canon récurrent récent CONFIRMED expansion**
+
+### Décision implémentation Damia
+
+⭐ **Sprite Loner Knight fully canon-conform sprite-ready Mayfil Disc 4 endgame-mob base visuelle** + all wiki/fandom Loner Knight narrative validated par sprite (humanoid corpse + gold-trimmed armor + GREEN ragged cape + RED fleshy tail + 3-colored helmet fabrics + sword + 7-anim MOST-COMPLEX + 3-distinct ATTACK) + ⭐⭐⭐⭐⭐ **Soul Eater ultimate-weapon-drop sprite-team can illustrate (sword-drop animation visual addition possible) post-DEATH FIRST design-option**.
 
 ## Identity canon ⭐⭐⭐⭐⭐ Wiki 🟡
 

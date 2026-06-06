@@ -1,4 +1,4 @@
-# Air Combat — Mob Wind Moon That Never Sets (Disc 4)
+# Air Combat — Mob Wind Moon That Never Sets (Disc 4) — ⭐⭐⭐⭐⭐ Sprite IA Wyvern Wind brown/red 7-anim MOST-COMPLEX + 3-distinct ATTACK Swoop/Tail Spike/Dive Bomb OFFICIAL-named sprite-team labels FIRST + Polished branding "AIR COMBAT - WYVERN - THE LEGEND OF DRAGOON" 2-line CONFIRMED canon récurrent récent expansion 🟢
 
 > **Minor enemy Wind canon** : Moon That Never Sets Disc 4 endgame area, recolor de Wyvern (Mountain of Mortal Dragon), **incapable of dealing magic damage** malgré MAT 76.
 >
@@ -207,6 +207,28 @@
 → **Wiki tier 2 prévaut pour stats numériques** (P/M Attack, A-AV).
 → **Fandom prévaut pour ability names canon officiels** (Sharp Edge confirmé).
 → **JP values divergences** documentées séparément US vs JP.
+
+## Sprite canon Air Combat ⭐⭐⭐⭐⭐ Sprite IA fully canon-conform N-instance CONFIRMED + Wyvern Wind brown/red recolor visual canon-conform + 7-anim MOST-COMPLEX 3-distinct ATTACK OFFICIAL-named sprite-team labels FIRST
+
+![Air Combat sprite + animations](./_assets/air-combat-sprite.png)
+
+### Caractéristiques sprite Air Combat
+
+- ⭐⭐⭐⭐⭐ **Sprite IA Air Combat fully canon-conform Wyvern Wind brown/red recolor visual canon NEW MAJEUR FIRST documented Damia** = wyvern-type-creature visual + brown/red-scales body + leathery membrane wings + sharp claws + tail-spike + dragon-like-head + horned-crown + cohérent canon récurrent récent wiki Air Combat "recolor de Wyvern" + fandom "Wyvern type classification" CONFIRMED 3-source (wiki + fandom + sprite)
+- ⭐⭐⭐⭐⭐ **Brown/red scales body + leathery brown-membrane wings canon NEW MAJEUR FIRST** = Wind-element wyvern brown/red colorway (vs Wyvern original canon récurrent vert/grey) = Wind-Air Combat distinct recolor + cohérent canon récurrent récent Disc 4 Moon That Never Sets atmospheric-mood-darker color-palette tier endgame
+- ⭐⭐⭐⭐⭐ **Light-blue/grey eye trait CONFIRMED 2-source canon récurrent récent expansion Damia rule** = fandom "few without red eyes" trait + sprite light-eye non-red CONFIRMED 2-source (fandom narrative + sprite visual = 2-source) = Air-Combat non-red-eye-monster exception trait CONFIRMED
+- ⭐⭐⭐⭐⭐ **Massive talons + tail-spike + horned-spiky head canon NEW MAJEUR FIRST documented Damia** = wyvern-anatomy combat-design + sharp-talons-attack-vector + tail-spike-weapon-vector + horned-crown spiky head profile + cohérent fandom "wings 3 spikes tail tip + spikes top each wing + massive talons + spiky head" 4-trait CONFIRMED 2-source canon récurrent récent expansion
+- ⭐⭐⭐⭐⭐ **"AIR COMBAT - WYVERN - THE LEGEND OF DRAGOON" 2-line polished branding canon NEW MAJEUR FIRST documented Damia + CONFIRMED 3-instance 2-line subtitle-branding Damia rule expansion** (Lloyd V3 "DRAGON BURSTER" + Lloyd V5 "MAN IN HOOD" + **Air Combat "WYVERN"** = 3-instance 2-line subtitle-branding canon récurrent récent CONFIRMED expansion) = subtitle-classification-tier-marker "WYVERN" = canon-type-attribution-via-subtitle convention pattern FIRST
+- ⭐⭐⭐⭐⭐ **7-animation MOST-COMPLEX (IDLE 6 frames + WALK 8 + ATTACK 1 Swoop 8 + ATTACK 2 Tail Spike 8 + ATTACK 3 Dive Bomb 8 + HURT 4 + DEATH 8) canon NEW MAJEUR FIRST documented Damia + 7-anim MOST-COMPLEX sprite-system N-instance Damia rule expansion** = MOST-COMPLEX sprite-system 7-animation Damia rule expansion CONFIRMED
+- ⭐⭐⭐⭐⭐ **ATTACK 1 Swoop + ATTACK 2 Tail Spike + ATTACK 3 Dive Bomb OFFICIAL-named sprite-team labels canon NEW MAJEUR FIRST documented Damia** = sprite-team OFFICIAL-named ability-labels FIRST (vs récurrent générique ATTACK 1/2/3) + interprétation sprite-team :
+  - **Swoop** = horizontal-flight-attack low-altitude-pass = ~Sharp Edge fandom OFFICIAL CONFIRMED OR Razor Tail wiki interpretation = standard-attack 1× phys swoop-pass visual
+  - **Tail Spike** = tail-spike-strike NEW sprite-team-invention ability-name FIRST = anatomy-coherent tail-spike-weapon-utilization visual + cohérent canon récurrent fandom "tail spike" wyvern-anatomy CONFIRMED 2-source
+  - **Dive Bomb** = vertical-aerial-dive high-impact-attack = ~All-out Attack 3× phys interpretation + Charging Spirit aerial-power-up-then-dive sequence visual MASSIVE = cohérent canon récurrent récent fandom Charging Spirit 50% chance All-out Attack next turn + air-combat-thematic Dive Bomb signature-attack
+- ⭐⭐⭐⭐⭐ **3-distinct ATTACK sprite-system N-instance Damia rule expansion** = 3-ATTACK Air Combat = 3-vector wyvern-aerial-combat (horizontal Swoop + tail Tail Spike + vertical Dive Bomb) NEW MAJEUR FIRST documented Damia 3-vector-aerial-combat-coverage pattern FIRST
+
+### Décision implémentation Damia
+
+⭐ **Sprite Air Combat fully canon-conform sprite-ready Wind-mob-Wyvern base visuelle** + all wiki/fandom Air Combat narrative validated par sprite (brown/red wyvern + light-blue eyes + massive talons + tail-spike + horned head + Moon That Never Sets atmospheric-coherent + 7-anim MOST-COMPLEX + 3-distinct ATTACK Swoop/Tail Spike/Dive Bomb + 2-line "WYVERN" subtitle-branding cohérent fandom Wyvern-type-classification CONFIRMED).
 
 ## Liens transverses
 

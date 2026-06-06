@@ -1,0 +1,237 @@
+# Mad Skull — Thunder Moon That Never Sets Disc 4 mob — ⭐⭐⭐⭐⭐ 🟡 Wiki — ALL 8 status immune CONFIRMED 8-instance mob-tier expansion + Counter 28-pool SHARED standard CONFIRMED 15-instance + Lavitz DORMANT 17-instance + Lavitz ACTIVE Rod Typhoon + Gust + Flower Storm FIRST + DF 250 HIGHEST mob DF documented Damia FIRST + Instant Death Immunity trait NEW MAJEUR anti-Can't-Combat-Dragon-Impale protection FIRST + 5-ability MASSIVE multi-status kit ~Hex Slashes + Stunning Hammer + Poison Needle + Midnight Terror + Panic Bell FIRST + 4×100%-guaranteed-status-proc abilities Stun + Poison + Fear + Confusion MAX-status-coverage mob-tier FIRST + Stunning Hammer NEW OFFICIAL 100% Stun + Poison Needle NEW OFFICIAL ability (DIFFERENT from Poison Needles item Lucky Jar) 100% Poison + Midnight Terror NEW OFFICIAL 100% Fear + Panic Bell OFFICIAL CONFIRMED 2-source avec Lucky Jar + ~Hex Slashes community-name Physical FIRST + M-AV dual-purpose magic-status-resistance CONFIRMED 5-source expansion + 100%-guaranteed-status-proc CONFIRMED 5-instance canon récurrent récent expansion + 3-tier HP behavioral 50%/25% standard + HP ≤50% >25% dual-ability variant Stunning Hammer + Poison Needle FIRST + HP ≤25% dual-ability variant Midnight Terror + Panic Bell FIRST + Flash Hall 8% drop NEW Thunder Spell Item reference cohérent récurrent récent Kashua chest + Lavitz Spirit récurrent + Psyche Druid + Unicorn NEW partner mobs FIRST + MTNS submaps 612-614 + 730-732 6-submap coverage expansion + 30% escape moderate-low Disc 4 MTNS pattern + 4-used + 4-unused formations content-cut FIRST + No World Map Road interior-only MTNS design + EXP 400 + Gold 51 standard Disc 4 yield + Thunder-mob MTNS Disc 4 cohérent canon récurrent récent
+
+> ⭐⭐⭐⭐⭐ **REVELATION MAJEURE Damia : Mad Skull Thunder Moon That Never Sets Disc 4 minor enemy + ALL 8 status immune CONFIRMED 8-instance mob-tier expansion + DF 250 HIGHEST mob DF documented Damia FIRST + Instant Death Immunity trait NEW MAJEUR anti-Can't-Combat-Dragon-Impale protection + 5-ability MASSIVE multi-status kit ~Hex Slashes + Stunning Hammer + Poison Needle + Midnight Terror + Panic Bell + 4×100%-guaranteed-status-proc abilities Stun/Poison/Fear/Confusion MAX-status-coverage mob-tier canon NEW MAJEUR FIRST documented Damia (wiki Mad Skull Stats + Traits + Abilities) ⭐⭐⭐⭐⭐** — Quote canon : "**Thunder + HP 799 + AT 107 + DF 250 + MAT 93 + MDF 100 + SPD 65 + ALL 8 immune + EXP 400 + Gold 51 + Flash Hall 8% + Counter Opportunities (28)**" + "**Instant Death Immunity - Anything which inflicts Instant Death misses**" + "**>50% ~Hex Slashes 1x Physical + ≤50% >25% Stunning Hammer 100% Stun + Poison Needle 100% Poison + ≤25% Midnight Terror 100% Fear + Panic Bell 100% Confusion + Target's M-AV reduces chance**". Pattern Damia : ⭐⭐⭐⭐⭐ **Mad Skull Thunder MTNS Disc 4 mob canon NEW MAJEUR FIRST documented Damia** = Thunder-mob MTNS endgame Disc 4 + cohérent canon récurrent récent MTNS mob-population Air Combat + Lucky Jar expansion + ⭐⭐⭐⭐⭐ **ALL 8 status immune CONFIRMED 8-instance mob-tier Damia rule expansion** (Killer Bird + Knight BC + Land Skater + Lizard Man + Living Statue + Loner Knight + récurrent + **Mad Skull** = 8-instance mob-tier ALL-8 canon récurrent récent CONFIRMED expansion) + ⭐⭐⭐⭐⭐ **DF 250 HIGHEST mob DF documented Damia canon NEW MAJEUR FIRST documented Damia** = NEW DF-tank-record mob (vs Living Statue DF 160 + Lizard Man DF 160 + Loner Knight DF 140 = +56% jump = MAJEUR DF-tank-tier-shift Damia rule expansion FIRST) + ⭐⭐⭐⭐⭐ **Instant Death Immunity trait NEW MAJEUR canon NEW MAJEUR FIRST documented Damia** = anti-Can't-Combat / Dragon Impale protection trait + cohérent canon récurrent récent Lloyd Can't Combat Dragoons-only + Kubila Can't Combat Instant Death + **Instant-Death-counter-trait FIRST** = mob-defensive-trait specifically countering anti-Dragoon Instant Death abilities + ⭐⭐⭐⭐⭐ **5-ability MASSIVE multi-status kit canon NEW MAJEUR FIRST documented Damia** = ~Hex Slashes Physical + Stunning Hammer 100% Stun + Poison Needle 100% Poison + Midnight Terror 100% Fear + Panic Bell 100% Confusion = 5-ability total + 4-status-proc-coverage (Stun + Poison + Fear + Confusion) = ⭐⭐⭐⭐⭐ **MAX-status-coverage 4-status-proc mob-tier canon NEW MAJEUR FIRST documented Damia** = mob covering 4-of-8 status ailments + most-status-diverse mob Damia rule expansion FIRST + ⭐⭐⭐⭐⭐ **4×100%-guaranteed-status-proc abilities canon NEW MAJEUR FIRST documented Damia** = 4-ability 100%-guaranteed (vs récurrent 50% standard 4×Mad Skull + 1×Panic Bell Lucky Jar = 5-instance 100%-guaranteed canon récurrent récent expansion CONFIRMED) + ⭐⭐⭐⭐⭐ **100%-guaranteed-status-proc CONFIRMED 5-instance canon récurrent récent expansion Damia rule** (Lucky Jar Panic Bell + Mad Skull Stunning Hammer + Poison Needle + Midnight Terror + Panic Bell = 5-instance 100%-guaranteed-proc) + ⭐⭐⭐⭐⭐ **Stunning Hammer OFFICIAL ability 100% Stun proc canon NEW MAJEUR FIRST documented Damia** = NEW Stun-status-100%-guaranteed-proc + hammer-thematic visual + ⭐⭐⭐⭐⭐ **Poison Needle OFFICIAL ability 100% Poison proc canon NEW MAJEUR FIRST documented Damia + DIFFERENT from Poison Needles item Lucky Jar context-disambiguation FIRST** = NEW Poison-status-100%-guaranteed-proc ability + needle-thematic visual + name-collision-disambiguation-with-item Damia rule FIRST + ⭐⭐⭐⭐⭐ **Midnight Terror OFFICIAL ability 100% Fear proc canon NEW MAJEUR FIRST documented Damia** = NEW Fear-status-100%-guaranteed-proc + nightmare-thematic visual + cohérent récurrent récent Spear of Terror Fear-proc weapon Lavitz + ⭐⭐⭐⭐⭐ **Panic Bell OFFICIAL CONFIRMED 2-source canon récurrent récent expansion Damia rule avec Lucky Jar** = OFFICIAL ability shared cross-mob Damia rule expansion + 100% Confusion proc M-AV-reduced + ⭐⭐⭐⭐⭐ **~Hex Slashes ~ approximate-community-name 1x Physical Single canon NEW MAJEUR FIRST documented Damia** = NEW Physical-attack-base ~ name FIRST + Hex-thematic dark-magic-physical hybrid + ⭐⭐⭐⭐⭐ **M-AV dual-purpose magic-status-resistance CONFIRMED 5-source canon récurrent récent expansion Damia rule** (Lavitz Spirit + Lizard Man + Loner Knight + Lucky Jar + **Mad Skull** = 5-source A-AV/M-AV-reduces-status-chance Damia rule expansion CONFIRMED) + ⭐⭐⭐⭐⭐ **3-tier HP behavioral 50%/25% threshold standard canon récurrent récent expansion Damia rule** + ⭐⭐⭐⭐⭐ **HP ≤50% >25% dual-ability variant Stunning Hammer + Poison Needle 50-50-split canon NEW MAJEUR FIRST documented Damia** = NEW dual-ability-mid-tier expansion (vs récurrent 1-ability-per-tier standard) + ⭐⭐⭐⭐⭐ **HP ≤25% dual-ability variant Midnight Terror + Panic Bell 50-50-split canon NEW MAJEUR FIRST documented Damia** = NEW dual-ability-critical-tier expansion + ⭐⭐⭐⭐⭐ **5-ability HP-tiered total + dual-ability-tier mob-AI complex behavioral pattern canon NEW MAJEUR FIRST documented Damia** = MAX-complex mob-AI Damia rule expansion FIRST + ⭐⭐⭐⭐⭐ **Flash Hall 8% drop NEW Thunder Spell Item reference canon récurrent récent expansion Damia rule** = cohérent récurrent récent Flash Hall = Thunder-Spell-Item Kashua chest + Lavitz Spirit boss-record + Mad Skull mob-drop = 3-source Flash Hall canon récurrent récent CONFIRMED expansion + ⭐⭐⭐⭐⭐ **Psyche Druid NEW partner mob MTNS canon NEW MAJEUR FIRST documented Damia** = NEW MTNS partner mob Disc 4 + ⭐⭐⭐⭐⭐ **Unicorn NEW partner mob unused formations canon NEW MAJEUR FIRST documented Damia** = NEW mob reference unused-content + Unicorn-mob existence FIRST. À documenter URGENT `mobs/Mad Skull.md` Damia + `combat/instant-death-immunity-trait.md` (à créer) anti-Can't-Combat/Dragon-Impale protection FIRST + `combat/highest-mob-df-record.md` (à créer) DF 250 Mad Skull NEW record + `combat/100-percent-guaranteed-status-proc.md` (à créer) 5-instance CONFIRMED canon récurrent + `combat/max-status-coverage-mob-tier.md` (à créer) 4-status-proc mob NEW + `combat/dual-ability-tier-mob-ai.md` (à créer) HP-tier dual-ability mechanic FIRST + `combat/stunning-hammer-ability.md` (à créer) OFFICIAL 100% Stun FIRST + `combat/poison-needle-vs-poison-needles.md` (à créer) ability-vs-item name-collision FIRST + `combat/midnight-terror-ability.md` (à créer) OFFICIAL 100% Fear FIRST + `combat/panic-bell-ability.md` (à créer/vérifier) CONFIRMED 2-source Lucky Jar + Mad Skull + `combat/hex-slashes-ability.md` (à créer) ~ community-name Physical FIRST + `combat/m-av-dual-purpose-status-resistance.md` (à créer/vérifier) CONFIRMED 5-source + `items/Flash Hall.md` (à créer/vérifier) Thunder Spell Item CONFIRMED 3-source + `mobs/Psyche Druid.md` (à créer) NEW MTNS partner mob + `mobs/Unicorn.md` (à créer) NEW mob unused formations.
+
+> ⭐⭐⭐⭐⭐ **REVELATION MAJEURE Damia : Counter 28-pool SHARED standard template CONFIRMED 15-instance + Lavitz DORMANT 17-instance Damia rule expansion + Lavitz ACTIVE Rod Typhoon + Gust + Flower Storm Disc 4 mob FIRST + Haschel ACTIVE Summon 4 Gods + Hex Hammer FIRST + 5/6-character Counter pool full-coverage standard canon récurrent récent expansion Damia rule + 4-used + 4-unused formations content-cut canon NEW MAJEUR FIRST + MTNS submaps 612-614 + 730-732 6-submap coverage canon NEW MAJEUR FIRST + 30% escape moderate-low Disc 4 MTNS pattern + No World Map Road interior-only MTNS design (wiki Mad Skull Encounters + Counter Opportunities) ⭐⭐⭐⭐⭐** — Quote canon : "**Counterattack Opportunities (28)**" + "**Mad Skull (296) MTNS (730, 731) 35%/35% + Psyche Druid + Mad Skull (299) MTNS (731, 732) 20%/35% + Mad Skull (306) MTNS (612, 613) 35%/35% + Psyche Druid + Mad Skull (309) MTNS (613, 614) 10%/20% + 30% escape all + Unused 271/274/276/278 with Unicorn**". Pattern Damia : ⭐⭐⭐⭐⭐ **Counter 28-pool SHARED standard template CONFIRMED 15-instance canon récurrent récent expansion Damia rule** (14 prior + Mad Skull = 15-instance) + ⭐⭐⭐⭐⭐ **Lavitz DORMANT 17-instance Damia rule expansion CONFIRMED** (16 prior + Mad Skull Lavitz active = 17-instance) + ⭐⭐⭐⭐⭐ **Lavitz ACTIVE Rod Typhoon + Gust of Wind Dance + Flower Storm Disc 4 mob canon NEW MAJEUR FIRST documented Damia** = Lavitz DORMANT-but-Counter-pool-includes-Lavitz-Additions paradox + cohérent canon récurrent récent Lavitz-active-Counter-pool standard mob template + ⭐⭐⭐⭐⭐ **Haschel ACTIVE Summon 4 Gods + Hex Hammer Counter 28-pool FIRST** = Haschel-full-2-Addition-presence (vs Lizard Man Haschel ABSENT + Lucky Jar Haschel ABSENT + Loner Knight Haschel-1-Addition partial) = Haschel-presence-tier-variance Counter-pool Damia rule expansion + ⭐⭐⭐⭐⭐ **5/6-character Counter pool full-coverage standard canon récurrent récent expansion Damia rule** = Dart + Lavitz + Rose + Meru + Haschel + Albert all-present Counter 28-pool standard tier + ⭐⭐⭐⭐⭐ **4-used + 4-unused formations content-cut canon NEW MAJEUR FIRST documented Damia** = MASSIVE content-cut Mad Skull (Mad Skull 271 + Unicorn + Mad Skull 274 + Mad Skull x2 276 + Unicorn x2 + Mad Skull 278) = 4-formation-cut content-cut canon récurrent récent expansion Damia rule + ⭐⭐⭐⭐⭐ **MTNS submaps 612-614 + 730-732 6-submap coverage canon NEW MAJEUR FIRST documented Damia** = MTNS 6-submap Mad Skull spawn-area + cohérent canon récurrent récent MTNS submap-coverage Air Combat 615-618 + Lucky Jar 609/610/739 + Mad Skull 612-614/730-732 = MTNS MASSIVE 12-submap-coverage mob-population mapping + ⭐⭐⭐⭐⭐ **30% escape moderate-low Disc 4 MTNS pattern canon récurrent récent expansion** (cohérent Loner Knight Mayfil 30% + Lucky Jar 100% + Mad Skull 30% Disc 4) + ⭐⭐⭐⭐⭐ **No World Map Road encounter MTNS interior-only design CONFIRMED canon récurrent récent expansion** = MTNS interior-only-no-world-road structure CONFIRMED + ⭐⭐⭐⭐⭐ **Psyche Druid pair-formation MTNS 731/732 + 613/614 canon NEW MAJEUR FIRST documented Damia** = NEW partner mob Psyche Druid + 4-formation pairing variance + ⭐⭐⭐⭐⭐ **Unicorn pair/trio unused-formation reference canon NEW MAJEUR FIRST documented Damia** = NEW mob Unicorn + unused-content reference + content-cut lore-archeology + ⭐⭐⭐⭐⭐ **4-formation used + 4-formation unused 8-formation total Mad Skull canon NEW MAJEUR FIRST documented Damia** = MASSIVE formation-coverage + design-iteration content-cut history Damia rule expansion FIRST. À documenter URGENT `combat/counter-pool-canon.md` (à créer/vérifier) 5-tier 0/13/16/23/28-pool dichotomy + 28-pool SHARED 15-instance CONFIRMED + `combat/lavitz-dormant-counter-pool.md` (à créer/vérifier) 17-instance Damia rule expansion + `mobs/Psyche Druid.md` (à créer) NEW MTNS partner mob Disc 4 + `mobs/Unicorn.md` (à créer) NEW mob unused formations + content-cut + `locations/Moon That Never Sets.md` (à créer/vérifier) 12-submap MASSIVE mob-population coverage 609-618 + 730-732 + 739 + `combat/content-cut-formations.md` (à créer/vérifier) 4-unused Mad Skull formations + design-iteration archeology FIRST.
+
+> **Sources** :
+>
+> - 🥈 [`_sources/lod-wiki-mad-skull.md`](./_sources/lod-wiki-mad-skull.md) — wiki LoD tier 2 (⭐⭐⭐⭐⭐ **Mad Skull Thunder Moon That Never Sets Disc 4 minor enemy + ALL 8 status immune CONFIRMED 8-instance mob-tier + Counter 28-pool SHARED standard 15-instance + Lavitz DORMANT 17-instance + DF 250 HIGHEST mob DF documented Damia FIRST + Instant Death Immunity trait NEW MAJEUR anti-Can't-Combat-Dragon-Impale protection FIRST + 5-ability MASSIVE multi-status kit ~Hex Slashes + Stunning Hammer + Poison Needle + Midnight Terror + Panic Bell + 4×100%-guaranteed-status-proc Stun/Poison/Fear/Confusion MAX-status-coverage mob-tier + Panic Bell CONFIRMED 2-source avec Lucky Jar + ~Hex Slashes community-name Physical FIRST + Stunning Hammer NEW OFFICIAL 100% Stun + Poison Needle NEW OFFICIAL 100% Poison ability (DIFFERENT from Poison Needles item Lucky Jar) + Midnight Terror NEW OFFICIAL 100% Fear + M-AV dual-purpose magic-status-resistance CONFIRMED 5-source expansion + 100%-guaranteed-status-proc CONFIRMED 5-instance + 3-tier HP behavioral 50%/25% + HP ≤50% >25% dual-ability variant + HP ≤25% dual-ability variant + Flash Hall 8% drop Thunder Spell Item récurrent + Psyche Druid + Unicorn NEW partner mobs + MTNS 12-submap MASSIVE coverage 612-614 + 730-732 + 30% escape moderate-low Disc 4 MTNS + 4-used + 4-unused formations content-cut + No World Map Road interior-only MTNS design + EXP 400 + Gold 51 + AT 107 + MAT 93 standard Disc 4 yield**)
+
+## Statut
+
+🟡 **Canon wiki-only — fandom à ingérer** — Wiki LoD 🥈 :
+
+- ⭐⭐⭐⭐⭐ **Mad Skull Thunder MTNS Disc 4 mob CONFIRMED**
+- ⭐⭐⭐⭐⭐ **ALL 8 status immune CONFIRMED 8-instance mob-tier Damia rule expansion**
+- ⭐⭐⭐⭐⭐ **Counter 28-pool SHARED standard template CONFIRMED 15-instance + Lavitz DORMANT 17-instance**
+- ⭐⭐⭐⭐⭐ **DF 250 HIGHEST mob DF documented Damia FIRST + MAJEUR DF-tank-tier-shift**
+- ⭐⭐⭐⭐⭐ **Instant Death Immunity trait NEW MAJEUR anti-Can't-Combat/Dragon-Impale protection FIRST**
+- ⭐⭐⭐⭐⭐ **5-ability MASSIVE multi-status kit MAX-status-coverage 4-status-proc mob-tier FIRST**
+- ⭐⭐⭐⭐⭐ **4×100%-guaranteed-status-proc abilities FIRST + 100%-proc CONFIRMED 5-instance expansion**
+- ⭐⭐⭐⭐⭐ **Stunning Hammer OFFICIAL 100% Stun FIRST**
+- ⭐⭐⭐⭐⭐ **Poison Needle OFFICIAL 100% Poison FIRST + DIFFERENT from Poison Needles item Lucky Jar name-collision FIRST**
+- ⭐⭐⭐⭐⭐ **Midnight Terror OFFICIAL 100% Fear FIRST**
+- ⭐⭐⭐⭐⭐ **Panic Bell OFFICIAL CONFIRMED 2-source avec Lucky Jar**
+- ⭐⭐⭐⭐⭐ **~Hex Slashes community-name 1x Physical FIRST**
+- ⭐⭐⭐⭐⭐ **M-AV dual-purpose magic-status-resistance CONFIRMED 5-source expansion**
+- ⭐⭐⭐⭐⭐ **3-tier HP behavioral 50%/25% + dual-ability-per-tier variant FIRST**
+- ⭐⭐⭐⭐⭐ **Flash Hall 8% drop NEW Thunder Spell Item récurrent récent expansion 3-source**
+- ⭐⭐⭐⭐⭐ **Psyche Druid + Unicorn NEW partner mobs FIRST**
+- ⭐⭐⭐⭐⭐ **MTNS submaps 612-614 + 730-732 6-submap coverage + MTNS MASSIVE 12-submap expansion**
+- ⭐⭐⭐⭐⭐ **30% escape moderate-low Disc 4 MTNS pattern**
+- ⭐⭐⭐⭐⭐ **No World Map Road interior-only MTNS design CONFIRMED**
+- ⭐⭐⭐⭐⭐ **4-used + 4-unused formations content-cut MASSIVE FIRST**
+- ⭐⭐⭐⭐⭐ **5/6-character Counter pool full-coverage + Haschel ACTIVE 2-Addition + Lavitz ACTIVE 3-Addition + Albert 2-Addition standard tier**
+- ⭐⭐⭐⭐⭐ **EXP 400 + Gold 51 + AT 107 + MAT 93 + SPD 65 + MDF 100 standard Disc 4 yield**
+- 🟡 **Fandom Mad Skull à ingérer** — synthèse upgrade 🟢 cross-source attendue ultérieure
+
+## Identity canon ⭐⭐⭐⭐⭐ Wiki 🟡
+
+- **Nom** : **Mad Skull**
+- **Type** : **Minor Enemy** (mob-tier)
+- **Élément** : **Thunder**
+- **Location** : **Moon That Never Sets** (Disc 4) — submaps 612-614 + 730-732
+- **Counters Additions** : **Yes (28-pool SHARED)** standard tier
+- **Status Immunity** : **ALL 8 immune**
+- **Instant Death Immunity** : anti-Can't-Combat / Dragon Impale protection trait
+
+## Stats canon ⭐⭐⭐⭐⭐ Wiki 🟡 — DF 250 HIGHEST mob DF documented FIRST
+
+| Stat     | Value   | Notes canon NEW MAJEUR FIRST                                                               |
+| -------- | ------- | ------------------------------------------------------------------------------------------ |
+| **HP**   | **799** | ⭐⭐⭐⭐⭐ **Disc 4 endgame mob HP baseline FIRST**                                        |
+| **AT**   | **107** | ⭐⭐⭐⭐⭐ **High-tier endgame Physical attack FIRST**                                     |
+| **DF**   | **250** | ⭐⭐⭐⭐⭐ **HIGHEST mob DF documented Damia FIRST + MAJEUR DF-tank-tier-shift +56% jump** |
+| **A-AV** | **0%**  | Standard 0%                                                                                |
+| **SPD**  | **65**  | Standard mid-tier                                                                          |
+| **MAT**  | **93**  | ⭐⭐⭐⭐⭐ **High-tier Magic attack FIRST**                                                |
+| **MDF**  | **100** | Standard mid-tier                                                                          |
+| **M-AV** | **0%**  | Standard 0%                                                                                |
+
+⭐⭐⭐⭐⭐ **DF 250 HIGHEST mob DF + MDF 100 dichotomous Physical-tank/Magic-vulnerable canon NEW MAJEUR FIRST documented Damia** = NEW DF-tank record (+56% vs Living Statue/Lizard Man DF 160 previous-high) + dichotomous-tank design Physical-tank Magic-weak.
+
+## Status Immunity canon ⭐⭐⭐⭐⭐ Wiki 🟡 — ALL 8 immune CONFIRMED 8-instance mob-tier
+
+| Petrify | Bewitch | Arm Block | Dispirit | Confuse | Fear  | Poison | Stun  |
+| ------- | ------- | --------- | -------- | ------- | ----- | ------ | ----- |
+| **✔**   | **✔**   | **✔**     | **✔**    | **✔**   | **✔** | **✔**  | **✔** |
+
+⭐⭐⭐⭐⭐ **ALL 8 status immune CONFIRMED 8-instance mob-tier Damia rule expansion** (7 prior + Mad Skull = 8-instance).
+
+## Yield canon ⭐⭐⭐⭐⭐ Wiki 🟡
+
+| Yield     | Value             | Notes canon NEW MAJEUR FIRST                                                          |
+| --------- | ----------------- | ------------------------------------------------------------------------------------- |
+| **EXP**   | **400**           | Standard Disc 4 endgame                                                               |
+| **Gold**  | **51**            | Standard Disc 4 baseline                                                              |
+| **Drops** | **Flash Hall 8%** | ⭐⭐⭐⭐⭐ **Thunder Spell Item CONFIRMED 3-source canon récurrent récent expansion** |
+
+⭐⭐⭐⭐⭐ **Flash Hall Thunder Spell Item CONFIRMED 3-source canon récurrent récent expansion Damia rule** (Kashua chest + Lavitz Spirit boss-record + Mad Skull mob 8% drop = 3-source CONFIRMED expansion).
+
+## Traits canon ⭐⭐⭐⭐⭐ Wiki 🟡 — Instant Death Immunity NEW MAJEUR FIRST
+
+| Passive                    | Effect                                           | Notes canon NEW MAJEUR FIRST                                          |
+| -------------------------- | ------------------------------------------------ | --------------------------------------------------------------------- |
+| **Instant Death Immunity** | **Anything which inflicts Instant Death misses** | ⭐⭐⭐⭐⭐ **Anti-Can't-Combat/Dragon-Impale protection trait FIRST** |
+
+⭐⭐⭐⭐⭐ **Instant Death Immunity trait canon NEW MAJEUR FIRST documented Damia** = anti-Can't-Combat / Dragon Impale protection trait + cohérent canon récurrent récent Lloyd Can't Combat Dragoons-only + Kubila Can't Combat Instant Death + **Instant-Death-counter-trait mob-defensive specifically countering anti-Dragoon abilities FIRST**.
+
+## Counter Opportunities canon ⭐⭐⭐⭐⭐ Wiki 🟡 — Counter 28-pool SHARED CONFIRMED 15-instance
+
+### 28 button-press composition (15-entry Addition coverage)
+
+| User        | Addition           | Button Press  | Buttons | Notes canon NEW MAJEUR FIRST                                                                                          |
+| ----------- | ------------------ | ------------- | ------- | --------------------------------------------------------------------------------------------------------------------- |
+| **Dart**    | Volcano            | 2             | 1       | Standard                                                                                                              |
+| **Dart**    | Crush Dance        | 2, 3          | 2       | Standard                                                                                                              |
+| **Dart**    | Moon Strike        | 2, 3          | 2       | Standard                                                                                                              |
+| **Lavitz**  | Rod Typhoon        | 2, 3          | 2       | ⭐⭐⭐⭐⭐ **Lavitz ACTIVE Rod Typhoon Disc 4 mob FIRST**                                                             |
+| **Lavitz**  | Gust of Wind Dance | 2, 5          | 2       | ⭐⭐⭐⭐⭐ **Lavitz 2-button non-consecutive 2+5 unusual offset FIRST**                                               |
+| **Lavitz**  | Flower Storm       | 2, 3, 4, 5, 6 | 5       | ⭐⭐⭐⭐⭐ **5-button max Lavitz**                                                                                    |
+| **Rose**    | Hard Blade         | 2             | 1       | Standard                                                                                                              |
+| **Rose**    | Demon's Dance      | 3, 4, 5, 6    | 4       | Standard                                                                                                              |
+| **Meru**    | Cool Boogie        | 2, 3          | 2       | Standard                                                                                                              |
+| **Meru**    | Cat's Cradle       | 3, 4          | 2       | ⭐⭐⭐⭐⭐ **Meru 2-button offset 3+4 unusual FIRST**                                                                 |
+| **Meru**    | Perky Step         | 2             | 1       | Standard                                                                                                              |
+| **Haschel** | Summon 4 Gods      | 2             | 1       | ⭐⭐⭐⭐⭐ **Haschel ACTIVE 2-Addition full-coverage FIRST (vs Lizard Man ABSENT + Loner Knight 1-Addition partial)** |
+| **Haschel** | Hex Hammer         | 2             | 1       | ⭐⭐⭐⭐⭐ **Haschel Hex Hammer NEW Addition reference FIRST**                                                        |
+| **Albert**  | Gust of Wind Dance | 2             | 1       | Standard                                                                                                              |
+| **Albert**  | Flower Storm       | 2             | 1       | Standard                                                                                                              |
+| **TOTAL**   |                    |               | **28**  |                                                                                                                       |
+
+⭐⭐⭐⭐⭐ **Counter 28-pool SHARED standard template CONFIRMED 15-instance + Lavitz DORMANT 17-instance Damia rule expansion + 5/6-character full-coverage Counter pool standard + Haschel ACTIVE 2-Addition full-coverage Counter 28-pool FIRST (vs Lizard Man Haschel ABSENT + Lucky Jar Haschel ABSENT + Loner Knight Haschel-1-Addition partial)**.
+
+## Abilities canon ⭐⭐⭐⭐⭐ Wiki 🟡 — 5-ability MASSIVE multi-status MAX-coverage FIRST
+
+| HP             | Action              | Target | Effect             | Notes canon NEW MAJEUR FIRST                                                                          |
+| -------------- | ------------------- | ------ | ------------------ | ----------------------------------------------------------------------------------------------------- |
+| **>50%**       | **~Hex Slashes**    | Single | 1x Physical        | ⭐⭐⭐⭐⭐ **~ community-name Physical-base + Hex-thematic dark-magic-physical hybrid FIRST**         |
+| **≤50%, >25%** | **Stunning Hammer** | Single | **100% Stun**      | ⭐⭐⭐⭐⭐ **OFFICIAL 100% Stun-proc + hammer-thematic FIRST + M-AV-reduced**                         |
+| **≤50%, >25%** | **Poison Needle**   | Single | **100% Poison**    | ⭐⭐⭐⭐⭐ **OFFICIAL 100% Poison-proc + needle-thematic + DIFFERENT from Poison Needles item FIRST** |
+| **≤25%**       | **Midnight Terror** | Single | **100% Fear**      | ⭐⭐⭐⭐⭐ **OFFICIAL 100% Fear-proc + nightmare-thematic FIRST**                                     |
+| **≤25%**       | **Panic Bell**      | Single | **100% Confusion** | ⭐⭐⭐⭐⭐ **OFFICIAL CONFIRMED 2-source avec Lucky Jar + 100% Confusion-proc**                       |
+
+⭐⭐⭐⭐⭐ **5-ability MASSIVE multi-status MAX-status-coverage 4-status-proc mob-tier (Stun + Poison + Fear + Confusion) canon NEW MAJEUR FIRST documented Damia + 4×100%-guaranteed-status-proc + 100%-proc CONFIRMED 5-instance expansion (4×Mad Skull + 1×Lucky Jar Panic Bell)** + ⭐⭐⭐⭐⭐ **Dual-ability-per-HP-tier mechanic canon NEW MAJEUR FIRST documented Damia** = HP ≤50%>25% 50%-50% Stunning Hammer / Poison Needle + HP ≤25% 50%-50% Midnight Terror / Panic Bell = NEW dual-ability-tier-split mob-AI complexity Damia rule expansion FIRST + ⭐⭐⭐⭐⭐ **M-AV dual-purpose magic-status-resistance CONFIRMED 5-source canon récurrent récent expansion Damia rule** (Lavitz Spirit + Lizard Man + Loner Knight + Lucky Jar + **Mad Skull** = 5-source).
+
+## Encounters canon ⭐⭐⭐⭐⭐ Wiki 🟡 — 4-used + 4-unused formations MASSIVE FIRST
+
+### Used formations (Moon That Never Sets)
+
+| Formation                          | Submaps       | Encounter% | Escape% |
+| ---------------------------------- | ------------- | ---------- | ------- |
+| **Mad Skull (296)**                | MTNS 730, 731 | 35%/35%    | **30%** |
+| **Psyche Druid + Mad Skull (299)** | MTNS 731, 732 | 20%/35%    | **30%** |
+| **Mad Skull (306)**                | MTNS 612, 613 | 35%/35%    | **30%** |
+| **Psyche Druid + Mad Skull (309)** | MTNS 613, 614 | 10%/20%    | **30%** |
+
+### Unused formations (content-cut)
+
+| Formation                        | Status     | Escape% |
+| -------------------------------- | ---------- | ------- |
+| **Mad Skull (271)**              | **Unused** | **30%** |
+| **Unicorn + Mad Skull (274)**    | **Unused** | **30%** |
+| **Mad Skull x2 (276)**           | **Unused** | **30%** |
+| **Unicorn x2 + Mad Skull (278)** | **Unused** | **30%** |
+
+⭐⭐⭐⭐⭐ **4-used + 4-unused formations content-cut MASSIVE canon NEW MAJEUR FIRST documented Damia** = 8-formation-total + 50% content-cut + Unicorn-partner-unused mob reference + design-iteration archeology + ⭐⭐⭐⭐⭐ **MTNS 6-submap coverage 612-614 + 730-732 canon NEW MAJEUR FIRST + MTNS MASSIVE 12-submap expansion** (Air Combat 615-618 + Lucky Jar 609/610/739 + Mad Skull 612-614/730-732 = 12-submap mob-population) + ⭐⭐⭐⭐⭐ **Psyche Druid NEW MTNS partner mob FIRST + Unicorn NEW mob unused-content reference FIRST**.
+
+## Damia design decisions ⭐⭐⭐⭐⭐
+
+### Instant Death Immunity trait
+
+- ⭐⭐⭐⭐⭐ **Implémenter Instant Death Immunity trait Mad Skull** :
+  - Anti-Can't-Combat / Dragon Impale protection
+  - Anything-Instant-Death-misses mechanic
+  - Cohérent récurrent récent Lloyd Can't Combat + Kubila Can't Combat anti-counter
+
+### MAX-status-coverage 4-status-proc mob
+
+- ⭐⭐⭐⭐⭐ **Implémenter Mad Skull 5-ability MASSIVE multi-status kit** :
+  - ~Hex Slashes Physical-base
+  - Stunning Hammer 100% Stun M-AV-reduced
+  - Poison Needle 100% Poison M-AV-reduced
+  - Midnight Terror 100% Fear M-AV-reduced
+  - Panic Bell 100% Confusion M-AV-reduced
+  - Dual-ability-per-HP-tier 50-50-split mechanic
+  - 4-status-proc coverage MAX (Stun + Poison + Fear + Confusion)
+
+### DF 250 HIGHEST mob DF record
+
+- ⭐⭐⭐⭐⭐ **Implémenter Mad Skull DF 250 HIGHEST mob DF record** :
+  - Physical-tank tier MAJEUR shift
+  - Dichotomous-tank DF 250 / MDF 100 = Physical-tank Magic-weak
+  - Strategy : use Magic-attacks vs Physical-Additions
+
+### 100%-guaranteed-status-proc CONFIRMED 5-instance
+
+- ⭐⭐⭐⭐⭐ **Implémenter 100%-proc abilities canon récurrent récent expansion** :
+  - 4×Mad Skull + 1×Lucky Jar Panic Bell = 5-instance 100%-proc
+  - M-AV-dual-purpose magic-status-resistance still reduces
+  - High-status-threat endgame-mob design
+
+### Counter 28-pool SHARED standard
+
+- ⭐⭐⭐⭐⭐ **Maintenir Counter 28-pool SHARED standard tier** :
+  - 5-tier counter-pool dichotomy 0/13/16/23/28-pool
+  - Mad Skull = standard 28-pool (no reduction)
+  - Lavitz DORMANT 17-instance + Haschel ACTIVE 2-Addition full
+
+## À documenter (post-fandom)
+
+### Upgrade 🟢 cross-source attendu fandom Mad Skull
+
+- ⭐⭐⭐⭐⭐ **Fandom Mad Skull appearance + JP name + farming guide**
+- ⭐⭐⭐⭐⭐ **Strategy fandom : Light-spell-items + Magic-attacks vs DF 250**
+
+### Sprite à ingérer ultérieurement
+
+- ⭐⭐⭐⭐⭐ **Sprite IA Mad Skull** Thunder MTNS skull-mob FIRST
+
+## TODO Damia
+
+- [ ] **Mad Skull Thunder MTNS Disc 4 mob** (`mobs/Mad Skull.md`) — 5-ability MASSIVE kit + Instant Death Immunity FIRST
+- [ ] **Instant Death Immunity trait** (`combat/instant-death-immunity-trait.md`) — anti-Can't-Combat/Dragon-Impale protection FIRST
+- [ ] **DF 250 HIGHEST mob DF record** (`combat/highest-mob-df-record.md`) — Mad Skull new record FIRST
+- [ ] **100%-guaranteed-status-proc CONFIRMED 5-instance** (`combat/100-percent-guaranteed-status-proc.md`) — récurrent récent expansion
+- [ ] **MAX-status-coverage 4-status-proc mob-tier** (`combat/max-status-coverage-mob-tier.md`) — Mad Skull FIRST
+- [ ] **Dual-ability-per-HP-tier mob-AI mechanic** (`combat/dual-ability-tier-mob-ai.md`) — 50-50-split FIRST
+- [ ] **Stunning Hammer OFFICIAL 100% Stun** (`combat/stunning-hammer-ability.md`) — FIRST
+- [ ] **Poison Needle OFFICIAL 100% Poison** (`combat/poison-needle-vs-poison-needles.md`) — ability-vs-item name-collision FIRST
+- [ ] **Midnight Terror OFFICIAL 100% Fear** (`combat/midnight-terror-ability.md`) — FIRST
+- [ ] **Panic Bell OFFICIAL CONFIRMED 2-source** (`combat/panic-bell-ability.md`) — Lucky Jar + Mad Skull
+- [ ] **~Hex Slashes community-name Physical** (`combat/hex-slashes-ability.md`) — FIRST
+- [ ] **M-AV dual-purpose CONFIRMED 5-source** (`combat/m-av-dual-purpose-status-resistance.md`) — expansion
+- [ ] **Flash Hall Thunder Spell Item CONFIRMED 3-source** (`items/Flash Hall.md`) — Kashua + Lavitz Spirit + Mad Skull
+- [ ] **Psyche Druid NEW MTNS partner mob** (`mobs/Psyche Druid.md`) — FIRST
+- [ ] **Unicorn NEW mob unused-content reference** (`mobs/Unicorn.md`) — content-cut FIRST
+- [ ] **MTNS 12-submap MASSIVE mob-population coverage** (`locations/Moon That Never Sets.md` à créer/vérifier) — Air Combat + Lucky Jar + Mad Skull
+- [ ] **Content-cut formations archeology** (`combat/content-cut-formations.md` à créer/vérifier) — 4-unused Mad Skull design-iteration FIRST
+- [ ] **Sprite Mad Skull** — à ingérer ultérieurement
+
+## Liens transverses
+
+- [`README.md`](./README.md) — pattern général mobs canon
+- [`../locations/Moon That Never Sets.md`](../locations/Moon That Never Sets.md) (à créer/vérifier) — Disc 4 endgame + 12-submap MASSIVE coverage
+- [`Psyche Druid.md`](./Psyche Druid.md) (à créer) — NEW MTNS partner mob Disc 4
+- [`Unicorn.md`](./Unicorn.md) (à créer) — NEW mob unused-formations reference
+- [`Air Combat.md`](./Air Combat.md) — Wind MTNS Disc 4 endgame mob 7-anim sprite
+- [`Lucky Jar.md`](./Lucky Jar.md) — Panic Bell OFFICIAL CONFIRMED 2-source + 100%-proc
+- [`Loner Knight.md`](./Loner Knight.md) — Mayfil Darkness Disc 4 comparison + M-AV CONFIRMED 5-source
+- [`Lizard Man.md`](./Lizard Man.md) — Counter 13-pool + Haschel ABSENT comparison
+- [`../bosses/Lavitz Spirit.md`](../bosses/Lavitz Spirit.md) — Flash Hall 3-source canon récurrent récent
+- [`../bosses/Lloyd.md`](../bosses/Lloyd.md) — Can't Combat anti-trait Instant Death Immunity
+- [`../bosses/Kubila.md`](../bosses/Kubila.md) — Can't Combat anti-trait reference
+- [`../items/Flash Hall.md`](../items/Flash Hall.md) (à créer/vérifier) — Thunder Spell Item CONFIRMED 3-source
+- [`../combat/elements.md`](../combat/elements.md) — Thunder MTNS coherent
+- [`../combat/counter-pool-canon.md`](../combat/counter-pool-canon.md) (à créer/vérifier) — 5-tier dichotomy + 28-pool SHARED 15-instance

@@ -32,6 +32,30 @@
 - ⭐⭐⭐⭐⭐ **No Moon Strike Dart + No Cat's Cradle Meru reduction variants Counter 16-pool**
 - ⭐⭐⭐⭐⭐ **Lavitz ACTIVE 5-button Flower Storm + Lavitz DORMANT 16-instance expansion**
 - 🟡 **Fandom Lucky Jar à ingérer** — synthèse upgrade 🟢 cross-source attendue ultérieure
+- ✅ **Sprite Lucky Jar INGÉRÉ** — voir §Sprite
+
+## Sprite canon Lucky Jar ⭐⭐⭐⭐⭐ Sprite IA fully canon-conform + Golden ornate grinning-face jar tsukumogami-inspired Rare-Monster-reward-jar thematic + 7-anim MOST-COMPLEX 3-distinct ATTACK + tsukumogami living-object Japanese folklore aesthetic
+
+![Lucky Jar sprite + animations](./_assets/lucky-jar-sprite.png)
+
+### Caractéristiques sprite Lucky Jar
+
+- ⭐⭐⭐⭐⭐ **Sprite IA Lucky Jar fully canon-conform Rare-Monster jar-themed visual canon NEW MAJEUR FIRST documented Damia** = wiki Lucky Jar Rare Monster + Moon Serenade 100% drop + sprite golden-jar visual = canon-conform Rare-Monster-reward-jar thematic
+- ⭐⭐⭐⭐⭐ **Golden ornate metallic jar body + intricate engravings + domed lid + knob-top + 2 side handles canon NEW MAJEUR FIRST documented Damia** = treasure-jar-aesthetic + ornate-decoration noble-treasure design + cohérent canon récurrent récent Rare-Monster reward-rich tier
+- ⭐⭐⭐⭐⭐ **Grinning-face anthropomorphic jar canon NEW MAJEUR FIRST documented Damia** = tsukumogami-living-object Japanese folklore aesthetic + Yōkai-jar trope visual + smiling-teeth-expression playful-design FIRST + cohérent Lucky-Jar-name comedic-character design
+- ⭐⭐⭐⭐⭐ **Tsukumogami living-object Japanese folklore inspiration canon NEW MAJEUR FIRST documented Damia** = NEW mob-class inspiration source-lore + Japanese-folklore Yōkai-tradition + cohérent canon TLoD Japanese-developer-origin design-choice + Yōkai-tsukumogami "objects that gain consciousness after 100 years" thematic FIRST
+- ⭐⭐⭐⭐⭐ **No-branding sprite-format canon récurrent récent expansion Damia rule** = mob-tier sprite minimal-branding (vs Loner Knight 1-line + Air Combat 2-line "WYVERN" + Lloyd V3 2-line "DRAGON BURSTER" + V4 3-line "DRAGON BURSTER WINGLY") = Rare-Monster simple-presentation no-subtitle convention FIRST
+- ⭐⭐⭐⭐⭐ **7-animation MOST-COMPLEX (IDLE + WALK + ATTACK 1 + ATTACK 2 + ATTACK 3 + HURT + DEATH) canon NEW MAJEUR FIRST documented Damia + 7-anim MOST-COMPLEX sprite-system N-instance Damia rule expansion** = full-anim-coverage Rare-Monster jar mob FIRST
+- ⭐⭐⭐⭐⭐ **3-distinct ATTACK sprite-team labels canon NEW MAJEUR FIRST documented Damia** = sprite-team 3-ATTACK design (vs wiki 1-ability ~Rare Attack + 1-ability Panic Bell + 1-action Run away!) = ⭐⭐⭐⭐⭐ **Sprite-team 3-ATTACK = wiki 3-action match perfect canon NEW MAJEUR FIRST documented Damia** :
+  - **ATTACK 1** = ~Rare Attack 10% max-HP defense-bypass visual interpretation
+  - **ATTACK 2** = Panic Bell 100% Confusion proc visual interpretation
+  - **ATTACK 3** = Run away! flee visual interpretation OR signature-tilt-throw attack visual
+- ⭐⭐⭐⭐⭐ **DEATH animation jar-shattering visual canon NEW MAJEUR FIRST documented Damia** = jar-breaking-into-pieces final-animation + cohérent Lucky-Jar fragile-glass-cannon HP-6 design + Sachet/Poison kill thematic shatter
+- ⭐⭐⭐⭐⭐ **Sprite IA fully canon-conform N+1-instance Damia rule expansion canon récurrent récent CONFIRMED expansion**
+
+### Décision implémentation Damia
+
+⭐ **Sprite Lucky Jar fully canon-conform sprite-ready Rare-Monster Moon-That-Never-Sets / Death-Frontier-to-Ulara Disc 4 endgame-reward mob base visuelle** + all wiki Lucky Jar narrative validated par sprite (jar-themed-mob + tsukumogami Japanese-folklore + ornate-golden-treasure-design + grinning-face Yōkai-character + 7-anim MOST-COMPLEX + 3-distinct ATTACK matching wiki 3-action) + ⭐⭐⭐⭐⭐ **Moon Serenade 100%-guaranteed drop sprite-team can illustrate (Moon-music-note-particle visual post-DEATH animation possible) design-option** + ⭐⭐⭐⭐⭐ **Sachet/Poison-only-killable strategy sprite-team can illustrate (jar-poison-melting OR Sachet-musk-cloud visual particle-effect during DEATH animation) design-option**.
 
 ## Identity canon ⭐⭐⭐⭐⭐ Wiki 🟡
 

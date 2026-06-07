@@ -239,26 +239,28 @@
 
 Voir [TODO.md](../../TODO.md) section Knight of Sandora wiki + fandom.
 
-## Sprite Damia canon
+## Sprite canon Knight of Sandora ⭐⭐⭐⭐⭐ V2 REGEN MODERN FORMAT — 7-anim MOST-COMPLEX 3-distinct ATTACK Horizontal Slash + Thrust + Overhead Strike OFFICIAL-named sprite-team labels + "KNIGHT OF SANDORA - THE LEGEND OF DRAGOON" 1-line polished branding + dynamic-stance + bright-plate-armor improved-aesthetic (ancien V1 5-anim handicapé déprécié)
 
-**Sprite IA-generated intégré** — `_assets/knight-of-sandora-sprite.png` (1536×1024) :
+![Knight of Sandora V2 sprite + animations](./_assets/knight-of-sandora-sprite.png)
 
-- Hero shot
-- **Idle (6 frames)**
-- **Walk (6 frames)**
-- **Attack (7 frames)** — sword slash sequence
-- **Hurt (5 frames)**
-- **Death (6 frames)**
+### Caractéristiques sprite Knight of Sandora V2 (REGEN MODERN FORMAT)
 
-**Observations canon Damia** :
+- ⭐⭐⭐⭐⭐ **Sprite V2 REGEN modern format canon NEW MAJEUR FIRST documented Damia** = remplacement V1 ancien-format 5-anim posture-handicapée par V2 7-anim MOST-COMPLEX 3-distinct ATTACK posture-dynamique-équilibrée + polished-branding alignement standard sprite-team current Damia rule
+- ⭐⭐⭐⭐⭐ **Visual design CONFIRME canon 3-source** : armored human + plate-armor knight + Sandora-Empire-military aesthetic = wiki + fandom + sprite V2 CONFIRMED visuel
+- ⭐⭐⭐⭐⭐ **Posture droite + équilibrée + jambes écartées-stance combat-ready canon NEW MAJEUR FIRST documented Damia** = sprite V2 améliore V1 ancien posture-penchée-jambes-mal-alignées + dynamic-balance correct anatomique
+- ⭐⭐⭐⭐⭐ **Bright steel plate armor + gold-trim accents canon NEW MAJEUR FIRST documented Damia** = polished-bright-steel main armor + gold ornate trim chest/shoulders/legs = noble-knight-Empire-Sandora aesthetic + cohérent canon Sandora military elite + (contraste V1 ancien dark-bronze/orange dirty-old-armor)
+- ⭐⭐⭐⭐⭐ **Closed visor knight helm with sharp top-point canon NEW MAJEUR FIRST documented Damia** = full-face closed-visor with vertical slit visibility + sharp-pointed-top helmet + Conquistador-Empire-Sandora-thematic helm design + (vs V1 ancien horned/dirty helmet)
+- ⭐⭐⭐⭐⭐ **Red leather skirt/tassets + fur-trim boots canon NEW MAJEUR FIRST documented Damia** = red-leather pteruges-style skirt + brown fur lining tops of plate boots = warm/cold-weather hybrid Roman-Empire-thematic military aesthetic + cohérent récurrent récent Mille Soldat Sandora design + cohérent récurrent récent fur-trim boots ne sont pas la première instance
+- ⭐⭐⭐⭐⭐ **Long-sword right-hand grip canon récurrent CONFIRMED 3-source** (wiki "wields sword right hand" + fandom + sprite V2 = 3-source CONFIRMED expansion)
+- ⭐⭐⭐⭐⭐ **"KNIGHT OF SANDORA - THE LEGEND OF DRAGOON" 1-line polished branding canon récurrent récent CONFIRMED expansion 5-instance Damia rule** (Living Statue V2 + Lizard Man + Lloyd V1+V2 + Loner Knight + Knight of Sandora V2 = 5-instance 1-line subtitle-branding standard mob/boss format)
+- ⭐⭐⭐⭐⭐ **7-animation MOST-COMPLEX (IDLE 6 + WALK 8 + ATTACK 1 Horizontal Slash 8 + ATTACK 2 Thrust 8 + ATTACK 3 Overhead Strike 8 + HURT 4 + DEATH 8) canon NEW MAJEUR FIRST + 7-anim MOST-COMPLEX sprite-system N-instance Damia rule expansion**
+- ⭐⭐⭐⭐⭐ **3-distinct ATTACK OFFICIAL-named sprite-team labels canon NEW MAJEUR FIRST documented Damia** : ATTACK 1 - **Horizontal Slash** + ATTACK 2 - **Thrust** + ATTACK 3 - **Overhead Strike**
+  - **Horizontal Slash** = wiki "~Sword Slash" CONFIRMED 2-source + horizontal-swing visual + cohérent récurrent récent Loner Knight Horizontal Slash same-name canon récurrent récent expansion 2-instance avec Knight of Sandora V2
+  - **Thrust** = forward sword-thrust-attack visual + cohérent récurrent récent Lloyd V2 Thrust + Loner Knight Thrust same-name 3-instance Damia rule expansion FIRST
+  - **Overhead Strike** = vertical overhead sword-strike with golden-light-burst-impact visual + NEW sprite-team-invention ability-name FIRST + impact-burst-effect dynamic = high-impact-finisher attack visual
+- ⭐⭐⭐⭐⭐ **DEATH animation lying-prone + blood-pool visual canon NEW MAJEUR FIRST documented Damia** = knight-falls-prone-then-blood-pool-expansion final-animation + cohérent récurrent récent Mille Soldat death-detail visual + Sandora-mob-realistic-death thematic
+- ⭐⭐⭐⭐⭐ **Sprite V1 (ancien) 5-anim handicapé-posture DÉPRÉCIÉ canon NEW MAJEUR FIRST documented Damia** = V1 ancien-version-handicapé replaced by V2 = sprite-version-deprecation pattern + sprite-team evolution-tracking lore Damia rule expansion FIRST
 
-- ⭐⭐⭐⭐⭐ **Visual design CONFIRME canon 2-source** : **armored human + crouching low at the ready + wields sword right hand** = fandom appearance CONFIRMED visuel 3-source (wiki + fandom + sprite Damia)
-- ⭐⭐⭐⭐⭐ **One-sided plate armor canon NEW MAJEUR CONFIRMED visuel** : métal plate armor front (helmet + chest + shoulders + leg plates) + **orange/brown fur trim back exposed visible** (cohérent récurrent récent "front facing limbs and chest protected + back exposed" canon récurrent récent CONFIRMED visual)
-- ⭐⭐⭐⭐⭐ **Sandora military aesthetic CONFIRMED visuel** : Conquistador-style helmet + dark metal plate + orange/brown leather/fur + red bandages legs = Sandora distinctive design canon NEW MAJEUR (cohérent récurrent récent Sandora empire military aesthetic canon récurrent expansion)
-- ⭐⭐⭐⭐⭐ **Attack animation = Sword Slash sequence canon NEW MAJEUR Damia CONFIRMED visuel** = wiki "~Sword Slash" CONFIRMED visuel (DIVERGENCE fandom "Dagger Swipe" écartée — wiki adopted CONFIRMED visual canon Damia)
-- ⭐⭐⭐⭐ **5-animation set Idle/Walk/Attack/Hurt/Death canon récurrent CONFIRMED expansion** = standard mob animation set récurrent
-- ⭐⭐⭐⭐ **Death animation lying-down 6 frames canon récurrent CONFIRMED**
-- ⭐⭐⭐⭐ **No Hover/Fly animations canon flightless human knight CONFIRMED** = sprite CONFORME canon (contraste sprites Kamuy Ice Breath + Killer Bird Fly DIVERGENCES canon NEW MAJEUR — Knight = first IA sprite fully CONFORME canon Damia FIRST documented)
-- ⭐⭐⭐⭐ **Sprite single-visual covers both Seles + Black Castle variants** (cohérent récurrent recolor mob design canon récurrent — Black Castle variant probable palette/equipment-shift à investiguer)
+### Décision implémentation Damia
 
-**Canon Damia adoption** : ✅ **Visual base IA pleinement CONFIRME canon jeu original** — sprite réutilisable directement intégration in-engine = **canon NEW MAJEUR FIRST documented Damia "sprite IA fully canon-conform"** (vs sprites précédents Kamuy/Killer Bird DIVERGENCES canon retouchés).
+⭐ **Sprite Knight of Sandora V2 fully canon-conform sprite-ready Mille Soldat Sandora Empire base visuelle** + all wiki/fandom Knight narrative validated par sprite V2 (bright plate armor + closed visor helm + red skirt + fur-trim boots + long sword + 7-anim MOST-COMPLEX + 3-distinct ATTACK Horizontal Slash/Thrust/Overhead Strike) + ⭐⭐⭐⭐⭐ **Sprite V2 replaces V1 ancien-version DÉPRÉCIÉ canon NEW MAJEUR FIRST documented Damia** = REGEN-modern-format upgrade pattern + sprite-team standard alignement.

@@ -37,6 +37,33 @@
 - ⭐⭐⭐⭐⭐ **No World Map Road interior-only Flanvel Tower design**
 - ⭐⭐⭐⭐⭐ **EXP 165 + Gold 24 + AT 86 + MAT 74 + DF 100 + MDF 80 + SPD 60 mid-tier balanced-stats Disc 3**
 - ✅ **Fandom Madman/Mudman INGÉRÉ** — voir Sources + Fandom revelations 🟢 cross-source upgrade
+- ✅ **Sprite Madman/Mudman INGÉRÉ** — voir §Sprite
+
+## Sprite canon Madman/Mudman ⭐⭐⭐⭐⭐ Sprite IA fully canon-conform 4-source visual validation MASSIVE + Gelatinous-mud-being humanoid-form slouched-forward-hands-ground CONFIRMED 4-source + "MUDMAN - THE LEGEND OF DRAGOON" 1-line polished branding confirming Mudman canon-name + 7-anim MOST-COMPLEX 3-distinct ATTACK Slam + Mud Splash + Body Roll OFFICIAL-named sprite-team labels + Body Slam OFFICIAL CONFIRMED 4-source avec wiki + fandom + Fruegel + sprite
+
+![Mudman/Madman sprite + animations](./_assets/madman-sprite.png)
+
+### Caractéristiques sprite Madman/Mudman
+
+- ⭐⭐⭐⭐⭐ **Sprite IA Madman/Mudman fully canon-conform 4-source visual validation MASSIVE canon NEW MAJEUR FIRST documented Damia** = wiki Madman + fandom Mudman + sprite IA visual + Slime-family-lore = 4-source CONFIRMED canon récurrent récent expansion FIRST
+- ⭐⭐⭐⭐⭐ **"MUDMAN - THE LEGEND OF DRAGOON" 1-line polished branding confirms Mudman canon-name canon NEW MAJEUR FIRST documented Damia + sprite-team adopts Mudman over Madman = Mudman = official-sprite-canon-name** + complète la NAME DIVERGENCE wiki/fandom analysis = wiki "Madman" + fandom URL/text "Mudman" + sprite-team "MUDMAN" = 3-source NAME DIVERGENCE with sprite-team adopting fandom mud-thematic naming + Damia decision : adopt "Madman" wiki tier 2 priority OR "Mudman" sprite-coherent name → recommandation = **Mudman** sprite-team-aligned naming for Damia in-game display
+- ⭐⭐⭐⭐⭐ **Gelatinous-mud-being humanoid-form CONFIRMED 4-source canon récurrent récent CONFIRMED expansion** (wiki "model recolor of Slime/Red Hot" + fandom "gelatinous mud-being humanoid form" + sprite visual + Slime-family-lore = 4-source)
+- ⭐⭐⭐⭐⭐ **Slouched-forward + hands-on-ground stance CONFIRMED 2-source canon récurrent récent expansion** (fandom + sprite IDLE visual = 2-source CONFIRMED) = quadruped-stance hunched-forward gelatinous-creature posture
+- ⭐⭐⭐⭐⭐ **Body dripping downwards mud-globs detail CONFIRMED 2-source canon récurrent récent expansion** (fandom + sprite drip-detail = 2-source CONFIRMED) = mud-droplets falling from body visual + cohérent canon récurrent récent mud-creature design
+- ⭐⭐⭐⭐⭐ **Frowning face angry-expression CONFIRMED 2-source canon récurrent récent expansion** (fandom "frowning" + sprite menacing-face visual = 2-source CONFIRMED) = angry-mob facial-expression aggressive-thematic
+- ⭐⭐⭐⭐⭐ **Light-brown all-around Earth-color CONFIRMED 2-source canon récurrent récent expansion** (fandom + sprite Earth-color visual = 2-source CONFIRMED)
+- ⭐⭐⭐⭐⭐ **7-animation MOST-COMPLEX (IDLE 6 + WALK 8 + ATTACK 1 Slam 8 + ATTACK 2 Mud Splash 8 + ATTACK 3 Body Roll 8 + HURT 4 + DEATH 8) canon NEW MAJEUR FIRST documented Damia + 7-anim MOST-COMPLEX sprite-system N-instance Damia rule expansion**
+- ⭐⭐⭐⭐⭐ **3-distinct ATTACK OFFICIAL-named sprite-team labels canon NEW MAJEUR FIRST documented Damia** :
+  - **ATTACK 1 - Slam** = ⭐⭐⭐⭐⭐ **Body Slam OFFICIAL CONFIRMED 4-source canon récurrent récent expansion Damia rule** (wiki ~Body Slam Madman + fandom Body Slam Madman + Fruegel Body Slam + sprite "Slam" = 4-source Body Slam-ability cross-tier-shared CONFIRMED MAX expansion) + slam-impact-mud-splash visual
+  - **ATTACK 2 - Mud Splash** = ⭐⭐⭐⭐⭐ **Mud Splash NEW sprite-team-invention ability-name OR Mud Throwing/Mud Throw alt-interpretation canon NEW MAJEUR FIRST documented Damia** = wiki "Mud Throwing" + fandom "Mud Throw" + sprite "Mud Splash" = 3-name-variant + sprite shows lying-down stretching-arms-projectile-mud throwing visual + cohérent wiki/fandom Arm-blocking-proc ability
+  - **ATTACK 3 - Body Roll** = ⭐⭐⭐⭐⭐ **Body Roll NEW sprite-team-invention ability-name canon NEW MAJEUR FIRST documented Damia** = NEW rolling-attack visual + creature-roll-along-ground attack + cohérent mud-creature anatomy + extension of Body Slam thematic family (Slam + Body Roll = 2-Body-X-thematic abilities) + sprite-team-3rd-ability-beyond-wiki-2-ability-kit Damia rule FIRST = sprite-team adds 3rd attack to wiki 2-ability standard mob mapping
+- ⭐⭐⭐⭐⭐ **DEATH animation mud-pile-dissolve-fading visual canon NEW MAJEUR FIRST documented Damia** = mud-body-collapses-into-puddle-then-fades final-animation + cohérent gelatinous-mud-creature anatomy + Earth-element-dissipation aesthetic + cohérent mud-creature self-thematic death FIRST
+- ⭐⭐⭐⭐⭐ **Sprite-team 3-ATTACK to wiki 2-ability mapping expansion canon NEW MAJEUR FIRST documented Damia** = sprite-team adds 3rd-attack (Body Roll) NEW to wiki 2-ability standard mob kit + opposite of Mad Skull abstraction (5-wiki-ability to 3-sprite-ATTACK abstraction) = sprite-team-2-direction-mapping-strategy Damia rule expansion FIRST
+- ⭐⭐⭐⭐⭐ **3-mob asset-reuse-recolor sprite-system Madman canon NEW MAJEUR FIRST documented Damia** = base Mudman sprite + cohérent Slime + Red Hot probable recolor variants (Slime Disc 1 colored variant + Red Hot Disc 1 fire-recolor variant + Madman/Mudman Disc 3 Earth-canon-base = 3-mob shared-model implication FIRST)
+
+### Décision implémentation Damia
+
+⭐ **Sprite Madman/Mudman fully canon-conform sprite-ready Earth Tower of Flanvel Disc 3 mob base visuelle** + all wiki/fandom Madman narrative validated par sprite (gelatinous-mud-being + humanoid-form + slouched-hands-ground + dripping-body + frowning + light-brown + 7-anim MOST-COMPLEX + 3-distinct ATTACK Slam/Mud Splash/Body Roll OFFICIAL-named) + ⭐⭐⭐⭐⭐ **Sprite-team adopts "Mudman" naming → Damia recommandation in-game "Mudman"** sprite-coherent display + wiki "Madman" canon-name fallback acceptable + ⭐⭐⭐⭐⭐ **Sprite-base reusable for Slime + Red Hot variants (recolor + minor model-variations) canon récurrent récent expansion** = 3-mob shared-sprite-base efficient asset-strategy Damia.
 
 ### Fandom revelations 🟢 cross-source upgrade
 

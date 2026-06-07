@@ -35,6 +35,32 @@
 - ⭐⭐⭐⭐⭐ **5/6-character Counter pool full-coverage + Haschel ACTIVE 2-Addition + Lavitz ACTIVE 3-Addition + Albert 2-Addition standard tier**
 - ⭐⭐⭐⭐⭐ **EXP 400 + Gold 51 + AT 107 + MAT 93 + SPD 65 + MDF 100 standard Disc 4 yield**
 - 🟡 **Fandom Mad Skull à ingérer** — synthèse upgrade 🟢 cross-source attendue ultérieure
+- ✅ **Sprite Mad Skull INGÉRÉ** — voir §Sprite
+
+## Sprite canon Mad Skull ⭐⭐⭐⭐⭐ Sprite IA fully canon-conform Thunder-magic floating-skeletal-skull spider-limbs purple-magic-aura + 7-anim MOST-COMPLEX 3-distinct ATTACK purple-magic-effects mapping wiki 5-ability multi-status kit + 2-instance floating-undead-mob avec Loner Knight
+
+![Mad Skull sprite + animations](./_assets/mad-skull-sprite.png)
+
+### Caractéristiques sprite Mad Skull
+
+- ⭐⭐⭐⭐⭐ **Sprite IA Mad Skull fully canon-conform Thunder-magic floating-skeletal-skull visual canon NEW MAJEUR FIRST documented Damia** = wiki Thunder MTNS mob + sprite IA visual = canon-conform Thunder-electric-purple-magic aesthetic
+- ⭐⭐⭐⭐⭐ **Floating-skeletal-skull body anatomy canon NEW MAJEUR FIRST documented Damia** = NEW skull-creature anatomy + bones-thematic + cohérent canon récurrent récent floating-mob design + ⭐⭐⭐⭐⭐ **2-instance floating-undead-mob Damia rule expansion CONFIRMED** (Loner Knight humanoid-corpse-floating + Mad Skull skeletal-skull-floating = 2-instance floating-undead-mob-class canon récurrent récent CONFIRMED expansion)
+- ⭐⭐⭐⭐⭐ **4-spider-skeletal-arms 8-limb-total octoped anatomy canon NEW MAJEUR FIRST documented Damia** = NEW arachnoid-skeletal-limb anatomy + creepy-spider-body + 4-pair-bone-claws design + cohérent récurrent récent Yōkai-Japanese-folklore design-aesthetic (similaire Tsukumogami Lucky Jar)
+- ⭐⭐⭐⭐⭐ **Purple-glowing-eyes Thunder-magic visual canon NEW MAJEUR FIRST documented Damia** = NEW eye-color purple-glowing + Thunder-element-coherent dark-magic-aesthetic + cohérent canon récurrent récent Thunder-magic-purple visual TLoD design
+- ⭐⭐⭐⭐⭐ **Purple/violet magical aura particles around body canon NEW MAJEUR FIRST documented Damia** = NEW magical-aura visual effect + Thunder-magic-particles + cohérent 5-ability MASSIVE multi-status kit (Stunning Hammer + Poison Needle + Midnight Terror + Panic Bell + ~Hex Slashes) magic-visual-coherent + Hex-thematic dark-magic
+- ⭐⭐⭐⭐⭐ **No-branding sprite-format canon récurrent récent expansion Damia rule** = mob-tier sprite minimal-branding (cohérent Lucky Jar no-branding pattern Rare-Monster/Minor-Enemy tier sprite-format simple presentation CONFIRMED 2-instance avec Lucky Jar + Mad Skull)
+- ⭐⭐⭐⭐⭐ **7-animation MOST-COMPLEX (IDLE + WALK + ATTACK 1 + ATTACK 2 + ATTACK 3 + HURT + DEATH) canon NEW MAJEUR FIRST documented Damia + 7-anim MOST-COMPLEX sprite-system N-instance Damia rule expansion**
+- ⭐⭐⭐⭐⭐ **3-distinct ATTACK sprite-team labels canon NEW MAJEUR FIRST documented Damia + 3-ATTACK = wiki 5-ability HP-tier abbreviated mapping** : sprite-team 3-ATTACK représente 5-ability HP-tier categorization simplifié :
+  - **ATTACK 1** = ~Hex Slashes Physical-base HP >50% visual interpretation (Physical Hex-slash)
+  - **ATTACK 2** = Stunning Hammer / Poison Needle dual-mid-tier HP ≤50%>25% visual interpretation (purple-magic-projectile status-proc)
+  - **ATTACK 3** = Midnight Terror / Panic Bell dual-critical-tier HP ≤25% visual interpretation (MASSIVE purple-magic-burst Fear/Confusion status-proc)
+- ⭐⭐⭐⭐⭐ **Purple-magic-projectile + purple-magic-burst ATTACK effects sprite-team interpretation 5-ability MASSIVE kit visual abstraction canon NEW MAJEUR FIRST documented Damia** = NEW sprite-team-abstraction technique 5-ability-to-3-ATTACK mapping FIRST documented Damia rule
+- ⭐⭐⭐⭐⭐ **DEATH animation skull-shatter-purple-particles visual canon NEW MAJEUR FIRST documented Damia** = skull-explosion-purple-magic-dissipation final-animation + cohérent Thunder-magic mob-death aesthetic
+- ⭐⭐⭐⭐⭐ **Mad Skull DF 250 HIGHEST mob DF physical-tank visual coherent** = sprite skeletal-spider visual + bone-armor implicit + cohérent DF 250 physical-tank-tier visual lore FIRST
+
+### Décision implémentation Damia
+
+⭐ **Sprite Mad Skull fully canon-conform sprite-ready Thunder MTNS Disc 4 endgame-mob base visuelle** + all wiki Mad Skull narrative validated par sprite (Thunder-purple-magic + floating-skeletal-skull + 4-spider-limbs octoped + purple-glowing-eyes + purple-aura-particles + 7-anim MOST-COMPLEX + 3-ATTACK sprite-team-abstraction-of-5-ability-kit) + ⭐⭐⭐⭐⭐ **Sprite-team 3-ATTACK to 5-ability-wiki kit mapping abstraction Damia rule expansion FIRST documented** = mob-with-5+-abilities sprite-team 3-ATTACK abstraction technique applicable to other MASSIVE-kit mobs.
 
 ## Identity canon ⭐⭐⭐⭐⭐ Wiki 🟡
 

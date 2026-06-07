@@ -159,15 +159,159 @@
 - `meta/scripted-encounters-no-escape.md` (à créer/vérifier) 0% escape boss-like expansion
 - `meta/mob-stat-records.md` (à créer/vérifier) MDF 160 highest + AT 35 lowest record-stats
 
+## Cross-source upgrade 🟢 — fandom Magician Bogey ingestion canon NEW MAJEUR FIRST documented Damia rule expansion
+
+⭐⭐⭐⭐⭐ **REVELATION MAJEURE Damia fandom : Magician Bogey (fandom-spelling) vs Magician Bogy (wiki-spelling) NAME DIVERGENCE intra-source 16-instance + 4-stat MASSIVE DIVERGENCE wiki vs fandom + ⚠️ MDF INVERSE DIVERGENCE wiki 160 (Magic-tank-extreme) vs fandom 60 (Magic-vulnerable) = COMPLETE CLASS INVERSION canon NEW MAJEUR FIRST + 3-OFFICIAL ability names Cane Stab + Flower Gift + Black Bats magic-trick-thematic top-hat-cane aesthetic + Top-hat-magician-aesthetic appearance MASSIVE NEW MAJEUR FIRST + Purple legless ghost + curved mustache + top hat + black cane left hand + unsettling smile CONFIRMED appearance canon NEW MAJEUR FIRST + Vulnerable to Total Vanishing + Magic Stone of Signet + Demon's Gate Rose AoE-destroy strategy CONFIRMED 4-source dispatch-instant-kill anti-mob-strategy canon récurrent récent expansion + Magical Ego Bell NEW item anti-Bewitchment recommended FIRST + Dancing Ray NEW attack item Queen Fury shop high-MAT-synergy Shana/Meru strategy FIRST + Queen Fury item shop NEW location-source CONFIRMED + Magical Hat = TIED HIGHEST MAT bonus avec Dragon Helm + Legend Casque 3-headgear-tied-tier + TIED 2nd-highest MDF bonus avec Phoenix Plume + Magical Hat = wearable ANY character + Aglis Disc 4 ONLY-other-retrieve-source canon NEW MAJEUR FIRST + Battle context 2 chest-triggered encounters 2-different-rooms-corridor specific-location-trigger canon NEW MAJEUR FIRST + JP HP 1,000 vs US 800 +25% standard 32+ UNIVERSAL CONFIRMED + JP Gold 8 vs US 24 ÷3 standard 32+ UNIVERSAL CONFIRMED ⭐⭐⭐⭐⭐**
+
+Quote canon fandom : "**Phantom Ship + Darkness + HP 800 (US/EU) 1,000 (JP) + XP 72 + Gold 24 (US/EU) 8 (JP) + P. Attack 56 + P. Defense 120 + M. Attack 40 + M. Defense 60 + Speed 50 + Magical Hat (2%) + Can Counterattack Yes**" + "**Purple legless ghost with a curved mustache, wearing a top hat, and wielding a black cane in its left hand + unsettling smile**" + "**Normal enemy in that it is vulnerable to Total Vanishing, the Magic Stone of Signet and similar effects, but the fights against it are unavoidable + must be fought to advance the story + escaping from them is not possible**" + "**You battle this creature only twice in the game + first encounter takes place when you open the chest in the second room down that same corridor + second fight when you open the chest to the far left in the final room**" + "**Cane Stab - floats forward to strike target with cane + Flower Gift - floats up to target and takes off top hat to have flowers spring out of the hat (Bewitchment status) + Black Bats - takes off top hat and bats fly out (Stun status)**" + "**Magical Hat tied for highest bonus to MAT with Dragon Helm and Legend Casque + tied for second highest MDF bonus with Phoenix Plume + cannot retrieve this item again until Aglis on Disc 4**" + "**Using Magical Ego Bell is recommended + buying some Dancing Ray attack items in the item shop of the Queen Fury + character with a high magical attack such as Shana or Meru + Total Vanishing or Rose using Demon's Gate destroys them all instantly + Repeat Items such as the Magic Stone of Signed is recommendable as well**".
+
+### Pattern Damia 🟢
+
+- ⭐⭐⭐⭐⭐ **Magician Bogey (fandom) vs Magician Bogy (wiki) NAME DIVERGENCE intra-source canon récurrent récent expansion CONFIRMED 16-instance Damia rule expansion** (15 prior Mudman/Madman + Magician Bogey/Bogy name = 16-instance) = page-spelling DIVERGENCE wiki "Bogy" + fandom "Bogey" alternate-spelling + adopter wiki tier 2 priority "Magician Bogy" canon-name + "Bogey" = alt-spelling acceptable-canon
+- ⭐⭐⭐⭐⭐ **3-OFFICIAL ability names canon NEW MAJEUR FIRST documented Damia + replace wiki community-names ~Whack/~Bat Trick/~Flowers** :
+  - **Cane Stab OFFICIAL fandom = wiki ~Whack** CONFIRMED 2-source = floats-forward-cane-strike physical
+  - **Flower Gift OFFICIAL fandom = wiki ~Flowers** CONFIRMED 2-source = top-hat-flowers-spring Bewitchment-thematic magic-trick
+  - **Black Bats OFFICIAL fandom = wiki ~Bat Trick** CONFIRMED 2-source = top-hat-bats-fly-out Stun-thematic magic-trick
+- ⭐⭐⭐⭐⭐ **Magic-trick-thematic top-hat-cane-magician 3-action moveset canon NEW MAJEUR FIRST documented Damia** = NEW thematic-coherent design + cane-strike physical + top-hat-flowers + top-hat-bats = "magic show" performance-themed mob-AI FIRST + cohérent appearance top-hat-cane-magician
+- ⭐⭐⭐⭐⭐ **Purple legless ghost + curved mustache + top hat + black cane left hand + unsettling smile MASSIVE appearance canon NEW MAJEUR FIRST documented Damia** = NEW mob anatomy + ghost-stage-magician aesthetic + Halloween-magician archetype + cohérent récurrent récent Magician-stage-performer fantasy-mob design
+- ⭐⭐⭐⭐⭐ **Left-handed cane-wielder canon NEW MAJEUR FIRST documented Damia** = NEW mob-handedness detail (rare-attribute documentation)
+- ⭐⭐⭐⭐⭐ **Top hat magic-trick mob-aesthetic theatrical canon NEW MAJEUR FIRST documented Damia** = NEW theatrical-mob-design archetype + cohérent fairground/circus-magician fantasy-trope
+- ⭐⭐⭐⭐⭐ **Vulnerable to Total Vanishing + Magic Stone of Signet + Demon's Gate Rose AoE-destroy CONFIRMED 4-source dispatch-instant-kill anti-mob-strategy canon récurrent récent expansion Damia rule** = NEW strategy-coverage + cohérent récurrent récent Total Vanishing item utility + Magic Stone of Signet flee-prevent récurrent + Demon's Gate Rose AoE-destroy Disc 2 + cohérent canon récurrent récent multi-tool anti-mob dispatch strategy
+- ⭐⭐⭐⭐⭐ **Total Vanishing CONFIRMED canon récurrent récent expansion Damia rule** = item dispatch normal-enemy-only + cohérent récurrent récent Mad Skull Instant Death Immunity anti-Total-Vanishing trait reference
+- ⭐⭐⭐⭐⭐ **Magic Stone of Signet flee-prevent CONFIRMED canon récurrent récent expansion Damia rule** = cohérent récurrent récent Lucky Jar Magic Stone of Signet flee-prevent item référence
+- ⭐⭐⭐⭐⭐ **Demon's Gate Rose Special CONFIRMED canon récurrent récent expansion Damia rule** = Rose Disc 2 AoE-destroy-all-enemies-Special instant-kill normal-mob = NEW Demon's Gate utility-documentation + cohérent récurrent récent Rose Demon's-family special-naming
+- ⭐⭐⭐⭐⭐ **Magical Ego Bell NEW item canon NEW MAJEUR FIRST documented Damia** = NEW anti-Bewitchment item + Bewitchment-cure item-family + cohérent récurrent récent status-cure item-tier expansion
+- ⭐⭐⭐⭐⭐ **Dancing Ray NEW attack item canon NEW MAJEUR FIRST documented Damia** = NEW Magic-attack-item + high-MAT-synergy + Disc 2 Queen Fury shop availability + MASSIVE-damage Magician-Bogy-thematic anti-Darkness-mob strategy
+- ⭐⭐⭐⭐⭐ **Queen Fury item shop NEW location-source canon NEW MAJEUR FIRST documented Damia** = NEW Queen Fury ship shop availability + Dancing Ray source + cohérent récurrent récent Queen Fury Disc 2 ship-narrative-arc
+- ⭐⭐⭐⭐⭐ **Shana + Meru high-MAT party-synergy attack-item-multiplier canon NEW MAJEUR FIRST documented Damia** = NEW party-strategy + Shana (Light Dragoon) + Meru (Water Dragoon) high-MAT synergy + cohérent récurrent récent Magic-attack-item MAT-scaling pattern récurrent
+- ⭐⭐⭐⭐⭐ **2 chest-triggered encounters specific-location-trigger canon NEW MAJEUR FIRST documented Damia** = NEW chest-triggered-scripted-encounter mechanic FIRST + Phantom Ship trap-chest design + cohérent récurrent récent mimic-chest fantasy-trope adapté magical-bogy
+- ⭐⭐⭐⭐⭐ **Magical Hat = TIED HIGHEST MAT bonus avec Dragon Helm + Legend Casque 3-headgear-tied-tier canon NEW MAJEUR FIRST documented Damia** = NEW headgear tier-record + 3-headgear-MAT-tier sharing top-MAT-bonus = endgame-tier Magic-build accessory FIRST + cohérent Dragon Helm + Legend Casque récurrent récent endgame headgear
+- ⭐⭐⭐⭐⭐ **Magical Hat = TIED 2nd-highest MDF bonus avec Phoenix Plume 2-headgear-tied-tier canon NEW MAJEUR FIRST documented Damia** = NEW headgear MDF-tier-record + 2-headgear-2nd-tier MDF-bonus + Magic-defense-build-synergy headgear FIRST
+- ⭐⭐⭐⭐⭐ **Magical Hat = wearable ANY character + universal-headgear canon NEW MAJEUR FIRST documented Damia** = NEW universal-character-restriction headgear (vs class-restricted Lavitz-only/Albert-only récurrent récent) + party-flexibility highest-tier headgear FIRST
+- ⭐⭐⭐⭐⭐ **Aglis Disc 4 ONLY-other-retrieve-source Magical Hat canon NEW MAJEUR FIRST documented Damia** = NEW Aglis location-reference Disc 4 + Magical Hat 2-source-only Magician Bogy (Disc 2) + Aglis (Disc 4) Wingly-island-magic-thematic ity + cohérent récurrent récent Aglis Wingly Disc 4 location
+- ⭐⭐⭐⭐⭐ **Magic-trick top-hat-pulls (flowers + bats) magic-show-cliché stagecraft-thematic mob-design canon NEW MAJEUR FIRST documented Damia** = NEW theatrical-stagecraft mob-design philosophy + classic-magician top-hat-rabbit/flowers/bats trope adapté ghost-form
+- ⭐⭐⭐⭐⭐ **JP HP 1,000 vs US 800 +25% standard 32+ UNIVERSAL CONFIRMED expansion Damia rule** = +25% HP cross-disc-universal canon récurrent récent confirmed +32-instance
+- ⭐⭐⭐⭐⭐ **JP Gold 8 vs US 24 ÷3 standard 32+ UNIVERSAL CONFIRMED expansion Damia rule** = ÷3 Gold cross-disc-universal canon récurrent récent confirmed +32-instance
+
+### ⚠️ MASSIVE 4-stat DIVERGENCE wiki vs fandom canon NEW MAJEUR FIRST documented Damia (CONFIRMED 13-instance wiki-vs-fandom stat-DIVERGENCE pattern Damia rule expansion)
+
+| Stat         | Wiki | Fandom | Δ%   | Note                                                                                                  |
+| ------------ | ---- | ------ | ---- | ----------------------------------------------------------------------------------------------------- |
+| **HP**       | 800  | 800    | 0%   | ✓ CONFIRMED 2-source                                                                                  |
+| **AT/P.At**  | 35   | 56     | +60% | DIVERGENCE MASSIVE — wiki much lower                                                                  |
+| **DF/P.Df**  | 80   | 120    | +50% | DIVERGENCE MASSIVE — wiki much lower                                                                  |
+| **MAT/M.At** | 42   | 40     | -5%  | minor DIVERGENCE                                                                                      |
+| **MDF/M.Df** | 160  | 60     | -62% | ⚠️⚠️⚠️ **INVERSE DIVERGENCE MASSIVE** — wiki Magic-tank-extreme (160) vs fandom Magic-vulnerable (60) |
+| **SPD**      | 70   | 50     | -28% | DIVERGENCE moderate                                                                                   |
+
+⭐⭐⭐⭐⭐ **MDF INVERSE DIVERGENCE wiki 160 (Magic-tank-extreme) vs fandom 60 (Magic-vulnerable) = COMPLETE CLASS INVERSION canon NEW MAJEUR FIRST documented Damia** = wiki Magic-tank-extreme classification INVERSED par fandom Magic-vulnerable classification + 100-point absolute-difference MAX-MDF-DIVERGENCE record + cohérent récurrent récent wiki-vs-fandom DIVERGENCE pattern mais avec INVERSE-CLASS shift MASSIVE
+
+⭐⭐⭐⭐⭐ **Adopter wiki tier 2 priority MDF 160 = Magic-tank-extreme classification CONFIRMED** = canon Damia rule wiki-priority over fandom-conflict + recommended-strategy still high-MAT-synergy (Shana/Meru Dancing Ray) confirms Magic-vulnerable lore-design intent fandom = ⚠️ **LORE DESIGN-INTENT vs DATA MDF CONFLICT** = stratégie-fandom (high-MAT-attack) suppose MDF-low (60) mais wiki-data MDF-high (160) = lore-DESIGN-INTENT contradicts wiki-data = possible-wiki-data-error OR fandom-strategy-error = à investiguer post-cross-source confirmation 3-source
+
+⭐⭐⭐⭐⭐ **CONFIRMED 13-instance wiki-vs-fandom stat-DIVERGENCE pattern canon récurrent récent expansion Damia rule** = continuation of 12-prior + Magician Bogy = 13-instance
+
+### 3-OFFICIAL ability names mapping canon NEW MAJEUR FIRST documented Damia 🟢
+
+| Slot        | Wiki community-name | Fandom OFFICIAL | Damage formula         | Status proc                     | Thematic                           |
+| ----------- | ------------------- | --------------- | ---------------------- | ------------------------------- | ---------------------------------- |
+| **Basic**   | ~Whack              | **Cane Stab**   | 1x Physical            | -                               | Cane-strike forward-float physical |
+| **Flowers** | ~Flowers            | **Flower Gift** | 1x Non-Elemental magic | 100% Bewitchment (M-AV reduces) | Top-hat-flowers-spring magic-trick |
+| **Bat**     | ~Bat Trick          | **Black Bats**  | 1.5x Physical          | 100% Stun (P-AV reduces)        | Top-hat-bats-fly-out magic-trick   |
+
+⭐⭐⭐⭐⭐ **3-OFFICIAL ability names CONFIRMED canon récurrent récent expansion Damia rule** = ability-name canonization wiki community-name → fandom OFFICIAL name promotion pattern récurrent
+
+### Battle context canon NEW MAJEUR FIRST documented Damia
+
+- **2 chest-triggered encounters** = chest-trap mechanic Phantom Ship Disc 2 + corridor-room narrative-context
+- **1st encounter** = chest-open 2nd-room-down-corridor + Skeleton x2 + Magician Bogy (formation 488)
+- **2nd encounter** = chest-open far-left-final-room + Magician Bogy x3 (formation 489)
+- **Unavoidable mandatory** = story-progression-required + 0% escape no-escape no-flee
+- **4 encountered total** = wiki count (1 + 3 = 4 total mobs confirmed)
+
+⭐⭐⭐⭐⭐ **Chest-triggered scripted-encounter mob-trap design canon NEW MAJEUR FIRST documented Damia** = NEW gameplay-mechanic chest-trap (vs reward-chest standard) + Phantom Ship deceptive-loot-mechanic FIRST + cohérent récurrent récent mimic-chest fantasy-trope adapté Magical-Bogy-magician-thematic
+
+## Sprite canon Magician Bogey ⭐⭐⭐⭐⭐ Sprite IA fully canon-conform 4-source visual validation MASSIVE + Purple-legless-ghost top-hat-cane-magician unsettling-smile CONFIRMED 4-source (wiki + fandom + sprite + canonical-design) + "MAGICIAN BOGEY" 1-line polished branding adopts fandom spelling-variant + 7-anim MOST-COMPLEX 3-distinct ATTACK OFFICIAL-named sprite-team labels Cane Strike + Dark Bolt + Phantom Spiral + Cane Strike CONFIRMED 3-source avec fandom Cane Stab + wiki ~Whack + Dark Bolt + Phantom Spiral sprite-team-thematic-reinvention canon NEW MAJEUR FIRST documented Damia
+
+![Magician Bogey sprite + animations](./_assets/magician-bogey-sprite.png)
+
+⭐⭐⭐⭐⭐ **REVELATION SPRITE Damia : Magician Bogey sprite IA fully canon-conform 4-source visual validation MASSIVE + ALL fandom Appearance specifications CONFIRMED par sprite (purple legless ghost + curved mustache + black top hat + black cane left-hand + unsettling smile) + 7-animation MOST-COMPLEX format (IDLE 6 + WALK 8 + ATTACK 1 Cane Strike 8 + ATTACK 2 Dark Bolt 8 + ATTACK 3 Phantom Spiral 8 + HURT 4 + DEATH 8 = 50-frame-total) + 3-distinct ATTACK OFFICIAL-named sprite-team labels Cane Strike + Dark Bolt + Phantom Spiral + "MAGICIAN BOGEY" 1-line polished branding adopts fandom "Bogey" spelling variant + ATTACK 1 Cane Strike CONFIRMED 3-source avec fandom Cane Stab + wiki ~Whack canon-mapping-preservation + ATTACK 2 Dark Bolt + ATTACK 3 Phantom Spiral sprite-team-thematic-REINVENTION vs canonical fandom Flower Gift/Black Bats top-hat-tricks DIVERGENCE thematic-shift canon NEW MAJEUR FIRST documented Damia + IDLE 6-frame + HURT 4-frame asymmetric-anim-count canon NEW MAJEUR FIRST ⭐⭐⭐⭐⭐**
+
+### Caractéristiques sprite Magician Bogey validées fandom 🟢
+
+- ⭐⭐⭐⭐⭐ **Purple legless ghost-form body CONFIRMED 4-source canon récurrent récent expansion** (fandom : "purple legless ghost" CONFIRMED par sprite)
+- ⭐⭐⭐⭐⭐ **Black top hat with purple band CONFIRMED 4-source canon récurrent récent expansion** (fandom : "wearing a top hat" CONFIRMED par sprite + purple band detail sprite-team-addition)
+- ⭐⭐⭐⭐⭐ **Black cane LEFT-hand CONFIRMED 4-source canon récurrent récent expansion** (fandom : "wielding a black cane in its left hand" CONFIRMED par sprite)
+- ⭐⭐⭐⭐⭐ **Curved mustache CONFIRMED 4-source canon récurrent récent expansion** (fandom : "curved mustache" CONFIRMED par sprite)
+- ⭐⭐⭐⭐⭐ **Unsettling smile + visible teeth CONFIRMED 4-source canon récurrent récent expansion** (fandom : "unsettling smile" CONFIRMED par sprite + teeth-bared-grin sprite-team-detail expansion)
+- ⭐⭐⭐⭐⭐ **Wispy ghost-trail bottom body-dissolves-mist canon NEW MAJEUR FIRST documented Damia** = sprite-team-addition + cohérent ghost-form anatomy + Halloween-magician aesthetic
+- ⭐⭐⭐⭐⭐ **Floating-pose Idle/Walk levitate-no-feet-touching-ground canon récurrent récent CONFIRMED** = cohérent legless-ghost anatomy levitation
+- ⭐⭐⭐⭐⭐ **Theatrical-magician-stage-performer aesthetic top-hat-cane archetype CONFIRMED canon récurrent récent expansion** = cohérent fandom magic-show-trope mob-design
+
+### 7-animation MOST-COMPLEX format canon récurrent récent expansion + asymmetric anim-count FIRST
+
+| Animation                     | Frames | Notes                                                                                         |
+| ----------------------------- | ------ | --------------------------------------------------------------------------------------------- |
+| **IDLE**                      | **6**  | ⭐⭐⭐⭐⭐ **6-frame IDLE shorter-than-récurrent-8 NEW MAJEUR FIRST** = asymmetric anim-count |
+| **WALK**                      | 8      | Standard MOST-COMPLEX                                                                         |
+| **ATTACK 1 - Cane Strike**    | 8      | Cane horizontal-sweep + purple-magic-trail projectile-line                                    |
+| **ATTACK 2 - Dark Bolt**      | 8      | Cane raised + dark purple-magic-bolt projectile beam-line                                     |
+| **ATTACK 3 - Phantom Spiral** | 8      | Ghost-form spiraling rotation + purple-energy-swirl AoE                                       |
+| **HURT**                      | **4**  | ⭐⭐⭐⭐⭐ **4-frame HURT shorter-than-récurrent-8 NEW MAJEUR FIRST** = asymmetric anim-count |
+| **DEATH**                     | 8      | Body-dissolves-mist particles vanishing-trail                                                 |
+
+**Total = 50 frames** (vs récurrent 56 frames 8×7 standard)
+
+⭐⭐⭐⭐⭐ **IDLE 6-frame + HURT 4-frame asymmetric-anim-count canon NEW MAJEUR FIRST documented Damia** = NEW sprite-team-iteration-variation anim-count + IDLE-shorter-than-8 + HURT-shorter-than-8 = asymmetric-sprite-frame-budget design + cohérent économie-frame priority-action-frames + Magician-Bogy non-IDLE/HURT-heavy mob
+
+### ATTACK 3-distinct OFFICIAL-named sprite-team mapping vs canonical canon NEW MAJEUR FIRST documented Damia 🟢
+
+| Slot         | Sprite OFFICIAL-name | Fandom OFFICIAL | Wiki community | Mapping status                                                                                                                         |
+| ------------ | -------------------- | --------------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| **ATTACK 1** | **Cane Strike**      | **Cane Stab**   | ~Whack         | ⭐⭐⭐⭐⭐ **CONFIRMED 3-source canon-mapping-preservation**                                                                           |
+| **ATTACK 2** | **Dark Bolt**        | Flower Gift     | ~Flowers       | ⚠️ **DIVERGENCE thematic-REINVENTION sprite-team** = abandon top-hat-flowers-Bewitchment thematic → generic dark-magic projectile beam |
+| **ATTACK 3** | **Phantom Spiral**   | Black Bats      | ~Bat Trick     | ⚠️ **DIVERGENCE thematic-REINVENTION sprite-team** = abandon top-hat-bats-Stun thematic → ghost-form spiral-rotation AoE               |
+
+⭐⭐⭐⭐⭐ **Cane Strike CONFIRMED 3-source avec fandom Cane Stab + wiki ~Whack canon récurrent récent expansion** = ability-name canonization 3-tier (wiki community → fandom OFFICIAL → sprite OFFICIAL) basic-attack preservation Damia rule
+
+⭐⭐⭐⭐⭐ **Dark Bolt + Phantom Spiral sprite-team-thematic-REINVENTION vs canonical Flower Gift + Black Bats top-hat-tricks DIVERGENCE thematic-shift canon NEW MAJEUR FIRST documented Damia** = sprite-team-design-philosophy abandons top-hat-magic-show theatrical-stagecraft-aesthetic for **generic dark-magic-Darkness-element thematic** abstraction = ⚠️ canonical Flower-Gift-Bewitchment (whimsical) + Black-Bats-Stun (theatrical) → sprite Dark-Bolt + Phantom-Spiral (sinister/dark-magic) thematic-shift FIRST
+
+⭐⭐⭐⭐⭐ **Sprite-team ATTACK-2/3 thematic-reinvention pattern canon NEW MAJEUR FIRST documented Damia** = NEW sprite-team-design-iteration pattern: preserves canonical basic-attack ATTACK 1 + REINVENTS magic-attack ATTACK 2/3 with Darkness-element-thematic abstractions
+
+⭐⭐⭐⭐⭐ **Decision Damia ATTACK names** : ⭐ **Conserver canonical fandom OFFICIAL names Cane Stab + Flower Gift + Black Bats canon-priority** (vs sprite-team-thematic-reinvention) + animations sprite-base-utilisable comme VFX-template avec rework-thematic flowers-spring (ATTACK 2) + bats-fly-out (ATTACK 3) à générer post-décision canon-priority
+
+### Polished branding canon récurrent récent expansion Damia rule
+
+⭐⭐⭐⭐⭐ **"MAGICIAN BOGEY" 1-line polished branding subtitle CONFIRMED canon récurrent récent expansion Damia rule** = cohérent récurrent récent 1-line subtitle polished-format pattern (Madman/Mudman + Loner Knight + Lucky Jar précédents) + ⚠️ **Adopts fandom "Bogey" spelling-variant vs wiki "Bogy" canon-name preference DIVERGENCE intra-Damia** = sprite-team branding-spelling-preference adopt fandom variant + recommandation Damia adopter wiki "Bogy" canon-name in-game + sprite branding "BOGEY" acceptable visual-iteration
+
+### Sprite-team-design-philosophy canon NEW MAJEUR FIRST documented Damia
+
+⭐⭐⭐⭐⭐ **Sprite-team-design-philosophy 3-pattern-evolution canon récurrent récent expansion Damia rule** :
+
+1. **EXACT-canon-match** : Madman (Slam/Mud Splash/Body Roll) — 3-distinct CONFIRMED fandom-canonical
+2. **5→3 abstraction** : Mad Skull (~Hex Slashes + Stunning Hammer + Poison Needle + Midnight Terror + Panic Bell → 3 abstracted) — many-to-few
+3. **3→3 thematic-REINVENTION** : ⭐⭐⭐⭐⭐ **Magician Bogy (Cane Stab + Flower Gift + Black Bats → Cane Strike + Dark Bolt + Phantom Spiral) — NEW canon NEW MAJEUR FIRST** = sprite-team-design-iteration thematic-shift preserves basic-attack + reinvents magic-attacks
+
+### Décision implémentation Damia 🟢
+
+⭐ **Sprite Magician Bogey base visuelle utilisable AVEC adjustement-thematic ATTACK 2/3 recommandé** = ALL fandom Appearance specifications validées par sprite + body + cane + top-hat + mustache + smile + ghost-trail + animations base + ATTACK 1 Cane Strike CONFIRMED 3-source canon-mapping-preservation + ATTACK 2 Dark Bolt + ATTACK 3 Phantom Spiral animations-base réutilisables comme VFX-template avec rework-thematic optionnel pour respecter canon top-hat-tricks magic-show theatrical-aesthetic original fandom = canon-name in-game "Magician Bogy" (wiki) + sprite branding "BOGEY" tolérable variation.
+
+⭐⭐⭐⭐⭐ **Sprite IA fully canon-conform 4-source visual validation MASSIVE Magician Bogey canon récurrent récent expansion Damia rule** = wiki + fandom + sprite IA + canonical-Halloween-magician-design 4-source = MASSIVE-cross-source validation pattern Damia rule expansion FIRST documented
+
 ## Sources
 
 - 🟡 Wiki TLoD Magician Bogy (`_sources/lod-wiki-magician-bogy.md`)
-- 🔵 Fandom Magician Bogy (à ingest) — cross-source upgrade 🟢 pending
+- 🟢 Fandom Magician Bogey (`_sources/fandom-magician-bogey.md`) — CROSS-SOURCE UPGRADE confirmed
+- 🟢 Sprite IA Damia Magician Bogey (`_assets/magician-bogey-sprite.png`) — 4-source visual validation MASSIVE
 
 ## TODO Damia
 
-- [ ] ⭐⭐⭐⭐⭐ **Ingest Magician Bogy fandom cross-source 🟢 + appearance design + lore Disc 2 + Phantom Ship Saint Louvia narrative + JP HP/Gold stats variations + ability OFFICIAL-names verification + Magical Hat OFFICIAL effect**
-- [ ] ⭐⭐⭐⭐⭐ **Ingest Phantom Ship location wiki + fandom (à créer locations/Phantom Ship.md) NEW Disc 2 ghost-ship formerly Saint Louvia + Queen Fury crash narrative-event + 292/293 2-submap coverage + mob-population Magician Bogy + Skeleton partner**
+- [x] ✅ **Ingest Magician Bogey fandom cross-source 🟢 CONFIRMED** — 3-OFFICIAL abilities Cane Stab + Flower Gift + Black Bats + appearance MASSIVE purple-ghost-top-hat-cane + 4-stat DIVERGENCE wiki vs fandom MASSIVE + MDF INVERSE DIVERGENCE class-inversion + Magical Hat tied-highest-MAT-tier + Magical Ego Bell + Dancing Ray + Queen Fury shop + Total Vanishing/Magic Stone of Signet/Demon's Gate Rose dispatch-strategy + chest-triggered scripted-encounter mechanic
+- [ ] ⭐⭐⭐⭐⭐ **Ingest Phantom Ship location wiki + fandom (à créer locations/Phantom Ship.md) NEW Disc 2 ghost-ship formerly Saint Louvia + Queen Fury crash narrative-event + 292/293 2-submap coverage + mob-population Magician Bogy + Skeleton partner + chest-trap mechanic**
 - [ ] ⭐⭐⭐⭐⭐ **Ingest Skeleton mob wiki + fandom (à créer mobs/Skeleton.md) NEW partner Phantom Ship Disc 2 undead-theme**
-- [ ] ⭐⭐⭐⭐⭐ **Ingest Magical Hat item (à créer items/Magical Hat.md) NEW Magician-thematic accessory + 2% drop Magician Bogy source**
-- [ ] ⭐⭐⭐⭐⭐ **Sprite Magician Bogy à générer 7-anim 3-distinct ATTACK ~Whack + ~Bat Trick + ~Flowers canon récurrent récent expansion**
+- [ ] ⭐⭐⭐⭐⭐ **Ingest Magical Hat item (à créer items/Magical Hat.md) NEW Magician-thematic accessory + 2% drop Magician Bogy + TIED HIGHEST MAT bonus avec Dragon Helm + Legend Casque + TIED 2nd-highest MDF bonus avec Phoenix Plume + wearable ANY character + Aglis Disc 4 2nd-source FIRST**
+- [ ] ⭐⭐⭐⭐⭐ **Ingest Magical Ego Bell item (à créer items/Magical Ego Bell.md) NEW anti-Bewitchment cure item-family FIRST**
+- [ ] ⭐⭐⭐⭐⭐ **Ingest Dancing Ray attack item (à créer items/Dancing Ray.md) NEW Magic-attack-item + Queen Fury shop + Disc 2 + high-MAT-synergy Shana/Meru FIRST**
+- [ ] ⭐⭐⭐⭐⭐ **Ingest Queen Fury ship item shop (à créer/vérifier locations/Queen Fury.md ship-shop reference) Dancing Ray source FIRST**
+- [ ] ⭐⭐⭐⭐⭐ **Ingest Aglis Disc 4 Wingly location (à créer/vérifier locations/Aglis.md) Magical Hat 2nd-retrieve-source FIRST**
+- [ ] ⭐⭐⭐⭐⭐ **Investiguer MDF INVERSE DIVERGENCE wiki 160 vs fandom 60 = lore-design-intent vs wiki-data conflict + cross-source 3-source verification stat-resolution required**
+- [ ] ⭐⭐⭐⭐⭐ **Sprite Magician Bogy à générer 7-anim 3-distinct ATTACK Cane Stab + Flower Gift + Black Bats OFFICIAL-named purple-ghost-top-hat-cane-magician theatrical aesthetic canon récurrent récent expansion**

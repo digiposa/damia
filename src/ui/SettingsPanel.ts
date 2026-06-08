@@ -23,6 +23,16 @@ const PANEL_MAX_HEIGHT = 460;
 
 export type SettingsPanelAction = 'resume' | 'quit-to-title';
 
+export interface SettingsPanelOptions {
+  /** When false, hide the Resume / Quit-to-Title action buttons. Use
+   *  when opening Settings outside a gameplay scene — typically from
+   *  the title-screen gear icon, where neither action applies (we're
+   *  already at the title, and there's no run to resume). Volumes +
+   *  language stay editable. Defaults to true to preserve the
+   *  in-gameplay behaviour. */
+  showActions?: boolean;
+}
+
 type VolumeKind = 'master' | 'music' | 'sfx' | 'voice';
 
 /**
@@ -39,10 +49,12 @@ export class SettingsPanel extends Modal {
   private sfxValueText: Text | null = null;
   private voiceValueText: Text | null = null;
   private langValueText: Text | null = null;
+  private readonly showActions: boolean;
   protected override panelMaxHeight = PANEL_MAX_HEIGHT;
 
-  constructor(app: Application) {
+  constructor(app: Application, opts: SettingsPanelOptions = {}) {
     super(app, 'settings-panel');
+    this.showActions = opts.showActions ?? true;
     const onKey = (e: KeyboardEvent): void => {
       if (e.key === 'Escape') {
         this.toggle();
@@ -105,10 +117,12 @@ export class SettingsPanel extends Modal {
     // --- Language row ---------------------------------------------------
     this.langValueText = this.buildLangRow(panel, t('settings.language'));
 
-    // --- Spacer + action buttons ---------------------------------------
-    panel.addChild(new Container({ layout: { height: SPACING.gapLarge, isLeaf: true } }));
-    panel.addChild(this.buildActionButton(t('settings.resume'), 'resume'));
-    panel.addChild(this.buildActionButton(t('settings.quitToTitle'), 'quit-to-title'));
+    // --- Spacer + action buttons (skipped when opened outside gameplay) -
+    if (this.showActions) {
+      panel.addChild(new Container({ layout: { height: SPACING.gapLarge, isLeaf: true } }));
+      panel.addChild(this.buildActionButton(t('settings.resume'), 'resume'));
+      panel.addChild(this.buildActionButton(t('settings.quitToTitle'), 'quit-to-title'));
+    }
 
     return panel;
   }

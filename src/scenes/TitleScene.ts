@@ -8,6 +8,7 @@ import { playMusic, playSfx, unlockAudio } from '@services/AudioManager';
 import { ForestScene } from '@scenes/ForestOfSeles/ForestScene';
 import { HellenaScene } from '@scenes/HellenaPrison/HellenaScene';
 import { CharacterSelectScene } from '@scenes/CharacterSelectScene';
+import { SettingsPanel } from '@ui/SettingsPanel';
 
 interface ButtonHandle {
   container: Container;
@@ -21,6 +22,9 @@ const BTN_HEIGHT = 48;
 const BTN_GAP = 14;
 /** Distance from the screen bottom edge to the first (lowest) button. */
 const STACK_BOTTOM_PADDING = 28;
+/** Settings gear icon — 28×28 button anchored top-right corner. */
+const GEAR_SIZE = 28;
+const GEAR_MARGIN = 16;
 
 /**
  * Title screen. Acts as the routing junction for the two game modes:
@@ -110,11 +114,37 @@ export class TitleScene implements Scene {
       },
     );
 
+    // Settings overlay (volume / language only — no Resume / Quit-to-Title
+    // since we're already on the title and no run is in flight). Hidden
+    // until the gear icon is tapped.
+    const settings = new SettingsPanel(ctx.app, { showActions: false });
+    const gearIcon = this.makeGearIcon(
+      width - GEAR_MARGIN - GEAR_SIZE / 2,
+      GEAR_MARGIN + GEAR_SIZE / 2,
+      () => settings.open(),
+    );
+
+    // Keep the gear pinned to the top-right corner on window resize so
+    // a desktop player widening the window doesn't end up with the icon
+    // floating in mid-air. Volume / language rows inside the panel
+    // already redraw responsively (Modal handles that).
+    const onResize = (): void => {
+      gearIcon.position.set(
+        ctx.app.screen.width - GEAR_MARGIN - GEAR_SIZE / 2,
+        GEAR_MARGIN + GEAR_SIZE / 2,
+      );
+    };
+    ctx.app.renderer.on('resize', onResize);
+    this.cleanups.push(() => ctx.app.renderer.off('resize', onResize));
+    this.cleanups.push(() => settings.destroy());
+
     this.container.addChild(
       subtitle,
       survivalBtn.container,
       continueBtn.container,
       newGameBtn.container,
+      settings.container,
+      gearIcon,
     );
     ctx.app.stage.addChild(this.container);
 
@@ -184,5 +214,45 @@ export class TitleScene implements Scene {
         container.eventMode = e ? 'static' : 'none';
       },
     };
+  }
+
+  /**
+   * Small rounded-square button with a gear glyph. Same visual language
+   * as the bottom-stack action buttons (panel bg, gold border, hover
+   * tint) but sized for a single-finger top-corner tap. Anchor is centre
+   * so callers can drive position from `(width - margin, margin)` without
+   * worrying about the button's own dimensions.
+   */
+  private makeGearIcon(x: number, y: number, onTap: () => void): Container {
+    const container = new Container({ label: 'title-gear' });
+    const bg = new Graphics()
+      .roundRect(-GEAR_SIZE / 2, -GEAR_SIZE / 2, GEAR_SIZE, GEAR_SIZE, 6)
+      .fill({ color: 0x202820, alpha: 0.9 })
+      .stroke({ width: 2, color: 0xa08050 });
+    const glyph = new Text({
+      text: '⚙',
+      style: {
+        fontFamily: 'system-ui, sans-serif',
+        fontSize: 20,
+        fill: 0xfaf6e8,
+        fontWeight: 'bold',
+      },
+    });
+    glyph.anchor.set(0.5);
+    container.addChild(bg, glyph);
+    container.position.set(x, y);
+    container.eventMode = 'static';
+    container.cursor = 'pointer';
+    container.on('pointertap', () => {
+      playSfx('ui.click');
+      onTap();
+    });
+    container.on('pointerover', () => {
+      bg.tint = 0xc8b58a;
+    });
+    container.on('pointerout', () => {
+      bg.tint = 0xffffff;
+    });
+    return container;
   }
 }

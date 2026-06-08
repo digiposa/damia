@@ -95,7 +95,13 @@ export class ArenaScene implements Scene {
         showZoneTitle: false,
         showMiniMap: false,
         showActionLog: false,
-        showAdditionsBar: false,
+        // Desktop needs the addition cooldown + selector visible since the
+        // long-press-for-picker affordance lives on touch only — without
+        // the bar the survival player can't see when their addition is
+        // off cooldown nor which addition is bound. Hidden automatically
+        // on touch builds by GameplayUI (the touch picker covers that
+        // role there).
+        showAdditionsBar: true,
         showEncounterIndicator: false,
         musicAlias: 'music.forestAmbient',
       },

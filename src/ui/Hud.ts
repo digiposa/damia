@@ -11,6 +11,12 @@ const BAR_WIDTH = 200;
 const BAR_HEIGHT = 14;
 const PADDING = 12;
 const BAR_GAP = 6;
+/** Square Dragoon-transform button glued to the right edge of the bar
+ *  column. Big enough for a desktop click + reads its state from a
+ *  single per-frame call (`setDragoonState`). Hidden on touch — the
+ *  TouchActionButtons cluster already owns that affordance. */
+const DG_BTN_SIZE = 32;
+const DG_BTN_GAP = 8;
 
 /**
  * Top-left HUD: portrait, HP/SP/MP bars, level pip, gold + XP + zoom
@@ -34,6 +40,13 @@ export class Hud {
   private readonly levelText: Text;
   private readonly xpText: Text;
   private readonly zoomText: Text;
+  /** Dragoon transform button (desktop only). The frame redraws on
+   *  every `setDragoonState` to reflect ready / active / charging.
+   *  Hidden when locked or on touch. */
+  private readonly dragoonBtn: Container;
+  private readonly dragoonFrame: Graphics;
+  private readonly dragoonFill: Graphics;
+  private dragoonTapHandler: (() => void) | null = null;
 
   constructor(app: Application) {
     this.container = new Container({ label: 'hud' });
@@ -144,6 +157,46 @@ export class Hud {
     });
     this.levelText.position.set(4, 4);
 
+    // Dragoon transform button — right of the SP bar, vertically
+    // centred on it. Stacks (in z order from back to front): frame
+    // (border + bg), fill (SP-gauge inside the button), label.
+    // Hidden on touch since TouchActionButtons owns that affordance
+    // in the bottom-right cluster.
+    const dragoonCx = barsX + BAR_WIDTH + DG_BTN_GAP + DG_BTN_SIZE / 2;
+    const dragoonCy = spY + BAR_HEIGHT / 2;
+    this.dragoonBtn = new Container({ label: 'hud-dragoon-btn' });
+    this.dragoonBtn.position.set(dragoonCx, dragoonCy);
+    this.dragoonFrame = new Graphics();
+    this.dragoonFill = new Graphics();
+    const dragoonLabel = new Text({
+      text: 'DG',
+      style: {
+        ...TEXT.value,
+        fontSize: 12,
+        fontWeight: 'bold',
+        fill: COLORS.textCream,
+        stroke: { color: COLORS.textStroke, width: 2 },
+      },
+    });
+    dragoonLabel.anchor.set(0.5);
+    this.dragoonBtn.addChild(this.dragoonFrame, this.dragoonFill, dragoonLabel);
+    this.dragoonBtn.eventMode = 'static';
+    this.dragoonBtn.cursor = 'pointer';
+    this.dragoonBtn.on('pointertap', () => {
+      // The handler still no-ops when conditions aren't met (locked,
+      // SP not full, already transformed) — same semantics as the
+      // touch button and the `T` key.
+      this.dragoonTapHandler?.();
+    });
+    // Default state: locked + invisible. setDragoonState() will flip
+    // visible once the world reports `dragoonUnlocked`.
+    this.dragoonBtn.visible = false;
+    if (isTouchDevice()) {
+      // Touch has its own Dragoon button in TouchActionButtons. Never
+      // mount the HUD-bar one even if state later says unlocked.
+      this.dragoonBtn.eventMode = 'none';
+    }
+
     this.container.addChild(
       portraitBg,
       portraitVisual,
@@ -160,6 +213,7 @@ export class Hud {
       this.goldText,
       this.xpText,
       this.zoomText,
+      this.dragoonBtn,
     );
 
     this.reposition();
@@ -191,6 +245,70 @@ export class Hud {
       // the avatar earns access to the form.
       this.spText.text = 'SP —';
     }
+  }
+
+  /**
+   * Drive the desktop Dragoon transform button. Called every frame by
+   * the gameplay controller, same cadence as `setSp`. State machine:
+   *  - `unlocked: false` → button hidden (Dragoon form not earned yet,
+   *    VISION §6.5).
+   *  - `active: true` → magenta border + bright fill (currently
+   *    transformed; tap is a no-op while the form runs out).
+   *  - `spFrac >= 1` → gold border ring, label bright (tap = transform).
+   *  - otherwise → dim border, vertical fill grows from the bottom up
+   *    in step with the SP gauge so the player can read "almost there".
+   * The handler attached via `onDragoonTap` already gates by the same
+   * conditions, so a tap below the threshold is harmless.
+   */
+  setDragoonState(state: { unlocked: boolean; spFrac: number; active: boolean }): void {
+    if (!state.unlocked || isTouchDevice()) {
+      this.dragoonBtn.visible = false;
+      return;
+    }
+    this.dragoonBtn.visible = true;
+    const half = DG_BTN_SIZE / 2;
+    const radius = 6;
+    const frac = Math.max(0, Math.min(1, state.spFrac));
+    const ready = frac >= 1;
+
+    // Background + border. Border colour signals readiness so a glance
+    // is enough to know "tap now to transform". Magenta when active,
+    // gold ring when ready, dim grey otherwise.
+    // Magenta is canon TLoD's transform glow; not a named theme token
+    // yet so keep it inline until/unless other systems start needing it.
+    const DRAGOON_ACTIVE_COLOR = 0xd450ff;
+    const borderColor = state.active ? DRAGOON_ACTIVE_COLOR : ready ? COLORS.gold : COLORS.border;
+    const borderWidth = state.active || ready ? 2 : 1;
+    this.dragoonFrame
+      .clear()
+      .roundRect(-half, -half, DG_BTN_SIZE, DG_BTN_SIZE, radius)
+      .fill({ color: COLORS.tileBg ?? COLORS.spBg, alpha: 0.92 })
+      .stroke({ width: borderWidth, color: borderColor, alpha: 0.95 });
+
+    // Inner SP fill — vertical, grows from the bottom up. Bright gold
+    // when active so the player sees they're "inside" the form;
+    // SP-colour while charging. Inset 2 px so the border stays visible
+    // around the fill.
+    const inset = 2;
+    const fillH = (DG_BTN_SIZE - inset * 2) * frac;
+    const fillColor = state.active ? COLORS.gold : COLORS.spFg;
+    this.dragoonFill.clear();
+    if (fillH > 0) {
+      this.dragoonFill
+        .roundRect(
+          -half + inset,
+          half - inset - fillH,
+          DG_BTN_SIZE - inset * 2,
+          fillH,
+          Math.max(2, radius - inset),
+        )
+        .fill({ color: fillColor, alpha: state.active ? 0.45 : 0.35 });
+    }
+  }
+
+  /** Attach the tap handler. Called once at HUD construction site. */
+  onDragoonTap(cb: () => void): void {
+    this.dragoonTapHandler = cb;
   }
 
   setMp(current: number, max: number): void {

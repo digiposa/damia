@@ -122,6 +122,10 @@ export class GameplayUI {
     // Always-on UI.
     this.toast = new Toast(app, layers.ui);
     this.hud = new Hud(app);
+    // Desktop Dragoon transform button (HUD-mounted). Reuses the same
+    // handler as the touch button + the `T` keyboard shortcut, so the
+    // controller's existing no-op-when-not-ready guards apply.
+    this.hud.onDragoonTap(handlers.onTouchDragoonTransform);
     this.hotbar = new Hotbar(app);
     this.hotbar.setOnSlotTap(handlers.onHotbarSlotTap);
     this.settings = new SettingsPanel(app);

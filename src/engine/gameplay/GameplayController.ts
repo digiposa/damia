@@ -577,6 +577,15 @@ export class GameplayController {
       else this.ui.hud.setSp(0, PLAYER_SP_MAX, !dragoonUnlocked);
       this.ui.hud.setMp(0, PLAYER_MP_MAX);
       this.ui.hud.setZoom(this.viewport.scale.x);
+      // Desktop Dragoon transform button — gated by the same predicates
+      // as the touch button and the `T` shortcut. Touch builds skip
+      // rendering this inside the HUD; the TouchActionButtons cluster
+      // owns that affordance there.
+      this.ui.hud.setDragoonState({
+        unlocked: dragoonUnlocked,
+        spFrac: this.readDragoonSpFrac(),
+        active: this.world.hasComponent(this.playerId, 'Dragoon'),
+      });
 
       const prog = this.world.getComponent(this.playerId, 'Progression');
       if (prog) {

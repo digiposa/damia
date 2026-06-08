@@ -145,6 +145,185 @@
 - ⭐⭐⭐⭐⭐ **Blue Sea Dragoon Spirit Water Lenus chain inheritance cohérent récurrent récent expansion** = Lenus Disc 2 Sea Dragoon → Meru post-Lenus-defeat inheritance lore CONFIRMED
 - ⭐⭐⭐⭐⭐ **Hammer-weapon party-member-tier weapon-class canon récurrent récent expansion** = cohérent récurrent récent Haschel-fists vs Meru-hammer dual-melee party-member-variants
 
+## Cross-source upgrade 🟢 — fandom Meru ingestion canon NEW MAJEUR FIRST documented Damia rule expansion
+
+⭐⭐⭐⭐⭐ **REVELATION MAJEURE Damia fandom : Meru cross-source 🟢 + JP Tomoko Kawakami voice + JP name メル + 2-hometown Forest of Winglies (ORIGINAL) + Donau (second-home) + ⭐ DAMIA = ORIGINAL Blue Sea Dragoon Spirit wielder + 3-tier inheritance chain Damia → Lenus → Meru canon NEW MAJEUR FIRST + Dragoon outfit similar Lenus chain-inheritance + ⚠️ Hair "long back-length silver" (fandom) vs "platinum" (wiki) DIVERGENCE 17-instance + ⚠️ Eyes "red" (fandom) vs "vibrant magenta" (wiki) DIVERGENCE 18-instance MAJEUR + Outfit specs MASSIVE blue-bra-top + gold-trim + red-shoulder-holster-straps + blue-revealing-kilt-front + fairy-wing-back-skirt + gold-edge-designs + red-sandals + Dragoon outfit MASSIVE blue-strapless-leotard + 2-blue-wires-sides + thigh-armor + ankle-length-boots + giant-Dragoon-Hammer + segmented-tiara-headband + translucent-white-wings-blue-outlines + deep-blue-in-game-color + HIGHEST SPD entire cast + great MAT/MDF + LOWEST HP + WORST DF glass-cannon-Magic-attacker MASSIVE + MAT second-only-to-Shana/Miranda Light-Dragoons-tier + 6 Weapons Mace/Morning Star/War Hammer/Heavy Mace Stun-chance/Pretty Hammer DOUBLE-SP/Basher + 5-Addition FULL Level 1-5 progressions + 3-Addition-class taxonomy dmg+SP/SP-only/dmg-only scaling FIRST + Dragoon Spirit 6th/7th-spot + Dragoon Transformation ice-block-Meru-breaks-with-hammer + Wiki Multiplier-absolute vs Fandom STR%-equivalent dual-representation + Personality MASSIVE spoiled-around-Dart + morale-booster + clumsy-tripped-by-own-hammer + Wingly-Human-coexistence FINAL + 6 OFFICIAL animations Idle/Fidget/Defend/Critical/Dispirited + Forest-of-Winglies context-specific impatient-stomping idle FIRST + Hammer-prop state-animation mechanic FIRST + Story MASSIVE Chapters 2-4 + Guaraha FIANCÉE-reveal + Ancestor Blano + Bardel Brothers tragic-backstory + Dragon Buster/Dragon Block Staff + Archangel-Moon-trial + 107-species-Divine-Tree cosmogony + 20+ NEW NPCs Princess Lisa/Emille/King Zior/Kate/Lynn/Charle Frahma/Caron/Savan+Lulu/Lapto/Buckle/Mr. Pelpee/Younger Bardel/Guard Lapto 00 ⭐⭐⭐⭐⭐**
+
+Quote canon fandom : "**Meru (メル) + cheerful, perky young dancer from Donau + Forest of Winglies (original), Donau hometown + Wingly + Female + Water + ENG Lucy Kee + JP Tomoko Kawakami**" + "**long back-length silver hair tied in high ponytail + red eyes + blue bra top gold trim + red straps shoulder holster + front kilt skirt + back skirt fairy wing gold designs + red sandals blue/gold straps**" + "**As a Dragoon, she resembles Damia, the original wielder of the Blue Sea Dragoon Spirit + Dragoon outfit similar to Lenus + blue strapless leotard + 2 blue wires sides + thigh armor + knee guards + ankle-length boots + giant Dragoon Hammer + segmented tiara headband + translucent white wings shades of blue outlines + deep blue in-game color**" + "**highest speed entire cast + great magical attack and magical defense + lowest HP and worst physical defense + just a bit worse than Shana and Miranda + Therapy Ring 10% heal + Dragon Helm 50% HP**" + "**Pretty Hammer Last Kraken Generates double SP + Heavy Mace Vellweb/Minotaur Chance to cause Stun + Perky Step 600% highest damage multiplier of all additions + Rainbow Breath costs 10 MP less than Gates of Heaven**" + "**sixth (or seventh if Kongol Lohan merchant) Dragoon Spirit + Blue Sea Dragoon spirit forms block of ice + Meru breaks block with hammer to transform**" + "**Idle hands behind head rocking + Forest of Winglies impatient stomping + Fidget wide spin + Defending hammer pole over face + Critical kneels slouches + Dispirited knees bent head spinning dizzy leans against hammer**".
+
+### Pattern Damia 🟢
+
+- ⭐⭐⭐⭐⭐ **DAMIA = ORIGINAL Blue Sea Dragoon Spirit wielder + 3-tier inheritance chain Damia → Lenus → Meru canon NEW MAJEUR FIRST documented Damia rule expansion** = NEW multi-generational Dragoon Spirit inheritance lore + cohérent récurrent récent Damia.md + Lenus.md cross-source 🟢
+- ⭐⭐⭐⭐⭐ **Dragoon outfit similar Lenus + Damia visual-design inheritance chain canon NEW MAJEUR FIRST** = visual-design Dragoon-form inheritance pattern
+- ⭐⭐⭐⭐⭐ **JP voice Tomoko Kawakami + JP name メル canon NEW MAJEUR FIRST**
+- ⭐⭐⭐⭐⭐ **2-hometown Forest of Winglies (ORIGINAL) + Donau (second-home) canon NEW MAJEUR FIRST** = NEW 2-hometown classification Wingly-Forest-original + Donau-current
+- ⭐⭐⭐⭐⭐ **Hair "long back-length silver" (fandom) vs "platinum" (wiki) DIVERGENCE 17-instance** = adopter silver-spectrum tolerable-similar
+- ⭐⭐⭐⭐⭐ **Eyes "red" (fandom) vs "vibrant magenta" (wiki) DIVERGENCE 18-instance MAJEUR** = ⚠️ recommandation Damia priority "red" (fandom tier 1 PSX-canon visual)
+- ⭐⭐⭐⭐⭐ **5-piece outfit specs MASSIVE canon NEW MAJEUR FIRST** : blue-bra-top + gold-trim + red-shoulder-holster-straps + blue-kilt-front-skirt + fairy-wing-back-skirt-gold + red-sandals
+- ⭐⭐⭐⭐⭐ **Back-skirt "fairy wing" gold-designs edge canon NEW MAJEUR FIRST** = Wingly-thematic fairy-aesthetic
+- ⭐⭐⭐⭐⭐ **Dragoon outfit MASSIVE detailed specs canon NEW MAJEUR FIRST** = blue-strapless-leotard + 2-blue-wires-sides + thigh-armor-guards + white-straps + knee-guards + ankle-length-boots + giant-Dragoon-Hammer + long-blue-gloves + segmented-tiara-headband + translucent-white-wings-blue-outlines + deep-blue-in-game-color
+- ⭐⭐⭐⭐⭐ **Hammer → Dragoon Hammer transformation canon NEW MAJEUR FIRST** (cohérent récurrent récent Lavitz spear→Dragoon Spear pattern)
+- ⭐⭐⭐⭐⭐ **Translucent white wings + blue outlines CONFIRMS canon récurrent récent Blue-Sea-Dragoon translucent-fin-like-wings 2-source CONFIRMED + REWORK target sprite Dragoon-form** = sprite Dragoon V1/V2-alt feathered-jagged-wings DIVERGENCE REWORK-required parallel-Lavitz-pattern
+- ⭐⭐⭐⭐⭐ **Segmented-tiara headband Dragoon-form canon NEW MAJEUR FIRST**
+- ⭐⭐⭐⭐⭐ **HIGHEST SPD entire cast + great MAT/MDF + LOWEST HP + WORST DF glass-cannon-Magic-attacker canon NEW MAJEUR FIRST + MAT second-only-to-Shana/Miranda Light-Dragoons-tier FIRST**
+- ⭐⭐⭐⭐⭐ **Therapy Ring 10%/turn + Dragon Helm 50% HP = Meru-survivability strategy canon NEW MAJEUR FIRST**
+- ⭐⭐⭐⭐⭐ **6 Weapons FULL specs Mace/Morning Star/War Hammer/Heavy Mace (Stun-chance)/Pretty Hammer (DOUBLE-SP)/Basher canon NEW MAJEUR FIRST**
+- ⭐⭐⭐⭐⭐ **Heavy Mace Stun-chance proc + Stun-proc-weapon CONFIRMED 4-source canon récurrent récent expansion** (Beast Fang + Spear of Terror + Virulent Arrow + Heavy Mace)
+- ⭐⭐⭐⭐⭐ **Pretty Hammer DOUBLE-SP-generation weapon canon NEW MAJEUR FIRST** = NEW SP-multiplier weapon-mechanic + Last Kraken boss-drop
+- ⭐⭐⭐⭐⭐ **Minotaur NEW mob/boss + Heavy Mace Vellweb + Minotaur 2-source FIRST**
+- ⭐⭐⭐⭐⭐ **5-Addition FULL Level 1-5 progressions + 3-Addition-class taxonomy canon NEW MAJEUR FIRST** :
+  1. **dmg+SP scaling** (Double Smack + Hammer Spin) — standard progression
+  2. **SP-only-scaling dmg-fixed-100%** (Cool Boogie) — SP-grind-tool specialized
+  3. **dmg-only-scaling SP-fixed** (Cat's Cradle 20 + Perky Step 100) — damage-progression-only
+- ⭐⭐⭐⭐⭐ **Perky Step 600% entire-game-Addition-damage-record canon NEW MAJEUR FIRST**
+- ⭐⭐⭐⭐⭐ **Cat's Cradle 5-completions-1-Dragoon-round Addition-vs-Dragoon-tradeoff canon NEW MAJEUR FIRST**
+- ⭐⭐⭐⭐⭐ **Dragoon Spirit 6th/7th-order conditional Kongol-Lohan-merchant timing canon NEW MAJEUR FIRST**
+- ⭐⭐⭐⭐⭐ **Dragoon Transformation ice-block-formation-Meru-breaks-with-hammer Water-thematic canon NEW MAJEUR FIRST**
+- ⭐⭐⭐⭐⭐ **Wiki Multiplier-absolute vs Fandom STR%-equivalent dual-representation CONFIRMED 2-source clarification**
+- ⭐⭐⭐⭐⭐ **Rainbow Breath 10-MP-less-than-Gates-of-Heaven cannot-revive-tradeoff canon NEW MAJEUR FIRST + Gates of Heaven Shana/Miranda Light-Dragoon spell NEW reference FIRST**
+- ⭐⭐⭐⭐⭐ **Anti-status-bosses Polter Armor + Divine Dragon + Anti-Fire-bosses Zieg recommended canon NEW MAJEUR FIRST**
+- ⭐⭐⭐⭐⭐ **Personality MASSIVE** : spoiled-around-Dart + morale-booster + serious-side-Forest-of-Winglies + clumsy-tripped-by-own-hammer-win-animation + responsibility-development + Wingly-Human-coexistence-conviction
+- ⭐⭐⭐⭐⭐ **6-context-specific OFFICIAL animations canon NEW MAJEUR FIRST** : Idle default + Idle Forest-of-Winglies context-specific + Fidget + Defending + Critical + Dispirited
+- ⭐⭐⭐⭐⭐ **CONTEXT-SPECIFIC IDLE Forest-of-Winglies impatient-stomping location-dependent-animation-state canon NEW MAJEUR FIRST**
+- ⭐⭐⭐⭐⭐ **Fidget-animation Meru + Shana 2-character-pool wide-spin FIRST**
+- ⭐⭐⭐⭐⭐ **Hammer-prop state-animation mechanic canon NEW MAJEUR FIRST** = weapon-prop reused-different-states animation-design pattern
+- ⭐⭐⭐⭐⭐ **Guaraha FIANCÉE-reveal canon NEW MAJEUR FIRST** = childhood friend → fiancée Wingly engagement
+- ⭐⭐⭐⭐⭐ **"Winglies have long life + not as young as they look" Miranda-comment Wingly-aging 2-source CONFIRMED**
+- ⭐⭐⭐⭐⭐ **Ancestor Blano NEW Wingly elder-leader + commandment-of-isolation governance FIRST**
+- ⭐⭐⭐⭐⭐ **Bardel Brothers (Elder + Younger + deceased-sister) tragic-backstory canon NEW MAJEUR FIRST**
+- ⭐⭐⭐⭐⭐ **Dragon Buster + Dragon Block Staff ancient-Wingly anti-Dragon weapons canon NEW MAJEUR FIRST** = Dragon Buster Lloyd-lost + Dragon Block Staff Forest-Northern-Evergreen-Ancestor-vault
+- ⭐⭐⭐⭐⭐ **Wingly magical-boundary-Forest isolation Dragon-Campaign-aftermath lore canon NEW MAJEUR FIRST**
+- ⭐⭐⭐⭐⭐ **Coliseum Forbidden Land Wingly-historical-cruelty matches-to-the-death lore canon NEW MAJEUR FIRST**
+- ⭐⭐⭐⭐⭐ **Grand Jewel NEW Forbidden Land Dragon Block Staff guardian-boss FIRST**
+- ⭐⭐⭐⭐⭐ **Archangel guardian-god-of-Winglies + statue + Moon trial-boss canon NEW MAJEUR FIRST**
+- ⭐⭐⭐⭐⭐ **107 species from fruits of Divine Tree + >50% extinct cosmogony-lore canon NEW MAJEUR FIRST** = Wingly-superiority-justification + Meru-rejection
+- ⭐⭐⭐⭐⭐ **20+ NEW NPCs canon NEW MAJEUR FIRST** : Princess Lisa (astrology) + Princess Emille (false-Lenus) + King Zior + Gehrich Gang + Lynn + Kate (Donau wedding) + Charle Frahma (Ulara) + Caron (Wingly Ulara) + Savan + Lulu (Aglis judges) + Younger Bardel (Aglis revenge) + Lapto + Guard Lapto 00 (Zenebatos) + Buckle (Aglis cute-magical) + Mr. Pelpee (Lohan Mininto epilogue)
+- ⭐⭐⭐⭐⭐ **Wingly-fly-rescue Meru-wings-flying ability + Wingly-Magic-Power opens magical-boundary-gate canon NEW MAJEUR FIRST**
+- ⭐⭐⭐⭐⭐ **Kate-Lynn wedding Donau Wedding-Bouquet-catch optional-event X-press-Shana/Meru/Haschel dialogue-choice-trigger canon NEW MAJEUR FIRST**
+
+### Personality canon 🟢 (fandom expansion)
+
+- **Perky** + **cheerful** + **a bit childish** + **spoiled around Dart**
+- **Morale-booster** for team (joined without complete team agreement)
+- **Serious side** revealed at Forest of Winglies upon returning home
+- **Upbeat** + **spontaneous** — sometimes driving friends crazy + sometimes boosting mood
+- **Clumsy** — win animation tripped-by-own-hammer
+- **Character arc** : immature → **increasing responsibility** → **unshakable belief in friends** → **firm conviction Winglies + Humans can peacefully coexist**
+
+### Animations OFFICIAL specs canon 🟢 (6-state)
+
+| State                         | Animation OFFICIAL spec                                                                 |
+| ----------------------------- | --------------------------------------------------------------------------------------- |
+| **Idle (default)**            | Hands behind head + gently rocking side-to-side                                         |
+| **Idle (Forest of Winglies)** | ⭐ Impatient stomping (context-specific location-dependent FIRST)                       |
+| **Fidget**                    | Wide spin in place (Meru + Shana = 2-character fidget-idle only-cast)                   |
+| **Defending**                 | Hammer pole over face horizontally                                                      |
+| **Critical Health**           | Kneels down + slouches forward + holding hammer over right shoulder                     |
+| **Dispirited**                | Knees slightly bent + head spinning dizzy + lazily leans against hammer touching ground |
+
+⭐⭐⭐⭐⭐ **Hammer-prop state-animation mechanic** = weapon-prop reused-different-states animation-design
+
+### 6 Weapons canon 🟢
+
+| Weapon            | Stat | Buy | Sell | Location               | Effect                              |
+| ----------------- | ---- | --- | ---- | ---------------------- | ----------------------------------- |
+| **Mace**          | 15   | N/A | 100  | Initial                | -                                   |
+| **Morning Star**  | 20   | 250 | 125  | Fueno + Hellena Warden | -                                   |
+| **War Hammer**    | 25   | 300 | 150  | Wingly Forest          | -                                   |
+| **Heavy Mace**    | 30   | 400 | 200  | Vellweb + Minotaur     | ⭐ Chance to cause **Stun**         |
+| **Pretty Hammer** | 15   | N/A | 200  | Last Kraken (drop)     | ⭐⭐⭐⭐⭐ **DOUBLE SP** generation |
+| **Basher**        | 40   | 500 | 250  | Moon                   | -                                   |
+
+### 5-Addition FULL Level 1-5 progressions canon 🟢
+
+| Addition         | L1       | L2       | L3       | L4       | L5           | Scaling class                      |
+| ---------------- | -------- | -------- | -------- | -------- | ------------ | ---------------------------------- |
+| **Double Smack** | 100%/20  | 110%/24  | 120%/28  | 130%/32  | **150%/34**  | dmg+SP scaling standard            |
+| **Hammer Spin**  | 150%/35  | 162%/46  | 174%/51  | 186%/59  | **202%/70**  | dmg+SP scaling standard            |
+| **Cool Boogie**  | 100%/60  | 100%/90  | 100%/120 | 100%/150 | **100%/200** | ⭐ SP-only-scaling (dmg-fixed)     |
+| **Cat's Cradle** | 150%/20  | 195%/20  | 240%/20  | 285%/20  | **351%/20**  | ⭐ dmg-only-scaling (SP-fixed-20)  |
+| **Perky Step**   | 200%/100 | 300%/100 | 400%/100 | 500%/100 | **600%/100** | ⭐ dmg-only-scaling (SP-fixed-100) |
+
+⭐⭐⭐⭐⭐ **3-Addition-class taxonomy canon NEW MAJEUR FIRST documented Damia**
+
+### Dragoon Magic Multiplier UPDATE canon 🟢
+
+| Spell               | Wiki Multiplier | Fandom Effect %            | Notes                                             |
+| ------------------- | --------------- | -------------------------- | ------------------------------------------------- |
+| **Freezing Ring**   | 200             | Water 50%                  | Wiki Multiplier-absolute / Fandom STR%-equivalent |
+| **Rainbow Breath**  | -               | Recover 50% + cures status | UTILITY-spell-class                               |
+| **Diamond Dust**    | 200             | Water 50%                  | Wiki Multiplier-absolute / Fandom STR%-equivalent |
+| **Blue-Sea Dragon** | 400             | Water 100%                 | Wiki Multiplier-absolute / Fandom STR%-equivalent |
+
+⭐ **Rainbow Breath 10-MP-less than Gates of Heaven Shana/Miranda + cannot-revive tradeoff**
+
+### Story Chapters 2-4 narrative key-events canon 🟢
+
+#### Chapter 2: Platinum Shadow
+
+- **Donau** = Meru introduction Flower City + chasing Gehrich Gang + joins for Lynn-rescue
+- **Twin Castle Fletz** = Princess Lisa astrology + Princess Emille = false-Lenus + King Zior Permission
+- **Valley of Corrupted Gravity** = Virage + Shana mysterious-light forehead
+- **Home of Gigantos** = Haschel knocks Meru out + Gehrich defeat + Lynn rescue
+- **Optional Donau Visit** = Wedding bouquet Lynn/Kate + Dart dialogue-choice trigger
+- **Third Visit Fletz** = Lenus exposed false-Emille + reveals Wingly-flies-off
+- **Queen Fury** = Meru pranks + Phantom Ship-appearance
+- **Fueno** = Reunion + "Who am I" pranks
+- **Undersea Cavern** = Lenus/Regole battle + ⭐ **Blue Sea Dragoon Spirit acquisition Meru + dances joy**
+- **Fourth Visit Fletz** = Banquet + Meru-dances-with-Dart
+
+#### Chapter 3: Fate & Soul
+
+- **Furni** = "It's been a long time" childhood-friend-reference
+- **Evergreen Forest** = Meru sneaks-off visit-parents
+- **Forest of Winglies** = ⭐ Hometown reveal + Guaraha old-acquaintance + Bardel shaming + Ancestor Blano + parents
+- **Deningrad** = Queen Theresa + Divine Dragon flies-over + Dragon Buster/Block Staff need
+- **Forest of Winglies 2nd Visit** = ⭐ Meru opens magical-boundary-gate + Wingly-reveal-to-party + ⭐ **Guaraha FIANCÉE-reveal** + Miranda "Winglies long life" comment
+- **Forbidden Land** = Coliseum lore + Grand Jewel guardian + parents+Guaraha teleport-rescue
+- **Mountain Mortal Dragon** = Divine Dragon battle + Lloyd Wingly-fireball + Meru-flies-rescue
+- **Kashua Glacier** = Miranda loneliness + Queen Theresa-not-birth-mother
+- **Fort Magrad** = Optional Meru snowball-throw
+- **Vellweb** = Ancient human capital Dragon Campaign
+
+#### Chapter 4: Moon & Fate
+
+- **Death Frontier** = Meru-senses-feelings + Ulara-revealed
+- **Ulara** = Charle Frahma + Caron-Wingly + Meru-Wingly-Forest exchange
+- **Aglis** = Magical-City + Buckle + ⭐ Younger Bardel courage-trial-revenge + Guaraha intervention + Savan/Lulu
+- **Zenebatos** = Law-City + Lapto no-heart + "NO MAGIC POWER AS A WINGLY IS RECOGNIZED"
+- **Mayfil** = Meru-Spirit resonates + Regole-soul saving
+- **Moon That Never Sets** = ⭐ Meru-trial Archangel + 107-species cosmogony + Wingly-superiority-rejection "You are not real!"
+- **Epilogue** = Kongol-carries-Meru-Moon-escape + Lohan Mininto Mr. Pelpee vase-catch + Guaraha-walk
+
+### Story-relations canon 🟢
+
+| Character           | Relationship                                    |
+| ------------------- | ----------------------------------------------- |
+| **Guaraha**         | ⭐ FIANCÉE — childhood friend → fiancée         |
+| **Ancestor Blano**  | Wingly Forest elder/leader                      |
+| **Mother + Father** | Wingly Forest residence                         |
+| **Elder Bardel**    | Antagonist (deceased-sister-influenced-by-Meru) |
+| **Younger Bardel**  | Antagonist Aglis-revenge-trial                  |
+| **Dart**            | Spoiled-around + Wedding-dance                  |
+| **Shana**           | Fidget-animation-companion                      |
+| **Haschel**         | Knocks-Meru-out + scolds                        |
+| **Albert**          | "Al" nickname + king-help-asked                 |
+| **Miranda**         | Wingly-long-life-comment + Kashua-loneliness    |
+| **Rose**            | Ulara-agreement-first                           |
+| **Kongol**          | Moon-escape-carries-Meru                        |
+| **Lynn + Kate**     | Donau wedding-couple                            |
+| **Princess Lisa**   | Twin Castle Fletz astrology                     |
+| **Princess Emille** | False-Lenus disguise Disc 2                     |
+| **King Zior**       | Tiberoa monarch                                 |
+| **Charle Frahma**   | Ulara NEW (Melbu Frahma related?)               |
+| **Caron**           | Wingly Ulara NEW friend                         |
+| **Savan + Lulu**    | Aglis trial-judges NEW                          |
+| **Guard Lapto 00**  | Zenebatos Law-City NEW                          |
+| **Buckle**          | Aglis cute-magical-creature NEW                 |
+| **Mr. Pelpee**      | Lohan Mininto epilogue NEW                      |
+| **Queen Theresa**   | Crystal Palace Deningrad                        |
+| **Archangel**       | Wingly guardian-god + Moon trial-boss           |
+
 ## Sprite Normal Form canon ⭐⭐⭐⭐⭐ Sprite IA fully canon-conform Meru normal-form Wingly hammer-wielder + 7-anim MOST-COMPLEX 3-distinct ATTACK OFFICIAL-named Hammer Swing + Spin Smash + Impact Wave + 2-line polished branding canon récurrent récent expansion
 
 ![Meru Normal Form sprite + animations](./_assets/meru-sprite.png)

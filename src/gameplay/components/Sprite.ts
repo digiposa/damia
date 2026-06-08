@@ -38,6 +38,14 @@ export interface Sprite {
    *  — RenderSystem reads this each frame, so updating it on the
    *  component immediately re-orients the sprite. */
   rotation?: number;
+  /** Source-art is drawn facing left (the screen-left half of the iso
+   *  axes). When true, RenderSystem horizontally mirrors the sprite
+   *  whenever the entity is moving rightwards (positive world dx),
+   *  preserving its size via `scale.x = -scale`. Last facing is
+   *  retained when the entity is idle so the character keeps looking
+   *  in the direction they last moved. Default false → no mirroring,
+   *  legacy behaviour. */
+  mirrorOnFacingRight?: boolean;
 }
 
 // NB: addition frame sequences are NOT stored here. RenderSystem resolves

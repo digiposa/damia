@@ -72,6 +72,10 @@ export function spawnPlayer(world: World<Components>, opts: SpawnPlayerOptions):
     textureAlias: avatar.sprite.base.idle,
     attackTextureAlias: avatar.sprite.base.attack,
     defendTextureAlias: avatar.sprite.base.defend,
+    // Source poses are drawn facing screen-left — RenderSystem flips
+    // the sprite horizontally when the player walks rightwards so the
+    // character doesn't moon-walk in that half of the iso axes.
+    mirrorOnFacingRight: true,
   });
   world.addComponent(id, 'Health', {
     current: startHp,

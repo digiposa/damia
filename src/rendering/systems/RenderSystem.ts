@@ -24,6 +24,14 @@ const WALK_FRAME_MS = 240;
  */
 export class RenderSystem implements System<Components> {
   private readonly nodes = new Map<Entity, RenderNode>();
+  /** Per-entity last-known horizontal facing, sign of the world-space dx
+   *  toward the next pathfinder waypoint at the last moment the entity
+   *  was moving. `1` = facing screen-right, `-1` = facing screen-left.
+   *  Retained when the entity goes idle so the character keeps looking
+   *  in the direction they last moved. Used together with
+   *  `Sprite.mirrorOnFacingRight` to horizontally flip left-facing
+   *  source art when the entity walks rightward. */
+  private readonly facing = new Map<Entity, 1 | -1>();
   /** Accumulated frame time in ms — drives time-based visual effects (walk bob)
    *  in lockstep with the simulation clock so pause / lag spikes don't drift. */
   private elapsedMs = 0;
@@ -174,6 +182,17 @@ export class RenderSystem implements System<Components> {
         bobY = -Math.abs(Math.sin(phase)) * 5;
       }
 
+      // Update last-known facing while the entity is moving. Idle entities
+      // keep their previous facing (no flip-flop while stationary).
+      // Threshold avoids re-latching on sub-pixel jitter near the waypoint.
+      if (walking && pf?.waypoints && pf.waypoints.length > 0) {
+        const next = pf.waypoints[0]!;
+        const dx = next.x - pos.x;
+        if (Math.abs(dx) > 0.5) {
+          this.facing.set(id, dx > 0 ? 1 : -1);
+        }
+      }
+
       node.position.set(pos.x + swingX, pos.y + yOffset + swingY + bobY);
       // Optional rotation (radians). Used by Projectile arrows to point
       // along their direction-of-travel. Defaults to 0 so non-rotating
@@ -193,7 +212,13 @@ export class RenderSystem implements System<Components> {
             ? sprite.height / node.texture.height
             : Math.min(sprite.width / node.texture.width, sprite.height / node.texture.height);
       }
-      node.scale.set(fitScale * scaleMod);
+      // Horizontal mirror when the entity is facing right and its art was
+      // drawn facing left (opt-in via `Sprite.mirrorOnFacingRight`). The
+      // texture anchor stays at (0.5, 1), so a negative scale.x flips
+      // around the character's vertical centre without shifting its feet.
+      const mirrorX = sprite.mirrorOnFacingRight && this.facing.get(id) === 1 ? -1 : 1;
+      const base = fitScale * scaleMod;
+      node.scale.set(base * mirrorX, base);
       // Iso depth-sort: render lines further away (smaller gx+gy) first.
       const grid = worldToGrid(pos.x, pos.y);
       node.zIndex = Math.round(grid.x + grid.y);
@@ -204,6 +229,7 @@ export class RenderSystem implements System<Components> {
       if (!matched.has(id)) {
         node.destroy();
         this.nodes.delete(id);
+        this.facing.delete(id);
       }
     }
   }

@@ -1,7 +1,7 @@
 import type { System, World } from '@core/ecs';
 import type { Components } from '@gameplay/components';
 import type { DragoonArchetype } from '@data/characters';
-import { FLOAT_HEAL, spawnFloatingText } from '@gameplay/entities/floatingText';
+import { FLOAT_HEAL_MP, spawnFloatingText } from '@gameplay/entities/floatingText';
 import { playSfx } from '@services/AudioManager';
 
 /**
@@ -82,7 +82,10 @@ export function enterDragoonForm(world: World<Components>, entityId: number): bo
       x: pos.x,
       y: pos.y - 30,
       text: 'DRAGOON!',
-      color: FLOAT_HEAL,
+      // Dragoon transformation is the magic-class equivalent of a state
+      // change, so we tag it with the MP-recovery mauve to read as
+      // "magical event" rather than borrowing the HP-recovery cyan.
+      color: FLOAT_HEAL_MP,
       durationMs: 1500,
     });
   }

@@ -68,7 +68,7 @@ import { spawnProp } from '@gameplay/entities/props';
 import { spawnExit } from '@gameplay/entities/props/exit';
 import { spawnInteractable } from '@gameplay/entities/interactables';
 import { spawnVfx } from '@gameplay/entities/vfx';
-import { FLOAT_HEAL, spawnFloatingText } from '@gameplay/entities/floatingText';
+import { FLOAT_HEAL_HP, spawnFloatingText } from '@gameplay/entities/floatingText';
 
 import { propBlocks, propBlocksSight } from '@data/props';
 import {
@@ -875,7 +875,7 @@ export class GameplayController {
             x: pos.x,
             y: pos.y,
             text: `+${healed}`,
-            color: FLOAT_HEAL,
+            color: FLOAT_HEAL_HP,
           });
         }
       }
@@ -1124,7 +1124,7 @@ export class GameplayController {
         x: pos.x,
         y: pos.y,
         text: `+${healed}`,
-        color: FLOAT_HEAL,
+        color: FLOAT_HEAL_HP,
       });
       playSfx('items.pickup');
       return;

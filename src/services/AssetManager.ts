@@ -1,5 +1,5 @@
 import type { Texture } from 'pixi.js';
-import { Assets } from 'pixi.js';
+import { Assets, Rectangle, Texture as PixiTexture } from 'pixi.js';
 
 /**
  * Asset manifest entry. All assets are textures since M8; placeholder support
@@ -9,13 +9,37 @@ import { Assets } from 'pixi.js';
 export interface TextureAsset {
   kind: 'texture';
   url: string;
+  /**
+   * If true, the texture's `frame` is shrunk at load time to the alpha
+   * bounding box of its non-transparent pixels. Lets sprites that were
+   * cropped from a sprite sheet with inconsistent transparent padding
+   * (different feet-to-canvas-bottom distances, different head margins,
+   * varying widths) render with a stable bottom-anchored size — the
+   * Pixi.Sprite anchor (0.5, 1) latches onto the actual character feet
+   * instead of the empty canvas edge, and `fitMode='height'` resolves
+   * against the character height instead of the canvas height. One
+   * synchronous alpha scan per sprite at preload — runs once during
+   * splash, negligible cost.
+   */
+  autoTrim?: boolean;
 }
 
 const MANIFEST = {
   // Dart sprite (M8) — central hero shot extracted from `jau5sf...png` via rembg.
-  'sprite.player.dart': { kind: 'texture', url: '/assets/sprites/player/dart.png' },
+  // `autoTrim` on every pose so feet land on the tile floor consistently
+  // regardless of per-pose canvas padding (the poses were sliced from a
+  // sprite sheet and each has slightly different transparent margins).
+  'sprite.player.dart': {
+    kind: 'texture',
+    url: '/assets/sprites/player/dart.png',
+    autoTrim: true,
+  },
   // Attack pose used during AttackSwing — dynamic two-handed combat stance.
-  'sprite.player.dart.attack': { kind: 'texture', url: '/assets/sprites/player/dart-attack.png' },
+  'sprite.player.dart.attack': {
+    kind: 'texture',
+    url: '/assets/sprites/player/dart-attack.png',
+    autoTrim: true,
+  },
   // 2-frame walk cycle. RenderSystem swaps between them while the entity
   // has active Pathfinder waypoints (and no swing / addition / spell /
   // defend taking over). Cycle period is fixed; a per-entity phase
@@ -23,23 +47,31 @@ const MANIFEST = {
   'sprite.player.dart.walk.1': {
     kind: 'texture',
     url: '/assets/sprites/player/dart-walk-1.png',
+    autoTrim: true,
   },
   'sprite.player.dart.walk.2': {
     kind: 'texture',
     url: '/assets/sprites/player/dart-walk-2.png',
+    autoTrim: true,
   },
   // Defend pose held while the Defending component is present.
-  'sprite.player.dart.defend': { kind: 'texture', url: '/assets/sprites/player/dart-defend.png' },
+  'sprite.player.dart.defend': {
+    kind: 'texture',
+    url: '/assets/sprites/player/dart-defend.png',
+    autoTrim: true,
+  },
   // Double Slash 2nd-hit pose. The 1st hit reuses sprite.player.dart.attack.
   'sprite.player.dart.doubleSlash.2': {
     kind: 'texture',
     url: '/assets/sprites/player/dart-doubleSlash-2.png',
+    autoTrim: true,
   },
   // Red-Eye Dragoon form — single pose reused for idle / attack /
   // defend until pose variants exist.
   'sprite.player.dart.dragoon': {
     kind: 'texture',
     url: '/assets/sprites/player/dart-dragoon.png',
+    autoTrim: true,
   },
   // Dart portrait used in the HUD (top-left of the screen, in the portrait slot).
   'ui.portrait.dart': { kind: 'texture', url: '/assets/ui/dart-portrait.png' },
@@ -255,21 +287,107 @@ function resolveAssetUrl(manifestUrl: string): string {
   return base + manifestUrl.replace(/^\//, '');
 }
 
+/**
+ * Load an image as an HTMLImageElement (browser HTTP-cached, so this
+ * round-trip after Pixi.Assets has already loaded the same URL is
+ * effectively free). Used by `autoTrim` to read pixel data without
+ * needing a Pixi renderer in scope.
+ */
+function loadImageElement(url: string): Promise<HTMLImageElement> {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.crossOrigin = 'anonymous';
+    img.onload = () => resolve(img);
+    img.onerror = () => reject(new Error(`Failed to load image for autoTrim: ${url}`));
+    img.src = url;
+  });
+}
+
+/**
+ * Walk the image's alpha channel and return the tight rectangle around
+ * non-transparent pixels. Returns null for an empty / fully transparent
+ * image. Single getImageData call + double loop — a few ms per ~600 px
+ * sprite, done once at preload.
+ */
+function computeAlphaBBox(img: HTMLImageElement): Rectangle | null {
+  const w = img.naturalWidth;
+  const h = img.naturalHeight;
+  const canvas = document.createElement('canvas');
+  canvas.width = w;
+  canvas.height = h;
+  const ctx = canvas.getContext('2d');
+  if (!ctx) return null;
+  ctx.drawImage(img, 0, 0);
+  const data = ctx.getImageData(0, 0, w, h).data;
+  let minX = w;
+  let minY = h;
+  let maxX = -1;
+  let maxY = -1;
+  for (let y = 0; y < h; y++) {
+    const rowBase = y * w;
+    for (let x = 0; x < w; x++) {
+      if (data[(rowBase + x) * 4 + 3]! > 0) {
+        if (x < minX) minX = x;
+        if (x > maxX) maxX = x;
+        if (y < minY) minY = y;
+        if (y > maxY) maxY = y;
+      }
+    }
+  }
+  if (maxX < 0) return null;
+  return new Rectangle(minX, minY, maxX - minX + 1, maxY - minY + 1);
+}
+
+/**
+ * Replace `texture` with a new Texture that shares the same TextureSource
+ * but has its `frame` shrunk to the alpha bbox of `url`. Anchors at
+ * `(0.5, 1)` then land on the actual character feet instead of the canvas
+ * bottom, and `Sprite.fitMode='height'` resolves against the character's
+ * intrinsic height instead of whatever empty padding the sprite-sheet
+ * crop left behind. Returns the original texture untouched on any failure
+ * — keeps preload resilient to one bad asset.
+ */
+async function autoTrimTexture(texture: Texture, url: string): Promise<Texture> {
+  try {
+    const img = await loadImageElement(url);
+    const bbox = computeAlphaBBox(img);
+    if (!bbox) return texture;
+    return new PixiTexture({ source: texture.source, frame: bbox });
+  } catch (e) {
+    // Don't break preload over a single failed trim — fall back to the
+    // un-trimmed texture and log so a missing crossOrigin / CSP issue is
+    // visible during development.
+    console.warn(`[AssetManager] autoTrim failed for ${url}; using untrimmed texture.`, e);
+    return texture;
+  }
+}
+
 export const AssetManager = {
   /** Preload every texture-kind asset so getTexture() can be called synchronously by RenderSystem. */
   async preload(): Promise<void> {
     const tasks: Array<Promise<void>> = [];
     for (const alias of Object.keys(MANIFEST) as AssetAlias[]) {
-      const asset = MANIFEST[alias];
+      // Widen the literal-narrowed union from `as const satisfies` so
+      // optional fields like `autoTrim` (only declared on some entries)
+      // are visible without per-key type-guards.
+      const asset = MANIFEST[alias] as TextureAsset;
       if (asset.kind === 'texture') {
+        const resolvedUrl = resolveAssetUrl(asset.url);
         tasks.push(
-          Assets.load(resolveAssetUrl(asset.url)).then((tex) => {
-            const texture = tex as Texture;
+          Assets.load(resolvedUrl).then(async (tex) => {
+            let texture = tex as Texture;
             // Tile textures need REPEAT wrap so polygon-fill samples wrap across
             // the texture boundary (otherwise Pixi clamps to edge and we see seams
             // between adjacent iso diamonds). Sprite textures keep the default.
             if (alias.startsWith('tile.')) {
               texture.source.style.addressMode = 'repeat';
+            }
+            // Auto-trim opt-in: re-frame the texture to the character's
+            // alpha bbox so anchors and fitMode='height' resolve against
+            // the actual content, not the canvas with its inconsistent
+            // transparent padding (see TextureAsset.autoTrim doc).
+            if (asset.autoTrim) {
+              texture = await autoTrimTexture(texture, resolvedUrl);
             }
             TEXTURES.set(alias, texture);
           }),

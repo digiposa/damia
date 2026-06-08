@@ -144,13 +144,13 @@
     "miranda": { "name": "Miranda" }
   },
   "archetype": {
-    "redEyeDragoon": { "name": "Red-Eye Dragoon" },
+    "redEyeDragoon": { "name": "Red-Eyed Dragoon" },
     "jadeDragoon": { "name": "Jade Dragoon" },
     "whiteSilverDragoon": { "name": "White-Silver Dragoon" },
-    "darkBurstDragoon": { "name": "Dark Burst Dragoon" },
+    "darkBurstDragoon": { "name": "Darkness Dragoon" },
     "violetDragoon": { "name": "Violet Dragoon" },
-    "blueSeaDragoon": { "name": "Blue-Sea Dragoon" },
-    "goldenDragoon": { "name": "Golden Dragoon" }
+    "blueSeaDragoon": { "name": "Blue Sea Dragoon" },
+    "goldenDragoon": { "name": "Gold Dragoon" }
   },
   "element": {
     "fire": "Fire",

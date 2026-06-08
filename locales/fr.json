@@ -144,13 +144,13 @@
     "miranda": { "name": "Miranda" }
   },
   "archetype": {
-    "redEyeDragoon": { "name": "Dragoon de Feu" },
-    "jadeDragoon": { "name": "Dragoon de Vent" },
-    "whiteSilverDragoon": { "name": "Dragoon de Lumière" },
-    "darkBurstDragoon": { "name": "Dragoon des Ténèbres" },
-    "violetDragoon": { "name": "Dragoon de Foudre" },
-    "blueSeaDragoon": { "name": "Dragoon d'Eau" },
-    "goldenDragoon": { "name": "Dragoon de Terre" }
+    "redEyeDragoon": { "name": "Dragoon aux Yeux Rouges" },
+    "jadeDragoon": { "name": "Dragoon de Jade" },
+    "whiteSilverDragoon": { "name": "Dragoon d'Argent Blanc" },
+    "darkBurstDragoon": { "name": "Dragoon d'Ébène" },
+    "violetDragoon": { "name": "Dragoon du Tonnerre" },
+    "blueSeaDragoon": { "name": "Dragoon de la Mer Bleue" },
+    "goldenDragoon": { "name": "Dragoon d'Or" }
   },
   "element": {
     "fire": "Feu",

@@ -40,22 +40,24 @@ export const ITEMS: Record<ItemKind, ItemDefinition> = {
     bindable: true,
   },
   // BurnOut is a magical attack item in TLoD: consume → cast Burn Out spell on
-  // current target. Cast cost = 1 BurnOut item.
+  // current target. Cast cost = 1 BurnOut item. Shares the unified
+  // `sprite.spell.magicBase` icon with every other spell-class item; the
+  // slot painter applies the element tint + target badge per render so
+  // we don't need a bespoke PNG per spell.
   burnOut: {
     nameKey: 'items.burnOut',
     sprite: { shape: 'circle', color: 0xe07020, width: 22, height: 22 },
-    iconAlias: 'sprite.item.burnOut',
+    iconAlias: 'sprite.spell.magicBase',
     weight: 30,
     use: { kind: 'spell', spell: 'burnOut' },
     bindable: true,
   },
-  // Gushing Magma: AoE fire item. Reuses the Burn Out icon for now while a
-  // dedicated sprite is being authored — visually the in-game cast renders
-  // the 4-pillar TLoD signature via the `magmaPillars` VFX kind regardless.
+  // Gushing Magma: AoE fire item — same icon family as Burn Out, the
+  // groundAoE target badge tells them apart in the slot.
   gushingMagma: {
     nameKey: 'items.gushingMagma',
     sprite: { shape: 'circle', color: 0xc04018, width: 22, height: 22 },
-    iconAlias: 'sprite.item.burnOut',
+    iconAlias: 'sprite.spell.magicBase',
     weight: 20,
     use: { kind: 'spell', spell: 'gushingMagma' },
     bindable: true,

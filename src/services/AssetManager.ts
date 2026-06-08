@@ -214,6 +214,12 @@ const MANIFEST = {
   // Item icons (used both in the world-drop sprite and the Hotbar slot badge).
   'sprite.item.healingPotion': { kind: 'texture', url: '/assets/items/healing-potion.png' },
   'sprite.item.burnOut': { kind: 'texture', url: '/assets/items/burn-out.png' },
+  // Unified magic spell icon. Every spell-class item points to this base
+  // (instead of carrying its own bespoke art); the slot painter tints it
+  // by SPELLS[spell].element and stamps a corner badge for the target
+  // mode (single vs ground AoE) so all 14 element × target combos are
+  // distinguishable without per-spell PNGs.
+  'sprite.spell.magicBase': { kind: 'texture', url: '/assets/spells/magic-base.png' },
 
   // Spell impact VFX textures — drawn by VfxSystem (sprite-based kinds).
   'vfx.fireImpact': { kind: 'texture', url: '/assets/vfx/burn-out.png' },

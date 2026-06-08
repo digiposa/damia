@@ -2,6 +2,8 @@ import type { Container } from 'pixi.js';
 import { Graphics, Sprite as PixiSprite, Text } from 'pixi.js';
 import { ADDITIONS, type AdditionKind } from '@data/balance';
 import { ITEMS, type ItemKind } from '@data/items';
+import { ELEMENT_COLOR } from '@data/elementColors';
+import { SPELLS } from '@data/spells';
 import { AssetManager } from '@services/AssetManager';
 import { COLORS, TEXT } from './theme';
 
@@ -33,7 +35,39 @@ export function paintItemSlot(container: Container, kind: ItemKind, opts: SlotPa
     icon.scale.set(fit);
     icon.anchor.set(0.5);
     icon.position.set(opts.size / 2, opts.size / 2 + 1);
+    // Spell-class items share the unified magic icon — tint it by the
+    // spell's element so a glance is enough to tell Burn Out from
+    // Frozen Jet from Spark Net even though the silhouette is identical.
+    if (def.use?.kind === 'spell') {
+      const spell = SPELLS[def.use.spell];
+      if (spell) icon.tint = ELEMENT_COLOR[spell.element];
+    }
     container.addChild(icon);
+    // Target-mode badge for spells: a single dot for `lockedTarget`,
+    // a 3-dot burst for `groundAoE`. Painted in the top-right corner
+    // (over the count would clash; count anchors bottom-right). Same
+    // colour as the element tint so the badge reads as "part of this
+    // spell" rather than a separate UI element.
+    if (def.use?.kind === 'spell') {
+      const spell = SPELLS[def.use.spell];
+      if (spell) {
+        const badge = new Graphics();
+        const cx = opts.size - 6;
+        const cy = 6;
+        const dotR = 2;
+        const color = ELEMENT_COLOR[spell.element];
+        if (spell.target === 'lockedTarget') {
+          badge.circle(cx, cy, dotR).fill({ color, alpha: 0.95 });
+        } else {
+          // 3-dot triangle for groundAoE — reads as "spread / area".
+          badge.circle(cx, cy - 2, dotR).fill({ color, alpha: 0.95 });
+          badge.circle(cx - 3, cy + 2, dotR).fill({ color, alpha: 0.95 });
+          badge.circle(cx + 3, cy + 2, dotR).fill({ color, alpha: 0.95 });
+        }
+        badge.stroke({ color: COLORS.textStroke, width: 1, alpha: 0.7 });
+        container.addChild(badge);
+      }
+    }
   } else {
     container.addChild(
       new Graphics()

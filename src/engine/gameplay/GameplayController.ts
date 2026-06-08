@@ -235,6 +235,9 @@ export class GameplayController {
       // Scenes can pick a character; falls back to Dart inside
       // spawnPlayer when omitted.
       ...(config.character ? { avatar: config.character } : {}),
+      // Scenes can opt to spawn with Dragoon already unlocked (dev /
+      // testing). Defaults stay false (canon gating).
+      ...(o.dragoonStartUnlocked ? { dragoonUnlocked: true } : {}),
     });
 
     // Seed the default active addition from the spawned avatar's

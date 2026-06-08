@@ -120,6 +120,11 @@ export class ArenaScene implements Scene {
         // Falls back to the regular TileMap renderer automatically when
         // the asset is missing or the line stays commented.
         prerenderedMapAsset: 'map.forest.survival',
+        // Dev / testing: skip the canonical first-boss-kill gate so
+        // the Dragoon form can be triggered from the first second of
+        // the run. Flip to false (or delete) before shipping a real
+        // Survival progression curve.
+        dragoonStartUnlocked: true,
         showEncounterIndicator: false,
         musicAlias: 'music.forestAmbient',
       },

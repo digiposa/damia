@@ -72,6 +72,11 @@ export interface SceneOverrides {
   prerenderedMapAsset?: AssetAlias;
   /** Override the player spawn (defaults to `map.spawn`). */
   spawnOverride?: { gx: number; gy: number };
+  /** Spawn the player with the Dragoon form already unlocked. Defaults
+   *  to false (Story narrative + Survival `dragoonUnlock` upgrade gate
+   *  this normally). Currently used by the Arena as a dev-loadout cheat
+   *  so transforms are testable from frame 1. */
+  dragoonStartUnlocked?: boolean;
   /** When false, mob kills no longer write to the player's `Progression`
    *  component or trigger the Dart-row level-up heal. Survival flips this
    *  off because it owns a separate per-run XP curve (in `RunState`) and

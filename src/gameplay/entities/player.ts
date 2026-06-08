@@ -26,6 +26,12 @@ export interface SpawnPlayerOptions {
    *  ATK / DEF, not Dart's LV1 placeholder values. Story zones can
    *  override per scene if a save restore demands a different LV. */
   startLevel?: number;
+  /** Override the spawn-time Dragoon lock. Defaults to false (canon
+   *  VISION §6.5: Dragoon form is earned via Story narrative events or
+   *  the Survival `dragoonUnlock` upgrade). Set true for testing flows
+   *  where we want the transform available immediately — currently
+   *  only the Arena's dev loadout flips this on. */
+  dragoonUnlocked?: boolean;
 }
 
 /**
@@ -51,7 +57,10 @@ export function spawnPlayer(world: World<Components>, opts: SpawnPlayerOptions):
   // Dragoon form is locked at spawn. In Survival the LevelUpChoiceModal
   // `dragoonUnlock` upgrade flips it on (gated behind the first boss
   // kill); Story flips it via narrative events (not yet implemented).
-  world.addComponent(id, 'Character', { avatar, dragoonUnlocked: false });
+  world.addComponent(id, 'Character', {
+    avatar,
+    dragoonUnlocked: opts.dragoonUnlocked ?? false,
+  });
   world.addComponent(id, 'Position', { x, y });
   world.addComponent(id, 'Speed', { value: archetype.actionStats.moveSpeed });
   world.addComponent(id, 'Pathfinder', {

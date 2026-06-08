@@ -129,14 +129,28 @@ export function mkButton(opts: {
   onTap: () => void;
   fontSize?: number;
   fontWeight?: 'normal' | 'bold';
-}): Container {
-  const w = opts.width;
-  const h = opts.height;
-  const c = new Container({ label: `button-${opts.label}` });
-  const bg = new Graphics()
-    .roundRect(0, 0, w, h, 5)
-    .fill({ color: COLORS.buttonBg, alpha: 0.95 })
-    .stroke({ width: 1, color: COLORS.border, alpha: 0.9 });
+}): LayoutContainer {
+  // Background + border are drawn by the layout system via `backgroundColor`
+  // / `borderColor` / `borderRadius`, so they redraw at the actual computed
+  // size after Yoga measures the container — no scaling, no rasterized
+  // pixels stretched. This matters for action buttons that override
+  // `layout.width: '100%'` (settings panel "Resume" / "Quit to title"),
+  // where a fixed-size Graphics background would otherwise be scaled by
+  // Yoga and appear blurry on desktop where the panel is wider than the
+  // declared `width` default.
+  const c = new LayoutContainer({
+    label: `button-${opts.label}`,
+    layout: {
+      width: opts.width,
+      height: opts.height,
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: COLORS.buttonBg,
+      borderColor: COLORS.border,
+      borderWidth: 1,
+      borderRadius: 5,
+    },
+  });
   const text = new Text({
     text: opts.label,
     style: {
@@ -145,19 +159,17 @@ export function mkButton(opts: {
       fontWeight: opts.fontWeight ?? 'bold',
     },
   });
-  text.anchor.set(0.5);
-  text.position.set(w / 2, h / 2);
-  c.addChild(bg, text);
+  text.layout = { isLeaf: true };
+  c.addChild(text);
   c.eventMode = 'static';
   c.cursor = 'pointer';
   c.on('pointertap', opts.onTap);
   c.on('pointerover', () => {
-    bg.tint = COLORS.borderActive;
+    c.background.tint = COLORS.borderActive;
   });
   c.on('pointerout', () => {
-    bg.tint = 0xffffff;
+    c.background.tint = 0xffffff;
   });
-  c.layout = { width: w, height: h, isLeaf: true };
   return c;
 }
 

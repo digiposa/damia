@@ -17,7 +17,15 @@ import { DART, type CharacterDef } from '@data/characters';
 import { RunHighScores } from '@services/RunHighScores';
 import { UnlockManager } from '@services/UnlockManager';
 
-const ARENA_SIZE = 28;
+/** Logical arena dimensions in iso tiles. The painted backdrop
+ *  (`map.forest.survival`) is 1456x720 native pixels — at the engine's
+ *  TILE_HALF_W = 64, the largest square iso grid whose bounds fit
+ *  inside that image is 11x11 (bounds = 1408x704, ~24 px margin per
+ *  side). Going larger would have the player walk past the painted
+ *  area into bare iso ground. If the backdrop is regenerated at a
+ *  different resolution, recompute via:
+ *    ARENA_SIZE = Math.floor(imageWidth / (2 * TILE_HALF_W))    */
+const ARENA_SIZE = 11;
 const SPAWN_GX = Math.floor(ARENA_SIZE / 2);
 const SPAWN_GY = Math.floor(ARENA_SIZE / 2);
 const UPGRADE_PICKS_PER_LEVELUP = 3;

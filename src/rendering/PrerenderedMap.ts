@@ -10,11 +10,16 @@ export interface PrerenderedMapOptions {
    *  backdrop. */
   width: number;
   height: number;
-  /** Loaded texture from `AssetManager`. Stretched to cover the iso
-   *  worldBounds() rectangle. Best results come from authoring at a
-   *  2:1 aspect ratio (iso projection is twice as wide as tall) so
-   *  the stretch is uniform — see the worldBounds calc below for
-   *  the exact pixel target at the current `TILE_HALF_*` constants. */
+  /** Loaded texture from `AssetManager`. Rendered at its NATIVE pixel
+   *  size — no stretch — and centered on the iso grid's geometric
+   *  center so the painted area aligns naturally with the playable
+   *  diamond. The caller is responsible for picking a `width` /
+   *  `height` grid that produces iso bounds small enough to fit
+   *  INSIDE the texture (so the painted "dead zone" overflows the
+   *  iso diamond, never the other way around). When the texture is
+   *  bigger than the bounds, the surplus reads as the diamond's
+   *  natural shadow border; when it's smaller, the player walks
+   *  into unpainted iso tiles, which looks broken. */
   texture: Texture;
 }
 
@@ -55,15 +60,13 @@ export class PrerenderedMap {
 
     const bounds = this.worldBounds();
     const sprite = new PixiSprite(opts.texture);
-    // Anchor at top-left so `position + size` maps cleanly to the
-    // iso bounding rectangle, then scale to the bounds. Pixi's
-    // default behaviour without explicit width/height would render
-    // at the texture's native pixel size — almost never what we
-    // want for a stretched backdrop.
-    sprite.anchor.set(0, 0);
-    sprite.position.set(bounds.minX, bounds.minY);
-    sprite.width = bounds.width;
-    sprite.height = bounds.height;
+    // Render at the texture's native pixel size (don't touch width /
+    // height), centered on the iso bounds rectangle. Centre-on-bounds
+    // keeps the painted scene aligned with the playable diamond when
+    // the scene is sized so the iso bounds fit inside the texture
+    // (see the texture doc on `PrerenderedMapOptions`).
+    sprite.anchor.set(0.5, 0.5);
+    sprite.position.set(bounds.minX + bounds.width / 2, bounds.minY + bounds.height / 2);
     this.container.addChild(sprite);
   }
 

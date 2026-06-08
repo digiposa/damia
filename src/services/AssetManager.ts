@@ -269,6 +269,21 @@ const MANIFEST = {
   'tile.forest.ground': { kind: 'texture', url: '/assets/tiles/forest/grass-procedural.png' },
   'tile.forest.path.1': { kind: 'texture', url: '/assets/tiles/forest/dirt-procedural.png' },
 
+  // Pre-rendered iso backdrop for the Survival arena. Bypasses the
+  // per-tile `TileMap` composition in favour of a single painted
+  // texture stretched to the iso world bounds (see PrerenderedMap.ts).
+  // To enable:
+  //   1. Drop the PNG at public/assets/maps/forest-survival.png.
+  //      Author at a 2:1 aspect ratio (iso projection is twice as
+  //      wide as tall) — for our 32x32 grid that's a target of
+  //      2048x1024 native, or any 2:1 multiple.
+  //   2. Uncomment the entry below.
+  //   3. Set `prerenderedMapAsset: 'map.forest.survival'` in
+  //      ArenaScene's overrides block.
+  // The fallback to TileMap stays automatic if the alias is
+  // commented or the texture fails to load.
+  // 'map.forest.survival': { kind: 'texture', url: '/assets/maps/forest-survival.png' },
+
   // 16 tree variants (rows 1+2 of Gemini sheet B).
   'sprite.prop.tree.1': { kind: 'texture', url: '/assets/sprites/props/tree-01.png' },
   'sprite.prop.tree.2': { kind: 'texture', url: '/assets/sprites/props/tree-02.png' },

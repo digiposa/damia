@@ -12,6 +12,7 @@ import type { Hud } from '@ui/Hud';
 import type { Hotbar, HotbarSlot } from '@ui/Hotbar';
 import type { GameMode } from '@data/mode';
 import type { MapData } from '@scenes/ForestOfSeles/MapLoader';
+import type { AssetAlias } from '@services/AssetManager';
 import type { MusicAlias } from '@services/AudioManager';
 import type { ItemKind } from '@data/items';
 import type { AdditionKind, MobKind } from '@data/balance';
@@ -60,6 +61,15 @@ export interface SceneOverrides {
   showCursorOverlay?: boolean;
   /** Music to start on enter. */
   musicAlias?: MusicAlias;
+  /** Asset alias of a pre-painted iso backdrop. When set, the scene
+   *  renders that single texture instead of compositing per-tile
+   *  ground / path graphics (`TileMap` is bypassed). The grid /
+   *  collision / pathfinder / entities still drive off `map.json`
+   *  so swapping back to tiles is a one-line config flip — leave
+   *  this undefined to use the regular tiled renderer. Targeted at
+   *  scenes where a coherent painted scene (AI-gen or hand) reads
+   *  better than seamless tiles — typically the Survival arena. */
+  prerenderedMapAsset?: AssetAlias;
   /** Override the player spawn (defaults to `map.spawn`). */
   spawnOverride?: { gx: number; gy: number };
   /** When false, mob kills no longer write to the player's `Progression`

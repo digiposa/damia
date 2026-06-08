@@ -102,6 +102,16 @@ export class ArenaScene implements Scene {
         // on touch builds by GameplayUI (the touch picker covers that
         // role there).
         showAdditionsBar: true,
+        // Painted iso backdrop instead of the grid-tiled floor. To enable:
+        //   1. Drop the PNG at public/assets/maps/forest-survival.png
+        //      (target 2:1 aspect ratio — iso projection is twice as
+        //      wide as tall).
+        //   2. Uncomment the `map.forest.survival` entry in
+        //      AssetManager.ts so the texture preloads.
+        //   3. Uncomment the line below.
+        // Falls back to the regular TileMap renderer automatically when
+        // the asset is missing or the line stays commented.
+        // prerenderedMapAsset: 'map.forest.survival',
         showEncounterIndicator: false,
         musicAlias: 'music.forestAmbient',
       },

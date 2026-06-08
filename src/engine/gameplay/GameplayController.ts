@@ -58,6 +58,7 @@ import { EntityHudSystem } from '@rendering/systems/EntityHudSystem';
 import { VfxSystem } from '@rendering/systems/VfxSystem';
 import { FogOfWarOverlay } from '@rendering/FogOfWarOverlay';
 import { TileMap } from '@rendering/TileMap';
+import { PrerenderedMap } from '@rendering/PrerenderedMap';
 import { createCamera } from '@rendering/Camera';
 import { Layers } from '@rendering/Layers';
 
@@ -106,7 +107,12 @@ export class GameplayController {
   // --- Pixi / rendering ----------------------------------------------
   readonly viewport: Viewport;
   readonly layers: Layers;
-  readonly tilemap: TileMap;
+  /** Floor renderer. Either the grid-composited `TileMap` (default)
+   *  or a single painted backdrop via `PrerenderedMap` when the scene
+   *  override `prerenderedMapAsset` is set. Both expose the same
+   *  `container` + `worldBounds()` surface so downstream code is
+   *  renderer-agnostic. */
+  readonly tilemap: TileMap | PrerenderedMap;
   // --- ECS ------------------------------------------------------------
   readonly world: World<Components>;
   readonly systems: System<Components>[];
@@ -156,13 +162,29 @@ export class GameplayController {
     const enableFog = o.enableFogOfWar ?? map.fov === true;
 
     // --- Tilemap + camera + layers ----------------------------------
-    this.tilemap = new TileMap({
-      width: map.size.w,
-      height: map.size.h,
-      pathZones: map.pathZones,
-      groundTexture: AssetManager.getTexture('tile.forest.ground'),
-      pathTextures: [AssetManager.getTexture('tile.forest.path.1')],
-    });
+    // PrerenderedMap path takes priority when the scene config opts
+    // into a painted backdrop. Falling back to the tiled renderer
+    // when the alias is unset (no flag) or the texture failed to
+    // load (asset missing on disk) keeps the runtime resilient — a
+    // missing PNG drops back to grass / dirt instead of crashing.
+    const prerenderedTex = o.prerenderedMapAsset
+      ? AssetManager.getTexture(o.prerenderedMapAsset)
+      : null;
+    if (prerenderedTex) {
+      this.tilemap = new PrerenderedMap({
+        width: map.size.w,
+        height: map.size.h,
+        texture: prerenderedTex,
+      });
+    } else {
+      this.tilemap = new TileMap({
+        width: map.size.w,
+        height: map.size.h,
+        pathZones: map.pathZones,
+        groundTexture: AssetManager.getTexture('tile.forest.ground'),
+        pathTextures: [AssetManager.getTexture('tile.forest.path.1')],
+      });
+    }
     const bounds = this.tilemap.worldBounds();
 
     this.viewport = createCamera(ctx.app, {

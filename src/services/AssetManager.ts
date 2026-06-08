@@ -80,10 +80,18 @@ const MANIFEST = {
     url: '/assets/sprites/player/dart-defend.png',
     autoTrim: true,
   },
-  // Double Slash 2nd-hit pose. The 1st hit reuses sprite.player.dart.attack.
+  // Double Slash addition — 2-frame follow-up after the basic 3-frame
+  // swing (wind-up across body → horizontal arc with VFX trail). Combined
+  // with the basic attackFrames in DART.sprite.base.additions.doubleSlash
+  // to render the full "double slash" sequence in a single Addition tick.
+  'sprite.player.dart.doubleSlash.1': {
+    kind: 'texture',
+    url: '/assets/sprites/player/dart-double-slash-1.png',
+    autoTrim: true,
+  },
   'sprite.player.dart.doubleSlash.2': {
     kind: 'texture',
-    url: '/assets/sprites/player/dart-doubleSlash-2.png',
+    url: '/assets/sprites/player/dart-double-slash-2.png',
     autoTrim: true,
   },
   // Red-Eye Dragoon form — single pose reused for idle / attack /

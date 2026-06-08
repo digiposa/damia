@@ -29,10 +29,19 @@ export const DART: CharacterAvatar = {
       // on walkFrames for fallback behaviour.
       walkFrames: ['sprite.player.dart.walk.1', 'sprite.player.dart.walk.2'],
       additions: {
-        // Double Slash: 1st hit reuses the attack pose, 2nd hit
-        // uses the dedicated sprite. RenderSystem swaps frames by
-        // progress fraction.
-        doubleSlash: ['sprite.player.dart.attack', 'sprite.player.dart.doubleSlash.2'],
+        // Double Slash: TLoD-canon two-hit chain — the basic 3-frame
+        // swing (wind-up → strike → follow-through) flows directly into
+        // the dedicated 2-frame follow-up (back-wind → arc + VFX trail).
+        // RenderSystem splits the Addition.totalMs evenly across the 5
+        // frames, so the animation reads as one fluid double slash
+        // rather than two disconnected hits.
+        doubleSlash: [
+          'sprite.player.dart.attack.1',
+          'sprite.player.dart.attack.2',
+          'sprite.player.dart.attack.3',
+          'sprite.player.dart.doubleSlash.1',
+          'sprite.player.dart.doubleSlash.2',
+        ],
       },
     },
     // Red-Eye Dragoon form. Single pose for now — same alias drives

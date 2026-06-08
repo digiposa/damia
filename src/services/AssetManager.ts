@@ -282,7 +282,7 @@ const MANIFEST = {
   //      ArenaScene's overrides block.
   // The fallback to TileMap stays automatic if the alias is
   // commented or the texture fails to load.
-  // 'map.forest.survival': { kind: 'texture', url: '/assets/maps/forest-survival.png' },
+  'map.forest.survival': { kind: 'texture', url: '/assets/maps/forest-survival.png' },
 
   // 16 tree variants (rows 1+2 of Gemini sheet B).
   'sprite.prop.tree.1': { kind: 'texture', url: '/assets/sprites/props/tree-01.png' },

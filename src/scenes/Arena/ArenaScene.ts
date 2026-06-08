@@ -111,7 +111,7 @@ export class ArenaScene implements Scene {
         //   3. Uncomment the line below.
         // Falls back to the regular TileMap renderer automatically when
         // the asset is missing or the line stays commented.
-        // prerenderedMapAsset: 'map.forest.survival',
+        prerenderedMapAsset: 'map.forest.survival',
         showEncounterIndicator: false,
         musicAlias: 'music.forestAmbient',
       },

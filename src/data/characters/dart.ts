@@ -16,6 +16,14 @@ export const DART: CharacterAvatar = {
       idle: 'sprite.player.dart',
       attack: 'sprite.player.dart.attack',
       defend: 'sprite.player.dart.defend',
+      // 3-frame basic-attack animation (wind-up → strike → follow-through).
+      // RenderSystem splits AttackSwing duration evenly across the array,
+      // falling back to the single `attack` alias when this is absent.
+      attackFrames: [
+        'sprite.player.dart.attack.1',
+        'sprite.player.dart.attack.2',
+        'sprite.player.dart.attack.3',
+      ],
       // 2-frame walk cycle. RenderSystem swaps between these while Dart
       // has active pathfinder waypoints — see the AvatarSpriteForm doc
       // on walkFrames for fallback behaviour.

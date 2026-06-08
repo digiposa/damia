@@ -35,9 +35,29 @@ const MANIFEST = {
     autoTrim: true,
   },
   // Attack pose used during AttackSwing — dynamic two-handed combat stance.
+  // Static fallback for the Sprite.attackTextureAlias field; the live
+  // 3-frame sequence below drives the actual swing animation via RenderSystem
+  // when DART.sprite.base.attackFrames is declared.
   'sprite.player.dart.attack': {
     kind: 'texture',
     url: '/assets/sprites/player/dart-attack.png',
+    autoTrim: true,
+  },
+  // 3-frame basic-attack animation (wind-up → strike → follow-through).
+  // RenderSystem splits AttackSwing duration evenly across the array.
+  'sprite.player.dart.attack.1': {
+    kind: 'texture',
+    url: '/assets/sprites/player/dart-attack-1.png',
+    autoTrim: true,
+  },
+  'sprite.player.dart.attack.2': {
+    kind: 'texture',
+    url: '/assets/sprites/player/dart-attack-2.png',
+    autoTrim: true,
+  },
+  'sprite.player.dart.attack.3': {
+    kind: 'texture',
+    url: '/assets/sprites/player/dart-attack-3.png',
     autoTrim: true,
   },
   // 2-frame walk cycle. RenderSystem swaps between them while the entity

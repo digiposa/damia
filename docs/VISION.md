@@ -283,16 +283,55 @@ adapté temps réel) :
 Vision déjà partiellement implémentée dans le code (`DragoonArchetype` +
 `CharacterAvatar`), à dérouler côté avatars manquants :
 
-- **Lavitz / Albert / Graham / Syuveh** partagent le **Jade Dragoon**
+- **Lavitz / Albert / Greham / Syuveil** partagent le **Jade Dragoon**
   archetype. Mêmes stats, additions, courbe XP, DLV (per-archetype).
   Différences : sprite, voix, lore.
 - **Shana / Miranda / Shirley** partagent **White-Silver Dragoon**.
-- **Meru / Damia** partagent **Blue-Sea Dragoon**.
+- **Meru / Damia / Lenus** partagent **Blue-Sea Dragoon**.
+- **Haschel / Kanzas / Doel** partagent **Violet Dragon**.
+- **Kongol / Belzav** partagent **Gold Dragon**.
+- **Dart / Zieg** partagent **Red-Eyed Dragon**.
+- **Rose** = unique wielder Darkness Dragon (pas de skin partagé).
 - En Story : seuls les avatars canon de l'arc en cours sont jouables
   (substitutions narratives).
 - En Survival : tous les avatars unlockés sont sélectionnables,
-  qu'ils soient "canon principal" ou "skin" (Shirley / Damia / Graham
-  / Syuveh / Zieg / etc.). Méta-progression via runs.
+  qu'ils soient "canon principal" ou "skin" (Shirley / Damia / Lenus /
+  Greham / Syuveil / Zieg / Kanzas / Doel / Belzav). Méta-progression
+  via runs.
+
+#### Principe **dual-data : skin ≠ boss**
+
+Un character peut exister sous **2 datasets distincts** dans le code
+selon le mode de jeu :
+
+1. **Skin Survival** → référence vers `DragoonArchetype` (stats / additions
+   / courbe XP / DLV partagées avec les autres wielders du même archetype) +
+   overrides cosmétiques (sprite + voix + lore).
+2. **Boss / NPC Story** → entrée indépendante dans `bosses/` ou `npcs/` avec
+   **stats + moveset propres**, non liés à l'archetype Dragoon. C'est ce
+   qu'on rencontre en combat scripté narratif.
+
+> Exemple **Lenus** : en Survival = skin Blue-Sea Dragoon (joue le kit Meru).
+> En Story = boss Disc 2 Undersea Cavern avec razor fans + Wingly magic +
+> Sea Dragoon Regole partenaire (kit boss unique, jamais joué par le joueur).
+>
+> Exemple **Zieg** : en Survival = skin Red-Eyed Dragoon (joue le kit Dart).
+> En Story = boss final avec son propre kit (jamais jouable canon).
+
+**Implication impl** : un même personnage peut alimenter à la fois :
+
+- une entrée `characters/<name>.skin.ts` (data archetype-référencée),
+- une entrée `bosses/<name>.ts` (data boss-tier propre),
+  selon que le contexte de jeu est Survival ou Story. Les 2 datasets sont
+  **totalement disjoints** côté stats/skills — seuls sprite/voix/lore peuvent
+  être réutilisés en commun.
+
+Avatars unlockables en survival qui sont aussi bosses canon Story (donc
+double-dataset) : **Zieg**, **Lenus**, **Greham**, **Doel**, **Shirley**
+(boss-trial Shrine of Shirley), **Lloyd** si éventuellement skinifié, etc.
+Avatars unlockables survival qui sont uniquement lore NPC (pas combat
+canon, donc dataset unique skin) : **Damia**, **Syuveil**, **Kanzas**,
+**Belzav**.
 
 ---
 

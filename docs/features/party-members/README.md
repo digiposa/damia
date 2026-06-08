@@ -24,15 +24,28 @@ Légende : ⚪ à spec — 🟡 draft — 🟢 validé — 🔵 implémenté
 
 ## Skins (Survival mode)
 
-En mode Survival, les avatars hors canon principal deviennent **skins de l'archetype** (méta-progression). Liste (à compléter au fil) :
+En mode Survival, les avatars hors canon principal deviennent **skins de l'archetype** (méta-progression). Stats / additions / courbe XP / DLV = ceux du `DragoonArchetype`. Différences purement cosmétiques (sprite + voix + lore).
 
-| Skin           | Archetype partagé   | Origine canon          |
-| -------------- | ------------------- | ---------------------- |
-| Greham         | Jade Dragon         | Boss Story disc 1      |
-| Syuveil        | Jade Dragon         | Lore (Dragon Campaign) |
-| Shirley        | White-Silver Dragon | Lore (Dragon Campaign) |
-| Damia          | Blue-Sea Dragon     | Lore (Dragon Campaign) |
-| _(autres TBD)_ | —                   | —                      |
+| Skin    | Archetype partagé   | Origine canon                                     | Boss Story canon ? |
+| ------- | ------------------- | ------------------------------------------------- | ------------------ |
+| Zieg    | Red-Eyed Dragon     | Boss final (Disc 4 Moon)                          | ✅ oui             |
+| Greham  | Jade Dragon         | Boss Disc 1 Volcano Villude (+ Feyrbrand)         | ✅ oui             |
+| Syuveil | Jade Dragon         | Lore Dragon Campaign (Vellweb)                    | ❌ NPC lore        |
+| Shirley | White-Silver Dragon | Lore Dragon Campaign + trial Shrine of Shirley    | ✅ trial-boss      |
+| Damia   | Blue-Sea Dragon     | Lore Dragon Campaign (NPC)                        | ❌ NPC lore        |
+| Lenus   | Blue-Sea Dragon     | Boss Disc 2 Undersea Cavern (+ Sea Dragon Regole) | ✅ oui             |
+| Kanzas  | Violet Dragon       | Lore Dragon Campaign (Vellweb)                    | ❌ NPC lore        |
+| Doel    | Violet Dragon       | Boss Disc 1 Black Castle (oncle d'Albert)         | ✅ oui             |
+| Belzav  | Gold Dragon         | Lore Dragon Campaign (Gigantos)                   | ❌ NPC lore        |
+
+### Principe **dual-data : skin ≠ boss**
+
+Un même character (Zieg, Lenus, Greham, Doel, Shirley) existe sous **2 datasets totalement disjoints** côté stats/skills :
+
+1. **Skin Survival** → `characters/<name>.skin.ts` → référence `DragoonArchetype` (kit Dart pour Zieg, kit Meru pour Lenus, etc.) + overrides cosmétiques.
+2. **Boss / NPC Story** → `bosses/<name>.ts` → stats + moveset boss-tier propres (Lenus boss = razor fans + Wingly magic + Regole, jamais le kit Meru).
+
+Sprite + voix + lore peuvent être réutilisés entre les 2 datasets ; tout le reste est indépendant.
 
 > Détails archetype `Archetype + Avatar` → [VISION §6.6](../../VISION.md#66-personnages-partagés-skins) et [`../dragoons/README.md`](../dragoons/README.md).
 

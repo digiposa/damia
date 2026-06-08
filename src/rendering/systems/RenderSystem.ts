@@ -182,14 +182,24 @@ export class RenderSystem implements System<Components> {
         bobY = -Math.abs(Math.sin(phase)) * 5;
       }
 
-      // Update last-known facing while the entity is moving. Idle entities
-      // keep their previous facing (no flip-flop while stationary).
-      // Threshold avoids re-latching on sub-pixel jitter near the waypoint.
+      // Update last-known facing while the entity is moving OR while it's
+      // performing a directional action (addition, spell, attack swing —
+      // they all snapshot a unit-vector target direction at trigger time
+      // for the lunge offset). Idle entities keep their previous facing
+      // (no flip-flop while stationary). Threshold avoids re-latching on
+      // sub-pixel jitter near the waypoint / aim axis. Walk takes priority
+      // since the player's intent is the next step direction, not the
+      // action that may have fired a few ms earlier.
       if (walking && pf?.waypoints && pf.waypoints.length > 0) {
         const next = pf.waypoints[0]!;
         const dx = next.x - pos.x;
         if (Math.abs(dx) > 0.5) {
           this.facing.set(id, dx > 0 ? 1 : -1);
+        }
+      } else {
+        const actionDirX = addition?.dirX ?? spell?.dirX ?? swing?.dirX;
+        if (actionDirX !== undefined && Math.abs(actionDirX) > 0.01) {
+          this.facing.set(id, actionDirX > 0 ? 1 : -1);
         }
       }
 

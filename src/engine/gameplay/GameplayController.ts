@@ -30,7 +30,7 @@ import {
 } from '@data/balance';
 import { ITEMS, type ItemKind } from '@data/items';
 import { SPELLS, type SpellKind } from '@data/spells';
-import { MODE_TUNING } from '@data/mode';
+import { MODE_TUNING, effectiveCameraZoom } from '@data/mode';
 
 import { InputController } from '@gameplay/controls/InputController';
 import { PathfindingSystem } from '@gameplay/systems/PathfindingSystem';
@@ -461,11 +461,27 @@ export class GameplayController {
     // --- Camera initial centre + zoom ------------------------------
     const playerWorld = gridToWorld(spawn.gx, spawn.gy);
     this.viewport.moveCenter(playerWorld.x, playerWorld.y);
-    const zoom = o.cameraZoom ?? tuning.cameraZoom;
-    if (zoom !== 1.0) {
-      this.viewport.setZoom(zoom, true);
-      this.viewport.moveCenter(playerWorld.x, playerWorld.y);
-    }
+    const configuredZoom = o.cameraZoom ?? tuning.cameraZoom;
+    const applyZoom = (): void => {
+      const effectiveZoom = effectiveCameraZoom(
+        configuredZoom,
+        tuning.cameraZoomScalesWithViewport ?? false,
+        ctx.app.screen.width,
+        ctx.app.screen.height,
+      );
+      if (effectiveZoom !== 1.0) {
+        this.viewport.setZoom(effectiveZoom, true);
+      }
+    };
+    applyZoom();
+    this.viewport.moveCenter(playerWorld.x, playerWorld.y);
+    // Re-apply on renderer resize so a desktop window-resize keeps the
+    // visible-area-vs-screen ratio stable. Note: this resets any
+    // user-applied wheel/pinch zoom — acceptable trade-off since the
+    // alternative is the world abruptly showing more/less terrain.
+    const onResize = (): void => applyZoom();
+    ctx.app.renderer.on('resize', onResize);
+    this.cleanups.push(() => ctx.app.renderer.off('resize', onResize));
 
     // --- Input controller + handler wiring ------------------------
     this.input = new InputController({

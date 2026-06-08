@@ -1,6 +1,7 @@
 import type { Entity, World } from '@core/ecs';
 import { gridToWorld } from '@core/math/iso';
 import type { AIBehavior, Components } from '@gameplay/components';
+import { CHARACTER_SPRITE_DEFAULTS } from '@gameplay/components/Sprite';
 import { MOBS, type MobKind } from '@data/balance';
 
 const KIND_TO_BEHAVIOR: Record<MobKind, AIBehavior> = {
@@ -26,7 +27,10 @@ export function spawnMob(world: World<Components>, kind: MobKind, gx: number, gy
   world.addComponent(id, 'Stats', { ...def.stats });
   world.addComponent(id, 'Faction', { side: 'enemy' });
   world.addComponent(id, 'AttackCooldown', { remainingMs: 0 });
-  world.addComponent(id, 'Sprite', { ...def.sprite, layer: 'entities' });
+  // Defaults first so a mob whose source art faces right (or is purely
+  // symmetric) can opt out of the mirror via `mirrorOnFacingRight: false`
+  // directly in its MobDefinition.sprite spec.
+  world.addComponent(id, 'Sprite', { ...CHARACTER_SPRITE_DEFAULTS, ...def.sprite });
   world.addComponent(id, 'AI', { behavior: KIND_TO_BEHAVIOR[kind] });
   return id;
 }

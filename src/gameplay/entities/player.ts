@@ -1,5 +1,6 @@
 import { gridToWorld } from '@core/math/iso';
 import type { Components } from '@gameplay/components';
+import { CHARACTER_SPRITE_DEFAULTS } from '@gameplay/components/Sprite';
 import type { Entity, World } from '@core/ecs';
 import {
   type CharacterAvatar,
@@ -63,19 +64,14 @@ export function spawnPlayer(world: World<Components>, opts: SpawnPlayerOptions):
   // NOT stored on Sprite — RenderSystem looks them up live from
   // avatar.sprite.base.additions[addition.kind] each render frame.
   world.addComponent(id, 'Sprite', {
+    ...CHARACTER_SPRITE_DEFAULTS,
     shape: 'capsule',
     color: 0xc8201f,
     width: 54,
     height: 81,
-    layer: 'entities',
-    fitMode: 'height',
     textureAlias: avatar.sprite.base.idle,
     attackTextureAlias: avatar.sprite.base.attack,
     defendTextureAlias: avatar.sprite.base.defend,
-    // Source poses are drawn facing screen-left — RenderSystem flips
-    // the sprite horizontally when the player walks rightwards so the
-    // character doesn't moon-walk in that half of the iso axes.
-    mirrorOnFacingRight: true,
   });
   world.addComponent(id, 'Health', {
     current: startHp,

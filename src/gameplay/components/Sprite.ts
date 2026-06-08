@@ -54,3 +54,33 @@ export interface Sprite {
 // → frame mapping centralized on CharacterAvatar (single source of truth),
 // and makes Story-mode avatar swaps (Lavitz → Albert) plus skin variants
 // (Shana/Miranda/Shirley) "just work" without re-pushing data onto Sprite.
+
+/**
+ * Convention defaults for every character-like Sprite (player, mobs, NPCs
+ * — anything humanoid that pathfinds and faces its direction of travel).
+ * Spawners spread this first and let the entity-specific spec override
+ * what it needs:
+ *
+ *   world.addComponent(id, 'Sprite', {
+ *     ...CHARACTER_SPRITE_DEFAULTS,
+ *     shape: 'capsule', color: 0xc8201f, width: 54, height: 81,
+ *     textureAlias: avatar.sprite.base.idle,
+ *     // ...
+ *   });
+ *
+ * Project art convention: every character sprite is drawn facing
+ * **screen-left**. `mirrorOnFacingRight: true` lets RenderSystem flip
+ * the texture horizontally when the entity walks rightwards, so we
+ * only have to produce one set of poses per character. A mob whose
+ * source art happens to face the other way (or is fully symmetric)
+ * can opt out per-entry with `mirrorOnFacingRight: false`.
+ *
+ * `fitMode: 'height'` keeps wider attack poses at a consistent
+ * on-screen character height; `layer: 'entities'` is the only render
+ * layer that picks up Pathfinder / iso z-sort.
+ */
+export const CHARACTER_SPRITE_DEFAULTS = {
+  layer: 'entities',
+  fitMode: 'height',
+  mirrorOnFacingRight: true,
+} as const satisfies Partial<Sprite>;

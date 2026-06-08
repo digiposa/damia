@@ -8,10 +8,19 @@ import { Tooltip } from './Tooltip';
 
 const SLOT_SIZE = 36;
 const SLOT_GAP = 4;
-/** Distance from the top of the screen. Sits just below the top HUD strip
- *  (HUD takes y ≈ 0..92) so the bottom of the screen stays free for the
- *  joystick / action buttons / hotbar trio. */
-const PADDING_TOP = 100;
+/** Vertical clearance between the bottom of the AdditionsBar and the
+ *  top of the Hotbar. The Hotbar lives at
+ *    `screen.height - 48 (slot) - 24 (padding) - SafeArea.bottom`
+ *  so stacking the AdditionsBar above it with this gap puts it at
+ *    `hotbarTop - GAP - SLOT_SIZE`
+ *  centred horizontally. Anchoring to the bottom (instead of the top
+ *  like before) keeps it clear of the SurvivalHUD chrono and aligns
+ *  with the action-RPG convention of a skill row above the inventory
+ *  hotbar (Diablo, PoE…). On touch the bar stays hidden — the
+ *  TouchActionButtons cluster owns the addition affordance there. */
+const HOTBAR_SLOT_SIZE = 48;
+const HOTBAR_PADDING_BOTTOM = 24;
+const GAP_ABOVE_HOTBAR = 10;
 
 export interface AdditionsBarState {
   /** Additions the player has access to right now (filter from progression). */
@@ -133,9 +142,11 @@ export class AdditionsBar {
     const totalWidth =
       this.currentUnlocked.length * SLOT_SIZE +
       Math.max(0, this.currentUnlocked.length - 1) * SLOT_GAP;
+    const hotbarTop =
+      this.app.screen.height - HOTBAR_SLOT_SIZE - HOTBAR_PADDING_BOTTOM - SafeArea.bottom;
     this.container.position.set(
       (this.app.screen.width - totalWidth) / 2,
-      PADDING_TOP + SafeArea.top,
+      hotbarTop - GAP_ABOVE_HOTBAR - SLOT_SIZE,
     );
   }
 }

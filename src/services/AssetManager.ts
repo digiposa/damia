@@ -16,6 +16,18 @@ const MANIFEST = {
   'sprite.player.dart': { kind: 'texture', url: '/assets/sprites/player/dart.png' },
   // Attack pose used during AttackSwing — dynamic two-handed combat stance.
   'sprite.player.dart.attack': { kind: 'texture', url: '/assets/sprites/player/dart-attack.png' },
+  // 2-frame walk cycle. RenderSystem swaps between them while the entity
+  // has active Pathfinder waypoints (and no swing / addition / spell /
+  // defend taking over). Cycle period is fixed; a per-entity phase
+  // offset desyncs swarms so they don't step in lockstep.
+  'sprite.player.dart.walk.1': {
+    kind: 'texture',
+    url: '/assets/sprites/player/dart-walk-1.png',
+  },
+  'sprite.player.dart.walk.2': {
+    kind: 'texture',
+    url: '/assets/sprites/player/dart-walk-2.png',
+  },
   // Defend pose held while the Defending component is present.
   'sprite.player.dart.defend': { kind: 'texture', url: '/assets/sprites/player/dart-defend.png' },
   // Double Slash 2nd-hit pose. The 1st hit reuses sprite.player.dart.attack.

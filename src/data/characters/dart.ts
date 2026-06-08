@@ -16,6 +16,10 @@ export const DART: CharacterAvatar = {
       idle: 'sprite.player.dart',
       attack: 'sprite.player.dart.attack',
       defend: 'sprite.player.dart.defend',
+      // 2-frame walk cycle. RenderSystem swaps between these while Dart
+      // has active pathfinder waypoints — see the AvatarSpriteForm doc
+      // on walkFrames for fallback behaviour.
+      walkFrames: ['sprite.player.dart.walk.1', 'sprite.player.dart.walk.2'],
       additions: {
         // Double Slash: 1st hit reuses the attack pose, 2nd hit
         // uses the dedicated sprite. RenderSystem swaps frames by

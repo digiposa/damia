@@ -173,6 +173,12 @@ export interface AvatarSpriteForm {
    *  truth on the avatar — no caching on Sprite, so Story-mode swaps
    *  and skin variants pick up the right frames automatically. */
   attackFrames?: ReadonlyArray<AssetAlias>;
+  /** Optional multi-frame walk-cycle animation. RenderSystem cycles
+   *  through these frames at a fixed rate while the entity has active
+   *  Pathfinder waypoints (no swing / addition / spell / defend
+   *  taking over). Empty / undefined → keep the idle texture during
+   *  movement (legacy behaviour, motion conveyed by the bob alone). */
+  walkFrames?: ReadonlyArray<AssetAlias>;
   /** Optional per-addition frame sequences (e.g. Dart's Double
    *  Slash second-hit frame). Slug → ordered alias list. Empty
    *  map falls back to the attack texture. */

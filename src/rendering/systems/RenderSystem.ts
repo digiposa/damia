@@ -8,6 +8,12 @@ import { AssetManager, type AssetAlias } from '@services/AssetManager';
 
 type RenderNode = Graphics | PixiSprite;
 
+/** Ms per walk-cycle frame. With a 2-frame cycle (Dart), this gives a
+ *  ~480 ms full-cycle (2 × 240 ms) — about one step per half second, in
+ *  the same ballpark as the bob's full sine period (720 ms) so they
+ *  read together as a coherent walk. */
+const WALK_FRAME_MS = 240;
+
 /**
  * Bridges ECS components → Pixi nodes. The only system that knows about Pixi
  * AND about gameplay components — by design, since rendering is its job.
@@ -54,8 +60,9 @@ export class RenderSystem implements System<Components> {
       const walking =
         !swing && !addition && !spell && !defending && !!pf?.waypoints && pf.waypoints.length > 0;
 
-      // Texture swap priority: Dying > Spell > Addition > Defending > AttackSwing > idle.
-      // Walking keeps the idle sprite — only the bob below conveys motion.
+      // Texture swap priority: Dying > Spell > Addition > Defending > AttackSwing > Walking > idle.
+      // Walking cycles through `avatar.sprite.base.walkFrames` when present;
+      // otherwise keeps the idle sprite and the bob below conveys motion alone.
       if (node instanceof PixiSprite) {
         const dying = world.hasComponent(id, 'Dying');
         let desiredAlias: AssetAlias | undefined = sprite.textureAlias;
@@ -101,6 +108,18 @@ export class RenderSystem implements System<Components> {
             desiredAlias = frames[Math.floor(t * frames.length)];
           } else {
             desiredAlias = sprite.attackTextureAlias;
+          }
+        } else if (walking) {
+          // Walk-cycle frames. Driven by `this.elapsedMs` so a paused
+          // scene freezes the cycle alongside everything else. Per-entity
+          // integer offset (id) shifts each entity's starting frame so a
+          // swarm doesn't step in lockstep. Falls back to the idle
+          // texture when no walkFrames are declared.
+          const character = world.getComponent(id, 'Character');
+          const frames = character?.avatar.sprite.base.walkFrames;
+          if (frames && frames.length > 0) {
+            const idx = Math.floor(this.elapsedMs / WALK_FRAME_MS + id) % frames.length;
+            desiredAlias = frames[idx];
           }
         }
         if (desiredAlias) {

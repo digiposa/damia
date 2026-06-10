@@ -42,7 +42,7 @@ export const PLAYER_BASE = {
   } as Stats,
 } as const;
 
-export type MobKind = 'berserkMouse' | 'goblin' | 'assassinCock' | 'trent' | 'fruegel';
+export type MobKind = 'berserkMouse' | 'goblin' | 'assassinCock' | 'trent' | 'fruegel' | 'sandoraKnight';
 
 export interface MobDefinition {
   health: number;
@@ -192,6 +192,44 @@ export const MOBS: Record<MobKind, MobDefinition> = {
   // here because the WaveSpawnerSystem overrides it to 99 999 on spawn —
   // bosses are pre-engaged so they march on the player from across the
   // arena instead of idling.
+  // First mob fought in TLoD PS1 (Hellena Prison breakout, Chapter 1).
+  // First-pass canonical stats — TO VERIFY against the fandom wiki Sandora
+  // Knight page before locking in. The Bestiary screen in-game lets the
+  // player eyeball these numbers; the upcoming damage-check pass will
+  // confirm them against PS1 output. Sprite alias is a placeholder until
+  // the dedicated sheet ships.
+  sandoraKnight: {
+    health: 12,
+    speed: 0.1,
+    stats: {
+      atk: 3,
+      def: 100,
+      magicAtk: 0,
+      magicDef: 80,
+      speed: 50,
+      attackHit: 100,
+      magicHit: 100,
+      attackAvoid: 0,
+      magicAvoid: 0,
+      atkSpeed: 1,
+      range: 80,
+      aggroRange: 220,
+    },
+    sprite: {
+      // Humanoid soldier silhouette — slightly bigger than goblin (full
+      // plate + helm) but smaller than fruegel. Steel-blue tint until
+      // the sprite sheet drops.
+      shape: 'capsule',
+      color: 0x6b7a8f,
+      width: 64,
+      height: 96,
+      fitMode: 'height',
+      textureAlias: 'sprite.mob.sandoraKnight',
+      attackTextureAlias: 'sprite.mob.sandoraKnight.attack',
+      deathTextureAlias: 'sprite.mob.sandoraKnight.death',
+    },
+    xp: 12,
+  },
   fruegel: {
     health: 90,
     speed: 0.05,

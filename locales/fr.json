@@ -89,8 +89,27 @@
     "sfx": "Volume effets",
     "voice": "Volume voix",
     "language": "Langue",
+    "bestiary": "Bestiaire",
     "resume": "Reprendre",
     "quitToTitle": "Retour au titre"
+  },
+  "bestiary": {
+    "title": "Bestiaire",
+    "empty": "Aucune entrée.",
+    "canonHeader": "Canon (PS1)",
+    "engineHeader": "Moteur",
+    "stat": {
+      "atk": "AT",
+      "def": "DF",
+      "mat": "MAT",
+      "mdf": "MDF",
+      "spd": "VIT",
+      "gold": "Or",
+      "element": "Élément"
+    },
+    "sandoraKnight": {
+      "name": "Chevalier de Sandora"
+    }
   },
   "exits": {
     "westPathOvergrown": "Le chemin est obstrué.",

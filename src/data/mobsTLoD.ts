@@ -123,6 +123,23 @@ export const MOBS_TLOD: Partial<Record<MobKind, TLoDMobStats>> = {
     drops: [{ item: 'pellet', chance: 0.1 }],
     canCounterAttack: true,
   },
+  // First fight of the game: Hellena Prison breakout. Element/dodge
+  // pending wiki cross-check; first-pass values mirror MOBS so the
+  // Bestiary screen reads coherent numbers immediately.
+  sandoraKnight: {
+    location: 'Hellena Prison',
+    element: 'dark',
+    hp: 12,
+    xp: 12,
+    gold: 12,
+    pAtk: 3,
+    pDef: 100,
+    mAtk: 0,
+    mDef: 80,
+    speed: 50,
+    drops: [{ item: 'healingPotion', chance: 0.08 }],
+    canCounterAttack: false,
+  },
 };
 
 /** Lookup helper — returns `null` for mobs not yet in the table. */

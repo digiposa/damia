@@ -89,8 +89,27 @@
     "sfx": "SFX volume",
     "voice": "Voice volume",
     "language": "Language",
+    "bestiary": "Bestiary",
     "resume": "Resume",
     "quitToTitle": "Quit to Title"
+  },
+  "bestiary": {
+    "title": "Bestiary",
+    "empty": "No entries yet.",
+    "canonHeader": "Canon (PS1)",
+    "engineHeader": "Engine",
+    "stat": {
+      "atk": "AT",
+      "def": "DF",
+      "mat": "MAT",
+      "mdf": "MDF",
+      "spd": "SPD",
+      "gold": "G",
+      "element": "Element"
+    },
+    "sandoraKnight": {
+      "name": "Sandora Knight"
+    }
   },
   "exits": {
     "westPathOvergrown": "Path overgrown.",

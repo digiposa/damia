@@ -16,12 +16,12 @@ import { mkButton, mkCloseButton, mkPanel, mkRow, mkText } from './layoutHelpers
 const VOLUME_STEP = 0.1;
 const STEPPER_SIZE = 32;
 const ACTION_BUTTON_HEIGHT = 36;
-/** Total panel height: title strip + 5 rows + spacer + 2 buttons +
- *  gaps + padding. Sized so the panel is comfortably centered on
- *  every viewport, not stretched to the full modal max. */
-const PANEL_MAX_HEIGHT = 460;
+/** Total panel height: title strip + 5 rows + Bestiary button + spacer
+ *  + 2 action buttons + gaps + padding. Sized so the panel is comfortably
+ *  centered on every viewport, not stretched to the full modal max. */
+const PANEL_MAX_HEIGHT = 520;
 
-export type SettingsPanelAction = 'resume' | 'quit-to-title';
+export type SettingsPanelAction = 'resume' | 'quit-to-title' | 'open-bestiary';
 
 export interface SettingsPanelOptions {
   /** When false, hide the Resume / Quit-to-Title action buttons. Use
@@ -116,6 +116,10 @@ export class SettingsPanel extends Modal {
 
     // --- Language row ---------------------------------------------------
     this.langValueText = this.buildLangRow(panel, t('settings.language'));
+
+    // --- Bestiary (always available, both in title + gameplay menus) ----
+    panel.addChild(new Container({ layout: { height: SPACING.gapSmall, isLeaf: true } }));
+    panel.addChild(this.buildActionButton(t('settings.bestiary'), 'open-bestiary'));
 
     // --- Spacer + action buttons (skipped when opened outside gameplay) -
     if (this.showActions) {

@@ -1,6 +1,6 @@
 import type { System, World } from '@core/ecs';
 import type { Components } from '@gameplay/components';
-import { spawnFloatingText } from '@gameplay/entities/floatingText';
+import { FLOAT_XP, spawnFloatingText } from '@gameplay/entities/floatingText';
 import { spawnItem } from '@gameplay/entities/items';
 import { MOBS, type MobKind } from '@data/balance';
 import { rollLoot } from '@data/items';
@@ -98,7 +98,7 @@ export class DeathSystem implements System<Components> {
             x: pos.x,
             y: pos.y,
             text: `+${xp} XP`,
-            color: 0xffe27a,
+            color: FLOAT_XP,
             durationMs: 1100,
           });
           if (this.awardPlayerXp) this.awardXp(world, xp, pos.x, pos.y);

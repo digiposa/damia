@@ -22,12 +22,24 @@ import { mkCloseButton, mkColumn, mkPanel, mkRow, mkSubPanel, mkText } from './l
 
 /** Curated list of mobs visible in the Bestiary. Adding a mob to MOBS
  *  doesn't auto-add it here — we only list entries whose canonical
- *  stats have been verified against the wiki and whose sprite is in. */
-const BESTIARY_ENTRIES: ReadonlyArray<MobKind> = ['sandoraKnight'];
+ *  stats have been verified against the wiki and whose sprite is in.
+ *  Order roughly follows TLoD encounter order (Hellena Prison → Forest
+ *  → Prison-area boss) so the screen reads like a campaign log. */
+const BESTIARY_ENTRIES: ReadonlyArray<MobKind> = [
+  'sandoraKnight',
+  'berserkMouse',
+  'goblin',
+  'assassinCock',
+  'trent',
+  'fruegel',
+];
 
-/** Same panel height cap as Settings so the modal stays visually
- *  consistent across the two screens you can reach from the gear. */
-const PANEL_MAX_HEIGHT = 520;
+/** Use the full modal height — with 6+ entries the panel needs room
+ *  to breathe, and the base Modal clamps against `screen.height -
+ *  MODAL.margin` anyway so this is only the desktop ceiling. Mobile
+ *  gets whatever the viewport allows. A future scroll wrapper will
+ *  remove the clamp problem entirely. */
+const PANEL_MAX_HEIGHT = 720;
 
 export class BestiaryPanel extends Modal {
   protected override panelMaxHeight = PANEL_MAX_HEIGHT;

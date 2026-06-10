@@ -109,6 +109,21 @@
     },
     "sandoraKnight": {
       "name": "Chevalier de Sandora"
+    },
+    "berserkMouse": {
+      "name": "Souris Enragée"
+    },
+    "goblin": {
+      "name": "Gobelin"
+    },
+    "assassinCock": {
+      "name": "Coq Assassin"
+    },
+    "trent": {
+      "name": "Trent"
+    },
+    "fruegel": {
+      "name": "Fruegel"
     }
   },
   "exits": {

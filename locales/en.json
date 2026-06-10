@@ -109,6 +109,21 @@
     },
     "sandoraKnight": {
       "name": "Sandora Knight"
+    },
+    "berserkMouse": {
+      "name": "Berserk Mouse"
+    },
+    "goblin": {
+      "name": "Goblin"
+    },
+    "assassinCock": {
+      "name": "Assassin Cock"
+    },
+    "trent": {
+      "name": "Trent"
+    },
+    "fruegel": {
+      "name": "Fruegel"
     }
   },
   "exits": {

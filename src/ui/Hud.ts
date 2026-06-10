@@ -42,10 +42,13 @@ export class Hud {
   private readonly zoomText: Text;
   /** Dragoon transform button (desktop only). The frame redraws on
    *  every `setDragoonState` to reflect ready / active / charging.
-   *  Hidden when locked or on touch. */
+   *  The inner sprite swaps between the 3 "eye opening" frames
+   *  (ui.dragoon.eye.1/2/3) tied to the SP gauge — closed when empty,
+   *  half-lidded mid-charge, fully open when ready. Hidden when locked
+   *  or on touch. */
   private readonly dragoonBtn: Container;
   private readonly dragoonFrame: Graphics;
-  private readonly dragoonFill: Graphics;
+  private readonly dragoonEye: PixiSprite;
   private dragoonTapHandler: (() => void) | null = null;
 
   constructor(app: Application) {
@@ -167,19 +170,21 @@ export class Hud {
     this.dragoonBtn = new Container({ label: 'hud-dragoon-btn' });
     this.dragoonBtn.position.set(dragoonCx, dragoonCy);
     this.dragoonFrame = new Graphics();
-    this.dragoonFill = new Graphics();
-    const dragoonLabel = new Text({
-      text: 'DG',
-      style: {
-        ...TEXT.value,
-        fontSize: 12,
-        fontWeight: 'bold',
-        fill: COLORS.textCream,
-        stroke: { color: COLORS.textStroke, width: 2 },
-      },
-    });
-    dragoonLabel.anchor.set(0.5);
-    this.dragoonBtn.addChild(this.dragoonFrame, this.dragoonFill, dragoonLabel);
+    // Eye sprite — initialised to the closed frame; setDragoonState swaps
+    // the texture to .2 / .3 as the SP gauge fills. The texture is
+    // resolved via AssetManager so an asset that hasn't loaded yet
+    // surfaces as a null sprite (transparent) rather than crashing the
+    // HUD construction — first paint flips to the real texture as soon
+    // as the preload settles.
+    const initialEyeTex = AssetManager.getTexture('ui.dragoon.eye.1');
+    this.dragoonEye = initialEyeTex ? new PixiSprite(initialEyeTex) : new PixiSprite();
+    this.dragoonEye.anchor.set(0.5);
+    // Inset by the border thickness on each side so the eye doesn't paint
+    // over the frame ring.
+    const eyeFit = DG_BTN_SIZE - 4;
+    this.dragoonEye.width = eyeFit;
+    this.dragoonEye.height = eyeFit;
+    this.dragoonBtn.addChild(this.dragoonFrame, this.dragoonEye);
     this.dragoonBtn.eventMode = 'static';
     this.dragoonBtn.cursor = 'pointer';
     this.dragoonBtn.on('pointertap', () => {
@@ -271,11 +276,10 @@ export class Hud {
     const frac = Math.max(0, Math.min(1, state.spFrac));
     const ready = frac >= 1;
 
-    // Background + border. Border colour signals readiness so a glance
-    // is enough to know "tap now to transform". Magenta when active,
-    // gold ring when ready, dim grey otherwise.
-    // Magenta is canon TLoD's transform glow; not a named theme token
-    // yet so keep it inline until/unless other systems start needing it.
+    // Background + border. Border colour signals readiness at a glance:
+    // magenta while transformed, gold ring when ready to tap, dim grey
+    // while charging. Magenta is canon TLoD's transform glow; not a
+    // theme token yet so keep it inline.
     const DRAGOON_ACTIVE_COLOR = 0xd450ff;
     const borderColor = state.active ? DRAGOON_ACTIVE_COLOR : ready ? COLORS.gold : COLORS.border;
     const borderWidth = state.active || ready ? 2 : 1;
@@ -285,24 +289,23 @@ export class Hud {
       .fill({ color: COLORS.tileBg ?? COLORS.spBg, alpha: 0.92 })
       .stroke({ width: borderWidth, color: borderColor, alpha: 0.95 });
 
-    // Inner SP fill — vertical, grows from the bottom up. Bright gold
-    // when active so the player sees they're "inside" the form;
-    // SP-colour while charging. Inset 2 px so the border stays visible
-    // around the fill.
-    const inset = 2;
-    const fillH = (DG_BTN_SIZE - inset * 2) * frac;
-    const fillColor = state.active ? COLORS.gold : COLORS.spFg;
-    this.dragoonFill.clear();
-    if (fillH > 0) {
-      this.dragoonFill
-        .roundRect(
-          -half + inset,
-          half - inset - fillH,
-          DG_BTN_SIZE - inset * 2,
-          fillH,
-          Math.max(2, radius - inset),
-        )
-        .fill({ color: fillColor, alpha: state.active ? 0.45 : 0.35 });
+    // Eye-opening animation tied to SP. Picking the frame by fraction
+    // (vs cycling on a timer) lets the player feel the gauge filling
+    // through the icon itself — closed eye → half-lidded → fully open
+    // matches "asleep / waking / awake". Once transformed, the eye
+    // stays fully open (we're "inside" the form). Cycling could come
+    // back as a polish pass with a glow filter behind it.
+    let eyeAlias: 'ui.dragoon.eye.1' | 'ui.dragoon.eye.2' | 'ui.dragoon.eye.3';
+    if (state.active || ready) {
+      eyeAlias = 'ui.dragoon.eye.3';
+    } else if (frac >= 0.5) {
+      eyeAlias = 'ui.dragoon.eye.2';
+    } else {
+      eyeAlias = 'ui.dragoon.eye.1';
+    }
+    const desiredTex = AssetManager.getTexture(eyeAlias);
+    if (desiredTex && this.dragoonEye.texture !== desiredTex) {
+      this.dragoonEye.texture = desiredTex;
     }
   }
 

@@ -220,6 +220,14 @@ const MANIFEST = {
   // mode (single vs ground AoE) so all 14 element × target combos are
   // distinguishable without per-spell PNGs.
   'sprite.spell.magicBase': { kind: 'texture', url: '/assets/spells/magic-base.png' },
+  // Dragoon transform button — 3-frame "eye opens" animation. Frame
+  // index reflects the SP gauge fill (closed = empty / half = half-full
+  // / open = ready), so the player reads the form's readiness at a
+  // glance instead of having to parse a numeric bar. Lifted from the
+  // PS1 TLoD command icon palette to keep the visual identity canon.
+  'ui.dragoon.eye.1': { kind: 'texture', url: '/assets/spells/dragoon-eye-1.png' },
+  'ui.dragoon.eye.2': { kind: 'texture', url: '/assets/spells/dragoon-eye-2.png' },
+  'ui.dragoon.eye.3': { kind: 'texture', url: '/assets/spells/dragoon-eye-3.png' },
 
   // Spell impact VFX textures — drawn by VfxSystem (sprite-based kinds).
   'vfx.fireImpact': { kind: 'texture', url: '/assets/vfx/burn-out.png' },

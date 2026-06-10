@@ -1,7 +1,7 @@
 import type { System, World } from '@core/ecs';
 import type { Components } from '@gameplay/components';
 import { ADDITIONS, type AdditionKind } from '@data/balance';
-import { computeAdditionDamage } from '@gameplay/damage';
+import { computeAdditionTotalDamage, distributeAdditionDamage } from '@gameplay/damage';
 import { FLOAT_DAMAGE, spawnFloatingText } from '@gameplay/entities/floatingText';
 import { addSp } from '@gameplay/sp';
 import { playSfx, playAdditionVoice } from '@services/AudioManager';
@@ -49,15 +49,21 @@ export class AdditionSystem implements System<Components> {
         if (t === undefined) break;
         if (t > add.elapsedMs) break;
         if (t < before) continue; // shouldn't happen (hitsApplied protects us) but be defensive
-        // Per-hit damage uses the TLoD addition formula:
-        //   round[floor[floor[hitValue × multiplier / 100] × AT / 100] × (LV+5) × 5 / DF]
-        // Sum across hits approximates the canonical "perfect addition"
-        // damage (off by the floor truncation per hit). VISION §6.3
-        // forbids additions in Dragoon form so the multiplier wouldn't
-        // normally apply, but the formula stays correct if the
-        // controller-side gate ever lapses.
-        const hitValue = def.hits[i] ?? 0;
-        const landed = this.applyHit(world, id, add.targetId, hitValue, multiplier);
+        // Canonical TLoD addition damage: full formula on Σhits + multiplier
+        // ONCE, then split proportionally across the hits. The plan is
+        // computed lazily on the first hit and cached on the component so
+        // subsequent hits read in O(1) — and a mid-animation state change
+        // (target gains Defending halfway through, etc.) doesn't swing the
+        // canonical total. VISION §6.3 forbids additions in Dragoon form
+        // so the multiplier wouldn't normally apply, but the formula stays
+        // correct if the controller-side gate ever lapses.
+        if (!add.damagePerHit) {
+          const sumHits = def.hits.reduce((acc, v) => acc + v, 0);
+          const total = computeAdditionTotalDamage(world, id, add.targetId, sumHits, multiplier);
+          add.damagePerHit = distributeAdditionDamage(total, def.hits);
+        }
+        const dmg = add.damagePerHit[i] ?? 0;
+        const landed = this.applyHit(world, id, add.targetId, dmg);
         add.hitsApplied = i + 1;
         add.lastHitLanded = landed;
         if (landed) {
@@ -87,15 +93,16 @@ export class AdditionSystem implements System<Components> {
     }
   }
 
-  /** Apply one hit checkpoint. Returns `true` when damage actually landed
+  /** Apply one pre-computed hit. Returns `true` when damage actually landed
    *  on a live target, `false` when the target was missing / dying / dead
-   *  (used by the caller to gate SP gain + the success-voice trigger). */
+   *  (used by the caller to gate SP gain + the success-voice trigger).
+   *  Damage is taken from the addition's `damagePerHit` plan rather than
+   *  recomputed per call — see the caller's plan-build block. */
   private applyHit(
     world: World<Components>,
-    attackerId: number,
+    _attackerId: number,
     targetId: number,
-    hitValue: number,
-    multiplier: number,
+    dmg: number,
   ): boolean {
     const targetHealth = world.getComponent(targetId, 'Health');
     const targetStats = world.getComponent(targetId, 'Stats');
@@ -103,7 +110,6 @@ export class AdditionSystem implements System<Components> {
     if (!targetHealth || !targetStats || !targetPos) return false;
     if (targetHealth.current <= 0 || world.hasComponent(targetId, 'Dying')) return false;
 
-    const dmg = computeAdditionDamage(world, attackerId, targetId, hitValue, multiplier);
     targetHealth.current = Math.max(0, targetHealth.current - dmg);
     spawnFloatingText(world, {
       x: targetPos.x,

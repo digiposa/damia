@@ -117,30 +117,65 @@ export function computePhysicalDamage(
 }
 
 /**
- * Player Addition per-hit damage. Caller passes the per-hit value
- * (e.g. 75 for Harpoon hit 1, 25 for Harpoon hit 2) and the addition's
- * current per-level multiplier (TLoD canon, 100-based: 100 = 1×).
+ * Canonical TLoD Addition damage — full formula on the SUM of hit values,
+ * not per-hit (the previous per-hit version accumulated up to N floor
+ * truncations vs the canonical 1, drifting the total).
  *
- *   round[floor[floor[hitValue × Multiplier / 100] × AT / 100] × (LV + 5) × 5 / DF]
+ *   round[floor[floor[Σhits × Multiplier / 100] × AT / 100] × (LV + 5) × 5 / DF]
  *
- * Sum of per-hit results approximates the canonical "perfect addition"
- * damage to within 1 (floor truncation accumulates per hit) — close
- * enough, and worth it for the per-hit damage-number UX.
+ * Caller supplies the sum of the addition's per-hit values and the level
+ * multiplier (100-based: 100 = 1×, 202 = 2.02× …). For the floating
+ * damage-number-per-hit UX, feed this total to `distributeAdditionDamage`
+ * along with the per-hit hit values to get a length-N array whose sum
+ * matches the canon exactly.
  */
-export function computeAdditionDamage(
+export function computeAdditionTotalDamage(
   world: World<Components>,
   attackerId: number,
   targetId: number,
-  hitValue: number,
+  sumHitValues: number,
   multiplier: number,
 ): number {
   const atk = effectiveAtk(world, attackerId);
   const def = Math.max(1, effectiveDef(world, targetId));
   const lv = levelOf(world, attackerId);
-  const additionFactor = Math.floor((hitValue * multiplier) / 100);
+  const additionFactor = Math.floor((sumHitValues * multiplier) / 100);
   const additionAtk = Math.floor((additionFactor * atk) / 100);
   const raw = tlodRound(additionAtk * (lv + 5) * 5, def);
   return applyModifiers(raw, readModifiers(world, targetId));
+}
+
+/**
+ * Split a canonical addition total across its hits proportionally to each
+ * hit's relative weight in the addition's `hits` array. Integer truncation
+ * remainders pile onto the LAST hit so Σ(result) === total exactly — the
+ * player still gets a satisfying per-hit floating damage number, but the
+ * combined damage matches the canon to the unit.
+ *
+ *   hit[i] dmg = floor(total × hitValues[i] / Σ hitValues),  i in [0, N-2]
+ *   hit[N-1]   = total − Σ(previous hits)
+ *
+ * Returns an array the same length as `hitValues`. If all hit weights are
+ * zero (or the array is empty) the result is a same-length array of zeros.
+ */
+export function distributeAdditionDamage(
+  total: number,
+  hitValues: readonly number[],
+): number[] {
+  const n = hitValues.length;
+  if (n === 0) return [];
+  const sum = hitValues.reduce((acc, v) => acc + v, 0);
+  if (sum <= 0) return new Array<number>(n).fill(0);
+  const result = new Array<number>(n);
+  let assigned = 0;
+  for (let i = 0; i < n - 1; i++) {
+    const share = Math.floor((total * (hitValues[i] ?? 0)) / sum);
+    result[i] = share;
+    assigned += share;
+  }
+  // Last hit absorbs the rounding remainder so Σ matches `total` exactly.
+  result[n - 1] = Math.max(0, total - assigned);
+  return result;
 }
 
 /**

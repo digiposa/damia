@@ -4,9 +4,10 @@ import type { Components } from '@gameplay/components';
 import { ARCHETYPES, DART } from '@data/characters';
 const JADE_DRAGOON = ARCHETYPES.jadeDragoon;
 import {
-  computeAdditionDamage,
+  computeAdditionTotalDamage,
   computeMagicalItemDamage,
   computePhysicalDamage,
+  distributeAdditionDamage,
 } from '@gameplay/damage';
 
 /** Minimal entity factories. We attach only the components the
@@ -94,27 +95,48 @@ describe('computePhysicalDamage', () => {
   });
 });
 
-describe('computeAdditionDamage', () => {
-  it('per-hit canon formula', () => {
-    // Lavitz LV5 (atk 16) vs Fruegel (def 100), Harpoon hit 1
-    // (hitValue 75) at multiplier 100 (LV1 mastery):
-    // floor[75 × 100 / 100] = 75
-    // floor[75 × 16 / 100] = 12
-    // round[12 × 10 × 5 / 100] = round[6] = 6.
+describe('computeAdditionTotalDamage', () => {
+  it('canon formula on Σhits + multiplier (single-floor wrapper)', () => {
+    // Lavitz LV5 (atk 16) vs Fruegel (def 100), Harpoon (hits 75 + 25 =
+    // sum 100), multiplier 100 (LV1 mastery):
+    //   floor[100 × 100 / 100]   = 100
+    //   floor[100 × 16 / 100]    = 16
+    //   round[16 × 10 × 5 / 100] = round[8] = 8.
     const w = new World<Components>();
     const player = makePlayer(w, 5, 16, 16);
     const fruegel = makeEnemy(w, 6, 100);
-    expect(computeAdditionDamage(w, player, fruegel, 75, 100)).toBe(6);
+    expect(computeAdditionTotalDamage(w, player, fruegel, 100, 100)).toBe(8);
   });
 
-  it('high multiplier × small hitValue still produces real damage', () => {
-    // hitValue 30, multiplier 234 (Cat's Cradle LV5):
-    // floor[30 × 234 / 100] = 70 → floor[70 × 16 / 100] = 11
-    // tlodRound(11 × 10 × 5, 100) = floor((550 + 50) / 100) = 6.
+  it("high multiplier × small Σhits still produces real damage", () => {
+    // Σhits 180 (Cat's Cradle 30+30+30+30+30+30), multiplier 234 (LV5):
+    //   floor[180 × 234 / 100]   = 421 → floor[421 × 16 / 100] = 67
+    //   round[67 × 10 × 5 / 100] = round[33.5] = 34.
     const w = new World<Components>();
     const player = makePlayer(w, 5, 16, 16);
     const fruegel = makeEnemy(w, 6, 100);
-    expect(computeAdditionDamage(w, player, fruegel, 30, 234)).toBe(6);
+    expect(computeAdditionTotalDamage(w, player, fruegel, 180, 234)).toBe(34);
+  });
+});
+
+describe('distributeAdditionDamage', () => {
+  it('splits proportionally to hit values, sum matches total exactly', () => {
+    // Harpoon (75, 25) total 8: 6 + 2 = 8.
+    expect(distributeAdditionDamage(8, [75, 25])).toEqual([6, 2]);
+  });
+
+  it("rounding remainder routes to the last hit", () => {
+    // Total 10 split across 3 equal-weight hits = 3, 3, 4 (remainder
+    // absorbed by hit 3 so Σ = 10).
+    expect(distributeAdditionDamage(10, [1, 1, 1])).toEqual([3, 3, 4]);
+  });
+
+  it("empty hit list returns empty array", () => {
+    expect(distributeAdditionDamage(50, [])).toEqual([]);
+  });
+
+  it("zero-weight hits return all-zero distribution", () => {
+    expect(distributeAdditionDamage(42, [0, 0, 0])).toEqual([0, 0, 0]);
   });
 });
 

@@ -34,4 +34,14 @@ export interface Addition {
   /** Unit vector toward target at trigger — used by RenderSystem for facing/lunge. */
   dirX: number;
   dirY: number;
+  /** Per-hit damage plan. Computed lazily by AdditionSystem on the first
+   *  hit checkpoint via `computeAdditionTotalDamage` + `distributeAdditionDamage`
+   *  (canonical TLoD formula: full wrapper on Σhits × Multiplier first, then
+   *  proportionally split across the hits with the rounding remainder routed
+   *  to the last hit so Σ equals the canon total exactly). Cached on the
+   *  component so subsequent hits read in O(1) and a mid-animation Stats
+   *  change (target Defending halfway through, etc.) doesn't swing the total
+   *  — TLoD likewise snapshots state at trigger. Undefined until the first
+   *  hit fires; once set it has `def.hits.length` entries. */
+  damagePerHit?: readonly number[];
 }

@@ -217,16 +217,14 @@ export const MOBS: Record<MobKind, MobDefinition> = {
     },
     sprite: {
       // Humanoid soldier silhouette — slightly bigger than goblin (full
-      // plate + helm) but smaller than fruegel. Steel-blue tint until
-      // the sprite sheet drops.
+      // plate + helm) but smaller than fruegel. Steel-blue capsule
+      // procedural until the sprite sheet drops; textureAliases will
+      // be added alongside their AssetManager manifest entries.
       shape: 'capsule',
       color: 0x6b7a8f,
       width: 64,
       height: 96,
       fitMode: 'height',
-      textureAlias: 'sprite.mob.sandoraKnight',
-      attackTextureAlias: 'sprite.mob.sandoraKnight.attack',
-      deathTextureAlias: 'sprite.mob.sandoraKnight.death',
     },
     xp: 12,
   },

@@ -38,7 +38,7 @@ import {
 import { t } from '@services/I18nService';
 
 import { Modal } from './Modal';
-import { COLORS, SPACING, TEXT } from './theme';
+import { COLORS, MODAL, SPACING, TEXT } from './theme';
 import { mkButton, mkCloseButton, mkPanel, mkRow, mkSubPanel, mkText } from './layoutHelpers';
 
 type CodexTab = 'mobs' | 'bosses' | 'characters';
@@ -64,6 +64,9 @@ const PANEL_MAX_HEIGHT = 720;
  *  (44 px is the Apple HIG floor; we go 40 to keep the strip compact
  *  while still passing the thumb test). */
 const TAB_HEIGHT = 40;
+/** Title strip height — fixed in buildPanel. Kept here so the viewport
+ *  size calculation in applyPanelSize stays in sync. */
+const TITLE_STRIP_HEIGHT = 32;
 
 export class CodexPanel extends Modal {
   protected override panelMaxHeight = PANEL_MAX_HEIGHT;
@@ -74,10 +77,15 @@ export class CodexPanel extends Modal {
   // Scroll widget — populated by buildPanel(). Inner content is a
   // LayoutContainer so Yoga handles card stacking + chip wrapping;
   // outer viewport is a regular Container so we can mask + translate.
+  // Container.width/height returns the union of child bounds which the
+  // mask pollutes (4096×4096); we track the viewport's actual dimensions
+  // ourselves, derived from the panel size in applyPanelSize().
   private scrollViewport: Container | null = null;
   private scrollMask: Graphics | null = null;
   private scrollContent: LayoutContainer | null = null;
   private scrollY = 0;
+  private viewportWidth = 0;
+  private viewportHeight = 0;
 
   constructor(app: Application) {
     super(app, 'codex-panel');
@@ -204,43 +212,78 @@ export class CodexPanel extends Modal {
   }
 
   private applyScroll(targetY: number): void {
-    if (!this.scrollContent || !this.scrollViewport) return;
-    const viewH = this.scrollViewport.height || 0;
+    if (!this.scrollContent) return;
+    // viewportHeight is what we computed from the panel size — see
+    // applyPanelSize. Container.height would give us the wrong value
+    // because the 4096×4096 mask is a child of the viewport.
     const contentH = this.scrollContent.height || 0;
-    const minY = Math.min(0, viewH - contentH);
+    const minY = Math.min(0, this.viewportHeight - contentH);
     const maxY = 0;
     this.scrollY = Math.max(minY, Math.min(maxY, targetY));
     this.scrollContent.y = this.scrollY;
   }
 
-  /** Schedule the scroll mask refresh + scroll clamp on the next tick.
-   *  Both the viewport size and the content height need the @pixi/layout
-   *  Yoga pass to have run — and that happens during render, not when
-   *  applyPanelSize() returns. We defer to a single tick so the same
-   *  refresh covers open + resize + tab switch. */
-  private scheduleScrollRefresh(): void {
-    this.app.ticker.addOnce(() => {
-      if (this.scrollMask && this.scrollViewport) {
-        const w = this.scrollViewport.width || 0;
-        const h = this.scrollViewport.height || 0;
-        this.scrollMask.clear().rect(0, 0, w, h).fill(0xffffff);
-      }
-      this.applyScroll(this.scrollY);
-    }, this);
-  }
-
-  /** Resize the mask + clamp the scroll position. Called by the base
-   *  Modal's applyPanelSize hook (which runs on every viewport resize
-   *  AND on open) so the codex stays usable across orientation changes. */
+  /** Resize the mask, push explicit dimensions onto the viewport + the
+   *  inner content, then clamp the scroll position. Called by the base
+   *  Modal on every viewport resize AND on open so the codex stays
+   *  usable across orientation changes.
+   *
+   *  We mirror Modal.applyPanelSize's panel-size formula instead of
+   *  reading laid-out dimensions back from Pixi:
+   *    - Container.width/height is bounds-based and the mask pollutes it.
+   *    - @pixi/layout computed values aren't trivially exposed and need
+   *      one render frame to populate.
+   *  Computing inline keeps the refresh synchronous → mask is correct
+   *  on the very first frame, no empty-content flash. */
   protected override applyPanelSize(): void {
     super.applyPanelSize();
-    this.scheduleScrollRefresh();
+
+    const panelW = Math.min(MODAL.maxWidth, this.app.screen.width - MODAL.margin);
+    const panelH = Math.min(this.panelMaxHeight, this.app.screen.height - MODAL.margin);
+    // Panel inner box = panel size - 2 × padding. Subtract header strip
+    // + tab strip + the two flex-gap spacers between the three sections.
+    const innerW = Math.max(0, panelW - 2 * SPACING.pad);
+    const innerH = Math.max(
+      0,
+      panelH - 2 * SPACING.pad - TITLE_STRIP_HEIGHT - TAB_HEIGHT - 2 * SPACING.gap,
+    );
+    this.viewportWidth = innerW;
+    this.viewportHeight = innerH;
+
+    if (this.scrollViewport) {
+      // Push explicit dims onto the viewport so Yoga sizes the panel
+      // child slot to exactly this rectangle (no flex stretch race
+      // with the mask pollution). The viewport is a regular Container
+      // so its children — mask + content — aren't laid out by Yoga;
+      // we position them ourselves.
+      this.scrollViewport.layout = {
+        ...(this.scrollViewport.layout?.style ?? {}),
+        width: innerW,
+        height: innerH,
+        flex: 0,
+      };
+    }
+    if (this.scrollMask) {
+      this.scrollMask.clear().rect(0, 0, innerW, innerH).fill(0xffffff);
+    }
+    if (this.scrollContent) {
+      // Force content width so cards using `width: 100%` actually get
+      // viewportWidth and not zero (no LayoutContainer ancestor).
+      this.scrollContent.layout = {
+        ...(this.scrollContent.layout?.style ?? {}),
+        width: innerW,
+      };
+    }
+    this.applyScroll(this.scrollY);
   }
 
   protected override onOpen(): void {
     this.renderActiveTab();
     this.updateTabStyles();
-    this.scheduleScrollRefresh();
+    // Content height needs Yoga to have measured the freshly added
+    // cards — defer the clamp by one tick so the bottom-edge stop
+    // accounts for the actual layout.
+    this.app.ticker.addOnce(() => this.applyScroll(this.scrollY), this);
   }
 
   // ---- Tabs -----------------------------------------------------------
@@ -251,7 +294,8 @@ export class CodexPanel extends Modal {
     this.scrollY = 0;
     this.renderActiveTab();
     this.updateTabStyles();
-    this.scheduleScrollRefresh();
+    // Defer the clamp one tick so the new cards' heights are measured.
+    this.app.ticker.addOnce(() => this.applyScroll(0), this);
   }
 
   /** Visually highlight the active tab by tinting its background gold.

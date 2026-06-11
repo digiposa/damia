@@ -344,6 +344,10 @@ export class CodexPanel extends Modal {
       layout: { width: '100%', gap: SPACING.gapSmall, padding: SPACING.pad },
     });
     const mob = MOBS[kind];
+    // Location is the only thing we still pull from MOBS_TLOD — every
+    // other stat shown in the card is the engine-actual value from
+    // MOBS so the Codex reflects what the player is fighting, not the
+    // PS1 reference we cross-checked against.
     const canon = MOBS_TLOD[kind] ?? null;
 
     const header = mkRow({
@@ -360,33 +364,33 @@ export class CodexPanel extends Modal {
     }
     card.addChild(header);
 
-    if (canon) {
-      card.addChild(mkText(t('codex.canonHeader'), TEXT.cellLabel));
-      card.addChild(
-        this.buildStatsRow([
-          ['HP', String(canon.hp)],
-          [t('codex.stat.atk'), String(canon.pAtk)],
-          [t('codex.stat.def'), String(canon.pDef)],
-          [t('codex.stat.mat'), String(canon.mAtk)],
-          [t('codex.stat.mdf'), String(canon.mDef)],
-          [t('codex.stat.spd'), String(canon.speed)],
-          ['XP', String(canon.xp)],
-          [t('codex.stat.gold'), String(canon.gold)],
-          [t('codex.stat.element'), canon.element],
-        ]),
-      );
-    }
-
-    card.addChild(mkText(t('codex.engineHeader'), TEXT.cellLabel));
+    // Full engine stat block. Grouped roughly by combat relevance so a
+    // glance reads "vitals → offence → defence → action-RPG dials":
+    //   - vitals: HP / XP / Element / boss flag
+    //   - combat: AT / DF / MAT / MDF
+    //   - hit/avoid: A-HIT / A-AV / M-HIT / M-AV (matter now that the
+    //     hit-roll system reads them)
+    //   - action-RPG: SPD (turn-order canon), atkSpeed (a/s),
+    //     range / aggroRange (px), world speed (px/ms)
     card.addChild(
       this.buildStatsRow([
         ['HP', String(mob.health)],
+        ['XP', String(mob.xp)],
+        [t('codex.stat.element'), mob.element],
+        ...(mob.boss ? ([[t('codex.stat.boss'), '★']] as Array<[string, string]>) : []),
         [t('codex.stat.atk'), String(mob.stats.atk)],
         [t('codex.stat.def'), String(mob.stats.def)],
         [t('codex.stat.mat'), String(mob.stats.magicAtk)],
         [t('codex.stat.mdf'), String(mob.stats.magicDef)],
+        [t('codex.stat.aHit'), `${mob.stats.attackHit}%`],
+        [t('codex.stat.aAv'), `${mob.stats.attackAvoid}%`],
+        [t('codex.stat.mHit'), `${mob.stats.magicHit}%`],
+        [t('codex.stat.mAv'), `${mob.stats.magicAvoid}%`],
         [t('codex.stat.spd'), String(mob.stats.speed)],
-        ['XP', String(mob.xp)],
+        [t('codex.stat.atkSpeed'), `${mob.stats.atkSpeed}/s`],
+        [t('codex.stat.range'), `${mob.stats.range}px`],
+        [t('codex.stat.aggroRange'), `${mob.stats.aggroRange}px`],
+        [t('codex.stat.moveSpeed'), `${mob.speed} px/ms`],
       ]),
     );
 

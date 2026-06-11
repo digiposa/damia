@@ -112,7 +112,16 @@
       "gold": "G",
       "element": "Element",
       "pattern": "Style",
-      "spMax": "SP max"
+      "spMax": "SP max",
+      "boss": "Boss",
+      "aHit": "A-HIT",
+      "aAv": "A-AV",
+      "mHit": "M-HIT",
+      "mAv": "M-AV",
+      "atkSpeed": "atk/s",
+      "range": "Range",
+      "aggroRange": "Aggro",
+      "moveSpeed": "Move"
     },
     "archetype": {
       "redEyeDragoon": "Red-Eye Dragoon",

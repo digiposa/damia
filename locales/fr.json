@@ -112,7 +112,16 @@
       "gold": "Or",
       "element": "Élément",
       "pattern": "Style",
-      "spMax": "SP max"
+      "spMax": "SP max",
+      "boss": "Boss",
+      "aHit": "P-TCH",
+      "aAv": "P-ESQ",
+      "mHit": "M-TCH",
+      "mAv": "M-ESQ",
+      "atkSpeed": "atk/s",
+      "range": "Portée",
+      "aggroRange": "Aggro",
+      "moveSpeed": "Dépl."
     },
     "archetype": {
       "redEyeDragoon": "Dragon de l'Œil Rouge",

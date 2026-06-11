@@ -137,6 +137,13 @@ export class CodexPanel extends Modal {
     viewport.eventMode = 'static';
 
     const mask = new Graphics();
+    // Generous initial rect so the mask is non-empty before applyPanelSize
+    // gets a chance to measure the laid-out viewport. An empty Graphics
+    // mask hides everything; the modal would open visibly empty for a
+    // frame (or persistently when the resize tick races the first render
+    // — what was happening in the wild). We resize the rect to the actual
+    // viewport dimensions on every applyPanelSize call.
+    mask.rect(0, 0, 4096, 4096).fill(0xffffff);
     const content = new LayoutContainer({
       layout: {
         flexDirection: 'column',
@@ -154,9 +161,6 @@ export class CodexPanel extends Modal {
 
     this.wireScrollInputs(viewport);
 
-    // Mask is sized once Yoga has measured the viewport — that happens
-    // inside applyPanelSize() (override below), which runs on open +
-    // every resize.
     return viewport;
   }
 

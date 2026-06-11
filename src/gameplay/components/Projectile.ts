@@ -48,4 +48,14 @@ export interface Projectile {
   maxLifeMs: number;
   /** Collision tolerance with target entities (world px). */
   hitRadiusPx: number;
+  /** When true, hit damage uses the enemy physical formula
+   *  `floor[AT² × 5 / DF]` instead of the player Archer Attack one.
+   *  Mob ranged abilities (Knight of Sandora's Throw Dagger) set this
+   *  so the dagger reads as a mob hit rather than a player arrow.
+   *  Defaults to the player formula when omitted (back-compat). */
+  useEnemyFormula?: boolean;
+  /** Final multiplier applied to the raw damage AFTER the formula but
+   *  BEFORE the Guard modifier. Canon Throw Dagger is 0.5×; future
+   *  abilities can set their own value. Defaults to 1. */
+  damageMultiplier?: number;
 }

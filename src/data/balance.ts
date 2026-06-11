@@ -258,6 +258,11 @@ export const MOBS: Record<MobKind, MobDefinition> = {
       attackTextureAlias: 'sprite.mob.knightOfSandora.attack.1',
       walkFrames: ['sprite.mob.knightOfSandora.walk.1', 'sprite.mob.knightOfSandora.walk.2'],
       attackFrames: ['sprite.mob.knightOfSandora.attack.1', 'sprite.mob.knightOfSandora.attack.2'],
+      throwFrames: [
+        'sprite.mob.knightOfSandora.throw.1',
+        'sprite.mob.knightOfSandora.throw.2',
+        'sprite.mob.knightOfSandora.throw.3',
+      ],
     },
     element: 'fire',
     xp: 2,
@@ -291,6 +296,11 @@ export const MOBS: Record<MobKind, MobDefinition> = {
       attackTextureAlias: 'sprite.mob.knightOfSandora.attack.1',
       walkFrames: ['sprite.mob.knightOfSandora.walk.1', 'sprite.mob.knightOfSandora.walk.2'],
       attackFrames: ['sprite.mob.knightOfSandora.attack.1', 'sprite.mob.knightOfSandora.attack.2'],
+      throwFrames: [
+        'sprite.mob.knightOfSandora.throw.1',
+        'sprite.mob.knightOfSandora.throw.2',
+        'sprite.mob.knightOfSandora.throw.3',
+      ],
     },
     element: 'fire',
     xp: 12,

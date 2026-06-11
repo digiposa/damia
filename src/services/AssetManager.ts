@@ -304,6 +304,21 @@ const MANIFEST = {
     url: '/assets/sprites/mobs/knightOfSandora-attack-2.png',
     autoTrim: true,
   },
+  'sprite.mob.knightOfSandora.throw.1': {
+    kind: 'texture',
+    url: '/assets/sprites/mobs/knightOfSandora-throw-1.png',
+    autoTrim: true,
+  },
+  'sprite.mob.knightOfSandora.throw.2': {
+    kind: 'texture',
+    url: '/assets/sprites/mobs/knightOfSandora-throw-2.png',
+    autoTrim: true,
+  },
+  'sprite.mob.knightOfSandora.throw.3': {
+    kind: 'texture',
+    url: '/assets/sprites/mobs/knightOfSandora-throw-3.png',
+    autoTrim: true,
+  },
 
   // M8 forest tiles.
   // Ground = first Gemini grass variant (sampled into iso-diamond Graphics fills,

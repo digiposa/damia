@@ -103,15 +103,21 @@ export class RenderSystem implements System<Components> {
           }
         } else if (defending && sprite.defendTextureAlias) {
           desiredAlias = sprite.defendTextureAlias;
-        } else if (swing && (sprite.attackTextureAlias || sprite.attackFrames)) {
-          // Multi-frame attack: same logic as additions — split the swing
-          // duration evenly across the declared frames. With 3 frames this
-          // means stance / wind-up / slash thirds. Source order: Character
-          // (player) avatar attackFrames first, then Sprite.attackFrames
-          // (mobs), then the single `attackTextureAlias` as a last-resort
-          // single-pose fallback.
+        } else if (
+          swing &&
+          (sprite.attackTextureAlias || sprite.attackFrames || sprite.throwFrames)
+        ) {
+          // Multi-frame attack animation. `swing.kind` picks the family —
+          // 'throw' for ranged abilities (Knight's Throw Dagger), 'melee'
+          // (or undefined) for the standard swing. Source order within the
+          // chosen family: Character (player) avatar frames first, then
+          // Sprite frames (mobs), then the single `attackTextureAlias` as
+          // a last-resort single-pose fallback.
           const character = world.getComponent(id, 'Character');
-          const frames = character?.avatar.sprite.base.attackFrames ?? sprite.attackFrames;
+          const isThrow = swing.kind === 'throw';
+          const frames = isThrow
+            ? sprite.throwFrames
+            : (character?.avatar.sprite.base.attackFrames ?? sprite.attackFrames);
           if (frames && frames.length > 0) {
             const t = Math.min(0.999, swing.elapsedMs / swing.totalMs);
             desiredAlias = frames[Math.floor(t * frames.length)];

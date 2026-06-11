@@ -46,6 +46,11 @@ export interface Sprite {
    *  reads `Character.avatar.sprite.base.attackFrames`. Falls back to
    *  the single `attackTextureAlias` when this is empty / unset. */
   attackFrames?: ReadonlyArray<AssetAlias>;
+  /** Optional multi-frame ranged-throw animation, picked by RenderSystem
+   *  when the entity has an `AttackSwing` with `kind: 'throw'`. Knight
+   *  of Sandora's "Throw Dagger" is the first user — same split-by-
+   *  elapsed math as attackFrames. */
+  throwFrames?: ReadonlyArray<AssetAlias>;
   /** Rotation in radians, applied to the rendered Pixi node. Defaults
    *  to 0. Used by Projectile arrows to point along their flight path
    *  — RenderSystem reads this each frame, so updating it on the

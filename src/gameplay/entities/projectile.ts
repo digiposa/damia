@@ -26,6 +26,13 @@ export interface SpawnProjectileOptions {
   maxLifeMs?: number;
   /** Optional override of the collision tolerance (world px). */
   hitRadiusPx?: number;
+  /** Optional override of the projectile sprite color. Defaults to
+   *  the Shana-arrow brown; Knight's Throw Dagger ships a steel-gray. */
+  spriteColor?: number;
+  /** Pass-through to `Projectile.useEnemyFormula`. */
+  useEnemyFormula?: boolean;
+  /** Pass-through to `Projectile.damageMultiplier`. */
+  damageMultiplier?: number;
 }
 
 const DEFAULT_SPEED_PX_PER_MS = 0.6;
@@ -45,7 +52,7 @@ export function spawnProjectile(world: World<Components>, opts: SpawnProjectileO
   world.addComponent(id, 'Position', { x: opts.x, y: opts.y });
   world.addComponent(id, 'Sprite', {
     shape: 'capsule',
-    color: 0xa07840,
+    color: opts.spriteColor ?? 0xa07840,
     width: ARROW_LENGTH_PX,
     height: ARROW_THICKNESS_PX,
     layer: 'fx',
@@ -65,6 +72,8 @@ export function spawnProjectile(world: World<Components>, opts: SpawnProjectileO
     elapsedMs: 0,
     maxLifeMs: opts.maxLifeMs ?? DEFAULT_MAX_LIFE_MS,
     hitRadiusPx: opts.hitRadiusPx ?? DEFAULT_HIT_RADIUS_PX,
+    ...(opts.useEnemyFormula ? { useEnemyFormula: true } : {}),
+    ...(opts.damageMultiplier !== undefined ? { damageMultiplier: opts.damageMultiplier } : {}),
   });
   return id;
 }

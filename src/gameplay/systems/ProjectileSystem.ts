@@ -56,12 +56,14 @@ export class ProjectileSystem implements System<Components> {
       }
       if (hitId === null) continue;
 
-      // Resolve damage using TLoD's player Archer Attack formula
-      //   round[AT × (LV+5) × 5 / DF]
-      // with attacker AT + LV snapshotted at fire time on the
-      // projectile (the source may have leveled up / left form / died
-      // between fire and impact). Guard modifier applies via the
-      // Defending check; floor at COMBAT.minDamage for UX.
+      // Resolve damage from the formula snapshotted at fire time on
+      // the projectile (the source may have leveled up / left form /
+      // died between fire and impact, so we don't re-read its stats).
+      //   - Player archer (default): round[AT × (LV+5) × 5 / DF]
+      //   - Enemy physical (mob ranged abilities): floor[AT² × 5 / DF]
+      // Guard modifier applies via the Defending check; then the
+      // optional `damageMultiplier` (Throw Dagger = 0.5×); then floor
+      // at COMBAT.minDamage for UX.
       const tStats = world.getComponent(hitId, 'Stats');
       const tHp = world.getComponent(hitId, 'Health');
       if (!tStats || !tHp) {
@@ -72,7 +74,12 @@ export class ProjectileSystem implements System<Components> {
       }
       const defending = world.hasComponent(hitId, 'Defending');
       const def = Math.max(1, effectiveDef(world, hitId));
-      let raw = Math.floor((proj.attackerAt * (proj.attackerLv + 5) * 5 + def / 2) / def);
+      let raw = proj.useEnemyFormula
+        ? Math.floor((proj.attackerAt * proj.attackerAt * 5) / def)
+        : Math.floor((proj.attackerAt * (proj.attackerLv + 5) * 5 + def / 2) / def);
+      if (proj.damageMultiplier !== undefined && proj.damageMultiplier !== 1) {
+        raw = Math.floor(raw * proj.damageMultiplier);
+      }
       if (defending) raw = Math.floor(raw * COMBAT.defendingDamageMul);
       const dmg = Math.max(COMBAT.minDamage, raw);
       tHp.current = Math.max(0, tHp.current - dmg);

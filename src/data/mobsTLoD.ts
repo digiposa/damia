@@ -124,19 +124,24 @@ export const MOBS_TLOD: Partial<Record<MobKind, TLoDMobStats>> = {
     canCounterAttack: true,
   },
   // Knight of Sandora — two narrative variants share the sprite but
-  // not the stats. PLACEHOLDER NUMBERS pending the user's canon pass.
+  // not the stats. Seles values are canonical (user 2026-06-11);
+  // Kazas values are still placeholders pending the user's pass.
+  // Drops note: TLoD Story drop rate is 100% on healingPotion. Our
+  // engine has no Story-vs-Survival split yet so this is the absolute
+  // value — the Survival drop rate will live in a separate table when
+  // the split lands.
   knightOfSandoraSeles: {
     location: 'Seles',
     element: 'dark',
-    hp: 12,
-    xp: 12,
-    gold: 12,
-    pAtk: 3,
-    pDef: 100,
-    mAtk: 0,
-    mDef: 80,
+    hp: 4,
+    xp: 2,
+    gold: 3,
+    pAtk: 2,
+    pDef: 40,
+    mAtk: 2,
+    mDef: 50,
     speed: 50,
-    drops: [{ item: 'healingPotion', chance: 0.08 }],
+    drops: [{ item: 'healingPotion', chance: 1 }],
     canCounterAttack: false,
   },
   knightOfSandoraKazas: {

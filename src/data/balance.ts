@@ -207,14 +207,17 @@ export const MOBS: Record<MobKind, MobDefinition> = {
   // for the damage-check pass. The shape + numbers exist only so the
   // engine type-checks and the Codex renders something; do not balance
   // anything against these until they're replaced.
+  // Canon PS1 values supplied by the user 2026-06-11. Hit% / speed /
+  // atkSpeed / range / aggroRange are action-RPG-only fields the wiki
+  // doesn't expose — kept at sensible humanoid-melee defaults.
   knightOfSandoraSeles: {
-    health: 12,
+    health: 4,
     speed: 0.1,
     stats: {
-      atk: 3,
-      def: 100,
-      magicAtk: 0,
-      magicDef: 80,
+      atk: 2,
+      def: 40,
+      magicAtk: 2,
+      magicDef: 50,
       speed: 50,
       attackHit: 100,
       magicHit: 100,
@@ -231,7 +234,7 @@ export const MOBS: Record<MobKind, MobDefinition> = {
       height: 96,
       fitMode: 'height',
     },
-    xp: 12,
+    xp: 2,
   },
   knightOfSandoraKazas: {
     health: 12,

@@ -8,6 +8,7 @@ import { playMusic, playSfx, unlockAudio } from '@services/AudioManager';
 import { ForestScene } from '@scenes/ForestOfSeles/ForestScene';
 import { HellenaScene } from '@scenes/HellenaPrison/HellenaScene';
 import { CharacterSelectScene } from '@scenes/CharacterSelectScene';
+import { TrainingScene } from '@scenes/Training/TrainingScene';
 import { SettingsPanel } from '@ui/SettingsPanel';
 import { CodexPanel } from '@ui/CodexPanel';
 
@@ -115,6 +116,19 @@ export class TitleScene implements Scene {
       },
     );
 
+    // Training / Debug sandbox — dev tool, sits at the top of the
+    // stack so it's clearly the "out of band" entry. Picks Dart LV1
+    // by default; everything tweakable from the in-arena DBG panel.
+    const trainingBtn = this.makeButton(
+      t('title.modeTraining'),
+      width / 2,
+      stackBottomY - 3 * (BTN_HEIGHT + BTN_GAP),
+      () => {
+        playSfx('ui.click');
+        void ctx.scenes.switchTo(new TrainingScene(), ctx);
+      },
+    );
+
     // Settings overlay (volume / language only — no Resume / Quit-to-Title
     // since we're already on the title and no run is in flight). Hidden
     // until the gear icon is tapped.
@@ -149,6 +163,7 @@ export class TitleScene implements Scene {
 
     this.container.addChild(
       subtitle,
+      trainingBtn.container,
       survivalBtn.container,
       continueBtn.container,
       newGameBtn.container,

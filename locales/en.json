@@ -7,6 +7,7 @@
     "settings": "Settings",
     "modeStory": "Story Mode",
     "modeSurvival": "Survival Mode",
+    "modeTraining": "Training",
     "back": "Back"
   },
   "survival": {
@@ -81,6 +82,18 @@
       "aAv": "A-AV",
       "mAv": "M-AV"
     }
+  },
+  "training": {
+    "title": "Training (debug)",
+    "character": "Character",
+    "level": "Level",
+    "spawnMob": "Spawn mob",
+    "spawnOne": "Spawn ×1",
+    "spawnFive": "Spawn ×5",
+    "actions": "Actions",
+    "healFull": "Heal full",
+    "killAll": "Kill all mobs",
+    "quitToTitle": "Quit to title"
   },
   "settings": {
     "title": "Settings",

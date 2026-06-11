@@ -7,6 +7,7 @@
     "settings": "Options",
     "modeStory": "Mode Histoire",
     "modeSurvival": "Mode Survival",
+    "modeTraining": "Entraînement",
     "back": "Retour"
   },
   "survival": {
@@ -81,6 +82,18 @@
       "aAv": "P-ESQ",
       "mAv": "M-ESQ"
     }
+  },
+  "training": {
+    "title": "Entraînement (debug)",
+    "character": "Personnage",
+    "level": "Niveau",
+    "spawnMob": "Faire apparaître un mob",
+    "spawnOne": "Spawn ×1",
+    "spawnFive": "Spawn ×5",
+    "actions": "Actions",
+    "healFull": "Soin total",
+    "killAll": "Tuer tous les mobs",
+    "quitToTitle": "Retour au titre"
   },
   "settings": {
     "title": "Options",

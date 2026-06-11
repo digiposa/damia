@@ -12,9 +12,11 @@
  * Non-Dragoon entities and entities without a Character component
  * just see identity multipliers (the call still works for mobs).
  */
-import type { World } from '@core/ecs';
+import type { Entity, World } from '@core/ecs';
 import type { Components } from '@gameplay/components';
+import { applyArchetypeRow } from '@data/characters/types';
 import type { DragoonStatsMultiplier } from '@data/characters/types';
+import { totalEquipmentBonuses } from '@data/equipment';
 
 const IDENTITY: DragoonStatsMultiplier = {
   atk: 1,
@@ -63,4 +65,41 @@ export function effectiveMoveSpeed(world: World<Components>, entityId: number): 
   const speed = world.getComponent(entityId, 'Speed');
   if (!speed) return 0;
   return speed.value * getMult(world, entityId).moveSpeed;
+}
+
+/**
+ * Reset a player entity's `Stats` to the canonical archetype row at
+ * `level`, re-applying equipment bonuses on top + (optionally) topping
+ * up HP. The composition `applyArchetypeRow + equipment re-add +
+ * fullHeal` is the canon-correct shape for any state change that
+ * resets the row (level-up reward, training-mode level slider,
+ * scene-enter Dart-row sync). Centralising it here keeps the three
+ * callers aligned — the previous duplication had ForestScene silently
+ * skipping the equipment re-apply, which made Dart's MAT drop by his
+ * weapon bonus on every zone enter.
+ *
+ * No-op when the entity is missing a Character / Progression / Stats /
+ * Health combo (defensive — every player spawned by `spawnPlayer` has
+ * all four). `fullHeal` defaults to true to match the TLoD level-up
+ * convention; pass `false` to preserve current HP (e.g. a same-zone
+ * resume from save).
+ */
+export function applyLevelStats(
+  world: World<Components>,
+  playerId: Entity,
+  level: number,
+  options: { fullHeal?: boolean } = {},
+): void {
+  const character = world.getComponent(playerId, 'Character');
+  const stats = world.getComponent(playerId, 'Stats');
+  const hp = world.getComponent(playerId, 'Health');
+  if (!character || !stats || !hp) return;
+  const archetype = character.avatar.archetype;
+  applyArchetypeRow(stats, hp, archetype, level, false);
+  const eq = totalEquipmentBonuses(character.avatar.startingEquipment, archetype.id);
+  stats.atk += eq.atk;
+  stats.def += eq.def;
+  stats.magicAtk += eq.magicAtk;
+  stats.magicDef += eq.magicDef;
+  if (options.fullHeal !== false) hp.current = hp.max;
 }

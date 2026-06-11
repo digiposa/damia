@@ -76,22 +76,15 @@ export class TrainingDebugPanel extends Modal {
     this.registerCleanup(() => app.renderer.off('resize', onResize));
   }
 
-  /** Override: the DBG toggle button is a sibling of `container` (not
-   *  a child) so it's visible whether the modal is open or closed. We
-   *  reach up to the parent on first open and addChild it next to
-   *  the modal container, then never re-add. */
   protected override onOpen(): void {
     this.refreshLabels();
-    const parent = this.container.parent;
-    if (parent && this.dbgButton && !this.dbgButton.parent) {
-      parent.addChild(this.dbgButton);
-    }
   }
 
-  /** Mount the DBG toggle button alongside the modal. Public-ish: the
-   *  scene calls this once after addChild'ing `.container` to its UI
-   *  layer, so the button surfaces immediately without waiting for
-   *  the first open. */
+  /** Mount the DBG toggle button alongside the modal. The scene calls
+   *  this once after addChild'ing `.container` to its UI layer, so the
+   *  button surfaces from the first frame. The button is a sibling of
+   *  `container` (not a child) so it's visible whether the modal is
+   *  open or closed. */
   mountToggleButton(parent: PixiContainer): void {
     if (this.dbgButton && !this.dbgButton.parent) {
       parent.addChild(this.dbgButton);

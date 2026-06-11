@@ -4,7 +4,8 @@ import { GameplayController } from '@/engine/gameplay/GameplayController';
 import type { GameplaySnapshot, SceneConfig } from '@/engine/gameplay/SceneConfig';
 import { ForestMap } from './MapLoader';
 import { ADDITIONS, type AdditionKind } from '@data/balance';
-import { applyCharacterRow, DART, xpToReachLevel } from '@data/characters';
+import { DART, xpToReachLevel } from '@data/characters';
+import { applyLevelStats } from '@gameplay/stats';
 import { ITEMS, type ItemKind } from '@data/items';
 import { spawnItem } from '@gameplay/entities/items';
 import { SaveManager, type SaveDataV5 } from '@services/SaveManager';
@@ -125,18 +126,19 @@ export class ForestScene implements Scene {
 
   /** Sync Dart's `Stats` + `Health.max` to the canonical row for his
    *  current `Progression.level`. Same-zone resume keeps the saved HP
-   *  (player might be damaged); cross-zone arrivals top up to full. */
+   *  (player might be damaged); cross-zone arrivals top up to full.
+   *  Delegates to the shared `applyLevelStats` helper so equipment
+   *  bonuses (Broad Sword AT+2, Bandana MAT+3, Leather Armor DF/MDF+2)
+   *  survive the row reset — the previous inline applyCharacterRow
+   *  call silently stripped them on every zone re-enter. */
   private applyDartRow(fromThisZone: boolean): void {
     const controller = this.controller;
     if (!controller || controller.playerId === null) return;
     const world = controller.world;
     const playerId = controller.playerId;
     const prog = world.getComponent(playerId, 'Progression');
-    const stats = world.getComponent(playerId, 'Stats');
-    const hp = world.getComponent(playerId, 'Health');
     const level = prog?.level ?? 1;
-    applyCharacterRow(stats, hp, DART, level, fromThisZone);
-    if (!fromThisZone && hp) hp.current = hp.max;
+    applyLevelStats(world, playerId, level, { fullHeal: !fromThisZone });
   }
 
   /** Dev loadout for fresh runs: force LV5 + canonical stats, prefill a
@@ -148,15 +150,13 @@ export class ForestScene implements Scene {
     const world = controller.world;
     const playerId = controller.playerId;
     const prog = world.getComponent(playerId, 'Progression');
-    const stats = world.getComponent(playerId, 'Stats');
-    const hp = world.getComponent(playerId, 'Health');
     if (prog) {
       prog.level = 5;
       prog.xp = xpToReachLevel(DART.archetype, 5);
       prog.xpToNext = xpToReachLevel(DART.archetype, 6);
     }
-    applyCharacterRow(stats, hp, DART, 5, false);
-    if (hp) hp.current = hp.max;
+    // Shared helper applies the row + re-adds equipment + heals to full.
+    applyLevelStats(world, playerId, 5);
     const inv = world.getComponent(playerId, 'Inventory');
     if (inv) {
       inv.items.healingPotion = 5;

@@ -25,9 +25,9 @@ import { ADDITIONS, type AdditionKind, type MobKind } from '@data/balance';
 import { DART, type CharacterAvatar } from '@data/characters';
 import { spawnPlayer } from '@gameplay/entities/player';
 import { spawnMob } from '@gameplay/entities/mobs';
-import { applyArchetypeRow, xpToReachLevel } from '@data/characters';
-import { totalEquipmentBonuses } from '@data/equipment';
-import { gridToWorld, worldToGrid } from '@core/math/iso';
+import { xpToReachLevel } from '@data/characters';
+import { applyLevelStats } from '@gameplay/stats';
+import { worldToGrid } from '@core/math/iso';
 import { TrainingDebugPanel } from '@ui/TrainingDebugPanel';
 
 const ARENA_SIZE = 11;
@@ -195,18 +195,16 @@ export class TrainingScene implements Scene {
     });
   }
 
-  /** Force the player to a specific level. Re-applies the canon
-   *  archetype row + equipment bonuses (DeathSystem.awardXp's pattern)
-   *  and tops up HP. No XP gain in this mode — the slider is the only
-   *  way to change level. */
+  /** Force the player to a specific level. No XP gain in this mode —
+   *  the slider is the only way to change level. Stats / HP reset
+   *  delegated to the shared `applyLevelStats` helper so this stays
+   *  in lockstep with DeathSystem.awardXp + ForestScene.applyDartRow. */
   private setPlayerLevel(level: number): void {
     const controller = this.controller;
     if (!controller || controller.playerId === null) return;
     const world = controller.world;
     const playerId = controller.playerId;
     const prog = world.getComponent(playerId, 'Progression');
-    const stats = world.getComponent(playerId, 'Stats');
-    const hp = world.getComponent(playerId, 'Health');
     const character = world.getComponent(playerId, 'Character');
     if (!prog || !character) return;
     const archetype = character.avatar.archetype;
@@ -215,15 +213,7 @@ export class TrainingScene implements Scene {
     prog.level = clamped;
     prog.xp = xpToReachLevel(archetype, clamped);
     prog.xpToNext = xpToReachLevel(archetype, clamped + 1);
-    applyArchetypeRow(stats, hp, archetype, clamped, false);
-    if (stats) {
-      const eq = totalEquipmentBonuses(character.avatar.startingEquipment, archetype.id);
-      stats.atk += eq.atk;
-      stats.def += eq.def;
-      stats.magicAtk += eq.magicAtk;
-      stats.magicDef += eq.magicDef;
-    }
-    if (hp) hp.current = hp.max;
+    applyLevelStats(world, playerId, clamped);
   }
 
   private getPlayerLevel(): number {
@@ -292,7 +282,3 @@ export class TrainingScene implements Scene {
     return out;
   }
 }
-
-// Silence the unused-import lint on gridToWorld — kept around for the
-// follow-up that lets the tester click-to-place mobs.
-void gridToWorld;

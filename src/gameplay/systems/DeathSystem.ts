@@ -4,8 +4,8 @@ import { FLOAT_XP, spawnFloatingText } from '@gameplay/entities/floatingText';
 import { spawnItem } from '@gameplay/entities/items';
 import { MOBS, type MobKind } from '@data/balance';
 import { rollLoot } from '@data/items';
-import { applyArchetypeRow, xpToReachLevel } from '@data/characters';
-import { totalEquipmentBonuses } from '@data/equipment';
+import { xpToReachLevel } from '@data/characters';
+import { applyLevelStats } from '@gameplay/stats';
 import { playSfx } from '@services/AudioManager';
 
 export type PlayerDeathListener = () => void;
@@ -156,22 +156,11 @@ export class DeathSystem implements System<Components> {
     while (prog.level < cap && prog.xp >= prog.xpToNext) {
       prog.level += 1;
       prog.xpToNext = xpToReachLevel(archetype, prog.level + 1);
-      const stats = world.getComponent(playerId, 'Stats');
-      const hp = world.getComponent(playerId, 'Health');
-      applyArchetypeRow(stats, hp, archetype, prog.level, false);
-      // Re-apply equipment on top of the freshly-overwritten archetype
-      // row so the bonuses survive the level-up reset (mirrors the
-      // pattern Survival uses for upgrade picks). Equipment swap will
-      // call this same helper with the new loadout when it ships.
-      if (stats) {
-        const eq = totalEquipmentBonuses(character.avatar.startingEquipment, archetype.id);
-        stats.atk += eq.atk;
-        stats.def += eq.def;
-        stats.magicAtk += eq.magicAtk;
-        stats.magicDef += eq.magicDef;
-      }
-      // Full heal on level up — match TLoD's level-up behavior.
-      if (hp) hp.current = hp.max;
+      // Canon TLoD level-up: archetype row reset → equipment bonuses
+      // re-applied on top → full heal. Same helper feeds the training
+      // mode level slider + the Forest zone-enter sync, so the three
+      // paths can never drift.
+      applyLevelStats(world, playerId, prog.level);
       spawnFloatingText(world, {
         x: mobX,
         y: mobY - 30,

@@ -125,6 +125,11 @@ export function spawnPlayer(world: World<Components>, opts: SpawnPlayerOptions):
     xpToNext: xpToReachLevel(archetype, startLevel + 1),
     additionUses: {},
   });
+  // Defensive element. Same archetype-driven value in base + Dragoon
+  // forms (Dart = Fire throughout, etc.) per canon. The Element
+  // modifier in damage.ts reads this when computing incoming-attack
+  // resistance / weakness.
+  world.addComponent(id, 'Affinity', { value: archetype.element });
 
   return id;
 }

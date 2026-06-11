@@ -21,6 +21,7 @@
  * point, and items declared here can be referenced from there.
  */
 import type { ArchetypeId } from './characters/types';
+import type { Element } from './elements';
 
 export type EquipmentSlot = 'weapon' | 'helmet' | 'armor' | 'boots' | 'ring';
 
@@ -52,9 +53,16 @@ export interface EquipmentDefinition {
    *  class-locked in TLoD canon. */
   archetypes?: ReadonlyArray<ArchetypeId>;
   bonuses: EquipmentBonuses;
+  /** Weapon-only: infuses the wielder's physical Attack + Addition
+   *  with this element (canon: Heat Blade → Fire, Twister Glaive →
+   *  Wind, Shadow Cutter → Darkness, Thunder Fist → Thunder, Sparkle
+   *  Arrow → Light). Undefined on a weapon → physical attack is
+   *  Non-Elemental (the default for Broad Sword, Spear, Iron Knuckle,
+   *  etc.). Ignored on non-weapon slots. */
+  element?: Element;
   /** Free-form note for non-stat mechanics. Owning system reads this
-   *  when it ships. Examples: 'fire-elemental', 'confusion-on-hit',
-   *  'sp-gain-x1.5', 'self-hp-drain-10pct-per-turn', '+50%-max-hp',
+   *  when it ships. Examples: 'confusion-on-hit', 'sp-gain-x1.5',
+   *  'self-hp-drain-10pct-per-turn', '+50%-max-hp',
    *  'avoid-poison-stun-arm-blocking', 'nullify-fire'. */
   effect?: string;
   /** Shop price (Gold). Undefined = found-only / unbuyable. */

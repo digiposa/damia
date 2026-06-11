@@ -1,5 +1,6 @@
 import type { System, World } from '@core/ecs';
 import type { Components, Position } from '@gameplay/components';
+import type { Element } from '@data/elements';
 import { computeMagicalItemDamage } from '@gameplay/damage';
 import { FLOAT_DAMAGE, spawnFloatingText } from '@gameplay/entities/floatingText';
 import { spawnVfx } from '@gameplay/entities/vfx';
@@ -49,7 +50,7 @@ export class SpellSystem implements System<Components> {
     if (spell.target === 'lockedTarget') {
       if (spell.targetId === undefined) return;
       const tp = world.getComponent(spell.targetId, 'Position');
-      this.hit(world, casterId, spell.targetId, spell.bid);
+      this.hit(world, casterId, spell.targetId, spell.bid, spell.element);
       // Spawn the impact VFX at the target's position (after hit so it overlays
       // the floating-text that hit() may have just spawned).
       if (tp) spawnVfx(world, { kind: spell.vfxKind, x: tp.x, y: tp.y, radius: spell.vfxRadiusPx });
@@ -72,7 +73,7 @@ export class SpellSystem implements System<Components> {
       const dx = p.x - spell.targetX;
       const dy = p.y - spell.targetY;
       if (dx * dx + dy * dy > r2) continue;
-      this.hit(world, casterId, targetId, spell.bid);
+      this.hit(world, casterId, targetId, spell.bid, spell.element);
     }
     // Single big burst at the AoE center — covers the whole damage radius.
     spawnVfx(world, {
@@ -84,13 +85,19 @@ export class SpellSystem implements System<Components> {
     });
   }
 
-  private hit(world: World<Components>, casterId: number, targetId: number, bid: number): void {
+  private hit(
+    world: World<Components>,
+    casterId: number,
+    targetId: number,
+    bid: number,
+    element: Element,
+  ): void {
     const hp = world.getComponent(targetId, 'Health');
     const stats = world.getComponent(targetId, 'Stats');
     const pos: Position | undefined = world.getComponent(targetId, 'Position');
     if (!hp || !stats || !pos) return;
     if (hp.current <= 0 || world.hasComponent(targetId, 'Dying')) return;
-    const dmg = computeMagicalItemDamage(world, casterId, targetId, bid);
+    const dmg = computeMagicalItemDamage(world, casterId, targetId, bid, element);
     hp.current = Math.max(0, hp.current - dmg);
     spawnFloatingText(world, {
       x: pos.x,

@@ -1,4 +1,5 @@
 import type { Sprite, Stats } from '@gameplay/components';
+import type { Element } from './elements';
 
 export const COMBAT = {
   /** Multiplier applied to incoming damage while Defending — TLoD's
@@ -56,6 +57,11 @@ export interface MobDefinition {
   speed: number;
   stats: Stats;
   sprite: Omit<Sprite, 'layer' | 'scale'>;
+  /** Defensive element. Read by `damage.ts` to compute the Element
+   *  modifier against the attack's element (×1.5 / ×0.5 / ×1). Required
+   *  — every TLoD combatant has an element; mobs without canon evidence
+   *  use 'non-elemental' so the modifier stays neutral until verified. */
+  element: Element;
   /** XP awarded on kill. */
   xp: number;
   /** True for named bosses. Drives Survival's first-boss-kill counter
@@ -99,6 +105,7 @@ export const MOBS: Record<MobKind, MobDefinition> = {
       attackTextureAlias: 'sprite.mob.berserkMouse.attack',
       deathTextureAlias: 'sprite.mob.berserkMouse.death',
     },
+    element: 'darkness',
     xp: 3,
   },
   // Bestiary #9.
@@ -129,6 +136,7 @@ export const MOBS: Record<MobKind, MobDefinition> = {
       attackTextureAlias: 'sprite.mob.goblin.attack',
       deathTextureAlias: 'sprite.mob.goblin.death',
     },
+    element: 'fire',
     xp: 4,
   },
   // Bestiary #22.
@@ -159,6 +167,7 @@ export const MOBS: Record<MobKind, MobDefinition> = {
       attackTextureAlias: 'sprite.mob.assassinCock.attack',
       deathTextureAlias: 'sprite.mob.assassinCock.death',
     },
+    element: 'wind',
     xp: 5,
   },
   // Bestiary #39.
@@ -189,6 +198,7 @@ export const MOBS: Record<MobKind, MobDefinition> = {
       attackTextureAlias: 'sprite.mob.trent.attack',
       deathTextureAlias: 'sprite.mob.trent.death',
     },
+    element: 'earth',
     xp: 4,
   },
   // BOSS — Fruegel, Hellena Prison's warden. Numbers are TLoD-canonical
@@ -234,6 +244,7 @@ export const MOBS: Record<MobKind, MobDefinition> = {
       height: 96,
       fitMode: 'height',
     },
+    element: 'fire',
     xp: 2,
   },
   knightOfSandoraKazas: {
@@ -260,6 +271,7 @@ export const MOBS: Record<MobKind, MobDefinition> = {
       height: 96,
       fitMode: 'height',
     },
+    element: 'fire',
     xp: 12,
   },
   fruegel: {
@@ -294,6 +306,10 @@ export const MOBS: Record<MobKind, MobDefinition> = {
       attackTextureAlias: 'sprite.mob.fruegel.attack',
       deathTextureAlias: 'sprite.mob.fruegel.death',
     },
+    // No canon evidence for Fruegel's element yet — defaults to
+    // non-elemental so the modifier stays a neutral ×1. Verify
+    // against the wiki and update when we get to the Hellena pass.
+    element: 'non-elemental',
     xp: 240,
     boss: true,
   },

@@ -1,4 +1,5 @@
 import type { Addition } from './Addition';
+import type { Affinity } from './Affinity';
 import type { AI } from './AI';
 import type { AttackCooldown } from './AttackCooldown';
 import type { AttackSwing } from './AttackSwing';
@@ -56,6 +57,7 @@ export interface Components {
   Interactable: Interactable;
   AttackSwing: AttackSwing;
   Addition: Addition;
+  Affinity: Affinity;
   Character: Character;
   SkillCooldown: SkillCooldown;
   RandomEncounter: RandomEncounter;
@@ -69,6 +71,7 @@ export type ComponentName = keyof Components;
 
 export type {
   Addition,
+  Affinity,
   AI,
   AttackCooldown,
   AttackSwing,

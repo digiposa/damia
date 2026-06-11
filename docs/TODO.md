@@ -106,6 +106,8 @@
 
 - [ ] **Stats constants par character** (Speed, A-Hit, M-Hit, A-AV, M-AV) — canon : ces stats ne montent pas avec le level, seulement via équipement. A-Hit/M-Hit = 100% baseline, A-AV/M-AV = 0% baseline. Speed varie par character (Albert = 40). Vérifier que le système Damia respecte ça (probablement OK via `effective*` + équipement).
 
+- [ ] **Câbler hit% / avoid% (précision / esquive) dans la formule de dégâts** — Stats expose déjà `attackHit`, `magicHit`, `attackAvoid`, `magicAvoid` mais `damage.ts` ne fait pas de jet de touche/esquive : tout coup atterrit. Canon TLoD : roll `attackHit - target.attackAvoid` vs 100, miss → 0 dmg + "MISS" floating text. Impact damage-check Sandora Seles = nul (Sandora a 100/0), mais critique pour les mobs qui esquivent et les armes qui boostent la précision. À traiter quand on touchera la deuxième passe equilibrage. User note 2026-06-11.
+
 ### Locations / Story systèmes (préliminaires Bale)
 
 - [ ] **Save point** entity + mécanique (interactable, persiste l'état save)

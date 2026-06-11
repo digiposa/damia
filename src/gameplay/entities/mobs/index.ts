@@ -38,5 +38,8 @@ export function spawnMob(world: World<Components>, kind: MobKind, gx: number, gy
   // directly in its MobDefinition.sprite spec.
   world.addComponent(id, 'Sprite', { ...CHARACTER_SPRITE_DEFAULTS, ...def.sprite });
   world.addComponent(id, 'AI', { behavior: KIND_TO_BEHAVIOR[kind] });
+  // Element affinity drives the Element modifier in damage.ts. Every
+  // mob has one per TLoD canon; defaults are baked into MOBS.
+  world.addComponent(id, 'Affinity', { value: def.element });
   return id;
 }

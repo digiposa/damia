@@ -69,7 +69,7 @@ export interface TLoDMobStats {
 export const MOBS_TLOD: Partial<Record<MobKind, TLoDMobStats>> = {
   berserkMouse: {
     location: 'Forest',
-    element: 'dark',
+    element: 'darkness',
     hp: 2,
     xp: 3,
     gold: 3,
@@ -146,7 +146,7 @@ export const MOBS_TLOD: Partial<Record<MobKind, TLoDMobStats>> = {
   },
   knightOfSandoraKazas: {
     location: 'Kazas Black Castle',
-    element: 'dark',
+    element: 'fire',
     hp: 12,
     xp: 12,
     gold: 12,

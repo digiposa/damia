@@ -11,10 +11,14 @@
  *    ground). On click, AoE around the click point. Range capped per spell.
  */
 import type { VfxKind } from '@gameplay/components/Vfx';
+import type { Element } from './elements';
 
 export type SpellKind = 'burnOut' | 'gushingMagma';
 
-export type SpellElement = 'fire' | 'water' | 'thunder' | 'earth' | 'wind' | 'light' | 'dark';
+/** @deprecated Use `Element` from `data/elements`. Kept as a transition
+ *  alias so spell definitions that already write `element: 'fire'`
+ *  still type-check. */
+export type SpellElement = Element;
 
 interface SpellBase {
   /** Display name (i18n later). */
@@ -28,8 +32,9 @@ interface SpellBase {
    *  values from the doc: Detonate Rock 100, All-Target Multi 100,
    *  Single-Target Multi 150, All-Target Powerful 300, Psyche Bomb X 400. */
   bid: number;
-  /** Element tag (no multiplier yet — preserved for the future resistance system). */
-  element: SpellElement;
+  /** Spell element. Read by `damage.ts` to compute the Element modifier
+   *  against the target's defensive element (×1.5 / ×0.5 / ×1). */
+  element: Element;
   /** Cooldown after cast, in ms. 0 = no cooldown (only the item count gates). */
   cooldownMs: number;
   /** Visual effect kind spawned at the hit location (or AoE center) on impact. */

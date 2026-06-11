@@ -19,6 +19,9 @@
  */
 import type { World } from '@core/ecs';
 import type { Components } from '@gameplay/components';
+import type { Element } from '@data/elements';
+import { elementModifier } from '@data/elements';
+import { EQUIPMENT, type EquipmentDefinition, type EquipmentSlug } from '@data/equipment';
 import { effectiveAtk, effectiveDef, effectiveMagicAtk, effectiveMagicDef } from '@gameplay/stats';
 
 /** Minimum damage clamp. TLoD lets formulas produce 0 (extreme atk vs
@@ -71,11 +74,61 @@ function levelOf(world: World<Components>, entityId: number): number {
   return prog?.level ?? 1;
 }
 
+/** Defensive element of a target entity. Reads the `Affinity` component
+ *  populated at spawn (player from archetype, mob from MobDefinition).
+ *  Falls back to Non-Elemental for entities with no Affinity yet (props,
+ *  legacy spawns) — the modifier helper treats NE as neutral. */
+function targetElementOf(world: World<Components>, entityId: number): Element {
+  return world.getComponent(entityId, 'Affinity')?.value ?? 'non-elemental';
+}
+
+/** Resolve the element of an attacker's physical / addition attack:
+ *   - Dragoon form → archetype's element (Heat Blade-style infusion is
+ *     overridden in canon by the Dragoon's own element while
+ *     transformed)
+ *   - Base form → equipped weapon's element if it has one, else
+ *     Non-Elemental (Broad Sword, Spear, plain Iron Knuckle, etc.)
+ *   - Mob attacker → its own Affinity (mob physical is always its
+ *     element per canon)
+ * Used by `computePhysicalDamage` + `computeAdditionTotalDamage`. Item
+ * magic doesn't go through here — the caller passes the spell element
+ * explicitly to `computeMagicalItemDamage`. */
+function physicalAttackElement(world: World<Components>, attackerId: number): Element {
+  const character = world.getComponent(attackerId, 'Character');
+  if (!character) {
+    // Mob (or any non-Character entity) — attack element = self.
+    return targetElementOf(world, attackerId);
+  }
+  if (world.hasComponent(attackerId, 'Dragoon')) {
+    return character.avatar.archetype.element;
+  }
+  // Base form — read the equipped weapon's element. We don't have a
+  // runtime Loadout component yet (TODO), so we walk the spawn-time
+  // `startingEquipment` slug list and pick the first weapon-slot item.
+  // EQUIPMENT is `as const satisfies Record<…, EquipmentDefinition>`,
+  // which narrows literal shapes — cast back to the interface so we
+  // can read the optional `element` uniformly (same pattern as
+  // `totalEquipmentBonuses` in data/equipment.ts).
+  const startingEquipment = character.avatar.startingEquipment ?? [];
+  for (const slug of startingEquipment as readonly EquipmentSlug[]) {
+    const def: EquipmentDefinition = EQUIPMENT[slug];
+    if (def.slot === 'weapon') return def.element ?? 'non-elemental';
+  }
+  return 'non-elemental';
+}
+
 /** Build the modifier set from the world's live state. Today only
- *  Guard (= Defending) is implemented; the rest will plug in as the
- *  status / element / equipment systems land. */
-function readModifiers(world: World<Components>, targetId: number): DamageModifiers {
+ *  Guard (= Defending) and Element (target vs attack element) are
+ *  implemented; the rest will plug in as the status / equipment /
+ *  Special Battle Command systems land. */
+function readModifiers(
+  world: World<Components>,
+  targetId: number,
+  attackElement: Element,
+): DamageModifiers {
+  const targetElement = targetElementOf(world, targetId);
   return {
+    element: elementModifier(attackElement, targetElement),
     guard: world.hasComponent(targetId, 'Defending') ? 0.5 : 1,
   };
 }
@@ -113,7 +166,8 @@ export function computePhysicalDamage(
   } else {
     raw = Math.floor((atk * atk * 5) / def);
   }
-  return applyModifiers(raw, readModifiers(world, targetId));
+  const attackElement = physicalAttackElement(world, attackerId);
+  return applyModifiers(raw, readModifiers(world, targetId, attackElement));
 }
 
 /**
@@ -142,7 +196,8 @@ export function computeAdditionTotalDamage(
   const additionFactor = Math.floor((sumHitValues * multiplier) / 100);
   const additionAtk = Math.floor((additionFactor * atk) / 100);
   const raw = tlodRound(additionAtk * (lv + 5) * 5, def);
-  return applyModifiers(raw, readModifiers(world, targetId));
+  const attackElement = physicalAttackElement(world, attackerId);
+  return applyModifiers(raw, readModifiers(world, targetId, attackElement));
 }
 
 /**
@@ -158,10 +213,7 @@ export function computeAdditionTotalDamage(
  * Returns an array the same length as `hitValues`. If all hit weights are
  * zero (or the array is empty) the result is a same-length array of zeros.
  */
-export function distributeAdditionDamage(
-  total: number,
-  hitValues: readonly number[],
-): number[] {
+export function distributeAdditionDamage(total: number, hitValues: readonly number[]): number[] {
   const n = hitValues.length;
   if (n === 0) return [];
   const sum = hitValues.reduce((acc, v) => acc + v, 0);
@@ -185,6 +237,11 @@ export function distributeAdditionDamage(
  *
  *   floor[(LV + 5) × MAT × 5 / MDF] × BID / 100
  *
+ * `attackElement` is the spell's element (`SpellDefinition.element`)
+ * — the caller passes it explicitly because the same caster can cast
+ * spells of different elements over time. Falls back to Non-Elemental
+ * when omitted so legacy call sites keep working until they're updated.
+ *
  * Item Magic is player-only in TLoD and our codebase agrees.
  */
 export function computeMagicalItemDamage(
@@ -192,11 +249,12 @@ export function computeMagicalItemDamage(
   casterId: number,
   targetId: number,
   bid: number,
+  attackElement: Element = 'non-elemental',
 ): number {
   const mat = effectiveMagicAtk(world, casterId);
   const mdf = Math.max(1, effectiveMagicDef(world, targetId));
   const lv = levelOf(world, casterId);
   const base = Math.floor(((lv + 5) * mat * 5) / mdf);
   const raw = Math.floor((base * bid) / 100);
-  return applyModifiers(raw, readModifiers(world, targetId));
+  return applyModifiers(raw, readModifiers(world, targetId, attackElement));
 }

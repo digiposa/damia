@@ -1,3 +1,4 @@
+import type { Element } from '@data/elements';
 import type { SpellKind } from '@data/spells';
 import type { VfxKind } from './Vfx';
 
@@ -23,6 +24,10 @@ export interface Spell {
    *  damage formula `floor[(LV+5) × MAT × 5 / MDF] × BID / 100` runs
    *  inside `gameplay/damage.ts → computeMagicalItemDamage`. */
   bid: number;
+  /** Spell element (snapshot of `SpellDefinition.element` at cast
+   *  time). Passed to `computeMagicalItemDamage` for the Element
+   *  modifier (fire spell on Fire mob = ×0.5, etc.). */
+  element: Element;
   /** Discriminator. Determines which of the targetXxx fields below is meaningful. */
   target: 'lockedTarget' | 'groundAoE';
   /** lockedTarget only — entity to hit. Validated at apply time (Dying/dead → no-op). */

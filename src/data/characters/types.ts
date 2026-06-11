@@ -22,18 +22,14 @@
 import type { Stats } from '@gameplay/components';
 import type { AssetAlias } from '@services/AssetManager';
 import type { AdditionKind } from '@data/balance';
+import type { Element } from '@data/elements';
 import type { EquipmentSlug } from '@data/equipment';
 
-/** TLoD-style elemental affinity. */
-export type CharacterElement =
-  | 'fire'
-  | 'water'
-  | 'wind'
-  | 'earth'
-  | 'thunder'
-  | 'light'
-  | 'darkness'
-  | 'divine';
+/** @deprecated Use `Element` from `data/elements`. Kept as a transition
+ *  alias so existing archetype + avatar literals still type-check. The
+ *  old 'divine' was a design mistake — Divine Dragon (the boss) is a
+ *  Non-Elemental enemy, it isn't its own element. */
+export type CharacterElement = Element;
 
 /** Combat archetype. v1 reads `melee` only — `ranged` ships with
  *  the Projectile branch (already in place for Shana). */

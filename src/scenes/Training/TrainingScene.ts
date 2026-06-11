@@ -68,7 +68,9 @@ export class TrainingScene implements Scene {
         showMiniMap: false,
         showActionLog: false,
         showAdditionsBar: true,
-        prerenderedMapAsset: 'map.forest.survival',
+        // Training-specific desert ruins backdrop (1440×720 native,
+        // 2:1 iso ratio matches ARENA_SIZE = 11).
+        prerenderedMapAsset: 'map.training.arena',
         // Dragoon always available — this is a sandbox, every form
         // should be testable from second 0.
         dragoonStartUnlocked: true,

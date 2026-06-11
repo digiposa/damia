@@ -71,6 +71,12 @@ export class CodexPanel extends Modal {
 
   private activeTab: CodexTab = 'mobs';
   private readonly tabButtons = new Map<CodexTab, LayoutContainer>();
+  /** Master/detail selection — non-null = render the detail view for
+   *  this entry, null = render the compact list for the active tab.
+   *  Cleared whenever the tab switches so each tab opens at its list
+   *  view. Only one of the two is ever non-null at a time. */
+  private selectedMobKind: MobKind | null = null;
+  private selectedAvatar: CharacterAvatar | null = null;
 
   // Scroll widget — populated by buildPanel(). Inner content is a
   // LayoutContainer so Yoga handles card stacking + chip wrapping;
@@ -288,9 +294,40 @@ export class CodexPanel extends Modal {
     if (this.activeTab === tab) return;
     this.activeTab = tab;
     this.scrollY = 0;
+    // Always drop back to the list view when switching tabs — tapping
+    // a tab is conceptually "start fresh in this section".
+    this.selectedMobKind = null;
+    this.selectedAvatar = null;
     this.renderActiveTab();
     this.updateTabStyles();
     // Defer the clamp one tick so the new cards' heights are measured.
+    this.app.ticker.addOnce(() => this.applyScroll(0), this);
+  }
+
+  /** Drill into a mob's detail view from the list. */
+  private openMobDetail(kind: MobKind): void {
+    this.selectedMobKind = kind;
+    this.selectedAvatar = null;
+    this.scrollY = 0;
+    this.renderActiveTab();
+    this.app.ticker.addOnce(() => this.applyScroll(0), this);
+  }
+
+  /** Drill into a character's detail view from the list. */
+  private openCharacterDetail(avatar: CharacterAvatar): void {
+    this.selectedAvatar = avatar;
+    this.selectedMobKind = null;
+    this.scrollY = 0;
+    this.renderActiveTab();
+    this.app.ticker.addOnce(() => this.applyScroll(0), this);
+  }
+
+  /** Back to the current tab's list view. */
+  private clearSelection(): void {
+    this.selectedMobKind = null;
+    this.selectedAvatar = null;
+    this.scrollY = 0;
+    this.renderActiveTab();
     this.app.ticker.addOnce(() => this.applyScroll(0), this);
   }
 
@@ -312,24 +349,42 @@ export class CodexPanel extends Modal {
     this.scrollContent.removeChildren();
     this.scrollContent.y = 0;
 
+    // Detail view takes precedence — when an entry is selected, the
+    // scroll content is the back strip + the full card and nothing
+    // else. Clearing the selection (via the back button or a tab
+    // switch) drops back to the list.
+    if (this.selectedMobKind) {
+      this.scrollContent.addChild(this.buildBackStrip());
+      this.scrollContent.addChild(this.buildMobCard(this.selectedMobKind));
+      return;
+    }
+    if (this.selectedAvatar) {
+      this.scrollContent.addChild(this.buildBackStrip());
+      this.scrollContent.addChild(this.buildCharacterCard(this.selectedAvatar));
+      return;
+    }
+
+    // List view — one compact tappable row per entry. Building rows
+    // instead of full cards keeps the Pixi node count low even when
+    // the codex eventually holds 80+ entries.
     switch (this.activeTab) {
       case 'mobs':
         for (const kind of MOB_ENTRY_ORDER) {
           if (MOBS[kind].boss) continue;
-          this.scrollContent.addChild(this.buildMobCard(kind));
+          this.scrollContent.addChild(this.buildMobListRow(kind));
         }
         break;
       case 'bosses':
         for (const kind of MOB_ENTRY_ORDER) {
           if (!MOBS[kind].boss) continue;
-          this.scrollContent.addChild(this.buildMobCard(kind));
+          this.scrollContent.addChild(this.buildMobListRow(kind));
         }
         break;
       case 'characters':
         for (const archetypeId of ARCHETYPE_ORDER) {
           const avatars = AVATARS_BY_ARCHETYPE[archetypeId] ?? [];
           for (const avatar of avatars) {
-            this.scrollContent.addChild(this.buildCharacterCard(avatar));
+            this.scrollContent.addChild(this.buildCharacterListRow(avatar));
           }
         }
         break;
@@ -338,6 +393,134 @@ export class CodexPanel extends Modal {
     if (this.scrollContent.children.length === 0) {
       this.scrollContent.addChild(mkText(t('codex.empty'), TEXT.muted));
     }
+  }
+
+  /** Back-to-list strip rendered above any detail card. Full-width
+   *  tappable row with a "← Back" label; tinting on hover mirrors the
+   *  list row treatment so the affordance reads consistently. */
+  private buildBackStrip(): LayoutContainer {
+    const strip = new LayoutContainer({
+      label: 'codex-back-strip',
+      layout: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: SPACING.gapSmall,
+        width: '100%',
+        height: 36,
+        paddingLeft: SPACING.pad,
+        paddingRight: SPACING.pad,
+        backgroundColor: COLORS.buttonBg,
+        borderColor: COLORS.border,
+        borderWidth: 1,
+        borderRadius: 6,
+      },
+    });
+    strip.addChild(
+      mkText(t('codex.back'), { ...TEXT.value, fill: COLORS.borderActive, fontSize: 14 }),
+    );
+    strip.eventMode = 'static';
+    strip.cursor = 'pointer';
+    strip.on('pointertap', () => this.clearSelection());
+    strip.on('pointerover', () => {
+      strip.background.tint = COLORS.borderActive;
+    });
+    strip.on('pointerout', () => {
+      strip.background.tint = 0xffffff;
+    });
+    return strip;
+  }
+
+  /** Compact list row for a mob — tappable, drills into the detail
+   *  view. Layout: name (+ location chip), element badge, HP chip.
+   *  Sits at a comfortable 56 px tall so it passes mobile thumb taps
+   *  while staying compact enough to fit ~10 rows on a phone screen. */
+  private buildMobListRow(kind: MobKind): LayoutContainer {
+    const mob = MOBS[kind];
+    const canon = MOBS_TLOD[kind] ?? null;
+    const row = new LayoutContainer({
+      label: `codex-mob-row-${kind}`,
+      layout: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: SPACING.gap,
+        width: '100%',
+        height: 56,
+        paddingLeft: SPACING.pad,
+        paddingRight: SPACING.pad,
+        backgroundColor: COLORS.subPanelBg,
+        borderColor: COLORS.border,
+        borderWidth: 1,
+        borderRadius: 6,
+      },
+    });
+
+    // Left: name + (optional) location, stacked vertically.
+    const nameCol = new Container({
+      layout: { flexDirection: 'column', flex: 1, gap: 2 },
+    });
+    nameCol.addChild(mkText(t(`codex.entry.${kind}.name`), TEXT.header));
+    if (canon) {
+      nameCol.addChild(mkText(canon.location, { ...TEXT.muted, fontSize: 11 }));
+    }
+    row.addChild(nameCol);
+
+    // Right: HP chip + element badge + boss ★ (if applicable).
+    if (mob.boss) row.addChild(this.buildBossBadge());
+    row.addChild(this.buildElementBadge(mob.element));
+    row.addChild(this.buildVitalChip('HP', String(mob.health)));
+
+    this.makeRowInteractive(row, () => this.openMobDetail(kind));
+    return row;
+  }
+
+  /** Compact list row for a playable character — tappable, drills
+   *  into the detail view. Layout: name (+ archetype small),
+   *  element badge. */
+  private buildCharacterListRow(avatar: CharacterAvatar): LayoutContainer {
+    const row = new LayoutContainer({
+      label: `codex-char-row-${avatar.id}`,
+      layout: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: SPACING.gap,
+        width: '100%',
+        height: 56,
+        paddingLeft: SPACING.pad,
+        paddingRight: SPACING.pad,
+        backgroundColor: COLORS.subPanelBg,
+        borderColor: COLORS.border,
+        borderWidth: 1,
+        borderRadius: 6,
+      },
+    });
+
+    const nameCol = new Container({
+      layout: { flexDirection: 'column', flex: 1, gap: 2 },
+    });
+    nameCol.addChild(mkText(t(avatar.displayNameKey), TEXT.header));
+    nameCol.addChild(
+      mkText(t(`codex.archetype.${avatar.archetype.id}`), { ...TEXT.muted, fontSize: 11 }),
+    );
+    row.addChild(nameCol);
+    row.addChild(this.buildElementBadge(avatar.archetype.element));
+
+    this.makeRowInteractive(row, () => this.openCharacterDetail(avatar));
+    return row;
+  }
+
+  /** Common interactivity wiring for list rows — pointer cursor,
+   *  hover tint, tap callback. Extracted so any list row sub-type
+   *  (future items / magic / npcs) gets the same affordance. */
+  private makeRowInteractive(row: LayoutContainer, onTap: () => void): void {
+    row.eventMode = 'static';
+    row.cursor = 'pointer';
+    row.on('pointertap', onTap);
+    row.on('pointerover', () => {
+      row.background.tint = COLORS.borderActive;
+    });
+    row.on('pointerout', () => {
+      row.background.tint = 0xffffff;
+    });
   }
 
   private buildMobCard(kind: MobKind): LayoutContainer {

@@ -96,6 +96,7 @@
   "codex": {
     "title": "Codex",
     "empty": "No entries yet.",
+    "back": "← Back",
     "canonHeader": "Canon (PS1)",
     "engineHeader": "Engine",
     "tab": {

@@ -127,20 +127,29 @@ export class TrainingScene implements Scene {
     // non-starter on mobile and easy to miss on desktop.
     this.debugPanel.mountToggleButton(this.controller.layers.ui);
 
-    // Keyboard shortcut as a secondary entry — handy for fast iteration
-    // on desktop. The DBG button stays the primary affordance.
+    // Keyboard shortcuts. Esc closes the debug panel when it's open
+    // (intercepted in the capture phase so SettingsPanel's window-level
+    // Esc handler — which would otherwise open Settings on top of the
+    // debug panel — doesn't fire). `~` toggles the debug panel both
+    // ways as a secondary entry alongside the DBG corner button.
     this.keyHandler = (e: KeyboardEvent): void => {
+      if (e.key === 'Escape' && this.debugPanel?.isOpen) {
+        e.stopImmediatePropagation();
+        e.preventDefault();
+        this.debugPanel.close();
+        return;
+      }
       if (e.key === '~' || e.key === '`') {
         e.preventDefault();
         this.debugPanel?.toggle();
       }
     };
-    window.addEventListener('keydown', this.keyHandler);
+    window.addEventListener('keydown', this.keyHandler, true);
   }
 
   exit(): void {
     if (this.keyHandler) {
-      window.removeEventListener('keydown', this.keyHandler);
+      window.removeEventListener('keydown', this.keyHandler, true);
       this.keyHandler = null;
     }
     this.debugPanel?.destroy();

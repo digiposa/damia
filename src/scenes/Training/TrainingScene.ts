@@ -150,6 +150,12 @@ export class TrainingScene implements Scene {
   }
 
   update(dt: number): void {
+    // Hard pause while the DBG panel owns the screen — same pattern
+    // ArenaScene uses for its level-up modal. Skipping the entire
+    // controller update freezes the ECS world (no AI ticks, no
+    // combat, no animations) so the tester can edit a level / swap
+    // a character without the mob walking off-screen mid-tweak.
+    if (this.debugPanel?.isOpen) return;
     this.controller?.update(dt);
   }
 

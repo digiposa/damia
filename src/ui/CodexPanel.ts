@@ -31,6 +31,7 @@ import { LayoutContainer } from '@pixi/layout/components';
 import { MOBS, type MobKind } from '@data/balance';
 import { MOBS_TLOD } from '@data/mobsTLoD';
 import { ARCHETYPE_ORDER, AVATARS_BY_ARCHETYPE, type CharacterAvatar } from '@data/characters';
+import { ELEMENT_COLOR, type Element } from '@data/elements';
 import { t } from '@services/I18nService';
 
 import { Modal } from './Modal';
@@ -341,15 +342,15 @@ export class CodexPanel extends Modal {
 
   private buildMobCard(kind: MobKind): LayoutContainer {
     const card = mkSubPanel({
-      layout: { width: '100%', gap: SPACING.gapSmall, padding: SPACING.pad },
+      layout: { width: '100%', gap: SPACING.gap, padding: SPACING.pad },
     });
     const mob = MOBS[kind];
     // Location is the only thing we still pull from MOBS_TLOD — every
     // other stat shown in the card is the engine-actual value from
-    // MOBS so the Codex reflects what the player is fighting, not the
-    // PS1 reference we cross-checked against.
+    // MOBS so the Codex reflects what the player is fighting.
     const canon = MOBS_TLOD[kind] ?? null;
 
+    // --- Header: name + (optional) location ----------------------------
     const header = mkRow({
       layout: {
         width: '100%',
@@ -364,37 +365,180 @@ export class CodexPanel extends Modal {
     }
     card.addChild(header);
 
-    // Full engine stat block. Grouped roughly by combat relevance so a
-    // glance reads "vitals → offence → defence → action-RPG dials":
-    //   - vitals: HP / XP / Element / boss flag
-    //   - combat: AT / DF / MAT / MDF
-    //   - hit/avoid: A-HIT / A-AV / M-HIT / M-AV (matter now that the
-    //     hit-roll system reads them)
-    //   - action-RPG: SPD (turn-order canon), atkSpeed (a/s),
-    //     range / aggroRange (px), world speed (px/ms)
-    card.addChild(
-      this.buildStatsRow([
-        ['HP', String(mob.health)],
-        ['XP', String(mob.xp)],
-        [t('codex.stat.element'), mob.element],
-        ...(mob.boss ? ([[t('codex.stat.boss'), '★']] as Array<[string, string]>) : []),
+    // --- Vitals strip: HP / XP big + Element badge + boss star ---------
+    const vitals = mkRow({
+      layout: {
+        width: '100%',
+        gap: SPACING.gap,
+        alignItems: 'center',
+        flexWrap: 'wrap',
+      },
+    });
+    vitals.addChild(this.buildVitalChip('HP', String(mob.health)));
+    vitals.addChild(this.buildVitalChip('XP', String(mob.xp)));
+    vitals.addChild(this.buildElementBadge(mob.element));
+    if (mob.boss) vitals.addChild(this.buildBossBadge());
+    card.addChild(vitals);
+
+    // --- Three stat groups in a responsive row -------------------------
+    // Yoga wraps the row to a column when the panel narrows (typical
+    // mobile portrait). Each group is a sub-panel with a header + a
+    // tight 2-column label/value table.
+    const groups = mkRow({
+      layout: {
+        width: '100%',
+        gap: SPACING.gap,
+        flexWrap: 'wrap',
+        alignItems: 'stretch',
+      },
+    });
+    groups.addChild(
+      this.buildStatGroup(t('codex.group.combat'), [
         [t('codex.stat.atk'), String(mob.stats.atk)],
         [t('codex.stat.def'), String(mob.stats.def)],
         [t('codex.stat.mat'), String(mob.stats.magicAtk)],
         [t('codex.stat.mdf'), String(mob.stats.magicDef)],
+      ]),
+    );
+    groups.addChild(
+      this.buildStatGroup(t('codex.group.precision'), [
         [t('codex.stat.aHit'), `${mob.stats.attackHit}%`],
         [t('codex.stat.aAv'), `${mob.stats.attackAvoid}%`],
         [t('codex.stat.mHit'), `${mob.stats.magicHit}%`],
         [t('codex.stat.mAv'), `${mob.stats.magicAvoid}%`],
+      ]),
+    );
+    groups.addChild(
+      this.buildStatGroup(t('codex.group.action'), [
         [t('codex.stat.spd'), String(mob.stats.speed)],
         [t('codex.stat.atkSpeed'), `${mob.stats.atkSpeed}/s`],
         [t('codex.stat.range'), `${mob.stats.range}px`],
         [t('codex.stat.aggroRange'), `${mob.stats.aggroRange}px`],
-        [t('codex.stat.moveSpeed'), `${mob.speed} px/ms`],
+        [t('codex.stat.moveSpeed'), `${mob.speed}`],
       ]),
     );
+    card.addChild(groups);
 
     return card;
+  }
+
+  /** Big-number vital chip — HP / XP. Larger value text than the
+   *  generic stat rows so the most important number reads at a glance.
+   *  Sits in the vitals strip alongside the element badge. */
+  private buildVitalChip(label: string, value: string): LayoutContainer {
+    const chip = new LayoutContainer({
+      layout: {
+        flexDirection: 'row',
+        alignItems: 'baseline',
+        gap: 6,
+        paddingLeft: 10,
+        paddingRight: 10,
+        paddingTop: 4,
+        paddingBottom: 4,
+        backgroundColor: COLORS.panelBg,
+        borderColor: COLORS.border,
+        borderWidth: 1,
+        borderRadius: 6,
+      },
+    });
+    chip.addChild(mkText(label, { ...TEXT.cellLabel, fontSize: 12 }));
+    chip.addChild(mkText(value, { ...TEXT.value, fontSize: 18 }));
+    return chip;
+  }
+
+  /** Coloured element pill — small swatch tinted with ELEMENT_COLOR
+   *  next to the element name. Color is decorative only; the label is
+   *  kept on the panel background so it stays legible regardless of
+   *  the tint (Light's pale yellow would erase white text otherwise). */
+  private buildElementBadge(element: Element): LayoutContainer {
+    const chip = new LayoutContainer({
+      layout: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: 6,
+        paddingLeft: 10,
+        paddingRight: 10,
+        paddingTop: 4,
+        paddingBottom: 4,
+        backgroundColor: COLORS.panelBg,
+        borderColor: COLORS.border,
+        borderWidth: 1,
+        borderRadius: 6,
+      },
+    });
+    const swatch = new LayoutContainer({
+      layout: {
+        width: 12,
+        height: 12,
+        backgroundColor: ELEMENT_COLOR[element],
+        borderRadius: 6,
+      },
+    });
+    chip.addChild(swatch);
+    chip.addChild(mkText(t(`codex.element.${element}`), { ...TEXT.value, fontSize: 13 }));
+    return chip;
+  }
+
+  /** Gold star pill — only renders for entries flagged `boss: true`. */
+  private buildBossBadge(): LayoutContainer {
+    const chip = new LayoutContainer({
+      layout: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: 4,
+        paddingLeft: 8,
+        paddingRight: 8,
+        paddingTop: 4,
+        paddingBottom: 4,
+        backgroundColor: COLORS.panelBg,
+        borderColor: COLORS.borderActive,
+        borderWidth: 1,
+        borderRadius: 6,
+      },
+    });
+    chip.addChild(mkText('★', { fill: COLORS.gold, fontSize: 14, fontWeight: 'bold' }));
+    chip.addChild(mkText(t('codex.stat.boss'), { ...TEXT.value, fontSize: 12 }));
+    return chip;
+  }
+
+  /** One stat group sub-panel — small header + 2-column label/value
+   *  table. `minWidth + flex: 1` lets the parent flex row balance the
+   *  three groups on desktop while flex-wrap drops them to one column
+   *  per row on narrow viewports. */
+  private buildStatGroup(
+    title: string,
+    pairs: ReadonlyArray<readonly [string, string]>,
+  ): LayoutContainer {
+    const group = mkSubPanel({
+      layout: {
+        flexDirection: 'column',
+        gap: SPACING.gapSmall,
+        flex: 1,
+        minWidth: 140,
+        padding: SPACING.pad,
+      },
+    });
+    group.addChild(
+      mkText(title, {
+        ...TEXT.cellLabel,
+        fill: COLORS.borderActive,
+        fontSize: 11,
+      }),
+    );
+    for (const [label, value] of pairs) {
+      const row = mkRow({
+        layout: {
+          width: '100%',
+          justifyContent: 'space-between',
+          alignItems: 'baseline',
+          gap: SPACING.gapSmall,
+        },
+      });
+      row.addChild(mkText(label, TEXT.cellLabel));
+      row.addChild(mkText(value, TEXT.cellValue));
+      group.addChild(row);
+    }
+    return group;
   }
 
   private buildCharacterCard(avatar: CharacterAvatar): LayoutContainer {

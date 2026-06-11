@@ -103,6 +103,21 @@
       "bosses": "Bosses",
       "characters": "Characters"
     },
+    "group": {
+      "combat": "Combat",
+      "precision": "Precision",
+      "action": "Action"
+    },
+    "element": {
+      "fire": "Fire",
+      "water": "Water",
+      "wind": "Wind",
+      "earth": "Earth",
+      "light": "Light",
+      "darkness": "Darkness",
+      "thunder": "Thunder",
+      "non-elemental": "Neutral"
+    },
     "stat": {
       "atk": "AT",
       "def": "DF",

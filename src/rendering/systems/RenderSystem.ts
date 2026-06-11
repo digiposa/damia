@@ -103,14 +103,15 @@ export class RenderSystem implements System<Components> {
           }
         } else if (defending && sprite.defendTextureAlias) {
           desiredAlias = sprite.defendTextureAlias;
-        } else if (swing && sprite.attackTextureAlias) {
+        } else if (swing && (sprite.attackTextureAlias || sprite.attackFrames)) {
           // Multi-frame attack: same logic as additions — split the swing
-          // duration evenly across the avatar's declared frames. With 3
-          // frames this means stance / wind-up / slash thirds. Falls back
-          // to the single attackTextureAlias if no frames are declared
-          // (or for non-Character entities like mobs).
+          // duration evenly across the declared frames. With 3 frames this
+          // means stance / wind-up / slash thirds. Source order: Character
+          // (player) avatar attackFrames first, then Sprite.attackFrames
+          // (mobs), then the single `attackTextureAlias` as a last-resort
+          // single-pose fallback.
           const character = world.getComponent(id, 'Character');
-          const frames = character?.avatar.sprite.base.attackFrames;
+          const frames = character?.avatar.sprite.base.attackFrames ?? sprite.attackFrames;
           if (frames && frames.length > 0) {
             const t = Math.min(0.999, swing.elapsedMs / swing.totalMs);
             desiredAlias = frames[Math.floor(t * frames.length)];

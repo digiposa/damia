@@ -294,6 +294,16 @@ const MANIFEST = {
     url: '/assets/sprites/mobs/knightOfSandora-walk-2.png',
     autoTrim: true,
   },
+  'sprite.mob.knightOfSandora.attack.1': {
+    kind: 'texture',
+    url: '/assets/sprites/mobs/knightOfSandora-attack-1.png',
+    autoTrim: true,
+  },
+  'sprite.mob.knightOfSandora.attack.2': {
+    kind: 'texture',
+    url: '/assets/sprites/mobs/knightOfSandora-attack-2.png',
+    autoTrim: true,
+  },
 
   // M8 forest tiles.
   // Ground = first Gemini grass variant (sampled into iso-diamond Graphics fills,

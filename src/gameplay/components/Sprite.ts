@@ -40,6 +40,12 @@ export interface Sprite {
    *  Players ignore this field — their walk cycle reads from
    *  `Character.avatar.sprite.base.walkFrames` instead. */
   walkFrames?: ReadonlyArray<AssetAlias>;
+  /** Optional multi-frame basic-attack animation for non-Character
+   *  entities (mobs). RenderSystem splits the AttackSwing duration
+   *  evenly across the frames — same logic as the player path that
+   *  reads `Character.avatar.sprite.base.attackFrames`. Falls back to
+   *  the single `attackTextureAlias` when this is empty / unset. */
+  attackFrames?: ReadonlyArray<AssetAlias>;
   /** Rotation in radians, applied to the rendered Pixi node. Defaults
    *  to 0. Used by Projectile arrows to point along their flight path
    *  — RenderSystem reads this each frame, so updating it on the

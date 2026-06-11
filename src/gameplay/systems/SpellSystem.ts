@@ -2,6 +2,7 @@ import type { System, World } from '@core/ecs';
 import type { Components, Position } from '@gameplay/components';
 import type { Element } from '@data/elements';
 import { computeMagicalItemDamage } from '@gameplay/damage';
+import { rollHit, spawnMissText } from '@gameplay/hit';
 import { FLOAT_DAMAGE, spawnFloatingText } from '@gameplay/entities/floatingText';
 import { spawnVfx } from '@gameplay/entities/vfx';
 import { playSfx } from '@services/AudioManager';
@@ -97,6 +98,14 @@ export class SpellSystem implements System<Components> {
     const pos: Position | undefined = world.getComponent(targetId, 'Position');
     if (!hp || !stats || !pos) return;
     if (hp.current <= 0 || world.hasComponent(targetId, 'Dying')) return;
+    // Magic precision/avoid roll — per-target so an AoE can land on
+    // some mobs while others dodge. Damage formula stays a pure
+    // function; the roll lives here so a future deterministic-replay
+    // mode can swap in a seeded RNG at this boundary alone.
+    if (!rollHit(world, casterId, targetId, 'magic')) {
+      spawnMissText(world, pos.x, pos.y);
+      return;
+    }
     const dmg = computeMagicalItemDamage(world, casterId, targetId, bid, element);
     hp.current = Math.max(0, hp.current - dmg);
     spawnFloatingText(world, {

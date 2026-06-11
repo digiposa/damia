@@ -2,6 +2,7 @@ import type { System, World } from '@core/ecs';
 import type { Components } from '@gameplay/components';
 import { ADDITIONS, type AdditionKind } from '@data/balance';
 import { computeAdditionTotalDamage, distributeAdditionDamage } from '@gameplay/damage';
+import { rollHit, spawnMissText } from '@gameplay/hit';
 import { FLOAT_DAMAGE, spawnFloatingText } from '@gameplay/entities/floatingText';
 import { addSp } from '@gameplay/sp';
 import { playSfx, playAdditionVoice } from '@services/AudioManager';
@@ -58,12 +59,32 @@ export class AdditionSystem implements System<Components> {
         // so the multiplier wouldn't normally apply, but the formula stays
         // correct if the controller-side gate ever lapses.
         if (!add.damagePerHit) {
-          const sumHits = def.hits.reduce((acc, v) => acc + v, 0);
-          const total = computeAdditionTotalDamage(world, id, add.targetId, sumHits, multiplier);
-          add.damagePerHit = distributeAdditionDamage(total, def.hits);
+          // Roll the addition-level precision/avoid check once at the
+          // first checkpoint. Canon TLoD: a missed addition shows
+          // "Miss" once and applies 0 damage on every hit. On a clean
+          // hit, we compute the canonical damage plan as before.
+          if (rollHit(world, id, add.targetId, 'attack')) {
+            const sumHits = def.hits.reduce((acc, v) => acc + v, 0);
+            const total = computeAdditionTotalDamage(world, id, add.targetId, sumHits, multiplier);
+            add.damagePerHit = distributeAdditionDamage(total, def.hits);
+          } else {
+            add.missed = true;
+            add.damagePerHit = new Array<number>(def.hits.length).fill(0);
+          }
         }
         const dmg = add.damagePerHit[i] ?? 0;
-        const landed = this.applyHit(world, id, add.targetId, dmg);
+        let landed = false;
+        if (add.missed) {
+          // Show "Miss" only on the first hit checkpoint so a 7-hit
+          // addition doesn't spam the screen with miss pops. lastHitLanded
+          // stays false → voice line + final-hit feel are suppressed.
+          if (i === 0) {
+            const targetPos = world.getComponent(add.targetId, 'Position');
+            if (targetPos) spawnMissText(world, targetPos.x, targetPos.y);
+          }
+        } else {
+          landed = this.applyHit(world, id, add.targetId, dmg);
+        }
         add.hitsApplied = i + 1;
         add.lastHitLanded = landed;
         if (landed) {

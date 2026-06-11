@@ -44,4 +44,11 @@ export interface Addition {
    *  — TLoD likewise snapshots state at trigger. Undefined until the first
    *  hit fires; once set it has `def.hits.length` entries. */
   damagePerHit?: readonly number[];
+  /** True if the addition-level precision/avoid roll failed at trigger.
+   *  Canon TLoD: one miss roll for the whole addition (the wiki's "first
+   *  hit guaranteed even with no input" implies the miss check is
+   *  sequence-level, not per-hit). When set, AdditionSystem pops a single
+   *  "Miss" floating text on hit #0 and applies 0 damage on every
+   *  subsequent checkpoint without SP / voice-line credit. */
+  missed?: boolean;
 }

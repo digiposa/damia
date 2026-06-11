@@ -34,6 +34,11 @@ export const FLOAT_DAMAGE = 0xffd166;
 export const FLOAT_HEAL_HP = 0x80e0ff;
 export const FLOAT_HEAL_MP = 0x9bb6ff;
 export const FLOAT_XP = 0xe6e6e6;
+/** "Miss" pop — bright orange-red, matches the PS1 canon "Miss"
+ *  banner (warm orange close to fire damage, distinct from the cooler
+ *  yellow `FLOAT_DAMAGE`). The stroke from FloatingTextSystem adds
+ *  the canonical heavy black outline for legibility on busy zones. */
+export const FLOAT_MISS = 0xee4422;
 
 export interface SpawnFloatingTextOptions {
   x: number;

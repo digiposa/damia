@@ -2,6 +2,7 @@ import type { System, World } from '@core/ecs';
 import { worldToGrid } from '@core/math/iso';
 import type { Components } from '@gameplay/components';
 import { computePhysicalDamage } from '@gameplay/damage';
+import { rollHit, spawnMissText } from '@gameplay/hit';
 import { FLOAT_DAMAGE, spawnFloatingText } from '@gameplay/entities/floatingText';
 import { spawnProjectile } from '@gameplay/entities/projectile';
 import { addSp } from '@gameplay/sp';
@@ -145,25 +146,34 @@ export class CombatSystem implements System<Components> {
         continue;
       }
 
-      // Melee: immediate damage on the locked target + visual lunge.
-      // computePhysicalDamage dispatches on the attacker's class —
-      // Player Archer Attack formula vs Enemy Physical, both reading
-      // effective stats through gameplay/stats.ts so Dragoon-form
-      // boosts apply automatically. Defending (Guard) goes through
-      // the formula's modifier wrapper.
-      const dmg = computePhysicalDamage(world, id, intent.targetId);
-      targetHealth.current = Math.max(0, targetHealth.current - dmg);
+      // Melee: precision/avoid roll first, then the canon damage
+      // formula on a confirmed hit. computePhysicalDamage dispatches
+      // on the attacker's class — Player Archer Attack formula vs
+      // Enemy Physical, both reading effective stats through
+      // gameplay/stats.ts so Dragoon-form boosts apply automatically.
+      // Defending (Guard) + Element go through the formula's modifier
+      // wrapper. A miss still consumes the cooldown + plays the swing
+      // animation so the player can read it as "attacked but didn't
+      // connect"; no damage, no SP, no hit SFX.
+      const landed = rollHit(world, id, intent.targetId, 'attack');
       cd.remainingMs = 1000 / Math.max(0.1, stats.atkSpeed);
 
-      spawnFloatingText(world, {
-        x: targetPos.x,
-        y: targetPos.y,
-        text: String(dmg),
-        color: FLOAT_DAMAGE,
-      });
+      if (!landed) {
+        spawnMissText(world, targetPos.x, targetPos.y);
+      } else {
+        const dmg = computePhysicalDamage(world, id, intent.targetId);
+        targetHealth.current = Math.max(0, targetHealth.current - dmg);
+        spawnFloatingText(world, {
+          x: targetPos.x,
+          y: targetPos.y,
+          text: String(dmg),
+          color: FLOAT_DAMAGE,
+        });
+      }
 
       // Visual lunge: store unit-vector toward target so RenderSystem can
       // offset the attacker's sprite forward then back over `totalMs`.
+      // Plays even on miss so the swing reads as an attempted attack.
       world.addComponent(id, 'AttackSwing', {
         elapsedMs: 0,
         totalMs: 220,
@@ -172,10 +182,12 @@ export class CombatSystem implements System<Components> {
       });
 
       playSfx('combat.swing');
-      playSfx('combat.hit');
+      if (landed) playSfx('combat.hit');
       // Auto-attack SP gain (no-op for Dart-style melee archetypes
-      // whose spGainPerAutoAttack is 0 — they gain via Additions).
-      if (character) {
+      // whose spGainPerAutoAttack is 0 — they gain via Additions). On
+      // miss, SP is suppressed — the gauge should reflect effective
+      // combat output, not button mashes.
+      if (landed && character) {
         addSp(world, id, character.avatar.archetype.dragoon.spGainPerAutoAttack);
       }
     }

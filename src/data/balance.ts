@@ -245,11 +245,17 @@ export const MOBS: Record<MobKind, MobDefinition> = {
       aggroRange: 220,
     },
     sprite: {
+      // Humanoid soldier silhouette — shared sprite sheet with the
+      // Kazas variant. fitMode: 'height' lets the walk-cycle frames
+      // (slightly wider stride than idle) keep the same on-screen
+      // height as the idle pose.
       shape: 'capsule',
       color: 0x6b7a8f,
       width: 64,
       height: 96,
       fitMode: 'height',
+      textureAlias: 'sprite.mob.knightOfSandora',
+      walkFrames: ['sprite.mob.knightOfSandora.walk.1', 'sprite.mob.knightOfSandora.walk.2'],
     },
     element: 'fire',
     xp: 2,
@@ -272,11 +278,15 @@ export const MOBS: Record<MobKind, MobDefinition> = {
       aggroRange: 220,
     },
     sprite: {
+      // Shares the Seles sprite sheet — same Knight visual, beefier
+      // stats for the Chapter 3 encounter.
       shape: 'capsule',
       color: 0x6b7a8f,
       width: 64,
       height: 96,
       fitMode: 'height',
+      textureAlias: 'sprite.mob.knightOfSandora',
+      walkFrames: ['sprite.mob.knightOfSandora.walk.1', 'sprite.mob.knightOfSandora.walk.2'],
     },
     element: 'fire',
     xp: 12,

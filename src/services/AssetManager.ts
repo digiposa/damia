@@ -275,6 +275,26 @@ const MANIFEST = {
     url: '/assets/sprites/mobs/fruegel.png',
   },
 
+  // Knight of Sandora — shared sprite across the Seles + Kazas variants
+  // (user-supplied 2026-06-11). Idle pose + a 2-frame walk cycle.
+  // No dedicated attack / death pose yet — the renderer will fall back
+  // to the idle texture during those states.
+  'sprite.mob.knightOfSandora': {
+    kind: 'texture',
+    url: '/assets/sprites/mobs/knightOfSandora.png',
+    autoTrim: true,
+  },
+  'sprite.mob.knightOfSandora.walk.1': {
+    kind: 'texture',
+    url: '/assets/sprites/mobs/knightOfSandora-walk-1.png',
+    autoTrim: true,
+  },
+  'sprite.mob.knightOfSandora.walk.2': {
+    kind: 'texture',
+    url: '/assets/sprites/mobs/knightOfSandora-walk-2.png',
+    autoTrim: true,
+  },
+
   // M8 forest tiles.
   // Ground = first Gemini grass variant (sampled into iso-diamond Graphics fills,
   // so its white bg is naturally clipped by the polygon shape).

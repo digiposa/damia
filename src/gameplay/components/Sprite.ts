@@ -33,6 +33,13 @@ export interface Sprite {
   defendTextureAlias?: AssetAlias;
   /** Optional alias used while the entity has a Dying component. Triggers the death-animation pipeline. */
   deathTextureAlias?: AssetAlias;
+  /** Optional multi-frame walk-cycle animation for non-Character
+   *  entities (mobs). RenderSystem cycles through these frames at the
+   *  shared WALK_FRAME_MS rate while the entity has active Pathfinder
+   *  waypoints (no swing / addition / spell / defend taking over).
+   *  Players ignore this field — their walk cycle reads from
+   *  `Character.avatar.sprite.base.walkFrames` instead. */
+  walkFrames?: ReadonlyArray<AssetAlias>;
   /** Rotation in radians, applied to the rendered Pixi node. Defaults
    *  to 0. Used by Projectile arrows to point along their flight path
    *  — RenderSystem reads this each frame, so updating it on the

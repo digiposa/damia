@@ -123,8 +123,12 @@ export class RenderSystem implements System<Components> {
           // integer offset (id) shifts each entity's starting frame so a
           // swarm doesn't step in lockstep. Falls back to the idle
           // texture when no walkFrames are declared.
+          // Source order: Character (player) avatar walkFrames first,
+          // then Sprite.walkFrames (mobs). Players don't set
+          // Sprite.walkFrames, mobs don't have a Character — the two
+          // paths are mutually exclusive in practice.
           const character = world.getComponent(id, 'Character');
-          const frames = character?.avatar.sprite.base.walkFrames;
+          const frames = character?.avatar.sprite.base.walkFrames ?? sprite.walkFrames;
           if (frames && frames.length > 0) {
             const idx = Math.floor(this.elapsedMs / WALK_FRAME_MS + id) % frames.length;
             desiredAlias = frames[idx];

@@ -119,9 +119,14 @@ export class TrainingScene implements Scene {
       },
     });
     this.controller.layers.ui.addChild(this.debugPanel.container);
+    // Mount the floating "DBG" toggle button alongside the modal so
+    // it's visible from the first frame — without this the panel can
+    // only be reached via the `~` keyboard shortcut, which is a
+    // non-starter on mobile and easy to miss on desktop.
+    this.debugPanel.mountToggleButton(this.controller.layers.ui);
 
-    // Toggle via `~` on desktop. Touch users tap the gear-adjacent
-    // debug icon (rendered by TrainingDebugPanel itself).
+    // Keyboard shortcut as a secondary entry — handy for fast iteration
+    // on desktop. The DBG button stays the primary affordance.
     this.keyHandler = (e: KeyboardEvent): void => {
       if (e.key === '~' || e.key === '`') {
         e.preventDefault();

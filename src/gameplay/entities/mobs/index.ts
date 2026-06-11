@@ -39,7 +39,12 @@ export function spawnMob(world: World<Components>, kind: MobKind, gx: number, gy
   world.addComponent(id, 'Sprite', { ...CHARACTER_SPRITE_DEFAULTS, ...def.sprite });
   world.addComponent(id, 'AI', { behavior: KIND_TO_BEHAVIOR[kind] });
   // Element affinity drives the Element modifier in damage.ts. Every
-  // mob has one per TLoD canon; defaults are baked into MOBS.
-  world.addComponent(id, 'Affinity', { value: def.element });
+  // mob has one per TLoD canon; defaults are baked into MOBS. The
+  // optional `physicalElement` override flips the mob's physical
+  // attack to be elementally tagged — canon-default is Non-Elemental.
+  world.addComponent(id, 'Affinity', {
+    value: def.element,
+    ...(def.physicalElement ? { physicalAttack: def.physicalElement } : {}),
+  });
   return id;
 }

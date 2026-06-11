@@ -62,6 +62,13 @@ export interface MobDefinition {
    *  — every TLoD combatant has an element; mobs without canon evidence
    *  use 'non-elemental' so the modifier stays neutral until verified. */
   element: Element;
+  /** Override for the element of this mob's PHYSICAL attacks. Canon
+   *  default: mob physical is Non-Elemental (the wiki lists only enemy
+   *  magical attacks as elemental sources). Set this when a specific
+   *  mob's physical hit IS canon-elemental — e.g. a fire-spirit whose
+   *  basic attack is Fire-tagged. Magic damage uses the spell element
+   *  separately and is unaffected by this field. */
+  physicalElement?: Element;
   /** XP awarded on kill. */
   xp: number;
   /** True for named bosses. Drives Survival's first-boss-kill counter

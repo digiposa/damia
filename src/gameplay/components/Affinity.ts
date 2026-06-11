@@ -17,5 +17,17 @@ import type { Element } from '@data/elements';
  * world-attached carrier needs its own name to stay greppable.
  */
 export interface Affinity {
+  /** Defensive element — drives the Element modifier when this entity
+   *  is the target of an incoming attack. Required. */
   value: Element;
+  /** Override for the element this entity's physical attacks carry.
+   *  Optional; when undefined the canon defaults apply:
+   *    - mob physical → Non-Elemental
+   *    - player physical → weapon element (or Non-Elemental)
+   *    - player Dragoon physical → archetype element
+   *  Set on the rare mobs whose canon spec calls out an elemental
+   *  physical (e.g. a fire elemental whose bite IS Fire, distinct from
+   *  the default neutral mob swing). The damage helper falls back to
+   *  the canon default when this is absent. */
+  physicalAttack?: Element;
 }

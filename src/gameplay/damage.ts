@@ -88,16 +88,22 @@ function targetElementOf(world: World<Components>, entityId: number): Element {
  *     transformed)
  *   - Base form → equipped weapon's element if it has one, else
  *     Non-Elemental (Broad Sword, Spear, plain Iron Knuckle, etc.)
- *   - Mob attacker → its own Affinity (mob physical is always its
- *     element per canon)
+ *   - Mob attacker → Non-Elemental. Canon: only enemy MAGICAL attacks
+ *     are elementally tagged with the enemy's element (wiki LoD
+ *     "Sources of Elemental Damage" lists Enemy Magical separately
+ *     from physical). Enemy physical is always neutral so the same-
+ *     element resistance doesn't fire on basic mob swings.
  * Used by `computePhysicalDamage` + `computeAdditionTotalDamage`. Item
  * magic doesn't go through here — the caller passes the spell element
  * explicitly to `computeMagicalItemDamage`. */
 function physicalAttackElement(world: World<Components>, attackerId: number): Element {
   const character = world.getComponent(attackerId, 'Character');
   if (!character) {
-    // Mob (or any non-Character entity) — attack element = self.
-    return targetElementOf(world, attackerId);
+    // Mob — canon default is Non-Elemental physical, but the spawn
+    // pipeline mirrors MobDefinition.physicalElement onto
+    // Affinity.physicalAttack for the rare canon-elemental exceptions
+    // (a fire-spirit's bite, etc.). Falls back to NE when unset.
+    return world.getComponent(attackerId, 'Affinity')?.physicalAttack ?? 'non-elemental';
   }
   if (world.hasComponent(attackerId, 'Dragoon')) {
     return character.avatar.archetype.element;

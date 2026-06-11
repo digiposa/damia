@@ -84,7 +84,6 @@ export class CodexPanel extends Modal {
   private scrollMask: Graphics | null = null;
   private scrollContent: LayoutContainer | null = null;
   private scrollY = 0;
-  private viewportWidth = 0;
   private viewportHeight = 0;
 
   constructor(app: Application) {
@@ -247,7 +246,6 @@ export class CodexPanel extends Modal {
       0,
       panelH - 2 * SPACING.pad - TITLE_STRIP_HEIGHT - TAB_HEIGHT - 2 * SPACING.gap,
     );
-    this.viewportWidth = innerW;
     this.viewportHeight = innerH;
 
     if (this.scrollViewport) {

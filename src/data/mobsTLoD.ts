@@ -132,7 +132,7 @@ export const MOBS_TLOD: Partial<Record<MobKind, TLoDMobStats>> = {
   // the split lands.
   knightOfSandoraSeles: {
     location: 'Seles',
-    element: 'dark',
+    element: 'fire',
     hp: 4,
     xp: 2,
     gold: 3,

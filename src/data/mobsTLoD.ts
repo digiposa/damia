@@ -123,11 +123,24 @@ export const MOBS_TLOD: Partial<Record<MobKind, TLoDMobStats>> = {
     drops: [{ item: 'pellet', chance: 0.1 }],
     canCounterAttack: true,
   },
-  // First fight of the game: Hellena Prison breakout. Element/dodge
-  // pending wiki cross-check; first-pass values mirror MOBS so the
-  // Bestiary screen reads coherent numbers immediately.
-  sandoraKnight: {
-    location: 'Hellena Prison',
+  // Knight of Sandora — two narrative variants share the sprite but
+  // not the stats. PLACEHOLDER NUMBERS pending the user's canon pass.
+  knightOfSandoraSeles: {
+    location: 'Seles',
+    element: 'dark',
+    hp: 12,
+    xp: 12,
+    gold: 12,
+    pAtk: 3,
+    pDef: 100,
+    mAtk: 0,
+    mDef: 80,
+    speed: 50,
+    drops: [{ item: 'healingPotion', chance: 0.08 }],
+    canCounterAttack: false,
+  },
+  knightOfSandoraKazas: {
+    location: 'Kazas Black Castle',
     element: 'dark',
     hp: 12,
     xp: 12,

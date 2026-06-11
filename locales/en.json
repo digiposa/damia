@@ -124,7 +124,8 @@
       "goldenDragoon": "Golden Dragoon"
     },
     "entry": {
-      "sandoraKnight": { "name": "Sandora Knight" },
+      "knightOfSandoraSeles": { "name": "Knight of Sandora" },
+      "knightOfSandoraKazas": { "name": "Knight of Sandora" },
       "berserkMouse": { "name": "Berserk Mouse" },
       "goblin": { "name": "Goblin" },
       "assassinCock": { "name": "Assassin Cock" },

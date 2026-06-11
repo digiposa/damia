@@ -42,7 +42,14 @@ export const PLAYER_BASE = {
   } as Stats,
 } as const;
 
-export type MobKind = 'berserkMouse' | 'goblin' | 'assassinCock' | 'trent' | 'fruegel' | 'sandoraKnight';
+export type MobKind =
+  | 'berserkMouse'
+  | 'goblin'
+  | 'assassinCock'
+  | 'trent'
+  | 'fruegel'
+  | 'knightOfSandoraSeles'
+  | 'knightOfSandoraKazas';
 
 export interface MobDefinition {
   health: number;
@@ -192,13 +199,15 @@ export const MOBS: Record<MobKind, MobDefinition> = {
   // here because the WaveSpawnerSystem overrides it to 99 999 on spawn —
   // bosses are pre-engaged so they march on the player from across the
   // arena instead of idling.
-  // First mob fought in TLoD PS1 (Hellena Prison breakout, Chapter 1).
-  // First-pass canonical stats — TO VERIFY against the fandom wiki Sandora
-  // Knight page before locking in. The Bestiary screen in-game lets the
-  // player eyeball these numbers; the upcoming damage-check pass will
-  // confirm them against PS1 output. Sprite alias is a placeholder until
-  // the dedicated sheet ships.
-  sandoraKnight: {
+  // Knight of Sandora — two narrative variants in TLoD canon, same
+  // sprite sheet, different stat blocks:
+  //   - Seles: the early-game encounter (Chapter 1 prologue area).
+  //   - Kazas Black Castle: Chapter 3, much later, scaled up.
+  // STATS BELOW ARE PLACEHOLDER — pending canon values from the user
+  // for the damage-check pass. The shape + numbers exist only so the
+  // engine type-checks and the Codex renders something; do not balance
+  // anything against these until they're replaced.
+  knightOfSandoraSeles: {
     health: 12,
     speed: 0.1,
     stats: {
@@ -216,10 +225,32 @@ export const MOBS: Record<MobKind, MobDefinition> = {
       aggroRange: 220,
     },
     sprite: {
-      // Humanoid soldier silhouette — slightly bigger than goblin (full
-      // plate + helm) but smaller than fruegel. Steel-blue capsule
-      // procedural until the sprite sheet drops; textureAliases will
-      // be added alongside their AssetManager manifest entries.
+      shape: 'capsule',
+      color: 0x6b7a8f,
+      width: 64,
+      height: 96,
+      fitMode: 'height',
+    },
+    xp: 12,
+  },
+  knightOfSandoraKazas: {
+    health: 12,
+    speed: 0.1,
+    stats: {
+      atk: 3,
+      def: 100,
+      magicAtk: 0,
+      magicDef: 80,
+      speed: 50,
+      attackHit: 100,
+      magicHit: 100,
+      attackAvoid: 0,
+      magicAvoid: 0,
+      atkSpeed: 1,
+      range: 80,
+      aggroRange: 220,
+    },
+    sprite: {
       shape: 'capsule',
       color: 0x6b7a8f,
       width: 64,

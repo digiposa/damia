@@ -9,10 +9,12 @@ const KIND_TO_BEHAVIOR: Record<MobKind, AIBehavior> = {
   goblin: 'goblin',
   assassinCock: 'cock',
   trent: 'trent',
-  // Sandora Knight — humanoid soldier, chase + swing on contact. Same
+  // Knight of Sandora — humanoid soldier, chase + swing on contact.
+  // Both narrative variants (Seles + Kazas Black Castle) share the
   // melee chassis as goblin / fruegel until we ship the dedicated
   // shield-up / parry behaviour the TLoD canon hints at.
-  sandoraKnight: 'goblin',
+  knightOfSandoraSeles: 'goblin',
+  knightOfSandoraKazas: 'goblin',
   // Fruegel rides the humanoid melee AI for v1 — chase + swing on
   // contact. Boss-specific behaviour (charge, AoE smash, phase
   // transition) lands in a dedicated 'boss' branch later.

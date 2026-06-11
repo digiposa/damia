@@ -30,11 +30,7 @@ import { LayoutContainer } from '@pixi/layout/components';
 
 import { MOBS, type MobKind } from '@data/balance';
 import { MOBS_TLOD } from '@data/mobsTLoD';
-import {
-  ARCHETYPE_ORDER,
-  AVATARS_BY_ARCHETYPE,
-  type CharacterAvatar,
-} from '@data/characters';
+import { ARCHETYPE_ORDER, AVATARS_BY_ARCHETYPE, type CharacterAvatar } from '@data/characters';
 import { t } from '@services/I18nService';
 
 import { Modal } from './Modal';
@@ -47,7 +43,8 @@ type CodexTab = 'mobs' | 'bosses' | 'characters';
  *  via `MOBS[kind].boss`. Order roughly follows TLoD encounter order
  *  so the screen reads like a campaign log. */
 const MOB_ENTRY_ORDER: ReadonlyArray<MobKind> = [
-  'sandoraKnight',
+  'knightOfSandoraSeles',
+  'knightOfSandoraKazas',
   'berserkMouse',
   'goblin',
   'assassinCock',

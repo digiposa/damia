@@ -89,15 +89,20 @@
     "sfx": "Volume effets",
     "voice": "Volume voix",
     "language": "Langue",
-    "bestiary": "Bestiaire",
+    "codex": "Codex",
     "resume": "Reprendre",
     "quitToTitle": "Retour au titre"
   },
-  "bestiary": {
-    "title": "Bestiaire",
+  "codex": {
+    "title": "Codex",
     "empty": "Aucune entrée.",
     "canonHeader": "Canon (PS1)",
     "engineHeader": "Moteur",
+    "tab": {
+      "mobs": "Mobs",
+      "bosses": "Boss",
+      "characters": "Personnages"
+    },
     "stat": {
       "atk": "AT",
       "def": "DF",
@@ -105,25 +110,26 @@
       "mdf": "MDF",
       "spd": "VIT",
       "gold": "Or",
-      "element": "Élément"
+      "element": "Élément",
+      "pattern": "Style",
+      "spMax": "SP max"
     },
-    "sandoraKnight": {
-      "name": "Chevalier de Sandora"
+    "archetype": {
+      "redEyeDragoon": "Dragon de l'Œil Rouge",
+      "jadeDragoon": "Dragon de Jade",
+      "whiteSilverDragoon": "Dragon Argent-Blanc",
+      "darkBurstDragoon": "Dragon de Ténèbres",
+      "violetDragoon": "Dragon Violet",
+      "blueSeaDragoon": "Dragon des Mers",
+      "goldenDragoon": "Dragon Doré"
     },
-    "berserkMouse": {
-      "name": "Souris Enragée"
-    },
-    "goblin": {
-      "name": "Gobelin"
-    },
-    "assassinCock": {
-      "name": "Coq Assassin"
-    },
-    "trent": {
-      "name": "Trent"
-    },
-    "fruegel": {
-      "name": "Fruegel"
+    "entry": {
+      "sandoraKnight": { "name": "Chevalier de Sandora" },
+      "berserkMouse": { "name": "Souris Enragée" },
+      "goblin": { "name": "Gobelin" },
+      "assassinCock": { "name": "Coq Assassin" },
+      "trent": { "name": "Trent" },
+      "fruegel": { "name": "Fruegel" }
     }
   },
   "exits": {

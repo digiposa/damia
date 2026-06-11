@@ -21,7 +21,7 @@ const ACTION_BUTTON_HEIGHT = 36;
  *  centered on every viewport, not stretched to the full modal max. */
 const PANEL_MAX_HEIGHT = 520;
 
-export type SettingsPanelAction = 'resume' | 'quit-to-title' | 'open-bestiary';
+export type SettingsPanelAction = 'resume' | 'quit-to-title' | 'open-codex';
 
 export interface SettingsPanelOptions {
   /** When false, hide the Resume / Quit-to-Title action buttons. Use
@@ -117,9 +117,9 @@ export class SettingsPanel extends Modal {
     // --- Language row ---------------------------------------------------
     this.langValueText = this.buildLangRow(panel, t('settings.language'));
 
-    // --- Bestiary (always available, both in title + gameplay menus) ----
+    // --- Codex (always available, both in title + gameplay menus) -------
     panel.addChild(new Container({ layout: { height: SPACING.gapSmall, isLeaf: true } }));
-    panel.addChild(this.buildActionButton(t('settings.bestiary'), 'open-bestiary'));
+    panel.addChild(this.buildActionButton(t('settings.codex'), 'open-codex'));
 
     // --- Spacer + action buttons (skipped when opened outside gameplay) -
     if (this.showActions) {

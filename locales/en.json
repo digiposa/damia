@@ -89,15 +89,20 @@
     "sfx": "SFX volume",
     "voice": "Voice volume",
     "language": "Language",
-    "bestiary": "Bestiary",
+    "codex": "Codex",
     "resume": "Resume",
     "quitToTitle": "Quit to Title"
   },
-  "bestiary": {
-    "title": "Bestiary",
+  "codex": {
+    "title": "Codex",
     "empty": "No entries yet.",
     "canonHeader": "Canon (PS1)",
     "engineHeader": "Engine",
+    "tab": {
+      "mobs": "Mobs",
+      "bosses": "Bosses",
+      "characters": "Characters"
+    },
     "stat": {
       "atk": "AT",
       "def": "DF",
@@ -105,25 +110,26 @@
       "mdf": "MDF",
       "spd": "SPD",
       "gold": "G",
-      "element": "Element"
+      "element": "Element",
+      "pattern": "Style",
+      "spMax": "SP max"
     },
-    "sandoraKnight": {
-      "name": "Sandora Knight"
+    "archetype": {
+      "redEyeDragoon": "Red-Eye Dragoon",
+      "jadeDragoon": "Jade Dragoon",
+      "whiteSilverDragoon": "White-Silver Dragoon",
+      "darkBurstDragoon": "Dark Burst Dragoon",
+      "violetDragoon": "Violet Dragoon",
+      "blueSeaDragoon": "Blue-Sea Dragoon",
+      "goldenDragoon": "Golden Dragoon"
     },
-    "berserkMouse": {
-      "name": "Berserk Mouse"
-    },
-    "goblin": {
-      "name": "Goblin"
-    },
-    "assassinCock": {
-      "name": "Assassin Cock"
-    },
-    "trent": {
-      "name": "Trent"
-    },
-    "fruegel": {
-      "name": "Fruegel"
+    "entry": {
+      "sandoraKnight": { "name": "Sandora Knight" },
+      "berserkMouse": { "name": "Berserk Mouse" },
+      "goblin": { "name": "Goblin" },
+      "assassinCock": { "name": "Assassin Cock" },
+      "trent": { "name": "Trent" },
+      "fruegel": { "name": "Fruegel" }
     }
   },
   "exits": {

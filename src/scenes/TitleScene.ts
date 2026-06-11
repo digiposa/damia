@@ -9,7 +9,7 @@ import { ForestScene } from '@scenes/ForestOfSeles/ForestScene';
 import { HellenaScene } from '@scenes/HellenaPrison/HellenaScene';
 import { CharacterSelectScene } from '@scenes/CharacterSelectScene';
 import { SettingsPanel } from '@ui/SettingsPanel';
-import { BestiaryPanel } from '@ui/BestiaryPanel';
+import { CodexPanel } from '@ui/CodexPanel';
 
 interface ButtonHandle {
   container: Container;
@@ -119,11 +119,11 @@ export class TitleScene implements Scene {
     // since we're already on the title and no run is in flight). Hidden
     // until the gear icon is tapped.
     const settings = new SettingsPanel(ctx.app, { showActions: false });
-    const bestiary = new BestiaryPanel(ctx.app);
+    const codex = new CodexPanel(ctx.app);
     settings.onAction((action) => {
-      if (action === 'open-bestiary') {
+      if (action === 'open-codex') {
         settings.close();
-        bestiary.open();
+        codex.open();
       }
     });
     const gearIcon = this.makeGearIcon(
@@ -145,7 +145,7 @@ export class TitleScene implements Scene {
     ctx.app.renderer.on('resize', onResize);
     this.cleanups.push(() => ctx.app.renderer.off('resize', onResize));
     this.cleanups.push(() => settings.destroy());
-    this.cleanups.push(() => bestiary.destroy());
+    this.cleanups.push(() => codex.destroy());
 
     this.container.addChild(
       subtitle,
@@ -153,7 +153,7 @@ export class TitleScene implements Scene {
       continueBtn.container,
       newGameBtn.container,
       settings.container,
-      bestiary.container,
+      codex.container,
       gearIcon,
     );
     ctx.app.stage.addChild(this.container);

@@ -31,7 +31,7 @@ import { TouchMenuButtons } from '@ui/TouchMenuButtons';
 import { EncounterIndicator } from '@ui/EncounterIndicator';
 import { CursorOverlay } from '@ui/CursorOverlay';
 import { StatusPanel } from '@ui/StatusPanel';
-import { BestiaryPanel } from '@ui/BestiaryPanel';
+import { CodexPanel } from '@ui/CodexPanel';
 import type { Viewport } from 'pixi-viewport';
 import type { Entity, World } from '@core/ecs';
 import type { Components } from '@gameplay/components';
@@ -94,7 +94,7 @@ export class GameplayUI {
   readonly hud: Hud;
   readonly hotbar: Hotbar;
   readonly settings: SettingsPanel;
-  readonly bestiaryPanel: BestiaryPanel;
+  readonly codexPanel: CodexPanel;
   readonly inventoryPanel: InventoryPanel;
   readonly statusPanel: StatusPanel;
   readonly toast: Toast;
@@ -131,14 +131,14 @@ export class GameplayUI {
     this.hotbar = new Hotbar(app);
     this.hotbar.setOnSlotTap(handlers.onHotbarSlotTap);
     this.settings = new SettingsPanel(app);
-    // Intercept 'open-bestiary' here so the controller's onSettingsAction
+    // Intercept 'open-codex' here so the controller's onSettingsAction
     // only sees the existing Resume / Quit actions; everything else bubbles
     // through unchanged.
-    this.bestiaryPanel = new BestiaryPanel(app);
+    this.codexPanel = new CodexPanel(app);
     this.settings.onAction((action) => {
-      if (action === 'open-bestiary') {
+      if (action === 'open-codex') {
         this.settings.close();
-        this.bestiaryPanel.open();
+        this.codexPanel.open();
         return;
       }
       handlers.onSettingsAction(action);
@@ -187,7 +187,7 @@ export class GameplayUI {
       layers.ui.addChild(this.additionsBar.container);
     }
 
-    layers.ui.addChild(this.hud.container, this.settings.container, this.bestiaryPanel.container);
+    layers.ui.addChild(this.hud.container, this.settings.container, this.codexPanel.container);
     if (this.minimap) layers.ui.addChild(this.minimap.container);
     if (this.zoneTitle) layers.ui.addChild(this.zoneTitle.container);
     if (this.actionLog) layers.ui.addChild(this.actionLog.container);
@@ -242,7 +242,7 @@ export class GameplayUI {
     layers.ui.addChild(this.hotbar.container);
   }
 
-  /** True while a modal panel (Settings / Inventory / Bestiary / Status)
+  /** True while a modal panel (Settings / Inventory / Codex / Status)
    *  is owning input — the controller uses this to hard-pause the
    *  simulation so opening any menu freezes the game world. */
   isPaused(): boolean {
@@ -250,7 +250,7 @@ export class GameplayUI {
       this.settings.isOpen ||
       this.inventoryPanel.isOpen ||
       this.statusPanel.isOpen ||
-      this.bestiaryPanel.isOpen
+      this.codexPanel.isOpen
     );
   }
 
@@ -269,7 +269,7 @@ export class GameplayUI {
     this.hotbar.destroy();
     this.hud.destroy();
     this.settings.destroy();
-    this.bestiaryPanel.destroy();
+    this.codexPanel.destroy();
     this.inventoryPanel.destroy();
     this.statusPanel.destroy();
   }

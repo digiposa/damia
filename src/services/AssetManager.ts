@@ -347,6 +347,36 @@ const MANIFEST = {
     url: '/assets/sprites/mobs/commander-attack-2.png',
     autoTrim: true,
   },
+  'sprite.mob.commander.death.1': {
+    kind: 'texture',
+    url: '/assets/sprites/mobs/commander-death-1.png',
+    autoTrim: true,
+  },
+  'sprite.mob.commander.death.2': {
+    kind: 'texture',
+    url: '/assets/sprites/mobs/commander-death-2.png',
+    autoTrim: true,
+  },
+  'sprite.mob.commander.death.3': {
+    kind: 'texture',
+    url: '/assets/sprites/mobs/commander-death-3.png',
+    autoTrim: true,
+  },
+  'sprite.mob.commander.death.4': {
+    kind: 'texture',
+    url: '/assets/sprites/mobs/commander-death-4.png',
+    autoTrim: true,
+  },
+  'sprite.mob.commander.death.5': {
+    kind: 'texture',
+    url: '/assets/sprites/mobs/commander-death-5.png',
+    autoTrim: true,
+  },
+  'sprite.mob.commander.death.6': {
+    kind: 'texture',
+    url: '/assets/sprites/mobs/commander-death-6.png',
+    autoTrim: true,
+  },
 
   // M8 forest tiles.
   // Ground = first Gemini grass variant (sampled into iso-diamond Graphics fills,

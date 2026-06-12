@@ -121,7 +121,15 @@ export class DeathSystem implements System<Components> {
         if (world.hasComponent(id, 'CombatIntent')) world.removeComponent(id, 'CombatIntent');
         if (world.hasComponent(id, 'AttackSwing')) world.removeComponent(id, 'AttackSwing');
         if (world.hasComponent(id, 'Defending')) world.removeComponent(id, 'Defending');
-        world.addComponent(id, 'Dying', { elapsedMs: 0, totalMs: 700 });
+        // Dying gate: 700 ms is the legacy single-pose value (Berserk
+        // Mouse, Goblin, etc. — just a held death sprite). Bump to
+        // 1400 ms for entities with a multi-frame death sequence so
+        // each frame gets enough time to read (Commander's 6-frame
+        // collapse animation lands at ~233 ms / frame). Keep the
+        // shorter timer for single-pose deaths to avoid corpses
+        // lingering forever.
+        const totalMs = sprite.deathFrames && sprite.deathFrames.length > 1 ? 1400 : 700;
+        world.addComponent(id, 'Dying', { elapsedMs: 0, totalMs });
         continue;
       }
 

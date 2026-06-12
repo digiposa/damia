@@ -33,6 +33,13 @@ export interface Sprite {
   defendTextureAlias?: AssetAlias;
   /** Optional alias used while the entity has a Dying component. Triggers the death-animation pipeline. */
   deathTextureAlias?: AssetAlias;
+  /** Optional multi-frame death animation. RenderSystem splits the
+   *  Dying.totalMs duration evenly across these frames and freezes
+   *  on the last frame for the remaining death gate before
+   *  DyingSystem destroys the entity. Used by mobs with a dedicated
+   *  death sequence (Commander's collapse, future bosses); single-
+   *  pose deaths can keep just `deathTextureAlias`. */
+  deathFrames?: ReadonlyArray<AssetAlias>;
   /** Optional multi-frame walk-cycle animation for non-Character
    *  entities (mobs). RenderSystem cycles through these frames at the
    *  shared WALK_FRAME_MS rate while the entity has active Pathfinder

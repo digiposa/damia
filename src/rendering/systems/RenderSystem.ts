@@ -89,10 +89,22 @@ export class RenderSystem implements System<Components> {
       // Walking cycles through `avatar.sprite.base.walkFrames` when present;
       // otherwise keeps the idle sprite and the bob below conveys motion alone.
       if (node instanceof PixiSprite) {
-        const dying = world.hasComponent(id, 'Dying');
+        const dying = world.getComponent(id, 'Dying');
         let desiredAlias: AssetAlias | undefined = sprite.textureAlias;
-        if (dying && sprite.deathTextureAlias) {
-          desiredAlias = sprite.deathTextureAlias;
+        if (dying && (sprite.deathFrames || sprite.deathTextureAlias)) {
+          // Death animation: split Dying.totalMs evenly across
+          // deathFrames. Once the last frame is reached we hold on it
+          // for any remaining time before DyingSystem destroys the
+          // entity, so the corpse pose lingers a beat instead of
+          // looping back to frame 0. Falls back to the single-pose
+          // deathTextureAlias when no frame array is declared.
+          const frames = sprite.deathFrames;
+          if (frames && frames.length > 0) {
+            const t = Math.min(0.999, dying.elapsedMs / dying.totalMs);
+            desiredAlias = frames[Math.floor(t * frames.length)];
+          } else {
+            desiredAlias = sprite.deathTextureAlias;
+          }
         } else if (addition) {
           // Resolve the addition's frame sequence at draw time from the
           // entity's avatar, instead of caching it on Sprite at spawn.

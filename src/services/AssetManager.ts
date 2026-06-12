@@ -350,32 +350,56 @@ const MANIFEST = {
   'sprite.mob.commander.death.1': {
     kind: 'texture',
     url: '/assets/sprites/mobs/commander-death-1.png',
-    autoTrim: true,
+    // Pre-uniformized to a common 419x337 bbox so each frame
+    // renders at the same effective character size — see the
+    // batch crop script. Skip autoTrim or per-frame alpha
+    // trimming would re-introduce the size mismatch (standing
+    // pose vs lying corpse have very different content bboxes).
   },
   'sprite.mob.commander.death.2': {
     kind: 'texture',
     url: '/assets/sprites/mobs/commander-death-2.png',
-    autoTrim: true,
+    // Pre-uniformized to a common 419x337 bbox so each frame
+    // renders at the same effective character size — see the
+    // batch crop script. Skip autoTrim or per-frame alpha
+    // trimming would re-introduce the size mismatch (standing
+    // pose vs lying corpse have very different content bboxes).
   },
   'sprite.mob.commander.death.3': {
     kind: 'texture',
     url: '/assets/sprites/mobs/commander-death-3.png',
-    autoTrim: true,
+    // Pre-uniformized to a common 419x337 bbox so each frame
+    // renders at the same effective character size — see the
+    // batch crop script. Skip autoTrim or per-frame alpha
+    // trimming would re-introduce the size mismatch (standing
+    // pose vs lying corpse have very different content bboxes).
   },
   'sprite.mob.commander.death.4': {
     kind: 'texture',
     url: '/assets/sprites/mobs/commander-death-4.png',
-    autoTrim: true,
+    // Pre-uniformized to a common 419x337 bbox so each frame
+    // renders at the same effective character size — see the
+    // batch crop script. Skip autoTrim or per-frame alpha
+    // trimming would re-introduce the size mismatch (standing
+    // pose vs lying corpse have very different content bboxes).
   },
   'sprite.mob.commander.death.5': {
     kind: 'texture',
     url: '/assets/sprites/mobs/commander-death-5.png',
-    autoTrim: true,
+    // Pre-uniformized to a common 419x337 bbox so each frame
+    // renders at the same effective character size — see the
+    // batch crop script. Skip autoTrim or per-frame alpha
+    // trimming would re-introduce the size mismatch (standing
+    // pose vs lying corpse have very different content bboxes).
   },
   'sprite.mob.commander.death.6': {
     kind: 'texture',
     url: '/assets/sprites/mobs/commander-death-6.png',
-    autoTrim: true,
+    // Pre-uniformized to a common 419x337 bbox so each frame
+    // renders at the same effective character size — see the
+    // batch crop script. Skip autoTrim or per-frame alpha
+    // trimming would re-introduce the size mismatch (standing
+    // pose vs lying corpse have very different content bboxes).
   },
 
   // M8 forest tiles.

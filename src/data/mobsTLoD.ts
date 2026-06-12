@@ -158,6 +158,25 @@ export const MOBS_TLOD: Partial<Record<MobKind, TLoDMobStats>> = {
     drops: [{ item: 'healingPotion', chance: 0.08 }],
     canCounterAttack: false,
   },
+  // Commander (Seles) — Boss canon Disc 1 first scripted encounter.
+  // Element Darkness diverges from his Knights' Fire — a canon quirk
+  // noted in docs/features/bosses/Commander.md. Burn Out 100% drop is
+  // the canon spell-item reward; we model it via the standard drops
+  // table since the engine doesn't split boss-specific tables yet.
+  commanderSeles: {
+    location: 'Seles',
+    element: 'darkness',
+    hp: 14,
+    xp: 20,
+    gold: 20,
+    pAtk: 2,
+    pDef: 40,
+    mAtk: 4,
+    mDef: 40,
+    speed: 40,
+    drops: [{ item: 'burnOut', chance: 1 }],
+    canCounterAttack: false,
+  },
 };
 
 /** Lookup helper — returns `null` for mobs not yet in the table. */

@@ -320,6 +320,14 @@ const MANIFEST = {
     autoTrim: true,
   },
 
+  // Commander (Seles) — boss canon Disc 1. Idle pose only for now;
+  // walk / attack / spell-cast / death frames pending.
+  'sprite.mob.commander': {
+    kind: 'texture',
+    url: '/assets/sprites/mobs/commander.png',
+    autoTrim: true,
+  },
+
   // M8 forest tiles.
   // Ground = first Gemini grass variant (sampled into iso-diamond Graphics fills,
   // so its white bg is naturally clipped by the polygon shape).

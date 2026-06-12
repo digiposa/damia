@@ -46,6 +46,7 @@ type CodexTab = 'mobs' | 'bosses' | 'characters';
 const MOB_ENTRY_ORDER: ReadonlyArray<MobKind> = [
   'knightOfSandoraSeles',
   'knightOfSandoraKazas',
+  'commanderSeles',
   'berserkMouse',
   'goblin',
   'assassinCock',

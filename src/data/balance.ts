@@ -50,7 +50,8 @@ export type MobKind =
   | 'trent'
   | 'fruegel'
   | 'knightOfSandoraSeles'
-  | 'knightOfSandoraKazas';
+  | 'knightOfSandoraKazas'
+  | 'commanderSeles';
 
 export interface MobDefinition {
   health: number;
@@ -304,6 +305,46 @@ export const MOBS: Record<MobKind, MobDefinition> = {
     },
     element: 'fire',
     xp: 12,
+  },
+  // Commander (Seles) — Boss canon Disc 1, paired with 2 Knights of
+  // Sandora in Dart's first scripted fight. Stats from the canon doc
+  // (docs/features/bosses/Commander.md): HP 14, AT 2, DF 40, MAT 4,
+  // MDF 40, SPD 40, Darkness element (breaks the Sandora-Fire pattern
+  // of his Knights), XP 20, Gold 20, Burn Out 100% drop. AI Power Up
+  // state machine + HP-recovers + scripted-with-Knights interactions
+  // not wired yet — V1 ships with standard humanoid melee chassis
+  // (KIND_TO_BEHAVIOR → 'knightOfSandora' minus the throw) until the
+  // boss AI lands.
+  commanderSeles: {
+    health: 14,
+    speed: 0.08,
+    stats: {
+      atk: 2,
+      def: 40,
+      magicAtk: 4,
+      magicDef: 40,
+      speed: 40,
+      attackHit: 100,
+      magicHit: 100,
+      attackAvoid: 0,
+      magicAvoid: 0,
+      atkSpeed: 0.8,
+      range: 80,
+      aggroRange: 240,
+    },
+    sprite: {
+      // Tall officer silhouette — slightly larger than the Knights he
+      // commands so he reads as the leader of the encounter.
+      shape: 'capsule',
+      color: 0x3a2a3a,
+      width: 76,
+      height: 110,
+      fitMode: 'height',
+      textureAlias: 'sprite.mob.commander',
+    },
+    element: 'darkness',
+    xp: 20,
+    boss: true,
   },
   fruegel: {
     health: 90,

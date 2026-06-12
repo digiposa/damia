@@ -164,6 +164,7 @@
     "entry": {
       "knightOfSandoraSeles": { "name": "Chevalier de Sandora" },
       "knightOfSandoraKazas": { "name": "Chevalier de Sandora" },
+      "commanderSeles": { "name": "Commandant" },
       "berserkMouse": { "name": "Souris Enragée" },
       "goblin": { "name": "Gobelin" },
       "assassinCock": { "name": "Coq Assassin" },

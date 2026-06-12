@@ -15,6 +15,11 @@ const KIND_TO_BEHAVIOR: Record<MobKind, AIBehavior> = {
   // behaviour; stats differ but the AI logic doesn't.
   knightOfSandoraSeles: 'knightOfSandora',
   knightOfSandoraKazas: 'knightOfSandora',
+  // Commander (Seles) — V1 ships with the standard humanoid melee
+  // chassis. The canon Power Up state machine + HP-recovers + Burn
+  // Out cast pattern (see docs/features/bosses/Commander.md) lands
+  // in a dedicated 'commander' behaviour later.
+  commanderSeles: 'goblin',
   // Fruegel rides the humanoid melee AI for v1 — chase + swing on
   // contact. Boss-specific behaviour (charge, AoE smash, phase
   // transition) lands in a dedicated 'boss' branch later.

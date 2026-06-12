@@ -16,20 +16,19 @@
  * list live on every keystroke (case-insensitive substring match
  * against the localized display name).
  *
- * Scroll widget is the same Graphics-mask + manually-translated
- * content pattern that CodexPanel uses — copied inline rather than
- * extracted so this stays a self-contained Training-only widget; if
- * a third consumer needs scroll, that's when we pull it into a
- * shared helper.
+ * Scroll widget delegated to the shared `ScrollableArea` helper —
+ * same widget the Codex uses, so the two pickers stay in lockstep on
+ * fixes / polish.
  */
-import type { Application, FederatedPointerEvent, FederatedWheelEvent } from 'pixi.js';
-import { Container, Graphics } from 'pixi.js';
+import type { Application } from 'pixi.js';
+import { Container } from 'pixi.js';
 import { LayoutContainer } from '@pixi/layout/components';
 
 import { MOBS, type MobKind } from '@data/balance';
 import { t } from '@services/I18nService';
 
 import { Modal } from './Modal';
+import { ScrollableArea } from './ScrollableArea';
 import { COLORS, MODAL, SPACING, TEXT } from './theme';
 import { mkCloseButton, mkPanel, mkRow, mkText } from './layoutHelpers';
 
@@ -43,11 +42,7 @@ export class MobPickerModal extends Modal {
 
   private selectListener: ((kind: MobKind) => void) | null = null;
   private currentSelection: MobKind | null = null;
-  private scrollViewport: Container | null = null;
-  private scrollMask: Graphics | null = null;
-  private scrollContent: LayoutContainer | null = null;
-  private scrollY = 0;
-  private viewportHeight = 0;
+  private readonly scroll = new ScrollableArea();
   /** HTML search input overlaid on the canvas. Created on first open,
    *  removed on every close so the DOM stays clean between sessions. */
   private searchInput: HTMLInputElement | null = null;
@@ -100,66 +95,8 @@ export class MobPickerModal extends Modal {
       }),
     );
 
-    panel.addChild(this.buildScrollArea());
+    panel.addChild(this.scroll.container);
     return panel;
-  }
-
-  // ---- Scroll widget (mirrors CodexPanel) ----
-
-  private buildScrollArea(): Container {
-    const viewport = new Container({
-      label: 'mob-picker-viewport',
-      layout: { width: '100%', flex: 1 },
-    });
-    viewport.eventMode = 'static';
-
-    const mask = new Graphics();
-    mask.rect(0, 0, 4096, 4096).fill(0xffffff);
-    const content = new LayoutContainer({
-      layout: { flexDirection: 'column', gap: SPACING.gapSmall, width: '100%' },
-    });
-
-    viewport.addChild(mask, content);
-    viewport.mask = mask;
-    this.scrollViewport = viewport;
-    this.scrollMask = mask;
-    this.scrollContent = content;
-    this.wireScrollInputs(viewport);
-    return viewport;
-  }
-
-  private wireScrollInputs(viewport: Container): void {
-    let dragStartY: number | null = null;
-    let dragStartScroll = 0;
-    const onDown = (e: FederatedPointerEvent): void => {
-      dragStartY = e.global.y;
-      dragStartScroll = this.scrollY;
-    };
-    const onMove = (e: FederatedPointerEvent): void => {
-      if (dragStartY === null) return;
-      this.applyScroll(dragStartScroll + (e.global.y - dragStartY));
-    };
-    const onRelease = (): void => {
-      dragStartY = null;
-    };
-    const onWheel = (e: FederatedWheelEvent): void => {
-      e.preventDefault();
-      this.applyScroll(this.scrollY - e.deltaY);
-    };
-    viewport.on('pointerdown', onDown);
-    viewport.on('globalpointermove', onMove);
-    viewport.on('pointerup', onRelease);
-    viewport.on('pointerupoutside', onRelease);
-    viewport.on('pointercancel', onRelease);
-    viewport.on('wheel', onWheel);
-  }
-
-  private applyScroll(targetY: number): void {
-    if (!this.scrollContent) return;
-    const contentH = this.scrollContent.height || 0;
-    const minY = Math.min(0, this.viewportHeight - contentH);
-    this.scrollY = Math.max(minY, Math.min(0, targetY));
-    this.scrollContent.y = this.scrollY;
   }
 
   protected override applyPanelSize(): void {
@@ -171,33 +108,15 @@ export class MobPickerModal extends Modal {
       0,
       panelH - 2 * SPACING.pad - TITLE_STRIP_HEIGHT - SEARCH_BAR_HEIGHT - 2 * SPACING.gap,
     );
-    this.viewportHeight = innerH;
-    if (this.scrollViewport) {
-      this.scrollViewport.layout = {
-        ...(this.scrollViewport.layout?.style ?? {}),
-        width: innerW,
-        height: innerH,
-        flex: 0,
-      };
-    }
-    if (this.scrollMask) {
-      this.scrollMask.clear().rect(0, 0, innerW, innerH).fill(0xffffff);
-    }
-    if (this.scrollContent) {
-      this.scrollContent.layout = {
-        ...(this.scrollContent.layout?.style ?? {}),
-        width: innerW,
-      };
-    }
+    this.scroll.setSize(innerW, innerH);
     this.positionSearchInput();
-    this.applyScroll(this.scrollY);
   }
 
   protected override onOpen(): void {
     this.searchTerm = '';
     this.ensureSearchInput();
     this.renderRows();
-    this.app.ticker.addOnce(() => this.applyScroll(this.scrollY), this);
+    this.app.ticker.addOnce(() => this.scroll.reclamp(), this);
   }
 
   protected override onClose(): void {
@@ -260,7 +179,7 @@ export class MobPickerModal extends Modal {
     input.addEventListener('input', () => {
       this.searchTerm = input.value.trim().toLowerCase();
       this.renderRows();
-      this.app.ticker.addOnce(() => this.applyScroll(0), this);
+      this.app.ticker.addOnce(() => this.scroll.scrollToTop(), this);
     });
     // Esc inside the input: first clear the text, then (if already
     // empty) close the modal — same "back out gradually" feel users
@@ -316,10 +235,8 @@ export class MobPickerModal extends Modal {
   // ---- Filtered / sorted row rendering ----
 
   private renderRows(): void {
-    if (!this.scrollContent) return;
-    this.scrollContent.removeChildren();
-    this.scrollY = 0;
-    this.scrollContent.y = 0;
+    this.scroll.content.removeChildren();
+    this.scroll.scrollToTop();
     // Sort alphabetically by the localized display name so the list
     // is predictable regardless of MobKind declaration order.
     const sorted = (Object.keys(MOBS) as MobKind[])
@@ -331,11 +248,11 @@ export class MobPickerModal extends Modal {
         )
       : sorted;
     if (filtered.length === 0) {
-      this.scrollContent.addChild(mkText(t('codex.empty'), TEXT.muted));
+      this.scroll.content.addChild(mkText(t('codex.empty'), TEXT.muted));
       return;
     }
     for (const kind of filtered) {
-      this.scrollContent.addChild(this.buildRow(kind));
+      this.scroll.content.addChild(this.buildRow(kind));
     }
   }
 

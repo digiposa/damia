@@ -130,8 +130,11 @@ export class TrainingScene implements Scene {
     // Keyboard shortcuts. Esc closes the debug panel when it's open
     // (intercepted in the capture phase so SettingsPanel's window-level
     // Esc handler — which would otherwise open Settings on top of the
-    // debug panel — doesn't fire). `~` toggles the debug panel both
-    // ways as a secondary entry alongside the DBG corner button.
+    // debug panel — doesn't fire). `W` toggles the debug panel both
+    // ways as a secondary entry alongside the DBG corner button;
+    // chosen because it's a single physical key reachable on every
+    // keyboard layout (the previous `~` binding was a multi-key
+    // chord on Belgian / French AZERTY layouts).
     this.keyHandler = (e: KeyboardEvent): void => {
       if (e.key === 'Escape' && this.debugPanel?.isOpen) {
         e.stopImmediatePropagation();
@@ -139,7 +142,7 @@ export class TrainingScene implements Scene {
         this.debugPanel.close();
         return;
       }
-      if (e.key === '~' || e.key === '`') {
+      if (e.key === 'w' || e.key === 'W') {
         e.preventDefault();
         this.debugPanel?.toggle();
       }

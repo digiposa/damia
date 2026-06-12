@@ -3,11 +3,18 @@
  * a single "Choose mob" button, presents every MobKind as a tappable
  * row, fires the selection callback + closes itself on pick. The
  * tester doesn't have to cycle through < / > to find the one they
- * want — works just as well at 7 mobs as it will at 50+.
+ * want — works just as well at 7 mobs as it will at 80+.
  *
- * Layout: simple vertical scroll. Each row shows the mob's display
- * name + a thin "ELEMENT · HP X" subtitle so the picker reads like
- * the bestiary even at a glance. The active mob is highlighted gold.
+ * Layout: search bar at the top + alphabetical scrollable list. Each
+ * row shows the mob's display name + a thin "ELEMENT · HP X" subtitle
+ * so the picker reads like the bestiary even at a glance. The active
+ * mob is highlighted gold.
+ *
+ * Search is an HTML `<input>` overlay (Pixi has no native text input
+ * widget). Positioned over the canvas in viewport coordinates,
+ * synced on open / close / resize / panel reposition. Filters the
+ * list live on every keystroke (case-insensitive substring match
+ * against the localized display name).
  *
  * Scroll widget is the same Graphics-mask + manually-translated
  * content pattern that CodexPanel uses — copied inline rather than
@@ -28,6 +35,7 @@ import { mkCloseButton, mkPanel, mkRow, mkText } from './layoutHelpers';
 
 const PANEL_MAX_HEIGHT = 560;
 const TITLE_STRIP_HEIGHT = 32;
+const SEARCH_BAR_HEIGHT = 36;
 const ROW_HEIGHT = 52;
 
 export class MobPickerModal extends Modal {
@@ -40,6 +48,11 @@ export class MobPickerModal extends Modal {
   private scrollContent: LayoutContainer | null = null;
   private scrollY = 0;
   private viewportHeight = 0;
+  /** HTML search input overlaid on the canvas. Created on first open,
+   *  removed on every close so the DOM stays clean between sessions. */
+  private searchInput: HTMLInputElement | null = null;
+  /** Lowercased substring filter applied to row names. Empty = show all. */
+  private searchTerm = '';
 
   constructor(app: Application) {
     super(app, 'mob-picker-modal');
@@ -75,6 +88,17 @@ export class MobPickerModal extends Modal {
     titleStrip.addChild(mkText(t('training.spawnMob'), TEXT.title));
     titleStrip.addChild(mkCloseButton(() => this.close()));
     panel.addChild(titleStrip);
+
+    // Reserved Pixi slot for the HTML search input overlay. We keep
+    // it in the layout flow so Yoga reserves the vertical space
+    // correctly; the input itself is a DOM element absolutely
+    // positioned over this slot — see ensureSearchInput().
+    panel.addChild(
+      new Container({
+        label: 'mob-picker-search-slot',
+        layout: { width: '100%', height: SEARCH_BAR_HEIGHT, isLeaf: true },
+      }),
+    );
 
     panel.addChild(this.buildScrollArea());
     return panel;
@@ -143,7 +167,10 @@ export class MobPickerModal extends Modal {
     const panelW = Math.min(MODAL.maxWidth, this.app.screen.width - MODAL.margin);
     const panelH = Math.min(this.panelMaxHeight, this.app.screen.height - MODAL.margin);
     const innerW = Math.max(0, panelW - 2 * SPACING.pad);
-    const innerH = Math.max(0, panelH - 2 * SPACING.pad - TITLE_STRIP_HEIGHT - SPACING.gap);
+    const innerH = Math.max(
+      0,
+      panelH - 2 * SPACING.pad - TITLE_STRIP_HEIGHT - SEARCH_BAR_HEIGHT - 2 * SPACING.gap,
+    );
     this.viewportHeight = innerH;
     if (this.scrollViewport) {
       this.scrollViewport.layout = {
@@ -162,21 +189,152 @@ export class MobPickerModal extends Modal {
         width: innerW,
       };
     }
+    this.positionSearchInput();
     this.applyScroll(this.scrollY);
   }
 
   protected override onOpen(): void {
+    this.searchTerm = '';
+    this.ensureSearchInput();
     this.renderRows();
     this.app.ticker.addOnce(() => this.applyScroll(this.scrollY), this);
   }
+
+  protected override onClose(): void {
+    this.destroySearchInput();
+    this.searchTerm = '';
+  }
+
+  // ---- HTML search input overlay ----
+
+  /** Create + mount the DOM `<input>` if it doesn't exist yet, and
+   *  give it focus so the tester can start typing immediately.
+   *  Styled to match the panel theme: dark navy fill, sandy border,
+   *  gold focus glow + magnifier prefix glyph so it reads as a search
+   *  field at a glance. */
+  private ensureSearchInput(): void {
+    if (this.searchInput) {
+      this.searchInput.value = '';
+      this.searchInput.focus();
+      return;
+    }
+    const input = document.createElement('input');
+    input.type = 'search';
+    input.placeholder = `\u{1F50D}  ${t('training.searchPlaceholder')}`;
+    input.autocomplete = 'off';
+    input.spellcheck = false;
+    input.dataset['damiaPicker'] = 'mob';
+    Object.assign(input.style, {
+      position: 'fixed',
+      zIndex: '1000',
+      boxSizing: 'border-box',
+      padding: '8px 12px',
+      fontSize: '14px',
+      fontFamily: 'system-ui, -apple-system, sans-serif',
+      fontWeight: '500',
+      color: '#ffffff',
+      backgroundColor: '#0e1320',
+      border: '1px solid #a08050',
+      borderRadius: '6px',
+      outline: 'none',
+      transition: 'border-color 140ms ease, box-shadow 140ms ease, background-color 140ms ease',
+      // Subtle inner shadow so the input looks recessed against the panel.
+      boxShadow: 'inset 0 1px 2px rgba(0, 0, 0, 0.35)',
+      caretColor: '#eec040',
+    });
+    // Focus glow: brighter border + gold halo + slightly lifted bg.
+    input.addEventListener('focus', () => {
+      Object.assign(input.style, {
+        borderColor: '#eec040',
+        backgroundColor: '#1a1f2b',
+        boxShadow: 'inset 0 1px 2px rgba(0, 0, 0, 0.35), 0 0 0 3px rgba(238, 192, 64, 0.18)',
+      });
+    });
+    input.addEventListener('blur', () => {
+      Object.assign(input.style, {
+        borderColor: '#a08050',
+        backgroundColor: '#0e1320',
+        boxShadow: 'inset 0 1px 2px rgba(0, 0, 0, 0.35)',
+      });
+    });
+    input.addEventListener('input', () => {
+      this.searchTerm = input.value.trim().toLowerCase();
+      this.renderRows();
+      this.app.ticker.addOnce(() => this.applyScroll(0), this);
+    });
+    // Esc inside the input: first clear the text, then (if already
+    // empty) close the modal — same "back out gradually" feel users
+    // expect from a search-bar UX.
+    input.addEventListener('keydown', (e) => {
+      if (e.key !== 'Escape') return;
+      e.preventDefault();
+      e.stopPropagation();
+      if (input.value !== '') {
+        input.value = '';
+        this.searchTerm = '';
+        this.renderRows();
+        return;
+      }
+      this.close();
+    });
+    document.body.appendChild(input);
+    this.searchInput = input;
+    this.positionSearchInput();
+    // Focus next tick so the modal's mount doesn't steal it.
+    queueMicrotask(() => input.focus());
+  }
+
+  private destroySearchInput(): void {
+    if (!this.searchInput) return;
+    this.searchInput.remove();
+    this.searchInput = null;
+  }
+
+  /** Sync the DOM input's position to the modal's reserved Pixi slot.
+   *  Called from applyPanelSize (modal open + viewport resize). */
+  private positionSearchInput(): void {
+    if (!this.searchInput) return;
+    const panelW = Math.min(MODAL.maxWidth, this.app.screen.width - MODAL.margin);
+    const panelH = Math.min(this.panelMaxHeight, this.app.screen.height - MODAL.margin);
+    const panelLeft = Math.floor((this.app.screen.width - panelW) / 2);
+    const panelTop = Math.floor((this.app.screen.height - panelH) / 2);
+    const innerW = Math.max(0, panelW - 2 * SPACING.pad);
+    // Slot Y inside the panel = padding + title strip + first gap.
+    const slotY = SPACING.pad + TITLE_STRIP_HEIGHT + SPACING.gap;
+    // Translate canvas-relative coords to viewport-fixed coords via
+    // the canvas's bounding rect — the canvas is itself absolutely
+    // positioned somewhere in the document (mobile safe-area, etc.).
+    const canvasRect = this.app.canvas.getBoundingClientRect();
+    Object.assign(this.searchInput.style, {
+      left: `${canvasRect.left + panelLeft + SPACING.pad}px`,
+      top: `${canvasRect.top + panelTop + slotY}px`,
+      width: `${innerW}px`,
+      height: `${SEARCH_BAR_HEIGHT}px`,
+    });
+  }
+
+  // ---- Filtered / sorted row rendering ----
 
   private renderRows(): void {
     if (!this.scrollContent) return;
     this.scrollContent.removeChildren();
     this.scrollY = 0;
     this.scrollContent.y = 0;
-    const kinds = Object.keys(MOBS) as MobKind[];
-    for (const kind of kinds) {
+    // Sort alphabetically by the localized display name so the list
+    // is predictable regardless of MobKind declaration order.
+    const sorted = (Object.keys(MOBS) as MobKind[])
+      .slice()
+      .sort((a, b) => t(`codex.entry.${a}.name`).localeCompare(t(`codex.entry.${b}.name`)));
+    const filtered = this.searchTerm
+      ? sorted.filter((kind) =>
+          t(`codex.entry.${kind}.name`).toLowerCase().includes(this.searchTerm),
+        )
+      : sorted;
+    if (filtered.length === 0) {
+      this.scrollContent.addChild(mkText(t('codex.empty'), TEXT.muted));
+      return;
+    }
+    for (const kind of filtered) {
       this.scrollContent.addChild(this.buildRow(kind));
     }
   }

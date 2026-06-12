@@ -93,7 +93,8 @@
     "actions": "Actions",
     "healFull": "Soin total",
     "killAll": "Tuer tous les mobs",
-    "quitToTitle": "Retour au titre"
+    "quitToTitle": "Retour au titre",
+    "searchPlaceholder": "Rechercher un mob…"
   },
   "settings": {
     "title": "Options",

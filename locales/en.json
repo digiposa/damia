@@ -93,7 +93,8 @@
     "actions": "Actions",
     "healFull": "Heal full",
     "killAll": "Kill all mobs",
-    "quitToTitle": "Quit to title"
+    "quitToTitle": "Quit to title",
+    "searchPlaceholder": "Search a mob…"
   },
   "settings": {
     "title": "Settings",

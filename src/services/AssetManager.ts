@@ -552,19 +552,36 @@ async function autoTrimTexture(texture: Texture, url: string): Promise<Texture> 
   }
 }
 
+export interface PreloadOptions {
+  /** Called every time a texture finishes loading. `loaded` is the
+   *  count of textures done so far (including the one that just
+   *  finished); `total` is the total count for the whole preload.
+   *  Used by the boot screen to drive the progress bar; safe to omit. */
+  onProgress?: (loaded: number, total: number) => void;
+}
+
 export const AssetManager = {
   /** Preload every texture-kind asset so getTexture() can be called synchronously by RenderSystem. */
-  async preload(): Promise<void> {
+  async preload(options: PreloadOptions = {}): Promise<void> {
+    const aliases = (Object.keys(MANIFEST) as AssetAlias[]).filter(
+      (a) => (MANIFEST[a] as TextureAsset).kind === 'texture',
+    );
+    const total = aliases.length;
+    let loaded = 0;
+    const tick = (): void => {
+      loaded += 1;
+      options.onProgress?.(loaded, total);
+    };
     const tasks: Array<Promise<void>> = [];
-    for (const alias of Object.keys(MANIFEST) as AssetAlias[]) {
+    for (const alias of aliases) {
       // Widen the literal-narrowed union from `as const satisfies` so
       // optional fields like `autoTrim` (only declared on some entries)
       // are visible without per-key type-guards.
       const asset = MANIFEST[alias] as TextureAsset;
-      if (asset.kind === 'texture') {
-        const resolvedUrl = resolveAssetUrl(asset.url);
-        tasks.push(
-          Assets.load(resolvedUrl).then(async (tex) => {
+      const resolvedUrl = resolveAssetUrl(asset.url);
+      tasks.push(
+        Assets.load(resolvedUrl)
+          .then(async (tex) => {
             let texture = tex as Texture;
             // Tile textures need REPEAT wrap so polygon-fill samples wrap across
             // the texture boundary (otherwise Pixi clamps to edge and we see seams
@@ -580,9 +597,9 @@ export const AssetManager = {
               texture = await autoTrimTexture(texture, resolvedUrl);
             }
             TEXTURES.set(alias, texture);
-          }),
-        );
-      }
+          })
+          .finally(tick),
+      );
     }
     await Promise.all(tasks);
   },

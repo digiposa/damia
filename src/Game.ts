@@ -14,6 +14,29 @@ export interface GameContext {
 
 const BACKGROUND_COLOR = '#1a2820';
 
+/** Update the HTML boot-screen progress bar + status text. The DOM
+ *  elements are painted directly by index.html before any JS runs,
+ *  so we just lookup + nudge their styles. No-op if the elements
+ *  aren't there (Game can also be embedded in a host without the
+ *  boot screen). */
+function updateBootProgress(loaded: number, total: number): void {
+  const fill = document.getElementById('boot-bar-fill');
+  const status = document.getElementById('boot-status');
+  const pct = total > 0 ? Math.round((loaded / total) * 100) : 100;
+  if (fill) fill.style.width = `${pct}%`;
+  if (status) status.textContent = `Loading… ${loaded}/${total}`;
+}
+
+/** Fade the boot screen out + remove it from the DOM after the
+ *  CSS transition completes. Idempotent. */
+function hideBootScreen(): void {
+  const boot = document.getElementById('boot');
+  if (!boot) return;
+  boot.classList.add('hidden');
+  // Match the 280 ms transition in index.html, then drop the node.
+  setTimeout(() => boot.remove(), 320);
+}
+
 export class Game {
   private app!: Application;
   private scenes!: SceneManager;
@@ -28,8 +51,12 @@ export class Game {
     mountInto.appendChild(this.app.canvas);
 
     // Preload texture-kind assets (mob sprites, ground tiles) before any scene
-    // queries them via AssetManager.getTexture().
-    await AssetManager.preload();
+    // queries them via AssetManager.getTexture(). The boot screen in
+    // index.html is up and showing a progress bar — we feed it the
+    // running count so the user sees concrete movement instead of a
+    // frozen 0%. Once the promise resolves we fade the screen out.
+    await AssetManager.preload({ onProgress: updateBootProgress });
+    hideBootScreen();
 
     this.scenes = new SceneManager();
     const ctx: GameContext = { app: this.app, scenes: this.scenes };

@@ -112,6 +112,10 @@
 
 - [ ] **Câbler hit% / avoid% (précision / esquive) dans la formule de dégâts** — Stats expose déjà `attackHit`, `magicHit`, `attackAvoid`, `magicAvoid` mais `damage.ts` ne fait pas de jet de touche/esquive : tout coup atterrit. Canon TLoD : roll `attackHit - target.attackAvoid` vs 100, miss → 0 dmg + "MISS" floating text. Impact damage-check Sandora Seles = nul (Sandora a 100/0), mais critique pour les mobs qui esquivent et les armes qui boostent la précision. À traiter quand on touchera la deuxième passe equilibrage. User note 2026-06-11.
 
+### Mobs — sprites manquants
+
+- [ ] **Knight of Sandora — frame de mort** — User a fourni idle / walk ×2 / attack ×2 / throw ×3 mais a oublié la frame de mort lors de l'intégration 2026-06-11. Aujourd'hui le mob tombe à 0 HP avec un fallback à l'idle pendant la fenêtre Dying. À récupérer : 1 frame "knight effondré / désarmé / corps au sol" pour `public/assets/sprites/mobs/knightOfSandora-death.png` + alias `sprite.mob.knightOfSandora.death` + `deathTextureAlias` sur les 2 variants Seles + Kazas. Pattern identique aux autres mobs (Berserk Mouse / Goblin / Trent ont déjà leurs death frames).
+
 ### Locations / Story systèmes (préliminaires Bale)
 
 - [ ] **Save point** entity + mécanique (interactable, persiste l'état save)

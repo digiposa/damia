@@ -3,6 +3,7 @@ import { worldToGrid } from '@core/math/iso';
 import type { Components, Position } from '@gameplay/components';
 import { spawnProjectile } from '@gameplay/entities/projectile';
 import { effectiveAtk } from '@gameplay/stats';
+import { SPELLS } from '@data/spells';
 
 const FLEE_HP_THRESHOLD = 0.3;
 const FLEE_DISTANCE_PX = 320;
@@ -21,6 +22,20 @@ const KNIGHT_THROW_MULTIPLIER = 0.5;
  *  brown arrow. Hex pinned in code for V1; promote to data when the
  *  ranged-mob roster grows past one. */
 const KNIGHT_DAGGER_COLOR = 0xb0b8c4;
+/** Commander Burn Out cast cooldown. Long enough that the cast stays
+ *  a "boss tells" pressure move rather than dominating the duel —
+ *  the player should always have time to close to melee + a swing or
+ *  two between casts. */
+const COMMANDER_SPELL_COOLDOWN_MS = 7000;
+/** Range at which Commander becomes interested in casting. Past this
+ *  he won't even try (the projectile-like Spell hits the locked target
+ *  regardless of range in code, but gating it lets melee dominate at
+ *  close range — option C of the trigger design). */
+const COMMANDER_CAST_MAX_RANGE_PX = 320;
+/** Minimum distance for the cast to fire even with cooldown ready —
+ *  staying in melee is canonically supposed to read as "the brawl is
+ *  going so well he doesn't bother with magic". */
+const COMMANDER_CAST_MIN_RANGE_PX = 80;
 
 interface SceneBounds {
   width: number;
@@ -56,6 +71,9 @@ export class AISystem implements System<Components> {
       if (ai.throwCooldownMs !== undefined && ai.throwCooldownMs > 0) {
         ai.throwCooldownMs = Math.max(0, ai.throwCooldownMs - dt);
       }
+      if (ai.spellCooldownMs !== undefined && ai.spellCooldownMs > 0) {
+        ai.spellCooldownMs = Math.max(0, ai.spellCooldownMs - dt);
+      }
       switch (ai.behavior) {
         case 'mouse':
           updateMouse(id, world, playerId, playerPos, this.bounds);
@@ -69,6 +87,9 @@ export class AISystem implements System<Components> {
           break;
         case 'knightOfSandora':
           updateKnightOfSandora(id, ai, world, playerId, playerPos);
+          break;
+        case 'commanderSeles':
+          updateCommanderSeles(id, ai, world, playerId, playerPos);
           break;
       }
     }
@@ -266,4 +287,98 @@ function fireKnightThrow(
     kind: 'throw',
   });
   void playerId; // unused but keeps the call site documenting the target
+}
+
+/**
+ * Commander (Seles boss) — standard humanoid melee chassis with a
+ * cooldown-gated + range-gated Burn Out cast layered on. Trigger
+ * condition: cooldown ready AND target is between melee-edge and
+ * spell-max range AND no Spell / AttackSwing / Dying already in
+ * flight. Inside melee range he stays sword-focused, which reads
+ * canonically as "the brawl is going so well he doesn't bother with
+ * magic". Past spell-max he just chases.
+ *
+ * Cast pipeline reuses the existing player Spell component +
+ * SpellSystem — the same Burn Out the player casts, so damage,
+ * element, vfx, and the hit roll all go through the canonical
+ * paths. No mob-specific damage code.
+ */
+function updateCommanderSeles(
+  id: Entity,
+  ai: Components['AI'],
+  world: World<Components>,
+  playerId: Entity,
+  playerPos: Position,
+): void {
+  const pos = world.getComponent(id, 'Position');
+  const stats = world.getComponent(id, 'Stats');
+  if (!pos || !stats) return;
+
+  const dist = distance(pos, playerPos);
+  // Outside aggro range → idle.
+  if (dist > stats.aggroRange) return;
+
+  const busy =
+    world.hasComponent(id, 'Spell') ||
+    world.hasComponent(id, 'AttackSwing') ||
+    world.hasComponent(id, 'Addition') ||
+    world.hasComponent(id, 'Dying');
+  const spellReady = (ai.spellCooldownMs ?? 0) <= 0;
+  const inSpellWindow = dist > COMMANDER_CAST_MIN_RANGE_PX && dist <= COMMANDER_CAST_MAX_RANGE_PX;
+
+  if (spellReady && inSpellWindow && !busy) {
+    fireCommanderBurnOut(id, world, playerId, pos, playerPos);
+    ai.spellCooldownMs = COMMANDER_SPELL_COOLDOWN_MS;
+    // Drop any pending melee intent so CombatSystem doesn't queue a
+    // swing on top of the cast.
+    if (world.hasComponent(id, 'CombatIntent')) world.removeComponent(id, 'CombatIntent');
+    // Freeze pathing for the cast duration — SpellSystem clears the
+    // Spell at totalMs, after which the next AI tick resumes the
+    // chase. Nulling Pathfinder.targetGrid keeps the Render walking
+    // state in sync (no walk-cycle flicker mid-cast).
+    const pf = world.getComponent(id, 'Pathfinder');
+    if (pf) {
+      pf.waypoints = null;
+      pf.targetGrid = null;
+    }
+    return;
+  }
+
+  // Default: standard melee chase + swing.
+  if (!world.hasComponent(id, 'CombatIntent')) {
+    world.addComponent(id, 'CombatIntent', { targetId: playerId });
+  }
+}
+
+/** Spawn a Spell component on the Commander targeting the player.
+ *  Reads the canonical Burn Out definition so the same formula path
+ *  the player uses (computeMagicalItemDamage via SpellSystem.hit)
+ *  applies, including the element modifier (Fire vs Dart-Fire = ×0.5
+ *  per canon). */
+function fireCommanderBurnOut(
+  commanderId: Entity,
+  world: World<Components>,
+  playerId: Entity,
+  commanderPos: Position,
+  playerPos: Position,
+): void {
+  const spell = SPELLS.burnOut;
+  const dx = playerPos.x - commanderPos.x;
+  const dy = playerPos.y - commanderPos.y;
+  const len = Math.hypot(dx, dy) || 1;
+  world.addComponent(commanderId, 'Spell', {
+    kind: 'burnOut',
+    elapsedMs: 0,
+    totalMs: spell.totalMs,
+    hitTimingMs: spell.hitTimingMs,
+    hitApplied: false,
+    bid: spell.bid,
+    element: spell.element,
+    target: 'lockedTarget',
+    targetId: playerId,
+    dirX: dx / len,
+    dirY: dy / len,
+    vfxKind: spell.vfx,
+    vfxRadiusPx: spell.vfxRadiusPx ?? 60,
+  });
 }

@@ -31,6 +31,11 @@ export interface Sprite {
   attackTextureAlias?: AssetAlias;
   /** Optional alias used while the entity has a Defending component (held pose). */
   defendTextureAlias?: AssetAlias;
+  /** Optional alias used while the entity has a Spell component (mob
+   *  casters only — Commander's Burn Out wind-up pose, future
+   *  caster mobs). Player casters skip this since the spell VFX is
+   *  the canonical cast signal for them. */
+  castTextureAlias?: AssetAlias;
   /** Optional alias used while the entity has a Dying component. Triggers the death-animation pipeline. */
   deathTextureAlias?: AssetAlias;
   /** Optional multi-frame death animation. RenderSystem splits the

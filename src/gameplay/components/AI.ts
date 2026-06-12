@@ -1,4 +1,10 @@
-export type AIBehavior = 'mouse' | 'goblin' | 'cock' | 'trent' | 'knightOfSandora';
+export type AIBehavior =
+  | 'mouse'
+  | 'goblin'
+  | 'cock'
+  | 'trent'
+  | 'knightOfSandora'
+  | 'commanderSeles';
 
 /** Tells AISystem which per-mob handler to dispatch. State is derived
  *  from other components, with one exception: per-mob ability cooldowns
@@ -12,4 +18,9 @@ export interface AI {
    *  update; 0 (or undefined) → ready. Set by behaviors that own a
    *  ranged secondary; ignored by behaviors that don't. */
   throwCooldownMs?: number;
+  /** Spell-cast cooldown in ms. Same pattern as throwCooldownMs —
+   *  ticked down by AISystem, behaviours that own a cast ability
+   *  (Commander → Burn Out) check it before firing. 0 / undefined =
+   *  ready. */
+  spellCooldownMs?: number;
 }

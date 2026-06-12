@@ -130,6 +130,14 @@ export class RenderSystem implements System<Components> {
           } else if (sprite.attackTextureAlias) {
             desiredAlias = sprite.attackTextureAlias;
           }
+        } else if (spell && sprite.castTextureAlias) {
+          // Spell-cast pose for mobs. Players don't set this — their
+          // cast visual flows through the regular swing/idle hold,
+          // since the Spell VFX (fire impact, magma pillar, etc.)
+          // already telegraphs the action on screen. Mobs benefit
+          // from a dedicated stance because there's no party HUD
+          // selling the cast.
+          desiredAlias = sprite.castTextureAlias;
         } else if (defending && sprite.defendTextureAlias) {
           desiredAlias = sprite.defendTextureAlias;
         } else if (

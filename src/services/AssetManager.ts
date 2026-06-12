@@ -347,6 +347,11 @@ const MANIFEST = {
     url: '/assets/sprites/mobs/commander-attack-2.png',
     autoTrim: true,
   },
+  'sprite.mob.commander.cast': {
+    kind: 'texture',
+    url: '/assets/sprites/mobs/commander-cast.png',
+    autoTrim: true,
+  },
   'sprite.mob.commander.death.1': {
     kind: 'texture',
     url: '/assets/sprites/mobs/commander-death-1.png',

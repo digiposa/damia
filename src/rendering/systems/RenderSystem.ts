@@ -9,12 +9,10 @@ import { AssetManager, type AssetAlias } from '@services/AssetManager';
 type RenderNode = Graphics | PixiSprite;
 
 /** Ms per walk-cycle frame. With a 2-frame cycle (Dart), this gives a
- *  720 ms full-cycle (2 × 360 ms) — same period as the walk bob's
- *  full sine, so the leg swap and the body bob hit their peaks in
- *  phase instead of beating against each other (the previous 240 ms
- *  + 720 ms bob combo read as nervous jitter). About 1.4 steps per
- *  second — a comfortable walking pace. */
-const WALK_FRAME_MS = 360;
+ *  ~480 ms full-cycle (2 × 240 ms) — about one step per half second, in
+ *  the same ballpark as the bob's full sine period (720 ms) so they
+ *  read together as a coherent walk. */
+const WALK_FRAME_MS = 240;
 
 /**
  * Bridges ECS components → Pixi nodes. The only system that knows about Pixi

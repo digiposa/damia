@@ -308,15 +308,15 @@ export const MOBS: Record<MobKind, MobDefinition> = {
   },
   // Commander (Seles) — Boss canon Disc 1, paired with 2 Knights of
   // Sandora in Dart's first scripted fight. Stats from the canon doc
-  // (docs/features/bosses/Commander.md): HP 14, AT 2, DF 40, MAT 4,
-  // MDF 40, SPD 40, Darkness element (breaks the Sandora-Fire pattern
-  // of his Knights), XP 20, Gold 20, Burn Out 100% drop. AI Power Up
-  // state machine + HP-recovers + scripted-with-Knights interactions
-  // not wired yet — V1 ships with standard humanoid melee chassis
-  // (KIND_TO_BEHAVIOR → 'knightOfSandora' minus the throw) until the
-  // boss AI lands.
+  // (docs/features/bosses/Commander.md): HP 15 (JP — Damia adopts the
+  // JP +1 delta per fandom canon "Damia adopt JP HP 15"), AT 2, DF 40,
+  // MAT 4, MDF 40, SPD 40, Darkness element (breaks the Sandora-Fire
+  // pattern of his Knights), XP 20, Gold 20, Burn Out 100% drop. AI
+  // Power Up state machine + HP-recovers + scripted-with-Knights
+  // interactions not wired yet — V1 ships with the standard humanoid
+  // melee chassis until the boss AI lands.
   commanderSeles: {
-    health: 14,
+    health: 15,
     speed: 0.08,
     stats: {
       atk: 2,

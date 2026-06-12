@@ -160,13 +160,17 @@ export const MOBS_TLOD: Partial<Record<MobKind, TLoDMobStats>> = {
   },
   // Commander (Seles) — Boss canon Disc 1 first scripted encounter.
   // Element Darkness diverges from his Knights' Fire — a canon quirk
-  // noted in docs/features/bosses/Commander.md. Burn Out 100% drop is
-  // the canon spell-item reward; we model it via the standard drops
-  // table since the engine doesn't split boss-specific tables yet.
+  // noted in docs/features/bosses/Commander.md. HP follows the JP
+  // canon (15) per user 2026-06-11 — the +1 JP delta over the wiki
+  // 14 US/EU is the documented "Damia adopt JP" choice in the canon
+  // doc. EXP/Gold stay on the wiki tier-2 values (20/20). Burn Out
+  // 100% drop is the canon spell-item reward; we model it via the
+  // standard drops table since the engine doesn't split boss-specific
+  // drop tables yet.
   commanderSeles: {
     location: 'Seles',
     element: 'darkness',
-    hp: 14,
+    hp: 15,
     xp: 20,
     gold: 20,
     pAtk: 2,

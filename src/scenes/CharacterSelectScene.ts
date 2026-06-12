@@ -80,6 +80,23 @@ const ELEMENT_COLORS: Record<string, number> = {
  */
 export class CharacterSelectScene implements Scene {
   readonly name = 'character-select';
+  // The picker grid renders one card per character with their idle
+  // portrait. Until placeholder pages dominate, we preload every
+  // character's sprite set so the cards land textured at first paint.
+  // When the roster grows past ~20 chars this should switch to a
+  // pagination + per-card lazy load — at the v1 ten-character roster
+  // it's still <2 MB.
+  readonly requiredTags = [
+    'player:dart',
+    'player:lavitz',
+    'player:shana',
+    'player:meru',
+    'player:rose',
+    'player:haschel',
+    'player:albert',
+    'player:kongol',
+    'player:miranda',
+  ] as const;
   private container: Container | null = null;
   private cleanupKey: (() => void) | null = null;
   /** Current view's scroll container. Re-built on view transition. */

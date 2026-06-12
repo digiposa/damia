@@ -16,6 +16,7 @@ import { UPGRADES, rollUpgradeChoices, type UpgradeKind } from '@data/upgrades';
 import { DART, type CharacterDef } from '@data/characters';
 import { RunHighScores } from '@services/RunHighScores';
 import { UnlockManager } from '@services/UnlockManager';
+import type { AssetTag } from '@services/AssetManager';
 
 /** Logical arena dimensions in iso tiles. The painted backdrop
  *  (`map.forest.survival`) is 1456x720 native pixels — at the engine's
@@ -63,6 +64,13 @@ function buildArenaMap(): MapData {
  */
 export class ArenaScene implements Scene {
   readonly name = 'arena';
+  // Painted backdrop + every mob the wave builder can spawn. Player
+  // tag is added dynamically by the constructor since the avatar is
+  // picked at runtime (CharacterSelectScene). Bosses (`fruegel`,
+  // `knightOfSandora`, `commanderSeles`) are NOT in the v1 arena
+  // pool; if/when they're wired in `arenaWaves.ts`, append the
+  // corresponding `mob:<kind>` tags here.
+  readonly requiredTags: readonly AssetTag[];
   private controller: GameplayController | null = null;
   private readonly runState = new RunState();
   private waveSpawner: WaveSpawnerSystem | null = null;
@@ -82,6 +90,14 @@ export class ArenaScene implements Scene {
 
   constructor(character: CharacterDef = DART) {
     this.character = character;
+    this.requiredTags = [
+      `player:${character.id}`,
+      'zone:forestArena',
+      'mob:berserkMouse',
+      'mob:goblin',
+      'mob:assassinCock',
+      'mob:trent',
+    ];
   }
 
   /** Read by RunSummaryScene + future RunHighScores entries so the

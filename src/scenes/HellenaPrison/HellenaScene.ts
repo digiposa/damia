@@ -49,6 +49,11 @@ const HellenaMap: MapData = {
  */
 export class HellenaScene implements Scene {
   readonly name = 'hellena';
+  // Placeholder Hellena has only two scripted goblins + Dart. No random
+  // encounters yet. When a real Hellena tile/prop set lands it gets its
+  // own `zone:hellena` tag here; until then the rock prop drawings come
+  // from RenderSystem's Graphics fallbacks.
+  readonly requiredTags = ['player:dart', 'mob:goblin'] as const;
   private controller: GameplayController | null = null;
 
   constructor(private readonly saveData: SaveDataV5 | null = null) {}

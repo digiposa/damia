@@ -52,6 +52,22 @@ export class RenderSystem implements System<Components> {
         node = this.createNode(sprite);
         this.layerContainer(sprite.layer).addChild(node);
         this.nodes.set(id, node);
+      } else if (node instanceof Graphics && sprite.textureAlias) {
+        // Auto-heal: a previous frame had to fall back to a Graphics
+        // shape because the texture wasn't loaded yet (e.g. a mob spawned
+        // mid-prefetch, or the player picked a mob in Training before
+        // its `mob:<kind>` tag finished loading). Promote to a textured
+        // Sprite the instant the texture lands so the placeholder
+        // doesn't linger for the rest of the entity's life.
+        const tex = AssetManager.getTexture(sprite.textureAlias);
+        if (tex) {
+          const layer = this.layerContainer(sprite.layer);
+          layer.removeChild(node);
+          node.destroy();
+          node = this.createTexturedSprite(sprite, tex);
+          layer.addChild(node);
+          this.nodes.set(id, node);
+        }
       }
 
       // Fog-of-war: entities tagged Hidden (out-of-vision mobs in wild zones)

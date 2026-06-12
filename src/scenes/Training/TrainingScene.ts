@@ -50,6 +50,20 @@ function buildArenaMap(): MapData {
 
 export class TrainingScene implements Scene {
   readonly name = 'training';
+  // Training preloads the arena backdrop + the default Dart kit + the
+  // forest mob pool (the picker's most common targets). Other mobs and
+  // characters chosen from the DBG panel get pulled on demand via
+  // `AssetManager.loadCategory('mob:<kind>')` — the RenderSystem auto-
+  // heal pass swaps in the real sprite the moment it lands, so a
+  // mid-fight mob switch only blinks the fallback shape briefly.
+  readonly requiredTags = [
+    'zone:trainingArena',
+    'player:dart',
+    'mob:berserkMouse',
+    'mob:goblin',
+    'mob:assassinCock',
+    'mob:trent',
+  ] as const;
   private controller: GameplayController | null = null;
   private debugPanel: TrainingDebugPanel | null = null;
   private mobPicker: MobPickerModal | null = null;

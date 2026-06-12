@@ -3,6 +3,7 @@ import { gridToWorld } from '@core/math/iso';
 import type { AIBehavior, Components } from '@gameplay/components';
 import { CHARACTER_SPRITE_DEFAULTS } from '@gameplay/components/Sprite';
 import { MOBS, type MobKind } from '@data/balance';
+import { AssetManager, type AssetTag } from '@services/AssetManager';
 
 const KIND_TO_BEHAVIOR: Record<MobKind, AIBehavior> = {
   berserkMouse: 'mouse',
@@ -29,6 +30,14 @@ const KIND_TO_BEHAVIOR: Record<MobKind, AIBehavior> = {
 
 /** Generic mob assembler. Looks up stats/sprite in `MOBS` and AI behavior in the table above. */
 export function spawnMob(world: World<Components>, kind: MobKind, gx: number, gy: number): Entity {
+  // Kick off the mob's tag load if it's not already resident. Non-
+  // refcounting so dynamic spawns don't pin the tag across scene
+  // boundaries — scenes that pre-declared the tag in `requiredTags`
+  // own the lifecycle, this is just an idempotent fetch nudge for the
+  // Training picker / debug / scripted-summon paths. The RenderSystem
+  // auto-heal pass swaps the fallback shape for the real sprite the
+  // moment the textures land.
+  void AssetManager.prefetchCategory(`mob:${kind}` as AssetTag);
   const def = MOBS[kind];
   const { x, y } = gridToWorld(gx, gy);
   const id = world.createEntity();

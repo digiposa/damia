@@ -40,6 +40,11 @@ const GEAR_MARGIN = 16;
  */
 export class TitleScene implements Scene {
   readonly name = 'title';
+  // `ui.mainscreen` carries the `core` tag and is preloaded at boot, so
+  // the scene declares no extra requirements. Future title-screen art
+  // (animated portraits, attract loops) would tag itself `title` and
+  // get listed here.
+  readonly requiredTags = [] as const;
   private container: Container | null = null;
   private cleanups: Array<() => void> = [];
 

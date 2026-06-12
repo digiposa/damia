@@ -24,46 +24,20 @@ function hideBootScreen(): void {
   setTimeout(() => boot.remove(), 320);
 }
 
-/** Lazy-load progress indicator — a small chip pinned to the top-
- *  right of the viewport while textures are downloading in the
- *  background. Created on the first call, updated thereafter, hidden
- *  + removed when the load completes. Lives in the DOM rather than
- *  the Pixi scene so it doesn't tangle with the canvas layer order. */
-let loadingIndicator: HTMLDivElement | null = null;
-function updateLoadingIndicator(loaded: number, total: number): void {
-  if (!loadingIndicator) {
-    const el = document.createElement('div');
-    el.id = 'lazy-load-indicator';
-    Object.assign(el.style, {
-      position: 'fixed',
-      top: 'calc(env(safe-area-inset-top, 0px) + 12px)',
-      right: 'calc(env(safe-area-inset-right, 0px) + 12px)',
-      padding: '6px 12px',
-      fontSize: '11px',
-      fontFamily: 'system-ui, -apple-system, sans-serif',
-      fontWeight: '600',
-      letterSpacing: '0.06em',
-      color: '#c8b58a',
-      backgroundColor: 'rgba(26, 31, 43, 0.85)',
-      border: '1px solid rgba(160, 128, 80, 0.5)',
-      borderRadius: '14px',
-      zIndex: '500',
-      transition: 'opacity 280ms ease',
-      opacity: '1',
-      pointerEvents: 'none',
-    });
-    document.body.appendChild(el);
-    loadingIndicator = el;
+/** Drive the boot screen's progress bar + status label while the
+ *  always-resident slice is loading. Once that's done, hideBootScreen
+ *  fades the whole overlay out and per-scene prefetches take over the
+ *  small top-right LoadingChip. */
+function updateBootProgress(loaded: number, total: number): void {
+  const fill = document.getElementById('boot-bar-fill');
+  const status = document.getElementById('boot-status');
+  if (fill) {
+    const pct = total > 0 ? Math.round((loaded / total) * 100) : 100;
+    fill.style.width = `${pct}%`;
   }
-  const pct = total > 0 ? Math.round((loaded / total) * 100) : 100;
-  loadingIndicator.textContent = `Loading ${pct}%`;
-}
-function hideLoadingIndicator(): void {
-  if (!loadingIndicator) return;
-  loadingIndicator.style.opacity = '0';
-  const el = loadingIndicator;
-  loadingIndicator = null;
-  setTimeout(() => el.remove(), 320);
+  if (status) {
+    status.textContent = `${loaded} / ${total}`;
+  }
 }
 
 export class Game {
@@ -79,19 +53,21 @@ export class Game {
     this.app = await createRenderer({ background: BACKGROUND_COLOR });
     mountInto.appendChild(this.app.canvas);
 
-    // Lazy preload: fire-and-forget. Title screen doesn't need any
-    // texture (gear icon is Graphics, buttons are text), so we let
-    // the app start immediately and let textures arrive in the
-    // background as the user navigates. RenderSystem already falls
-    // back to procedural shapes when a texture is missing
-    // (see createNode), so a mob spawning before its sprite has
-    // landed renders as the fallback capsule for the brief window
-    // until the texture loads. Boot screen hides immediately; the
-    // small top-right indicator below tracks the background load.
+    // Always-resident asset slice: title bg, cursors, dragoon eye,
+    // item icons, spell VFX. ~25 entries; loads in <1 s on a decent
+    // connection. Every other slice (zone tiles, mob sprites, party
+    // chars) is fetched on demand by the SceneManager prefetch hook
+    // when the player enters a scene that declares the tag, and
+    // freed when they leave it. See `AssetManager.loadCategory`.
+    //
+    // BLOCKING (await): the title screen depends on `ui.mainscreen`,
+    // so showing the menu before it's ready would flash a black
+    // panel. Boot overlay paints its progress bar in the meantime.
+    await AssetManager.preload({
+      tags: ['core', 'vfx', 'item'],
+      onProgress: updateBootProgress,
+    });
     hideBootScreen();
-    void AssetManager.preload({
-      onProgress: (loaded, total) => updateLoadingIndicator(loaded, total),
-    }).then(() => hideLoadingIndicator());
 
     this.scenes = new SceneManager();
     const ctx: GameContext = { app: this.app, scenes: this.scenes };

@@ -30,6 +30,10 @@ interface ZoneMarker {
  */
 export class WorldMapScene implements Scene {
   readonly name = 'world-map';
+  // The overworld map only needs its backdrop + Dart's portrait (UI).
+  // The portrait rides with `player:dart` and so does the inventory the
+  // map shows on its top strip — keep both tags pinned.
+  readonly requiredTags = ['zone:worldmap', 'player:dart'] as const;
 
   private container: Container | null = null;
   private cleanups: Array<() => void> = [];

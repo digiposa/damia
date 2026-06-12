@@ -28,6 +28,18 @@ import { TitleScene } from '@scenes/TitleScene';
  */
 export class ForestScene implements Scene {
   readonly name = 'forest';
+  // Forest needs its tiles + props + the merchant NPC + Dart's full
+  // sprite kit + the random-encounter mob pool. EncounterSystem rolls
+  // from this set, and TLoD canon has them all spawnable from the
+  // first wander, so we load them all upfront — no late surprises.
+  readonly requiredTags = [
+    'zone:forest',
+    'player:dart',
+    'mob:berserkMouse',
+    'mob:goblin',
+    'mob:assassinCock',
+    'mob:trent',
+  ] as const;
   private controller: GameplayController | null = null;
 
   constructor(private readonly saveData: SaveDataV5 | null = null) {}

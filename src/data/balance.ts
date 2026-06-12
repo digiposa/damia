@@ -341,6 +341,7 @@ export const MOBS: Record<MobKind, MobDefinition> = {
       height: 110,
       fitMode: 'height',
       textureAlias: 'sprite.mob.commander',
+      walkFrames: ['sprite.mob.commander.walk.1', 'sprite.mob.commander.walk.2'],
     },
     element: 'darkness',
     xp: 20,

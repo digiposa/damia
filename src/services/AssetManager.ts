@@ -327,6 +327,16 @@ const MANIFEST = {
     url: '/assets/sprites/mobs/commander.png',
     autoTrim: true,
   },
+  'sprite.mob.commander.walk.1': {
+    kind: 'texture',
+    url: '/assets/sprites/mobs/commander-walk-1.png',
+    autoTrim: true,
+  },
+  'sprite.mob.commander.walk.2': {
+    kind: 'texture',
+    url: '/assets/sprites/mobs/commander-walk-2.png',
+    autoTrim: true,
+  },
 
   // M8 forest tiles.
   // Ground = first Gemini grass variant (sampled into iso-diamond Graphics fills,

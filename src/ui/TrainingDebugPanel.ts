@@ -18,9 +18,9 @@
  */
 import type { Application, Container as PixiContainer } from 'pixi.js';
 import { Container, Graphics, Text } from 'pixi.js';
-import type { LayoutContainer } from '@pixi/layout/components';
+import { LayoutContainer } from '@pixi/layout/components';
 
-import { MOBS, type MobKind } from '@data/balance';
+import type { MobKind } from '@data/balance';
 import { AVATARS, type CharacterAvatar } from '@data/characters';
 import { t } from '@services/I18nService';
 
@@ -40,6 +40,11 @@ export interface TrainingDebugPanelOptions {
   setCharacter: (avatar: CharacterAvatar) => void;
   setLevel: (level: number) => void;
   spawnMob: (kind: MobKind, count: number) => void;
+  /** Called when the tester taps the mob picker button. The scene
+   *  owns the picker modal so the lifecycle (open/close/destroy) is
+   *  scoped to the same layer as the debug panel itself. Receives
+   *  the current selection so the picker can highlight it. */
+  openMobPicker: (currentSelection: MobKind) => void;
   healPlayer: () => void;
   killAllMobs: () => void;
   onQuit: () => void;
@@ -230,38 +235,38 @@ export class TrainingDebugPanel extends Modal {
     });
     section.addChild(mkText(t('training.spawnMob'), TEXT.cellLabel));
 
-    const pickRow = mkRow({
+    // Full-width button that displays the currently-picked mob and
+    // opens the picker sub-modal on tap. Replaces the < / > cycler
+    // which scaled badly past ~10 mobs.
+    this.mobKindLabel = mkText('', TEXT.value);
+    const pickButton = new LayoutContainer({
+      label: 'training-mob-pick-button',
       layout: {
-        width: '100%',
-        justifyContent: 'space-between',
+        flexDirection: 'row',
         alignItems: 'center',
-        gap: SPACING.gapSmall,
+        justifyContent: 'space-between',
+        width: '100%',
+        height: 36,
+        paddingLeft: SPACING.pad,
+        paddingRight: SPACING.pad,
+        backgroundColor: COLORS.buttonBg,
+        borderColor: COLORS.border,
+        borderWidth: 1,
+        borderRadius: 5,
       },
     });
-    this.mobKindLabel = mkText('', TEXT.value);
-    pickRow.addChild(this.mobKindLabel);
-    pickRow.addChild(
-      mkRow({
-        layout: { gap: SPACING.gapSmall, alignItems: 'center' },
-        children: [
-          mkButton({
-            label: '<',
-            width: 36,
-            height: 32,
-            fontSize: 16,
-            onTap: () => this.cycleMob(-1),
-          }),
-          mkButton({
-            label: '>',
-            width: 36,
-            height: 32,
-            fontSize: 16,
-            onTap: () => this.cycleMob(1),
-          }),
-        ],
-      }),
-    );
-    section.addChild(pickRow);
+    pickButton.addChild(this.mobKindLabel);
+    pickButton.addChild(mkText('▾', { ...TEXT.value, fill: COLORS.borderActive, fontSize: 16 }));
+    pickButton.eventMode = 'static';
+    pickButton.cursor = 'pointer';
+    pickButton.on('pointertap', () => this.opts.openMobPicker(this.selectedMobKind));
+    pickButton.on('pointerover', () => {
+      pickButton.background.tint = COLORS.borderActive;
+    });
+    pickButton.on('pointerout', () => {
+      pickButton.background.tint = 0xffffff;
+    });
+    section.addChild(pickButton);
 
     const spawnRow = mkRow({
       layout: { width: '100%', gap: SPACING.gapSmall, justifyContent: 'space-between' },
@@ -356,11 +361,9 @@ export class TrainingDebugPanel extends Modal {
     this.refreshLabels();
   }
 
-  private cycleMob(dir: number): void {
-    const kinds = Object.keys(MOBS) as MobKind[];
-    if (kinds.length === 0) return;
-    const idx = kinds.indexOf(this.selectedMobKind);
-    this.selectedMobKind = kinds[(idx + dir + kinds.length) % kinds.length]!;
+  /** Called by the scene when the picker modal returns a selection. */
+  setSelectedMobKind(kind: MobKind): void {
+    this.selectedMobKind = kind;
     this.refreshLabels();
   }
 

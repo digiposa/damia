@@ -29,6 +29,7 @@ import { xpToReachLevel } from '@data/characters';
 import { applyLevelStats } from '@gameplay/stats';
 import { worldToGrid } from '@core/math/iso';
 import { TrainingDebugPanel } from '@ui/TrainingDebugPanel';
+import { MobPickerModal } from '@ui/MobPickerModal';
 
 const ARENA_SIZE = 11;
 const SPAWN_GX = Math.floor(ARENA_SIZE / 2);
@@ -51,6 +52,7 @@ export class TrainingScene implements Scene {
   readonly name = 'training';
   private controller: GameplayController | null = null;
   private debugPanel: TrainingDebugPanel | null = null;
+  private mobPicker: MobPickerModal | null = null;
   private avatar: CharacterAvatar = DART;
   private keyHandler: ((e: KeyboardEvent) => void) | null = null;
 
@@ -107,12 +109,23 @@ export class TrainingScene implements Scene {
     };
     this.controller = new GameplayController(ctx, config);
 
+    // Mob picker sub-modal — opened from the debug panel's "Choose
+    // mob" button. Built before the debug panel so we can reference
+    // the picker in the panel's option callbacks.
+    this.mobPicker = new MobPickerModal(ctx.app);
+    this.mobPicker.onPick((kind) => this.debugPanel?.setSelectedMobKind(kind));
+
     // Debug overlay — owns the character / level / mob spawn controls.
     this.debugPanel = new TrainingDebugPanel(ctx.app, {
       getCurrentAvatar: () => this.avatar,
       setCharacter: (avatar) => this.switchCharacter(avatar),
       setLevel: (level) => this.setPlayerLevel(level),
       spawnMob: (kind, count) => this.spawnMobBatch(kind, count),
+      openMobPicker: (currentSelection) => {
+        if (!this.mobPicker) return;
+        this.mobPicker.setCurrentSelection(currentSelection);
+        this.mobPicker.open();
+      },
       healPlayer: () => this.healPlayerFull(),
       killAllMobs: () => this.killAllMobs(),
       getPlayerLevel: () => this.getPlayerLevel(),
@@ -121,10 +134,11 @@ export class TrainingScene implements Scene {
       },
     });
     this.controller.layers.ui.addChild(this.debugPanel.container);
+    this.controller.layers.ui.addChild(this.mobPicker.container);
     // Mount the floating "DBG" toggle button alongside the modal so
     // it's visible from the first frame — without this the panel can
-    // only be reached via the `~` keyboard shortcut, which is a
-    // non-starter on mobile and easy to miss on desktop.
+    // only be reached via the `W` keyboard shortcut, which is a
+    // non-starter on mobile.
     this.debugPanel.mountToggleButton(this.controller.layers.ui);
 
     // Keyboard shortcuts. Esc closes the debug panel when it's open
@@ -157,17 +171,20 @@ export class TrainingScene implements Scene {
     }
     this.debugPanel?.destroy();
     this.debugPanel = null;
+    this.mobPicker?.destroy();
+    this.mobPicker = null;
     this.controller?.destroy();
     this.controller = null;
   }
 
   update(dt: number): void {
-    // Hard pause while the DBG panel owns the screen — same pattern
-    // ArenaScene uses for its level-up modal. Skipping the entire
-    // controller update freezes the ECS world (no AI ticks, no
-    // combat, no animations) so the tester can edit a level / swap
-    // a character without the mob walking off-screen mid-tweak.
-    if (this.debugPanel?.isOpen) return;
+    // Hard pause while any DBG-side modal (the main panel OR the mob
+    // picker sub-modal) owns the screen — same pattern ArenaScene
+    // uses for its level-up modal. Skipping the entire controller
+    // update freezes the ECS world (no AI ticks, no combat, no
+    // animations) so the tester can pick a mob / swap a character
+    // without the world walking on under them.
+    if (this.debugPanel?.isOpen || this.mobPicker?.isOpen) return;
     this.controller?.update(dt);
   }
 

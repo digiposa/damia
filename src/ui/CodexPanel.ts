@@ -13,11 +13,9 @@
  *    a follow-up — V1 keeps the list text-only so the file stays
  *    cheap to load).
  *
- * Scrolling: implemented inline with a Graphics mask + a manually-
- * translated content container. Drag distance scrolls the content;
- * Pixi's FederatedWheelEvent gives us mouse-wheel + trackpad on
- * desktop. Pointer events handle both touch and mouse, so the same
- * code path serves both form factors.
+ * Scrolling delegated to the shared `ScrollableArea` helper (the
+ * Training mob picker uses the same one), so the two pickers stay
+ * in lockstep on fixes / polish.
  *
  * Entry curation lives in `MOB_ENTRY_ORDER` (mob/boss tabs) — adding
  * a mob to MOBS doesn't auto-list it; we promote here once stats are

@@ -395,13 +395,13 @@ const MANIFEST = {
   'sprite.mob.commander.death.6': {
     kind: 'texture',
     url: '/assets/sprites/mobs/commander-death-6.png',
-    // Single-pose death — autoTrim crops to the alpha bbox so the
-    // bottom-anchored Pixi sprite lands the corpse on the ground
-    // tile instead of floating above it (the source canvas has a
-    // ~15 px transparent margin under the figure). The five sibling
-    // death-N frames stay autoTrim-disabled for the (currently
-    // unused) multi-frame pipeline — those required a common bbox.
-    autoTrim: true,
+    // PNG pre-padded vertically so its aspect ratio matches the
+    // idle pose. autoTrim would crop the transparent top back off,
+    // re-introducing the wide-flat aspect that made the corpse
+    // render ~5× wider than the standing figure under
+    // `fitMode: 'height'`. Keeping the full canvas means the corpse
+    // sits in the bottom slice of the same character-height box as
+    // the idle, scaled identically.
   },
 
   // M8 forest tiles.

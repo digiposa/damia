@@ -65,8 +65,25 @@ export class RenderSystem implements System<Components> {
       const spell = world.getComponent(id, 'Spell');
       const defending = world.hasComponent(id, 'Defending');
       const pf = world.getComponent(id, 'Pathfinder');
+      // "Walking" = the entity has an unfinished path destination. We
+      // intentionally read `targetGrid` rather than `waypoints?.length`
+      // here: CombatSystem nulls `waypoints` every TARGET_RECHECK_MS
+      // (default 100 ms) whenever the player has moved, so the new
+      // path can recompute. During the 1-2 frame gap before
+      // PathfindSystem re-populates the array, the mob's
+      // `waypoints.length` is 0 and the render branch flipped back to
+      // idle for a flash, which read as the sprite stuttering. The
+      // `targetGrid` field stays set across the recompute and is only
+      // cleared when the mob actually arrives (MovementSystem) or
+      // stops to attack (CombatSystem in-range branch), which is
+      // exactly the "no longer walking" semantics we want.
       const walking =
-        !swing && !addition && !spell && !defending && !!pf?.waypoints && pf.waypoints.length > 0;
+        !swing &&
+        !addition &&
+        !spell &&
+        !defending &&
+        pf?.targetGrid !== null &&
+        pf?.targetGrid !== undefined;
 
       // Texture swap priority: Dying > Spell > Addition > Defending > AttackSwing > Walking > idle.
       // Walking cycles through `avatar.sprite.base.walkFrames` when present;

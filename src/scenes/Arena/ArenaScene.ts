@@ -97,6 +97,10 @@ export class ArenaScene implements Scene {
       'mob:goblin',
       'mob:assassinCock',
       'mob:trent',
+      // Wave 10's named boss (see arenaWaves.ts BOSS_WAVES). Other
+      // boss kinds (`knightOfSandora*`, `commanderSeles`) aren't in
+      // the v1 wave table; append them here as they get wired.
+      'mob:fruegel',
     ];
   }
 

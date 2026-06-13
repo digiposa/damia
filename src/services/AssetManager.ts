@@ -451,54 +451,55 @@ const MANIFEST = {
   // Knight of Sandora — shared sprite across the Seles + Kazas variants
   // (user-supplied 2026-06-11). Idle pose + a 2-frame walk cycle.
   // No dedicated attack / death pose yet — the renderer will fall back
-  // to the idle texture during those states.
+  // to the idle texture during those states. Both MobKind variants
+  // tag the same assets so spawnMob's prefetch fires for either.
   'sprite.mob.knightOfSandora': {
     kind: 'texture',
     url: '/assets/sprites/mobs/knightOfSandora.png',
     autoTrim: true,
-    tags: ['mob:knightOfSandora'],
+    tags: ['mob:knightOfSandoraSeles', 'mob:knightOfSandoraKazas'],
   },
   'sprite.mob.knightOfSandora.walk.1': {
     kind: 'texture',
     url: '/assets/sprites/mobs/knightOfSandora-walk-1.png',
     autoTrim: true,
-    tags: ['mob:knightOfSandora'],
+    tags: ['mob:knightOfSandoraSeles', 'mob:knightOfSandoraKazas'],
   },
   'sprite.mob.knightOfSandora.walk.2': {
     kind: 'texture',
     url: '/assets/sprites/mobs/knightOfSandora-walk-2.png',
     autoTrim: true,
-    tags: ['mob:knightOfSandora'],
+    tags: ['mob:knightOfSandoraSeles', 'mob:knightOfSandoraKazas'],
   },
   'sprite.mob.knightOfSandora.attack.1': {
     kind: 'texture',
     url: '/assets/sprites/mobs/knightOfSandora-attack-1.png',
     autoTrim: true,
-    tags: ['mob:knightOfSandora'],
+    tags: ['mob:knightOfSandoraSeles', 'mob:knightOfSandoraKazas'],
   },
   'sprite.mob.knightOfSandora.attack.2': {
     kind: 'texture',
     url: '/assets/sprites/mobs/knightOfSandora-attack-2.png',
     autoTrim: true,
-    tags: ['mob:knightOfSandora'],
+    tags: ['mob:knightOfSandoraSeles', 'mob:knightOfSandoraKazas'],
   },
   'sprite.mob.knightOfSandora.throw.1': {
     kind: 'texture',
     url: '/assets/sprites/mobs/knightOfSandora-throw-1.png',
     autoTrim: true,
-    tags: ['mob:knightOfSandora'],
+    tags: ['mob:knightOfSandoraSeles', 'mob:knightOfSandoraKazas'],
   },
   'sprite.mob.knightOfSandora.throw.2': {
     kind: 'texture',
     url: '/assets/sprites/mobs/knightOfSandora-throw-2.png',
     autoTrim: true,
-    tags: ['mob:knightOfSandora'],
+    tags: ['mob:knightOfSandoraSeles', 'mob:knightOfSandoraKazas'],
   },
   'sprite.mob.knightOfSandora.throw.3': {
     kind: 'texture',
     url: '/assets/sprites/mobs/knightOfSandora-throw-3.png',
     autoTrim: true,
-    tags: ['mob:knightOfSandora'],
+    tags: ['mob:knightOfSandoraSeles', 'mob:knightOfSandoraKazas'],
   },
 
   // Commander (Seles) — boss canon Disc 1. Idle pose only for now;
@@ -897,17 +898,10 @@ function loadAlias(alias: AssetAlias): Promise<void> {
   return task;
 }
 
-/** Sum of aliases referenced by any tag with refcount > 0, used to know
- *  whether an alias is still pinned by some other tag during unload. */
-function aliasIsPinned(alias: AssetAlias): boolean {
-  const tags = (MANIFEST[alias] as TextureAsset).tags;
-  if (!tags) return true; // No tag = always-resident core asset.
-  for (const tag of tags) {
-    const rc = TAG_REFCOUNTS.get(tag) ?? 0;
-    if (rc > 0) return true;
-  }
-  return false;
-}
+// `aliasIsPinned` (pinned = some loaded tag still references the alias) used
+// to gate texture eviction in `unloadCategory`. Removed when eviction was
+// disabled — see the unloadCategory doc. Restore it as the per-eviction
+// predicate when an LRU eviction pass lands.
 
 export interface PreloadOptions {
   /** Subset of tags to load. If omitted, every alias in the manifest is
@@ -1049,10 +1043,21 @@ export const AssetManager = {
   },
 
   /**
-   * Drop one refcount on `tag`. When the count reaches zero, every alias
-   * exclusively held by it is destroyed and removed from the cache. An
-   * alias still held by another loaded tag stays resident. Safe to call
-   * with a tag that was never loaded — no-op. */
+   * Drop one refcount on `tag`. Textures are NOT destroyed when the
+   * count hits zero: we lean on Pixi.Assets' internal URL cache + the
+   * browser HTTP cache so a player walking Forest → WorldMap → Forest
+   * re-uses the already-resident texture instead of round-tripping
+   * the network + GPU upload. The refcount is kept as bookkeeping so a
+   * future LRU pass (when total GPU residency exceeds, say, 256 MB on
+   * mobile) can pick zero-refcount aliases as the eviction candidates.
+   *
+   * Calling `destroy(true)` on the way out was the cause of a hard
+   * crash when leaving CharacterSelectScene: placeholder avatars
+   * (rose / haschel / albert / kongol / miranda) alias `dart.png`, so
+   * Pixi.Assets returns the same TextureSource for all of them. Tearing
+   * one down with destroy(true) annihilated the shared source and
+   * Dart's still-pinned sprite landed on dead GPU memory.
+   */
   unloadCategory(tag: AssetTag): void {
     const rc = TAG_REFCOUNTS.get(tag) ?? 0;
     if (rc <= 0) return;
@@ -1061,17 +1066,8 @@ export const AssetManager = {
       return;
     }
     TAG_REFCOUNTS.delete(tag);
-    for (const alias of tagIndex().get(tag) ?? []) {
-      if (aliasIsPinned(alias)) continue;
-      const tex = TEXTURES.get(alias);
-      if (tex) {
-        // `destroy(true)` releases the GPU TextureSource too. Safe because
-        // every consumer reads textures through `getTexture()` — they hold
-        // no stale Sprite references once the scene exits.
-        tex.destroy(true);
-        TEXTURES.delete(alias);
-      }
-    }
+    // Textures stay resident — see doc above. No-op beyond the
+    // refcount decrement so the cache stays warm for the next visit.
   },
 
   /** Convenience for scene exit: `unloadCategory` over many tags. */

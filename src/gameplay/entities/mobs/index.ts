@@ -2,7 +2,7 @@ import type { Entity, World } from '@core/ecs';
 import { gridToWorld } from '@core/math/iso';
 import type { AIBehavior, Components } from '@gameplay/components';
 import { CHARACTER_SPRITE_DEFAULTS } from '@gameplay/components/Sprite';
-import { MOBS, type MobKind } from '@data/balance';
+import { BALANCE_SCALE, MOBS, type MobKind } from '@data/balance';
 import { AssetManager, type AssetTag } from '@services/AssetManager';
 
 const KIND_TO_BEHAVIOR: Record<MobKind, AIBehavior> = {
@@ -44,7 +44,11 @@ export function spawnMob(world: World<Components>, kind: MobKind, gx: number, gy
   world.addComponent(id, 'Position', { x, y });
   world.addComponent(id, 'Speed', { value: def.speed });
   world.addComponent(id, 'Pathfinder', { targetGrid: null, waypoints: null, computing: false });
-  world.addComponent(id, 'Health', { current: def.health, max: def.health });
+  // Canon JP HP scaled at spawn — see BALANCE_SCALE.mobHp. Keeping
+  // the multiplier here (not on the def) means MOBS stays a direct
+  // canon reference, and we tune by editing one constant.
+  const scaledHp = Math.max(1, Math.round(def.health * BALANCE_SCALE.mobHp));
+  world.addComponent(id, 'Health', { current: scaledHp, max: scaledHp });
   world.addComponent(id, 'Stats', { ...def.stats });
   world.addComponent(id, 'Faction', { side: 'enemy' });
   world.addComponent(id, 'AttackCooldown', { remainingMs: 0 });

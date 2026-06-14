@@ -53,7 +53,30 @@ export type MobKind =
   | 'knightOfSandoraKazas'
   | 'commanderSeles';
 
+/**
+ * Action-RPG translation knobs applied at spawn time to the canon JP
+ * values in MOBS / SPELLS / ADDITIONS. The tables themselves stay
+ * canon-faithful so they remain a direct reference to TLoD; the engine
+ * pumps them up here for our real-time pacing (turn-based encounters
+ * are 6-12 actions long, our duels are dozens of swings per minute, so
+ * raw canon HP would melt in a second).
+ *
+ * One central knob = one place to tune as we iterate on game feel.
+ * Add `mobDamage`, `playerHp`, `xpReward`, etc. fields as the balance
+ * pass grows — same shape, same spawn-time application path.
+ */
+export const BALANCE_SCALE = {
+  /** Multiplier applied to MobDefinition.health when spawning a mob.
+   *  v1 first-pass: ×10. Commander 15 → 150, Berserk Mouse 5 → 50,
+   *  Fruegel 90 → 900. Canon ratios between mobs are preserved; only
+   *  the absolute scale moves. Adjust here, not in the per-mob entries. */
+  mobHp: 10,
+} as const;
+
 export interface MobDefinition {
+  /** TLoD-canon JP HP. The actual entity's Health.max at spawn is
+   *  `health * BALANCE_SCALE.mobHp` — see the constant above for the
+   *  rationale on the multiplier. */
   health: number;
   speed: number;
   stats: Stats;

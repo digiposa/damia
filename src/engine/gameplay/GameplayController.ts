@@ -40,7 +40,6 @@ import { CombatSystem } from '@gameplay/systems/CombatSystem';
 import { AutoAttackSystem } from '@gameplay/systems/AutoAttackSystem';
 import { AttackSwingSystem } from '@gameplay/systems/AttackSwingSystem';
 import { AdditionSystem } from '@gameplay/systems/AdditionSystem';
-import { MobMultiSwingSystem } from '@gameplay/systems/MobMultiSwingSystem';
 import { SpellSystem } from '@gameplay/systems/SpellSystem';
 import { AISystem } from '@gameplay/systems/AISystem';
 import { DefenseSystem } from '@gameplay/systems/DefenseSystem';
@@ -325,7 +324,6 @@ export class GameplayController {
     });
     const dying = new DyingSystem();
     const addition = new AdditionSystem();
-    const mobMultiSwing = new MobMultiSwingSystem();
     const spell = new SpellSystem();
     const pickup = new ItemPickupSystem();
     const swing = new AttackSwingSystem();
@@ -372,10 +370,6 @@ export class GameplayController {
       death,
       dying,
       addition,
-      // Mob multi-hit boss specials (Slash Twice) — same pipeline slot
-      // as Addition, runs in parallel since no entity carries both at
-      // once and the systems own disjoint components.
-      mobMultiSwing,
       spell,
       ...(this.encounterSystem ? [this.encounterSystem] : []),
       pickup,

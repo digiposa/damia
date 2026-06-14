@@ -4,11 +4,13 @@
  * when elapsedMs >= totalMs. Position component is NOT touched, so combat /
  * pathfinding / collision logic stay correct.
  *
- * `kind` lets the renderer pick the right frame family: 'melee' (default)
- * → attackFrames / attackTextureAlias, 'throw' → throwFrames. Useful for
- * mobs that have a secondary ranged ability (Knight of Sandora's Throw
- * Dagger) — the AI tags the swing at trigger time so the visual matches
- * the gameplay intent.
+ * `kind` lets the renderer pick the right frame family:
+ *   'melee'      (default) → attackFrames / attackTextureAlias
+ *   'throw'                → throwFrames (Knight of Sandora ranged dagger)
+ *   'slashTwice'           → slashTwiceFrames (Commander Seles post-PowerUp
+ *                            basic attack — replaces the regular Sword
+ *                            Slash visual; CombatSystem applies the canon
+ *                            2× damage multiplier in lockstep).
  */
 export interface AttackSwing {
   elapsedMs: number;
@@ -17,5 +19,5 @@ export interface AttackSwing {
   dirX: number;
   dirY: number;
   /** Animation family. Default 'melee' when omitted. */
-  kind?: 'melee' | 'throw';
+  kind?: 'melee' | 'throw' | 'slashTwice';
 }

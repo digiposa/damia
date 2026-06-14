@@ -11,6 +11,18 @@ import { playSfx } from '@services/AudioManager';
 
 const TARGET_RECHECK_MS = 100;
 
+/** Commander Seles post-PowerUp basic-attack damage multiplier. Canon
+ *  "Slash Twice = 2× Physical damage" — applied here at melee-swing
+ *  time (no separate component / system) because the post-PU swing
+ *  replaces the regular Sword Slash rather than chaining on top. */
+const COMMANDER_SLASH_TWICE_MULT = 2;
+/** Visual swing duration for Slash Twice. Slightly longer than the
+ *  regular 220 ms swing so the 2-frame Slash Twice animation has room
+ *  to read as "two strokes" rather than one rushed stroke. Falls back
+ *  to the attack frame when `Sprite.slashTwiceFrames` is unset (the
+ *  current case until the dedicated sprite ships). */
+const COMMANDER_SLASH_TWICE_SWING_MS = 360;
+
 /**
  * Drives entities that have CombatIntent:
  * - If target out of range → set Pathfinder to chase (rate-limited refresh).
@@ -158,10 +170,20 @@ export class CombatSystem implements System<Components> {
       const landed = rollHit(world, id, intent.targetId, 'attack');
       cd.remainingMs = 1000 / Math.max(0.1, stats.atkSpeed);
 
+      // Boss basic-attack swap: Commander Seles post-PowerUp uses
+      // Slash Twice as his basic attack — same single-swing pipeline,
+      // 2× damage multiplier, and a Slash Twice animation kind so
+      // RenderSystem can pick the dedicated frames when they ship.
+      const ai = world.getComponent(id, 'AI');
+      const isSlashTwice = ai?.poweredUp === true;
+
       if (!landed) {
         spawnMissText(world, targetPos.x, targetPos.y);
       } else {
-        const dmg = computePhysicalDamage(world, id, intent.targetId);
+        const base = computePhysicalDamage(world, id, intent.targetId);
+        const dmg = isSlashTwice
+          ? Math.max(1, Math.round(base * COMMANDER_SLASH_TWICE_MULT))
+          : base;
         targetHealth.current = Math.max(0, targetHealth.current - dmg);
         spawnFloatingText(world, {
           x: targetPos.x,
@@ -176,9 +198,10 @@ export class CombatSystem implements System<Components> {
       // Plays even on miss so the swing reads as an attempted attack.
       world.addComponent(id, 'AttackSwing', {
         elapsedMs: 0,
-        totalMs: 220,
+        totalMs: isSlashTwice ? COMMANDER_SLASH_TWICE_SWING_MS : 220,
         dirX,
         dirY,
+        ...(isSlashTwice ? { kind: 'slashTwice' as const } : {}),
       });
 
       playSfx('combat.swing');

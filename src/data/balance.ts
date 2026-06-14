@@ -347,12 +347,16 @@ export const MOBS: Record<MobKind, MobDefinition> = {
       deathTextureAlias: 'sprite.mob.commander.death.6',
       walkFrames: ['sprite.mob.commander.walk.1', 'sprite.mob.commander.walk.2'],
       attackFrames: ['sprite.mob.commander.attack.1', 'sprite.mob.commander.attack.2'],
-      // No dedicated Slash Twice frames yet — the AI fires the
-      // MobMultiSwing component but RenderSystem falls back to the
-      // basic attack pose until a 2-frame Slash Twice sequence lands.
-      // Drop the sprites at `/assets/sprites/mobs/commander-slash-twice-{1,2}.png`,
-      // add aliases + tag them `mob:commanderSeles`, and populate
-      // `multiSwingFrames: { slashTwice: [alias.1, alias.2] }`.
+      // Slash Twice (post-PowerUp basic attack) frames go here when the
+      // dedicated sprites ship. Drop them at
+      // `/assets/sprites/mobs/commander-slash-twice-{1,2}.png`, add the
+      // aliases tagged `mob:commanderSeles`, then populate:
+      //   slashTwiceFrames: [
+      //     'sprite.mob.commander.slashTwice.1',
+      //     'sprite.mob.commander.slashTwice.2',
+      //   ]
+      // Until then RenderSystem falls back to `attackFrames` for the
+      // visual — the 2× damage multiplier still applies.
     },
     element: 'darkness',
     xp: 20,

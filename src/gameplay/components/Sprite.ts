@@ -68,15 +68,13 @@ export interface Sprite {
    *  this single static pose for the PowerUp's full duration. v1:
    *  Commander Seles' aura/flame transformation. */
   powerUpTextureAlias?: AssetAlias;
-  /** Per-`MobMultiSwing.kind` frame arrays. RenderSystem reads
-   *  `multiSwingFrames?[swing.kind]` while the entity has an active
-   *  `MobMultiSwing` component, splitting `totalMs` evenly across the
-   *  array (same logic as `attackFrames`). Falls back to
-   *  `attackTextureAlias` when the slug has no dedicated frames —
-   *  used by Commander Seles' Slash Twice until its dedicated 2-frame
-   *  sprite lands. Mob-side equivalent of
-   *  `Character.avatar.sprite.base.additions`. */
-  multiSwingFrames?: Readonly<Record<string, ReadonlyArray<AssetAlias>>>;
+  /** Optional Slash Twice frames, picked by RenderSystem when the
+   *  entity has an `AttackSwing` with `kind: 'slashTwice'`. Same
+   *  split-by-elapsed math as `attackFrames`. Commander Seles uses
+   *  this as his post-PowerUp basic-attack visual; falls back to
+   *  `attackFrames` / `attackTextureAlias` until the dedicated 2-frame
+   *  sprite ships. */
+  slashTwiceFrames?: ReadonlyArray<AssetAlias>;
   /** Rotation in radians, applied to the rendered Pixi node. Defaults
    *  to 0. Used by Projectile arrows to point along their flight path
    *  — RenderSystem reads this each frame, so updating it on the

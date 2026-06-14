@@ -53,17 +53,6 @@ const COMMANDER_POWER_UP_MS = 600;
  *  numbers if we want strict canon, but 1.0 → 1.5 keeps the visible
  *  delta sharp at our action-RPG scale). */
 const COMMANDER_BURN_OUT_POWERED_MULT = 1.5;
-/** Slash Twice swing total duration (split across the 2 hit
- *  checkpoints + tail), and the hit-checkpoint timings. Mirrors the
- *  player Double Slash pacing so the boss special reads in the same
- *  visual cadence. */
-const SLASH_TWICE_TOTAL_MS = 500;
-const SLASH_TWICE_HIT_TIMINGS_MS: readonly number[] = [200, 400];
-/** Cooldown between Slash Twice swings while poweredUp. Roughly the
- *  Commander's base atkSpeed cooldown (1000 / 0.8 = 1250 ms), but
- *  managed off `AI.slashTwiceCooldownMs` since CombatSystem is
- *  bypassed for the boss once transformed. */
-const SLASH_TWICE_COOLDOWN_MS = 1250;
 
 interface SceneBounds {
   width: number;
@@ -318,31 +307,25 @@ function fireKnightThrow(
 }
 
 /**
- * Commander (Seles boss). Two-phase combat AI:
+ * Commander (Seles boss). Standard humanoid melee chassis (chase + swing
+ * via CombatIntent → CombatSystem) with a range- and cooldown-gated Burn
+ * Out cast layered on. Two pieces of state-machine flavour:
  *
- *   Phase 1 — base form. Standard humanoid melee chassis (chase + swing
- *   via CombatIntent → CombatSystem) with a range- and cooldown-gated
- *   Burn Out cast layered on. The cast freezes pathing for its
- *   duration. HP > 60% → stays in this phase indefinitely.
+ *   - Power Up (single-use, HP < 60%): spawns a `PowerUp` component
+ *     that freezes pathing for a brief transformation window. On
+ *     completion `AI.poweredUp` latches true for the rest of the
+ *     encounter.
  *
- *   Power Up — single-use transformation. Fires the instant HP drops
- *   below 60% with no other action in flight: spawns a PowerUp
- *   component (visual + pathing freeze), nulls CombatIntent so
- *   CombatSystem doesn't try to swing. After PowerUp.totalMs the
- *   component is removed, `AI.poweredUp` is latched true, and a Slash
- *   Twice fires immediately if the player is in melee range (canon
- *   "Ignore Turn Order Slash Twice" follow-up).
+ *   - Post Power Up effects ride existing systems:
+ *       * Basic attacks become Slash Twice — CombatSystem reads
+ *         `AI.poweredUp`, tags the AttackSwing with `kind: 'slashTwice'`
+ *         (RenderSystem picks the Slash Twice frames), and applies the
+ *         canon 2× physical damage multiplier.
+ *       * Burn Out's base intelligence damage scales × 1.5.
  *
- *   Phase 2 — post Power Up. CombatSystem is fully bypassed: the
- *   handler manages chase via Pathfinder.targetGrid directly, fires
- *   Slash Twice on its own cooldown when in melee range, and keeps
- *   Burn Out available at 1.5× damage off the same range / cooldown
- *   gates as Phase 1.
- *
- * v1 deliberately skips the canonical "Knights of Sandora defeated"
- * trigger because the Seles formation encounter isn't wired yet —
- * HP < 60% is the observable substitute. Add the Knights-down check
- * to the Phase 1 → Power Up transition when the formation lands.
+ * v1 deliberately uses HP < 60% in place of the canonical "Knights of
+ * Sandora defeated" trigger because the scripted Seles formation isn't
+ * wired yet. Add the Knights-down predicate alongside HP once it lands.
  */
 function updateCommanderSeles(
   id: Entity,
@@ -357,17 +340,14 @@ function updateCommanderSeles(
   const hp = world.getComponent(id, 'Health');
   if (!pos || !stats || !hp) return;
 
-  // --- Tick local cooldowns --------------------------------------------
-  if (ai.slashTwiceCooldownMs !== undefined && ai.slashTwiceCooldownMs > 0) {
-    ai.slashTwiceCooldownMs = Math.max(0, ai.slashTwiceCooldownMs - dt);
-  }
-
   // --- PowerUp visual window -------------------------------------------
+  // While the transformation plays the boss stops everything — no
+  // chase, no swing, no cast. CombatIntent is dropped so CombatSystem
+  // skips the entity for the duration, and the Pathfinder is nulled so
+  // the walking pose doesn't bleed through the static aura sprite.
   const powerUp = world.getComponent(id, 'PowerUp');
   if (powerUp) {
     powerUp.elapsedMs += dt;
-    // Hold pathing while the transformation plays — no chase, no
-    // attack, no cast. Render swaps to the powerUp pose.
     const pf = world.getComponent(id, 'Pathfinder');
     if (pf) {
       pf.waypoints = null;
@@ -377,13 +357,6 @@ function updateCommanderSeles(
     if (powerUp.elapsedMs >= powerUp.totalMs) {
       world.removeComponent(id, 'PowerUp');
       ai.poweredUp = true;
-      // Canon "Ignore Turn Order Slash Twice" — fire the first Slash
-      // Twice immediately on transformation end if the target is in
-      // melee range, bypassing the cooldown gate.
-      if (distance(pos, playerPos) <= stats.range && !world.hasComponent(id, 'Dying')) {
-        spawnSlashTwice(id, world, playerId, pos, playerPos);
-        ai.slashTwiceCooldownMs = SLASH_TWICE_COOLDOWN_MS;
-      }
     }
     return;
   }
@@ -391,21 +364,17 @@ function updateCommanderSeles(
   if (world.hasComponent(id, 'Dying')) return;
 
   const dist = distance(pos, playerPos);
-  // Outside aggro range → idle in both phases (boss respects the
-  // aggro radius too; lets the player skirt the engagement boundary).
   if (dist > stats.aggroRange) return;
 
   const busy =
     world.hasComponent(id, 'Spell') ||
     world.hasComponent(id, 'AttackSwing') ||
-    world.hasComponent(id, 'Addition') ||
-    world.hasComponent(id, 'MobMultiSwing');
+    world.hasComponent(id, 'Addition');
 
-  // --- Phase 1 → PowerUp trigger ---------------------------------------
-  // Single-use, gated by `ai.poweredUp`. The `!busy` guard prevents the
-  // transformation from interrupting a swing or a Burn Out mid-flight —
-  // it fires the moment the boss is between actions and crosses the
-  // threshold.
+  // --- Power Up trigger (single-use, HP threshold) ---------------------
+  // The `!busy` guard prevents the transformation from interrupting a
+  // swing or a Burn Out mid-flight — it fires the moment the boss is
+  // between actions and the threshold is crossed.
   if (!ai.poweredUp && !busy && hp.current / hp.max < COMMANDER_POWER_UP_HP_TRIGGER) {
     world.addComponent(id, 'PowerUp', {
       elapsedMs: 0,
@@ -418,7 +387,7 @@ function updateCommanderSeles(
   const spellReady = (ai.spellCooldownMs ?? 0) <= 0;
   const inSpellWindow = dist > COMMANDER_CAST_MIN_RANGE_PX && dist <= COMMANDER_CAST_MAX_RANGE_PX;
 
-  // --- Burn Out cast (both phases, post-PU at 1.5×) --------------------
+  // --- Burn Out cast (1.0× pre-PU, 1.5× post-PU) -----------------------
   if (spellReady && inSpellWindow && !busy) {
     fireCommanderBurnOut(id, world, playerId, pos, playerPos, ai.poweredUp ?? false);
     ai.spellCooldownMs = COMMANDER_SPELL_COOLDOWN_MS;
@@ -431,47 +400,10 @@ function updateCommanderSeles(
     return;
   }
 
-  // --- Phase 2 — manual chase + Slash Twice (post-PowerUp) --------------
-  // CombatSystem is bypassed: AISystem handles pathfinding (via
-  // Pathfinder.targetGrid, picked up by PathfindingSystem) AND swing
-  // triggering (via MobMultiSwing). CombatIntent is intentionally NOT
-  // set so CombatSystem skips the entity entirely — otherwise it would
-  // queue a regular Sword Slash on top of our Slash Twice.
-  if (ai.poweredUp) {
-    if (busy) return;
-    if (dist <= stats.range) {
-      // In melee range — fire Slash Twice when its cooldown lets us.
-      if ((ai.slashTwiceCooldownMs ?? 0) <= 0) {
-        spawnSlashTwice(id, world, playerId, pos, playerPos);
-        ai.slashTwiceCooldownMs = SLASH_TWICE_COOLDOWN_MS;
-        const pf = world.getComponent(id, 'Pathfinder');
-        if (pf) {
-          pf.waypoints = null;
-          pf.targetGrid = null;
-        }
-      }
-      return;
-    }
-    // Out of melee range — drive the chase ourselves. Setting
-    // targetGrid hands the route to PathfindingSystem; MovementSystem
-    // walks the waypoints. Mirrors CombatSystem's "only invalidate the
-    // path when the target cell actually moved" guard so the boss
-    // doesn't spam easystar with rebuilds when the player stays put.
-    const pf = world.getComponent(id, 'Pathfinder');
-    if (pf) {
-      const g = worldToGrid(playerPos.x, playerPos.y);
-      const tgx = Math.round(g.x);
-      const tgy = Math.round(g.y);
-      if (!pf.targetGrid || pf.targetGrid.gx !== tgx || pf.targetGrid.gy !== tgy) {
-        pf.targetGrid = { gx: tgx, gy: tgy };
-        pf.waypoints = null;
-        pf.computing = false;
-      }
-    }
-    return;
-  }
-
-  // --- Phase 1 default — standard melee chase + swing via CombatSystem ---
+  // --- Default melee chase + swing via CombatSystem --------------------
+  // Same hand-off pre and post Power Up. CombatSystem reads
+  // `AI.poweredUp` to swap the swing's kind / damage; AISystem only
+  // decides whether to engage.
   if (!world.hasComponent(id, 'CombatIntent')) {
     world.addComponent(id, 'CombatIntent', { targetId: playerId });
   }
@@ -511,32 +443,5 @@ function fireCommanderBurnOut(
     dirY: dy / len,
     vfxKind: spell.vfx,
     vfxRadiusPx: spell.vfxRadiusPx ?? 60,
-  });
-}
-
-/** Spawn a Slash Twice MobMultiSwing — 2 hits × 1× physical (canon
- *  "2× Physical damage" total), used only by Commander Seles after
- *  Power Up. The damage formula plus precision roll live in
- *  MobMultiSwingSystem; AISystem owns the trigger conditions. */
-function spawnSlashTwice(
-  commanderId: Entity,
-  world: World<Components>,
-  playerId: Entity,
-  commanderPos: Position,
-  playerPos: Position,
-): void {
-  const dx = playerPos.x - commanderPos.x;
-  const dy = playerPos.y - commanderPos.y;
-  const len = Math.hypot(dx, dy) || 1;
-  world.addComponent(commanderId, 'MobMultiSwing', {
-    kind: 'slashTwice',
-    targetId: playerId,
-    dirX: dx / len,
-    dirY: dy / len,
-    elapsedMs: 0,
-    totalMs: SLASH_TWICE_TOTAL_MS,
-    hitTimingsMs: SLASH_TWICE_HIT_TIMINGS_MS,
-    hitsApplied: 0,
-    perHitMultiplier: 1,
   });
 }

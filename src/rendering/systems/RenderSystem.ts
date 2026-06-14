@@ -32,6 +32,12 @@ export class RenderSystem implements System<Components> {
    *  `Sprite.mirrorOnFacingRight` to horizontally flip left-facing
    *  source art when the entity walks rightward. */
   private readonly facing = new Map<Entity, 1 | -1>();
+  /** Per-entity transient halo Graphics — currently used for the boss
+   *  Power Up aura. Mounted under the main entity layer so it sits
+   *  visually behind the sprite (lower zIndex); removed when the
+   *  PowerUp component is gone. Kept off the main `nodes` map so
+   *  swap / cleanup of the entity sprite doesn't drag it along. */
+  private readonly powerUpGlows = new Map<Entity, Graphics>();
   /** Accumulated frame time in ms — drives time-based visual effects (walk bob)
    *  in lockstep with the simulation clock so pause / lag spikes don't drift. */
   private elapsedMs = 0;
@@ -327,6 +333,35 @@ export class RenderSystem implements System<Components> {
       // Iso depth-sort: render lines further away (smaller gx+gy) first.
       const grid = worldToGrid(pos.x, pos.y);
       node.zIndex = Math.round(grid.x + grid.y);
+
+      // Power Up halo: soft red aura mounted just behind the sprite
+      // while the PowerUp component is present. Three concentric circles
+      // with falling alpha for a gentle radial falloff (no filter
+      // dependency); the alpha pulses in a sine wave so the glow
+      // breathes during the transformation window.
+      if (powerUp) {
+        let glow = this.powerUpGlows.get(id);
+        if (!glow) {
+          glow = this.buildPowerUpGlow(sprite.width, sprite.height);
+          this.layerContainer(sprite.layer).addChild(glow);
+          this.powerUpGlows.set(id, glow);
+        }
+        // Centre the glow around the sprite's torso. Pixi.Sprite anchors
+        // at (0.5, 1) shifted by yOffset (TILE_HALF_H), so its torso is
+        // ~ height/2 above the foot position.
+        const torsoY = pos.y + yOffset - sprite.height * 0.5;
+        glow.position.set(pos.x, torsoY);
+        // Breathing pulse — 2 cycles across the PowerUp window so the
+        // build-up reads as alive even with only 2 sprite frames.
+        const t = Math.min(1, powerUp.elapsedMs / Math.max(1, powerUp.totalMs));
+        const pulse = 0.55 + 0.45 * Math.sin(t * Math.PI * 4 - Math.PI / 2);
+        glow.alpha = pulse;
+        glow.zIndex = Math.round(grid.x + grid.y) - 1;
+      } else if (this.powerUpGlows.has(id)) {
+        const glow = this.powerUpGlows.get(id);
+        glow?.destroy();
+        this.powerUpGlows.delete(id);
+      }
     }
 
     // Cleanup: remove Pixi nodes for entities that no longer match.
@@ -335,6 +370,11 @@ export class RenderSystem implements System<Components> {
         node.destroy();
         this.nodes.delete(id);
         this.facing.delete(id);
+        const glow = this.powerUpGlows.get(id);
+        if (glow) {
+          glow.destroy();
+          this.powerUpGlows.delete(id);
+        }
       }
     }
   }
@@ -342,6 +382,8 @@ export class RenderSystem implements System<Components> {
   destroy(): void {
     for (const node of this.nodes.values()) node.destroy();
     this.nodes.clear();
+    for (const glow of this.powerUpGlows.values()) glow.destroy();
+    this.powerUpGlows.clear();
   }
 
   private layerContainer(layer: SpriteComp['layer']): Container {
@@ -353,6 +395,22 @@ export class RenderSystem implements System<Components> {
       case 'fx':
         return this.layers.fx;
     }
+  }
+
+  /** Build the three-circle radial halo. Centered on (0,0) — the caller
+   *  positions it at the sprite's torso each frame. Sized off the
+   *  sprite's intended dimensions so wider mobs get wider auras. The
+   *  per-circle alpha is constant; the whole Graphics' overall `alpha`
+   *  is animated by the update loop for the breathing pulse. */
+  private buildPowerUpGlow(spriteWidth: number, spriteHeight: number): Graphics {
+    const g = new Graphics();
+    const radius = Math.max(spriteWidth, spriteHeight) * 0.7;
+    // Outer-most ring first (largest, dimmest) so the inner rings
+    // composite on top — produces the soft falloff without a filter.
+    g.circle(0, 0, radius).fill({ color: 0xff1a08, alpha: 0.16 });
+    g.circle(0, 0, radius * 0.7).fill({ color: 0xff3a18, alpha: 0.22 });
+    g.circle(0, 0, radius * 0.4).fill({ color: 0xff5a30, alpha: 0.3 });
+    return g;
   }
 
   private createNode(sprite: SpriteComp): RenderNode {

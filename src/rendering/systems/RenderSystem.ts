@@ -78,6 +78,8 @@ export class RenderSystem implements System<Components> {
 
       const swing = world.getComponent(id, 'AttackSwing');
       const addition = world.getComponent(id, 'Addition');
+      const mobSwing = world.getComponent(id, 'MobMultiSwing');
+      const powerUp = world.getComponent(id, 'PowerUp');
       const spell = world.getComponent(id, 'Spell');
       const defending = world.hasComponent(id, 'Defending');
       const pf = world.getComponent(id, 'Pathfinder');
@@ -96,12 +98,19 @@ export class RenderSystem implements System<Components> {
       const walking =
         !swing &&
         !addition &&
+        !mobSwing &&
+        !powerUp &&
         !spell &&
         !defending &&
         pf?.targetGrid !== null &&
         pf?.targetGrid !== undefined;
 
-      // Texture swap priority: Dying > Spell > Addition > Defending > AttackSwing > Walking > idle.
+      // Texture swap priority:
+      //   Dying > PowerUp > MobMultiSwing > Spell > Addition > Defending > AttackSwing > Walking > idle.
+      // PowerUp sits just below Dying (boss transformation is the loudest
+      // signal short of death); MobMultiSwing (Slash Twice et al.) takes
+      // precedence over the standard swing so its frames render even when
+      // a regular AttackSwing also happens to be active.
       // Walking cycles through `avatar.sprite.base.walkFrames` when present;
       // otherwise keeps the idle sprite and the bob below conveys motion alone.
       if (node instanceof PixiSprite) {
@@ -120,6 +129,24 @@ export class RenderSystem implements System<Components> {
             desiredAlias = frames[Math.floor(t * frames.length)];
           } else {
             desiredAlias = sprite.deathTextureAlias;
+          }
+        } else if (powerUp && sprite.powerUpTextureAlias) {
+          // Boss transformation pose held statically for the PowerUp
+          // window (~600 ms v1). No frame splitting — the sprite is a
+          // single dramatic stance the AI freezes pathing around.
+          desiredAlias = sprite.powerUpTextureAlias;
+        } else if (mobSwing) {
+          // Boss-special multi-hit swing (Commander Slash Twice).
+          // Resolves frames from `Sprite.multiSwingFrames[swing.kind]`
+          // — falls back to the basic attack pose when the slug has no
+          // dedicated frame array (current case for Slash Twice until
+          // its 2-frame sprite ships).
+          const frames = sprite.multiSwingFrames?.[mobSwing.kind];
+          if (frames && frames.length > 0) {
+            const t = Math.min(0.999, mobSwing.elapsedMs / mobSwing.totalMs);
+            desiredAlias = frames[Math.floor(t * frames.length)];
+          } else if (sprite.attackTextureAlias) {
+            desiredAlias = sprite.attackTextureAlias;
           }
         } else if (addition) {
           // Resolve the addition's frame sequence at draw time from the
@@ -227,6 +254,15 @@ export class RenderSystem implements System<Components> {
         const reach = 28;
         swingX = addition.dirX * curve * reach;
         swingY = addition.dirY * curve * reach;
+      } else if (mobSwing) {
+        // Same two-bump pulse as Addition since Slash Twice also has 2
+        // hit checkpoints — keeps boss specials reading the same way
+        // as the player's Double Slash.
+        const t = Math.min(1, mobSwing.elapsedMs / mobSwing.totalMs);
+        const curve = Math.abs(Math.sin(t * Math.PI * 2));
+        const reach = 28;
+        swingX = mobSwing.dirX * curve * reach;
+        swingY = mobSwing.dirY * curve * reach;
       } else if (swing) {
         const t = Math.min(1, swing.elapsedMs / swing.totalMs);
         const curve = t < 0.4 ? t / 0.4 : 1 - (t - 0.4) / 0.6;
@@ -261,7 +297,7 @@ export class RenderSystem implements System<Components> {
           this.facing.set(id, dx > 0 ? 1 : -1);
         }
       } else {
-        const actionDirX = addition?.dirX ?? spell?.dirX ?? swing?.dirX;
+        const actionDirX = addition?.dirX ?? mobSwing?.dirX ?? spell?.dirX ?? swing?.dirX;
         if (actionDirX !== undefined && Math.abs(actionDirX) > 0.01) {
           this.facing.set(id, actionDirX > 0 ? 1 : -1);
         }

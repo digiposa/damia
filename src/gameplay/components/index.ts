@@ -17,9 +17,11 @@ import type { Hidden } from './Hidden';
 import type { Interactable } from './Interactable';
 import type { Inventory } from './Inventory';
 import type { Item } from './Item';
+import type { MobMultiSwing } from './MobMultiSwing';
 import type { Pathfinder } from './Pathfinder';
 import type { Player } from './Player';
 import type { Position } from './Position';
+import type { PowerUp } from './PowerUp';
 import type { Progression } from './Progression';
 import type { Projectile } from './Projectile';
 import type { RandomEncounter } from './RandomEncounter';
@@ -65,6 +67,8 @@ export interface Components {
   Vfx: Vfx;
   Progression: Progression;
   Projectile: Projectile;
+  PowerUp: PowerUp;
+  MobMultiSwing: MobMultiSwing;
 }
 
 export type ComponentName = keyof Components;
@@ -89,9 +93,11 @@ export type {
   Interactable,
   Inventory,
   Item,
+  MobMultiSwing,
   Pathfinder,
   Player,
   Position,
+  PowerUp,
   Progression,
   Projectile,
   RandomEncounter,

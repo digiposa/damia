@@ -23,4 +23,14 @@ export interface AI {
    *  (Commander → Burn Out) check it before firing. 0 / undefined =
    *  ready. */
   spellCooldownMs?: number;
+  /** Commander Seles only (v1). True after the Power Up transformation
+   *  completes — gates Slash Twice in place of Sword Slash, bumps Burn
+   *  Out 1.0 → 1.5×, and disables future Power Up triggers (canonically
+   *  single-use). Persists for the rest of the encounter. */
+  poweredUp?: boolean;
+  /** Cooldown between Slash Twice swings while `poweredUp`. AISystem
+   *  manages the post-PowerUp combat loop itself (CombatSystem is
+   *  bypassed for Commander once transformed) so the regular
+   *  `AttackCooldown` would conflict; this is the post-PU equivalent. */
+  slashTwiceCooldownMs?: number;
 }

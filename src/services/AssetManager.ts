@@ -541,12 +541,12 @@ const MANIFEST = {
     tags: ['mob:commanderSeles'],
   },
   // Power Up transformation animation — 2 frames split across the
-  // PowerUp window (~600 ms total). Frame 1 = build-up stance, red
-  // aura on arms + cape. Frame 2 = peak transformation, sword drawn
-  // inside a dark vortex with crimson lightning. When the window
-  // ends the boss reverts to its standard chassis with
-  // `AI.poweredUp = true` (Slash Twice replaces Sword Slash, Burn
-  // Out × 1.5).
+  // PowerUp window (~900 ms total). Frame 1 = build-up stance, red
+  // aura on arms + cape. Frame 2 = peak transformation, arms wide
+  // with a glowing crimson core, "fully changed" stance before he
+  // returns to his combat chassis. When the window ends the boss
+  // reverts to its standard pipeline with `AI.poweredUp = true`
+  // (Slash Twice replaces Sword Slash, Burn Out × 1.5).
   'sprite.mob.commander.powerup.1': {
     kind: 'texture',
     url: '/assets/sprites/mobs/commander-powerup-1.png',

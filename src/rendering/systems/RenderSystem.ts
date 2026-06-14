@@ -129,11 +129,19 @@ export class RenderSystem implements System<Components> {
           } else {
             desiredAlias = sprite.deathTextureAlias;
           }
-        } else if (powerUp && sprite.powerUpTextureAlias) {
-          // Boss transformation pose held statically for the PowerUp
-          // window (~600 ms v1). No frame splitting — the sprite is a
-          // single dramatic stance the AI freezes pathing around.
-          desiredAlias = sprite.powerUpTextureAlias;
+        } else if (powerUp && (sprite.powerUpFrames || sprite.powerUpTextureAlias)) {
+          // Boss transformation animation. Multi-frame path splits
+          // PowerUp.totalMs evenly across the frame array (same logic
+          // as deathFrames), letting the boss build up → peak inside
+          // a single sustained pathing freeze. Falls back to the
+          // single-pose `powerUpTextureAlias` when no frames are set.
+          const frames = sprite.powerUpFrames;
+          if (frames && frames.length > 0) {
+            const t = Math.min(0.999, powerUp.elapsedMs / powerUp.totalMs);
+            desiredAlias = frames[Math.floor(t * frames.length)];
+          } else {
+            desiredAlias = sprite.powerUpTextureAlias;
+          }
         } else if (addition) {
           // Resolve the addition's frame sequence at draw time from the
           // entity's avatar, instead of caching it on Sprite at spawn.

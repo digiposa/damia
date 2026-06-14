@@ -43,10 +43,12 @@ const COMMANDER_CAST_MIN_RANGE_PX = 80;
  *  spawn. Wire the Knights-down predicate alongside once the scripted
  *  Seles formation lands. */
 const COMMANDER_POWER_UP_HP_TRIGGER = 0.6;
-/** Power Up transformation window. Boss freezes pathing + holds the
- *  dramatic aura stance for this many ms, then drops the component
- *  and flips `AI.poweredUp = true`. */
-const COMMANDER_POWER_UP_MS = 600;
+/** Power Up transformation window. Boss freezes pathing for this many
+ *  ms while RenderSystem splits the duration across `powerUpFrames`
+ *  (2 frames v1 = 450 ms each — long enough that each pose reads as
+ *  a deliberate beat rather than a flash). On expiry the component is
+ *  dropped and `AI.poweredUp = true` latches. */
+const COMMANDER_POWER_UP_MS = 900;
 /** Multiplier applied to Burn Out's base damage after Power Up. Canon
  *  TLoD bumps the Fire-elemental spell from 1.2× to 1.5×; baseline
  *  here is 1.0 (we haven't shipped the pre-PU 1.2× yet — flip both

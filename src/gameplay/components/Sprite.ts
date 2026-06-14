@@ -63,11 +63,18 @@ export interface Sprite {
    *  of Sandora's "Throw Dagger" is the first user — same split-by-
    *  elapsed math as attackFrames. */
   throwFrames?: ReadonlyArray<AssetAlias>;
-  /** Optional pose used while the entity has a `PowerUp` component.
-   *  Boss-specific transformation stance — RenderSystem swaps in
-   *  this single static pose for the PowerUp's full duration. v1:
-   *  Commander Seles' aura/flame transformation. */
+  /** Optional pose used while the entity has a `PowerUp` component
+   *  WHEN the multi-frame `powerUpFrames` array is unset. Single-pose
+   *  fallback, mirrors the deathTextureAlias / deathFrames pattern. */
   powerUpTextureAlias?: AssetAlias;
+  /** Optional multi-frame transformation animation. RenderSystem
+   *  splits the PowerUp's `totalMs` evenly across the array (same
+   *  split-by-elapsed math as deathFrames / attackFrames) so the
+   *  transformation reads as a build-up → peak sequence. Falls back
+   *  to `powerUpTextureAlias` when this is empty / undefined. v1:
+   *  Commander Seles' 2-frame "aura builds → sword drawn in vortex"
+   *  transformation. */
+  powerUpFrames?: ReadonlyArray<AssetAlias>;
   /** Optional Slash Twice frames, picked by RenderSystem when the
    *  entity has an `AttackSwing` with `kind: 'slashTwice'`. Same
    *  split-by-elapsed math as `attackFrames`. Commander Seles uses

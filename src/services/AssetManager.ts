@@ -540,13 +540,22 @@ const MANIFEST = {
     autoTrim: true,
     tags: ['mob:commanderSeles'],
   },
-  // Power Up transformation pose — Commander wreathed in red flame aura.
-  // Held for the full PowerUp.totalMs window (~600 ms) before the boss
-  // reverts to its standard idle/melee chassis with `AI.poweredUp = true`
-  // (Slash Twice replaces Sword Slash, Burn Out × 1.5 instead of × 1).
-  'sprite.mob.commander.powerup': {
+  // Power Up transformation animation — 2 frames split across the
+  // PowerUp window (~600 ms total). Frame 1 = build-up stance, red
+  // aura on arms + cape. Frame 2 = peak transformation, sword drawn
+  // inside a dark vortex with crimson lightning. When the window
+  // ends the boss reverts to its standard chassis with
+  // `AI.poweredUp = true` (Slash Twice replaces Sword Slash, Burn
+  // Out × 1.5).
+  'sprite.mob.commander.powerup.1': {
     kind: 'texture',
-    url: '/assets/sprites/mobs/commander-powerup.png',
+    url: '/assets/sprites/mobs/commander-powerup-1.png',
+    autoTrim: true,
+    tags: ['mob:commanderSeles'],
+  },
+  'sprite.mob.commander.powerup.2': {
+    kind: 'texture',
+    url: '/assets/sprites/mobs/commander-powerup-2.png',
     autoTrim: true,
     tags: ['mob:commanderSeles'],
   },

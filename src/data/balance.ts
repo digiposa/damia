@@ -366,7 +366,7 @@ export const MOBS: Record<MobKind, MobDefinition> = {
       textureAlias: 'sprite.mob.commander',
       attackTextureAlias: 'sprite.mob.commander.attack.1',
       castTextureAlias: 'sprite.mob.commander.cast',
-      powerUpTextureAlias: 'sprite.mob.commander.powerup',
+      powerUpFrames: ['sprite.mob.commander.powerup.1', 'sprite.mob.commander.powerup.2'],
       deathTextureAlias: 'sprite.mob.commander.death.6',
       walkFrames: ['sprite.mob.commander.walk.1', 'sprite.mob.commander.walk.2'],
       attackFrames: ['sprite.mob.commander.attack.1', 'sprite.mob.commander.attack.2'],

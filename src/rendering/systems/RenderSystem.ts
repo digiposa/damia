@@ -318,10 +318,31 @@ export class RenderSystem implements System<Components> {
       const scaleMod = sprite.scale ?? 1;
       let fitScale = 1;
       if (node instanceof PixiSprite && node.texture) {
+        // Reference texture for fitMode resolution. By default we
+        // resolve against the currently-rendered texture's bbox —
+        // every autoTrimmed pose (idle / walk / attack / cast / death)
+        // has a similar character-only bbox, so the figure size stays
+        // stable across state swaps.
+        //
+        // PowerUp is the exception: its frames are deliberately
+        // padded to a uniform canvas (so frame 1 and frame 2 share
+        // the same dimensions for animation consistency — see the
+        // `normalize-frames.py` workflow), which means their height
+        // includes the aura's vertical extent on top of the figure.
+        // Resolving fitMode against that taller height would shrink
+        // the boss vs the rest of his poses. Fall back to the idle
+        // texture's height so the figure renders at exactly the same
+        // scale as the regular chassis, and the aura just overflows
+        // around it the way the artist drew it.
+        let refTex = node.texture;
+        if (powerUp && sprite.textureAlias) {
+          const idleTex = AssetManager.getTexture(sprite.textureAlias);
+          if (idleTex) refTex = idleTex;
+        }
         fitScale =
           sprite.fitMode === 'height'
-            ? sprite.height / node.texture.height
-            : Math.min(sprite.width / node.texture.width, sprite.height / node.texture.height);
+            ? sprite.height / refTex.height
+            : Math.min(sprite.width / refTex.width, sprite.height / refTex.height);
       }
       // Horizontal mirror when the entity is facing right and its art was
       // drawn facing left (opt-in via `Sprite.mirrorOnFacingRight`). The

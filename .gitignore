@@ -15,7 +15,6 @@ dist-ssr
 .env.local
 .env.*.local
 *.log
-shareAI
 tsconfig.tsbuildinfo
 .claude/
 .vite/

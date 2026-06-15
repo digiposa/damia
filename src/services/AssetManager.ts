@@ -502,36 +502,38 @@ const MANIFEST = {
     tags: ['mob:knightOfSandoraSeles', 'mob:knightOfSandoraKazas'],
   },
 
-  // Commander (Seles) — boss canon Disc 1. Idle pose only for now;
-  // walk / attack / spell-cast / death frames pending.
+  // Commander (Seles) — boss canon Disc 1. Idle + walk + basic-attack
+  // frames are a regenerated magenta sprite set, all authored at the
+  // same camera scale + placed on a common 1171×1381 canvas with feet
+  // aligned (see scripts/prepare-sheet.py + the density-match workflow).
+  // autoTrim is OFF on this set: trimming would re-crop each frame to
+  // its own alpha bbox and reintroduce the per-pose size variance the
+  // common canvas exists to remove (standing idle vs crouched lunge).
+  // Cast / death / powerup frames below are the older set at a separate
+  // scale — regenerate them into this canvas for full consistency.
   'sprite.mob.commander': {
     kind: 'texture',
     url: '/assets/sprites/mobs/commander.png',
-    autoTrim: true,
     tags: ['mob:commanderSeles'],
   },
   'sprite.mob.commander.walk.1': {
     kind: 'texture',
     url: '/assets/sprites/mobs/commander-walk-1.png',
-    autoTrim: true,
     tags: ['mob:commanderSeles'],
   },
   'sprite.mob.commander.walk.2': {
     kind: 'texture',
     url: '/assets/sprites/mobs/commander-walk-2.png',
-    autoTrim: true,
     tags: ['mob:commanderSeles'],
   },
   'sprite.mob.commander.attack.1': {
     kind: 'texture',
     url: '/assets/sprites/mobs/commander-attack-1.png',
-    autoTrim: true,
     tags: ['mob:commanderSeles'],
   },
   'sprite.mob.commander.attack.2': {
     kind: 'texture',
     url: '/assets/sprites/mobs/commander-attack-2.png',
-    autoTrim: true,
     tags: ['mob:commanderSeles'],
   },
   'sprite.mob.commander.cast': {

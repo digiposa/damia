@@ -536,10 +536,12 @@ const MANIFEST = {
     url: '/assets/sprites/mobs/commander-attack-2.png',
     tags: ['mob:commanderSeles'],
   },
+  // Burn Out cast pose — regenerated into the common 1248×1321 canvas
+  // with the idle/walk/attack set (feet-aligned, scale-matched), so
+  // autoTrim stays OFF like the rest of that set.
   'sprite.mob.commander.cast': {
     kind: 'texture',
     url: '/assets/sprites/mobs/commander-cast.png',
-    autoTrim: true,
     tags: ['mob:commanderSeles'],
   },
   // Power Up transformation animation — 2 frames split across the

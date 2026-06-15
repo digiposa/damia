@@ -547,16 +547,22 @@ const MANIFEST = {
   // returns to his combat chassis. When the window ends the boss
   // reverts to its standard pipeline with `AI.poweredUp = true`
   // (Slash Twice replaces Sword Slash, Burn Out × 1.5).
+  //
+  // autoTrim deliberately off — both frames are pre-padded to a
+  // uniform 402×506 canvas with the figure bottom-centered. Each
+  // frame's aura extends differently (frame 1 sideways, frame 2
+  // vertically), so an autoTrim pass would crop them to mismatched
+  // alpha boxes and the boss would visibly shrink / grow between
+  // the two poses with fitMode='height'. Keeping the full canvas
+  // means both render at the same effective scale.
   'sprite.mob.commander.powerup.1': {
     kind: 'texture',
     url: '/assets/sprites/mobs/commander-powerup-1.png',
-    autoTrim: true,
     tags: ['mob:commanderSeles'],
   },
   'sprite.mob.commander.powerup.2': {
     kind: 'texture',
     url: '/assets/sprites/mobs/commander-powerup-2.png',
-    autoTrim: true,
     tags: ['mob:commanderSeles'],
   },
   'sprite.mob.commander.death.1': {

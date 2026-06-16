@@ -5,7 +5,9 @@ import { spawnProjectile } from '@gameplay/entities/projectile';
 import { FLOAT_HEAL_HP, spawnFloatingText } from '@gameplay/entities/floatingText';
 import { effectiveAtk } from '@gameplay/stats';
 import { SPELLS } from '@data/spells';
+import { MOB_ABILITIES, type MobAbilityId } from '@data/mobAbilities';
 import { playSfx } from '@services/AudioManager';
+import { t } from '@services/I18nService';
 
 const FLEE_HP_THRESHOLD = 0.3;
 const FLEE_DISTANCE_PX = 320;
@@ -265,6 +267,7 @@ function updateKnightOfSandora(
     world.hasComponent(id, 'Dying');
   if (!inMeleeRange && throwReady && !busy) {
     fireKnightThrow(id, world, playerId, pos, playerPos);
+    stageAbilityTelegraph(world, id, 'throwDagger', pos);
     ai.throwCooldownMs = KNIGHT_THROW_COOLDOWN_MS;
     // Clear any pending melee intent so CombatSystem doesn't double-
     // up the swing on the same tick.
@@ -362,6 +365,49 @@ function updateCommanderSeles(
     if (healGlow.elapsedMs >= healGlow.totalMs) world.removeComponent(id, 'HealGlow');
   }
 
+  // --- Ability telegraph window ---------------------------------------
+  // Two roles. For abilities whose gameplay component (Spell, PowerUp)
+  // already owns its wind-up, the telegraph is overlay-only — it ticks
+  // alongside the gameplay component, drives the cast-bar, and is
+  // removed on expiry without dispatching anything (the gameplay
+  // component handles the impact on its own). For the genuinely instant
+  // `healRecovers` ability, the telegraph IS the gate: it freezes the
+  // boss during the synthetic wind-up, then applies the heal + visual
+  // pop on expiry.
+  const telegraph = world.getComponent(id, 'AbilityTelegraph');
+  if (telegraph) {
+    telegraph.elapsedMs += dt;
+    const expired = telegraph.elapsedMs >= telegraph.totalMs;
+    if (expired) {
+      if (telegraph.id === 'healRecovers') {
+        const healAmount = Math.round(hp.max * COMMANDER_HEAL_FRAC);
+        hp.current = Math.min(hp.max, hp.current + healAmount);
+        ai.healedOnce = true;
+        spawnFloatingText(world, {
+          x: pos.x,
+          y: pos.y,
+          text: `+${healAmount}`,
+          color: FLOAT_HEAL_HP,
+        });
+        world.addComponent(id, 'HealGlow', { elapsedMs: 0, totalMs: COMMANDER_HEAL_GLOW_MS });
+        playSfx('items.pickup');
+      }
+      world.removeComponent(id, 'AbilityTelegraph');
+    }
+    // healRecovers has no parallel gameplay component, so the telegraph
+    // is the only thing freezing the boss. Hold pathing + skip the rest
+    // of the handler until it expires.
+    if (telegraph.id === 'healRecovers' && !expired) {
+      if (world.hasComponent(id, 'CombatIntent')) world.removeComponent(id, 'CombatIntent');
+      const pf = world.getComponent(id, 'Pathfinder');
+      if (pf) {
+        pf.waypoints = null;
+        pf.targetGrid = null;
+      }
+      return;
+    }
+  }
+
   // --- PowerUp visual window -------------------------------------------
   // While the transformation plays the boss stops everything — no
   // chase, no swing, no cast. CombatIntent is dropped so CombatSystem
@@ -391,7 +437,8 @@ function updateCommanderSeles(
   const busy =
     world.hasComponent(id, 'Spell') ||
     world.hasComponent(id, 'AttackSwing') ||
-    world.hasComponent(id, 'Addition');
+    world.hasComponent(id, 'Addition') ||
+    world.hasComponent(id, 'AbilityTelegraph');
 
   // --- Power Up trigger (single-use, HP threshold) ---------------------
   // The `!busy` guard prevents the transformation from interrupting a
@@ -402,27 +449,18 @@ function updateCommanderSeles(
       elapsedMs: 0,
       totalMs: COMMANDER_POWER_UP_MS,
     });
+    stageAbilityTelegraph(world, id, 'powerUp', pos);
     if (world.hasComponent(id, 'CombatIntent')) world.removeComponent(id, 'CombatIntent');
     return;
   }
 
   // --- HP recovers self-heal (single-use, HP < 51%) -------------------
-  // Auto boss heal. Fires between actions (the `!busy` guard) so the
-  // green pop doesn't land mid-swing. Restores 30% of max HP, capped at
-  // max, then latches so it never repeats.
+  // The actual heal + glow are applied when the telegraph window
+  // expires (see the telegraph tick at the top of the handler). This
+  // gives the player a short reactive beat to see the move coming.
   if (!ai.healedOnce && !busy && hp.current / hp.max < COMMANDER_HEAL_HP_TRIGGER) {
-    const healAmount = Math.round(hp.max * COMMANDER_HEAL_FRAC);
-    hp.current = Math.min(hp.max, hp.current + healAmount);
-    ai.healedOnce = true;
-    spawnFloatingText(world, {
-      x: pos.x,
-      y: pos.y,
-      text: `+${healAmount}`,
-      color: FLOAT_HEAL_HP,
-    });
-    // Brief blue heal aura (cosmetic — doesn't freeze the boss).
-    world.addComponent(id, 'HealGlow', { elapsedMs: 0, totalMs: COMMANDER_HEAL_GLOW_MS });
-    playSfx('items.pickup');
+    stageAbilityTelegraph(world, id, 'healRecovers', pos);
+    if (world.hasComponent(id, 'CombatIntent')) world.removeComponent(id, 'CombatIntent');
     return;
   }
 
@@ -432,6 +470,7 @@ function updateCommanderSeles(
   // --- Burn Out cast (1.0× pre-PU, 1.5× post-PU) -----------------------
   if (spellReady && inSpellWindow && !busy) {
     fireCommanderBurnOut(id, world, playerId, pos, playerPos, ai.poweredUp ?? false);
+    stageAbilityTelegraph(world, id, 'burnOut', pos);
     ai.spellCooldownMs = COMMANDER_SPELL_COOLDOWN_MS;
     if (world.hasComponent(id, 'CombatIntent')) world.removeComponent(id, 'CombatIntent');
     const pf = world.getComponent(id, 'Pathfinder');
@@ -485,5 +524,34 @@ function fireCommanderBurnOut(
     dirY: dy / len,
     vfxKind: spell.vfx,
     vfxRadiusPx: spell.vfxRadiusPx ?? 60,
+  });
+}
+
+/** Stage a mob ability telegraph: add the AbilityTelegraph component
+ *  (which drives the cast bar painted by EntityHudSystem) and pop the
+ *  ability's i18n label as a coloured floating text above the mob.
+ *  Caller is responsible for spawning the underlying gameplay component
+ *  (Spell, PowerUp, AttackSwing…) alongside; the telegraph is overlay
+ *  only — except for `healRecovers`, where the telegraph itself gates
+ *  the dispatch (see the tick loop at the top of updateCommanderSeles). */
+function stageAbilityTelegraph(
+  world: World<Components>,
+  id: Entity,
+  abilityId: MobAbilityId,
+  pos: Position,
+): void {
+  const config = MOB_ABILITIES[abilityId];
+  world.addComponent(id, 'AbilityTelegraph', {
+    id: abilityId,
+    elapsedMs: 0,
+    totalMs: config.windUpMs,
+  });
+  // Label pops above the mob's head and rises — gives the player a
+  // reactive read on the move BEFORE its impact frame.
+  spawnFloatingText(world, {
+    x: pos.x,
+    y: pos.y - 80,
+    text: t(config.labelKey),
+    color: config.color,
   });
 }

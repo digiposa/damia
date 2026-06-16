@@ -299,5 +299,15 @@
   "addition": {
     "cooldown": "Not ready",
     "noTarget": "No target in range"
+  },
+  "ability": {
+    "commander": {
+      "burnOut": "BURN OUT",
+      "powerUp": "POWER UP",
+      "heal": "HP RECOVERS"
+    },
+    "knight": {
+      "throwDagger": "THROW DAGGER"
+    }
   }
 }

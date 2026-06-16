@@ -299,5 +299,15 @@
   "addition": {
     "cooldown": "Pas encore prêt",
     "noTarget": "Aucune cible à portée"
+  },
+  "ability": {
+    "commander": {
+      "burnOut": "BRÛLURE",
+      "powerUp": "TRANSFORMATION",
+      "heal": "RÉGÉNÉRATION"
+    },
+    "knight": {
+      "throwDagger": "JET DE DAGUE"
+    }
   }
 }

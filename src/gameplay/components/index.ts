@@ -1,6 +1,7 @@
 import type { Addition } from './Addition';
 import type { Affinity } from './Affinity';
 import type { AI } from './AI';
+import type { AbilityTelegraph } from './AbilityTelegraph';
 import type { AttackCooldown } from './AttackCooldown';
 import type { AttackSwing } from './AttackSwing';
 import type { Character } from './Character';
@@ -69,6 +70,7 @@ export interface Components {
   Projectile: Projectile;
   PowerUp: PowerUp;
   HealGlow: HealGlow;
+  AbilityTelegraph: AbilityTelegraph;
 }
 
 export type ComponentName = keyof Components;
@@ -77,6 +79,7 @@ export type {
   Addition,
   Affinity,
   AI,
+  AbilityTelegraph,
   AttackCooldown,
   AttackSwing,
   Character,

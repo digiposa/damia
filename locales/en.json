@@ -102,6 +102,7 @@
     "music": "Music volume",
     "sfx": "SFX volume",
     "voice": "Voice volume",
+    "combatSpeed": "Combat speed",
     "language": "Language",
     "codex": "Codex",
     "resume": "Resume",

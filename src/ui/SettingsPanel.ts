@@ -9,6 +9,7 @@ import {
   setSfxVolume,
   setVoiceVolume,
 } from '@services/AudioManager';
+import { COMBAT_SPEED_STEP, getCombatSpeed, setCombatSpeed } from '@services/CombatPaceService';
 import { Modal } from './Modal';
 import { SPACING, TEXT } from './theme';
 import { mkButton, mkCloseButton, mkPanel, mkRow, mkText } from './layoutHelpers';
@@ -16,10 +17,11 @@ import { mkButton, mkCloseButton, mkPanel, mkRow, mkText } from './layoutHelpers
 const VOLUME_STEP = 0.1;
 const STEPPER_SIZE = 32;
 const ACTION_BUTTON_HEIGHT = 36;
-/** Total panel height: title strip + 5 rows + Bestiary button + spacer
- *  + 2 action buttons + gaps + padding. Sized so the panel is comfortably
- *  centered on every viewport, not stretched to the full modal max. */
-const PANEL_MAX_HEIGHT = 520;
+/** Total panel height: title strip + 6 rows (4 volume + combat speed +
+ *  language) + Bestiary button + spacer + 2 action buttons + gaps +
+ *  padding. Sized so the panel is comfortably centered on every
+ *  viewport, not stretched to the full modal max. */
+const PANEL_MAX_HEIGHT = 560;
 
 export type SettingsPanelAction = 'resume' | 'quit-to-title' | 'open-codex';
 
@@ -48,6 +50,7 @@ export class SettingsPanel extends Modal {
   private musicValueText: Text | null = null;
   private sfxValueText: Text | null = null;
   private voiceValueText: Text | null = null;
+  private combatSpeedValueText: Text | null = null;
   private langValueText: Text | null = null;
   private readonly showActions: boolean;
   protected override panelMaxHeight = PANEL_MAX_HEIGHT;
@@ -114,6 +117,9 @@ export class SettingsPanel extends Modal {
     this.sfxValueText = this.buildVolumeRow(panel, t('settings.sfx'), 'sfx');
     this.voiceValueText = this.buildVolumeRow(panel, t('settings.voice'), 'voice');
 
+    // --- Combat speed row -----------------------------------------------
+    this.combatSpeedValueText = this.buildCombatSpeedRow(panel, t('settings.combatSpeed'));
+
     // --- Language row ---------------------------------------------------
     this.langValueText = this.buildLangRow(panel, t('settings.language'));
 
@@ -155,6 +161,37 @@ export class SettingsPanel extends Modal {
         height: STEPPER_SIZE,
         fontSize: 18,
         onTap: () => this.adjustVolume(kind, VOLUME_STEP),
+      }),
+    );
+    row.addChild(right);
+    parent.addChild(row);
+    return value;
+  }
+
+  private buildCombatSpeedRow(parent: Container, label: string): Text {
+    const row = mkRow({
+      layout: { alignItems: 'center', justifyContent: 'space-between', width: '100%', gap: 8 },
+    });
+    row.addChild(mkText(label, TEXT.label));
+    const right = mkRow({ layout: { alignItems: 'center', gap: 8 } });
+    const value = mkText('', { ...TEXT.value, fontFamily: 'monospace' });
+    right.addChild(
+      mkButton({
+        label: '-',
+        width: STEPPER_SIZE,
+        height: STEPPER_SIZE,
+        fontSize: 18,
+        onTap: () => this.adjustCombatSpeed(-COMBAT_SPEED_STEP),
+      }),
+    );
+    right.addChild(value);
+    right.addChild(
+      mkButton({
+        label: '+',
+        width: STEPPER_SIZE,
+        height: STEPPER_SIZE,
+        fontSize: 18,
+        onTap: () => this.adjustCombatSpeed(COMBAT_SPEED_STEP),
       }),
     );
     row.addChild(right);
@@ -228,6 +265,15 @@ export class SettingsPanel extends Modal {
     this.refreshValues();
   }
 
+  private adjustCombatSpeed(delta: number): void {
+    playSfx('ui.click');
+    // setCombatSpeed clamps to [MIN, MAX]; rounding keeps the stored
+    // value on clean 0.05 steps so the displayed % doesn't drift.
+    const next = Math.round((getCombatSpeed() + delta) * 100) / 100;
+    setCombatSpeed(next);
+    this.refreshValues();
+  }
+
   private cycleLanguage(direction: number): void {
     playSfx('ui.click');
     const cur = getLanguage();
@@ -246,6 +292,9 @@ export class SettingsPanel extends Modal {
     if (this.musicValueText) this.musicValueText.text = `${Math.round(v.music * 100)}%`;
     if (this.sfxValueText) this.sfxValueText.text = `${Math.round(v.sfx * 100)}%`;
     if (this.voiceValueText) this.voiceValueText.text = `${Math.round(v.voice * 100)}%`;
+    if (this.combatSpeedValueText) {
+      this.combatSpeedValueText.text = `${Math.round(getCombatSpeed() * 100)}%`;
+    }
     if (this.langValueText) this.langValueText.text = getLanguage().toUpperCase();
   }
 }

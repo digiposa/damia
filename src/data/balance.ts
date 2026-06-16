@@ -12,6 +12,28 @@ export const COMBAT = {
   minDamage: 1,
 } as const;
 
+/**
+ * Global combat-pacing knob. Stretches the *action* timings of combat —
+ * attack swing durations, the auto-attack cadence (1000/atkSpeed) and
+ * spell cast windows (player + mobs) — so each move reads clearly
+ * without speeding up or slowing down movement. 1.0 = original tuning;
+ * >1 = slower / more legible.
+ *
+ * Deliberately does NOT scale: walk speed, ability *cooldowns* (Burn
+ * Out, Knight throw, Additions), the PowerUp / heal freeze windows, or
+ * projectile travel. Those gate how *often* something happens, not how
+ * readable a single action is. Telegraphs that overlay a scaled action
+ * (see `data/mobAbilities.ts` `scalesWithPace`) are paced in lockstep so
+ * their cast bars stay in sync. Experimental — tune or reset here, in
+ * this one place.
+ */
+export const COMBAT_PACE = 1.25;
+
+/** Scale a base combat-action duration (ms) by COMBAT_PACE, rounded to
+ *  an integer ms. Apply at the point a swing / cast / cadence timing is
+ *  written so the knob stays the single source of truth. */
+export const pace = (ms: number): number => Math.round(ms * COMBAT_PACE);
+
 /** Defend stance tuning. Activating defend locks the player in place for
  *  `DEFEND_DURATION_MS`, heals `DEFEND_HEAL_FRAC` of max HP at the moment
  *  of the block, and starts a `DEFEND_COOLDOWN_MS` cooldown (the lock-in

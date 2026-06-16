@@ -20,12 +20,20 @@
  *                    cast bar then runs in lockstep with the real
  *                    move. For instant abilities (HP recovers) this
  *                    is a synthetic delay added purely for legibility.
+ *   scalesWithPace — true when this telegraph overlays an action whose
+ *                    timing is stretched by the global COMBAT_PACE knob
+ *                    (the Burn Out cast, the dagger-throw swing). The
+ *                    window is then paced in lockstep so the cast bar
+ *                    finishes exactly with the move. Leave false for
+ *                    telegraphs over fixed windows (PowerUp / heal
+ *                    freezes), which COMBAT_PACE does not touch.
  */
 export interface AbilityConfig {
   labelKey: string;
   color: number;
   showCastBar: boolean;
   windUpMs: number;
+  scalesWithPace: boolean;
 }
 
 export type MobAbilityId = 'burnOut' | 'powerUp' | 'healRecovers' | 'throwDagger';
@@ -35,9 +43,11 @@ export const MOB_ABILITIES: Record<MobAbilityId, AbilityConfig> = {
     labelKey: 'ability.commander.burnOut',
     color: 0xff6a2a, // fire orange
     showCastBar: true,
-    // Matches SPELLS.burnOut.hitTimingMs so the bar fills exactly until
-    // the spell's impact tick.
+    // Base = SPELLS.burnOut.totalMs (full cast). Paced in lockstep with
+    // the Spell component (which is also pace()-scaled in AISystem) so
+    // the bar completes exactly when the cast ends.
     windUpMs: 600,
+    scalesWithPace: true,
   },
   powerUp: {
     labelKey: 'ability.commander.powerUp',
@@ -45,7 +55,9 @@ export const MOB_ABILITIES: Record<MobAbilityId, AbilityConfig> = {
     showCastBar: true,
     // Matches the PowerUp component window in AISystem (its full
     // freeze duration) so the bar drains over the whole transformation.
+    // Fixed window — COMBAT_PACE doesn't scale the transform freeze.
     windUpMs: 900,
+    scalesWithPace: false,
   },
   healRecovers: {
     labelKey: 'ability.commander.heal',
@@ -53,15 +65,18 @@ export const MOB_ABILITIES: Record<MobAbilityId, AbilityConfig> = {
     showCastBar: true,
     // Synthetic delay — the heal is canonically instant; the bar gives
     // the player a beat to see the move coming so they can burst the
-    // boss to cancel via lethal damage if they're close enough.
+    // boss to cancel via lethal damage if they're close enough. Fixed.
     windUpMs: 500,
+    scalesWithPace: false,
   },
   throwDagger: {
     labelKey: 'ability.knight.throwDagger',
     color: 0xb0b8c4, // steel grey (matches the dagger tint)
     // Knights aren't bosses — label only, no cast bar.
     showCastBar: false,
-    // Matches KNIGHT_THROW_SWING_MS in AISystem.
+    // Base = KNIGHT_THROW_SWING_MS; the throw swing is pace()-scaled in
+    // AISystem, so pace the telegraph too to keep them aligned.
     windUpMs: 600,
+    scalesWithPace: true,
   },
 };

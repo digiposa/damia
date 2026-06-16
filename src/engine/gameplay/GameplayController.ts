@@ -25,6 +25,7 @@ import {
   ADDITIONS,
   DEFEND,
   getAdditionLevel,
+  pace,
   type AdditionKind,
   type MobKind,
 } from '@data/balance';
@@ -1158,8 +1159,8 @@ export class GameplayController {
       this.world.addComponent(this.playerId, 'Spell', {
         kind: spellKind,
         elapsedMs: 0,
-        totalMs: spell.totalMs,
-        hitTimingMs: spell.hitTimingMs,
+        totalMs: pace(spell.totalMs),
+        hitTimingMs: pace(spell.hitTimingMs),
         hitApplied: false,
         bid: spell.bid,
         element: spell.element,
@@ -1193,8 +1194,8 @@ export class GameplayController {
         this.world.addComponent(this.playerId, 'Spell', {
           kind: spellKind,
           elapsedMs: 0,
-          totalMs: aoeSpell.totalMs,
-          hitTimingMs: aoeSpell.hitTimingMs,
+          totalMs: pace(aoeSpell.totalMs),
+          hitTimingMs: pace(aoeSpell.hitTimingMs),
           hitApplied: false,
           bid: aoeSpell.bid,
           element: aoeSpell.element,
@@ -1310,8 +1311,8 @@ export class GameplayController {
     this.world.addComponent(this.playerId, 'Spell', {
       kind: gt.spell,
       elapsedMs: 0,
-      totalMs: spellDef.totalMs,
-      hitTimingMs: spellDef.hitTimingMs,
+      totalMs: pace(spellDef.totalMs),
+      hitTimingMs: pace(spellDef.hitTimingMs),
       hitApplied: false,
       bid: spellDef.bid,
       element: spellDef.element,

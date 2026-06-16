@@ -5,7 +5,6 @@ import { spawnProjectile } from '@gameplay/entities/projectile';
 import { FLOAT_HEAL_HP, spawnFloatingText } from '@gameplay/entities/floatingText';
 import { effectiveAtk } from '@gameplay/stats';
 import { SPELLS } from '@data/spells';
-import { pace } from '@data/balance';
 import { MOB_ABILITIES, type MobAbilityId } from '@data/mobAbilities';
 import { playSfx } from '@services/AudioManager';
 import { t } from '@services/I18nService';
@@ -316,7 +315,7 @@ function fireKnightThrow(
   });
   world.addComponent(knightId, 'AttackSwing', {
     elapsedMs: 0,
-    totalMs: pace(KNIGHT_THROW_SWING_MS),
+    totalMs: KNIGHT_THROW_SWING_MS,
     dirX,
     dirY,
     kind: 'throw',
@@ -514,8 +513,8 @@ function fireCommanderBurnOut(
   world.addComponent(commanderId, 'Spell', {
     kind: 'burnOut',
     elapsedMs: 0,
-    totalMs: pace(spell.totalMs),
-    hitTimingMs: pace(spell.hitTimingMs),
+    totalMs: spell.totalMs,
+    hitTimingMs: spell.hitTimingMs,
     hitApplied: false,
     bid,
     element: spell.element,
@@ -542,14 +541,14 @@ function stageAbilityTelegraph(
   pos: Position,
 ): void {
   const config = MOB_ABILITIES[abilityId];
-  // Telegraphs over a COMBAT_PACE-scaled action (cast / swing) are paced
-  // in lockstep so the cast bar finishes with the move; fixed-window
-  // telegraphs (PowerUp / heal freezes) keep their raw duration.
-  const totalMs = config.scalesWithPace ? pace(config.windUpMs) : config.windUpMs;
+  // Raw wind-up. The telegraph's `elapsedMs` is ticked by AISystem on the
+  // scaled combat clock, exactly like the Spell / PowerUp component it
+  // overlays, so the cast bar stays in lockstep with the move at any
+  // combat speed without any explicit pacing here.
   world.addComponent(id, 'AbilityTelegraph', {
     id: abilityId,
     elapsedMs: 0,
-    totalMs,
+    totalMs: config.windUpMs,
   });
   // Label pops above the mob's head and rises — gives the player a
   // reactive read on the move BEFORE its impact frame.

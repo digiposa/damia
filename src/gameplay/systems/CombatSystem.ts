@@ -7,7 +7,6 @@ import { FLOAT_DAMAGE, spawnFloatingText } from '@gameplay/entities/floatingText
 import { spawnProjectile } from '@gameplay/entities/projectile';
 import { addSp } from '@gameplay/sp';
 import { effectiveAtk } from '@gameplay/stats';
-import { pace } from '@data/balance';
 import { playSfx } from '@services/AudioManager';
 
 const TARGET_RECHECK_MS = 100;
@@ -139,14 +138,14 @@ export class CombatSystem implements System<Components> {
           attackerAt: effectiveAtk(world, id),
           attackerLv: prog?.level ?? 1,
         });
-        cd.remainingMs = pace(1000 / Math.max(0.1, stats.atkSpeed));
+        cd.remainingMs = 1000 / Math.max(0.1, stats.atkSpeed);
         // AttackSwing still drives the bow-draw pose visually: a brief
         // sprite-swap to the attack texture even though no melee lunge
         // happens. Direction stored so the pose orientates correctly
         // when RenderSystem grows side-facing logic later.
         world.addComponent(id, 'AttackSwing', {
           elapsedMs: 0,
-          totalMs: pace(260),
+          totalMs: 260,
           dirX,
           dirY,
         });
@@ -169,7 +168,7 @@ export class CombatSystem implements System<Components> {
       // animation so the player can read it as "attacked but didn't
       // connect"; no damage, no SP, no hit SFX.
       const landed = rollHit(world, id, intent.targetId, 'attack');
-      cd.remainingMs = pace(1000 / Math.max(0.1, stats.atkSpeed));
+      cd.remainingMs = 1000 / Math.max(0.1, stats.atkSpeed);
 
       // Boss basic-attack swap: Commander Seles post-PowerUp uses
       // Slash Twice as his basic attack — same single-swing pipeline,
@@ -199,7 +198,7 @@ export class CombatSystem implements System<Components> {
       // Plays even on miss so the swing reads as an attempted attack.
       world.addComponent(id, 'AttackSwing', {
         elapsedMs: 0,
-        totalMs: pace(isSlashTwice ? COMMANDER_SLASH_TWICE_SWING_MS : 220),
+        totalMs: isSlashTwice ? COMMANDER_SLASH_TWICE_SWING_MS : 220,
         dirX,
         dirY,
         ...(isSlashTwice ? { kind: 'slashTwice' as const } : {}),

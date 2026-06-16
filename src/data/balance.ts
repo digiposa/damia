@@ -12,26 +12,6 @@ export const COMBAT = {
   minDamage: 1,
 } as const;
 
-/**
- * Combat-pacing helper. Stretches the *action* timings of combat —
- * attack swing durations, the auto-attack cadence (1000/atkSpeed) and
- * spell cast windows (player + mobs) — so each move reads clearly
- * without speeding up or slowing down movement.
- *
- * The multiplier is now a live, player-tunable setting owned by
- * `@services/CombatPaceService` (exposed in-game via the Settings panel
- * "Combat speed" slider); `pace()` is re-exported here so existing
- * call sites keep importing it from '@data/balance'.
- *
- * Deliberately does NOT scale: walk speed, ability *cooldowns* (Burn
- * Out, Knight throw, Additions), the PowerUp / heal freeze windows, or
- * projectile travel. Those gate how *often* something happens, not how
- * readable a single action is. Telegraphs that overlay a scaled action
- * (see `data/mobAbilities.ts` `scalesWithPace`) are paced in lockstep so
- * their cast bars stay in sync.
- */
-export { pace } from '@services/CombatPaceService';
-
 /** Defend stance tuning. Activating defend locks the player in place for
  *  `DEFEND_DURATION_MS`, heals `DEFEND_HEAL_FRAC` of max HP at the moment
  *  of the block, and starts a `DEFEND_COOLDOWN_MS` cooldown (the lock-in

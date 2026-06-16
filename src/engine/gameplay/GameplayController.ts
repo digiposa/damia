@@ -25,13 +25,13 @@ import {
   ADDITIONS,
   DEFEND,
   getAdditionLevel,
-  pace,
   type AdditionKind,
   type MobKind,
 } from '@data/balance';
 import { ITEMS, type ItemKind } from '@data/items';
 import { SPELLS, type SpellKind } from '@data/spells';
 import { MODE_TUNING, effectiveCameraZoom } from '@data/mode';
+import { getCombatSpeed } from '@services/CombatPaceService';
 
 import { InputController } from '@gameplay/controls/InputController';
 import { PathfindingSystem } from '@gameplay/systems/PathfindingSystem';
@@ -117,6 +117,12 @@ export class GameplayController {
   // --- ECS ------------------------------------------------------------
   readonly world: World<Components>;
   readonly systems: System<Components>[];
+  /** Subset of `systems` whose internal timers represent combat ACTION
+   *  (AI, casts, cooldowns, swings, projectiles, additions, death anims).
+   *  Their `dt` is scaled by the live combat-speed setting so the whole
+   *  fight slows / speeds uniformly, while movement, navigation, pickups
+   *  and rendering keep real time. See CombatPaceService. */
+  private combatTimeSystems!: Set<System<Components>>;
   // --- Input ----------------------------------------------------------
   readonly input: InputController;
   // --- UI -------------------------------------------------------------
@@ -386,6 +392,29 @@ export class GameplayController {
       floating,
     ];
 
+    // Combat-time membership (drives per-system dt scaling in `update`).
+    // Everything that simulates the fight — enemy AI, attack cadence,
+    // casts, projectiles, additions, the defend stance and Dragoon form,
+    // plus death/dying anims — slows together. Navigation (pathfinding,
+    // movement), world triggers (exits, interactables, pickups, random
+    // encounters) and the render/feedback layer (render, HUD, VFX,
+    // floating text) stay on real time so movement and animation feel
+    // unchanged.
+    this.combatTimeSystems = new Set<System<Components>>([
+      cooldown,
+      ai,
+      autoAttack,
+      combat,
+      projectiles,
+      defense,
+      dragoon,
+      death,
+      dying,
+      addition,
+      spell,
+      swing,
+    ]);
+
     // --- UI cluster -------------------------------------------------
     const uiHandlers: GameplayUIHandlers = {
       onSettingsAction: (action) => {
@@ -568,12 +597,21 @@ export class GameplayController {
     if (!this.world) return;
     if (this.ui.isPaused()) return;
 
+    // Combat systems run on a scaled clock so the fight slows / speeds
+    // uniformly with the "Combat speed" setting (1.0 = real time); every
+    // other system keeps real `dt`. Single source of truth for the whole
+    // combat tempo — no per-duration multipliers scattered across the
+    // codebase.
+    const combatDt = dt * getCombatSpeed();
     for (const sys of this.systems) {
       if (!this.world) break;
-      sys.update(dt, this.world);
+      sys.update(this.combatTimeSystems.has(sys) ? combatDt : dt, this.world);
     }
 
-    this.input.tickCooldowns(dt);
+    // Defend cooldown is a combat timer, so it advances on the same
+    // scaled clock as DefenseSystem's stance duration — keeps the two in
+    // lockstep under any combat speed.
+    this.input.tickCooldowns(combatDt);
     // Sync defend state — DefenseSystem auto-clears `Defending` when
     // the timer expires, but InputController owns the cooldown flag.
     if (
@@ -1159,8 +1197,8 @@ export class GameplayController {
       this.world.addComponent(this.playerId, 'Spell', {
         kind: spellKind,
         elapsedMs: 0,
-        totalMs: pace(spell.totalMs),
-        hitTimingMs: pace(spell.hitTimingMs),
+        totalMs: spell.totalMs,
+        hitTimingMs: spell.hitTimingMs,
         hitApplied: false,
         bid: spell.bid,
         element: spell.element,
@@ -1194,8 +1232,8 @@ export class GameplayController {
         this.world.addComponent(this.playerId, 'Spell', {
           kind: spellKind,
           elapsedMs: 0,
-          totalMs: pace(aoeSpell.totalMs),
-          hitTimingMs: pace(aoeSpell.hitTimingMs),
+          totalMs: aoeSpell.totalMs,
+          hitTimingMs: aoeSpell.hitTimingMs,
           hitApplied: false,
           bid: aoeSpell.bid,
           element: aoeSpell.element,
@@ -1311,8 +1349,8 @@ export class GameplayController {
     this.world.addComponent(this.playerId, 'Spell', {
       kind: gt.spell,
       elapsedMs: 0,
-      totalMs: pace(spellDef.totalMs),
-      hitTimingMs: pace(spellDef.hitTimingMs),
+      totalMs: spellDef.totalMs,
+      hitTimingMs: spellDef.hitTimingMs,
       hitApplied: false,
       bid: spellDef.bid,
       element: spellDef.element,

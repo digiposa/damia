@@ -29,4 +29,8 @@ export interface AI {
    *  and by AISystem to bump Burn Out 1.0 → 1.5×. Latched single-use:
    *  the AI never spawns a second PowerUp once this is true. */
   poweredUp?: boolean;
+  /** Commander Seles only (v1). True once the HP-recovers self-heal has
+   *  fired (canon: auto + single-use at HP < 51%). Latched so the boss
+   *  heals exactly once per encounter. */
+  healedOnce?: boolean;
 }

@@ -13,6 +13,7 @@ import type { Exit } from './Exit';
 import type { Faction } from './Faction';
 import type { FloatingText } from './FloatingText';
 import type { Health } from './Health';
+import type { HealGlow } from './HealGlow';
 import type { Hidden } from './Hidden';
 import type { Interactable } from './Interactable';
 import type { Inventory } from './Inventory';
@@ -67,6 +68,7 @@ export interface Components {
   Progression: Progression;
   Projectile: Projectile;
   PowerUp: PowerUp;
+  HealGlow: HealGlow;
 }
 
 export type ComponentName = keyof Components;
@@ -87,6 +89,7 @@ export type {
   Faction,
   FloatingText,
   Health,
+  HealGlow,
   Hidden,
   Interactable,
   Inventory,

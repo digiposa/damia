@@ -38,6 +38,10 @@ export class RenderSystem implements System<Components> {
    *  PowerUp component is gone. Kept off the main `nodes` map so
    *  swap / cleanup of the entity sprite doesn't drag it along. */
   private readonly powerUpGlows = new Map<Entity, Graphics>();
+  /** Per-entity transient blue halo for the self-heal pop (Commander
+   *  HP-recovers). Same mechanism as `powerUpGlows`, keyed on the
+   *  HealGlow component, tinted to the heal-number colour. */
+  private readonly healGlows = new Map<Entity, Graphics>();
   /** Accumulated frame time in ms — drives time-based visual effects (walk bob)
    *  in lockstep with the simulation clock so pause / lag spikes don't drift. */
   private elapsedMs = 0;
@@ -363,7 +367,7 @@ export class RenderSystem implements System<Components> {
       if (powerUp) {
         let glow = this.powerUpGlows.get(id);
         if (!glow) {
-          glow = this.buildPowerUpGlow(sprite.width, sprite.height);
+          glow = this.buildGlow(sprite.width, sprite.height, [0xff1a08, 0xff3a18, 0xff5a30]);
           this.layerContainer(sprite.layer).addChild(glow);
           this.powerUpGlows.set(id, glow);
         }
@@ -383,6 +387,29 @@ export class RenderSystem implements System<Components> {
         glow?.destroy();
         this.powerUpGlows.delete(id);
       }
+
+      // Self-heal halo: soft blue aura (heal-number colour) that fades
+      // out once over the HealGlow window. Same builder as the Power Up
+      // glow, blue ramp, single fade-out envelope instead of a pulse.
+      const heal = world.getComponent(id, 'HealGlow');
+      if (heal) {
+        let glow = this.healGlows.get(id);
+        if (!glow) {
+          glow = this.buildGlow(sprite.width, sprite.height, [0x2090ff, 0x60c0ff, 0xa0e8ff]);
+          this.layerContainer(sprite.layer).addChild(glow);
+          this.healGlows.set(id, glow);
+        }
+        const torsoY = pos.y + yOffset - sprite.height * 0.5;
+        glow.position.set(pos.x, torsoY);
+        const t = Math.min(1, heal.elapsedMs / Math.max(1, heal.totalMs));
+        // Quick bloom then ease out: bright at the start, fading to 0.
+        glow.alpha = (1 - t) * (0.6 + 0.4 * Math.sin(Math.min(1, t * 3) * (Math.PI / 2)));
+        glow.zIndex = Math.round(grid.x + grid.y) - 1;
+      } else if (this.healGlows.has(id)) {
+        const glow = this.healGlows.get(id);
+        glow?.destroy();
+        this.healGlows.delete(id);
+      }
     }
 
     // Cleanup: remove Pixi nodes for entities that no longer match.
@@ -396,6 +423,11 @@ export class RenderSystem implements System<Components> {
           glow.destroy();
           this.powerUpGlows.delete(id);
         }
+        const hglow = this.healGlows.get(id);
+        if (hglow) {
+          hglow.destroy();
+          this.healGlows.delete(id);
+        }
       }
     }
   }
@@ -405,6 +437,8 @@ export class RenderSystem implements System<Components> {
     this.nodes.clear();
     for (const glow of this.powerUpGlows.values()) glow.destroy();
     this.powerUpGlows.clear();
+    for (const glow of this.healGlows.values()) glow.destroy();
+    this.healGlows.clear();
   }
 
   private layerContainer(layer: SpriteComp['layer']): Container {
@@ -418,19 +452,23 @@ export class RenderSystem implements System<Components> {
     }
   }
 
-  /** Build the three-circle radial halo. Centered on (0,0) — the caller
-   *  positions it at the sprite's torso each frame. Sized off the
-   *  sprite's intended dimensions so wider mobs get wider auras. The
-   *  per-circle alpha is constant; the whole Graphics' overall `alpha`
-   *  is animated by the update loop for the breathing pulse. */
-  private buildPowerUpGlow(spriteWidth: number, spriteHeight: number): Graphics {
+  /** Build a three-circle radial halo in the given colour ramp.
+   *  Centered on (0,0) — the caller positions it at the sprite's torso
+   *  each frame. Sized off the sprite's intended dimensions so wider
+   *  mobs get wider auras. The per-circle alpha is constant; the whole
+   *  Graphics' overall `alpha` is animated by the update loop for the
+   *  breathing pulse. Outer ring first (largest, dimmest) so inner
+   *  rings composite on top — soft falloff without a filter dependency. */
+  private buildGlow(
+    spriteWidth: number,
+    spriteHeight: number,
+    colors: readonly [number, number, number],
+  ): Graphics {
     const g = new Graphics();
     const radius = Math.max(spriteWidth, spriteHeight) * 0.7;
-    // Outer-most ring first (largest, dimmest) so the inner rings
-    // composite on top — produces the soft falloff without a filter.
-    g.circle(0, 0, radius).fill({ color: 0xff1a08, alpha: 0.16 });
-    g.circle(0, 0, radius * 0.7).fill({ color: 0xff3a18, alpha: 0.22 });
-    g.circle(0, 0, radius * 0.4).fill({ color: 0xff5a30, alpha: 0.3 });
+    g.circle(0, 0, radius).fill({ color: colors[0], alpha: 0.16 });
+    g.circle(0, 0, radius * 0.7).fill({ color: colors[1], alpha: 0.22 });
+    g.circle(0, 0, radius * 0.4).fill({ color: colors[2], alpha: 0.3 });
     return g;
   }
 

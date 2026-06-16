@@ -2,8 +2,10 @@ import type { Entity, System, World } from '@core/ecs';
 import { worldToGrid } from '@core/math/iso';
 import type { Components, Position } from '@gameplay/components';
 import { spawnProjectile } from '@gameplay/entities/projectile';
+import { FLOAT_HEAL_HP, spawnFloatingText } from '@gameplay/entities/floatingText';
 import { effectiveAtk } from '@gameplay/stats';
 import { SPELLS } from '@data/spells';
+import { playSfx } from '@services/AudioManager';
 
 const FLEE_HP_THRESHOLD = 0.3;
 const FLEE_DISTANCE_PX = 320;
@@ -55,6 +57,16 @@ const COMMANDER_POWER_UP_MS = 900;
  *  numbers if we want strict canon, but 1.0 → 1.5 keeps the visible
  *  delta sharp at our action-RPG scale). */
 const COMMANDER_BURN_OUT_POWERED_MULT = 1.5;
+/** HP recovers self-heal — canon boss mechanic: auto + single-use,
+ *  triggers below this HP fraction and restores COMMANDER_HEAL_FRAC of
+ *  max HP. Sits just under the Power Up threshold (0.6) so a falling
+ *  health bar fires Power Up first, then the heal a beat later. */
+const COMMANDER_HEAL_HP_TRIGGER = 0.51;
+/** Fraction of max HP restored by HP recovers (canon: 30%). On the
+ *  ×10-scaled Commander (150 max) that's +45. */
+const COMMANDER_HEAL_FRAC = 0.3;
+/** Duration of the cosmetic blue heal aura. */
+const COMMANDER_HEAL_GLOW_MS = 700;
 
 interface SceneBounds {
   width: number;
@@ -342,6 +354,14 @@ function updateCommanderSeles(
   const hp = world.getComponent(id, 'Health');
   if (!pos || !stats || !hp) return;
 
+  // Tick the cosmetic heal aura (doesn't gate any behaviour — the boss
+  // keeps acting through it). Removed when its window elapses.
+  const healGlow = world.getComponent(id, 'HealGlow');
+  if (healGlow) {
+    healGlow.elapsedMs += dt;
+    if (healGlow.elapsedMs >= healGlow.totalMs) world.removeComponent(id, 'HealGlow');
+  }
+
   // --- PowerUp visual window -------------------------------------------
   // While the transformation plays the boss stops everything — no
   // chase, no swing, no cast. CombatIntent is dropped so CombatSystem
@@ -383,6 +403,26 @@ function updateCommanderSeles(
       totalMs: COMMANDER_POWER_UP_MS,
     });
     if (world.hasComponent(id, 'CombatIntent')) world.removeComponent(id, 'CombatIntent');
+    return;
+  }
+
+  // --- HP recovers self-heal (single-use, HP < 51%) -------------------
+  // Auto boss heal. Fires between actions (the `!busy` guard) so the
+  // green pop doesn't land mid-swing. Restores 30% of max HP, capped at
+  // max, then latches so it never repeats.
+  if (!ai.healedOnce && !busy && hp.current / hp.max < COMMANDER_HEAL_HP_TRIGGER) {
+    const healAmount = Math.round(hp.max * COMMANDER_HEAL_FRAC);
+    hp.current = Math.min(hp.max, hp.current + healAmount);
+    ai.healedOnce = true;
+    spawnFloatingText(world, {
+      x: pos.x,
+      y: pos.y,
+      text: `+${healAmount}`,
+      color: FLOAT_HEAL_HP,
+    });
+    // Brief blue heal aura (cosmetic — doesn't freeze the boss).
+    world.addComponent(id, 'HealGlow', { elapsedMs: 0, totalMs: COMMANDER_HEAL_GLOW_MS });
+    playSfx('items.pickup');
     return;
   }
 

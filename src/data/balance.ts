@@ -370,16 +370,12 @@ export const MOBS: Record<MobKind, MobDefinition> = {
       deathTextureAlias: 'sprite.mob.commander.death',
       walkFrames: ['sprite.mob.commander.walk.1', 'sprite.mob.commander.walk.2'],
       attackFrames: ['sprite.mob.commander.attack.1', 'sprite.mob.commander.attack.2'],
-      // Slash Twice (post-PowerUp basic attack) frames go here when the
-      // dedicated sprites ship. Drop them at
-      // `/assets/sprites/mobs/commander-slash-twice-{1,2}.png`, add the
-      // aliases tagged `mob:commanderSeles`, then populate:
-      //   slashTwiceFrames: [
-      //     'sprite.mob.commander.slashTwice.1',
-      //     'sprite.mob.commander.slashTwice.2',
-      //   ]
-      // Until then RenderSystem falls back to `attackFrames` for the
-      // visual — the 2× damage multiplier still applies.
+      // Slash Twice — post-PowerUp basic attack visual (2 frames so far;
+      // more can be appended for a longer combo). RenderSystem picks
+      // these when the AttackSwing has kind:'slashTwice' (set by
+      // CombatSystem while AI.poweredUp); the 2× damage applies in
+      // lockstep.
+      slashTwiceFrames: ['sprite.mob.commander.slashTwice.1', 'sprite.mob.commander.slashTwice.2'],
     },
     element: 'darkness',
     xp: 20,

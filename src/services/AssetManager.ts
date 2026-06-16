@@ -544,6 +544,22 @@ const MANIFEST = {
     url: '/assets/sprites/mobs/commander-cast.png',
     tags: ['mob:commanderSeles'],
   },
+  // Slash Twice — post-PowerUp basic attack, 2 frames (wind-up swing +
+  // downward strike with red slash VFX). Body scale-matched to the set,
+  // body-feet aligned on the common canvas; the slash arcs overflow the
+  // silhouette. RenderSystem picks these when the AttackSwing has
+  // kind:'slashTwice' (set by CombatSystem while AI.poweredUp). More
+  // frames can be appended to slashTwiceFrames later for a longer combo.
+  'sprite.mob.commander.slashTwice.1': {
+    kind: 'texture',
+    url: '/assets/sprites/mobs/commander-slash-twice-1.png',
+    tags: ['mob:commanderSeles'],
+  },
+  'sprite.mob.commander.slashTwice.2': {
+    kind: 'texture',
+    url: '/assets/sprites/mobs/commander-slash-twice-2.png',
+    tags: ['mob:commanderSeles'],
+  },
   // Power Up transformation pose — single frame (green-keyed, body
   // scale-matched to the idle set + placed on the common canvas). Held
   // for the PowerUp window (~900 ms) while the boss freezes, then he

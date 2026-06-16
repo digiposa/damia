@@ -9,14 +9,26 @@ import {
   setSfxVolume,
   setVoiceVolume,
 } from '@services/AudioManager';
-import { COMBAT_SPEED_STEP, getCombatSpeed, setCombatSpeed } from '@services/CombatPaceService';
+import {
+  COMBAT_SPEED_MAX,
+  COMBAT_SPEED_MIN,
+  COMBAT_SPEED_STEP,
+  getCombatSpeed,
+  setCombatSpeed,
+} from '@services/CombatPaceService';
 import { Modal } from './Modal';
 import { SPACING, TEXT } from './theme';
 import { mkButton, mkCloseButton, mkPanel, mkRow, mkText } from './layoutHelpers';
+import { Slider } from './Slider';
 
 const VOLUME_STEP = 0.1;
 const STEPPER_SIZE = 32;
 const ACTION_BUTTON_HEIGHT = 36;
+/** Slider visual width (track + handle). Sized to be comfortable on a
+ *  phone — large enough to read 5% steps, small enough to share the row
+ *  with a label and a value readout. */
+const SLIDER_WIDTH = 160;
+const SLIDER_HEIGHT = 28;
 /** Total panel height: title strip + 6 rows (4 volume + combat speed +
  *  language) + Bestiary button + spacer + 2 action buttons + gaps +
  *  padding. Sized so the panel is comfortably centered on every
@@ -51,6 +63,10 @@ export class SettingsPanel extends Modal {
   private sfxValueText: Text | null = null;
   private voiceValueText: Text | null = null;
   private combatSpeedValueText: Text | null = null;
+  /** Slider widget for the combat-speed row. Kept for `setValue()` in
+   *  case the value changes externally (e.g. a future "reset defaults"
+   *  action) — the slider has to be re-synced or it drifts. */
+  private combatSpeedSlider: Slider | null = null;
   private langValueText: Text | null = null;
   private readonly showActions: boolean;
   protected override panelMaxHeight = PANEL_MAX_HEIGHT;
@@ -175,27 +191,25 @@ export class SettingsPanel extends Modal {
     row.addChild(mkText(label, TEXT.label));
     const right = mkRow({ layout: { alignItems: 'center', gap: 8 } });
     const value = mkText('', { ...TEXT.value, fontFamily: 'monospace' });
-    right.addChild(
-      mkButton({
-        label: '-',
-        width: STEPPER_SIZE,
-        height: STEPPER_SIZE,
-        fontSize: 18,
-        onTap: () => this.adjustCombatSpeed(-COMBAT_SPEED_STEP),
-      }),
-    );
+    const slider = new Slider(this.app, {
+      width: SLIDER_WIDTH,
+      height: SLIDER_HEIGHT,
+      min: COMBAT_SPEED_MIN,
+      max: COMBAT_SPEED_MAX,
+      step: COMBAT_SPEED_STEP,
+      value: getCombatSpeed(),
+      onChange: (v) => {
+        setCombatSpeed(v);
+        this.refreshValues();
+      },
+    });
+    // Destroy stage listeners when the panel itself goes away.
+    this.registerCleanup(() => slider.destroy());
+    right.addChild(slider.container);
     right.addChild(value);
-    right.addChild(
-      mkButton({
-        label: '+',
-        width: STEPPER_SIZE,
-        height: STEPPER_SIZE,
-        fontSize: 18,
-        onTap: () => this.adjustCombatSpeed(COMBAT_SPEED_STEP),
-      }),
-    );
     row.addChild(right);
     parent.addChild(row);
+    this.combatSpeedSlider = slider;
     return value;
   }
 
@@ -265,15 +279,6 @@ export class SettingsPanel extends Modal {
     this.refreshValues();
   }
 
-  private adjustCombatSpeed(delta: number): void {
-    playSfx('ui.click');
-    // setCombatSpeed clamps to [MIN, MAX]; rounding keeps the stored
-    // value on clean 0.05 steps so the displayed % doesn't drift.
-    const next = Math.round((getCombatSpeed() + delta) * 100) / 100;
-    setCombatSpeed(next);
-    this.refreshValues();
-  }
-
   private cycleLanguage(direction: number): void {
     playSfx('ui.click');
     const cur = getLanguage();
@@ -295,6 +300,9 @@ export class SettingsPanel extends Modal {
     if (this.combatSpeedValueText) {
       this.combatSpeedValueText.text = `${Math.round(getCombatSpeed() * 100)}%`;
     }
+    // Slider handle re-sync — covers panel re-open after the setting
+    // was changed elsewhere, and any future external resets.
+    this.combatSpeedSlider?.setValue(getCombatSpeed());
     if (this.langValueText) this.langValueText.text = getLanguage().toUpperCase();
   }
 }

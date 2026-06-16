@@ -25,12 +25,13 @@ const STORAGE_KEY = 'damia.gameplay';
 
 /** Slowest the player can go — half-speed combat. */
 export const COMBAT_SPEED_MIN = 0.5;
-/** A touch faster than real time, for those who want it. */
-export const COMBAT_SPEED_MAX = 1.2;
+/** Fastest — 1.5× real time, where AI reflexes start to get demanding
+ *  but the game stays playable. */
+export const COMBAT_SPEED_MAX = 1.5;
 export const COMBAT_SPEED_STEP = 0.05;
-/** 80% speed (~1.25× slower) — the readable default the combat-pacing
- *  pass settled on; the player can dial it back to 1.0 for real time. */
-export const COMBAT_SPEED_DEFAULT = 0.8;
+/** Real-time combat — the reference point. The slider is centred here
+ *  with equal range on either side (50% slower or faster). */
+export const COMBAT_SPEED_DEFAULT = 1.0;
 
 let combatSpeed = readPersisted();
 

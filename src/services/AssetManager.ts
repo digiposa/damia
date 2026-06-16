@@ -544,29 +544,17 @@ const MANIFEST = {
     url: '/assets/sprites/mobs/commander-cast.png',
     tags: ['mob:commanderSeles'],
   },
-  // Power Up transformation animation — 2 frames split across the
-  // PowerUp window (~900 ms total). Frame 1 = build-up stance, red
-  // aura on arms + cape. Frame 2 = peak transformation, arms wide
-  // with a glowing crimson core, "fully changed" stance before he
-  // returns to his combat chassis. When the window ends the boss
-  // reverts to its standard pipeline with `AI.poweredUp = true`
-  // (Slash Twice replaces Sword Slash, Burn Out × 1.5).
-  //
-  // autoTrim deliberately off — both frames are pre-padded to a
-  // uniform 402×506 canvas with the figure bottom-centered. Each
-  // frame's aura extends differently (frame 1 sideways, frame 2
-  // vertically), so an autoTrim pass would crop them to mismatched
-  // alpha boxes and the boss would visibly shrink / grow between
-  // the two poses with fitMode='height'. Keeping the full canvas
-  // means both render at the same effective scale.
+  // Power Up transformation pose — single frame (green-keyed, body
+  // scale-matched to the idle set + placed on the common canvas). Held
+  // for the PowerUp window (~900 ms) while the boss freezes, then he
+  // reverts to his standard pipeline with `AI.poweredUp = true` (Slash
+  // Twice replaces Sword Slash, Burn Out × 1.5). The red aura + ground
+  // sigil overflow the body silhouette naturally; autoTrim off like the
+  // rest of the common-canvas set. A second peak frame can be added
+  // later (powerUpFrames array in balance.ts) for a 2-step animation.
   'sprite.mob.commander.powerup.1': {
     kind: 'texture',
     url: '/assets/sprites/mobs/commander-powerup-1.png',
-    tags: ['mob:commanderSeles'],
-  },
-  'sprite.mob.commander.powerup.2': {
-    kind: 'texture',
-    url: '/assets/sprites/mobs/commander-powerup-2.png',
     tags: ['mob:commanderSeles'],
   },
   'sprite.mob.commander.death.1': {

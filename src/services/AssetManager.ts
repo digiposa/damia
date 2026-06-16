@@ -557,34 +557,14 @@ const MANIFEST = {
     url: '/assets/sprites/mobs/commander-powerup-1.png',
     tags: ['mob:commanderSeles'],
   },
-  'sprite.mob.commander.death.1': {
+  // Death corpse — single frame (green/magenta-keyed lying pose, sword
+  // fallen beside). Placed on the common 1248×1395 canvas with its
+  // ground-contact at the same baseline as the standing feet, scaled so
+  // the corpse length matches the boss's standing height. autoTrim off
+  // like the rest of the set.
+  'sprite.mob.commander.death': {
     kind: 'texture',
-    url: '/assets/sprites/mobs/commander-death-1.png',
-    tags: ['mob:commanderSeles'],
-  },
-  'sprite.mob.commander.death.2': {
-    kind: 'texture',
-    url: '/assets/sprites/mobs/commander-death-2.png',
-    tags: ['mob:commanderSeles'],
-  },
-  'sprite.mob.commander.death.3': {
-    kind: 'texture',
-    url: '/assets/sprites/mobs/commander-death-3.png',
-    tags: ['mob:commanderSeles'],
-  },
-  'sprite.mob.commander.death.4': {
-    kind: 'texture',
-    url: '/assets/sprites/mobs/commander-death-4.png',
-    tags: ['mob:commanderSeles'],
-  },
-  'sprite.mob.commander.death.5': {
-    kind: 'texture',
-    url: '/assets/sprites/mobs/commander-death-5.png',
-    tags: ['mob:commanderSeles'],
-  },
-  'sprite.mob.commander.death.6': {
-    kind: 'texture',
-    url: '/assets/sprites/mobs/commander-death-6.png',
+    url: '/assets/sprites/mobs/commander-death.png',
     tags: ['mob:commanderSeles'],
   },
 

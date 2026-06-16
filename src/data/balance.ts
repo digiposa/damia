@@ -367,7 +367,7 @@ export const MOBS: Record<MobKind, MobDefinition> = {
       attackTextureAlias: 'sprite.mob.commander.attack.1',
       castTextureAlias: 'sprite.mob.commander.cast',
       powerUpFrames: ['sprite.mob.commander.powerup.1'],
-      deathTextureAlias: 'sprite.mob.commander.death.6',
+      deathTextureAlias: 'sprite.mob.commander.death',
       walkFrames: ['sprite.mob.commander.walk.1', 'sprite.mob.commander.walk.2'],
       attackFrames: ['sprite.mob.commander.attack.1', 'sprite.mob.commander.attack.2'],
       // Slash Twice (post-PowerUp basic attack) frames go here when the

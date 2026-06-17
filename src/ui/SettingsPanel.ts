@@ -21,7 +21,9 @@ import { SPACING, TEXT } from './theme';
 import { mkButton, mkCloseButton, mkPanel, mkRow, mkText } from './layoutHelpers';
 import { Slider } from './Slider';
 
-const VOLUME_STEP = 0.1;
+/** Step for the volume sliders — 5% notches read cleanly as a
+ *  percentage and give finer control than the old 10% stepper. */
+const VOLUME_STEP = 0.05;
 const STEPPER_SIZE = 32;
 const ACTION_BUTTON_HEIGHT = 36;
 /** Slider visual width (track + handle). Sized to be comfortable on a
@@ -29,6 +31,10 @@ const ACTION_BUTTON_HEIGHT = 36;
  *  with a label and a value readout. */
 const SLIDER_WIDTH = 160;
 const SLIDER_HEIGHT = 28;
+/** Fixed width reserved for the "%" readout. Wide enough for the longest
+ *  value ("150%") so the number growing from 2 to 3 digits never widens
+ *  the row and shoves the slider sideways. Right-aligned within the box. */
+const VALUE_BOX_WIDTH = 44;
 /** Total panel height: title strip + 6 rows (4 volume + combat speed +
  *  language) + Bestiary button + spacer + 2 action buttons + gaps +
  *  padding. Sized so the panel is comfortably centered on every
@@ -49,24 +55,28 @@ export interface SettingsPanelOptions {
 
 type VolumeKind = 'master' | 'music' | 'sfx' | 'voice';
 
+/** Config for one slider row — a 0..1-ish quantity surfaced as a % with
+ *  a live getter/setter against its backing service. */
+interface SliderRowConfig {
+  min: number;
+  max: number;
+  step: number;
+  get: () => number;
+  set: (v: number) => void;
+}
+
 /**
- * Esc-toggled settings overlay. Volume sliders (4 channels), language
- * toggle, Resume / Quit-to-Title actions. Built on the shared Modal
- * base + flex layout, so resize / responsive sizing comes for free.
+ * Esc-toggled settings overlay. Volume sliders (4 channels) + combat-
+ * speed slider, language toggle, Resume / Quit-to-Title actions. Built
+ * on the shared Modal base + flex layout, so resize / responsive sizing
+ * comes for free.
  */
 export class SettingsPanel extends Modal {
   private actionListener: ((action: SettingsPanelAction) => void) | null = null;
-  /** Refs to value Text nodes so refreshValues() can rewrite them
-   *  without rebuilding the panel. */
-  private masterValueText: Text | null = null;
-  private musicValueText: Text | null = null;
-  private sfxValueText: Text | null = null;
-  private voiceValueText: Text | null = null;
-  private combatSpeedValueText: Text | null = null;
-  /** Slider widget for the combat-speed row. Kept for `setValue()` in
-   *  case the value changes externally (e.g. a future "reset defaults"
-   *  action) — the slider has to be re-synced or it drifts. */
-  private combatSpeedSlider: Slider | null = null;
+  /** Per-row resync closures — each rewrites its value label and snaps
+   *  its slider handle to the backing service value. Run on panel open
+   *  so the controls reflect state changed elsewhere since last shown. */
+  private readonly refreshers: Array<() => void> = [];
   private langValueText: Text | null = null;
   private readonly showActions: boolean;
   protected override panelMaxHeight = PANEL_MAX_HEIGHT;
@@ -128,13 +138,26 @@ export class SettingsPanel extends Modal {
     panel.addChild(titleStrip);
 
     // --- Volume rows ----------------------------------------------------
-    this.masterValueText = this.buildVolumeRow(panel, t('settings.master'), 'master');
-    this.musicValueText = this.buildVolumeRow(panel, t('settings.music'), 'music');
-    this.sfxValueText = this.buildVolumeRow(panel, t('settings.sfx'), 'sfx');
-    this.voiceValueText = this.buildVolumeRow(panel, t('settings.voice'), 'voice');
+    const vol = (k: VolumeKind, set: (v: number) => void): SliderRowConfig => ({
+      min: 0,
+      max: 1,
+      step: VOLUME_STEP,
+      get: () => getVolumes()[k],
+      set,
+    });
+    this.buildSliderRow(panel, t('settings.master'), vol('master', setMasterVolume));
+    this.buildSliderRow(panel, t('settings.music'), vol('music', setMusicVolume));
+    this.buildSliderRow(panel, t('settings.sfx'), vol('sfx', setSfxVolume));
+    this.buildSliderRow(panel, t('settings.voice'), vol('voice', setVoiceVolume));
 
     // --- Combat speed row -----------------------------------------------
-    this.combatSpeedValueText = this.buildCombatSpeedRow(panel, t('settings.combatSpeed'));
+    this.buildSliderRow(panel, t('settings.combatSpeed'), {
+      min: COMBAT_SPEED_MIN,
+      max: COMBAT_SPEED_MAX,
+      step: COMBAT_SPEED_STEP,
+      get: getCombatSpeed,
+      set: setCombatSpeed,
+    });
 
     // --- Language row ---------------------------------------------------
     this.langValueText = this.buildLangRow(panel, t('settings.language'));
@@ -153,64 +176,48 @@ export class SettingsPanel extends Modal {
     return panel;
   }
 
-  private buildVolumeRow(parent: Container, label: string, kind: VolumeKind): Text {
+  private buildSliderRow(parent: Container, label: string, cfg: SliderRowConfig): void {
     const row = mkRow({
       layout: { alignItems: 'center', justifyContent: 'space-between', width: '100%', gap: 8 },
     });
     row.addChild(mkText(label, TEXT.label));
     const right = mkRow({ layout: { alignItems: 'center', gap: 8 } });
     const value = mkText('', { ...TEXT.value, fontFamily: 'monospace' });
-    right.addChild(
-      mkButton({
-        label: '-',
-        width: STEPPER_SIZE,
-        height: STEPPER_SIZE,
-        fontSize: 18,
-        onTap: () => this.adjustVolume(kind, -VOLUME_STEP),
-      }),
-    );
-    right.addChild(value);
-    right.addChild(
-      mkButton({
-        label: '+',
-        width: STEPPER_SIZE,
-        height: STEPPER_SIZE,
-        fontSize: 18,
-        onTap: () => this.adjustVolume(kind, VOLUME_STEP),
-      }),
-    );
-    row.addChild(right);
-    parent.addChild(row);
-    return value;
-  }
-
-  private buildCombatSpeedRow(parent: Container, label: string): Text {
-    const row = mkRow({
-      layout: { alignItems: 'center', justifyContent: 'space-between', width: '100%', gap: 8 },
+    // Fixed-width, right-aligned box so a 2→3 digit "%" doesn't widen
+    // the row and push the slider left (the reported UX jump at 100%+).
+    const valueBox = new Container({
+      layout: {
+        width: VALUE_BOX_WIDTH,
+        justifyContent: 'flex-end',
+        alignItems: 'center',
+      },
     });
-    row.addChild(mkText(label, TEXT.label));
-    const right = mkRow({ layout: { alignItems: 'center', gap: 8 } });
-    const value = mkText('', { ...TEXT.value, fontFamily: 'monospace' });
+    valueBox.addChild(value);
     const slider = new Slider(this.app, {
       width: SLIDER_WIDTH,
       height: SLIDER_HEIGHT,
-      min: COMBAT_SPEED_MIN,
-      max: COMBAT_SPEED_MAX,
-      step: COMBAT_SPEED_STEP,
-      value: getCombatSpeed(),
+      min: cfg.min,
+      max: cfg.max,
+      step: cfg.step,
+      value: cfg.get(),
       onChange: (v) => {
-        setCombatSpeed(v);
-        this.refreshValues();
+        cfg.set(v);
+        // Update only this row's label — never call refreshValues() mid-
+        // drag, or it'd snap the very slider being dragged via setValue.
+        value.text = `${Math.round(v * 100)}%`;
       },
     });
     // Destroy stage listeners when the panel itself goes away.
     this.registerCleanup(() => slider.destroy());
     right.addChild(slider.container);
-    right.addChild(value);
+    right.addChild(valueBox);
     row.addChild(right);
     parent.addChild(row);
-    this.combatSpeedSlider = slider;
-    return value;
+    this.refreshers.push(() => {
+      const cur = cfg.get();
+      value.text = `${Math.round(cur * 100)}%`;
+      slider.setValue(cur);
+    });
   }
 
   private buildLangRow(parent: Container, label: string): Text {
@@ -268,17 +275,6 @@ export class SettingsPanel extends Modal {
     return wrapper;
   }
 
-  private adjustVolume(kind: VolumeKind, delta: number): void {
-    playSfx('ui.click');
-    const v = getVolumes();
-    const next = Math.max(0, Math.min(1, v[kind] + delta));
-    if (kind === 'master') setMasterVolume(next);
-    else if (kind === 'music') setMusicVolume(next);
-    else if (kind === 'sfx') setSfxVolume(next);
-    else setVoiceVolume(next);
-    this.refreshValues();
-  }
-
   private cycleLanguage(direction: number): void {
     playSfx('ui.click');
     const cur = getLanguage();
@@ -291,18 +287,7 @@ export class SettingsPanel extends Modal {
   }
 
   private refreshValues(): void {
-    if (!this.masterValueText) return;
-    const v = getVolumes();
-    this.masterValueText.text = `${Math.round(v.master * 100)}%`;
-    if (this.musicValueText) this.musicValueText.text = `${Math.round(v.music * 100)}%`;
-    if (this.sfxValueText) this.sfxValueText.text = `${Math.round(v.sfx * 100)}%`;
-    if (this.voiceValueText) this.voiceValueText.text = `${Math.round(v.voice * 100)}%`;
-    if (this.combatSpeedValueText) {
-      this.combatSpeedValueText.text = `${Math.round(getCombatSpeed() * 100)}%`;
-    }
-    // Slider handle re-sync — covers panel re-open after the setting
-    // was changed elsewhere, and any future external resets.
-    this.combatSpeedSlider?.setValue(getCombatSpeed());
+    this.refreshers.forEach((fn) => fn());
     if (this.langValueText) this.langValueText.text = getLanguage().toUpperCase();
   }
 }

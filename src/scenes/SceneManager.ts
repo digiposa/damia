@@ -17,6 +17,13 @@ export class SceneManager {
 
   async switchTo(next: Scene, ctx: GameContext): Promise<void> {
     const prev = this.current;
+    // Stop ticking the outgoing scene for the WHOLE transition. `exit()`
+    // destroys its world / viewport / UI, and the Pixi ticker keeps
+    // firing `scenes.update()` across the async asset-load gap below —
+    // without this, `current.update()` could land on a half-destroyed
+    // scene (an intermittent crash on quit-to-title / zone changes).
+    // Restored to `next` only once it has fully entered.
+    this.current = null;
     if (prev) {
       await prev.exit(ctx);
     }

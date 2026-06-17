@@ -59,8 +59,13 @@ export class MiniMap {
   /** Shared fog source. The world overlay (FogOfWarOverlay) reads from the
    *  same instance, so both renderers stay in sync without extra plumbing. */
   private readonly fog: FogOfWar;
-  /** Fog overlay (dark squares for unrevealed cells) — redrawn each frame. */
+  /** Fog overlay (dark squares for unrevealed cells). Only redrawn when
+   *  the player changes grid cell — the revealed set is mutated solely by
+   *  the scene's `revealCellsAround(playerCell)`, so a stationary player
+   *  means the (full width×height) overlay is identical frame to frame. */
   private readonly fogLayer: Graphics;
+  private fogPlayerGx = Number.NaN;
+  private fogPlayerGy = Number.NaN;
 
   constructor(app: Application, opts: MiniMapOptions) {
     this.app = app;
@@ -146,28 +151,34 @@ export class MiniMap {
 
     if (!this.container.visible) return;
 
-    // Fog overlay — dark squares for unrevealed cells, redrawn each frame
-    // because per-cell state changes as the player explores.
-    const fogG = this.fogLayer.clear();
-    const cellW = TILE_HALF_W * this.scale;
-    const cellH = TILE_HALF_H * this.scale;
-    for (let gx = 0; gx < this.fog.width; gx++) {
-      for (let gy = 0; gy < this.fog.height; gy++) {
-        if (this.fog.isRevealed(gx, gy)) continue;
-        const p = this.projectGrid(gx, gy);
-        // Each grid cell projects to a small iso diamond on the minimap.
-        fogG
-          .poly([
-            p.x,
-            p.y - cellH / 2,
-            p.x + cellW / 2,
-            p.y,
-            p.x,
-            p.y + cellH / 2,
-            p.x - cellW / 2,
-            p.y,
-          ])
-          .fill({ color: COLORS.textStroke, alpha: 0.85 });
+    // Fog overlay — only rebuilt when the player moved to a new cell (the
+    // only thing that changes the revealed set). The Graphics retains its
+    // last geometry between rebuilds, so a stationary player keeps its fog
+    // without re-running the full grid loop every frame.
+    if (playerGx !== this.fogPlayerGx || playerGy !== this.fogPlayerGy) {
+      this.fogPlayerGx = playerGx;
+      this.fogPlayerGy = playerGy;
+      const fogG = this.fogLayer.clear();
+      const cellW = TILE_HALF_W * this.scale;
+      const cellH = TILE_HALF_H * this.scale;
+      for (let gx = 0; gx < this.fog.width; gx++) {
+        for (let gy = 0; gy < this.fog.height; gy++) {
+          if (this.fog.isRevealed(gx, gy)) continue;
+          const p = this.projectGrid(gx, gy);
+          // Each grid cell projects to a small iso diamond on the minimap.
+          fogG
+            .poly([
+              p.x,
+              p.y - cellH / 2,
+              p.x + cellW / 2,
+              p.y,
+              p.x,
+              p.y + cellH / 2,
+              p.x - cellW / 2,
+              p.y,
+            ])
+            .fill({ color: COLORS.textStroke, alpha: 0.85 });
+        }
       }
     }
 

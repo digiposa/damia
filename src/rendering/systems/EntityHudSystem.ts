@@ -52,7 +52,9 @@ interface CastBarNode {
 }
 
 export class EntityHudSystem implements System<Components> {
-  private readonly hpBars = new Map<Entity, Graphics>();
+  /** Per-entity HP bar node + the last HP fraction its geometry was
+   *  drawn for, so we can skip the geometry rebuild when HP is unchanged. */
+  private readonly hpBars = new Map<Entity, { node: Graphics; frac: number }>();
   private readonly castBars = new Map<Entity, CastBarNode>();
   private readonly targetRing: Graphics;
   /** Single shared bar — only the player ever has the `Defending`
@@ -70,6 +72,11 @@ export class EntityHudSystem implements System<Components> {
 
   update(_dt: number, world: World<Components>): void {
     // --- HP bars ---------------------------------------------------------
+    // The bar graphic is positioned at the entity each frame (a cheap
+    // transform) but its geometry — the black backing + the coloured fill
+    // whose width tracks the HP fraction — is only rebuilt when that
+    // fraction actually changes. HP is static between hits, so this skips
+    // a Graphics geometry rebuild for every damaged mob on most frames.
     const matched = new Set<Entity>();
     for (const id of world.query(['Health', 'Position'])) {
       if (world.hasComponent(id, 'Player')) continue;
@@ -83,27 +90,34 @@ export class EntityHudSystem implements System<Components> {
       if (hp.current >= hp.max || hp.current <= 0) continue;
 
       matched.add(id);
-      let bar = this.hpBars.get(id);
-      if (!bar) {
-        bar = new Graphics();
-        this.parent.addChild(bar);
-        this.hpBars.set(id, bar);
+      let entry = this.hpBars.get(id);
+      if (!entry) {
+        const node = new Graphics();
+        this.parent.addChild(node);
+        entry = { node, frac: -1 };
+        this.hpBars.set(id, entry);
       }
 
+      entry.node.position.set(pos.x, pos.y);
       const frac = Math.max(0, Math.min(1, hp.current / hp.max));
-      bar.clear();
-      const x = pos.x - HP_BAR_WIDTH / 2;
-      const y = pos.y - HP_BAR_OFFSET_ABOVE_HEAD;
-      bar
-        .rect(x - 1, y - 1, HP_BAR_WIDTH + 2, HP_BAR_HEIGHT + 2)
-        .fill({ color: 0x000000, alpha: 0.7 })
-        .rect(x, y, HP_BAR_WIDTH * frac, HP_BAR_HEIGHT)
-        .fill(hpColor(frac));
+      if (Math.abs(frac - entry.frac) > 0.001) {
+        entry.frac = frac;
+        // Geometry drawn in the node's local space (origin = entity
+        // position); the per-frame node.position handles world placement.
+        const lx = -HP_BAR_WIDTH / 2;
+        const ly = -HP_BAR_OFFSET_ABOVE_HEAD;
+        entry.node
+          .clear()
+          .rect(lx - 1, ly - 1, HP_BAR_WIDTH + 2, HP_BAR_HEIGHT + 2)
+          .fill({ color: 0x000000, alpha: 0.7 })
+          .rect(lx, ly, HP_BAR_WIDTH * frac, HP_BAR_HEIGHT)
+          .fill(hpColor(frac));
+      }
     }
 
-    for (const [id, node] of this.hpBars) {
+    for (const [id, entry] of this.hpBars) {
       if (!matched.has(id)) {
-        node.destroy();
+        entry.node.destroy();
         this.hpBars.delete(id);
       }
     }
@@ -229,7 +243,7 @@ export class EntityHudSystem implements System<Components> {
   }
 
   destroy(): void {
-    for (const node of this.hpBars.values()) node.destroy();
+    for (const { node } of this.hpBars.values()) node.destroy();
     this.hpBars.clear();
     for (const node of this.castBars.values()) {
       node.bar.destroy();

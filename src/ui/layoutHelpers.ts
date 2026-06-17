@@ -12,7 +12,7 @@
  * should reach for one of these helpers rather than `new Text(...)`
  * / `new Graphics()` / `new Container()` directly.
  */
-import type { Graphics as GraphicsType, TextStyleOptions } from 'pixi.js';
+import type { TextStyleOptions } from 'pixi.js';
 import { Container, Graphics, Text } from 'pixi.js';
 import { LayoutContainer } from '@pixi/layout/components';
 import type { LayoutStyles } from '@pixi/layout';
@@ -35,28 +35,9 @@ export function mkText(text: string, style: TextStyleOptions, extraLayout?: Layo
 }
 
 /**
- * Create a Pixi `Graphics` shape that participates in its parent's
- * flex flow with an explicit `width × height` footprint. The `draw`
- * callback paints inside the (0, 0) origin — Yoga places the result.
- * Use this for any drawn icon / divider / decorative element that
- * needs to live alongside Text inside a flex container.
- */
-export function mkGraphics(
-  width: number,
-  height: number,
-  draw: (g: GraphicsType) => void,
-  extraLayout?: LayoutStyle,
-): GraphicsType {
-  const g = new Graphics();
-  draw(g);
-  g.layout = { width, height, isLeaf: true, ...(extraLayout ?? {}) };
-  return g;
-}
-
-/**
  * Pixi `Container` configured as a horizontal flex row. Children
- * still need their own `.layout` (use `mkText` / `mkGraphics` / one
- * of the other helpers) to be positioned by Yoga.
+ * still need their own `.layout` (use `mkText` or one of the other
+ * helpers) to be positioned by Yoga.
  */
 export function mkRow(opts: { children?: Container[]; layout?: LayoutStyle } = {}): Container {
   const c = new Container({

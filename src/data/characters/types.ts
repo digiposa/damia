@@ -283,15 +283,3 @@ export type CharacterDef = CharacterAvatar;
 
 /** @deprecated Use `AvatarId`. */
 export type CharacterId = AvatarId;
-
-/** @deprecated Use `applyArchetypeRow` directly with the
- *  archetype from `avatar.archetype`. */
-export function applyCharacterRow(
-  stats: { atk: number; def: number; magicAtk: number; magicDef: number } | undefined,
-  hp: { current: number; max: number } | undefined,
-  avatar: CharacterAvatar,
-  level: number,
-  clampHpToMax: boolean,
-): void {
-  applyArchetypeRow(stats, hp, avatar.archetype, level, clampHpToMax);
-}

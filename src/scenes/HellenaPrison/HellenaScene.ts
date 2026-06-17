@@ -3,8 +3,9 @@ import type { Scene } from '../Scene';
 import { GameplayController } from '@/engine/gameplay/GameplayController';
 import type { GameplaySnapshot, SceneConfig } from '@/engine/gameplay/SceneConfig';
 import type { MapData } from '../ForestOfSeles/MapLoader';
-import { ADDITIONS, type AdditionKind } from '@data/balance';
-import { DART, applyCharacterRow } from '@data/characters';
+import { ADDITIONS, isAdditionMastered, type AdditionKind } from '@data/balance';
+import { DART } from '@data/characters';
+import { applyLevelStats } from '@gameplay/stats';
 import { ITEMS, type ItemKind } from '@data/items';
 import { spawnItem } from '@gameplay/entities/items';
 import { SaveManager, type SaveDataV5 } from '@services/SaveManager';
@@ -149,11 +150,11 @@ export class HellenaScene implements Scene {
     const world = controller.world;
     const playerId = controller.playerId;
     const prog = world.getComponent(playerId, 'Progression');
-    const stats = world.getComponent(playerId, 'Stats');
-    const hp = world.getComponent(playerId, 'Health');
     const level = prog?.level ?? 1;
-    applyCharacterRow(stats, hp, DART, level, fromThisZone);
-    if (!fromThisZone && hp) hp.current = hp.max;
+    // applyLevelStats re-derives the canonical row WITHOUT stripping
+    // equipment bonuses — the old inline applyCharacterRow silently
+    // wiped them on every zone re-enter (same fix as ForestScene).
+    applyLevelStats(world, playerId, level, { fullHeal: !fromThisZone });
   }
 
   private unlockedAdditions(level: number): ReadonlyArray<AdditionKind> {
@@ -174,7 +175,7 @@ export class HellenaScene implements Scene {
     const prog = this.controller.world.getComponent(this.controller.playerId, 'Progression');
     if (!prog) return false;
     for (const slug of DART.archetype.additionUnlocksByLevel.values()) {
-      if ((prog.additionUses[slug] ?? 0) < 80) return false;
+      if (!isAdditionMastered(prog.additionUses[slug] ?? 0)) return false;
     }
     return true;
   }

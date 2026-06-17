@@ -749,10 +749,21 @@ export const ADDITIONS: Record<AdditionKind, AdditionDefinition> = {
  * (= 80 + uses). A fresh slug starts at level 1 with no uses.
  */
 export type AdditionLevelIndex = 1 | 2 | 3 | 4 | 5;
+
+/** Lifetime uses that take an addition to its max level (Lv 5). Also the
+ *  "mastered" threshold that gates an archetype's master addition — read
+ *  via `isAdditionMastered` rather than hardcoding the number. */
+export const ADDITION_MASTERY_USES = 80;
+
+/** True once an addition has been triggered enough to reach Lv 5. */
+export function isAdditionMastered(uses: number): boolean {
+  return uses >= ADDITION_MASTERY_USES;
+}
+
 export function getAdditionLevel(uses: number): AdditionLevelIndex {
   if (uses < 20) return 1;
   if (uses < 40) return 2;
   if (uses < 60) return 3;
-  if (uses < 80) return 4;
+  if (uses < ADDITION_MASTERY_USES) return 4;
   return 5;
 }

@@ -937,7 +937,10 @@ export class GameplayController {
 
   private findEnemyAtWorld(wx: number, wy: number): Entity | null {
     let best: Entity | null = null;
-    let bestDist = ENEMY_PICK_RADIUS_PX;
+    // Squared distances throughout — this runs every frame for the
+    // attack-cursor hover, and we only ever compare, never display, the
+    // value, so the sqrt in Math.hypot is pure waste here.
+    let bestDistSq = ENEMY_PICK_RADIUS_PX * ENEMY_PICK_RADIUS_PX;
     for (const id of this.world.query(['Faction', 'Position', 'Health'])) {
       if (this.world.hasComponent(id, 'Dying')) continue;
       if (this.world.hasComponent(id, 'Hidden')) continue;
@@ -945,9 +948,11 @@ export class GameplayController {
       const pos = this.world.getComponent(id, 'Position');
       const hp = this.world.getComponent(id, 'Health');
       if (!fac || !pos || !hp || fac.side === 'player' || hp.current <= 0) continue;
-      const d = Math.hypot(pos.x - wx, pos.y - wy);
-      if (d < bestDist) {
-        bestDist = d;
+      const dx = pos.x - wx;
+      const dy = pos.y - wy;
+      const distSq = dx * dx + dy * dy;
+      if (distSq < bestDistSq) {
+        bestDistSq = distSq;
         best = id;
       }
     }
@@ -972,7 +977,7 @@ export class GameplayController {
       }
     }
     let bestId: Entity | null = null;
-    let bestDist = Infinity;
+    let bestDistSq = Infinity;
     for (const id of this.world.query(['Health', 'Position', 'Faction'])) {
       if (id === this.playerId) continue;
       if (this.world.hasComponent(id, 'Dying')) continue;
@@ -982,9 +987,11 @@ export class GameplayController {
       const pos = this.world.getComponent(id, 'Position');
       const hp = this.world.getComponent(id, 'Health');
       if (!pos || !hp || hp.current <= 0) continue;
-      const d = Math.hypot(pos.x - px, pos.y - py);
-      if (d < bestDist) {
-        bestDist = d;
+      const dx = pos.x - px;
+      const dy = pos.y - py;
+      const distSq = dx * dx + dy * dy;
+      if (distSq < bestDistSq) {
+        bestDistSq = distSq;
         bestId = id;
       }
     }
@@ -995,6 +1002,7 @@ export class GameplayController {
    *  skills). Prefers the current CombatIntent if it's still in range. */
   private pickAdditionTarget(px: number, py: number, range: number): Entity | null {
     if (this.playerId === null) return null;
+    const rangeSq = range * range;
     const intent = this.world.getComponent(this.playerId, 'CombatIntent');
     if (intent !== undefined) {
       const tp = this.world.getComponent(intent.targetId, 'Position');
@@ -1004,13 +1012,13 @@ export class GameplayController {
         th &&
         th.current > 0 &&
         !this.world.hasComponent(intent.targetId, 'Dying') &&
-        Math.hypot(tp.x - px, tp.y - py) <= range
+        (tp.x - px) ** 2 + (tp.y - py) ** 2 <= rangeSq
       ) {
         return intent.targetId;
       }
     }
     let bestId: Entity | null = null;
-    let bestDist = Infinity;
+    let bestDistSq = Infinity;
     for (const id of this.world.query(['Health', 'Position', 'Faction'])) {
       if (id === this.playerId) continue;
       if (this.world.hasComponent(id, 'Dying')) continue;
@@ -1019,9 +1027,9 @@ export class GameplayController {
       if (!fac || fac.side === 'player') continue;
       const tp = this.world.getComponent(id, 'Position');
       if (!tp) continue;
-      const d = Math.hypot(tp.x - px, tp.y - py);
-      if (d <= range && d < bestDist) {
-        bestDist = d;
+      const distSq = (tp.x - px) ** 2 + (tp.y - py) ** 2;
+      if (distSq <= rangeSq && distSq < bestDistSq) {
+        bestDistSq = distSq;
         bestId = id;
       }
     }

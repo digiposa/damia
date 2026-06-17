@@ -7,7 +7,7 @@ import { TitleScene } from '../TitleScene';
 import { RunSummaryScene } from '../RunSummaryScene';
 import { RunState } from '@/store/RunState';
 import { MODE_TUNING } from '@data/mode';
-import { ADDITIONS, MOBS, type AdditionKind } from '@data/balance';
+import { ADDITIONS, MOBS, isAdditionMastered, type AdditionKind } from '@data/balance';
 import { WaveSpawnerSystem } from '@gameplay/systems/WaveSpawnerSystem';
 import { ARENA_MIN_SPAWN_DIST_PX, ARENA_WAVE_DURATION_MS, buildArenaWave } from '@data/arenaWaves';
 import { SurvivalHUD } from '@ui/SurvivalHUD';
@@ -17,18 +17,10 @@ import { DART, type CharacterDef } from '@data/characters';
 import { RunHighScores } from '@services/RunHighScores';
 import { UnlockManager } from '@services/UnlockManager';
 import type { AssetTag } from '@services/AssetManager';
+import { ARENA_SIZE, SPAWN_GX, SPAWN_GY } from '@scenes/arenaLayout';
 
-/** Logical arena dimensions in iso tiles. The painted backdrop
- *  (`map.forest.survival`) is 1456x720 native pixels — at the engine's
- *  TILE_HALF_W = 64, the largest square iso grid whose bounds fit
- *  inside that image is 11x11 (bounds = 1408x704, ~24 px margin per
- *  side). Going larger would have the player walk past the painted
- *  area into bare iso ground. If the backdrop is regenerated at a
- *  different resolution, recompute via:
- *    ARENA_SIZE = Math.floor(imageWidth / (2 * TILE_HALF_W))    */
-const ARENA_SIZE = 11;
-const SPAWN_GX = Math.floor(ARENA_SIZE / 2);
-const SPAWN_GY = Math.floor(ARENA_SIZE / 2);
+// Arena dimensions (ARENA_SIZE / SPAWN_GX / SPAWN_GY) are shared with
+// the Training scene — see `@scenes/arenaLayout`.
 const UPGRADE_PICKS_PER_LEVELUP = 3;
 
 /** Flat 28×28 arena with no pre-placed mobs — every enemy in Survival
@@ -336,7 +328,7 @@ export class ArenaScene implements Scene {
     const prog = this.controller.world.getComponent(this.controller.playerId, 'Progression');
     if (!prog) return false;
     for (const slug of this.character.archetype.additionUnlocksByLevel.values()) {
-      if ((prog.additionUses[slug] ?? 0) < 80) return false;
+      if (!isAdditionMastered(prog.additionUses[slug] ?? 0)) return false;
     }
     return true;
   }

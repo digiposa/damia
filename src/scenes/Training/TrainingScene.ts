@@ -30,10 +30,7 @@ import { applyLevelStats } from '@gameplay/stats';
 import { worldToGrid } from '@core/math/iso';
 import { TrainingDebugPanel } from '@ui/TrainingDebugPanel';
 import { MobPickerModal } from '@ui/MobPickerModal';
-
-const ARENA_SIZE = 11;
-const SPAWN_GX = Math.floor(ARENA_SIZE / 2);
-const SPAWN_GY = Math.floor(ARENA_SIZE / 2);
+import { ARENA_SIZE, SPAWN_GX, SPAWN_GY } from '@scenes/arenaLayout';
 
 function buildArenaMap(): MapData {
   return {

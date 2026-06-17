@@ -3,7 +3,7 @@ import type { Scene } from '../Scene';
 import { GameplayController } from '@/engine/gameplay/GameplayController';
 import type { GameplaySnapshot, SceneConfig } from '@/engine/gameplay/SceneConfig';
 import { ForestMap } from './MapLoader';
-import { ADDITIONS, type AdditionKind } from '@data/balance';
+import { ADDITIONS, isAdditionMastered, type AdditionKind } from '@data/balance';
 import { DART, xpToReachLevel } from '@data/characters';
 import { applyLevelStats } from '@gameplay/stats';
 import { ITEMS, type ItemKind } from '@data/items';
@@ -199,7 +199,7 @@ export class ForestScene implements Scene {
     const prog = this.controller.world.getComponent(this.controller.playerId, 'Progression');
     if (!prog) return false;
     for (const slug of DART.archetype.additionUnlocksByLevel.values()) {
-      if ((prog.additionUses[slug] ?? 0) < 80) return false;
+      if (!isAdditionMastered(prog.additionUses[slug] ?? 0)) return false;
     }
     return true;
   }

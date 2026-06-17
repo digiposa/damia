@@ -99,12 +99,7 @@ export type {
   DragoonStatsMultiplier,
   UnlockCriterion,
 } from './types';
-export {
-  applyArchetypeRow,
-  applyCharacterRow,
-  getCharacterStatsAtLevel,
-  xpToReachLevel,
-} from './types';
+export { applyArchetypeRow, getCharacterStatsAtLevel, xpToReachLevel } from './types';
 
 /** @deprecated Use `CharacterAvatar`. */
 export type CharacterDef = CharacterAvatar;

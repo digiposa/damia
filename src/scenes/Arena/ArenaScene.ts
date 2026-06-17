@@ -2,42 +2,25 @@ import type { GameContext } from '@/Game';
 import type { Scene } from '../Scene';
 import { GameplayController } from '@/engine/gameplay/GameplayController';
 import type { SceneConfig } from '@/engine/gameplay/SceneConfig';
-import type { MapData } from '@scenes/ForestOfSeles/MapLoader';
 import { TitleScene } from '../TitleScene';
 import { RunSummaryScene } from '../RunSummaryScene';
 import { RunState } from '@/store/RunState';
 import { MODE_TUNING } from '@data/mode';
-import { ADDITIONS, MOBS, isAdditionMastered, type AdditionKind } from '@data/balance';
+import { MOBS, type AdditionKind } from '@data/balance';
 import { WaveSpawnerSystem } from '@gameplay/systems/WaveSpawnerSystem';
 import { ARENA_MIN_SPAWN_DIST_PX, ARENA_WAVE_DURATION_MS, buildArenaWave } from '@data/arenaWaves';
 import { SurvivalHUD } from '@ui/SurvivalHUD';
 import { LevelUpChoiceModal } from '@ui/LevelUpChoiceModal';
 import { UPGRADES, rollUpgradeChoices, type UpgradeKind } from '@data/upgrades';
-import { DART, type CharacterDef } from '@data/characters';
+import { DART, unlockedAdditions, type CharacterDef } from '@data/characters';
 import { RunHighScores } from '@services/RunHighScores';
 import { UnlockManager } from '@services/UnlockManager';
 import type { AssetTag } from '@services/AssetManager';
-import { ARENA_SIZE, SPAWN_GX, SPAWN_GY } from '@scenes/arenaLayout';
+import { ARENA_SIZE, buildArenaMap } from '@scenes/arenaLayout';
 
-// Arena dimensions (ARENA_SIZE / SPAWN_GX / SPAWN_GY) are shared with
-// the Training scene — see `@scenes/arenaLayout`.
+// Arena geometry + map builder are shared with the Training scene —
+// see `@scenes/arenaLayout`.
 const UPGRADE_PICKS_PER_LEVELUP = 3;
-
-/** Flat 28×28 arena with no pre-placed mobs — every enemy in Survival
- *  comes from `WaveSpawnerSystem` so the difficulty curve stays in one
- *  place (data/arenaWaves.ts). */
-function buildArenaMap(): MapData {
-  return {
-    name: 'arena',
-    size: { w: ARENA_SIZE, h: ARENA_SIZE },
-    spawn: { gx: SPAWN_GX, gy: SPAWN_GY },
-    pathZones: [{ x: 0, y: 0, w: ARENA_SIZE, h: ARENA_SIZE }],
-    props: [],
-    exits: [],
-    mobs: [],
-    interactables: [],
-  };
-}
 
 /**
  * Survival arena. Reuses the full gameplay pipeline from
@@ -302,35 +285,19 @@ export class ArenaScene implements Scene {
     }
   }
 
-  /** Resolve the addition pool for the run's chosen avatar at the
-   *  current level. Filters against `ADDITIONS` so the picker only
-   *  surfaces slugs the engine actually knows. The Master Addition
-   *  is appended once every basic on the kit is mastered to Lv 5
-   *  — see `isMasterUnlocked`. */
+  /** Resolve the addition pool for the run's chosen avatar at the current
+   *  level. The shared `unlockedAdditions` helper filters to engine-known
+   *  slugs and appends the Master Addition once every basic in the kit is
+   *  mastered (gated by the live `Progression.additionUses` counter). */
   private unlockedAdditions(level: number): ReadonlyArray<AdditionKind> {
     const archetype = this.character.archetype;
-    const out: AdditionKind[] = [];
-    for (const [unlockLv, slug] of archetype.additionUnlocksByLevel) {
-      if (level < unlockLv) continue;
-      if (slug in ADDITIONS) out.push(slug);
-    }
-    if (archetype.masterAddition && this.isMasterUnlocked()) {
-      out.push(archetype.masterAddition);
-    }
+    const controller = this.controller;
+    const prog =
+      controller && controller.playerId !== null
+        ? controller.world.getComponent(controller.playerId, 'Progression')
+        : undefined;
+    const out = unlockedAdditions(archetype, level, prog?.additionUses);
     return out.length > 0 ? out : [archetype.additionUnlocksByLevel.get(1) ?? 'doubleSlash'];
-  }
-
-  /** Master Addition gating: TLoD canon requires every basic addition
-   *  in the kit to be mastered to Lv 5 (= 80+ uses). Reads the live
-   *  `Progression.additionUses` counter off the player. */
-  private isMasterUnlocked(): boolean {
-    if (!this.controller || this.controller.playerId === null) return false;
-    const prog = this.controller.world.getComponent(this.controller.playerId, 'Progression');
-    if (!prog) return false;
-    for (const slug of this.character.archetype.additionUnlocksByLevel.values()) {
-      if (!isAdditionMastered(prog.additionUses[slug] ?? 0)) return false;
-    }
-    return true;
   }
 
   /** Capture the run's stats the moment the player dies, while the

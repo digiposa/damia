@@ -18,32 +18,18 @@ import type { GameContext } from '@/Game';
 import type { Scene } from '../Scene';
 import { GameplayController } from '@/engine/gameplay/GameplayController';
 import type { SceneConfig } from '@/engine/gameplay/SceneConfig';
-import type { MapData } from '@scenes/ForestOfSeles/MapLoader';
 import { TitleScene } from '../TitleScene';
 import { MODE_TUNING } from '@data/mode';
-import { ADDITIONS, type AdditionKind, type MobKind } from '@data/balance';
+import { type AdditionKind, type MobKind } from '@data/balance';
 import { DART, type CharacterAvatar } from '@data/characters';
 import { spawnPlayer } from '@gameplay/entities/player';
 import { spawnMob } from '@gameplay/entities/mobs';
-import { xpToReachLevel } from '@data/characters';
+import { unlockedAdditions, xpToReachLevel } from '@data/characters';
 import { applyLevelStats } from '@gameplay/stats';
 import { worldToGrid } from '@core/math/iso';
 import { TrainingDebugPanel } from '@ui/TrainingDebugPanel';
 import { MobPickerModal } from '@ui/MobPickerModal';
-import { ARENA_SIZE, SPAWN_GX, SPAWN_GY } from '@scenes/arenaLayout';
-
-function buildArenaMap(): MapData {
-  return {
-    name: 'arena',
-    size: { w: ARENA_SIZE, h: ARENA_SIZE },
-    spawn: { gx: SPAWN_GX, gy: SPAWN_GY },
-    pathZones: [{ x: 0, y: 0, w: ARENA_SIZE, h: ARENA_SIZE }],
-    props: [],
-    exits: [],
-    mobs: [],
-    interactables: [],
-  };
-}
+import { ARENA_SIZE, SPAWN_GX, SPAWN_GY, buildArenaMap } from '@scenes/arenaLayout';
 
 export class TrainingScene implements Scene {
   readonly name = 'training';
@@ -310,15 +296,9 @@ export class TrainingScene implements Scene {
     }
   }
 
-  // ---- Helpers shared with ArenaScene ------------------------------
-
+  /** Training sandbox: level-gated unlocks only, no master-addition
+   *  gating (omit the uses counter so the shared helper skips it). */
   private unlockedAdditions(level: number): ReadonlyArray<AdditionKind> {
-    const archetype = this.avatar.archetype;
-    const out: AdditionKind[] = [];
-    for (const [unlockLv, kind] of archetype.additionUnlocksByLevel) {
-      if (level < unlockLv) continue;
-      if (kind in ADDITIONS) out.push(kind as AdditionKind);
-    }
-    return out;
+    return unlockedAdditions(this.avatar.archetype, level);
   }
 }

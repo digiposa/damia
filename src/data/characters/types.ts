@@ -21,7 +21,7 @@
  */
 import type { Stats } from '@gameplay/components';
 import type { AssetAlias } from '@services/AssetManager';
-import type { AdditionKind } from '@data/balance';
+import { ADDITIONS, isAdditionMastered, type AdditionKind } from '@data/balance';
 import type { Element } from '@data/elements';
 import type { EquipmentSlug } from '@data/equipment';
 
@@ -245,6 +245,41 @@ export function getCharacterStatsAtLevel(
 export function xpToReachLevel(archetype: DragoonArchetype, level: number): number {
   const idx = Math.max(1, Math.min(archetype.xpToReachLevel.length, Math.round(level))) - 1;
   return archetype.xpToReachLevel[idx]!;
+}
+
+/**
+ * Additions an archetype has unlocked at `level`, filtered to slugs the
+ * engine actually knows (`ADDITIONS`). When `additionUses` (the live
+ * `Progression.additionUses` counter) is supplied, the archetype's
+ * Master Addition is appended once every basic in the kit is mastered to
+ * Lv 5 — TLoD canon. Pass it omitted to skip master gating (e.g. the
+ * Training sandbox). Callers apply their own empty-list fallback.
+ */
+export function unlockedAdditions(
+  archetype: DragoonArchetype,
+  level: number,
+  additionUses?: Readonly<Partial<Record<AdditionKind, number>>>,
+): AdditionKind[] {
+  const out: AdditionKind[] = [];
+  for (const [unlockLv, slug] of archetype.additionUnlocksByLevel) {
+    if (level < unlockLv) continue;
+    if (slug in ADDITIONS) out.push(slug);
+  }
+  if (archetype.masterAddition && additionUses && isKitMastered(archetype, additionUses)) {
+    out.push(archetype.masterAddition);
+  }
+  return out;
+}
+
+/** True once every basic addition in the archetype's kit has reached Lv 5. */
+function isKitMastered(
+  archetype: DragoonArchetype,
+  additionUses: Readonly<Partial<Record<AdditionKind, number>>>,
+): boolean {
+  for (const slug of archetype.additionUnlocksByLevel.values()) {
+    if (!isAdditionMastered(additionUses[slug] ?? 0)) return false;
+  }
+  return true;
 }
 
 /**

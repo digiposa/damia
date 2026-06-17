@@ -21,6 +21,7 @@ import { World } from '@core/ecs';
 import { gridToWorld, worldToGrid } from '@core/math/iso';
 
 import type { Components } from '@gameplay/components';
+import { TargetFinder } from './TargetFinder';
 import {
   ADDITIONS,
   DEFEND,
@@ -94,8 +95,6 @@ import type { GameContext } from '@/Game';
 
 const PLAYER_SP_MAX = 100;
 const PLAYER_MP_MAX = 60;
-/** ~3/4 of a tile width — generous tap tolerance for click-to-target. */
-const ENEMY_PICK_RADIUS_PX = 96;
 const JOYSTICK_THROTTLE_MS = 150;
 const JOYSTICK_PROJECTION_TILES = 2;
 const MANUAL_COMBAT_LOCK_MS = 600;
@@ -116,6 +115,8 @@ export class GameplayController {
   readonly tilemap: TileMap | PrerenderedMap;
   // --- ECS ------------------------------------------------------------
   readonly world: World<Components>;
+  /** Enemy target resolution (click / cast / addition picking). */
+  private readonly targeting: TargetFinder;
   readonly systems: System<Components>[];
   /** Subset of `systems` whose internal timers represent combat ACTION
    *  (AI, casts, cooldowns, swings, projectiles, additions, death anims).
@@ -235,6 +236,7 @@ export class GameplayController {
 
     // --- ECS world + player + map content ---------------------------
     this.world = new World<Components>();
+    this.targeting = new TargetFinder(this.world, () => this.playerId);
     const spawn = o.spawnOverride ?? map.spawn;
     this.playerId = spawnPlayer(this.world, {
       gx: spawn.gx,
@@ -724,7 +726,7 @@ export class GameplayController {
         if (
           this.lastMouseWorld &&
           !this.groundTargeting &&
-          this.findEnemyAtWorld(this.lastMouseWorld.x, this.lastMouseWorld.y) !== null
+          this.targeting.findEnemyAtWorld(this.lastMouseWorld.x, this.lastMouseWorld.y) !== null
         ) {
           mode = 'attack';
         }
@@ -851,7 +853,7 @@ export class GameplayController {
       return;
     }
     if (cmd.button === 'left') {
-      const target = this.findEnemyAtCell(cmd.gx, cmd.gy);
+      const target = this.targeting.findEnemyAtCell(cmd.gx, cmd.gy);
       if (target !== null) {
         this.world.addComponent(this.playerId, 'CombatIntent', { targetId: target });
         this.manualCombatLockUntilMs = performance.now() + MANUAL_COMBAT_LOCK_MS;
@@ -930,112 +932,6 @@ export class GameplayController {
   // Combat helpers
   // ====================================================================
 
-  private findEnemyAtCell(gx: number, gy: number): Entity | null {
-    const target = gridToWorld(gx, gy);
-    return this.findEnemyAtWorld(target.x, target.y);
-  }
-
-  private findEnemyAtWorld(wx: number, wy: number): Entity | null {
-    let best: Entity | null = null;
-    // Squared distances throughout — this runs every frame for the
-    // attack-cursor hover, and we only ever compare, never display, the
-    // value, so the sqrt in Math.hypot is pure waste here.
-    let bestDistSq = ENEMY_PICK_RADIUS_PX * ENEMY_PICK_RADIUS_PX;
-    for (const id of this.world.query(['Faction', 'Position', 'Health'])) {
-      if (this.world.hasComponent(id, 'Dying')) continue;
-      if (this.world.hasComponent(id, 'Hidden')) continue;
-      const fac = this.world.getComponent(id, 'Faction');
-      const pos = this.world.getComponent(id, 'Position');
-      const hp = this.world.getComponent(id, 'Health');
-      if (!fac || !pos || !hp || fac.side === 'player' || hp.current <= 0) continue;
-      const dx = pos.x - wx;
-      const dy = pos.y - wy;
-      const distSq = dx * dx + dy * dy;
-      if (distSq < bestDistSq) {
-        bestDistSq = distSq;
-        best = id;
-      }
-    }
-    return best;
-  }
-
-  /** Range-agnostic target picker for spell items — see ForestScene
-   *  for the original rationale (always cast on the active CombatIntent
-   *  target, fall back to nearest visible enemy). */
-  private pickSpellTarget(px: number, py: number): Entity | null {
-    if (this.playerId === null) return null;
-    const intent = this.world.getComponent(this.playerId, 'CombatIntent');
-    if (intent !== undefined) {
-      const th = this.world.getComponent(intent.targetId, 'Health');
-      if (
-        th &&
-        th.current > 0 &&
-        !this.world.hasComponent(intent.targetId, 'Dying') &&
-        !this.world.hasComponent(intent.targetId, 'Hidden')
-      ) {
-        return intent.targetId;
-      }
-    }
-    let bestId: Entity | null = null;
-    let bestDistSq = Infinity;
-    for (const id of this.world.query(['Health', 'Position', 'Faction'])) {
-      if (id === this.playerId) continue;
-      if (this.world.hasComponent(id, 'Dying')) continue;
-      if (this.world.hasComponent(id, 'Hidden')) continue;
-      const fac = this.world.getComponent(id, 'Faction');
-      if (!fac || fac.side === 'player') continue;
-      const pos = this.world.getComponent(id, 'Position');
-      const hp = this.world.getComponent(id, 'Health');
-      if (!pos || !hp || hp.current <= 0) continue;
-      const dx = pos.x - px;
-      const dy = pos.y - py;
-      const distSq = dx * dx + dy * dy;
-      if (distSq < bestDistSq) {
-        bestDistSq = distSq;
-        bestId = id;
-      }
-    }
-    return bestId;
-  }
-
-  /** Range-bounded target picker for additions (explicitly limited
-   *  skills). Prefers the current CombatIntent if it's still in range. */
-  private pickAdditionTarget(px: number, py: number, range: number): Entity | null {
-    if (this.playerId === null) return null;
-    const rangeSq = range * range;
-    const intent = this.world.getComponent(this.playerId, 'CombatIntent');
-    if (intent !== undefined) {
-      const tp = this.world.getComponent(intent.targetId, 'Position');
-      const th = this.world.getComponent(intent.targetId, 'Health');
-      if (
-        tp &&
-        th &&
-        th.current > 0 &&
-        !this.world.hasComponent(intent.targetId, 'Dying') &&
-        (tp.x - px) ** 2 + (tp.y - py) ** 2 <= rangeSq
-      ) {
-        return intent.targetId;
-      }
-    }
-    let bestId: Entity | null = null;
-    let bestDistSq = Infinity;
-    for (const id of this.world.query(['Health', 'Position', 'Faction'])) {
-      if (id === this.playerId) continue;
-      if (this.world.hasComponent(id, 'Dying')) continue;
-      if (this.world.hasComponent(id, 'Hidden')) continue;
-      const fac = this.world.getComponent(id, 'Faction');
-      if (!fac || fac.side === 'player') continue;
-      const tp = this.world.getComponent(id, 'Position');
-      if (!tp) continue;
-      const distSq = (tp.x - px) ** 2 + (tp.y - py) ** 2;
-      if (distSq <= rangeSq && distSq < bestDistSq) {
-        bestDistSq = distSq;
-        bestId = id;
-      }
-    }
-    return bestId;
-  }
-
   private tryTriggerAddition(kind: AdditionKind): void {
     if (this.playerId === null) return;
     if (this.world.hasComponent(this.playerId, 'Addition')) return;
@@ -1051,7 +947,7 @@ export class GameplayController {
     const stats = this.world.getComponent(this.playerId, 'Stats');
     const pos = this.world.getComponent(this.playerId, 'Position');
     if (!stats || !pos) return;
-    const target = this.pickAdditionTarget(pos.x, pos.y, stats.range);
+    const target = this.targeting.pickAdditionTarget(pos.x, pos.y, stats.range);
     if (target === null) {
       this.ui.toast.show(t('addition.noTarget'));
       return;
@@ -1192,7 +1088,7 @@ export class GameplayController {
     if (!stats || !pos) return;
 
     if (spell.target === 'lockedTarget') {
-      const targetId = this.pickSpellTarget(pos.x, pos.y);
+      const targetId = this.targeting.pickSpellTarget(pos.x, pos.y);
       if (targetId === null) {
         this.ui.toast.show(t('inventory.noTarget'));
         return;
@@ -1230,7 +1126,7 @@ export class GameplayController {
 
     // groundAoE — auto-target current combat / nearest visible enemy.
     const aoeSpell = spell;
-    const lockOn = this.pickSpellTarget(pos.x, pos.y);
+    const lockOn = this.targeting.pickSpellTarget(pos.x, pos.y);
     if (lockOn !== null) {
       const tp = this.world.getComponent(lockOn, 'Position');
       if (tp) {
@@ -1442,7 +1338,7 @@ export class GameplayController {
     const stats = this.world.getComponent(this.playerId, 'Stats');
     const pos = this.world.getComponent(this.playerId, 'Position');
     if (!stats || !pos) return;
-    const target = this.pickSpellTarget(pos.x, pos.y);
+    const target = this.targeting.pickSpellTarget(pos.x, pos.y);
     if (target === null) return;
     const tp = this.world.getComponent(target, 'Position');
     if (!tp) return;

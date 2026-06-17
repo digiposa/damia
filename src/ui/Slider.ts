@@ -1,13 +1,20 @@
-import type { Application, FederatedPointerEvent } from 'pixi.js';
+import type { Application, Container, EventMode, FederatedPointerEvent } from 'pixi.js';
 import { Graphics } from 'pixi.js';
 import { LayoutContainer } from '@pixi/layout/components';
 import { COLORS } from './theme';
 
 /**
  * Reusable horizontal drag-slider. Track + filled portion + draggable
- * handle, with click-to-jump on the track and stage-level pointermove
- * so drags don't break when the finger leaves the bar (same drag
- * pattern as VirtualJoystick).
+ * handle, with click-to-jump on the track.
+ *
+ * Drag tracking: stage-level pointermove / pointerup listeners are
+ * attached only WHILE a drag is in progress and torn down the moment it
+ * ends (or the slider is destroyed). This is deliberate — a settings
+ * Modal is hidden via `visible = false`, not destroyed, so anything the
+ * slider leaves bound to `app.stage` would linger across the whole
+ * session and could hijack world pointer input (tap-to-move, the
+ * attack-cursor hover) long after the panel closed. Idle sliders keep a
+ * single local `pointerdown` on their own box and nothing global.
  *
  * Integrates into a flex row via the returned `LayoutContainer` (sized
  * by `width` / `height`); the visuals are Graphics positioned inside
@@ -35,6 +42,7 @@ const HANDLE_RADIUS = 9;
 
 export class Slider {
   readonly container: LayoutContainer;
+  private readonly stage: Container;
   private opts: SliderOptions;
   private trackGfx: Graphics;
   private fillGfx: Graphics;
@@ -42,9 +50,15 @@ export class Slider {
   private currentValue: number;
   private dragging = false;
   private activePointerId: number | null = null;
-  private cleanupFns: Array<() => void> = [];
+  /** Stage eventMode captured at drag-start so we can restore it exactly
+   *  when the drag ends — the slider never permanently mutates global
+   *  input state. */
+  private prevStageEventMode: EventMode | null = null;
+  private readonly onMove: (e: FederatedPointerEvent) => void;
+  private readonly onUp: (e: FederatedPointerEvent) => void;
 
   constructor(app: Application, opts: SliderOptions) {
+    this.stage = app.stage;
     this.opts = opts;
     this.currentValue = this.clampAndStep(opts.value);
 
@@ -69,38 +83,23 @@ export class Slider {
 
     this.repaint();
 
-    const onDown = (e: FederatedPointerEvent): void => {
-      if (this.activePointerId !== null) return;
-      this.activePointerId = e.pointerId;
-      this.dragging = true;
-      this.handleGfx.tint = COLORS.borderActive;
-      this.updateFromPointer(e);
-    };
-    const onMove = (e: FederatedPointerEvent): void => {
+    this.onMove = (e: FederatedPointerEvent): void => {
       if (!this.dragging || this.activePointerId !== e.pointerId) return;
       this.updateFromPointer(e);
     };
-    const onUp = (e: FederatedPointerEvent): void => {
+    this.onUp = (e: FederatedPointerEvent): void => {
       if (this.activePointerId !== e.pointerId) return;
-      this.activePointerId = null;
-      this.dragging = false;
-      this.handleGfx.tint = 0xffffff;
+      this.endDrag();
     };
-
-    // Down on the slider's own box (click-to-jump + drag start); move
-    // and up on the stage so the drag survives the finger leaving the
-    // track horizontally or vertically.
-    this.container.on('pointerdown', onDown);
-    app.stage.eventMode = 'static';
-    app.stage.on('pointermove', onMove);
-    app.stage.on('pointerup', onUp);
-    app.stage.on('pointerupoutside', onUp);
-    this.cleanupFns.push(
-      () => this.container.off('pointerdown', onDown),
-      () => app.stage.off('pointermove', onMove),
-      () => app.stage.off('pointerup', onUp),
-      () => app.stage.off('pointerupoutside', onUp),
-    );
+    // Drag starts on a press anywhere in the slider's own box (which is
+    // also the click-to-jump). The global move/up listeners are bound
+    // here, in `beginDrag`, and unbound in `endDrag`.
+    this.container.on('pointerdown', (e: FederatedPointerEvent) => {
+      if (this.activePointerId !== null) return;
+      this.activePointerId = e.pointerId;
+      this.beginDrag();
+      this.updateFromPointer(e);
+    });
   }
 
   /** Current slider value (already clamped + quantised). */
@@ -116,9 +115,36 @@ export class Slider {
   }
 
   destroy(): void {
-    this.cleanupFns.forEach((fn) => fn());
-    this.cleanupFns.length = 0;
+    // Detach any in-flight drag listeners (covers destroy-mid-drag).
+    this.endDrag();
     this.container.destroy({ children: true });
+  }
+
+  private beginDrag(): void {
+    this.dragging = true;
+    this.handleGfx.tint = COLORS.borderActive;
+    // The stage must be interactive to receive the bubbled move/up while
+    // the pointer roams off the slider; capture + restore the prior mode.
+    this.prevStageEventMode = this.stage.eventMode ?? 'auto';
+    this.stage.eventMode = 'static';
+    this.stage.on('pointermove', this.onMove);
+    this.stage.on('pointerup', this.onUp);
+    this.stage.on('pointerupoutside', this.onUp);
+  }
+
+  private endDrag(): void {
+    this.stage.off('pointermove', this.onMove);
+    this.stage.off('pointerup', this.onUp);
+    this.stage.off('pointerupoutside', this.onUp);
+    if (this.prevStageEventMode !== null) {
+      this.stage.eventMode = this.prevStageEventMode;
+      this.prevStageEventMode = null;
+    }
+    if (this.dragging) {
+      this.dragging = false;
+      this.handleGfx.tint = 0xffffff;
+    }
+    this.activePointerId = null;
   }
 
   private clampAndStep(v: number): number {

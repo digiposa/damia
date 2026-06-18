@@ -356,12 +356,16 @@ export const MOBS: Record<MobKind, MobDefinition> = {
       aggroRange: 240,
     },
     sprite: {
-      // Tall officer silhouette — slightly larger than the Knights he
-      // commands so he reads as the leader of the encounter.
+      // Tall officer silhouette — sized so he reads as visibly bigger
+      // than Dart in-world (Dart renders at ~45x81 px with the same
+      // fitMode pipeline). With `fitMode: 'height'` the width adapts
+      // to each texture's aspect ratio automatically, so a single
+      // height bump scales the WHOLE kit (idle / walk / attack /
+      // slash-twice / cast / power-up / death) uniformly.
       shape: 'capsule',
       color: 0x3a2a3a,
       width: 76,
-      height: 110,
+      height: 125,
       fitMode: 'height',
       textureAlias: 'sprite.mob.commander',
       attackTextureAlias: 'sprite.mob.commander.attack.1',

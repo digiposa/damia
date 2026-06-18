@@ -32,20 +32,25 @@ OUT_DIR = REPO / "public" / "assets" / "sprites" / "mobs"
 N_FRAMES = 5
 
 # Hardcoded reference anchor for source frame 1 on the common canvas.
-# Derived from the original commit `89f9868` integration (Slash Twice
-# 2-frame visual) — same scale as the idle/attack set, body roughly
-# centred horizontally with feet anchored at y=1313 (12 px below the
-# other commander frames' 1301, intentionally lower to give the slash
-# VFX room without the bottom-of-canvas amputation).
+# Targets (set after a comparison against the rest of the commander
+# kit on the same 1248x1395 canvas):
+#   - feet at y=1301, the same ground line as commander.png /
+#     commander-attack-{1,2} / commander-walk-{1,2} (so the boss doesn't
+#     visually "sink" when the post-PowerUp basic attack triggers).
+#   - silhouette height ~1220, scaled up ~10% from the prior anchor so
+#     the character matches the apparent size of attack-1 (the closest
+#     pose, sword raised; h=1261 there with sword overhead). Without the
+#     bump the boss read noticeably smaller for the 750 ms the combo
+#     plays.
+#   - horizontal centre at cx=713, the original commit 89f9868 anchor.
 #
 # Re-deriving these dynamically from `public/commander-slash-twice-1.png`
-# at every run is fragile: the first script run overwrites that file
-# with the script's own output, so the second run measures the
-# overwritten frame and the scale drifts. Hardcoding the originally-shipped
+# is fragile — the first script run overwrites that file, so a second
+# run measures its own output and the scale drifts. Hardcoding the
 # anchor keeps every run idempotent.
-REF_HEIGHT_ON_CANVAS = 1106
+REF_HEIGHT_ON_CANVAS = 1220
 REF_CX_ON_CANVAS = 713
-REF_BOTTOM_ON_CANVAS = 1313
+REF_BOTTOM_ON_CANVAS = 1301
 
 CANVAS_W, CANVAS_H = 1248, 1395  # matches commander.png / commander-attack-*.png
 # Soft alpha thresholds (Euclidean distance in RGB to detected bg).

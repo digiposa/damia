@@ -370,12 +370,19 @@ export const MOBS: Record<MobKind, MobDefinition> = {
       deathTextureAlias: 'sprite.mob.commander.death',
       walkFrames: ['sprite.mob.commander.walk.1', 'sprite.mob.commander.walk.2'],
       attackFrames: ['sprite.mob.commander.attack.1', 'sprite.mob.commander.attack.2'],
-      // Slash Twice — post-PowerUp basic attack visual (2 frames so far;
-      // more can be appended for a longer combo). RenderSystem picks
-      // these when the AttackSwing has kind:'slashTwice' (set by
-      // CombatSystem while AI.poweredUp); the 2× damage applies in
-      // lockstep.
-      slashTwiceFrames: ['sprite.mob.commander.slashTwice.1', 'sprite.mob.commander.slashTwice.2'],
+      // Slash Twice — post-PowerUp basic attack: a 5-frame double-strike
+      // choreography (wind-up → strike 1 → recovery → wind-up 2 →
+      // strike 2). RenderSystem picks these when the AttackSwing has
+      // kind:'slashTwice' (set by CombatSystem while AI.poweredUp), one
+      // frame per 1/5 of COMMANDER_SLASH_TWICE_SWING_MS. The 2× damage
+      // applies in lockstep.
+      slashTwiceFrames: [
+        'sprite.mob.commander.slashTwice.1',
+        'sprite.mob.commander.slashTwice.2',
+        'sprite.mob.commander.slashTwice.3',
+        'sprite.mob.commander.slashTwice.4',
+        'sprite.mob.commander.slashTwice.5',
+      ],
     },
     element: 'darkness',
     xp: 20,

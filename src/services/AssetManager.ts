@@ -545,11 +545,17 @@ const MANIFEST = {
     tags: ['mob:commanderSeles'],
   },
   // Slash Twice — post-PowerUp basic attack, 2 frames (wind-up swing +
-  // downward strike with red slash VFX). Body scale-matched to the set,
-  // body-feet aligned on the common canvas; the slash arcs overflow the
-  // silhouette. RenderSystem picks these when the AttackSwing has
-  // kind:'slashTwice' (set by CombatSystem while AI.poweredUp). More
-  // frames can be appended to slashTwiceFrames later for a longer combo.
+  // downward strike with red slash VFX). 5-frame choreography:
+  //   1 — wind-up (sword overhead)
+  //   2 — first strike + red arc VFX
+  //   3 — recovery / mid-swing transition (crouched)
+  //   4 — second wind-up (sword raised right)
+  //   5 — second strike + horizontal slash VFX
+  // Body scale-matched to the set, body-feet aligned on the common
+  // canvas; the slash arcs overflow the silhouette naturally.
+  // RenderSystem picks these when the AttackSwing has kind:'slashTwice'
+  // (set by CombatSystem while AI.poweredUp), one frame per 1/5 of
+  // COMMANDER_SLASH_TWICE_SWING_MS.
   'sprite.mob.commander.slashTwice.1': {
     kind: 'texture',
     url: '/assets/sprites/mobs/commander-slash-twice-1.png',
@@ -558,6 +564,21 @@ const MANIFEST = {
   'sprite.mob.commander.slashTwice.2': {
     kind: 'texture',
     url: '/assets/sprites/mobs/commander-slash-twice-2.png',
+    tags: ['mob:commanderSeles'],
+  },
+  'sprite.mob.commander.slashTwice.3': {
+    kind: 'texture',
+    url: '/assets/sprites/mobs/commander-slash-twice-3.png',
+    tags: ['mob:commanderSeles'],
+  },
+  'sprite.mob.commander.slashTwice.4': {
+    kind: 'texture',
+    url: '/assets/sprites/mobs/commander-slash-twice-4.png',
+    tags: ['mob:commanderSeles'],
+  },
+  'sprite.mob.commander.slashTwice.5': {
+    kind: 'texture',
+    url: '/assets/sprites/mobs/commander-slash-twice-5.png',
     tags: ['mob:commanderSeles'],
   },
   // Power Up transformation pose — single frame (green-keyed, body

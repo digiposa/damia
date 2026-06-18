@@ -17,11 +17,12 @@ const TARGET_RECHECK_MS = 100;
  *  replaces the regular Sword Slash rather than chaining on top. */
 const COMMANDER_SLASH_TWICE_MULT = 2;
 /** Visual swing duration for Slash Twice. Slightly longer than the
- *  regular 220 ms swing so the 2-frame Slash Twice animation has room
- *  to read as "two strokes" rather than one rushed stroke. Falls back
- *  to the attack frame when `Sprite.slashTwiceFrames` is unset (the
- *  current case until the dedicated sprite ships). */
-const COMMANDER_SLASH_TWICE_SWING_MS = 360;
+ *  regular 220 ms swing so the 5-frame Slash Twice choreography (wind-
+ *  up → strike 1 → recovery → wind-up 2 → strike 2) gets ~150 ms per
+ *  frame — enough to read as "two distinct strokes" rather than a
+ *  rushed blur. Falls back to the attack frame when
+ *  `Sprite.slashTwiceFrames` is unset. */
+const COMMANDER_SLASH_TWICE_SWING_MS = 750;
 
 /**
  * Drives entities that have CombatIntent:

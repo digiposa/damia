@@ -23,6 +23,12 @@ const DEFEND_BAR_HEIGHT = 5;
  *  just below the player's feet. */
 const DEFEND_BAR_OFFSET_BELOW = 28;
 const DEFEND_BAR_COLOR = 0x9bb6ff;
+/** Same bar, but tinted slate-grey while the defend is on cooldown — a
+ *  flat "not ready yet" cue. Fills back as the cooldown drains, so the
+ *  player can read when the next defend will land. Mobile UI already
+ *  shows this on its dedicated button radial; this gives desktop (and
+ *  redundantly mobile) the same feedback in-world. */
+const DEFEND_COOLDOWN_BAR_COLOR = 0x4a5566;
 /** Cast bar painted above bosses while an AbilityTelegraph is active.
  *  Width matches the HP bar so the two stacks read as one block; sits
  *  just above the HP bar with a small gap. Mobile-conscious: kept thin
@@ -61,7 +67,18 @@ export class EntityHudSystem implements System<Components> {
    *  component, so we don't bother with a per-entity map. */
   private readonly defendBar: Graphics;
 
-  constructor(private readonly parent: Container) {
+  /** Optional read of the player's defend cooldown remaining-fraction
+   *  (1 = just triggered, 0 = ready, null = not on cooldown). When
+   *  supplied, the defendBar stays visible AFTER the guard window ends,
+   *  tinted slate, draining as the cooldown elapses — gives desktop the
+   *  same "next defend ready" feedback the mobile button radial gives. */
+  private readonly defendCooldownFracProvider: (() => number | null) | null;
+
+  constructor(
+    private readonly parent: Container,
+    opts: { defendCooldownFrac?: () => number | null } = {},
+  ) {
+    this.defendCooldownFracProvider = opts.defendCooldownFrac ?? null;
     this.targetRing = new Graphics();
     this.targetRing.visible = false;
     this.parent.addChild(this.targetRing);
@@ -220,26 +237,49 @@ export class EntityHudSystem implements System<Components> {
       this.targetRing.visible = false;
     }
 
-    // --- Defend timer bar ------------------------------------------------
+    // --- Defend timer + cooldown bar -------------------------------------
+    // Two visual modes for the same bar:
+    //   - guard active  → blue, depletes from full as the lock-in runs
+    //   - guard pending → slate, FILLS back from empty as the cooldown
+    //                     drains, so the player reads when defend will
+    //                     be ready again. Pre-empted by the active mode
+    //                     so the guard window's countdown always wins.
     let defendVisible = false;
     if (playerId !== undefined) {
       const def = world.getComponent(playerId, 'Defending');
       const pos = world.getComponent(playerId, 'Position');
       if (def && pos && def.totalMs > 0) {
         const remaining = Math.max(0, 1 - def.elapsedMs / def.totalMs);
-        this.defendBar.clear();
-        const x = pos.x - DEFEND_BAR_WIDTH / 2;
-        const y = pos.y + DEFEND_BAR_OFFSET_BELOW;
-        this.defendBar
-          .rect(x - 1, y - 1, DEFEND_BAR_WIDTH + 2, DEFEND_BAR_HEIGHT + 2)
-          .fill({ color: 0x000000, alpha: 0.7 })
-          .rect(x, y, DEFEND_BAR_WIDTH * remaining, DEFEND_BAR_HEIGHT)
-          .fill(DEFEND_BAR_COLOR);
-        this.defendBar.visible = true;
+        this.paintDefendBar(pos.x, pos.y, remaining, DEFEND_BAR_COLOR);
         defendVisible = true;
+      } else if (pos && this.defendCooldownFracProvider) {
+        const cdFrac = this.defendCooldownFracProvider();
+        if (cdFrac !== null && cdFrac > 0) {
+          // Bar fills back (left to right) as the cooldown drains, so
+          // "full bar" reads as "defend ready" — same direction as the
+          // guard countdown, opposite colour.
+          const filled = Math.max(0, Math.min(1, 1 - cdFrac));
+          this.paintDefendBar(pos.x, pos.y, filled, DEFEND_COOLDOWN_BAR_COLOR);
+          defendVisible = true;
+        }
       }
     }
     if (!defendVisible) this.defendBar.visible = false;
+  }
+
+  /** Paint the shared defend bar at the player's screen position with a
+   *  given fill fraction and colour. Used by both the active-guard and
+   *  the cooldown branches. */
+  private paintDefendBar(px: number, py: number, fillFrac: number, color: number): void {
+    const x = px - DEFEND_BAR_WIDTH / 2;
+    const y = py + DEFEND_BAR_OFFSET_BELOW;
+    this.defendBar
+      .clear()
+      .rect(x - 1, y - 1, DEFEND_BAR_WIDTH + 2, DEFEND_BAR_HEIGHT + 2)
+      .fill({ color: 0x000000, alpha: 0.7 })
+      .rect(x, y, DEFEND_BAR_WIDTH * fillFrac, DEFEND_BAR_HEIGHT)
+      .fill(color);
+    this.defendBar.visible = true;
   }
 
   destroy(): void {

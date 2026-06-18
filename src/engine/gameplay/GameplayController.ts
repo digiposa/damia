@@ -340,7 +340,16 @@ export class GameplayController {
     const dragoon = new DragoonSystem();
     const render = new RenderSystem(this.layers);
     const floating = new FloatingTextSystem(this.layers.fx);
-    const entityHud = new EntityHudSystem(this.layers.fx);
+    const entityHud = new EntityHudSystem(this.layers.fx, {
+      // Surface the defend cooldown so the in-world bar under the
+      // player stays visible while it's recharging — desktop has no
+      // dedicated defend button radial, so without this the player
+      // gets zero feedback that S won't fire.
+      defendCooldownFrac: () => {
+        const frac = this.input.defendCooldownFrac();
+        return frac > 0 ? frac : null;
+      },
+    });
     const vfx = new VfxSystem(this.layers.fx);
 
     const enableEnc = o.enableEncounters ?? false;

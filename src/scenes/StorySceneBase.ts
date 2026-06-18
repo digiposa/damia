@@ -11,9 +11,13 @@ import { ITEMS, type ItemKind } from '@data/items';
 import { spawnItem } from '@gameplay/entities/items';
 import { SaveManager, type SaveDataV5 } from '@services/SaveManager';
 import { t } from '@services/I18nService';
-import { WorldMapScene } from '@scenes/WorldMapScene';
-import { GameOverScene } from '@scenes/GameOverScene';
-import { TitleScene } from '@scenes/TitleScene';
+
+// NB: WorldMapScene / GameOverScene / TitleScene are imported lazily
+// inside the hooks that need them (via dynamic `import()`). Importing
+// them at module top-level creates a circular cycle — every story scene
+// extends this base, and those three scenes (re-)import the story scenes
+// to navigate to them, so an eager import puts StorySceneBase itself in
+// TDZ at first load, crashing `class HellenaScene extends StorySceneBase`.
 
 /** Story zones share a save record + fog grid keyed by this id. */
 export type StoryZoneId = 'forest' | 'hellena';
@@ -82,7 +86,7 @@ export abstract class StorySceneBase implements Scene {
         onPlayerDeath: () => {
           // Wipe the save so "Continue" doesn't restore a doomed state.
           SaveManager.clear();
-          queueMicrotask(() => {
+          void import('@scenes/GameOverScene').then(({ GameOverScene }) => {
             void ctx.scenes.switchTo(new GameOverScene('story'), ctx);
           });
         },
@@ -92,7 +96,7 @@ export abstract class StorySceneBase implements Scene {
             // the latest grid / inventory state. The controller's destroy
             // fires onPersist again on scene switch — idempotent.
             this.controller?.persist();
-            queueMicrotask(() => {
+            void import('@scenes/WorldMapScene').then(({ WorldMapScene }) => {
               void ctx.scenes.switchTo(new WorldMapScene(SaveManager.load()), ctx);
             });
           } else if (exit.kind === 'blocked') {
@@ -101,7 +105,7 @@ export abstract class StorySceneBase implements Scene {
         },
         onQuit: () => {
           // The controller already fired onPersist before invoking us.
-          queueMicrotask(() => {
+          void import('@scenes/TitleScene').then(({ TitleScene }) => {
             void ctx.scenes.switchTo(new TitleScene(), ctx);
           });
         },

@@ -29,8 +29,23 @@ from scipy import ndimage
 REPO = Path(__file__).resolve().parent.parent
 SRC_DIR = REPO / "shareAI" / "assets" / "boss" / "commander-seles"
 OUT_DIR = REPO / "public" / "assets" / "sprites" / "mobs"
-REF_FRAME = OUT_DIR / "commander-slash-twice-1.png"  # existing public frame 1
 N_FRAMES = 5
+
+# Hardcoded reference anchor for source frame 1 on the common canvas.
+# Derived from the original commit `89f9868` integration (Slash Twice
+# 2-frame visual) — same scale as the idle/attack set, body roughly
+# centred horizontally with feet anchored at y=1313 (12 px below the
+# other commander frames' 1301, intentionally lower to give the slash
+# VFX room without the bottom-of-canvas amputation).
+#
+# Re-deriving these dynamically from `public/commander-slash-twice-1.png`
+# at every run is fragile: the first script run overwrites that file
+# with the script's own output, so the second run measures the
+# overwritten frame and the scale drifts. Hardcoding the originally-shipped
+# anchor keeps every run idempotent.
+REF_HEIGHT_ON_CANVAS = 1106
+REF_CX_ON_CANVAS = 713
+REF_BOTTOM_ON_CANVAS = 1313
 
 CANVAS_W, CANVAS_H = 1248, 1395  # matches commander.png / commander-attack-*.png
 # Soft alpha thresholds (Euclidean distance in RGB to detected bg).
@@ -116,25 +131,12 @@ def opaque_bbox(img: Image.Image, threshold: int = 128) -> tuple[int, int, int, 
 def main() -> None:
     if not SRC_DIR.is_dir():
         raise SystemExit(f"Source dir not found: {SRC_DIR}")
-    if not REF_FRAME.exists():
-        raise SystemExit(f"Reference public frame not found: {REF_FRAME}")
 
-    # --- Step 1: derive scale + offset from frame 1 source vs reference.
-    # The reference is the existing public/commander-slash-twice-1.png
-    # (which already shares scale with the idle/attack-1/attack-2 set),
-    # so this re-anchors every new frame to the same visual size.
-    ref1 = Image.open(REF_FRAME)
-    if ref1.size != (CANVAS_W, CANVAS_H):
-        raise SystemExit(
-            f"Reference frame is {ref1.size}, expected ({CANVAS_W}, {CANVAS_H}) — "
-            "the commander common canvas changed?"
-        )
-    ref_bbox = opaque_bbox(ref1)
-    ref_h = ref_bbox[3] - ref_bbox[1]
-    ref_cx = (ref_bbox[0] + ref_bbox[2]) / 2
-    ref_bottom = ref_bbox[3]
-    print(f"reference bbox: {ref_bbox}  h={ref_h}  cx={ref_cx:.1f}  bottom={ref_bottom}")
-
+    # --- Step 1: derive scale + offset from frame 1 source against the
+    # hardcoded canvas anchor (see REF_* constants at the top). The
+    # anchor matches the originally-shipped Slash Twice frame 1 from
+    # commit 89f9868, which itself was scale-matched to the commander
+    # idle/attack/walk set.
     src1 = key_background(SRC_DIR / "slash-twice-1.png")
     src_bbox = opaque_bbox(src1)
     src_h = src_bbox[3] - src_bbox[1]
@@ -142,8 +144,12 @@ def main() -> None:
     src_bottom = src_bbox[3]
     print(f"source-1 bbox:  {src_bbox}  h={src_h}  cx={src_cx:.1f}  bottom={src_bottom}")
 
-    scale = ref_h / src_h
-    print(f"derived scale: {scale:.4f}\n")
+    scale = REF_HEIGHT_ON_CANVAS / src_h
+    print(
+        f"derived scale: {scale:.4f}  "
+        f"(target h={REF_HEIGHT_ON_CANVAS}, cx={REF_CX_ON_CANVAS}, "
+        f"bottom={REF_BOTTOM_ON_CANVAS})\n"
+    )
 
     # --- Step 2: project EVERY frame through the same (scale, dst-offset).
     # Using source-frame-1's body cx/bottom as the anchor (rather than
@@ -153,8 +159,8 @@ def main() -> None:
     # body-sway range.
     scaled_anchor_cx = round(src_cx * scale)
     scaled_anchor_bottom = round(src_bottom * scale)
-    dst_x = round(ref_cx - scaled_anchor_cx)
-    dst_y = round(ref_bottom - scaled_anchor_bottom)
+    dst_x = round(REF_CX_ON_CANVAS - scaled_anchor_cx)
+    dst_y = round(REF_BOTTOM_ON_CANVAS - scaled_anchor_bottom)
     print(f"dst offset: ({dst_x}, {dst_y})\n")
 
     for n in range(1, N_FRAMES + 1):
